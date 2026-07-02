@@ -1,0 +1,8 @@
+{
+  "name": "Simulado Prime",
+  "description": "Uma plataforma imersiva de simulação para vestibulares e exames admissionais com estética cósmica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
