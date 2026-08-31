@@ -403,14 +403,18 @@ export default function ProfilePage() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ token }),
+        }).catch((fetchErr) => {
+          console.warn("[Profile] Validação remota de proprietário indisponível, usando fallback local:", fetchErr.message || fetchErr);
+          return null;
         });
-        if (verifyRes.ok) {
+
+        if (verifyRes && verifyRes.ok) {
           const checkResult = await verifyRes.json();
           // Rely on backend check, but if backend fails/returns false, enforce true if client-side is klession@gmail.com
           setIsOwnerBackendVerified(checkResult.isOwner !== false);
         }
-      } catch (err) {
-        console.error("Erro na verificação de proprietário:", err);
+      } catch (err: any) {
+        console.warn("[Profile] Verificação de proprietário em modo offline:", err?.message || err);
       }
     };
     verifyOwnerBackend();
