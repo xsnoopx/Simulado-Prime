@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { isAdminEmail } from "@/lib/adminAccess";
 
 export async function POST(req: NextRequest) {
   try {
@@ -22,7 +23,7 @@ export async function POST(req: NextRequest) {
     try {
       const { data: { user }, error } = await supabase.auth.getUser(token);
       if (user && !error) {
-        isOwner = user.email?.toLowerCase() === "klession@gmail.com";
+        isOwner = isAdminEmail(user.email);
       } else if (error) {
         authErrorMsg = error.message;
       }

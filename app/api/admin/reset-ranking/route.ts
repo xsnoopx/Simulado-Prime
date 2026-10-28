@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { isAdminEmail } from '@/lib/adminAccess';
 
 export async function POST(req: NextRequest) {
   try {
@@ -26,7 +27,7 @@ export async function POST(req: NextRequest) {
     try {
       const { data: { user }, error } = await supabase.auth.getUser(token);
       if (user && !error) {
-        isOwner = user.email?.toLowerCase() === "klession@gmail.com";
+        isOwner = isAdminEmail(user.email);
       }
     } catch (authErr) {
       console.warn("GetUser failed during reset-ranking verification:", authErr);
@@ -37,7 +38,16 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: "Acesso administrativo negado." }, { status: 403 });
     }
 
-    const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || supabaseAnonKey;
+    // Sem service_role não há escrita: a tabela ranking passou a exigir RLS.
+    const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    if (!supabaseServiceRoleKey) {
+      console.error('[Reset API] SUPABASE_SERVICE_ROLE_KEY ausente: reset-ranking não pode gravar.');
+      return NextResponse.json(
+        { success: false, error: 'Servidor sem SUPABASE_SERVICE_ROLE_KEY configurada.' },
+        { status: 500 }
+      );
+    }
+
     const supabaseAdmin = createClient(supabaseUrl, supabaseServiceRoleKey, {
       auth: { persistSession: false }
     });
