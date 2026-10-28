@@ -1,0 +1,70 @@
+name: Supabase keepalive
+
+# O projeto grátis do Supabase pausa depois de ~7 dias sem atividade.
+# Uma simples leitura via REST já conta como atividade e mantém o projeto
+# acordado. Não altera nada: só faz SELECT em ranking.
+#
+# Agendamento: segundas e quintas, 06:00 UTC (03:00 em Brasília).
+# Dá para rodar na mão também (workflow_dispatch) para testar.
+#
+# Segredo necessário: SUPABASE_ANON_KEY
+#   Settings > Secrets and variables > Actions > New repository secret
+#
+# A chave anon é pública (ela vai no bundle do navegador), mas fica no secret
+# para não duplicar o valor dentro do repositório.
+#
+# Atenção: o GitHub desativa workflows agendados depois de 60 dias sem push
+# no repositório. Se isso acontecer, basta reativar em Actions.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1,4"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: supabase-keepalive
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    name: Acordar o projeto
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Conferir se o secret existe
+        env:
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "::error::Secret SUPABASE_ANON_KEY ausente. Crie em Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: Consultar o ranking
+        env:
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_URL: ${{ vars.SUPABASE_URL || 'https://tobdeehicqircazdtbnx.supabase.co' }}
+        run: |
+          url="$SUPABASE_URL/rest/v1/ranking?select=id&limit=1"
+          status=000
+
+          for tentativa in 1 2 3; do
+            status=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 "$url" \
+              -H "apikey: $SUPABASE_ANON_KEY" \
+              -H "Authorization: Bearer $SUPABASE_ANON_KEY") || status=000
+            echo "tentativa $tentativa: HTTP $status"
+
+            if [ "$status" = "200" ] || [ "$status" = "206" ]; then
+              echo "::notice::Projeto ativo (HTTP $status). Ranking respondeu normalmente."
+              exit 0
+            fi
+
+            if [ "$tentativa" != "3" ]; then
+              sleep 20
+            fi
+          done
+
+          echo "::error::Supabase respondeu HTTP $status. Se o projeto estiver pausado, restaure em https://supabase.com/dashboard e rode este workflow de novo."
+          exit 1
