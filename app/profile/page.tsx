@@ -230,34 +230,13 @@ const resizeAndSaveImage = (file: File, callback: (base64: string) => void) => {
   reader.readAsDataURL(file);
 };
 
-const registerLocalUser = (name: string, email: string, pass: string) => {
-  if (typeof window === "undefined")
-    return { name, email, avatarId: "default" };
-  const users = JSON.parse(localStorage.getItem("cosmos_local_users") || "[]");
-  if (users.find((u: any) => u.email === email)) {
-    throw new Error("Este e-mail espacial já está cadastrado no Cosmos.");
-  }
-  const newUser = { name, email, password: pass, avatarId: "default" };
-  users.push(newUser);
-  localStorage.setItem("cosmos_local_users", JSON.stringify(users));
-  return newUser;
-};
+// Local credential storage was removed: passwords must never be kept in localStorage.
+// Authentication is handled exclusively by Supabase Auth.
 
-const loginLocalUser = (email: string, pass: string) => {
-  if (typeof window === "undefined")
-    return { name: "João Silva", email, avatarId: "default" };
-  const users = JSON.parse(localStorage.getItem("cosmos_local_users") || "[]");
-  const found = users.find(
-    (u: any) => u.email === email && u.password === pass,
-  );
-  if (!found) {
-    throw new Error("E-mail ou senha espacial incorretos.");
-  }
-  return found;
-};
-
-const getAdminToken = async (client: any, user: any, profile: any): Promise<string> => {
-  // 1. Try to retrieve active session access_token from current Supabase client session state
+// Returns the real Supabase access token of the current session, or "" when there is none.
+// Never fabricate a token here: the server verifies its signature before granting admin rights.
+const getAdminToken = async (client: any): Promise<string> => {
+  // 1. Active Supabase session (signature is verified server-side)
   try {
     const { data: sessionData } = await client.auth.getSession();
     const token = sessionData?.session?.access_token;
@@ -266,7 +245,7 @@ const getAdminToken = async (client: any, user: any, profile: any): Promise<stri
     console.warn("Error getting active session token:", e);
   }
 
-  // 2. Fallback: Search localStorage for Supabase persistent auth-token keys
+  // 2. Fallback: persistent Supabase auth-token entry in localStorage
   if (typeof window !== "undefined") {
     try {
       for (let i = 0; i < localStorage.length; i++) {
@@ -283,18 +262,6 @@ const getAdminToken = async (client: any, user: any, profile: any): Promise<stri
       }
     } catch (e) {
       console.warn("Error getting backup token from localStorage:", e);
-    }
-  }
-
-  // 3. Robust admin fallback: Generate a compatible local JWT mock if authenticated as admin klession@gmail.com
-  const adminEmail = user?.email || profile?.email;
-  if (adminEmail && adminEmail.toLowerCase() === "klession@gmail.com") {
-    try {
-      const headerStr = btoa(JSON.stringify({ alg: "HS256", typ: "JWT" }));
-      const payloadStr = btoa(JSON.stringify({ email: "klession@gmail.com" }));
-      return `${headerStr}.${payloadStr}.signature_placeholder`;
-    } catch (e) {
-      console.warn("Error generating local fallback token:", e);
     }
   }
 
@@ -374,10 +341,9 @@ export default function ProfilePage() {
   const [resetRankingConfirm, setResetRankingConfirm] = useState(false);
   const [resetXPConfirm, setResetXPConfirm] = useState(false);
 
-  const hasAdminPrivilege = isOwnerBackendVerified || 
-    user?.email?.toLowerCase() === "klession@gmail.com" || 
-    profile?.email?.toLowerCase() === "klession@gmail.com" || 
-    (user as any)?.email?.toLowerCase() === "klession@gmail.com";
+  // Admin rights come exclusively from the backend verification below.
+  // Storing the owner e-mail in localStorage is trivial, so it must never grant access by itself.
+  const hasAdminPrivilege = isOwnerBackendVerified;
 
   useEffect(() => {
     const verifyOwnerBackend = async () => {
@@ -389,32 +355,35 @@ export default function ProfilePage() {
         setIsOwnerBackendVerified(false);
         return;
       }
-      
-      // Proactively allow immediate access if the client-side email is correct
-      setIsOwnerBackendVerified(true);
 
+      // No optimistic grant: the UI only shows admin tools after the backend
+      // confirms the signed session token belongs to the owner.
       try {
         const client = await getSupabase();
-        const token = await getAdminToken(client, user, profile);
+        const token = await getAdminToken(client);
         if (!token) {
-          return; // Already set to true proactively
+          setIsOwnerBackendVerified(false);
+          return;
         }
         const verifyRes = await fetch("/api/profile/validate-owner", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ token }),
         }).catch((fetchErr) => {
-          console.warn("[Profile] Validação remota de proprietário indisponível, usando fallback local:", fetchErr.message || fetchErr);
+          console.warn("[Profile] Validação remota de proprietário indisponível:", fetchErr.message || fetchErr);
           return null;
         });
 
-        if (verifyRes && verifyRes.ok) {
-          const checkResult = await verifyRes.json();
-          // Rely on backend check, but if backend fails/returns false, enforce true if client-side is klession@gmail.com
-          setIsOwnerBackendVerified(checkResult.isOwner !== false);
+        if (!verifyRes || !verifyRes.ok) {
+          setIsOwnerBackendVerified(false);
+          return;
         }
+
+        const checkResult = await verifyRes.json();
+        setIsOwnerBackendVerified(checkResult.isOwner === true);
       } catch (err: any) {
-        console.warn("[Profile] Verificação de proprietário em modo offline:", err?.message || err);
+        console.warn("[Profile] Verificação de proprietário falhou:", err?.message || err);
+        setIsOwnerBackendVerified(false);
       }
     };
     verifyOwnerBackend();
@@ -459,7 +428,7 @@ export default function ProfilePage() {
     setAdminSystemMessage({ text: "", type: "success" });
     try {
       const client = await getSupabase();
-      const token = await getAdminToken(client, user, profile);
+      const token = await getAdminToken(client);
 
       const res = await fetch("/api/admin/manage-players", {
         method: "POST",
@@ -502,7 +471,7 @@ export default function ProfilePage() {
     setAdminSystemMessage({ text: "", type: "success" });
     try {
       const client = await getSupabase();
-      const token = await getAdminToken(client, user, profile);
+      const token = await getAdminToken(client);
 
       const res = await fetch("/api/admin/manage-players", {
         method: "POST",
@@ -544,7 +513,7 @@ export default function ProfilePage() {
     setAdminSystemMessage({ text: "", type: "success" });
     try {
       const client = await getSupabase();
-      const token = await getAdminToken(client, user, profile);
+      const token = await getAdminToken(client);
 
       const res = await fetch("/api/admin/reset-ranking", {
         method: "POST",
@@ -580,7 +549,7 @@ export default function ProfilePage() {
     setAdminSystemMessage({ text: "", type: "success" });
     try {
       const client = await getSupabase();
-      const token = await getAdminToken(client, user, profile);
+      const token = await getAdminToken(client);
 
       const filtered = adminPlayers.filter(p => p && p.id !== "system_season" && !p.id.startsWith("system_"));
       if (filtered.length === 0) {
@@ -634,7 +603,7 @@ export default function ProfilePage() {
     setAdminSystemMessage({ text: "", type: "success" });
     try {
       const client = await getSupabase();
-      const token = await getAdminToken(client, user, profile);
+      const token = await getAdminToken(client);
 
       const filtered = adminPlayers.filter(p => p && p.id !== "system_season" && !p.id.startsWith("system_"));
       
@@ -717,6 +686,13 @@ export default function ProfilePage() {
     setTimerSeconds(savedSeconds ? parseInt(savedSeconds, 10) : 900);
 
     // 2. Load auth status
+    // Purge legacy plaintext credentials left by older builds.
+    try {
+      localStorage.removeItem("cosmos_local_users");
+    } catch {
+      // Ignore storage restrictions
+    }
+
     const loggedUser = localStorage.getItem("cosmos_logged_user");
     if (loggedUser) {
       try {
@@ -965,30 +941,6 @@ export default function ProfilePage() {
           );
       } catch (err) {
         console.error("Erro ao enviar metadados para o Supabase Auth:", err);
-      }
-
-      try {
-        const users = JSON.parse(
-          localStorage.getItem("cosmos_local_users") || "[]",
-        );
-        const updatedUsers = users.map((u: any) =>
-          u.email === user.email
-            ? {
-                ...u,
-                name: updated.name,
-                email: updated.email,
-                avatarId: updated.avatarId,
-                customAvatarUrl: updated.customAvatarUrl,
-                avatarFrameId: updated.avatarFrameId,
-              }
-            : u,
-        );
-        localStorage.setItem(
-          "cosmos_local_users",
-          JSON.stringify(updatedUsers),
-        );
-      } catch (err) {
-        console.error("Erro ao salvar perfil no banco local:", err);
       }
     }
     if (typeof window !== "undefined") {
@@ -1257,27 +1209,12 @@ export default function ProfilePage() {
             errMsg.includes("network") ||
             errMsg.includes("fetch")
           ) {
-            console.warn(
-              "Supabase fora de alcance de rede, verificando conta local offline",
+            // Never recover or reveal a password locally: recovery only happens by e-mail.
+            throw new Error(
+              "Sem conexão com o servidor. Tente novamente quando estiver online para receber o link de recuperação.",
             );
-            const users = JSON.parse(
-              localStorage.getItem("cosmos_local_users") || "[]",
-            );
-            const foundLocal = users.find(
-              (u: any) => u.email === email.trim().toLowerCase(),
-            );
-            if (foundLocal) {
-              setAuthSuccess(
-                `Sua conta offline local existe no navegador! Como você está sem rede, sua senha local registrada é: "${foundLocal.password}"`,
-              );
-            } else {
-              throw new Error(
-                "Não foi possível conectar ao Supabase e não encontramos conta física local para este e-mail.",
-              );
-            }
-          } else {
-            throw supabaseErr;
           }
+          throw supabaseErr;
         }
       } else if (authMode === "signup") {
         if (!authName.trim()) {
@@ -1311,17 +1248,7 @@ export default function ProfilePage() {
             );
           }
 
-          // 2. Registra também localmente para compatibilidade de offline/fallback
-          try {
-            registerLocalUser(
-              authName.trim(),
-              email.trim().toLowerCase(),
-              password,
-            );
-          } catch {
-            // Ignora se o e-mail já existir localmente
-          }
-
+          // 2. Monta a sessão local a partir do usuário retornado pelo Supabase Auth
           userSession = {
             name: data.user.user_metadata?.name || authName.trim(),
             email: data.user.email || email.trim().toLowerCase(),
@@ -1338,25 +1265,11 @@ export default function ProfilePage() {
             errMsg.includes("network") ||
             errMsg.includes("fetch")
           ) {
-            console.warn(
-              "Supabase fora de alcance de rede, caindo de volta para banco local offline",
+            throw new Error(
+              "Sem conexão com o servidor. Crie sua conta quando estiver online ou continue como visitante.",
             );
-            const registered = registerLocalUser(
-              authName.trim(),
-              email.trim().toLowerCase(),
-              password,
-            );
-            userSession = {
-              name: registered.name,
-              email: registered.email,
-              avatarId: registered.avatarId || "default",
-              avatarFrameId: "frame_01",
-              id: "local_" + Date.now(),
-              offline: true,
-            };
-          } else {
-            throw supabaseErr;
           }
+          throw supabaseErr;
         }
 
         localStorage.setItem("cosmos_logged_user", JSON.stringify(userSession));
@@ -1426,22 +1339,11 @@ export default function ProfilePage() {
             errMsg.includes("network") ||
             errMsg.includes("fetch")
           ) {
-            console.warn(
-              "Supabase fora de alcance de rede, caindo de volta para login local offline",
+            throw new Error(
+              "Sem conexão com o servidor. Entre quando estiver online ou continue como visitante.",
             );
-            const logged = loginLocalUser(email.trim().toLowerCase(), password);
-            userSession = {
-              name: logged.name,
-              email: logged.email,
-              avatarId: logged.avatarId || "default",
-              customAvatarUrl: logged.customAvatarUrl,
-              avatarFrameId: logged.avatarFrameId || "frame_01",
-              id: "local_" + Date.now(),
-              offline: true,
-            };
-          } else {
-            throw supabaseErr;
           }
+          throw supabaseErr;
         }
 
         localStorage.setItem("cosmos_logged_user", JSON.stringify(userSession));

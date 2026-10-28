@@ -10,9 +10,19 @@ export async function GET(
   const resolvedParams = typeof params?.then === 'function' ? await params : params;
   const imageName = resolvedParams?.imageName;
 
-  if (imageName && imageName.startsWith('imagem_') && imageName.endsWith('.png')) {
-    const filePath = path.join(process.cwd(), imageName);
+  // Accept only simple, well-formed file names. `path.basename` rejects traversal
+  // (`..`, encoded separators) and the resolved-path check keeps reads inside the root.
+  const isSafeName =
+    typeof imageName === "string" &&
+    /^imagem_[A-Za-z0-9_-]+\.png$/.test(imageName) &&
+    path.basename(imageName) === imageName;
 
+  const rootDir = process.cwd();
+  const filePath = isSafeName ? path.join(rootDir, imageName) : "";
+  const isInsideRoot =
+    isSafeName && path.resolve(filePath).startsWith(rootDir + path.sep);
+
+  if (isInsideRoot) {
     if (fs.existsSync(filePath)) {
       const stats = fs.statSync(filePath);
       

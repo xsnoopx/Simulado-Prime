@@ -1,4 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
+
+// Requests above this size are rejected before reaching the AI provider.
+const MAX_PROMPT_LENGTH = 20000;
 
 function cleanAndParseJSON(text: string) {
   if (!text) return null;
@@ -33,16 +37,50 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { prompt, responseSchema } = body;
 
-    if (!prompt) {
+    if (!prompt || typeof prompt !== "string") {
       return NextResponse.json({ error: "O parâmetro prompt é obrigatório." }, { status: 400 });
+    }
+
+    if (prompt.length > MAX_PROMPT_LENGTH) {
+      return NextResponse.json(
+        { error: `O prompt excede o limite de ${MAX_PROMPT_LENGTH} caracteres.` },
+        { status: 413 }
+      );
     }
 
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || 'https://tobdeehicqircazdtbnx.supabase.co';
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRvYmRlZWhpY3FpcmNhemR0Ym54Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxNTUwMzksImV4cCI6MjA5NDczMTAzOX0.VY3oMLeg94CJmsTfta8550iIrFo68mtJO3XlN3eLYeg';
 
-    console.log("[Supabase Edge Function] Chamando gemini-chat na URL https://tobdeehicqircazdtbnx.supabase.co/functions/v1/gemini-chat...");
-    
-    const edgeResponse = await fetch("https://tobdeehicqircazdtbnx.supabase.co/functions/v1/gemini-chat", {
+    // Only signed-in users may spend AI credits through this proxy.
+    const authHeader = req.headers.get("authorization") || "";
+    const token = authHeader.toLowerCase().startsWith("bearer ")
+      ? authHeader.slice(7).trim()
+      : "";
+
+    if (!token) {
+      return NextResponse.json(
+        { error: "Entre na sua conta para usar os recursos de inteligência artificial." },
+        { status: 401 }
+      );
+    }
+
+    // The token signature is verified by Supabase, so forged JWTs are rejected here.
+    const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+      auth: { persistSession: false },
+    });
+
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    if (authError || !user) {
+      return NextResponse.json(
+        { error: "Sessão inválida ou expirada. Entre novamente para continuar." },
+        { status: 401 }
+      );
+    }
+
+    const edgeUrl = `${supabaseUrl.replace(/\/+$/, "")}/functions/v1/gemini-chat`;
+    console.log("[AI Proxy] Chamando gemini-chat para o usuário", user.id);
+
+    const edgeResponse = await fetch(edgeUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -57,11 +95,13 @@ export async function POST(req: NextRequest) {
 
     if (!edgeResponse.ok) {
       const errText = await edgeResponse.text();
-      throw new Error(`Edge Function returned status ${edgeResponse.status}: ${errText}`);
+      console.error("[AI Proxy] Edge Function respondeu", edgeResponse.status, errText.slice(0, 300));
+      throw new Error(`Edge Function returned status ${edgeResponse.status}`);
     }
 
     const resJson = await edgeResponse.json();
-    console.log("[Supabase Edge Function] Resposta recebida:", resJson);
+    // Never log the generated content: prompts may contain user-provided text.
+    console.log("[AI Proxy] Resposta recebida da Edge Function");
 
     // Extract the main string response
     let rawText = "";

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, Loader2, BookOpen } from 'lucide-react';
 import { Questao } from '@/hooks/useQuestions';
+import { requestAi } from '@/lib/aiClient';
 
 interface ExpertExplanationProps {
   missedQuestions: Questao[];
@@ -58,18 +59,8 @@ Gabarito correto: ${q.gabarito}
         required: ["topicos", "planoLeitura"]
       };
 
-      const res = await fetch('/api/gemini', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt, responseSchema })
-      });
+      const data = await requestAi(prompt, responseSchema);
 
-      const data = await res.json();
-      
-      if (!res.ok) {
-        throw new Error(data.error || 'Erro ao processar a análise.');
-      }
-      
       // text is a JSON string because of the responseMimeType in API
       const parsed = JSON.parse(data.text);
       setAnalysis(parsed);

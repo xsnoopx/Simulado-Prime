@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { requestAi } from '@/lib/aiClient';
 import { 
   Ghost, 
   ChevronLeft, 
@@ -149,14 +150,7 @@ export default function EnigmasPage() {
       const catToUse = overrideCategory || selectedCategory;
       const prompt = gerarPrompt(catToUse);
 
-      const response = await fetch('/api/gemini', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          prompt,
-          responseSchema: {
+      const resData = await requestAi(prompt, {
             type: "OBJECT",
             properties: {
               categoria: { type: "STRING" },
@@ -166,28 +160,14 @@ export default function EnigmasPage() {
               final: { type: "STRING" },
             },
             required: ["categoria", "introducao", "pergunta", "resposta", "final"]
-          }
-        })
-      });
-
-      if (!response.ok) {
-        let errorMsg = "Erro na requisição para a API";
-        try {
-          const errData = await response.json();
-          if (errData && errData.error) {
-            errorMsg = errData.error;
-          }
-        } catch (_) {}
-        throw new Error(errorMsg);
-      }
-
-      const resData = await response.json();
+          },
+        );
 
       if (resData.text) {
         const data = JSON.parse(resData.text);
         setEnigma(data);
       } else {
-        throw new Error(resData.error || "Nenhum texto retornado pela IA");
+        throw new Error("Nenhum texto retornado pela IA");
       }
     } catch (err: any) {
       console.error("Enigma fetch error:", err);

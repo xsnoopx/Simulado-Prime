@@ -1,5 +1,4 @@
 import { getSupabase } from './supabase';
-import { getExperienceDetails } from './achievements';
 
 /**
  * Safely stringifies an object to prevent circular serialization errors.
@@ -138,37 +137,32 @@ export async function syncAllDataToSupabase() {
       }
     }
 
-    // Global and Real-time Ranking integration: Upsert user record into Supabase "ranking" table
+    // Ranking: o cliente NÃO escreve xp, is_premium nem stats.
+    // Esses campos só mudam pela rota /api/admin/manage-players, que exige a
+    // sessão do e-mail de admin. Aqui só mantemos o visual da própria linha,
+    // através de uma função restrita no banco.
     if (session.user && userProfile) {
       try {
-        const xpInfo = getExperienceDetails(simuladoStats);
-        
         const isOwnerByEmail = session.user.email?.toLowerCase() === "klession@gmail.com";
         let verifiedFrameId = userProfile.avatarFrameId || session.user.user_metadata?.avatarFrameId || 'frame_01';
         if (verifiedFrameId === 'frame_owner' && !isOwnerByEmail) {
           verifiedFrameId = 'frame_01';
         }
 
-        const rankingPayload = {
-          id: session.user.id,
-          name: userProfile.name || session.user.user_metadata?.name || 'Explorador',
-          avatar_id: userProfile.avatarId || session.user.user_metadata?.avatarId || 'default',
-          custom_avatar_url: userProfile.customAvatarUrl || session.user.user_metadata?.customAvatarUrl || null,
-          avatar_frame_id: verifiedFrameId,
-          is_premium: !!userProfile.isPremium || !!session.user.user_metadata?.isPremium,
-          xp: xpInfo.xp,
-          stats: simuladoStats || {},
-          updated_at: new Date().toISOString()
-        };
-
-        const { error: rankError } = await client
-          .from('ranking')
-          .upsert(rankingPayload, { onConflict: 'id' });
+        const { error: rankError } = await client.rpc('sync_own_ranking_profile', {
+          p_name: userProfile.name || session.user.user_metadata?.name || 'Explorador',
+          p_avatar_id: userProfile.avatarId || session.user.user_metadata?.avatarId || 'default',
+          p_custom_avatar_url: userProfile.customAvatarUrl || session.user.user_metadata?.customAvatarUrl || null,
+          p_avatar_frame_id: verifiedFrameId,
+        });
 
         if (rankError) {
-          console.warn("[Supabase Sync] Failed to upsert to 'ranking' table. Ensure table exists in Supabase. Details:", rankError.message);
+          console.warn(
+            "[Supabase Sync] Falha ao sincronizar o perfil no ranking (a migração public.sync_own_ranking_profile já foi aplicada?):",
+            rankError.message
+          );
         } else {
-          console.log("[Supabase Sync] Successfully synchronized global ranking score.");
+          console.log("[Supabase Sync] Perfil do ranking sincronizado. XP e estatísticas só mudam pelo admin.");
         }
       } catch (rankErr) {
         console.warn("[Supabase Sync] Exception during ranking table sync:", rankErr);

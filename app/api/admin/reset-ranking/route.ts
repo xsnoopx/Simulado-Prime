@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { isAdminEmail } from '@/lib/adminAccess';
 
 export async function POST(req: NextRequest) {
   try {
@@ -21,36 +22,32 @@ export async function POST(req: NextRequest) {
       }
     });
 
-    // Verify token identity using Supabase Auth
+    // Verify token identity using Supabase Auth (signature checked server-side).
     let isOwner = false;
     try {
       const { data: { user }, error } = await supabase.auth.getUser(token);
       if (user && !error) {
-        isOwner = user.email?.toLowerCase() === "klession@gmail.com";
+        isOwner = isAdminEmail(user.email);
       }
     } catch (authErr) {
-      console.warn("GetUser failed during reset-ranking verification, trying token decode fallback:", authErr);
+      console.warn("GetUser failed during reset-ranking verification:", authErr);
     }
 
-    if (!isOwner) {
-      try {
-        const parts = token.split(".");
-        if (parts.length === 3) {
-          const payload = JSON.parse(Buffer.from(parts[1], "base64").toString("utf-8"));
-          if (payload && payload.email?.toLowerCase() === "klession@gmail.com") {
-            isOwner = true;
-          }
-        }
-      } catch (decodeError) {
-        console.error("JWT decoding isOwner fallback failed:", decodeError);
-      }
-    }
-
+    // Never decode the payload locally: a forged token would be accepted as the owner.
     if (!isOwner) {
       return NextResponse.json({ success: false, error: "Acesso administrativo negado." }, { status: 403 });
     }
 
-    const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || supabaseAnonKey;
+    // Sem service_role não há escrita: a tabela ranking passou a exigir RLS.
+    const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    if (!supabaseServiceRoleKey) {
+      console.error('[Reset API] SUPABASE_SERVICE_ROLE_KEY ausente: reset-ranking não pode gravar.');
+      return NextResponse.json(
+        { success: false, error: 'Servidor sem SUPABASE_SERVICE_ROLE_KEY configurada.' },
+        { status: 500 }
+      );
+    }
+
     const supabaseAdmin = createClient(supabaseUrl, supabaseServiceRoleKey, {
       auth: { persistSession: false }
     });
