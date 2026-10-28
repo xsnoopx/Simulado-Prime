@@ -230,31 +230,8 @@ const resizeAndSaveImage = (file: File, callback: (base64: string) => void) => {
   reader.readAsDataURL(file);
 };
 
-const registerLocalUser = (name: string, email: string, pass: string) => {
-  if (typeof window === "undefined")
-    return { name, email, avatarId: "default" };
-  const users = JSON.parse(localStorage.getItem("cosmos_local_users") || "[]");
-  if (users.find((u: any) => u.email === email)) {
-    throw new Error("Este e-mail espacial já está cadastrado no Cosmos.");
-  }
-  const newUser = { name, email, password: pass, avatarId: "default" };
-  users.push(newUser);
-  localStorage.setItem("cosmos_local_users", JSON.stringify(users));
-  return newUser;
-};
-
-const loginLocalUser = (email: string, pass: string) => {
-  if (typeof window === "undefined")
-    return { name: "João Silva", email, avatarId: "default" };
-  const users = JSON.parse(localStorage.getItem("cosmos_local_users") || "[]");
-  const found = users.find(
-    (u: any) => u.email === email && u.password === pass,
-  );
-  if (!found) {
-    throw new Error("E-mail ou senha espacial incorretos.");
-  }
-  return found;
-};
+// Local credential storage was removed: passwords must never be kept in localStorage.
+// Authentication is handled exclusively by Supabase Auth.
 
 // Returns the real Supabase access token of the current session, or "" when there is none.
 // Never fabricate a token here: the server verifies its signature before granting admin rights.
@@ -709,6 +686,13 @@ export default function ProfilePage() {
     setTimerSeconds(savedSeconds ? parseInt(savedSeconds, 10) : 900);
 
     // 2. Load auth status
+    // Purge legacy plaintext credentials left by older builds.
+    try {
+      localStorage.removeItem("cosmos_local_users");
+    } catch {
+      // Ignore storage restrictions
+    }
+
     const loggedUser = localStorage.getItem("cosmos_logged_user");
     if (loggedUser) {
       try {
@@ -957,30 +941,6 @@ export default function ProfilePage() {
           );
       } catch (err) {
         console.error("Erro ao enviar metadados para o Supabase Auth:", err);
-      }
-
-      try {
-        const users = JSON.parse(
-          localStorage.getItem("cosmos_local_users") || "[]",
-        );
-        const updatedUsers = users.map((u: any) =>
-          u.email === user.email
-            ? {
-                ...u,
-                name: updated.name,
-                email: updated.email,
-                avatarId: updated.avatarId,
-                customAvatarUrl: updated.customAvatarUrl,
-                avatarFrameId: updated.avatarFrameId,
-              }
-            : u,
-        );
-        localStorage.setItem(
-          "cosmos_local_users",
-          JSON.stringify(updatedUsers),
-        );
-      } catch (err) {
-        console.error("Erro ao salvar perfil no banco local:", err);
       }
     }
     if (typeof window !== "undefined") {
@@ -1249,27 +1209,12 @@ export default function ProfilePage() {
             errMsg.includes("network") ||
             errMsg.includes("fetch")
           ) {
-            console.warn(
-              "Supabase fora de alcance de rede, verificando conta local offline",
+            // Never recover or reveal a password locally: recovery only happens by e-mail.
+            throw new Error(
+              "Sem conexão com o servidor. Tente novamente quando estiver online para receber o link de recuperação.",
             );
-            const users = JSON.parse(
-              localStorage.getItem("cosmos_local_users") || "[]",
-            );
-            const foundLocal = users.find(
-              (u: any) => u.email === email.trim().toLowerCase(),
-            );
-            if (foundLocal) {
-              setAuthSuccess(
-                `Sua conta offline local existe no navegador! Como você está sem rede, sua senha local registrada é: "${foundLocal.password}"`,
-              );
-            } else {
-              throw new Error(
-                "Não foi possível conectar ao Supabase e não encontramos conta física local para este e-mail.",
-              );
-            }
-          } else {
-            throw supabaseErr;
           }
+          throw supabaseErr;
         }
       } else if (authMode === "signup") {
         if (!authName.trim()) {
@@ -1303,17 +1248,7 @@ export default function ProfilePage() {
             );
           }
 
-          // 2. Registra também localmente para compatibilidade de offline/fallback
-          try {
-            registerLocalUser(
-              authName.trim(),
-              email.trim().toLowerCase(),
-              password,
-            );
-          } catch {
-            // Ignora se o e-mail já existir localmente
-          }
-
+          // 2. Monta a sessão local a partir do usuário retornado pelo Supabase Auth
           userSession = {
             name: data.user.user_metadata?.name || authName.trim(),
             email: data.user.email || email.trim().toLowerCase(),
@@ -1330,25 +1265,11 @@ export default function ProfilePage() {
             errMsg.includes("network") ||
             errMsg.includes("fetch")
           ) {
-            console.warn(
-              "Supabase fora de alcance de rede, caindo de volta para banco local offline",
+            throw new Error(
+              "Sem conexão com o servidor. Crie sua conta quando estiver online ou continue como visitante.",
             );
-            const registered = registerLocalUser(
-              authName.trim(),
-              email.trim().toLowerCase(),
-              password,
-            );
-            userSession = {
-              name: registered.name,
-              email: registered.email,
-              avatarId: registered.avatarId || "default",
-              avatarFrameId: "frame_01",
-              id: "local_" + Date.now(),
-              offline: true,
-            };
-          } else {
-            throw supabaseErr;
           }
+          throw supabaseErr;
         }
 
         localStorage.setItem("cosmos_logged_user", JSON.stringify(userSession));
@@ -1418,22 +1339,11 @@ export default function ProfilePage() {
             errMsg.includes("network") ||
             errMsg.includes("fetch")
           ) {
-            console.warn(
-              "Supabase fora de alcance de rede, caindo de volta para login local offline",
+            throw new Error(
+              "Sem conexão com o servidor. Entre quando estiver online ou continue como visitante.",
             );
-            const logged = loginLocalUser(email.trim().toLowerCase(), password);
-            userSession = {
-              name: logged.name,
-              email: logged.email,
-              avatarId: logged.avatarId || "default",
-              customAvatarUrl: logged.customAvatarUrl,
-              avatarFrameId: logged.avatarFrameId || "frame_01",
-              id: "local_" + Date.now(),
-              offline: true,
-            };
-          } else {
-            throw supabaseErr;
           }
+          throw supabaseErr;
         }
 
         localStorage.setItem("cosmos_logged_user", JSON.stringify(userSession));

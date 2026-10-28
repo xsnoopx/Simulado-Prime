@@ -6,23 +6,11 @@ import {
   Crown, 
   Sparkles, 
   Check, 
-  Lock, 
-  CreditCard, 
   ChevronRight, 
   X, 
   Flame, 
-  Clock, 
-  Copy, 
-  Barcode, 
-  ShieldCheck, 
-  Compass,
-  Smile,
-  AlertCircle
+  Smile
 } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { QRCodeSVG } from 'qrcode.react';
-
-const PIX_CODE = '00020126760014br.gov.bcb.pix0136043f2823-30d5-4a96-9d1b-ca6772aa9a5c0214Simulado Prime52040000530398654042.005802BR5925KLESSION DE CARVALHO BEZE6010Jaguariuna6211050726f78806304166F';
 
 // Core subscription keys for robust syncing
 const USER_PROFILE_KEY = 'user_profile';
@@ -36,24 +24,19 @@ interface PremiumGatewayProps {
 
 export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: PremiumGatewayProps) {
   const [step, setStep] = useState<'benefits' | 'checkout' | 'processing' | 'success'>('benefits');
-  const [payMethod, setPayMethod] = useState<'pix' | 'card'>('pix');
-  const [copiedPix, setCopiedPix] = useState(false);
-  const [cardNumber, setCardNumber] = useState('');
-  const [cardName, setCardName] = useState('');
-  const [cardExpiry, setCardExpiry] = useState('');
-  const [cardCvv, setCardCvv] = useState('');
-  const [loadingText, setLoadingText] = useState('Processando transação segura...');
+  const [loadingText, setLoadingText] = useState('Ativando modo demonstração...');
 
-  // simulated payment flow
+  // This is a local demonstration only: nothing is charged and no payment data is
+  // collected. The flag lives in localStorage and can be cleared by the user.
   const handleSimulatePayment = () => {
     setStep('processing');
     
     setTimeout(() => {
-      setLoadingText('Comunicação criptografada estabelecida...');
+      setLoadingText('Nenhum pagamento será processado nesta demonstração...');
     }, 1000);
 
     setTimeout(() => {
-      setLoadingText('Ativando chaves do Cosmos Prime no seu perfil...');
+      setLoadingText('Gravando a ativação local no seu navegador...');
     }, 2200);
 
     setTimeout(() => {
@@ -78,12 +61,6 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
 
       setStep('success');
     }, 3500);
-  };
-
-  const copyPixCode = () => {
-    navigator.clipboard.writeText(PIX_CODE);
-    setCopiedPix(true);
-    setTimeout(() => setCopiedPix(false), 2000);
   };
 
   const finishAndReload = () => {
@@ -183,26 +160,20 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                 </div>
               </div>
 
-              {/* Price and Action */}
+              {/* Demonstration notice — this build does not sell anything */}
               <div className="pt-4 border-t border-white/10 space-y-4">
-                <div className="text-center flex flex-col items-center justify-center bg-gradient-to-b from-amber-500/20 via-amber-500/5 to-black/30 p-8 rounded-3xl border border-amber-400/30 shadow-[0_0_30px_rgba(245,158,11,0.12)] relative overflow-hidden group">
-                  {/* Cosmic light shines/aurora in the background */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-24 bg-gradient-to-b from-amber-400/20 to-transparent blur-2xl rounded-full pointer-events-none"></div>
-                  
+                <div className="text-center flex flex-col items-center justify-center bg-gradient-to-b from-amber-500/10 via-amber-500/5 to-black/30 p-6 rounded-3xl border border-amber-400/20 relative overflow-hidden">
                   <div className="space-y-3 relative z-10">
-                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-xs uppercase tracking-[0.18em] text-amber-300 font-black animate-pulse">
+                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-xs uppercase tracking-[0.18em] text-amber-300 font-black">
                       <Sparkles className="w-4 h-4 text-amber-400" />
-                      Assinatura Vitalícia
+                      Modo demonstração
                       <Sparkles className="w-4 h-4 text-amber-400" />
                     </span>
-                    
-                    <div className="py-2">
-                      <span className="font-mono font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-amber-400 to-orange-500 text-5xl md:text-6xl tracking-tighter block select-none drop-shadow-[0_4px_12px_rgba(245,158,11,0.3)]">{"R$14,90"}</span>
-                    </div>
 
-                    <span className="text-[13px] text-white/95 font-semibold block tracking-wide">
-                      Sem mensalidades, pague apenas uma única vez
-                    </span>
+                    <p className="text-[13px] text-white/80 font-semibold leading-relaxed max-w-sm mx-auto">
+                      O Cosmos Prime aqui é uma prévia local. Não há cobrança, assinatura ou pagamento:
+                      a ativação fica apenas neste navegador e pode ser desfeita a qualquer momento.
+                    </p>
                   </div>
                 </div>
 
@@ -210,7 +181,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                   onClick={() => setStep('checkout')}
                   className="w-full py-4.5 rounded-2xl gradient-amber text-black font-display font-black tracking-widest text-sm flex items-center justify-center gap-2.5 shadow-lg shadow-amber-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
                 >
-                  LIBERAR ACESSO VITALÍCIO AGORA
+                  ATIVAR DEMONSTRAÇÃO
                   <ChevronRight className="w-5 h-5 stroke-[2.5]" />
                 </button>
               </div>
@@ -218,7 +189,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
           </motion.div>
         )}
 
-        {/* STEP 2: CHECKOUT DIALOG */}
+        {/* STEP 2: ACTIVATION CONFIRMATION (no payment step) */}
         {step === 'checkout' && (
           <motion.div
             key="checkout"
@@ -236,7 +207,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                   <div className="p-2 rounded-xl bg-amber-500/15 text-amber-400">
                     <Crown className="w-5 h-5" />
                   </div>
-                  <span className="font-display font-black text-sm uppercase tracking-widest text-[#eeeeee]">Pagamento Seguro</span>
+                  <span className="font-display font-black text-sm uppercase tracking-widest text-[#eeeeee]">Ativação de demonstração</span>
                 </div>
                 <button 
                   onClick={() => setStep('benefits')}
@@ -246,132 +217,31 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                 </button>
               </div>
 
-              {/* Toggle Method */}
-              <div className="grid grid-cols-2 gap-3 bg-white/5 p-1.5 rounded-2xl border border-white/10">
-                <button
-                  onClick={() => setPayMethod('pix')}
-                  className={cn(
-                    "py-3.5 rounded-xl font-display font-black text-xs tracking-widest transition-all flex items-center justify-center gap-2 cursor-pointer",
-                    payMethod === 'pix' ? "bg-amber-400 text-black shadow-lg" : "text-white/60 hover:text-white"
-                  )}
-                >
-                  <Barcode className="w-5 h-5" />
-                  PIX INSTANTÂNEO
-                </button>
-                <button
-                  onClick={() => setPayMethod('card')}
-                  className={cn(
-                    "py-3.5 rounded-xl font-display font-black text-xs tracking-widest transition-all flex items-center justify-center gap-2 cursor-pointer",
-                    payMethod === 'card' ? "bg-amber-400 text-black shadow-lg" : "text-white/60 hover:text-white"
-                  )}
-                >
-                  <CreditCard className="w-5 h-5" />
-                  CARTÃO DE CRÉDITO
-                </button>
+              {/* Demonstration panel: no payment data is requested or stored. */}
+              <div className="min-h-[220px] flex items-center justify-center">
+                <div className="space-y-4 text-center max-w-sm mx-auto py-6">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-amber-400/10 border border-amber-400/20 flex items-center justify-center">
+                    <Sparkles className="w-7 h-7 text-amber-400" />
+                  </div>
+                  <p className="text-sm font-semibold text-white/85 leading-relaxed">
+                    Nenhum pagamento será processado e nenhum dado de cartão é solicitado.
+                    O botão abaixo apenas marca este navegador como &quot;demonstração premium&quot;
+                    no armazenamento local.
+                  </p>
+                </div>
               </div>
 
-              {/* Payment Details Container */}
-              <div className="min-h-[220px]">
-                {payMethod === 'pix' ? (
-                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="space-y-5 text-center"
-                  >
-                    <div className="mx-auto w-36 h-36 bg-white p-3 rounded-3xl flex items-center justify-center shadow-lg">
-                      {/* Real dynamic QR Code generated from the PIX key */}
-                      <QRCodeSVG value={PIX_CODE} size={120} level="M" />
-                    </div>
- 
-                    <p className="text-sm font-semibold text-white/85 leading-relaxed max-w-sm mx-auto">
-                      Escaneie o QR Code acima ou copie a Chave Pix abaixo. O sistema identificará o recebimento de forma instantânea.
-                    </p>
- 
-                    <div className="flex gap-2 items-center bg-white/5 p-2.5 rounded-2xl border border-white/10 max-w-md mx-auto">
-                      <span className="text-xs font-mono text-center text-white/70 truncate flex-1 block select-all px-2 font-bold" title={PIX_CODE}>
-                        {PIX_CODE}
-                      </span>
-                      <button
-                        onClick={copyPixCode}
-                        className={cn(
-                          "px-4 py-2 rounded-xl font-display text-xs font-black uppercase transition-all shrink-0 cursor-pointer flex items-center gap-1.5 shadow-sm",
-                          copiedPix ? "bg-emerald-500 text-white" : "bg-white/15 text-white hover:bg-white/20 hover:scale-105 active:scale-95"
-                        )}
-                      >
-                        <Copy className="w-3.5 h-3.5" />
-                        {copiedPix ? 'Copiado!' : 'Copiar'}
-                      </button>
-                    </div>
-                  </motion.div>
-                ) : (
-                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="space-y-4 text-left max-w-sm mx-auto"
-                  >
-                    <div className="space-y-1.5">
-                      <label className="text-xs uppercase tracking-widest text-amber-200/90 font-black">Número do Cartão</label>
-                      <input 
-                        type="text" 
-                        placeholder="4444 5555 6666 7777"
-                        maxLength={19}
-                        value={cardNumber}
-                        onChange={(e) => setCardNumber(e.target.value)}
-                        className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3.5 text-sm placeholder:text-white/40 focus:border-amber-400 focus:bg-white/[0.12] outline-none text-white font-mono tracking-widest font-bold"
-                      />
-                    </div>
- 
-                    <div className="space-y-1.5">
-                      <label className="text-xs uppercase tracking-widest text-amber-200/90 font-black">Nome Impresso no Cartão</label>
-                      <input 
-                        type="text" 
-                        placeholder="TITULAR DA CONTA"
-                        value={cardName}
-                        onChange={(e) => setCardName(e.target.value.toUpperCase())}
-                        className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3.5 text-sm placeholder:text-white/40 focus:border-amber-400 focus:bg-white/[0.12] outline-none text-white uppercase tracking-wider font-bold"
-                      />
-                    </div>
- 
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="space-y-1.5">
-                        <label className="text-xs uppercase tracking-widest text-amber-200/90 font-black">Validade</label>
-                        <input 
-                          type="text" 
-                          placeholder="MM/AA"
-                          maxLength={5}
-                          value={cardExpiry}
-                          onChange={(e) => setCardExpiry(e.target.value)}
-                          className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3.5 text-sm placeholder:text-white/40 focus:border-amber-400 focus:bg-white/[0.12] outline-none text-white text-center font-mono font-bold"
-                        />
-                      </div>
-                      <div className="space-y-1.5">
-                        <label className="text-xs uppercase tracking-widest text-amber-200/90 font-black">CVC / CVV</label>
-                        <input 
-                          type="password" 
-                          placeholder="123"
-                          maxLength={4}
-                          value={cardCvv}
-                          onChange={(e) => setCardCvv(e.target.value)}
-                          className="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3.5 text-sm placeholder:text-white/40 focus:border-amber-400 focus:bg-white/[0.12] outline-none text-white text-center font-mono font-bold"
-                        />
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </div>
- 
-              {/* Secure Footer */}
+              {/* Footer */}
               <div className="pt-4 border-t border-white/10 space-y-4">
                 <button
                   onClick={handleSimulatePayment}
                   className="w-full py-4.5 rounded-2xl bg-amber-400 text-black font-display font-black tracking-widest text-sm flex items-center justify-center gap-2 hover:bg-amber-300 active:scale-95 transition-all cursor-pointer shadow-lg shadow-amber-500/10"
                 >
-                  CONFIRMAR PAGAMENTO &rarr;
+                  ATIVAR DEMONSTRAÇÃO &rarr;
                 </button>
- 
-                <div className="flex items-center justify-center gap-1.5 text-white/50 text-[11px] uppercase tracking-widest font-black leading-none">
-                  <ShieldCheck className="w-4 h-4 text-amber-500" />
-                  Ambiente blindado e criptografado SSL 256 bits
+
+                <div className="flex items-center justify-center gap-1.5 text-white/50 text-[11px] uppercase tracking-widest font-black leading-none text-center">
+                  Ativação local · sem cobrança · sem assinatura
                 </div>
               </div>
             </div>
@@ -391,7 +261,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
             <div className="relative space-y-6">
               <div className="mx-auto w-14 h-14 rounded-full border-t-3 border-r-3 border-amber-400 animate-spin" />
               <div className="space-y-3">
-                <p className="font-display font-black text-sm uppercase tracking-[0.25em] text-amber-300 animate-pulse">AGUARDANDO CONFIRMAÇÃO</p>
+                <p className="font-display font-black text-sm uppercase tracking-[0.25em] text-amber-300 animate-pulse">ATIVANDO DEMONSTRAÇÃO</p>
                 <p className="text-sm text-white/90 font-extrabold font-sans leading-relaxed min-h-[44px] px-2">
                   {loadingText}
                 </p>
@@ -427,8 +297,8 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-3xl font-display font-black uppercase tracking-widest text-emerald-400">COSMOS PRIME LIBERADO!</h3>
-                <p className="text-xs text-emerald-200 uppercase tracking-[0.3em] font-black">Sua inscrição foi confirmada com sucesso</p>
+                <h3 className="text-3xl font-display font-black uppercase tracking-widest text-emerald-400">COSMOS PRIME (DEMO)</h3>
+                <p className="text-xs text-emerald-200 uppercase tracking-[0.3em] font-black">Ativação local concluída — nada foi cobrado</p>
               </div>
 
               <div className="bg-white/[0.03] border border-white/10 p-6 rounded-2xl max-w-sm mx-auto space-y-4 text-left shadow-inner">
@@ -443,9 +313,6 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                 <div className="flex items-center gap-3">
                   <Check className="w-5 h-5 text-emerald-400 shrink-0 stroke-[3]" />
                   <span className="text-sm text-white font-black">+50 Molduras & +50 Avatares Exclusivos liberados</span>
-                </div>
-                <div className="flex items-center gap-3 pt-2 border-t border-white/5">
-                  <span className="text-xs font-mono text-emerald-300/90 font-black uppercase block tracking-widest">Código: TR-COSMOS-PRIME777</span>
                 </div>
               </div>
 
