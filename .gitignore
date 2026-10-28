@@ -5,3 +5,9 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Cache incremental do TypeScript: gerado a cada build, não é fonte.
+*.tsbuildinfo
+
+# Backups locais de editor. O histórico do git já guarda as versões antigas.
+*.bak
