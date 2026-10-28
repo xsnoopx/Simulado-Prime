@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Simulado Prime</string>
+    <string name="title_activity_main">Simulado Prime</string>
+    <string name="package_name">com.xsnoopx.simuladoprime</string>
+    <string name="custom_url_scheme">com.xsnoopx.simuladoprime</string>
+</resources>

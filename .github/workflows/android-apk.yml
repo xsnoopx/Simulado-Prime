@@ -1,0 +1,95 @@
+name: Android APK
+
+# Gera um APK do app para instalar no celular (sideload).
+#
+# O APK é uma casca Capacitor: ele abre a URL do app Next.js dentro de um
+# WebView. Ou seja, o celular precisa de internet e o servidor precisa estar
+# no ar — não existe versão offline, porque as rotas /api/* rodam no servidor.
+#
+# Como usar:
+#   Actions > Android APK > Run workflow
+#   app_url: (opcional) URL https do app. Vazio = usa a de mobile/capacitor.config.ts
+#
+# O APK sai em Artifacts, no fim da execução.
+
+on:
+  workflow_dispatch:
+    inputs:
+      app_url:
+        description: "URL https do app (vazio = padrão de mobile/capacitor.config.ts)"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android-apk
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Compilar APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Instalar plataforma Android 35
+        run: sdkmanager --install "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Instalar dependências
+        working-directory: mobile
+        run: npm ci
+
+      - name: Sincronizar projeto Android
+        working-directory: mobile
+        env:
+          APP_URL: ${{ inputs.app_url }}
+        run: npx cap sync android
+
+      - name: Conferir se a URL do app responde
+        working-directory: mobile
+        env:
+          APP_URL: ${{ inputs.app_url }}
+        run: |
+          url="${APP_URL:-https://ais-pre-6qlnh5xu3uw7anuvtfvyaf-457178958823.us-east1.run.app}"
+          code=$(curl -s -o /dev/null -w '%{http_code}' -L --max-time 30 "$url" || echo 000)
+          echo "URL: $url"
+          echo "HTTP: $code"
+          if [ "$code" != "200" ]; then
+            echo "::warning::A URL respondeu HTTP $code. O APK compila, mas vai abrir mostrando erro de conexão."
+          fi
+
+      - name: Gerar APK (debug)
+        working-directory: mobile/android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: Mostrar o tamanho do APK
+        working-directory: mobile/android
+        run: ls -lh app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Publicar APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: simulado-prime-apk
+          path: mobile/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30
