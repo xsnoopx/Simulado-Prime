@@ -11,3 +11,6 @@ coverage/
 
 # Backups locais de editor. O histórico do git já guarda as versões antigas.
 *.bak
+
+# Avatares gerados pelo prebuild (copiados de avatar_*.png na raiz)
+public/avatars/
