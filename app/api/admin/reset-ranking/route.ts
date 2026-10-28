@@ -61,6 +61,21 @@ export async function POST(req: NextRequest) {
 
     if (resetError) {
       console.error('[Reset API Error] Falha ao zerar o ranking:', resetError);
+
+      // PGRST202 = função não encontrada no schema cache. Acontece quando este
+      // código já está no ar mas a migration ainda não foi aplicada no banco.
+      // Sem isso o painel mostrava um "Could not find the function" cru.
+      if (resetError.code === 'PGRST202') {
+        return NextResponse.json(
+          {
+            success: false,
+            error:
+              'Migration pendente: rode supabase/migrations/20261028090000_reset_ranking_season.sql no SQL Editor do Supabase e tente de novo.',
+          },
+          { status: 503 }
+        );
+      }
+
       return NextResponse.json({ success: false, error: resetError.message }, { status: 500 });
     }
 
