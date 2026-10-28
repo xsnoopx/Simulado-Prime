@@ -52,51 +52,38 @@ export async function POST(req: NextRequest) {
       auth: { persistSession: false }
     });
 
-    // 1. Fetch current season if it exists
-    const { data: seasonData } = await supabaseAdmin
-      .from('ranking')
-      .select('xp')
-      .eq('id', 'system_season')
-      .maybeSingle();
+    // Uma única chamada: o delete dos jogadores e o upsert do marcador de
+    // temporada rodam na mesma transação dentro do banco. Antes eram duas
+    // chamadas separadas e, se o insert falhasse, o ranking ficava vazio.
+    const { data: nextSeason, error: resetError } = await supabaseAdmin.rpc(
+      'reset_ranking_season'
+    );
 
-    let currentSeason = 0;
-    if (seasonData && typeof seasonData.xp === 'number') {
-      currentSeason = seasonData.xp;
+    if (resetError) {
+      console.error('[Reset API Error] Falha ao zerar o ranking:', resetError);
+
+      // PGRST202 = função não encontrada no schema cache. Acontece quando este
+      // código já está no ar mas a migration ainda não foi aplicada no banco.
+      // Sem isso o painel mostrava um "Could not find the function" cru.
+      if (resetError.code === 'PGRST202') {
+        return NextResponse.json(
+          {
+            success: false,
+            error:
+              'Migration pendente: rode supabase/migrations/20261028090000_reset_ranking_season.sql no SQL Editor do Supabase e tente de novo.',
+          },
+          { status: 503 }
+        );
+      }
+
+      return NextResponse.json({ success: false, error: resetError.message }, { status: 500 });
     }
 
-    const nextSeason = currentSeason + 1;
-
-    // 2. Clear all records from the 'ranking' table.
-    const { error: deleteError } = await supabaseAdmin
-      .from('ranking')
-      .delete()
-      .neq('id', 'placeholder_nonexistent_id'); // Delete everything because every id !== placeholder_nonexistent_id
-
-    if (deleteError) {
-      console.error("[Reset API Error] Failed to delete rows from ranking table:", deleteError);
-      return NextResponse.json({ success: false, error: deleteError.message }, { status: 500 });
-    }
-
-    // 3. Insert/Initialize the new season record marker in the ranking table
-    const { error: insertError } = await supabaseAdmin
-      .from('ranking')
-      .insert({
-        id: 'system_season',
-        name: 'Configuração do Sistema',
-        avatar_id: 'default',
-        avatar_frame_id: 'frame_01',
-        is_premium: false,
-        xp: nextSeason,
-        stats: { season: nextSeason },
-        updated_at: new Date().toISOString()
-      });
-
-    if (insertError) {
-      console.error("[Reset API Error] Failed to write new season marker:", insertError);
-      return NextResponse.json({ success: false, error: insertError.message }, { status: 500 });
-    }
-
-    return NextResponse.json({ success: true, message: 'Ranking table reset successfully. Advanced to season ' + nextSeason });
+    return NextResponse.json({
+      success: true,
+      season: nextSeason,
+      message: `Ranking zerado. Temporada ${nextSeason} iniciada.`,
+    });
   } catch (err: any) {
     console.error("[Reset API Exception]", err);
     return NextResponse.json({ success: false, error: err.message || String(err) }, { status: 500 });
