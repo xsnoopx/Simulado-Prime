@@ -10,14 +10,25 @@ export async function GET(
   const resolvedParams = typeof params?.then === 'function' ? await params : params;
   const imageName = resolvedParams?.imageName;
 
-  if (imageName && imageName.startsWith('avatar_') && imageName.endsWith('.png')) {
+  // Accept only simple, well-formed file names. `path.basename` rejects traversal
+  // (`..`, encoded separators) and the resolved-path check keeps reads inside each
+  // allowed directory.
+  const isSafeName =
+    typeof imageName === "string" &&
+    /^avatar_[A-Za-z0-9_-]+\.png$/.test(imageName) &&
+    path.basename(imageName) === imageName;
+
+  if (isSafeName) {
     // Try to locate the file in multiple possible paths
     const pathsToTry = [
       path.join(process.cwd(), imageName), // Try the root directory where files are placed
       path.join(process.cwd(), 'public/avatars', imageName),
       path.join('/home/ubuntu/avatars', imageName),
       path.join(process.cwd(), 'avatars', imageName)
-    ];
+    ].filter((candidate) => {
+      const resolved = path.resolve(candidate);
+      return resolved.endsWith(path.sep + imageName) && path.isAbsolute(resolved);
+    });
 
     let filePath = '';
     for (const p of pathsToTry) {

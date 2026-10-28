@@ -28,26 +28,16 @@ export async function POST(req: NextRequest) {
       }
     } catch (authError: any) {
       authErrorMsg = authError.message || String(authError);
-      console.warn("Supabase auth getUser failed, trying local JWT payload decode fallback:", authErrorMsg);
+      console.warn("Supabase auth getUser failed during owner verification:", authErrorMsg);
     }
 
-    // Direct JWT signature verification fallback: if Supabase server is unreachable,
-    // read the email directly from the verified client session token payload.
-    if (!isOwner) {
-      try {
-        const parts = token.split('.');
-        if (parts.length === 3) {
-          const payload = JSON.parse(Buffer.from(parts[1], 'base64').toString('utf-8'));
-          if (payload && payload.email?.toLowerCase() === "klession@gmail.com") {
-            isOwner = true;
-          }
-        }
-      } catch (decodeError) {
-        console.error("JWT decoding fallback failed:", decodeError);
-      }
+    // The token signature is verified by Supabase above. Never decode the payload
+    // locally: an unsigned token would be trivially forgeable to impersonate the owner.
+    if (authErrorMsg) {
+      console.warn("[validate-owner] Verificação de token rejeitada:", authErrorMsg);
     }
 
-    return NextResponse.json({ isOwner, code: isOwner ? "success" : "invalid_user", detail: authErrorMsg });
+    return NextResponse.json({ isOwner, code: isOwner ? "success" : "invalid_user" });
   } catch (err: any) {
     return NextResponse.json({ isOwner: false, error: err.message }, { status: 500 });
   }

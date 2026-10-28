@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       }
     });
 
-    // Verify token identity using Supabase Auth
+    // Verify token identity using Supabase Auth (signature checked server-side).
     let isOwner = false;
     try {
       const { data: { user }, error } = await supabase.auth.getUser(token);
@@ -29,23 +29,10 @@ export async function POST(req: NextRequest) {
         isOwner = user.email?.toLowerCase() === "klession@gmail.com";
       }
     } catch (authErr) {
-      console.warn("GetUser failed during reset-ranking verification, trying token decode fallback:", authErr);
+      console.warn("GetUser failed during reset-ranking verification:", authErr);
     }
 
-    if (!isOwner) {
-      try {
-        const parts = token.split(".");
-        if (parts.length === 3) {
-          const payload = JSON.parse(Buffer.from(parts[1], "base64").toString("utf-8"));
-          if (payload && payload.email?.toLowerCase() === "klession@gmail.com") {
-            isOwner = true;
-          }
-        }
-      } catch (decodeError) {
-        console.error("JWT decoding isOwner fallback failed:", decodeError);
-      }
-    }
-
+    // Never decode the payload locally: a forged token would be accepted as the owner.
     if (!isOwner) {
       return NextResponse.json({ success: false, error: "Acesso administrativo negado." }, { status: 403 });
     }

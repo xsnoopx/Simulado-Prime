@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       }
     });
 
-    // Verify token identity using getUser
+    // Verify token identity using getUser (verifies the JWT signature server-side).
     let isOwner = false;
     try {
       const { data: { user }, error } = await supabase.auth.getUser(token);
@@ -29,25 +29,11 @@ export async function POST(req: NextRequest) {
         isOwner = user.email?.toLowerCase() === "klession@gmail.com";
       }
     } catch (authErr) {
-      console.warn("GetUser failed during admin manage-players verification, trying decode:", authErr);
+      console.warn("GetUser failed during admin manage-players verification:", authErr);
     }
 
-    // Direct JWT signature verification fallback: if Supabase server is unreachable/throws, 
-    // read email directly from verified client session token payload.
-    if (!isOwner) {
-      try {
-        const parts = token.split(".");
-        if (parts.length === 3) {
-          const payload = JSON.parse(Buffer.from(parts[1], "base64").toString("utf-8"));
-          if (payload && payload.email?.toLowerCase() === "klession@gmail.com") {
-            isOwner = true;
-          }
-        }
-      } catch (decodeError) {
-        console.error("JWT decoding isOwner fallback failed:", decodeError);
-      }
-    }
-
+    // Never decode the token payload locally: an unsigned/forged JWT would be
+    // accepted as the owner. If Supabase cannot confirm the token, deny access.
     if (!isOwner) {
       return NextResponse.json({ success: false, error: "Acesso administrativo negado." }, { status: 403 });
     }
@@ -73,14 +59,50 @@ export async function POST(req: NextRequest) {
 
       return NextResponse.json({ success: true, message: "Usuário removido com sucesso." });
     } else if (action === "update") {
-      if (!userId || !updatedFields) {
+      if (!userId || !updatedFields || typeof updatedFields !== "object") {
         return NextResponse.json({ success: false, error: "ID do usuário ou campos de atualização ausentes." }, { status: 400 });
+      }
+
+      // Allowlist: never spread the request body straight into the database.
+      // This blocking of mass assignment protects role/premium/ownership columns.
+      const ALLOWED_FIELDS = [
+        "name",
+        "xp",
+        "is_premium",
+        "stats",
+        "avatar_id",
+        "avatar_frame_id",
+        "custom_avatar_url",
+      ] as const;
+
+      const safeFields: Record<string, any> = {};
+      for (const field of ALLOWED_FIELDS) {
+        if (updatedFields[field] === undefined) continue;
+        safeFields[field] = updatedFields[field];
+      }
+
+      if (Object.keys(safeFields).length === 0) {
+        return NextResponse.json({ success: false, error: "Nenhum campo atualizável foi informado." }, { status: 400 });
+      }
+
+      if (safeFields.name !== undefined && typeof safeFields.name !== "string") {
+        return NextResponse.json({ success: false, error: "O campo 'name' deve ser texto." }, { status: 400 });
+      }
+      if (safeFields.xp !== undefined && !Number.isFinite(Number(safeFields.xp))) {
+        return NextResponse.json({ success: false, error: "O campo 'xp' deve ser numérico." }, { status: 400 });
+      }
+      if (safeFields.is_premium !== undefined && typeof safeFields.is_premium !== "boolean") {
+        return NextResponse.json({ success: false, error: "O campo 'is_premium' deve ser booleano." }, { status: 400 });
+      }
+      if (safeFields.stats !== undefined && (typeof safeFields.stats !== "object" || Array.isArray(safeFields.stats))) {
+        return NextResponse.json({ success: false, error: "O campo 'stats' deve ser um objeto." }, { status: 400 });
       }
 
       const { error: updateError } = await supabaseAdmin
         .from("ranking")
         .update({
-          ...updatedFields,
+          ...safeFields,
+          ...(safeFields.xp !== undefined ? { xp: Number(safeFields.xp) } : {}),
           updated_at: new Date().toISOString()
         })
         .eq("id", userId);
