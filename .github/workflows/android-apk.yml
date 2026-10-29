@@ -69,6 +69,23 @@ jobs:
           APP_URL: ${{ inputs.app_url }}
         run: npx cap sync android
 
+      # O Android gera uma chave de debug nova por máquina. Num runner efêmero
+      # isso significa uma chave diferente a cada build — e aí o APK novo não
+      # instala por cima do anterior ("app não instalado"). O secret guarda uma
+      # chave fixa, em base64, para todos os builds usarem a mesma assinatura.
+      - name: Restaurar chave de assinatura
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_DEBUG_KEYSTORE_B64 }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ]; then
+            echo "::warning::Secret ANDROID_DEBUG_KEYSTORE_B64 ausente: o APK vai sair com uma chave nova e não instalará por cima do anterior."
+            exit 0
+          fi
+          mkdir -p ~/.android
+          printf '%s' "$KEYSTORE_B64" | base64 -d > ~/.android/debug.keystore
+          chmod 600 ~/.android/debug.keystore
+          echo "chave de assinatura restaurada"
+
       - name: Conferir se a URL do app responde
         working-directory: mobile
         env:
