@@ -1,0 +1,4 @@
+# Saída do scripts/prepare-assets.mjs: dá para regerar a partir de
+# resources/icon-source.png com `npm run assets`.
+resources/icon.png
+resources/splash.png

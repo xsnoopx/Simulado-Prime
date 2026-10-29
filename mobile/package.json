@@ -4,6 +4,7 @@
   "private": true,
   "description": "Casca Android (Capacitor) do Simulado Prime",
   "scripts": {
+    "assets": "node scripts/prepare-assets.mjs && capacitor-assets generate --android --iconBackgroundColor \"#27282d\" --splashBackgroundColor \"#27282d\" && node scripts/optimize-splash.mjs",
     "sync": "cap sync android",
     "open": "cap open android",
     "build:debug": "cd android && ./gradlew assembleDebug"
@@ -13,6 +14,7 @@
     "@capacitor/core": "^7.0.0"
   },
   "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "^7.0.0",
     "typescript": "^5.9.3"
   }
