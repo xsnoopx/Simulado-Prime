@@ -9,15 +9,19 @@
 //
 // O Android resolve @drawable/splash pelo nome, então trocar a extensão do
 // arquivo não exige mudar o styles.xml.
+//
+// As variantes *-night saem fora: o gerador as preenche com um emblema pequeno
+// (fallback de ícone) em vez da arte, e o nosso splash já é escuro — em modo
+// noturno ele fica igual.
 
 import sharp from 'sharp';
-import { readdirSync, statSync, unlinkSync, existsSync } from 'node:fs';
+import { readdirSync, statSync, unlinkSync, existsSync, rmdirSync } from 'node:fs';
 import path from 'node:path';
 
 const RES = path.resolve('android/app/src/main/res');
 const QUALITY = 92;
 
-function splashDirs(dir) {
+function drawableDirs(dir) {
   return readdirSync(dir, { withFileTypes: true })
     .filter((e) => e.isDirectory() && e.name.startsWith('drawable'))
     .map((e) => path.join(dir, e.name));
@@ -30,12 +34,28 @@ async function main() {
 
   let converted = 0;
   let saved = 0;
+  let nights = 0;
 
-  for (const dir of splashDirs(RES)) {
+  for (const dir of drawableDirs(RES)) {
+    const night = dir.includes('-night');
     const png = path.join(dir, 'splash.png');
+    const webp = path.join(dir, 'splash.webp');
+
+    if (night) {
+      let removed = false;
+      for (const f of [png, webp]) {
+        if (existsSync(f)) {
+          unlinkSync(f);
+          removed = true;
+        }
+      }
+      if (removed) nights++;
+      if (existsSync(dir) && !readdirSync(dir).length) rmdirSync(dir);
+      continue;
+    }
+
     if (!existsSync(png)) continue;
 
-    const webp = path.join(dir, 'splash.webp');
     const before = statSync(png).size;
     await sharp(png).webp({ quality: QUALITY, effort: 6 }).toFile(webp);
     const after = statSync(webp).size;
@@ -45,13 +65,14 @@ async function main() {
     saved += before - after;
   }
 
-  if (!converted) {
-    console.log('nenhum splash.png encontrado (já convertido?)');
+  if (!converted && !nights) {
+    console.log('nada a fazer: splashes já estão em WebP e sem variantes night');
     return;
   }
 
   console.log(`${converted} splashes convertidos para WebP`);
   console.log(`economia: ${(saved / 1024 / 1024).toFixed(2)} MB`);
+  console.log(`${nights} variantes de modo escuro removidas`);
 }
 
 main().catch((err) => {
