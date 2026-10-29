@@ -1,10 +1,13 @@
 import { createClient } from '@supabase/supabase-js';
+import { resolveSupabaseConfig } from './supabaseConfig';
 
-const DEFAULT_URL = 'https://tobdeehicqircazdtbnx.supabase.co';
-const DEFAULT_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRvYmRlZWhpY3FpcmNhemR0Ym54Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxNTUwMzksImV4cCI6MjA5NDczMTAzOX0.VY3oMLeg94CJmsTfta8550iIrFo68mtJO3XlN3eLYeg';
+const buildConfig = resolveSupabaseConfig(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+);
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || DEFAULT_URL;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || DEFAULT_KEY;
+const supabaseUrl = buildConfig.supabaseUrl;
+const supabaseAnonKey = buildConfig.supabaseAnonKey;
 
 // Não há mais wrapper de fetch. Antes, um "Failed to fetch" era convertido em
 // HTTP 200 com corpo {} — o que fazia falha de rede passar por sucesso: ranking
@@ -22,9 +25,11 @@ let dynamicSupabaseClient: any = null;
 
 export async function getSupabase() {
   if (typeof window === 'undefined') {
-    const serverUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || DEFAULT_URL;
-    const serverKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || DEFAULT_KEY;
-    return createClient(serverUrl, serverKey, {
+    const serverConfig = resolveSupabaseConfig(
+      process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY
+    );
+    return createClient(serverConfig.supabaseUrl, serverConfig.supabaseAnonKey, {
       auth: {
         persistSession: true,
         autoRefreshToken: true,
