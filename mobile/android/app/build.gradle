@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
 
+// No CI a chave de assinatura vem de fora (secret do GitHub Actions), para que
+// todo APK publicado tenha a mesma assinatura e o novo instale por cima do
+// anterior. Sem a variável, o build local segue com a chave de debug do
+// Android, como sempre.
+def ciKeystore = System.getenv("ANDROID_KEYSTORE_PATH")
+
 android {
     namespace "com.xsnoopx.simuladoprime"
     compileSdk rootProject.ext.compileSdkVersion
@@ -16,7 +22,22 @@ android {
             ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    signingConfigs {
+        if (ciKeystore) {
+            ci {
+                storeFile file(ciKeystore)
+                storePassword System.getenv("ANDROID_KEYSTORE_PASSWORD")
+                keyAlias System.getenv("ANDROID_KEY_ALIAS")
+                keyPassword System.getenv("ANDROID_KEY_PASSWORD")
+            }
+        }
+    }
     buildTypes {
+        debug {
+            if (ciKeystore) {
+                signingConfig signingConfigs.ci
+            }
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
