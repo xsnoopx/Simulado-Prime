@@ -6,15 +6,21 @@ import {
   Crown, 
   Sparkles, 
   Check, 
-  ChevronRight, 
   X, 
   Flame, 
-  Smile
+  Smile,
+  Lock
 } from 'lucide-react';
 
 // Core subscription keys for robust syncing
 const USER_PROFILE_KEY = 'user_profile';
 const LOGGED_USER_KEY = 'cosmos_logged_user';
+
+// O PRIME só será liberado depois da confirmação do pagamento. Enquanto o
+// checkout real não existir, esta constante mantém a ativação de demonstração
+// fora do ar: o botão fica desabilitado e os passos de checkout/processamento
+// não são renderizados. Quando a cobrança entrar, substitua o fluxo abaixo.
+const PAYMENT_ENABLED = false;
 
 interface PremiumGatewayProps {
   onSuccess?: () => void;
@@ -160,29 +166,32 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                 </div>
               </div>
 
-              {/* Demonstration notice — this build does not sell anything */}
+              {/* PRIME bloqueado: liberação somente após o pagamento */}
               <div className="pt-4 border-t border-white/10 space-y-4">
                 <div className="text-center flex flex-col items-center justify-center bg-gradient-to-b from-amber-500/10 via-amber-500/5 to-black/30 p-6 rounded-3xl border border-amber-400/20 relative overflow-hidden">
                   <div className="space-y-3 relative z-10">
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-xs uppercase tracking-[0.18em] text-amber-300 font-black">
-                      <Sparkles className="w-4 h-4 text-amber-400" />
-                      Modo demonstração
-                      <Sparkles className="w-4 h-4 text-amber-400" />
+                      <Lock className="w-4 h-4 text-amber-400" />
+                      PRIME bloqueado
+                      <Lock className="w-4 h-4 text-amber-400" />
                     </span>
 
                     <p className="text-[13px] text-white/80 font-semibold leading-relaxed max-w-sm mx-auto">
-                      O Cosmos Prime aqui é uma prévia local. Não há cobrança, assinatura ou pagamento:
-                      a ativação fica apenas neste navegador e pode ser desfeita a qualquer momento.
+                      O PRIME será liberado somente após a confirmação do pagamento.
+                      A assinatura ainda não está disponível — em breve o acesso
+                      será desbloqueado por aqui.
                     </p>
                   </div>
                 </div>
 
                 <button
-                  onClick={() => setStep('checkout')}
-                  className="w-full py-4.5 rounded-2xl gradient-amber text-black font-display font-black tracking-widest text-sm flex items-center justify-center gap-2.5 shadow-lg shadow-amber-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+                  type="button"
+                  disabled
+                  aria-disabled="true"
+                  className="w-full py-4.5 rounded-2xl bg-white/5 border border-white/10 text-white/45 font-display font-black tracking-widest text-sm flex items-center justify-center gap-2.5 cursor-not-allowed select-none"
                 >
-                  ATIVAR DEMONSTRAÇÃO
-                  <ChevronRight className="w-5 h-5 stroke-[2.5]" />
+                  ASSINATURA EM BREVE
+                  <Lock className="w-5 h-5 stroke-[2.5]" />
                 </button>
               </div>
             </div>
@@ -190,7 +199,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
         )}
 
         {/* STEP 2: ACTIVATION CONFIRMATION (no payment step) */}
-        {step === 'checkout' && (
+        {PAYMENT_ENABLED && step === 'checkout' && (
           <motion.div
             key="checkout"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -249,7 +258,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
         )}
 
         {/* STEP 3: PROCESSING PANEL */}
-        {step === 'processing' && (
+        {PAYMENT_ENABLED && step === 'processing' && (
           <motion.div
             key="processing"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -271,7 +280,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
         )}
 
         {/* STEP 4: SUCCESS! */}
-        {step === 'success' && (
+        {PAYMENT_ENABLED && step === 'success' && (
           <motion.div
             key="success"
             initial={{ opacity: 0, scale: 0.95 }}
