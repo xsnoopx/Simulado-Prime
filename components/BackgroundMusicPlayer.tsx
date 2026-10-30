@@ -5,29 +5,17 @@ import { usePathname } from 'next/navigation';
 import { Volume2, VolumeX } from 'lucide-react';
 import { syncAllDataToSupabase } from '@/lib/supabaseSync';
 
-const LOCAL_TRACKS = [
-  '/background.mp3',
-  '/background2.mp3',
-  '/background3.mp3',
-  '/background4.mp3',
-  '/background5.mp3',
-  '/background6.mp3',
-  '/background7.mp3',
-  '/background8.mp3',
-  '/background9.mp3',
-];
+// Só entram na lista as faixas que realmente existem em public/.
+// Os arquivos background.mp3 até background7.mp3 estavam com 0 byte: cada
+// tentativa de tocar devolvia 416 (Range Not Satisfiable), o player pulava para
+// outra faixa vazia e ficava em laço, gastando rede e CPU sem tocar nada.
+const LOCAL_TRACKS = ['/background8.mp3', '/background9.mp3'];
 
-const FALLBACK_ONLINE_TRACKS = [
-  '/background.mp3',
-  '/background2.mp3',
-  '/background3.mp3',
-  '/background4.mp3',
-  '/background5.mp3',
-  '/background6.mp3',
-  '/background7.mp3',
-  '/background8.mp3',
-  '/background9.mp3',
-];
+const FALLBACK_ONLINE_TRACKS = ['/background8.mp3', '/background9.mp3'];
+
+// Depois de algumas falhas seguidas o player para de tentar em vez de entrar
+// em loop de requisições.
+const MAX_TRACK_FAILURES = 3;
 
 export function BackgroundMusicPlayer() {
   const pathname = usePathname();
@@ -46,7 +34,8 @@ export function BackgroundMusicPlayer() {
     setCurrentTrack(LOCAL_TRACKS[randomIndex]);
   }, []);
 
-  // 2. Poll settings for fallback and add instant window events
+  // 2. Settings are event-driven: nothing here runs a timer, so the app does
+  // not wake up twice per second on low-end phones just to read localStorage.
   useEffect(() => {
     const syncSettings = () => {
       if (typeof window !== 'undefined' && localStorage.getItem('study_music_enabled') === null) {
@@ -67,12 +56,13 @@ export function BackgroundMusicPlayer() {
     };
 
     syncSettings();
-    const intervalId = setInterval(syncSettings, 500);
     window.addEventListener('study_music_sync', syncSettings);
+    // Outras abas/componentes podem alterar o volume.
+    window.addEventListener('storage', syncSettings);
 
     return () => {
-      clearInterval(intervalId);
       window.removeEventListener('study_music_sync', syncSettings);
+      window.removeEventListener('storage', syncSettings);
     };
   }, [pathname]);
 
@@ -96,18 +86,33 @@ export function BackgroundMusicPlayer() {
   // 4. Track completion transition: picks another random track from the active pool
   const handleTrackEnded = () => {
     const candidates = activePool.filter((track) => track !== currentTrack);
+    if (candidates.length === 0) return;
     const randomIndex = Math.floor(Math.random() * candidates.length);
-    const nextTrack = candidates[randomIndex] || activePool[0];
-    setCurrentTrack(nextTrack);
+    setCurrentTrack(candidates[randomIndex]);
   };
 
-  // 5. Handle any unexpected errors gracefully: shift to one of the online fallback tracks
+  // 5. Toda faixa da lista é válida hoje, mas se algo falhar o player tenta
+  // outra faixa algumas vezes e então desiste (sem laço de 416/404).
+  const failedTracksRef = useRef<Set<string>>(new Set());
+  const failureCountRef = useRef(0);
+
   const handleTrackError = () => {
-    console.log(`Track ${currentTrack} failed. Substituting track dynamically.`);
-    const fallbackPool = FALLBACK_ONLINE_TRACKS;
-    const candidates = fallbackPool.filter((track) => track !== currentTrack);
+    failedTracksRef.current.add(currentTrack);
+    failureCountRef.current += 1;
+
+    if (failureCountRef.current >= MAX_TRACK_FAILURES) {
+      console.warn('Música de fundo indisponível. Player desativado.');
+      setCurrentTrack('');
+      return;
+    }
+
+    const candidates = activePool.filter((track) => !failedTracksRef.current.has(track));
+    if (candidates.length === 0) {
+      setCurrentTrack('');
+      return;
+    }
     const randomIndex = Math.floor(Math.random() * candidates.length);
-    setCurrentTrack(candidates[randomIndex] || fallbackPool[0]);
+    setCurrentTrack(candidates[randomIndex]);
   };
 
   // 6. Rescue audio output from browser restrictions
@@ -138,6 +143,16 @@ export function BackgroundMusicPlayer() {
     syncAllDataToSupabase().catch(() => {});
   };
 
+  // Gravação/sincronização do volume é adiada para não disparar uma requisição
+  // a cada passo do slider (o fingerprint do navegador enviava várias por segundo).
+  const volumeSyncTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const scheduleSync = () => {
+    if (volumeSyncTimeout.current) clearTimeout(volumeSyncTimeout.current);
+    volumeSyncTimeout.current = setTimeout(() => {
+      syncAllDataToSupabase().catch(() => {});
+    }, 1200);
+  };
+
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(e.target.value);
     setMusicVolume(value);
@@ -150,7 +165,7 @@ export function BackgroundMusicPlayer() {
     }
     
     window.dispatchEvent(new Event('study_music_sync'));
-    syncAllDataToSupabase().catch(() => {});
+    scheduleSync();
   };
 
   const isRankingPage = pathname === '/ranking';
@@ -159,10 +174,10 @@ export function BackgroundMusicPlayer() {
     <>
       <audio
         ref={audioRef}
-        src={currentTrack || undefined}
+        src={shouldPlay ? currentTrack || undefined : undefined}
         onEnded={handleTrackEnded}
         onError={handleTrackError}
-        preload="auto"
+        preload="none"
       />
 
       {/* Floating control capsule on top left */}

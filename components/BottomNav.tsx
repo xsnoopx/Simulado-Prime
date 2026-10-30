@@ -17,7 +17,7 @@ export function BottomNav() {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-t border-outline-variant/10 flex justify-around items-center h-20 px-4 pb-safe shadow-[0_-8px_30px_rgb(0,0,0,0.12)]">
+    <nav className="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest/95 md:bg-surface-container-lowest/80 md:backdrop-blur-md border-t border-outline-variant/10 flex justify-around items-center min-h-[4.5rem] px-2 pt-1 pb-safe shadow-[0_-8px_30px_rgb(0,0,0,0.12)]">
       {navItems.map((item) => {
         const isActive = pathname === item.href;
         const Icon = item.icon;
@@ -26,13 +26,14 @@ export function BottomNav() {
           <Link
             key={item.href}
             href={item.href}
-            className="flex-1 max-w-[100px] flex justify-center relative"
+            aria-label={item.label}
+            className="flex-1 min-w-0 max-w-[110px] flex justify-center relative"
           >
             <motion.div
               whileTap={{ scale: 0.9, transition: { type: "spring", stiffness: 400, damping: 17 } }}
               whileHover={{ y: -4 }}
               className={cn(
-                "flex flex-col items-center justify-center transition-colors relative w-full h-15 rounded-2xl",
+                "flex flex-col items-center justify-center transition-colors relative w-full min-h-14 px-1 py-1.5 rounded-2xl",
                 isActive ? "text-primary" : "text-on-surface-variant/70 hover:text-primary"
               )}
             >
@@ -55,7 +56,7 @@ export function BottomNav() {
                 isActive && "scale-110 stroke-[2.5px]"
               )} />
               <span className={cn(
-                "text-[9px] font-black mt-1 uppercase tracking-[0.15em] transition-all",
+                "text-[10px] leading-tight font-black mt-1 uppercase tracking-[0.12em] transition-all text-center",
                 isActive ? "opacity-100" : "opacity-50"
               )}>
                 {item.label}

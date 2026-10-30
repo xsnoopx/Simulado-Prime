@@ -1516,7 +1516,7 @@ export default function ProfilePage() {
     allAvatars.find((a) => a.id === profile.avatarId) || allAvatars[0];
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden relative text-white bg-[#030208]">
+    <div className="h-[100dvh] flex flex-col overflow-hidden relative text-white bg-[#030208]">
       <div className="starfield opacity-50 absolute inset-0 pointer-events-none" />
 
       {/* Dynamic Background Glowing Clusters */}

@@ -310,7 +310,7 @@ export default function SimuladosIAPage() {
 
   if (!isMounted) {
     return (
-      <div className="relative h-screen flex flex-col overflow-hidden">
+      <div className="relative h-[100dvh] flex flex-col overflow-hidden">
         <div className="starfield" />
       </div>
     );
@@ -333,7 +333,7 @@ export default function SimuladosIAPage() {
   };
 
   return (
-    <div className="relative h-screen flex flex-col overflow-hidden">
+    <div className="relative h-[100dvh] flex flex-col overflow-hidden">
       <div className="starfield" />
       
       {/* Background Orbs */}

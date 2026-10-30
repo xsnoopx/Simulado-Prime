@@ -116,7 +116,7 @@ export default function ResultsPage() {
 
   if (!stats) {
     return (
-      <div className="relative h-screen flex items-center justify-center">
+      <div className="relative h-[100dvh] flex items-center justify-center">
         <div className="starfield" />
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
       </div>
@@ -168,11 +168,11 @@ export default function ResultsPage() {
   });
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden relative">
+    <div className="h-[100dvh] flex flex-col overflow-hidden relative">
       <div className="starfield" />
       
       {/* Dynamic Background Glows */}
-      <div className="absolute top-[-5%] left-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10 animate-pulse" />
+      <div className="absolute top-[-5%] left-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10" />
       <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-indigo-500/10 blur-[100px] rounded-full -z-10" />
 
       <main className="flex-1 overflow-y-auto pt-8 px-6 max-w-xl mx-auto space-y-8 pb-32 w-full">

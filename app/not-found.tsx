@@ -6,10 +6,10 @@ import { Rocket, Home, HelpCircle } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center p-6 text-center overflow-hidden bg-background text-on-surface">
+    <div className="relative min-h-[100dvh] flex flex-col items-center justify-center p-6 text-center overflow-hidden bg-background text-on-surface">
       {/* Space Background Elements */}
       <div className="starfield absolute inset-0 z-0" />
-      <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-primary/10 blur-[130px] rounded-full z-0 animate-pulse" />
+      <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-primary/10 blur-[130px] rounded-full z-0" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-secondary/10 blur-[110px] rounded-full z-0" />
 
       {/* Main Content Card */}

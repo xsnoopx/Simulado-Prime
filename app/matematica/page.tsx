@@ -180,7 +180,7 @@ export default function MatematicaPage() {
 
   if (loading) {
     return (
-      <div className="relative h-screen flex items-center justify-center">
+      <div className="relative h-[100dvh] flex items-center justify-center">
         <div className="starfield" />
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
       </div>
@@ -260,7 +260,7 @@ export default function MatematicaPage() {
   };
 
   return (
-    <div className="relative h-screen flex flex-col overflow-hidden">
+    <div className="relative h-[100dvh] flex flex-col overflow-hidden">
       <div className="starfield" />
       
       {/* Background Orbs */}

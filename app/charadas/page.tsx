@@ -207,17 +207,17 @@ export default function CharadasPage() {
 
   if (!isMounted) {
     return (
-      <div className="relative h-screen flex flex-col overflow-hidden">
+      <div className="relative h-[100dvh] flex flex-col overflow-hidden">
         <div className="starfield" />
       </div>
     );
   }
 
   return (
-    <div className="relative h-screen flex flex-col overflow-hidden">
+    <div className="relative h-[100dvh] flex flex-col overflow-hidden">
       <div className="starfield" />
       
-      <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-secondary/10 blur-[120px] rounded-full -z-10 animate-pulse" />
+      <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-secondary/10 blur-[120px] rounded-full -z-10" />
       <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] bg-primary/10 blur-[100px] rounded-full -z-10" />
 
       <motion.main
@@ -236,14 +236,14 @@ export default function CharadasPage() {
               </motion.button>
             </Link>
             <div className="text-center flex-1">
-              <h1 className="text-2xl font-display font-bold uppercase tracking-widest text-secondary">Charadas</h1>
+              <h1 className="text-[clamp(1.25rem,5.5vw,1.5rem)] font-display font-bold uppercase tracking-widest text-secondary">Charadas</h1>
               <p className="text-[10px] text-on-surface-variant uppercase tracking-[0.3em] mt-1">O Riso é Garantido</p>
             </div>
             <div className="w-9" />
           </header>
 
           {/* ACTIVE LICENSE STATUS BANNER */}
-          <div className="mb-6 rounded-2xl border border-white/5 bg-white/[0.02] p-4 flex items-center justify-between">
+          <div className="mb-6 rounded-2xl border border-white/5 bg-white/[0.02] p-4 flex flex-wrap items-center justify-between gap-3">
             <div className="space-y-1">
               <span className="text-[9px] font-black uppercase text-secondary tracking-widest block">Licença de Uso</span>
               <p className="text-xs font-bold text-white/90">
@@ -425,7 +425,7 @@ export default function CharadasPage() {
                       >
                         <div className="p-8 text-center">
                           <p className="text-[10px] uppercase tracking-[0.4em] text-secondary font-bold mb-3">A Resposta era...</p>
-                          <p className="text-2xl font-display font-bold text-on-surface">{charada.resposta}</p>
+                          <p className="text-[clamp(1.25rem,5.5vw,1.5rem)] font-display font-bold text-on-surface break-words">{charada.resposta}</p>
                         </div>
                       </motion.div>
                     )}

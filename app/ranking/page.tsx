@@ -868,9 +868,9 @@ export default function RankingPage() {
 
   if (loading) {
     return (
-      <div className="h-screen flex flex-col items-center justify-center relative">
+      <div className="h-[100dvh] flex flex-col items-center justify-center relative">
         <div className="starfield" />
-        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-primary/10 blur-[90px] rounded-full -z-10 animate-pulse" />
+        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-primary/10 blur-[90px] rounded-full -z-10" />
         <div className="flex flex-col items-center gap-4 text-center pb-20">
           <div className="relative">
             <div className="w-12 h-12 rounded-full border-2 border-t-primary-light border-r-transparent border-b-transparent border-l-transparent animate-spin" />
@@ -887,7 +887,7 @@ export default function RankingPage() {
 
   if (!currentUser || !currentUser.id) {
     return (
-      <div className="h-screen flex flex-col overflow-hidden relative">
+      <div className="h-[100dvh] flex flex-col overflow-hidden relative">
         <div className="starfield" />
 
         {/* Dynamic Background Glows */}
@@ -1009,7 +1009,7 @@ export default function RankingPage() {
   }
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden relative">
+    <div className="h-[100dvh] flex flex-col overflow-hidden relative">
       <div className="starfield" />
 
       {/* Dynamic Background Glows */}

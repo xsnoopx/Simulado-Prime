@@ -33,14 +33,14 @@ const CategoryButton = ({ name, tech, icon: Icon, color, bg, href, description }
           whileTap={{ scale: 0.99 }}
           className="w-full glass-panel p-4 rounded-2xl flex items-center gap-4 text-left transition-all hover:bg-white/5 border border-white/5 shadow-lg"
         >
-          <div className={cn("p-3 rounded-xl", bg)}>
+          <div className={cn("p-3 rounded-xl shrink-0", bg)}>
             <Icon className={cn("w-6 h-6", color)} />
           </div>
-          <div className="flex-1">
-            <p className="text-sm font-bold leading-tight">{name}</p>
+          <div className="flex-1 min-w-0 pr-10">
+            <p className="text-sm font-bold leading-tight break-words">{name}</p>
             {tech && <p className="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider">{tech}</p>}
           </div>
-          <div className="w-8" />
+          <div className="w-8 shrink-0" />
         </motion.div>
       </Link>
       
@@ -131,10 +131,10 @@ export default function AreasPage() {
   };
 
   return (
-    <div className="relative h-screen flex flex-col overflow-hidden">
+    <div className="relative h-[100dvh] flex flex-col overflow-hidden">
       <div className="starfield" />
       
-      <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10 animate-pulse" />
+      <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10" />
       <div className="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-secondary/10 blur-[100px] rounded-full -z-10" />
 
       <motion.main
@@ -148,22 +148,22 @@ export default function AreasPage() {
               <motion.h1 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-3xl font-display font-bold uppercase tracking-tight leading-tight"
+                className="text-[clamp(1.4rem,5.6vw,1.875rem)] font-display font-bold uppercase tracking-tight leading-tight"
               >
                 Escolha Uma Matéria<br />
-                <span className="gradient-text text-4xl">E De Início Ao SIMULADO</span>
+                <span className="gradient-text text-[clamp(1.6rem,6.6vw,2.25rem)]">E De Início Ao SIMULADO</span>
               </motion.h1>
             </div>
           </header>
 
           {/* DYNAMIC TRAINING MODES */}
           <section className="glass-panel p-5 rounded-[2rem] border border-white/5 space-y-4 bg-white/[0.01]">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Flame className="w-5 h-5 text-amber-400 animate-pulse" />
+            <div className="flex items-center justify-between gap-2 flex-wrap">
+              <div className="flex items-center gap-2 min-w-0">
+                <Flame className="w-5 h-5 shrink-0 text-amber-400" />
                 <h2 className="text-xs font-display font-black uppercase tracking-widest text-secondary">Modos de Treino Especial</h2>
               </div>
-              <span className="text-[8px] font-black uppercase bg-amber-500/10 border border-amber-500/20 text-amber-400 px-2 py-0.5 rounded-md tracking-wider animate-pulse">
+              <span className="text-[10px] font-black uppercase bg-amber-500/10 border border-amber-500/20 text-amber-400 px-2 py-0.5 rounded-md tracking-wider shrink-0">
                 Modo Ativo
               </span>
             </div>
@@ -172,7 +172,7 @@ export default function AreasPage() {
               Selecione o modo que afetará o comportamento de todos os simulados e as perguntas do app:
             </p>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,9.5rem),1fr))] gap-3">
               {[
                 {
                   id: 'regular',
@@ -228,15 +228,15 @@ export default function AreasPage() {
                     )}
 
                     <div className={cn(
-                      "flex items-center gap-1.5 font-bold text-xs uppercase tracking-wider w-full",
+                      "flex items-center gap-1.5 font-bold text-xs uppercase tracking-wider w-full min-w-0",
                       m.isPremium ? "pr-6" : ""
                     )}>
                       <div className={cn("p-1.5 rounded-lg shrink-0", isSelected ? "" : "bg-white/5")}>
                         <ModeIcon className="w-3.5 h-3.5" />
                       </div>
-                      <span className="font-black text-[12px]">{m.name}</span>
+                      <span className="font-black text-xs leading-tight break-words">{m.name}</span>
                     </div>
-                    <p className="text-[11px] text-white/70 leading-normal font-semibold pr-2">{m.desc}</p>
+                    <p className="text-[0.7rem] text-white/70 leading-normal font-semibold pr-2">{m.desc}</p>
                   </button>
                 );
               })}

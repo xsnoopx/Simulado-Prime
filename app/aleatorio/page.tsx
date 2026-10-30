@@ -208,7 +208,7 @@ export default function AleatorioPage() {
 
   if (loading || questions.length === 0) {
     return (
-      <div className="relative h-screen flex items-center justify-center">
+      <div className="relative h-[100dvh] flex items-center justify-center">
         <div className="starfield" />
         <motion.div 
           animate={{ rotate: 360 }}
@@ -302,7 +302,7 @@ export default function AleatorioPage() {
   const CategoryIcon = theme.icon;
 
   return (
-    <div className="relative h-screen flex flex-col overflow-hidden">
+    <div className="relative h-[100dvh] flex flex-col overflow-hidden">
       <div className="starfield" />
       
       {/* Background Orbs */}

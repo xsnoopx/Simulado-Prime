@@ -45,9 +45,19 @@
     height: 100%;
   }
 
+  html {
+    /* O layout usa rem: mantém o zoom de fonte do sistema funcionando, mas
+       impede que o WebView infle o texto sem respeitar o tamanho declarado. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-background text-on-surface font-sans;
     background: radial-gradient(circle at 50% 0%, #1a1b23 0%, #11131a 50%, #0c0e15 100%);
+    /* Fonte grande do sistema não pode criar rolagem horizontal. */
+    overflow-x: hidden;
+    overflow-wrap: break-word;
   }
 
   /* Hide scrollbars but keep functionality internally if needed */
@@ -60,10 +70,48 @@
   }
 }
 
+/* O vidro fosco só é aplicado onde não pesa: em telas grandes e em elementos
+   fixos (modais/menus). Em listas roláveis no celular o backdrop-filter
+   obriga o GPU a re-renderizar cada cartão a cada frame — é a maior fonte de
+   travamento ao passar pelas categorias. */
 .glass-panel {
-  background: rgba(30, 31, 39, 0.4);
-  backdrop-filter: blur(12px);
+  background: rgba(30, 31, 39, 0.62);
   border: 1px solid rgba(183, 196, 255, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .glass-panel {
+    background: rgba(30, 31, 39, 0.4);
+    backdrop-filter: blur(12px);
+  }
+}
+
+/* Painéis fixos que ficam por cima do conteúdo podem manter o desfoque. */
+.glass-float {
+  background: rgba(12, 14, 21, 0.72);
+  border: 1px solid rgba(183, 196, 255, 0.12);
+}
+
+@media (min-width: 768px) {
+  .glass-float {
+    backdrop-filter: blur(12px);
+  }
+}
+
+/* Área segura da barra inferior (notch/gestos). */
+.pb-safe {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .gradient-text {

@@ -92,7 +92,7 @@ function EnigmasContent() {
 
 export default function EnigmasOfflinePage() {
   return (
-    <div className="relative h-screen flex flex-col overflow-hidden">
+    <div className="relative h-[100dvh] flex flex-col overflow-hidden">
       <div className="starfield" />
       <main className="flex-1 overflow-y-auto pt-12 px-6 max-w-xl mx-auto w-full pb-32">
         <Suspense fallback={<div className="text-center text-on-surface-variant pt-20">Carregando enigmas...</div>}>

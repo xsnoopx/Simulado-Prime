@@ -60,17 +60,17 @@ const DashboardOption = ({ opt, i, color, isPremium, onPremiumClick }: any) => {
             setIsSubOpen(!isSubOpen);
           }}
           whileHover={{ x: 8 }}
-          className="w-full glass-panel p-4 rounded-2xl flex items-center justify-between border border-white/5 hover:bg-white/10 active:scale-[0.98] transition-all group/sub"
+          className="w-full glass-panel p-4 rounded-2xl flex items-center justify-between gap-2 border border-white/5 hover:bg-white/10 active:scale-[0.98] transition-all group/sub"
         >
-          <div className="flex items-center gap-3">
-            <div className={cn("p-2 rounded-xl bg-white/5", opt.color)}>
+          <div className="flex items-center gap-3 min-w-0">
+            <div className={cn("p-2 rounded-xl bg-white/5 shrink-0", opt.color)}>
               <opt.icon className="w-4 h-4" />
             </div>
-            <div className="text-left">
-              <span className="font-display font-bold text-sm tracking-wide">{opt.name}</span>
+            <div className="text-left min-w-0">
+              <span className="font-display font-bold text-sm tracking-wide break-words">{opt.name}</span>
               <div className="flex items-center gap-1.5">
-                <WifiOff className="w-2.5 h-2.5 text-on-surface-variant/40" />
-                <span className="text-[8px] font-bold text-on-surface-variant/50 tracking-widest uppercase">
+                <WifiOff className="w-2.5 h-2.5 shrink-0 text-on-surface-variant/40" />
+                <span className="text-[10px] font-bold text-on-surface-variant/50 tracking-widest uppercase">
                   {isSubOpen ? 'Fechar Categorias' : 'Ver Categorias'}
                 </span>
               </div>
@@ -78,7 +78,7 @@ const DashboardOption = ({ opt, i, color, isPremium, onPremiumClick }: any) => {
           </div>
           <motion.div 
             animate={{ rotate: isSubOpen ? 180 : 0 }}
-            className="w-6 h-6 flex items-center justify-center rounded-full bg-white/5"
+            className="w-6 h-6 shrink-0 flex items-center justify-center rounded-full bg-white/5"
           >
             <ChevronLeft className="w-3 h-3 rotate-[-90deg]" />
           </motion.div>
@@ -101,13 +101,13 @@ const DashboardOption = ({ opt, i, color, isPremium, onPremiumClick }: any) => {
                     whileHover={{ x: 5 }}
                     className="w-full glass-panel p-3 rounded-xl flex items-center gap-3 border border-white/5 hover:bg-white/10 active:scale-[0.98] transition-all"
                   >
-                    <div className={cn("p-1.5 rounded-lg bg-white/5", sub.color)}>
+                    <div className={cn("p-1.5 rounded-lg bg-white/5 shrink-0", sub.color)}>
                       <sub.icon className="w-3.5 h-3.5" />
                     </div>
-                    <div>
-                      <span className="font-display font-bold text-xs tracking-wide">{sub.name}</span>
+                    <div className="min-w-0">
+                      <span className="font-display font-bold text-xs tracking-wide break-words">{sub.name}</span>
                       {sub.subtitle && (
-                        <p className="text-[7px] text-on-surface-variant/50 font-bold uppercase tracking-[0.1em] -mt-0.5">
+                        <p className="text-[10px] text-on-surface-variant/50 font-bold uppercase tracking-[0.1em]">
                           {sub.subtitle}
                         </p>
                       )}
@@ -138,30 +138,30 @@ const DashboardOption = ({ opt, i, color, isPremium, onPremiumClick }: any) => {
         transition={{ delay: i * 0.1 }}
         whileHover={isLocked ? {} : { x: 8 }}
         className={cn(
-          "w-full glass-panel p-4 rounded-2xl flex items-center justify-between border transition-all",
+          "w-full glass-panel p-4 rounded-2xl flex items-center justify-between gap-2 border transition-all",
           isLocked 
             ? "border-amber-500/10 bg-amber-500/5 cursor-pointer hover:bg-amber-500/10" 
             : "border-white/5 hover:bg-white/10 active:scale-[0.98]"
         )}
       >
-        <div className="flex items-center gap-3">
-          <div className={cn("p-2 rounded-xl bg-white/5", opt.color)}>
+        <div className="flex items-center gap-3 min-w-0">
+          <div className={cn("p-2 rounded-xl bg-white/5 shrink-0", opt.color)}>
             <opt.icon className="w-4 h-4" />
           </div>
-          <div className="text-left">
-            <span className="font-display font-bold text-sm tracking-wide">{opt.name}</span>
+          <div className="text-left min-w-0">
+            <span className="font-display font-bold text-sm tracking-wide break-words">{opt.name}</span>
             {opt.subtitle && (
-              <p className="text-[8px] text-on-surface-variant/60 font-bold uppercase tracking-widest -mt-0.5 mb-0.5">
+              <p className="text-[10px] text-on-surface-variant/60 font-bold uppercase tracking-widest">
                 {opt.subtitle}
               </p>
             )}
             <div className="flex items-center gap-1.5 flex-wrap">
-              {opt.isOnline ? <Wifi className="w-2.5 h-2.5 text-primary" /> : <WifiOff className="w-2.5 h-2.5 text-on-surface-variant/40" />}
-              <span className="text-[8px] font-bold text-on-surface-variant/50 tracking-widest uppercase">
+              {opt.isOnline ? <Wifi className="w-2.5 h-2.5 shrink-0 text-primary" /> : <WifiOff className="w-2.5 h-2.5 shrink-0 text-on-surface-variant/40" />}
+              <span className="text-[10px] font-bold text-on-surface-variant/50 tracking-widest uppercase">
                 {opt.isOnline ? 'Online' : 'Offline'}
               </span>
               {opt.isPremium && (
-                <span className="ml-1 px-1.5 py-0.5 rounded bg-gradient-to-r from-amber-400 to-amber-500 text-[6px] font-black uppercase text-black tracking-widest flex items-center gap-0.5 shadow-md shadow-amber-400/10 self-center">
+                <span className="ml-1 px-1.5 py-0.5 rounded bg-gradient-to-r from-amber-400 to-amber-500 text-[9px] font-black uppercase text-black tracking-widest flex items-center gap-0.5 shadow-md shadow-amber-400/10 self-center">
                   ⚡ PRIME
                 </span>
               )}
@@ -169,11 +169,11 @@ const DashboardOption = ({ opt, i, color, isPremium, onPremiumClick }: any) => {
           </div>
         </div>
         {isLocked ? (
-          <div className="p-1 px-2 py-0.5 rounded-lg bg-amber-500/15 border border-amber-500/25 text-[8px] font-display font-medium uppercase text-amber-300 flex items-center gap-1 shadow-sm shadow-amber-500/5 animate-pulse">
+          <div className="shrink-0 p-1 px-2 py-0.5 rounded-lg bg-amber-500/15 border border-amber-500/25 text-[10px] font-display font-medium uppercase text-amber-300 flex items-center gap-1 shadow-sm shadow-amber-500/5">
             <Lock className="w-3 h-3 text-amber-400" /> Locked
           </div>
         ) : (
-          <div className="w-1 h-6 bg-current opacity-20 rounded-full" style={{ backgroundColor: color }} />
+          <div className="w-1 h-6 shrink-0 bg-current opacity-20 rounded-full" style={{ backgroundColor: color }} />
         )}
       </motion.div>
     </Link>
@@ -205,18 +205,18 @@ const DashboardGroup = ({
           }}
           whileHover={{ scale: 1.01, x: 2 }}
           whileTap={{ scale: 0.99 }}
-          className="w-full glass-panel p-6 rounded-3xl flex items-center gap-4 text-left transition-all hover:bg-white/5 border border-white/5 shadow-xl relative overflow-hidden"
+          className="w-full glass-panel p-5 sm:p-6 rounded-3xl flex items-center gap-3 sm:gap-4 text-left transition-all hover:bg-white/5 border border-white/5 shadow-xl relative overflow-hidden"
         >
-          <div className={cn("p-4 rounded-2xl", bg, color)}>
-            <Icon className="w-6 h-6" />
+          <div className={cn("p-3 sm:p-4 rounded-2xl shrink-0", bg, color)}>
+            <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
-          <div className="flex-1">
-            <h3 className="font-display font-bold text-lg uppercase tracking-wider">{name}</h3>
-            <p className="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">
+          <div className="flex-1 min-w-0">
+            <h3 className="font-display font-bold text-[clamp(0.95rem,4.2vw,1.125rem)] uppercase tracking-wide leading-snug">{name}</h3>
+            <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold leading-snug">
               {isOpen ? 'Clique para fechar' : 'Clique para ver subcategorias'}
             </p>
           </div>
-          <div className="w-10" />
+          <div className="w-6 sm:w-8 shrink-0" />
         </motion.button>
 
         <motion.button 
@@ -361,8 +361,10 @@ export default function AppPage() {
   }, [isMusicPlaying, showSplash]);
 
   const handleHomepageTrackError = () => {
-    console.log(`Homepage track ${homepageTrack} failed to load. Falling back to local background.mp3.`);
-    setHomepageTrack('/background.mp3');
+    // A faixa tema é a única da home; se falhar, usa uma das faixas válidas
+    // (antes caía em /background.mp3, que está vazio e gerava 416 em loop).
+    console.warn(`Faixa ${homepageTrack} indisponível. Usando faixa alternativa.`);
+    setHomepageTrack('/background8.mp3');
   };
 
   // Rescue browser autoplay blocks upon any window interaction (only while on splash screen)
@@ -465,21 +467,23 @@ export default function AppPage() {
   // Return shell during hydration to avoid mismatch
   if (!isMounted) {
     return (
-      <div className="relative min-h-screen flex flex-col overflow-x-hidden">
+      <div className="relative min-h-[100dvh] flex flex-col overflow-x-hidden">
         <div className="starfield" />
       </div>
     );
   }
 
   return (
-    <div className="relative h-screen flex flex-col overflow-hidden">
+    <div className="relative h-[100dvh] flex flex-col overflow-hidden">
       <div className="starfield" />
       
-      {/* Dynamic Background Music Track with automatic online fallback */}
-      <audio 
-        ref={audioRef} 
-        loop 
-        src={homepageTrack} 
+      {/* Trilha da splash: o src só existe enquanto a splash está na tela, para
+          não baixar ~5 MB no dashboard nem no caminho em que a splash foi pulada. */}
+      <audio
+        ref={audioRef}
+        loop
+        src={showSplash && isMusicPlaying ? homepageTrack : undefined}
+        preload="none"
         onError={handleHomepageTrackError}
       />
 
@@ -499,8 +503,8 @@ export default function AppPage() {
         )}
       </div>
 
-      {/* Background Glows for Galaxy Style */}
-      <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10 animate-pulse" />
+      {/* Halos estáticos: sem animate-pulse para não re-rasterizar o desfoque. */}
+      <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10" />
       <div className="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-secondary/10 blur-[100px] rounded-full -z-10" />
 
       <AnimatePresence mode="wait">
@@ -513,7 +517,7 @@ export default function AppPage() {
             key="splash"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+            exit={{ opacity: 0, scale: 0.97 }}
             className="flex-1 overflow-y-auto flex flex-col items-center justify-center p-6 text-center space-y-12 z-10"
           >
             {/* Logo Section */}
@@ -522,11 +526,7 @@ export default function AppPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="relative w-64 h-64 rounded-[4rem] overflow-hidden border border-white/10 shadow-2xl shadow-primary/30"
-              >
+              <div className="relative w-[min(16rem,68vw)] aspect-square rounded-[4rem] overflow-hidden border border-white/10 shadow-2xl shadow-primary/30">
                 <Image
                   src={rocketLogo}
                   alt="Logo"
@@ -534,7 +534,7 @@ export default function AppPage() {
                   className="object-cover scale-[1.3] object-top"
                   priority
                 />
-              </motion.div>
+              </div>
             </motion.div>
 
             {/* Text Section */}
@@ -544,9 +544,9 @@ export default function AppPage() {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="space-y-4"
             >
-              <h1 className="text-4xl font-display font-bold tracking-tight uppercase leading-tight">
+              <h1 className="text-[clamp(1.5rem,6.2vw,2.25rem)] font-display font-bold tracking-tight uppercase leading-tight">
                 Seja Bem-Vindo ao <br />
-                <span className="gradient-text text-5xl">
+                <span className="gradient-text text-[clamp(1.9rem,8.4vw,3rem)]">
                   SIMULADO PRIME
                 </span>
               </h1>
@@ -599,10 +599,10 @@ export default function AppPage() {
                   <motion.h1 
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-4xl font-display font-bold uppercase tracking-tight leading-tight"
+                    className="text-[clamp(1.5rem,6.2vw,2.25rem)] font-display font-bold uppercase tracking-tight leading-tight"
                   >
                     Bem-Vindo ao<br />
-                    <span className="gradient-text text-5xl">Dashboard Prime</span>
+                    <span className="gradient-text text-[clamp(1.9rem,8.4vw,3rem)]">Dashboard Prime</span>
                   </motion.h1>
                   <p className="text-on-surface-variant text-base leading-relaxed max-w-sm mx-auto opacity-70">
                     Sua jornada para o sucesso começa aqui. Explore os simulados, Resolva Enigmas ou Se Divirta nas Charadas
