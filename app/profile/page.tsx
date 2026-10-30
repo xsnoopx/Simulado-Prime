@@ -108,7 +108,7 @@ const AVATARS_DATA = [
       emoji: emoji,
       bg: bgList[i % bgList.length],
       unsplashId: "",
-      imageUrl: `/imagem_${numPart}.png`,
+      imageUrl: `/avatares-livres/imagem_${numPart}.png`,
     };
   }),
 ];

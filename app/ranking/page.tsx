@@ -611,7 +611,7 @@ export default function RankingPage() {
       currentUser.avatarId.startsWith("avatar_img_")
     ) {
       const numPart = currentUser.avatarId.replace("avatar_img_", "");
-      userImgSrc = `/imagem_${numPart}.png`;
+      userImgSrc = `/avatares-livres/imagem_${numPart}.png`;
       const numPartInt = Math.max(0, parseInt(numPart) - 1);
       const celestialEmojis = ["🪐", "🌌", "⭐", "☄️", "🛰️", "👽", "🛸", "🚀", "🔮", "🔭"];
       userEmoji = celestialEmojis[numPartInt % celestialEmojis.length] || "🚀";
@@ -735,7 +735,7 @@ export default function RankingPage() {
           : "bg-amber-500/10 text-amber-300";
       } else if (avatarId && avatarId.startsWith("avatar_img_")) {
         const numPart = avatarId.replace("avatar_img_", "");
-        playerImgSrc = `/imagem_${numPart}.png`;
+        playerImgSrc = `/avatares-livres/imagem_${numPart}.png`;
         const numPartInt = Math.max(0, parseInt(numPart) - 1);
         const celestialEmojis = ["🪐", "🌌", "⭐", "☄️", "🛰️", "👽", "🛸", "🚀", "🔮", "🔭"];
         playerEmoji = celestialEmojis[numPartInt % celestialEmojis.length] || "🚀";
