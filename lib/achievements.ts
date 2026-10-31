@@ -9,36 +9,52 @@ export interface Achievement {
   color: string;
 }
 
-export function getExperienceDetails(stats: SimuladoStats | null) {
-  if (!stats) return { xp: 0, level: 1, baseTitle: 'Recruta do Cosmos', percent: 0, totalCorrect: 0, totalAnswered: 0 };
+const LEVEL_STEP = 150;
 
-  const totalCorrect = (stats.linguagens?.correct || 0) + 
-                       (stats.matematica?.correct || 0) + 
-                       (stats.humanas?.correct || 0) + 
-                       (stats.natureza?.correct || 0);
+// Nível, título e progresso a partir de um valor de XP já conhecido.
+// Usado também quando o admin define um XP manual para o jogador.
+export function getLevelFromXp(xp: number) {
+  const pontos = Math.max(0, Number.isFinite(xp) ? xp : 0);
+  const level = Math.floor(pontos / LEVEL_STEP) + 1;
+  const percent = Math.floor(((pontos % LEVEL_STEP) / LEVEL_STEP) * 100);
 
-  const totalAnswered = (stats.linguagens?.answered || 0) + 
-                        (stats.matematica?.answered || 0) + 
-                        (stats.humanas?.answered || 0) + 
-                        (stats.natureza?.answered || 0);
-
-  const totalIncorrect = Math.max(0, totalAnswered - totalCorrect);
-
-  // Calculate dynamic XP: 15 XP per correct, 5 XP per incorrect answer attempts
-  const xp = (totalCorrect * 15) + (totalIncorrect * 5);
-  
-  // Smooth level thresholds of size 150 XP per level
-  const levelStep = 150;
-  const level = Math.floor(xp / levelStep) + 1;
-  const levelXpRemainder = xp % levelStep;
-  const percent = Math.floor((levelXpRemainder / levelStep) * 100);
-
-  // Dynamic Title based on levels
   let baseTitle = 'Cadete do Cosmos';
   if (level >= 3) baseTitle = 'Explorador de Nebulosas';
   if (level >= 6) baseTitle = 'Viajante Sideral';
   if (level >= 10) baseTitle = 'Explorador de Galáxias';
   if (level >= 15) baseTitle = 'Sábio do Universo';
+
+  return { level, percent, baseTitle };
+}
+
+/**
+ * Calcula XP, nível e título.
+ *
+ * `xpDoAdmin` vem do painel administrativo (metadata `cosmos_xp`). Ele nunca
+ * reduz o XP conquistado estudando: usamos o maior valor entre o calculado
+ * pelas estatísticas e o definido manualmente.
+ */
+export function getExperienceDetails(stats: SimuladoStats | null, xpDoAdmin: number | null = null) {
+  const totalCorrect = (stats?.linguagens?.correct || 0) +
+                       (stats?.matematica?.correct || 0) +
+                       (stats?.humanas?.correct || 0) +
+                       (stats?.natureza?.correct || 0);
+
+  const totalAnswered = (stats?.linguagens?.answered || 0) +
+                        (stats?.matematica?.answered || 0) +
+                        (stats?.humanas?.answered || 0) +
+                        (stats?.natureza?.answered || 0);
+
+  const totalIncorrect = Math.max(0, totalAnswered - totalCorrect);
+
+  // Calculate dynamic XP: 15 XP per correct, 5 XP per incorrect answer attempts
+  const xpCalculado = (totalCorrect * 15) + (totalIncorrect * 5);
+  const xpManual = typeof xpDoAdmin === 'number' && Number.isFinite(xpDoAdmin) && xpDoAdmin > 0
+    ? xpDoAdmin
+    : 0;
+  const xp = Math.max(xpCalculado, xpManual);
+
+  const { level, percent, baseTitle } = getLevelFromXp(xp);
 
   return { xp, level, baseTitle, percent, totalCorrect, totalAnswered };
 }

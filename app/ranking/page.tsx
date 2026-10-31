@@ -417,6 +417,23 @@ export default function RankingPage() {
   } | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // XP definido manualmente pelo painel administrativo.
+  const [xpDoAdmin, setXpDoAdmin] = useState<number | null>(null);
+
+  useEffect(() => {
+    const lerXpDoAdmin = () => {
+      const valor = Number(localStorage.getItem("cosmos_xp"));
+      setXpDoAdmin(Number.isFinite(valor) && valor > 0 ? valor : null);
+    };
+    lerXpDoAdmin();
+    window.addEventListener("supabase-data-synced", lerXpDoAdmin);
+    window.addEventListener("storage", lerXpDoAdmin);
+    return () => {
+      window.removeEventListener("supabase-data-synced", lerXpDoAdmin);
+      window.removeEventListener("storage", lerXpDoAdmin);
+    };
+  }, []);
+
   // Supabase Global Real-time Ranking State variables
   const [globalPlayers, setGlobalPlayers] = useState<any[]>([]);
   const [isRealtime, setIsRealtime] = useState(false);
@@ -573,7 +590,7 @@ export default function RankingPage() {
     };
   }, [currentUser?.id]);
 
-  const xpInfo = getExperienceDetails(stats);
+  const xpInfo = getExperienceDetails(stats, xpDoAdmin);
 
   const getAreaScore = (playerStats: any, area: string) => {
     if (!playerStats) return 0;

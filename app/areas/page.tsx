@@ -91,19 +91,24 @@ export default function AreasPage() {
 
   useEffect(() => {
     // Determine premium status
-    const profile = localStorage.getItem('user_profile');
-    const logged = localStorage.getItem('cosmos_logged_user');
-    let prem = false;
-    if (profile) {
-      try {
-        if (JSON.parse(profile).isPremium) prem = true;
-      } catch (_) {}
-    }
-    if (logged) {
-      try {
-        if (JSON.parse(logged).isPremium) prem = true;
-      } catch (_) {}
-    }
+    const lerPremium = () => {
+      const profile = localStorage.getItem('user_profile');
+      const logged = localStorage.getItem('cosmos_logged_user');
+      let prem = false;
+      if (profile) {
+        try {
+          if (JSON.parse(profile).isPremium) prem = true;
+        } catch (_) {}
+      }
+      if (logged) {
+        try {
+          if (JSON.parse(logged).isPremium) prem = true;
+        } catch (_) {}
+      }
+      return prem;
+    };
+
+    const prem = lerPremium();
     setIsPremium(prem);
 
     const saved = localStorage.getItem('simulado_special_mode');
@@ -117,6 +122,30 @@ export default function AreasPage() {
     } else {
       setSpecialMode('regular');
     }
+
+    // O painel administrativo pode liberar ou revogar o PRIME a qualquer
+    // momento. Reavalia quando a sincronização chega ou ao voltar para a aba.
+    const reavaliarPremium = () => {
+      const atual = lerPremium();
+      setIsPremium(atual);
+      if (!atual) {
+        setSpecialMode((modoAtual) => {
+          if (modoAtual === 'challenge' || modoAtual === 'survival') {
+            localStorage.setItem('simulado_special_mode', 'regular');
+            return 'regular';
+          }
+          return modoAtual;
+        });
+      }
+    };
+
+    window.addEventListener('supabase-data-synced', reavaliarPremium);
+    window.addEventListener('storage', reavaliarPremium);
+
+    return () => {
+      window.removeEventListener('supabase-data-synced', reavaliarPremium);
+      window.removeEventListener('storage', reavaliarPremium);
+    };
   }, []);
 
   const handleSelectMode = (mode: 'regular' | 'challenge' | 'hardcore' | 'survival') => {

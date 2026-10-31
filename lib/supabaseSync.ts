@@ -34,8 +34,12 @@ export async function syncAllDataToSupabase() {
   if (typeof window === 'undefined') return;
   try {
     const client = await getSupabase();
+    // Aqui basta a sessão local (getSession): o upload manda apenas chaves do
+    // jogador e o Supabase Auth mescla o restante, preservando `isPremium` e
+    // `cosmos_xp` gravados pelo painel administrativo.
     const { data: { session }, error: sessionError } = await client.auth.getSession();
-    if (sessionError || !session?.user) {
+    const currentUser = session?.user;
+    if (sessionError || !currentUser) {
       return;
     }
 
@@ -61,7 +65,7 @@ export async function syncAllDataToSupabase() {
     const syncData: any = {};
 
     if (userProfile) {
-      const isOwnerByEmail = session.user.email?.toLowerCase() === "klession@gmail.com";
+      const isOwnerByEmail = currentUser.email?.toLowerCase() === "klession@gmail.com";
       if (userProfile.avatarFrameId === 'frame_owner' && !isOwnerByEmail) {
         userProfile.avatarFrameId = 'frame_01';
         localStorage.setItem('user_profile', JSON.stringify(userProfile));
@@ -71,9 +75,8 @@ export async function syncAllDataToSupabase() {
       syncData.avatarId = userProfile.avatarId;
       syncData.customAvatarUrl = userProfile.customAvatarUrl;
       syncData.avatarFrameId = userProfile.avatarFrameId || 'frame_01';
-      syncData.isPremium = !!userProfile.isPremium;
-      // Also write key directly for profile compatibility
-      syncData.user_profile = userProfile;
+      // `isPremium` e `user_profile` NÃO são enviados: quem libera PRIME é o
+      // pagamento real ou o painel administrativo (service_role).
     }
     
     if (simuladoStats) {
@@ -112,9 +115,10 @@ export async function syncAllDataToSupabase() {
       syncData.cosmos_app_rated = appRatedStr;
     }
 
-    // Merge onto existing user_metadata safely
-    const currentMeta = session.user.user_metadata || {};
-    const mergedMeta = { ...currentMeta, ...syncData };
+    // Upload parcial: o GoTrue mescla as chaves enviadas e mantém intactos
+    // `isPremium` e `cosmos_xp` definidos pelo admin. Nunca montamos um objeto
+    // completo a partir do JWT em cache, senão uma chave antiga poderia voltar.
+    const currentMeta = currentUser.user_metadata || {};
 
     // Prevent circular or useless updates if metadata is identical
     const changed = Object.keys(syncData).some((key) => {
@@ -123,7 +127,7 @@ export async function syncAllDataToSupabase() {
 
     if (changed) {
       const { error: updateError } = await client.auth.updateUser({
-        data: mergedMeta
+        data: syncData
       });
 
       if (updateError) {
@@ -141,18 +145,18 @@ export async function syncAllDataToSupabase() {
     // Esses campos só mudam pela rota /api/admin/manage-players, que exige a
     // sessão do e-mail de admin. Aqui só mantemos o visual da própria linha,
     // através de uma função restrita no banco.
-    if (session.user && userProfile) {
+    if (currentUser && userProfile) {
       try {
-        const isOwnerByEmail = session.user.email?.toLowerCase() === "klession@gmail.com";
-        let verifiedFrameId = userProfile.avatarFrameId || session.user.user_metadata?.avatarFrameId || 'frame_01';
+        const isOwnerByEmail = currentUser.email?.toLowerCase() === "klession@gmail.com";
+        let verifiedFrameId = userProfile.avatarFrameId || currentUser.user_metadata?.avatarFrameId || 'frame_01';
         if (verifiedFrameId === 'frame_owner' && !isOwnerByEmail) {
           verifiedFrameId = 'frame_01';
         }
 
         const { error: rankError } = await client.rpc('sync_own_ranking_profile', {
-          p_name: userProfile.name || session.user.user_metadata?.name || 'Explorador',
-          p_avatar_id: userProfile.avatarId || session.user.user_metadata?.avatarId || 'default',
-          p_custom_avatar_url: userProfile.customAvatarUrl || session.user.user_metadata?.customAvatarUrl || null,
+          p_name: userProfile.name || currentUser.user_metadata?.name || 'Explorador',
+          p_avatar_id: userProfile.avatarId || currentUser.user_metadata?.avatarId || 'default',
+          p_custom_avatar_url: userProfile.customAvatarUrl || currentUser.user_metadata?.customAvatarUrl || null,
           p_avatar_frame_id: verifiedFrameId,
         });
 
@@ -181,12 +185,15 @@ export async function syncAllDataFromSupabase() {
   if (typeof window === 'undefined') return;
   try {
     const client = await getSupabase();
-    const { data: { session }, error: sessionError } = await client.auth.getSession();
-    if (sessionError || !session?.user) {
+    // Metadados frescos do servidor: é aqui que o painel administrativo grava
+    // XP, premium, nome e estatísticas. getSession() devolvia o JWT em cache.
+    const { data: userData, error: userError } = await client.auth.getUser();
+    const currentUser = userData?.user;
+    if (userError || !currentUser) {
       return;
     }
 
-    const metadata = session.user.user_metadata;
+    const metadata = currentUser.user_metadata;
     if (!metadata) return;
 
     let changed = false;
@@ -263,7 +270,7 @@ export async function syncAllDataFromSupabase() {
     }
 
     if (!isRecentlyUpdated) {
-      const isOwnerByEmail = session.user.email?.toLowerCase() === "klession@gmail.com";
+      const isOwnerByEmail = currentUser.email?.toLowerCase() === "klession@gmail.com";
 
       if (metadata.name && profile.name !== metadata.name) {
         profile.name = metadata.name;
@@ -291,6 +298,41 @@ export async function syncAllDataFromSupabase() {
     if (profileChanged || !saved) {
       localStorage.setItem('user_profile', safeStringify(profile));
       changed = true;
+    }
+
+    // 4.1 XP definido pelo painel administrativo (metadata `cosmos_xp`).
+    // O profile usa esse valor como piso, somado ao XP das estatísticas.
+    if (metadata.cosmos_xp !== undefined) {
+      const xpAdmin = Number(metadata.cosmos_xp);
+      if (Number.isFinite(xpAdmin) && xpAdmin >= 0) {
+        if (localStorage.getItem('cosmos_xp') !== String(xpAdmin)) {
+          localStorage.setItem('cosmos_xp', String(xpAdmin));
+          changed = true;
+        }
+      }
+    }
+
+    // 4.2 A sessão local (`cosmos_logged_user`) também precisa refletir o
+    // premium e o nome definidos pelo admin: é dela que as páginas de áreas
+    // especiais, charadas e enigmas leem o acesso PRIME.
+    const loggedUserStr = localStorage.getItem('cosmos_logged_user');
+    if (loggedUserStr) {
+      try {
+        const loggedUser = JSON.parse(loggedUserStr);
+        let loggedChanged = false;
+        if (!!loggedUser.isPremium !== premiumFromMeta) {
+          loggedUser.isPremium = premiumFromMeta;
+          loggedChanged = true;
+        }
+        if (metadata.name && loggedUser.name !== metadata.name) {
+          loggedUser.name = metadata.name;
+          loggedChanged = true;
+        }
+        if (loggedChanged) {
+          localStorage.setItem('cosmos_logged_user', safeStringify(loggedUser));
+          changed = true;
+        }
+      } catch (_) {}
     }
 
     // 5. Synchronize all educational preferences & feature toggles

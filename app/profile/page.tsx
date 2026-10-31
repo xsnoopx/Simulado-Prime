@@ -340,6 +340,8 @@ export default function ProfilePage() {
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
   const [resetRankingConfirm, setResetRankingConfirm] = useState(false);
   const [resetXPConfirm, setResetXPConfirm] = useState(false);
+  // XP definido manualmente pelo painel administrativo (metadata `cosmos_xp`).
+  const [xpDoAdmin, setXpDoAdmin] = useState<number | null>(null);
 
   // Admin rights come exclusively from the backend verification below.
   // Storing the owner e-mail in localStorage is trivial, so it must never grant access by itself.
@@ -445,9 +447,16 @@ export default function ProfilePage() {
       if (!res.ok || !resData.success) {
         setAdminSystemMessage({ text: `Erro ao salvar: ${resData.error || "Erro desconhecido"}`, type: "error" });
       } else {
-        setAdminSystemMessage({ text: "Dados salvos com sucesso!", type: "success" });
+        setAdminSystemMessage({
+          text: resData.warning
+            ? `Dados salvos, mas o aplicativo do jogador não recebeu tudo: ${resData.warning}`
+            : "Dados salvos e sincronizados com o aplicativo do jogador!",
+          type: resData.warning ? "error" : "success",
+        });
         await loadAdminData();
         setAdminSelectedPlayer(null);
+        // Se o admin editou a própria conta, atualiza a tela na hora.
+        syncAllDataFromSupabase().catch(() => {});
       }
     } catch (err: any) {
       setAdminSystemMessage({ text: `Erro: ${err.message || String(err)}`, type: "error" });
@@ -680,6 +689,10 @@ export default function ProfilePage() {
     // 1. Get statistics to evaluate Level & XP dynamically
     setStats(getStats());
 
+    // XP manual vindo do painel administrativo.
+    const xpSalvo = Number(localStorage.getItem("cosmos_xp"));
+    setXpDoAdmin(Number.isFinite(xpSalvo) && xpSalvo > 0 ? xpSalvo : null);
+
     // Load timer preferences
     setTimerEnabled(localStorage.getItem("simulado_timer_enabled") === "true");
     const savedSeconds = localStorage.getItem("simulado_timer_seconds");
@@ -844,6 +857,8 @@ export default function ProfilePage() {
     // 5. Setup live sync event listeners
     const handleSyncEvent = () => {
       setStats(getStats());
+      const xpAtualizado = Number(localStorage.getItem("cosmos_xp"));
+      setXpDoAdmin(Number.isFinite(xpAtualizado) && xpAtualizado > 0 ? xpAtualizado : null);
       const loggedUserUpdate = localStorage.getItem("cosmos_logged_user");
       if (loggedUserUpdate) {
         try {
@@ -895,7 +910,8 @@ export default function ProfilePage() {
   }, []);
 
   // Compute stats-based dynamic XP, level, total correct etc.
-  const xpInfo = getExperienceDetails(stats);
+  // O XP do admin entra como piso, junto do XP conquistado nas estatísticas.
+  const xpInfo = getExperienceDetails(stats, xpDoAdmin);
   const achievementsList = getAchievements(stats);
   const unlockedCount = achievementsList.filter((a) => a.unlocked).length;
 

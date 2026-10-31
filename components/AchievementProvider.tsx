@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Trophy, Sparkles } from 'lucide-react';
 import { getStats, SimuladoStats } from '@/lib/stats';
 import { getAchievements, Achievement, syncAchievementsToSupabase, getAchievementIdByTitle } from '@/lib/achievements';
-import { syncAllDataToSupabase } from '@/lib/supabaseSync';
+import { syncAllDataToSupabase, syncAllDataFromSupabase } from '@/lib/supabaseSync';
 
 interface AchievementQueueItem {
   id: string;
@@ -223,6 +223,35 @@ export const AchievementProvider: React.FC<{ children: React.ReactNode }> = ({ c
     return () => {
       window.removeEventListener('stats-updated', handleStatsUpdated);
       window.removeEventListener('achievements-synced', handleAchievementsSynced as EventListener);
+    };
+  }, []);
+
+  // 1.1 Mantém o jogador alinhado ao painel administrativo. Ao abrir o app ou
+  // voltar para a aba, busca XP, premium e estatísticas frescos do Supabase
+  // (o admin grava esses dados nos metadados da conta).
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    let sincronizando = false;
+    const sincronizar = async () => {
+      if (document.visibilityState !== 'visible' || sincronizando) return;
+      sincronizando = true;
+      try {
+        await syncAllDataFromSupabase();
+      } catch (err) {
+        console.warn('Falha ao sincronizar dados do servidor:', err);
+      } finally {
+        sincronizando = false;
+      }
+    };
+
+    document.addEventListener('visibilitychange', sincronizar);
+    window.addEventListener('focus', sincronizar);
+    sincronizar();
+
+    return () => {
+      document.removeEventListener('visibilitychange', sincronizar);
+      window.removeEventListener('focus', sincronizar);
     };
   }, []);
 

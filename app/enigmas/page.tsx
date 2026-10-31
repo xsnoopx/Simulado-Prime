@@ -123,20 +123,35 @@ export default function EnigmasPage() {
 
   useEffect(() => {
     setIsMounted(true);
-    const profile = localStorage.getItem('user_profile');
-    const logged = localStorage.getItem('cosmos_logged_user');
-    let prem = false;
-    if (profile) {
-      try {
-        if (JSON.parse(profile).isPremium) prem = true;
-      } catch (_) {}
-    }
-    if (logged) {
-      try {
-        if (JSON.parse(logged).isPremium) prem = true;
-      } catch (_) {}
-    }
-    setIsPremium(prem);
+
+    const lerPremium = () => {
+      const profile = localStorage.getItem('user_profile');
+      const logged = localStorage.getItem('cosmos_logged_user');
+      let prem = false;
+      if (profile) {
+        try {
+          if (JSON.parse(profile).isPremium) prem = true;
+        } catch (_) {}
+      }
+      if (logged) {
+        try {
+          if (JSON.parse(logged).isPremium) prem = true;
+        } catch (_) {}
+      }
+      return prem;
+    };
+
+    const reavaliarPremium = () => setIsPremium(lerPremium());
+
+    reavaliarPremium();
+    // Reavalia quando o admin libera/revoga o PRIME ou ao voltar para a aba.
+    window.addEventListener('supabase-data-synced', reavaliarPremium);
+    window.addEventListener('storage', reavaliarPremium);
+
+    return () => {
+      window.removeEventListener('supabase-data-synced', reavaliarPremium);
+      window.removeEventListener('storage', reavaliarPremium);
+    };
   }, []);
 
   const generateEnigma = async (overrideCategory?: string) => {

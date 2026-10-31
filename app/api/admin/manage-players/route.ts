@@ -1,7 +1,94 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import { isAdminEmail } from "@/lib/adminAccess";
 import { resolveSupabaseConfig } from "@/lib/supabaseConfig";
+
+const UUID_REGEX =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+/**
+ * O aplicativo do jogador lê XP, premium, nome e estatísticas de
+ * `auth.users.raw_user_meta_data` (metadados do Supabase Auth).
+ *
+ * Atualizar só a tabela `ranking` não muda nada na tela do jogador, porque o
+ * ranking é apenas o placar público. Por isso esta função espelha os campos
+ * administrativos nos metadados da conta de login.
+ *
+ * Devolve uma mensagem de aviso quando não foi possível sincronizar (por
+ * exemplo, jogador antigo cuja linha do ranking não tem conta de Auth).
+ */
+async function propagarMetadadosDoJogador(
+  supabaseAdmin: SupabaseClient,
+  userId: string,
+  campos: Record<string, any>
+): Promise<string | null> {
+  if (!UUID_REGEX.test(userId)) {
+    return "XP e premium foram salvos apenas no ranking: este jogador não tem conta de login vinculada (ID não é um UUID do Supabase Auth).";
+  }
+
+  const { data, error } = await supabaseAdmin.auth.admin.getUserById(userId);
+  if (error || !data?.user) {
+    console.warn("[Admin] Não foi possível ler a conta de Auth do jogador:", error?.message);
+    return `Ranking salvo, mas a conta de login não foi encontrada: ${error?.message || "usuário inexistente"}.`;
+  }
+
+  const metadadosAtuais = (data.user.user_metadata || {}) as Record<string, any>;
+  const perfilAtual =
+    metadadosAtuais.user_profile && typeof metadadosAtuais.user_profile === "object"
+      ? { ...metadadosAtuais.user_profile }
+      : {};
+
+  const metadados: Record<string, any> = { ...metadadosAtuais };
+  const perfil: Record<string, any> = { ...perfilAtual };
+
+  if (campos.name !== undefined) {
+    metadados.name = campos.name;
+    perfil.name = campos.name;
+  }
+
+  if (campos.is_premium !== undefined) {
+    const premium = !!campos.is_premium;
+    metadados.isPremium = premium;
+    perfil.isPremium = premium;
+  }
+
+  // Piso de XP definido manualmente pelo admin. O app usa o maior valor entre
+  // este e o XP conquistado nas estatísticas.
+  if (campos.xp !== undefined) {
+    metadados.cosmos_xp = Number(campos.xp);
+  }
+
+  if (campos.stats !== undefined) {
+    metadados.simulado_stats = campos.stats;
+    perfil.stats = campos.stats;
+  }
+
+  if (campos.avatar_id !== undefined) {
+    metadados.avatarId = campos.avatar_id;
+    perfil.avatarId = campos.avatar_id;
+  }
+  if (campos.avatar_frame_id !== undefined) {
+    metadados.avatarFrameId = campos.avatar_frame_id;
+    perfil.avatarFrameId = campos.avatar_frame_id;
+  }
+  if (campos.custom_avatar_url !== undefined) {
+    metadados.customAvatarUrl = campos.custom_avatar_url;
+    perfil.customAvatarUrl = campos.custom_avatar_url;
+  }
+
+  metadados.user_profile = perfil;
+
+  const { error: metaError } = await supabaseAdmin.auth.admin.updateUserById(userId, {
+    user_metadata: metadados,
+  });
+
+  if (metaError) {
+    console.warn("[Admin] Falha ao gravar metadados do jogador:", metaError.message);
+    return `Ranking salvo, mas o aplicativo do jogador não recebeu a alteração: ${metaError.message}`;
+  }
+
+  return null;
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -125,7 +212,16 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ success: false, error: updateError.message }, { status: 500 });
       }
 
-      return NextResponse.json({ success: true, message: "Cadastro atualizado com sucesso." });
+      // Espelha os campos administrativos nos metadados de login do jogador.
+      const avisoMetadados = await propagarMetadadosDoJogador(supabaseAdmin, userId, safeFields);
+
+      return NextResponse.json({
+        success: true,
+        message: avisoMetadados
+          ? "Cadastro atualizado no ranking, mas com pendência na conta do jogador."
+          : "Cadastro atualizado e sincronizado com o aplicativo do jogador.",
+        ...(avisoMetadados ? { warning: avisoMetadados } : {}),
+      });
     } else {
       return NextResponse.json({ success: false, error: "Ação inválida." }, { status: 400 });
     }
