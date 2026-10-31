@@ -12,8 +12,16 @@ import {
 
 /** Limites do ajuste de fonte do aplicativo, em px. */
 export const FONTE_MIN = 10;
-export const FONTE_MAX = 30;
+export const FONTE_MAX = 24;
 export const FONTE_PADRAO = 16;
+
+/** Atalhos de tamanho mostrados nas Preferências. */
+export const PRESETS_FONTE = [
+  { id: "pequeno", rotulo: "Pequeno", px: 12, padrao: false },
+  { id: "normal", rotulo: "Normal", px: FONTE_PADRAO, padrao: true },
+  { id: "grande", rotulo: "Grande", px: 20, padrao: false },
+  { id: "maximo", rotulo: "Máximo", px: FONTE_MAX, padrao: false },
+] as const;
 
 /** Chave usada no localStorage e evento para sincronizar abas/componentes. */
 export const CHAVE_FONTE = "cosmos_font_size";
@@ -64,6 +72,17 @@ export function FontSizeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const salvo = lerFonteSalva();
     setTamanho(aplicarFonteNoDocumento(salvo));
+
+    // Se o valor guardado veio de uma versão com faixa maior (ex.: 30 px),
+    // grava o valor já ajustado ao novo limite.
+    try {
+      const bruto = window.localStorage.getItem(CHAVE_FONTE);
+      if (bruto !== null && Number(bruto) !== salvo) {
+        window.localStorage.setItem(CHAVE_FONTE, String(salvo));
+      }
+    } catch {
+      // Sem storage: segue só com o valor em memória.
+    }
 
     const aoMudarArmazenamento = (evento: StorageEvent) => {
       if (evento.key !== CHAVE_FONTE) return;

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 // Aplica o tamanho de fonte salvo antes do primeiro paint, evitando que a
 // tela pisque no tamanho padrão e "pule" quando o React hidrata.
-const scriptFonteInicial = `(function(){try{var v=parseFloat(localStorage.getItem('cosmos_font_size'));if(!isFinite(v)||v<10||v>30){v=16;}document.documentElement.style.fontSize=v+'px';document.documentElement.dataset.fonte=String(v);}catch(e){}})();`;
+const scriptFonteInicial = `(function(){try{var v=parseFloat(localStorage.getItem('cosmos_font_size'));if(!isFinite(v)){v=16;}v=Math.min(24,Math.max(10,Math.round(v)));document.documentElement.style.fontSize=v+'px';document.documentElement.dataset.fonte=String(v);}catch(e){}})();`;
 
 export default function RootLayout({
   children,

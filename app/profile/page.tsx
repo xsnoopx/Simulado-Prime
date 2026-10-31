@@ -56,6 +56,7 @@ import { AVATAR_FRAMES } from "@/lib/frames";
 import { PremiumGateway } from "@/components/PremiumGateway";
 import {
   useFontSize,
+  PRESETS_FONTE,
   FONTE_MIN,
   FONTE_MAX,
   FONTE_PADRAO,
@@ -1853,6 +1854,29 @@ export default function ProfilePage() {
                       A
                     </span>
                   </div>
+                  <div className="grid grid-cols-4 gap-1">
+                    {PRESETS_FONTE.map((preset) => {
+                      const ativo = tamanhoFonte === preset.px;
+                      return (
+                        <button
+                          key={preset.id}
+                          type="button"
+                          onClick={() => definirTamanhoFonte(preset.px)}
+                          aria-pressed={ativo}
+                          className={`flex flex-col items-center justify-center rounded-lg border px-1 py-1 text-[0.5rem] font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                            ativo
+                              ? "border-emerald-400/60 bg-emerald-500/15 text-emerald-200"
+                              : "border-white/10 bg-white/5 text-white/50 hover:bg-white/10"
+                          }`}
+                        >
+                          <span>{preset.rotulo}</span>
+                          <span className="font-mono text-[0.4375rem] normal-case tracking-normal opacity-70">
+                            {preset.padrao ? "padrão" : `${preset.px} px`}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -2713,6 +2737,32 @@ export default function ProfilePage() {
                           </span>
                         </div>
 
+                        <div className="grid grid-cols-4 gap-1.5">
+                          {PRESETS_FONTE.map((preset) => {
+                            const ativo = tamanhoFonte === preset.px;
+                            return (
+                              <button
+                                key={preset.id}
+                                type="button"
+                                onClick={() => definirTamanhoFonte(preset.px)}
+                                aria-pressed={ativo}
+                                className={`flex flex-col items-center justify-center gap-0.5 rounded-xl border px-1.5 py-2 text-[0.625rem] font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                                  ativo
+                                    ? "border-emerald-400/60 bg-emerald-500/15 text-emerald-200"
+                                    : "border-white/10 bg-white/5 text-white/60 hover:bg-white/10"
+                                }`}
+                              >
+                                <span>{preset.rotulo}</span>
+                                <span className="font-mono text-[0.5625rem] tracking-normal opacity-70">
+                                  {preset.padrao
+                                    ? "padrão"
+                                    : `${preset.px} px`}
+                                </span>
+                              </button>
+                            );
+                          })}
+                        </div>
+
                         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                           <p className="text-[0.625rem] text-white/40">
                             Prévia: assim ficará o texto do aplicativo.
@@ -2722,7 +2772,7 @@ export default function ProfilePage() {
                             onClick={restaurarFontePadrao}
                             className="self-start rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[0.625rem] font-bold uppercase tracking-wider text-white/70 transition-all hover:bg-white/10 cursor-pointer"
                           >
-                            Padrão ({FONTE_PADRAO} px)
+                            Restaurar padrão ({FONTE_PADRAO} px)
                           </button>
                         </div>
                       </div>
