@@ -1,6 +1,7 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef, useCallback } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
 import { Trophy, Sparkles } from 'lucide-react';
 import { getStats, SimuladoStats } from '@/lib/stats';
@@ -134,6 +135,27 @@ export const AchievementProvider: React.FC<{ children: React.ReactNode }> = ({ c
   const [current, setCurrent] = useState<AchievementQueueItem | null>(null);
   const knownUnlockedRef = useRef<Set<string>>(new Set());
   const isProcessingRef = useRef<boolean>(false);
+  const sincronizandoRef = useRef<boolean>(false);
+  const ultimaSincronizacaoRef = useRef<number>(0);
+  const pathname = usePathname();
+
+  // Busca os dados frescos do servidor (XP, premium, estatísticas). Tem um
+  // intervalo mínimo para não gerar requisições a cada navegação.
+  const sincronizarDoServidor = useCallback(async () => {
+    if (typeof window === 'undefined') return;
+    if (document.visibilityState !== 'visible' || sincronizandoRef.current) return;
+    if (Date.now() - ultimaSincronizacaoRef.current < 5000) return;
+
+    sincronizandoRef.current = true;
+    ultimaSincronizacaoRef.current = Date.now();
+    try {
+      await syncAllDataFromSupabase();
+    } catch (err) {
+      console.warn('Falha ao sincronizar dados do servidor:', err);
+    } finally {
+      sincronizandoRef.current = false;
+    }
+  }, []);
 
   // 1. Initialize known unlocked achievements on mount (avoid duplicate triggers of past progress)
   useEffect(() => {
@@ -226,34 +248,34 @@ export const AchievementProvider: React.FC<{ children: React.ReactNode }> = ({ c
     };
   }, []);
 
-  // 1.1 Mantém o jogador alinhado ao painel administrativo. Ao abrir o app ou
-  // voltar para a aba, busca XP, premium e estatísticas frescos do Supabase
-  // (o admin grava esses dados nos metadados da conta).
+  // 1.1 Mantém o jogador alinhado ao painel administrativo. Ao abrir o app,
+  // voltar para a aba, ganhar foco ou trocar de página, busca XP, premium e
+  // estatísticas frescos do Supabase (o admin grava nos metadados da conta).
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    let sincronizando = false;
-    const sincronizar = async () => {
-      if (document.visibilityState !== 'visible' || sincronizando) return;
-      sincronizando = true;
-      try {
-        await syncAllDataFromSupabase();
-      } catch (err) {
-        console.warn('Falha ao sincronizar dados do servidor:', err);
-      } finally {
-        sincronizando = false;
-      }
+    const aoMudarVisibilidade = () => {
+      void sincronizarDoServidor();
+    };
+    const aoFocar = () => {
+      void sincronizarDoServidor();
     };
 
-    document.addEventListener('visibilitychange', sincronizar);
-    window.addEventListener('focus', sincronizar);
-    sincronizar();
+    document.addEventListener('visibilitychange', aoMudarVisibilidade);
+    window.addEventListener('focus', aoFocar);
+    void sincronizarDoServidor();
 
     return () => {
-      document.removeEventListener('visibilitychange', sincronizar);
-      window.removeEventListener('focus', sincronizar);
+      document.removeEventListener('visibilitychange', aoMudarVisibilidade);
+      window.removeEventListener('focus', aoFocar);
     };
-  }, []);
+  }, [sincronizarDoServidor]);
+
+  // Revalida ao navegar entre páginas (ex.: abrir Áreas logo após o admin
+  // liberar o PRIME), respeitando o intervalo mínimo do helper acima.
+  useEffect(() => {
+    void sincronizarDoServidor();
+  }, [pathname, sincronizarDoServidor]);
 
   // 2. Process queue one by one (Ensures zero overlap / flawless sequencing)
   useEffect(() => {
