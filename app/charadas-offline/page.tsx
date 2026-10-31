@@ -41,7 +41,7 @@ export default function CharadasOfflinePage() {
           </Link>
           <div className="text-center flex-1">
             <h1 className="text-2xl font-display font-bold uppercase tracking-widest text-secondary">Charadas Offline</h1>
-            <p className="text-[10px] text-on-surface-variant uppercase tracking-[0.3em] mt-1">Sempre com você</p>
+            <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-[0.3em] mt-1">Sempre com você</p>
           </div>
           <div className="w-9" />
         </header>
@@ -50,7 +50,7 @@ export default function CharadasOfflinePage() {
           <div className="absolute top-0 left-0 w-full h-1 bg-secondary" />
           {charada.categoria && (
             <div className="flex items-center gap-2 mb-4">
-               <span className="px-3 py-1 bg-secondary/10 rounded-full text-[10px] font-bold text-secondary">{charada.categoria}</span>
+               <span className="px-3 py-1 bg-secondary/10 rounded-full text-[0.625rem] font-bold text-secondary">{charada.categoria}</span>
             </div>
           )}
           <h2 className="text-xl font-display font-bold leading-relaxed">{charada.pergunta}</h2>

@@ -52,7 +52,7 @@ function EnigmasContent() {
           <h1 className="text-2xl font-display font-bold tracking-widest text-error">
             Enigmas {difficultyParam === 'simples' ? 'SIMPLES' : difficultyParam === 'complexos' ? 'COMPLEXOS' : 'Offline'}
           </h1>
-          <p className="text-[10px] text-on-surface-variant uppercase tracking-[0.3em] mt-1">Lógica em qualquer lugar</p>
+          <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-[0.3em] mt-1">Lógica em qualquer lugar</p>
         </div>
         <div className="w-9" />
       </header>
@@ -60,7 +60,7 @@ function EnigmasContent() {
       <div className="glass-panel p-8 rounded-3xl space-y-6 border border-white/5 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-1 bg-error" />
         <div className="flex items-center gap-2 mb-4">
-           <span className="px-3 py-1 bg-error/10 rounded-full text-[10px] font-bold text-error">{enigma.dificuldade}</span>
+           <span className="px-3 py-1 bg-error/10 rounded-full text-[0.625rem] font-bold text-error">{enigma.dificuldade}</span>
         </div>
         <h2 className="text-xl font-display font-bold leading-relaxed">{enigma.titulo}</h2>
         <p className="text-on-surface-variant italic">"{enigma.enigma}"</p>

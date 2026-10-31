@@ -46,6 +46,9 @@
   }
 
   html {
+    /* Base do texto do aplicativo; o usuário ajusta entre 10 e 30 px nas
+       Preferências (valor aplicado via JS em documentElement). */
+    font-size: 16px;
     /* O layout usa rem: mantém o zoom de fonte do sistema funcionando, mas
        impede que o WebView infle o texto sem respeitar o tamanho declarado. */
     -webkit-text-size-adjust: 100%;
@@ -68,6 +71,47 @@
   *::-webkit-scrollbar {
     display: none;
   }
+}
+
+/* ===== Tamanho do texto do aplicativo =====
+   O html recebe a fonte escolhida nas Preferências (10–30 px). Para o texto
+   crescer sem empurrar o layout, os espaçamentos, larguras de container e
+   raios ficam fixos em px com os mesmos valores de quando a base é 16 px. */
+:root {
+  --spacing: 4px;
+
+  --container-3xs: 256px;
+  --container-2xs: 288px;
+  --container-xs: 320px;
+  --container-sm: 384px;
+  --container-md: 448px;
+  --container-lg: 512px;
+  --container-xl: 576px;
+  --container-2xl: 672px;
+  --container-3xl: 768px;
+  --container-4xl: 896px;
+  --container-5xl: 1024px;
+  --container-6xl: 1152px;
+  --container-7xl: 1280px;
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
+}
+
+/* Rótulos da barra inferior não podem crescer a ponto de se sobrepor. */
+.rotulo-nav {
+  font-size: clamp(9px, 0.625rem, 11px);
+  letter-spacing: 0.06em;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* O vidro fosco só é aplicado onde não pesa: em telas grandes e em elementos

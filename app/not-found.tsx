@@ -17,7 +17,7 @@ export default function NotFound() {
         initial={{ opacity: 0, scale: 0.9, y: 30 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ type: "spring", damping: 20, stiffness: 100 }}
-        className="relative z-10 max-w-md w-full glass-panel border border-white/10 p-8 rounded-[2.5rem] shadow-2xl backdrop-blur-2xl space-y-6"
+        className="relative z-10 max-w-md w-full glass-panel border border-white/10 p-8 rounded-[40px] shadow-2xl backdrop-blur-2xl space-y-6"
       >
         {/* Glow behind card */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-primary/15 rounded-full blur-3xl pointer-events-none -z-10" />

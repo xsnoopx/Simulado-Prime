@@ -254,7 +254,7 @@ export default function EnigmasPage() {
             </Link>
             <div className="text-center flex-1">
               <h1 className="text-[clamp(1.25rem,5.5vw,1.5rem)] font-display font-bold uppercase tracking-widest text-error">Enigmas</h1>
-              <p className="text-[10px] text-on-surface-variant uppercase tracking-[0.3em] mt-1">O Mistério te Espera</p>
+              <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-[0.3em] mt-1">O Mistério te Espera</p>
             </div>
             <div className="w-9" /> {/* Spacer */}
           </header>
@@ -262,11 +262,11 @@ export default function EnigmasPage() {
           {/* ACTIVE LICENSE STATUS BANNER */}
           <div className="mb-6 rounded-2xl border border-white/5 bg-white/[0.02] p-4 flex flex-wrap items-center justify-between gap-3">
             <div className="space-y-1">
-              <span className="text-[9px] font-black uppercase text-error tracking-widest block">Licença de Uso</span>
+              <span className="text-[0.5625rem] font-black uppercase text-error tracking-widest block">Licença de Uso</span>
               <p className="text-xs font-bold text-white/90">
                 {isPremium ? "🏆 Pacote Cosmos Premium Ativado" : "🌱 Plano Grátis Liberado"}
               </p>
-              <p className="text-[10px] text-white/50 leading-tight">
+              <p className="text-[0.625rem] text-white/50 leading-tight">
                 {isPremium 
                   ? "Acesso ilimitado a todos os enigmas premium, criminais, detetive e escape room." 
                   : "Acesso a enigmas lógicos padrão. Faça upgrade para desbloquear mistérios detetive e criminais."}
@@ -274,7 +274,7 @@ export default function EnigmasPage() {
             </div>
             <div className="shrink-0 pl-2">
               {isPremium ? (
-                <div className="px-2.5 py-1 rounded-full bg-error/15 text-error border border-error/20 flex items-center gap-1.5 font-bold text-[9px] uppercase tracking-wider animate-pulse">
+                <div className="px-2.5 py-1 rounded-full bg-error/15 text-error border border-error/20 flex items-center gap-1.5 font-bold text-[0.5625rem] uppercase tracking-wider animate-pulse">
                   <Crown className="w-3 h-3 text-error" />
                   Premium
                 </div>
@@ -282,7 +282,7 @@ export default function EnigmasPage() {
                 <button
                   type="button"
                   onClick={() => setShowPremiumUpgrade(true)}
-                  className="px-3 py-1.5 rounded-full bg-error text-white font-bold text-[9px] uppercase tracking-wider hover:bg-error/80 transition-all cursor-pointer flex items-center gap-1"
+                  className="px-3 py-1.5 rounded-full bg-error text-white font-bold text-[0.5625rem] uppercase tracking-wider hover:bg-error/80 transition-all cursor-pointer flex items-center gap-1"
                 >
                   <Sparkles className="w-2.5 h-2.5" />
                   Upgrade
@@ -294,14 +294,14 @@ export default function EnigmasPage() {
           {/* CATEGORY SWITCHERS */}
           <div className="mb-6 space-y-3">
             <div>
-              <span className="text-[8px] font-black uppercase text-white/40 tracking-wider block mb-1.5 px-0.5">Enigmas Grátis</span>
+              <span className="text-[0.5rem] font-black uppercase text-white/40 tracking-wider block mb-1.5 px-0.5">Enigmas Grátis</span>
               <div className="flex flex-wrap gap-1.5">
                 {CATEGORIAS_GRATIS.map((cat) => (
                   <button
                     key={cat.id}
                     onClick={() => handleSelectCategory(cat.id, false)}
                     className={cn(
-                      "px-3 py-1.5 rounded-full border text-[10px] font-medium transition-all cursor-pointer",
+                      "px-3 py-1.5 rounded-full border text-[0.625rem] font-medium transition-all cursor-pointer",
                       selectedCategory === cat.id 
                         ? "bg-error border-error text-white font-bold shadow-md shadow-error/10" 
                         : "bg-white/5 border-white/5 text-white/70 hover:bg-white/10"
@@ -314,7 +314,7 @@ export default function EnigmasPage() {
             </div>
 
             <div>
-              <span className="text-[8px] font-black uppercase text-red-400 tracking-wider block mb-1.5 px-0.5 flex items-center gap-1">
+              <span className="text-[0.5rem] font-black uppercase text-red-400 tracking-wider block mb-1.5 px-0.5 flex items-center gap-1">
                 <Crown className="w-2.5 h-2.5 text-red-400" />
                 Pacote Premium de Enigmas
               </span>
@@ -324,7 +324,7 @@ export default function EnigmasPage() {
                     key={cat.id}
                     onClick={() => handleSelectCategory(cat.id, true)}
                     className={cn(
-                      "px-3 py-1.5 rounded-full border text-[10px] font-medium transition-all cursor-pointer flex items-center gap-1",
+                      "px-3 py-1.5 rounded-full border text-[0.625rem] font-medium transition-all cursor-pointer flex items-center gap-1",
                       selectedCategory === cat.id 
                         ? "bg-red-500 border-red-500 text-white font-bold shadow-lg shadow-red-500/20" 
                         : "bg-red-500/5 border-red-500/10 text-red-400 hover:bg-red-500/10"
@@ -392,7 +392,7 @@ export default function EnigmasPage() {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2 px-3 py-1 bg-error/10 rounded-full border border-error/20">
                         <Sparkles className="w-3 h-3 text-error" />
-                        <span className="text-[10px] font-bold text-error uppercase tracking-wider">{enigma.categoria}</span>
+                        <span className="text-[0.625rem] font-bold text-error uppercase tracking-wider">{enigma.categoria}</span>
                       </div>
                       <Quote className="w-4 h-4 text-on-surface-variant opacity-20 rotate-180" />
                     </div>
@@ -445,7 +445,7 @@ export default function EnigmasPage() {
                         className="bg-error/10 border-t border-error/20 overflow-hidden"
                       >
                         <div className="p-8 text-center">
-                          <p className="text-[10px] uppercase tracking-[0.4em] text-error font-bold mb-3">A Solução</p>
+                          <p className="text-[0.625rem] uppercase tracking-[0.4em] text-error font-bold mb-3">A Solução</p>
                           <p className="text-[clamp(1.25rem,5.5vw,1.5rem)] font-display font-bold text-on-surface break-words">{enigma.resposta}</p>
                         </div>
                       </motion.div>

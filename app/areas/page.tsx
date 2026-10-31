@@ -38,7 +38,7 @@ const CategoryButton = ({ name, tech, icon: Icon, color, bg, href, description }
           </div>
           <div className="flex-1 min-w-0 pr-10">
             <p className="text-sm font-bold leading-tight break-words">{name}</p>
-            {tech && <p className="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider">{tech}</p>}
+            {tech && <p className="text-[0.625rem] text-on-surface-variant font-medium uppercase tracking-wider">{tech}</p>}
           </div>
           <div className="w-8 shrink-0" />
         </motion.div>
@@ -71,7 +71,7 @@ const CategoryButton = ({ name, tech, icon: Icon, color, bg, href, description }
               className="absolute right-0 bottom-full mb-3 w-64 p-5 glass-panel rounded-3xl border border-primary/20 shadow-2xl z-40 backdrop-blur-xl"
             >
               <div className="relative">
-                <p className="text-[13px] text-on-surface font-medium leading-relaxed italic">
+                <p className="text-[0.8125rem] text-on-surface font-medium leading-relaxed italic">
                   "{description}"
                 </p>
               </div>
@@ -186,18 +186,18 @@ export default function AreasPage() {
           </header>
 
           {/* DYNAMIC TRAINING MODES */}
-          <section className="glass-panel p-5 rounded-[2rem] border border-white/5 space-y-4 bg-white/[0.01]">
+          <section className="glass-panel p-5 rounded-[32px] border border-white/5 space-y-4 bg-white/[0.01]">
             <div className="flex items-center justify-between gap-2 flex-wrap">
               <div className="flex items-center gap-2 min-w-0">
                 <Flame className="w-5 h-5 shrink-0 text-amber-400" />
                 <h2 className="text-xs font-display font-black uppercase tracking-widest text-secondary">Modos de Treino Especial</h2>
               </div>
-              <span className="text-[10px] font-black uppercase bg-amber-500/10 border border-amber-500/20 text-amber-400 px-2 py-0.5 rounded-md tracking-wider shrink-0">
+              <span className="text-[0.625rem] font-black uppercase bg-amber-500/10 border border-amber-500/20 text-amber-400 px-2 py-0.5 rounded-md tracking-wider shrink-0">
                 Modo Ativo
               </span>
             </div>
 
-            <p className="text-[10px] text-white/50 leading-relaxed text-left">
+            <p className="text-[0.625rem] text-white/50 leading-relaxed text-left">
               Selecione o modo que afetará o comportamento de todos os simulados e as perguntas do app:
             </p>
 
@@ -324,7 +324,7 @@ export default function AreasPage() {
           </section>
 
           <footer className="text-center pt-8">
-            <p className="text-[9px] text-on-surface-variant/30 uppercase tracking-[0.3em]">
+            <p className="text-[0.5625rem] text-on-surface-variant/30 uppercase tracking-[0.3em]">
               Criado Por xSnoopx
             </p>
           </footer>

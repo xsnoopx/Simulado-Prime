@@ -17,7 +17,7 @@ export function BottomNav() {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest/95 md:bg-surface-container-lowest/80 md:backdrop-blur-md border-t border-outline-variant/10 flex justify-around items-center min-h-[4.5rem] px-2 pt-1 pb-safe shadow-[0_-8px_30px_rgb(0,0,0,0.12)]">
+    <nav className="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest/95 md:bg-surface-container-lowest/80 md:backdrop-blur-md border-t border-outline-variant/10 flex justify-around items-center min-h-[72px] px-2 pt-1 pb-safe shadow-[0_-8px_30px_rgb(0,0,0,0.12)]">
       {navItems.map((item) => {
         const isActive = pathname === item.href;
         const Icon = item.icon;
@@ -56,7 +56,7 @@ export function BottomNav() {
                 isActive && "scale-110 stroke-[2.5px]"
               )} />
               <span className={cn(
-                "text-[10px] leading-tight font-black mt-1 uppercase tracking-[0.12em] transition-all text-center",
+                "rotulo-nav text-[0.625rem] leading-tight font-black mt-1 uppercase tracking-[0.12em] transition-all text-center",
                 isActive ? "opacity-100" : "opacity-50"
               )}>
                 {item.label}

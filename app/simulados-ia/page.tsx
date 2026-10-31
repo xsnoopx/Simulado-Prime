@@ -346,7 +346,7 @@ export default function SimuladosIAPage() {
         className="flex-1 overflow-y-auto flex flex-col pb-32"
       >
         <div className="w-full max-w-2xl mx-auto pt-12 px-6">
-          <header className="mb-8 flex items-center justify-between">
+          <header className="mb-8 flex items-center justify-between gap-2">
             <Link href="/">
               <motion.button 
                 whileHover={{ scale: 1.1, x: -2 }}
@@ -355,15 +355,15 @@ export default function SimuladosIAPage() {
                 <ChevronLeft className="w-5 h-5" />
               </motion.button>
             </Link>
-            <div className="text-center flex-1">
-              <div className="flex items-center justify-center gap-2">
-                <h1 className="text-2xl font-display font-bold uppercase tracking-widest text-tertiary">Simulado IA</h1>
+            <div className="text-center flex-1 min-w-0">
+              <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+                <h1 className="text-2xl font-display font-bold uppercase tracking-widest text-tertiary break-words">Simulado IA</h1>
                 <div className="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-primary/10 border border-primary/20">
                   <Wifi className="w-2.5 h-2.5 text-primary" />
-                  <span className="text-[8px] font-bold text-primary tracking-wider uppercase">Online</span>
+                  <span className="text-[0.5rem] font-bold text-primary tracking-wider uppercase">Online</span>
                 </div>
               </div>
-              <p className="text-[10px] text-on-surface-variant uppercase tracking-[0.3em] mt-1">Questões Inéditas de Alta Performance</p>
+              <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-[0.3em] mt-1 break-words">Questões Inéditas de Alta Performance</p>
             </div>
             <div className="w-9" />
           </header>
@@ -419,13 +419,13 @@ export default function SimuladosIAPage() {
                 <div className="flex flex-wrap gap-2">
                   <div className="px-3 py-1 bg-tertiary/10 rounded-full border border-tertiary/20 flex items-center gap-2">
                     <BookOpen className="w-3 h-3 text-tertiary" />
-                    <span className="text-[10px] font-bold text-tertiary uppercase tracking-wider">{questao.area}</span>
+                    <span className="text-[0.625rem] font-bold text-tertiary uppercase tracking-wider">{questao.area}</span>
                   </div>
                   <div className="px-3 py-1 bg-white/5 rounded-full border border-white/10">
-                    <span className="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">{questao.tema}</span>
+                    <span className="text-[0.625rem] font-bold text-on-surface-variant uppercase tracking-wider">{questao.tema}</span>
                   </div>
                   <div className={cn(
-                    "px-3 py-1 rounded-full border text-[10px] font-bold uppercase tracking-wider",
+                    "px-3 py-1 rounded-full border text-[0.625rem] font-bold uppercase tracking-wider",
                     questao.dificuldade === "fácil" ? "bg-green-500/10 border-green-500/20 text-green-500" :
                     questao.dificuldade === "média" ? "bg-yellow-500/10 border-yellow-500/20 text-yellow-500" :
                     "bg-red-500/10 border-red-500/20 text-red-500"

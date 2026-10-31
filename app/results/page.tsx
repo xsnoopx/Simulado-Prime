@@ -188,7 +188,7 @@ export default function ResultsPage() {
         {totalAnswered > 0 ? (
           <div className="space-y-8">
             {/* Overview Circular Metric */}
-            <section className="glass-panel p-6 rounded-[2rem] border border-white/5 shadow-2xl flex flex-col items-center text-center relative overflow-hidden">
+            <section className="glass-panel p-6 rounded-[32px] border border-white/5 shadow-2xl flex flex-col items-center text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 blur-[40px] rounded-full -z-10" />
               
               <div className="relative w-44 h-44 mb-4 flex items-center justify-center">
@@ -221,7 +221,7 @@ export default function ResultsPage() {
                   >
                     {overallAccuracy}%
                   </motion.span>
-                  <span className="text-[9px] tracking-[0.2em] text-on-surface-variant uppercase font-bold mt-0.5">Aproveitamento</span>
+                  <span className="text-[0.5625rem] tracking-[0.2em] text-on-surface-variant uppercase font-bold mt-0.5">Aproveitamento</span>
                 </div>
               </div>
 
@@ -239,15 +239,15 @@ export default function ResultsPage() {
               {/* Mini Stats Row */}
               <div className="grid grid-cols-3 gap-3 w-full mt-6 pt-5 border-t border-white/5 text-center">
                 <div className="space-y-0.5">
-                  <span className="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider block">Respondidas</span>
+                  <span className="text-[0.625rem] uppercase font-bold text-on-surface-variant tracking-wider block">Respondidas</span>
                   <p className="text-lg font-display font-bold text-white">{totalAnswered}</p>
                 </div>
                 <div className="space-y-0.5">
-                  <span className="text-[10px] uppercase font-bold text-emerald-400 tracking-wider block">Acertos</span>
+                  <span className="text-[0.625rem] uppercase font-bold text-emerald-400 tracking-wider block">Acertos</span>
                   <p className="text-lg font-display font-bold text-emerald-400">{totalCorrect}</p>
                 </div>
                 <div className="space-y-0.5">
-                  <span className="text-[10px] uppercase font-bold text-red-400 tracking-wider block">Erros</span>
+                  <span className="text-[0.625rem] uppercase font-bold text-red-400 tracking-wider block">Erros</span>
                   <p className="text-lg font-display font-bold text-red-400">{totalIncorrect}</p>
                 </div>
               </div>
@@ -279,7 +279,7 @@ export default function ResultsPage() {
                           </div>
                           <div>
                             <h4 className="font-display font-bold text-sm text-white">{cfg.label}</h4>
-                            <p className="text-[11px] text-on-surface-variant">
+                            <p className="text-[0.6875rem] text-on-surface-variant">
                               {catStats.answered} respondidas
                             </p>
                           </div>
@@ -288,7 +288,7 @@ export default function ResultsPage() {
                           <span className={`text-base font-display font-extrabold ${cfg.color}`}>
                             {accuracy}%
                           </span>
-                          <span className="text-[8px] uppercase tracking-wider text-on-surface-variant/70 block">Precisão</span>
+                          <span className="text-[0.5rem] uppercase tracking-wider text-on-surface-variant/70 block">Precisão</span>
                         </div>
                       </div>
 
@@ -304,7 +304,7 @@ export default function ResultsPage() {
 
                       {/* Correct and Incorrect badges */}
                       <div className="flex justify-between items-center pt-1">
-                        <div className="flex items-center gap-3 text-[11px]">
+                        <div className="flex items-center gap-3 text-[0.6875rem]">
                           <span className="flex items-center gap-1.5 text-emerald-400 font-medium">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 block" />
                             {catStats.correct} acertos
@@ -314,7 +314,7 @@ export default function ResultsPage() {
                             {catStats.incorrect} erros
                           </span>
                         </div>
-                        <Link href={cfg.link} className="flex items-center gap-1 text-[10px] text-primary hover:text-white transition-colors uppercase font-bold tracking-widest">
+                        <Link href={cfg.link} className="flex items-center gap-1 text-[0.625rem] text-primary hover:text-white transition-colors uppercase font-bold tracking-widest">
                           Revisar
                           <ChevronRight className="w-3 h-3" />
                         </Link>
@@ -330,7 +330,7 @@ export default function ResultsPage() {
               <motion.section 
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="glass-panel p-6 rounded-[2rem] border border-white/5 shadow-2xl relative overflow-hidden"
+                className="glass-panel p-6 rounded-[32px] border border-white/5 shadow-2xl relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 blur-[40px] rounded-full -z-10" />
                 
@@ -341,20 +341,20 @@ export default function ResultsPage() {
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-sm text-white">Plano de Estudo Sugerido</h4>
-                    <p className="text-[11px] text-on-surface-variant">Trilhas inteligentes baseadas no seu desempenho:</p>
+                    <p className="text-[0.6875rem] text-on-surface-variant">Trilhas inteligentes baseadas no seu desempenho:</p>
                   </div>
                 </div>
 
                 <div className="space-y-3.5">
                   {/* Weak subject block */}
                   <div className="p-4 rounded-xl border border-red-500/10 bg-red-500/5 space-y-1">
-                    <span className="text-[9px] text-red-400 font-black uppercase tracking-[0.2em] block">
+                    <span className="text-[0.5625rem] text-red-400 font-black uppercase tracking-[0.2em] block">
                       REVISÃO CRÍTICA (Foco Imediato)
                     </span>
                     <p className="text-xs font-bold text-white">
                       {criticalCategory.label}
                     </p>
-                    <p className="text-[10px] text-on-surface-variant leading-relaxed">
+                    <p className="text-[0.625rem] text-on-surface-variant leading-relaxed">
                       Sugerimos focar em: <span className="text-red-300 font-medium">{criticalCategory.pontoCritico}</span> para elevar o seu aproveitamento nesta disciplina.
                     </p>
                   </div>
@@ -362,13 +362,13 @@ export default function ResultsPage() {
                   {/* Strong subject block */}
                   {strongCategory.key !== criticalCategory.key && (
                     <div className="p-4 rounded-xl border border-emerald-500/10 bg-emerald-500/5 space-y-1">
-                      <span className="text-[9px] text-emerald-400 font-black uppercase tracking-[0.2em] block">
+                      <span className="text-[0.5625rem] text-emerald-400 font-black uppercase tracking-[0.2em] block">
                         PONTO FORTE (Excelente Ritmo!)
                       </span>
                       <p className="text-xs font-bold text-white">
                         {strongCategory.label}
                       </p>
-                      <p className="text-[10px] text-on-surface-variant leading-relaxed">
+                      <p className="text-[0.625rem] text-on-surface-variant leading-relaxed">
                         Ótima precisão geral. Mantenha os simulados periódicos para fixação de longo prazo.
                       </p>
                     </div>
@@ -404,7 +404,7 @@ export default function ResultsPage() {
               animate={{ opacity: 1, scale: 1 }}
               className="text-center space-y-8 py-10"
             >
-              <div className="glass-panel p-8 rounded-[2rem] border border-white/5 space-y-6 max-w-sm mx-auto relative overflow-hidden">
+              <div className="glass-panel p-8 rounded-[32px] border border-white/5 space-y-6 max-w-sm mx-auto relative overflow-hidden">
                 <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center relative">
                   <Compass className="w-8 h-8 text-primary-light" />
                   <div className="absolute inset-0 bg-primary/10 blur-xl rounded-full" />
@@ -419,7 +419,7 @@ export default function ResultsPage() {
 
                 <div className="space-y-3">
                   <Link href="/areas" className="block w-full">
-                    <button className="w-full py-3 gradient-primary text-white rounded-xl font-display font-bold text-[11px] uppercase tracking-widest shadow-xl flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all">
+                    <button className="w-full py-3 gradient-primary text-white rounded-xl font-display font-bold text-[0.6875rem] uppercase tracking-widest shadow-xl flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all">
                       <Zap className="w-3.5 h-3.5" />
                       Escolher Disciplina e Começar
                     </button>
@@ -429,7 +429,7 @@ export default function ResultsPage() {
 
               {/* Static Category Previews to motivate user */}
               <div className="space-y-3 max-w-sm mx-auto text-left">
-                <h4 className="text-[10px] uppercase font-bold text-on-surface-variant tracking-[0.2em] px-2">Disciplinas Disponíveis</h4>
+                <h4 className="text-[0.625rem] uppercase font-bold text-on-surface-variant tracking-[0.2em] px-2">Disciplinas Disponíveis</h4>
                 <div className="grid grid-cols-2 gap-3">
                   {CATEGORIES_CONFIG.map(cfg => {
                     const Icon = cfg.icon;
@@ -439,7 +439,7 @@ export default function ResultsPage() {
                           <div className={`p-1.5 rounded-lg ${cfg.bgColor}`}>
                             <Icon className={`w-3.5 h-3.5 ${cfg.color}`} />
                           </div>
-                          <span className="text-[11px] font-bold text-white truncate">{cfg.key.toUpperCase()}</span>
+                          <span className="text-[0.6875rem] font-bold text-white truncate">{cfg.key.toUpperCase()}</span>
                         </div>
                       </Link>
                     )

@@ -893,7 +893,7 @@ export default function RankingPage() {
             <div className="w-12 h-12 rounded-full border-2 border-t-primary-light border-r-transparent border-b-transparent border-l-transparent animate-spin" />
             <Trophy className="w-5 h-5 text-primary absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse" />
           </div>
-          <p className="text-[11px] font-black uppercase tracking-widest text-primary-light">
+          <p className="text-[0.6875rem] font-black uppercase tracking-widest text-primary-light">
             Sintonizando Cosmos...
           </p>
         </div>
@@ -913,22 +913,22 @@ export default function RankingPage() {
 
         {/* Header */}
         <header className="pt-6 px-6 max-w-xl mx-auto w-full flex flex-col space-y-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-3">
               <div className="p-2.5 bg-primary/15 rounded-2xl border border-primary/20 text-primary relative">
                 <Trophy className="w-5 h-5 text-primary-light" />
                 <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full" />
               </div>
               <div>
-                <h1 className="font-display text-xl font-black uppercase tracking-widest text-white leading-none">
+                <h1 className="font-display text-xl font-black uppercase tracking-widest text-white leading-tight">
                   Ranking Estelar
                 </h1>
-                <p className="text-[10px] text-on-surface-variant uppercase tracking-[0.2em] mt-1">
+                <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-[0.2em] mt-1">
                   Órbita de Estudantes
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-white/5 rounded-full text-[10px] font-black uppercase tracking-wider text-yellow-300">
+            <div className="flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-white/5 rounded-full text-[0.625rem] font-black uppercase tracking-wider text-yellow-300">
               <Flame className="w-3.5 h-3.5" />
               Temporada {currentSeasonNum}
             </div>
@@ -972,7 +972,7 @@ export default function RankingPage() {
                   <h4 className="text-xs font-bold text-white">
                     Registre seus Pontos
                   </h4>
-                  <p className="text-[10.5px] text-on-surface-variant/80 mt-0.5">
+                  <p className="text-[0.6563rem] text-on-surface-variant/80 mt-0.5">
                     Suas respostas corretas se convertem em XP dinâmico para
                     subir de escalão.
                   </p>
@@ -987,7 +987,7 @@ export default function RankingPage() {
                   <h4 className="text-xs font-bold text-white">
                     Dispute com Outros Exploradores
                   </h4>
-                  <p className="text-[10.5px] text-on-surface-variant/80 mt-0.5">
+                  <p className="text-[0.6563rem] text-on-surface-variant/80 mt-0.5">
                     Acompanhe seu progresso contra estudantes de todo o Cosmos e
                     lidere o topo.
                   </p>
@@ -1002,7 +1002,7 @@ export default function RankingPage() {
                   <h4 className="text-xs font-bold text-white">
                     Desbloqueie Conquistas Cósmicas
                   </h4>
-                  <p className="text-[10.5px] text-on-surface-variant/80 mt-0.5">
+                  <p className="text-[0.6563rem] text-on-surface-variant/80 mt-0.5">
                     Ganhe troféus exclusivos com base nas suas taxas de acerto e
                     estudos.
                   </p>
@@ -1042,27 +1042,27 @@ export default function RankingPage() {
               <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full" />
             </div>
             <div>
-              <h1 className="font-display text-xl font-black uppercase tracking-widest text-white leading-none">
+              <h1 className="font-display text-xl font-black uppercase tracking-widest text-white leading-tight">
                 Ranking Estelar
               </h1>
-              <p className="text-[10px] text-on-surface-variant uppercase tracking-[0.2em] mt-1 text-center">
+              <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-[0.2em] mt-1 text-center">
                 Órbita de Estudantes
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2">
             {isRealtime ? (
-              <div className="flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-[9px] font-black uppercase tracking-wider text-emerald-400 animate-bounce">
+              <div className="flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-[0.5625rem] font-black uppercase tracking-wider text-emerald-400 animate-bounce">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 Tempo Real
               </div>
             ) : (
-              <div className="flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-white/5 rounded-full text-[9px] font-black uppercase tracking-wider text-white/40">
+              <div className="flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-white/5 rounded-full text-[0.5625rem] font-black uppercase tracking-wider text-white/40">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/30" />
                 Offline
               </div>
             )}
-            <div className="flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-[9px] font-black uppercase tracking-wider text-yellow-300">
+            <div className="flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-[0.5625rem] font-black uppercase tracking-wider text-yellow-300">
               <Flame className="w-3.5 h-3.5 text-yellow-400" />
               Temporada {currentSeasonNum}
             </div>
@@ -1093,7 +1093,7 @@ export default function RankingPage() {
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
                 className={cn(
-                  "flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10.5px] font-bold uppercase tracking-wider whitespace-nowrap border transition-all cursor-pointer",
+                  "flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[0.6563rem] font-bold uppercase tracking-wider whitespace-nowrap border transition-all cursor-pointer",
                   isTabActive
                     ? "bg-white/10 text-white border-white/20 shadow-md shadow-black/10"
                     : "bg-transparent text-white/40 border-transparent hover:text-white/70",
@@ -1125,7 +1125,7 @@ export default function RankingPage() {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary p-[1px] flex items-center justify-center">
                 <div className="bg-[#0e1220] w-full h-full rounded-xl flex flex-col items-center justify-center">
-                  <span className="text-[9px] font-black uppercase text-primary-light">
+                  <span className="text-[0.5625rem] font-black uppercase text-primary-light">
                     Pos
                   </span>
                   <span className="text-sm font-black text-white leading-none">
@@ -1134,7 +1134,7 @@ export default function RankingPage() {
                 </div>
               </div>
               <div>
-                <p className="text-[9px] font-black uppercase tracking-widest text-[#93c5fd]">
+                <p className="text-[0.5625rem] font-black uppercase tracking-widest text-[#93c5fd]">
                   Sua Órbita Atual
                 </p>
                 <h4 className="font-bold text-xs text-white truncate max-w-[170px]">
@@ -1149,7 +1149,7 @@ export default function RankingPage() {
                   ? `${xpInfo.xp} XP`
                   : `${getAreaScore(stats, activeTab)} PTS`}
               </p>
-              <p className="text-[8px] font-bold uppercase tracking-widest text-on-surface-variant/80">
+              <p className="text-[0.5rem] font-bold uppercase tracking-widest text-on-surface-variant/80">
                 {activeTab === "geral" ? `Nível ${xpInfo.level}` : "Nesta área"}
               </p>
             </div>
@@ -1183,15 +1183,15 @@ export default function RankingPage() {
                       />
                     </div>
                     {/* Position badge */}
-                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-slate-400 text-slate-950 font-black text-[9px] px-2 py-0.5 rounded-full shadow border border-white/20">
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-slate-400 text-slate-950 font-black text-[0.5625rem] px-2 py-0.5 rounded-full shadow border border-white/20">
                       2º
                     </div>
                   </div>
-                  <span className="font-bold text-[11px] text-white truncate w-full px-1 flex items-center justify-center gap-0.5">
+                  <span className="font-bold text-[0.6875rem] text-white truncate w-full px-1 flex items-center justify-center gap-0.5">
                     {isOwnerPlayer(podium[1]) && <Crown className="w-2.5 h-2.5 text-amber-400 shrink-0 fill-amber-400/20 animate-pulse" />}
                     {podium[1].name}
                   </span>
-                  <span className="text-[9px] text-slate-300 font-extrabold block">
+                  <span className="text-[0.5625rem] text-slate-300 font-extrabold block">
                     {activeTab === "geral"
                       ? `${podium[1].xp} XP`
                       : `${getAreaScore(podium[1].stats, activeTab)} PTS`}
@@ -1224,11 +1224,11 @@ export default function RankingPage() {
                       />
                     </div>
                     {/* Position badge */}
-                    <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-950 font-black text-[10px] px-2.5 py-0.5 rounded-full shadow-lg border border-white/30 flex items-center gap-0.5">
+                    <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-950 font-black text-[0.625rem] px-2.5 py-0.5 rounded-full shadow-lg border border-white/30 flex items-center gap-0.5">
                       1º 👑
                     </div>
                   </div>
-                  <span className="font-extrabold text-[12px] text-white truncate w-full px-1 flex items-center justify-center gap-0.5">
+                  <span className="font-extrabold text-[0.75rem] text-white truncate w-full px-1 flex items-center justify-center gap-0.5">
                     {isOwnerPlayer(podium[0]) && <Crown className="w-3 h-3 text-amber-400 shrink-0 fill-amber-400/20 animate-bounce" />}
                     {podium[0].name}
                   </span>
@@ -1263,15 +1263,15 @@ export default function RankingPage() {
                       />
                     </div>
                     {/* Position badge */}
-                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-amber-600 text-amber-50 font-black text-[9px] px-2 py-0.5 rounded-full shadow border border-white/20">
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-amber-600 text-amber-50 font-black text-[0.5625rem] px-2 py-0.5 rounded-full shadow border border-white/20">
                       3º
                     </div>
                   </div>
-                  <span className="font-bold text-[11px] text-white truncate w-full px-1 flex items-center justify-center gap-0.5">
+                  <span className="font-bold text-[0.6875rem] text-white truncate w-full px-1 flex items-center justify-center gap-0.5">
                     {isOwnerPlayer(podium[2]) && <Crown className="w-2.5 h-2.5 text-amber-400 shrink-0 fill-amber-400/20 animate-pulse" />}
                     {podium[2].name}
                   </span>
-                  <span className="text-[9px] text-amber-500 font-extrabold block">
+                  <span className="text-[0.5625rem] text-amber-500 font-extrabold block">
                     {activeTab === "geral"
                       ? `${podium[2].xp} XP`
                       : `${getAreaScore(podium[2].stats, activeTab)} PTS`}
@@ -1284,7 +1284,7 @@ export default function RankingPage() {
 
         {/* Remaining list */}
         <section className="space-y-2.5 pb-10">
-          <h3 className="text-[10px] uppercase font-bold text-on-surface-variant tracking-[0.2em] mb-4">
+          <h3 className="text-[0.625rem] uppercase font-bold text-on-surface-variant tracking-[0.2em] mb-4">
             {searchQuery ? "Resultados da busca" : "Desafiadores do Universo"}
           </h3>
 
@@ -1361,28 +1361,28 @@ export default function RankingPage() {
                         )}
                       </AvatarFrame>
                       {/* Emoji element */}
-                      <span className="absolute -bottom-0.5 -right-0.5 text-[9px] bg-[#0d0c18] border border-white/10 w-4 h-4 rounded-full flex items-center justify-center select-none z-10">
+                      <span className="absolute -bottom-0.5 -right-0.5 text-[0.5625rem] bg-[#0d0c18] border border-white/10 w-4 h-4 rounded-full flex items-center justify-center select-none z-10">
                         {player.emoji}
                       </span>
                     </div>
 
                     {/* Meta info of username */}
                     <div className="max-w-[150px]">
-                      <h4 className="text-[12px] font-bold text-white flex items-center gap-1.5 leading-tight truncate">
+                      <h4 className="text-[0.75rem] font-bold text-white flex items-center gap-1.5 leading-tight truncate">
                         {player.name}
                         {isOwnerPlayer(player) && (
-                          <span className="shrink-0 text-amber-400 bg-amber-500/10 border border-amber-500/30 px-1.5 py-0.5 rounded-full text-[7.5px] font-black uppercase tracking-wider animate-pulse flex items-center gap-0.5 shadow-[0_0_8px_rgba(245,158,11,0.2)]">
+                          <span className="shrink-0 text-amber-400 bg-amber-500/10 border border-amber-500/30 px-1.5 py-0.5 rounded-full text-[0.4688rem] font-black uppercase tracking-wider animate-pulse flex items-center gap-0.5 shadow-[0_0_8px_rgba(245,158,11,0.2)]">
                             <Crown className="w-2.5 h-2.5 fill-amber-400 shrink-0" />
                             ADM
                           </span>
                         )}
                         {isUser && !isOwnerPlayer(player) && (
-                          <span className="px-1.5 py-0.2 bg-primary/20 text-primary-light text-[8px] font-black uppercase tracking-widest rounded-full border border-primary/20">
+                          <span className="px-1.5 py-0.2 bg-primary/20 text-primary-light text-[0.5rem] font-black uppercase tracking-widest rounded-full border border-primary/20">
                             Você
                           </span>
                         )}
                       </h4>
-                      <p className="text-[10px] text-on-surface-variant truncate">
+                      <p className="text-[0.625rem] text-on-surface-variant truncate">
                         {player.title}
                       </p>
                     </div>
@@ -1392,7 +1392,7 @@ export default function RankingPage() {
                   <div className="text-right">
                     <p
                       className={cn(
-                        "text-[12.5px] font-black",
+                        "text-[0.7813rem] font-black",
                         isUser ? "text-primary-light" : "text-white/90",
                       )}
                     >
@@ -1400,7 +1400,7 @@ export default function RankingPage() {
                         ? `${player.xp} XP`
                         : `${getAreaScore(player.stats, activeTab)} PTS`}
                     </p>
-                    <p className="text-[8px] font-bold uppercase tracking-wider text-on-surface-variant/70">
+                    <p className="text-[0.5rem] font-bold uppercase tracking-wider text-on-surface-variant/70">
                       {activeTab === "geral"
                         ? `Aprox. Lvl ${Math.floor(player.xp / 150) + 1}`
                         : `${getAreaAccuracy(player.stats, activeTab)}% acertos`}
@@ -1423,11 +1423,11 @@ export default function RankingPage() {
 
         {/* Helper calculator block */}
         <section className="glass-panel p-4.5 rounded-2xl border border-white/5 bg-white/5 max-w-sm mx-auto text-center space-y-1">
-          <p className="text-[9px] font-black text-primary-light uppercase tracking-widest flex items-center justify-center gap-1">
+          <p className="text-[0.5625rem] font-black text-primary-light uppercase tracking-widest flex items-center justify-center gap-1">
             <Zap className="w-3.5 h-3.5 text-yellow-300" />
             Como subir de posição?
           </p>
-          <p className="text-[10.5px] text-on-surface-variant leading-relaxed">
+          <p className="text-[0.6563rem] text-on-surface-variant leading-relaxed">
             Cada resposta{" "}
             <span className="text-emerald-400 font-bold">correta</span> rende{" "}
             <span className="text-white font-bold">15 XP</span>. Cada resposta

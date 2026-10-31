@@ -209,7 +209,7 @@ export function BackgroundMusicPlayer() {
               className="w-16 h-1 bg-white/20 rounded-lg appearance-none cursor-pointer accent-emerald-400 focus:outline-none transition-all duration-300"
               title="Ajustar Volume"
             />
-            <span className="text-[9px] font-mono font-bold text-white/50 w-6 text-right">
+            <span className="text-[0.5625rem] font-mono font-bold text-white/50 w-6 text-right">
               {isStudyMusicEnabled ? Math.round(musicVolume * 100) : 0}%
             </span>
           </div>

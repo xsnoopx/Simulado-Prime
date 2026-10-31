@@ -131,7 +131,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                     <h4 className="font-display font-black text-sm tracking-wide uppercase text-amber-100">
                       Charadas Online Sem Limites
                     </h4>
-                    <p className="text-[13px] text-white/80 font-medium leading-relaxed">
+                    <p className="text-[0.8125rem] text-white/80 font-medium leading-relaxed">
                       Livre-se de restrições de uso. Deixe nossa IA avançada criar piadas e trocadilhos gerados em tempo real exclusivos.
                     </p>
                   </div>
@@ -145,7 +145,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                     <h4 className="font-display font-black text-sm tracking-wide uppercase text-red-200">
                       Enigmas Online por Inteligência Artificial
                     </h4>
-                    <p className="text-[13px] text-white/80 font-medium leading-relaxed">
+                    <p className="text-[0.8125rem] text-white/80 font-medium leading-relaxed">
                       Gerador contínuo de mistérios quânticos, lógica dedutiva e cenários complexos com respostas inteligentes validadas pela IA.
                     </p>
                   </div>
@@ -159,7 +159,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                     <h4 className="font-display font-black text-sm tracking-wide uppercase text-purple-200">
                       +50 Molduras & +50 Avatares Exclusivos
                     </h4>
-                    <p className="text-[13px] text-white/80 font-medium leading-relaxed">
+                    <p className="text-[0.8125rem] text-white/80 font-medium leading-relaxed">
                       Acesso instantâneo a todas as 50 novas molduras premium e 50 avatares espaciais ultra-exclusivos para personalizar seu perfil.
                     </p>
                   </div>
@@ -176,7 +176,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                       <Lock className="w-4 h-4 text-amber-400" />
                     </span>
 
-                    <p className="text-[13px] text-white/80 font-semibold leading-relaxed max-w-sm mx-auto">
+                    <p className="text-[0.8125rem] text-white/80 font-semibold leading-relaxed max-w-sm mx-auto">
                       O PRIME será liberado somente após a confirmação do pagamento.
                       A assinatura ainda não está disponível — em breve o acesso
                       será desbloqueado por aqui.
@@ -249,7 +249,7 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                   ATIVAR DEMONSTRAÇÃO &rarr;
                 </button>
 
-                <div className="flex items-center justify-center gap-1.5 text-white/50 text-[11px] uppercase tracking-widest font-black leading-none text-center">
+                <div className="flex items-center justify-center gap-1.5 text-white/50 text-[0.6875rem] uppercase tracking-widest font-black leading-none text-center">
                   Ativação local · sem cobrança · sem assinatura
                 </div>
               </div>

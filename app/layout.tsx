@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { AchievementProvider } from '@/components/AchievementProvider';
 import { BackgroundMusicPlayer } from '@/components/BackgroundMusicPlayer';
+import { FontSizeProvider } from '@/components/FontSizeProvider';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -19,6 +20,10 @@ export const metadata: Metadata = {
   description: 'Estude e pratique com a melhor plataforma de simulação do cosmos educacional.',
 };
 
+// Aplica o tamanho de fonte salvo antes do primeiro paint, evitando que a
+// tela pisque no tamanho padrão e "pule" quando o React hidrata.
+const scriptFonteInicial = `(function(){try{var v=parseFloat(localStorage.getItem('cosmos_font_size'));if(!isFinite(v)||v<10||v>30){v=16;}document.documentElement.style.fontSize=v+'px';document.documentElement.dataset.fonte=String(v);}catch(e){}})();`;
+
 export default function RootLayout({
   children,
 }: {
@@ -27,10 +32,16 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className={`${inter.variable} ${spaceGrotesk.variable} dark`}>
       <body suppressHydrationWarning className="bg-background text-on-surface antialiased">
-        <AchievementProvider>
-          {children}
-          <BackgroundMusicPlayer />
-        </AchievementProvider>
+        <script
+          id="fonte-inicial"
+          dangerouslySetInnerHTML={{ __html: scriptFonteInicial }}
+        />
+        <FontSizeProvider>
+          <AchievementProvider>
+            {children}
+            <BackgroundMusicPlayer />
+          </AchievementProvider>
+        </FontSizeProvider>
       </body>
     </html>
   );

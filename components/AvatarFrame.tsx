@@ -208,7 +208,7 @@ export function AvatarFrame({
       {frame.badgeText && (size === 'xl' || size === 'lg') && (
         <span 
           className={cn(
-            "absolute -bottom-1 px-2.5 py-0.5 rounded-full text-[8px] font-black uppercase tracking-widest border border-white/10 shadow-md pointer-events-none z-20 text-white leading-none scale-90",
+            "absolute -bottom-1 px-2.5 py-0.5 rounded-full text-[0.5rem] font-black uppercase tracking-widest border border-white/10 shadow-md pointer-events-none z-20 text-white leading-none scale-90",
             frame.badgeColor || "bg-[#10b981] bg-gradient-to-r from-emerald-500 to-teal-500"
           )}
           style={{

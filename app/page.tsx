@@ -70,7 +70,7 @@ const DashboardOption = ({ opt, i, color, isPremium, onPremiumClick }: any) => {
               <span className="font-display font-bold text-sm tracking-wide break-words">{opt.name}</span>
               <div className="flex items-center gap-1.5">
                 <WifiOff className="w-2.5 h-2.5 shrink-0 text-on-surface-variant/40" />
-                <span className="text-[10px] font-bold text-on-surface-variant/50 tracking-widest uppercase">
+                <span className="text-[0.625rem] font-bold text-on-surface-variant/50 tracking-widest uppercase">
                   {isSubOpen ? 'Fechar Categorias' : 'Ver Categorias'}
                 </span>
               </div>
@@ -107,7 +107,7 @@ const DashboardOption = ({ opt, i, color, isPremium, onPremiumClick }: any) => {
                     <div className="min-w-0">
                       <span className="font-display font-bold text-xs tracking-wide break-words">{sub.name}</span>
                       {sub.subtitle && (
-                        <p className="text-[10px] text-on-surface-variant/50 font-bold uppercase tracking-[0.1em]">
+                        <p className="text-[0.625rem] text-on-surface-variant/50 font-bold uppercase tracking-[0.1em]">
                           {sub.subtitle}
                         </p>
                       )}
@@ -151,17 +151,17 @@ const DashboardOption = ({ opt, i, color, isPremium, onPremiumClick }: any) => {
           <div className="text-left min-w-0">
             <span className="font-display font-bold text-sm tracking-wide break-words">{opt.name}</span>
             {opt.subtitle && (
-              <p className="text-[10px] text-on-surface-variant/60 font-bold uppercase tracking-widest">
+              <p className="text-[0.625rem] text-on-surface-variant/60 font-bold uppercase tracking-widest">
                 {opt.subtitle}
               </p>
             )}
             <div className="flex items-center gap-1.5 flex-wrap">
               {opt.isOnline ? <Wifi className="w-2.5 h-2.5 shrink-0 text-primary" /> : <WifiOff className="w-2.5 h-2.5 shrink-0 text-on-surface-variant/40" />}
-              <span className="text-[10px] font-bold text-on-surface-variant/50 tracking-widest uppercase">
+              <span className="text-[0.625rem] font-bold text-on-surface-variant/50 tracking-widest uppercase">
                 {opt.isOnline ? 'Online' : 'Offline'}
               </span>
               {opt.isPremium && (
-                <span className="ml-1 px-1.5 py-0.5 rounded bg-gradient-to-r from-amber-400 to-amber-500 text-[9px] font-black uppercase text-black tracking-widest flex items-center gap-0.5 shadow-md shadow-amber-400/10 self-center">
+                <span className="ml-1 px-1.5 py-0.5 rounded bg-gradient-to-r from-amber-400 to-amber-500 text-[0.5625rem] font-black uppercase text-black tracking-widest flex items-center gap-0.5 shadow-md shadow-amber-400/10 self-center">
                   ⚡ PRIME
                 </span>
               )}
@@ -169,7 +169,7 @@ const DashboardOption = ({ opt, i, color, isPremium, onPremiumClick }: any) => {
           </div>
         </div>
         {isLocked ? (
-          <div className="shrink-0 p-1 px-2 py-0.5 rounded-lg bg-amber-500/15 border border-amber-500/25 text-[10px] font-display font-medium uppercase text-amber-300 flex items-center gap-1 shadow-sm shadow-amber-500/5">
+          <div className="shrink-0 p-1 px-2 py-0.5 rounded-lg bg-amber-500/15 border border-amber-500/25 text-[0.625rem] font-display font-medium uppercase text-amber-300 flex items-center gap-1 shadow-sm shadow-amber-500/5">
             <Lock className="w-3 h-3 text-amber-400" /> Locked
           </div>
         ) : (
@@ -212,7 +212,7 @@ const DashboardGroup = ({
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="font-display font-bold text-[clamp(0.95rem,4.2vw,1.125rem)] uppercase tracking-wide leading-snug">{name}</h3>
-            <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold leading-snug">
+            <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-wider font-bold leading-snug">
               {isOpen ? 'Clique para fechar' : 'Clique para ver subcategorias'}
             </p>
           </div>
@@ -242,7 +242,7 @@ const DashboardGroup = ({
                 exit={{ opacity: 0, scale: 0.9, y: 10 }}
                 className="absolute right-0 bottom-full mb-3 w-64 p-5 glass-panel rounded-3xl border border-primary/20 shadow-2xl z-40 backdrop-blur-xl"
               >
-                <p className="text-[13px] text-on-surface font-medium leading-relaxed italic">
+                <p className="text-[0.8125rem] text-on-surface font-medium leading-relaxed italic">
                   "{description}"
                 </p>
               </motion.div>
@@ -286,12 +286,12 @@ const DashboardGroup = ({
                     <h4 className="font-display font-bold text-xs tracking-wide uppercase text-amber-200">
                       🌌 Recursos Exclusivos Bloqueados
                     </h4>
-                    <p className="text-[11px] leading-relaxed text-amber-300/80">
+                    <p className="text-[0.6875rem] leading-relaxed text-amber-300/80">
                       Você está no modo convidado. Faça login ou crie uma conta gratuita para liberar o <strong className="text-amber-200 font-semibold">Cronômetro Personalizado</strong>, competir no <strong className="text-amber-200 font-semibold">Ranking Geral</strong>, salvar seu progresso na nuvem e analisar estatísticas completas!
                     </p>
                     <div className="pt-2">
                       <Link href="/profile">
-                        <span className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-200 hover:text-amber-100 underline decoration-dotted transition-colors">
+                        <span className="inline-flex items-center gap-1 text-[0.6875rem] font-bold text-amber-200 hover:text-amber-100 underline decoration-dotted transition-colors">
                           Acesse sua conta agora &rarr;
                         </span>
                       </Link>
@@ -526,7 +526,7 @@ export default function AppPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="relative w-[min(16rem,68vw)] aspect-square rounded-[4rem] overflow-hidden border border-white/10 shadow-2xl shadow-primary/30">
+              <div className="relative w-[min(16rem,68vw)] aspect-square rounded-[64px] overflow-hidden border border-white/10 shadow-2xl shadow-primary/30">
                 <Image
                   src={rocketLogo}
                   alt="Logo"
@@ -587,7 +587,7 @@ export default function AppPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     className="flex justify-center"
                   >
-                    <div className="relative w-32 h-32 rounded-[2.5rem] overflow-hidden border border-primary/30 shadow-2xl shadow-primary/20">
+                    <div className="relative w-32 h-32 rounded-[40px] overflow-hidden border border-primary/30 shadow-2xl shadow-primary/20">
                       <Image
                         src={rocketLogo}
                         alt="Logo"
@@ -672,7 +672,7 @@ export default function AppPage() {
 
               {/* Footer info */}
               <footer className="text-center pt-8">
-                <p className="text-[9px] text-on-surface-variant/30 uppercase tracking-[0.3em]">
+                <p className="text-[0.5625rem] text-on-surface-variant/30 uppercase tracking-[0.3em]">
                   Criado Por xSnoopx
                 </p>
               </footer>
@@ -692,7 +692,7 @@ export default function AppPage() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
               transition={{ type: "spring", damping: 25, stiffness: 350 }}
-              className="w-full max-w-sm glass-panel border border-primary/30 p-6 rounded-[2rem] shadow-2xl relative overflow-hidden backdrop-blur-2xl text-center space-y-5"
+              className="w-full max-w-sm glass-panel border border-primary/30 p-6 rounded-[32px] shadow-2xl relative overflow-hidden backdrop-blur-2xl text-center space-y-5"
             >
               {/* Visual accents */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-primary/10 rounded-full blur-2xl pointer-events-none -z-10" />
@@ -746,7 +746,7 @@ export default function AppPage() {
                         <Sparkles className="w-4 h-4 text-emerald-400 shrink-0" />
                         Ficamos imensamente gratos pelo carinho!
                       </p>
-                      <p className="text-[11px] text-white/70 leading-relaxed">
+                      <p className="text-[0.6875rem] text-white/70 leading-relaxed">
                         Deixe sua avaliação de 5 estrelas diretamente na Google Play Store. Isso ajuda outros vestibulandos a descobrirem o Cosmos!
                       </p>
                       <a
@@ -771,7 +771,7 @@ export default function AppPage() {
                       animate={{ opacity: 1, y: 0 }}
                       className="space-y-2 text-left"
                     >
-                      <label className="text-[10px] font-black uppercase tracking-widest text-white/40">Como podemos melhorar?</label>
+                      <label className="text-[0.625rem] font-black uppercase tracking-widest text-white/40">Como podemos melhorar?</label>
                       <textarea
                         value={reminderFeedback}
                         onChange={(e) => setReminderFeedback(e.target.value)}
@@ -801,7 +801,7 @@ export default function AppPage() {
                           setShowRatingReminder(false);
                           // Just close it, keeping the visits so they get reminded again in 3 visits
                         }}
-                        className="flex-1 py-3 px-2 bg-white/5 hover:bg-white/10 text-white/60 hover:text-white rounded-xl font-bold text-[10px] uppercase tracking-wider transition-all"
+                        className="flex-1 py-3 px-2 bg-white/5 hover:bg-white/10 text-white/60 hover:text-white rounded-xl font-bold text-[0.625rem] uppercase tracking-wider transition-all"
                       >
                         Mais Tarde ⏰
                       </button>
@@ -810,7 +810,7 @@ export default function AppPage() {
                           setShowRatingReminder(false);
                           localStorage.setItem('cosmos_rating_dismissed', 'true');
                         }}
-                        className="flex-1 py-3 px-2 border border-white/10 hover:border-white/20 text-white/40 hover:text-white/60 rounded-xl font-bold text-[10px] uppercase tracking-wider transition-all"
+                        className="flex-1 py-3 px-2 border border-white/10 hover:border-white/20 text-white/40 hover:text-white/60 rounded-xl font-bold text-[0.625rem] uppercase tracking-wider transition-all"
                       >
                         Não Mostrar 🪐
                       </button>
@@ -825,7 +825,7 @@ export default function AppPage() {
                 >
                   <p className="text-[1.8rem]">⭐🌌⭐</p>
                   <h4 className="text-sm font-black text-white uppercase tracking-wider">Obrigado por ajudar a crescer!</h4>
-                  <p className="text-[11px] text-white/70 leading-relaxed px-1">
+                  <p className="text-[0.6875rem] text-white/70 leading-relaxed px-1">
                     Seu feedback ajuda a moldar a inteligência do Cosmos para apoiar milhares de estudantes.
                   </p>
                   <button
@@ -858,7 +858,7 @@ export default function AppPage() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 350 }}
-              className="w-full max-w-lg glass-panel border border-white/15 p-6 rounded-[2rem] shadow-2xl relative overflow-hidden backdrop-blur-2xl space-y-5 max-h-[85vh] flex flex-col text-left text-white"
+              className="w-full max-w-lg glass-panel border border-white/15 p-6 rounded-[32px] shadow-2xl relative overflow-hidden backdrop-blur-2xl space-y-5 max-h-[85vh] flex flex-col text-left text-white"
             >
               {/* Visual accent glow */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -873,7 +873,7 @@ export default function AppPage() {
                     <h3 className="font-display font-black text-sm uppercase tracking-wider text-white">
                       Perguntas Frequentes
                     </h3>
-                    <p className="text-[10px] text-white/45">Dúvidas comuns sobre o Simulado Prime</p>
+                    <p className="text-[0.625rem] text-white/45">Dúvidas comuns sobre o Simulado Prime</p>
                   </div>
                 </div>
                 <button
@@ -904,7 +904,7 @@ export default function AppPage() {
                     answer: (
                       <div className="space-y-2">
                         <p>O <strong>Cosmos Prime</strong> é um passe vitalício de R$ 14,90 pago uma única vez (sem assinaturas recorrentes ou mensalidades). Ele concede acesso instantâneo aos seguintes benefícios exclusivos:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[10.5px]">
+                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
                           <li><strong>Charadas Online por IA:</strong> Geração instantânea e ilimitada de novas piadas e trocadilhos por Inteligência Artificial.</li>
                           <li><strong>Enigmas Online por IA:</strong> Desafios de raciocínio lógico-dedutivo e mistérios de última geração gerados e avaliados por algoritmos de Machine Learning.</li>
                           <li><strong>Galeria desbloqueada:</strong> Mais de 50 novas molduras premium exclusivas e 50 avatares espaciais de alto nível para sua identidade cósmica.</li>
@@ -917,7 +917,7 @@ export default function AppPage() {
                     answer: (
                       <div className="space-y-2">
                         <p>Ao responder simulados, você acumula pontos de experiência (XP) cósmicos de maneira contínua:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[10.5px]">
+                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
                           <li><strong>Ganho de XP:</strong> Você ganha 15 XP por cada resposta correta e 5 XP por tentativas incorretas nos simulados.</li>
                           <li><strong>Níveis cósmicos:</strong> Cada nível exige precisamente 150 XP. Por exemplo, alcançar o Nível 5 exige 600 XP e o Nível 10 exige 1350 XP.</li>
                           <li><strong>Títulos Evolutivos:</strong> Seu título no Perfil evolui dinamicamente conforme seu nível: <strong>Recruta do Cosmos</strong> (Nível 1-2), <strong>Explorador de Nebulosas</strong> (Nível 3-5), <strong>Viajante Sideral</strong> (Nível 6-9), <strong>Explorador de Galáxias</strong> (Nível 10-14) e finalizando como <strong>Sábio do Universo</strong> (Nível 15+).</li>
@@ -934,7 +934,7 @@ export default function AppPage() {
                     answer: (
                       <div className="space-y-2">
                         <p>As molduras envolvem e destacam o seu avatar no Dashboard e no Ranking Geral. Estão divididas em séries temáticas e podem ser ativadas na página de Edição de Perfil:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[10.5px]">
+                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
                           <li><strong>Série Cyberpunk:</strong> Molduras futuristas e dinâmicas com temática cibernética (IDs 11 a 20).</li>
                           <li><strong>Série Místico:</strong> Molduras arcanas e mágicas com gradientes brilhantes (IDs 21 a 30).</li>
                           <li><strong>Série Imperial:</strong> Molduras nobres com detalhes metálicos dourados e prateados de soberano (IDs 31 a 40).</li>
@@ -959,7 +959,7 @@ export default function AppPage() {
                     answer: (
                       <div className="space-y-2">
                         <p>As novas questões cobram rigorosamente tópicos recorrentes nos principais exames e vestibulares com roupagem altamente inovadora e tecnológica:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[10.5px]">
+                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
                           <li><strong>Otimização de Custos e Aprendizado:</strong> Cálculo de taxas de aprendizado de redes neurais com funções quadráticas para minimizar perdas em satélites em órbita de mineração cósmica.</li>
                           <li><strong>Crescimento Exponencial Estável:</strong> Cálculo de tempos de reação e eficiência em reatores de fusão nuclear estável (Tokamaks).</li>
                           <li><strong>Análise Combinatória Avançada:</strong> Arranjos geométricos de criptografia pós-quântica compostos por fótons emaranhados e spins quânticos binários.</li>
@@ -974,7 +974,7 @@ export default function AppPage() {
                     answer: (
                       <div className="space-y-2">
                         <p>As novas questões de Ciências da Natureza cobrem temas inovadores e interdisciplinares:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[10.5px]">
+                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
                           <li><strong>Biotecnologia CRISPR:</strong> Pareamento de pontes de hidrogênio e nucleotídeos em fitas moldes de DNA promovido por Cas14-Max para tratamento oncológico celular.</li>
                           <li><strong>Física Quântica de Supercondutores:</strong> Efeito Meissner, condutividade e formação de pares de Cooper em hidretos dopados sob regime de baixas resistências.</li>
                           <li><strong>Química Verde:</strong> Reações de clivagem de ésteres por hidrólise enzimática para recuperação e biorremediação de microplásticos degradados.</li>
@@ -989,7 +989,7 @@ export default function AppPage() {
                     answer: (
                       <div className="space-y-2">
                         <p>As questões de Ciências Humanas analisam de forma crítica as profundas transformações contemporâneas:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[10.5px]">
+                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
                           <li><strong>Geopolítica e Direitos Humanos:</strong> Cidadania climática em nuvem e soberania virtual para refugiados de nações insulares ameaçadas por elevações do nível dos oceanos.</li>
                           <li><strong>Sociologia do Trabalho:</strong> Análise do fenômeno da "Plataformização Mutualista" através de cooperativas de entregadores auto-reguladas por blockchain.</li>
                           <li><strong>Ética e Filosofia Algorítmica:</strong> Análise do imperativo moral da justificação diante do erro da opacidade de algoritmos "Caixa-Preta" em seleções de emprego e triagens judiciais.</li>
@@ -1004,7 +1004,7 @@ export default function AppPage() {
                     answer: (
                       <div className="space-y-2">
                         <p>As novas questões de Linguagens e Códigos abordam a evolução das mídias, semiótica e comunicação digital:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[10.5px]">
+                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
                           <li><strong>Letramento Midiático Crítico:</strong> Habilidades de checagem contra a desconstrução da evidência factual direta provocada por sínteses de vídeos e fotos através de Deepfakes.</li>
                           <li><strong>Poéticas Imersivas e Digitais:</strong> Integração entre literatura de hipertexto e feedback corporal fisiológico (sensores cardíacos de leitores coautores).</li>
                           <li><strong>Pragmática de Redes de Computadores:</strong> Semiótica e expressividade humana através das variações e cores dos chamados "Neo-Emojis Neurais".</li>
@@ -1045,7 +1045,7 @@ export default function AppPage() {
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.2, ease: "easeInOut" }}
                           >
-                            <div className="px-4 pb-4 pt-1.5 text-[11px] text-white/70 leading-relaxed border-t border-white/[0.03] bg-white/[0.01]">
+                            <div className="px-4 pb-4 pt-1.5 text-[0.6875rem] text-white/70 leading-relaxed border-t border-white/[0.03] bg-white/[0.01]">
                               {faq.answer}
                             </div>
                           </motion.div>

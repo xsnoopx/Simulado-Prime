@@ -374,7 +374,7 @@ export const AchievementProvider: React.FC<{ children: React.ReactNode }> = ({ c
               {/* Achievement Text & Details */}
               <div className="flex-1 text-left min-w-0 pr-1">
                 <div className="flex items-center gap-1.5 h-4.5">
-                  <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-amber-400 flex items-center gap-1 font-sans">
+                  <span className="text-[0.625rem] sm:text-[0.6875rem] font-black uppercase tracking-wider text-amber-400 flex items-center gap-1 font-sans">
                     <Sparkles className="w-3 h-3 text-amber-300 animate-bounce" />
                     Conquista Desbloqueada
                   </span>
@@ -384,14 +384,14 @@ export const AchievementProvider: React.FC<{ children: React.ReactNode }> = ({ c
                   {current.title}
                 </h3>
                 {/* Achievement description details style */}
-                <p className="text-[10.5px] text-gray-400 truncate font-sans tracking-wide leading-none mt-0.5">
+                <p className="text-[0.6563rem] text-gray-400 truncate font-sans tracking-wide leading-none mt-0.5">
                   {current.desc}
                 </p>
               </div>
 
               {/* Epic games / Space visual tag pill accent */}
               <div className="hidden sm:flex flex-shrink-0 h-6 px-2.5 items-center justify-center rounded-full bg-amber-500/10 border border-amber-500/20">
-                <span className="text-[8.5px] font-black uppercase tracking-widest text-amber-300">
+                <span className="text-[0.5313rem] font-black uppercase tracking-widest text-amber-300">
                   +50 XP
                 </span>
               </div>

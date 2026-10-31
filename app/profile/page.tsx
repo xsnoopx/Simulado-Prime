@@ -34,6 +34,7 @@ import {
   Search,
   Activity,
   Zap,
+  Type,
 } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
@@ -53,6 +54,12 @@ import rocketLogo from "@/src/assets/images/regenerated_image_1778473861554.png"
 import { AvatarFrame } from "@/components/AvatarFrame";
 import { AVATAR_FRAMES } from "@/lib/frames";
 import { PremiumGateway } from "@/components/PremiumGateway";
+import {
+  useFontSize,
+  FONTE_MIN,
+  FONTE_MAX,
+  FONTE_PADRAO,
+} from "@/components/FontSizeProvider";
 import { playSubcategorySound } from "@/lib/utils";
 
 interface UserProfile {
@@ -347,6 +354,13 @@ export default function ProfilePage() {
   const [isOwnerBackendVerified, setIsOwnerBackendVerified] = useState(false);
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
   const [resetRankingConfirm, setResetRankingConfirm] = useState(false);
+
+  // Ajuste global do tamanho do texto (10–30 px), salvo no navegador.
+  const {
+    tamanho: tamanhoFonte,
+    definirTamanho: definirTamanhoFonte,
+    restaurarPadrao: restaurarFontePadrao,
+  } = useFontSize();
   const [resetXPConfirm, setResetXPConfirm] = useState(false);
   // XP definido manualmente pelo painel administrativo (metadata `cosmos_xp`).
   const [xpDoAdmin, setXpDoAdmin] = useState<number | null>(null);
@@ -1558,7 +1572,7 @@ export default function ProfilePage() {
               initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="glass-panel w-full max-w-md p-6 rounded-[2.5rem] border border-white/10 shadow-3xl bg-[#0d0c18] space-y-5"
+              className="glass-panel w-full max-w-md p-6 rounded-[40px] border border-white/10 shadow-3xl bg-[#0d0c18] space-y-5"
             >
               <div className="text-center space-y-2">
                 <div className="mx-auto w-16 h-16 rounded-full bg-[#a5b4fc]/10 border border-[#a5b4fc]/20 flex items-center justify-center">
@@ -1603,7 +1617,7 @@ export default function ProfilePage() {
                         setAuthError(null);
                         setAuthSuccess(null);
                       }}
-                      className={`py-2 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all cursor-pointer ${
+                      className={`py-2 text-[0.625rem] font-black uppercase tracking-widest rounded-xl transition-all cursor-pointer ${
                         authMode === "signin"
                           ? "bg-primary text-white shadow-xl"
                           : "text-white/40 hover:text-white/80"
@@ -1618,7 +1632,7 @@ export default function ProfilePage() {
                         setAuthError(null);
                         setAuthSuccess(null);
                       }}
-                      className={`py-2 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all cursor-pointer ${
+                      className={`py-2 text-[0.625rem] font-black uppercase tracking-widest rounded-xl transition-all cursor-pointer ${
                         authMode === "signup"
                           ? "bg-primary text-white shadow-xl"
                           : "text-white/40 hover:text-white/80"
@@ -1632,7 +1646,7 @@ export default function ProfilePage() {
                 <div className="space-y-3 pt-1 text-left">
                   {authMode === "signup" && (
                     <div className="space-y-1.5">
-                      <label className="text-[10px] font-black uppercase tracking-widest text-[#a5b4fc]">
+                      <label className="text-[0.625rem] font-black uppercase tracking-widest text-[#a5b4fc]">
                         Nome de Explorador
                       </label>
                       <input
@@ -1647,7 +1661,7 @@ export default function ProfilePage() {
                   )}
 
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-[#a5b4fc]">
+                    <label className="text-[0.625rem] font-black uppercase tracking-widest text-[#a5b4fc]">
                       E-mail
                     </label>
                     <input
@@ -1663,7 +1677,7 @@ export default function ProfilePage() {
                   {authMode !== "forgot" && (
                     <div className="space-y-1.5">
                       <div className="flex justify-between items-center">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-[#a5b4fc]">
+                        <label className="text-[0.625rem] font-black uppercase tracking-widest text-[#a5b4fc]">
                           Senha
                         </label>
                         {authMode === "signin" && (
@@ -1674,7 +1688,7 @@ export default function ProfilePage() {
                               setAuthError(null);
                               setAuthSuccess(null);
                             }}
-                            className="text-[10px] font-bold text-[#a5b4fc]/70 hover:text-[#a5b4fc] transition-all hover:underline cursor-pointer"
+                            className="text-[0.625rem] font-bold text-[#a5b4fc]/70 hover:text-[#a5b4fc] transition-all hover:underline cursor-pointer"
                           >
                             Esqueci minha senha
                           </button>
@@ -1727,7 +1741,7 @@ export default function ProfilePage() {
                           setAuthError(null);
                           setAuthSuccess(null);
                         }}
-                        className="text-[10px] font-black uppercase tracking-widest text-white/50 hover:text-white transition-all cursor-pointer flex items-center gap-1"
+                        className="text-[0.625rem] font-black uppercase tracking-widest text-white/50 hover:text-white transition-all cursor-pointer flex items-center gap-1"
                       >
                         ← Voltar para Entrar
                       </button>
@@ -1743,7 +1757,7 @@ export default function ProfilePage() {
                     <h4 className="text-xs font-bold tracking-wide text-white">
                       Efeitos e Música de Fundo
                     </h4>
-                    <p className="text-[10px] text-white/40">
+                    <p className="text-[0.625rem] text-white/40">
                       Tocar música de fundo e efeitos ao acertar/errar questões
                     </p>
                   </div>
@@ -1768,10 +1782,10 @@ export default function ProfilePage() {
                 {soundEnabled && (
                   <div className="flex flex-col gap-2 pt-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-[9px] uppercase tracking-wider text-white/40 font-bold">
+                      <span className="text-[0.5625rem] uppercase tracking-wider text-white/40 font-bold">
                         Volume da música
                       </span>
-                      <span className="text-[10px] font-mono font-bold text-amber-300 bg-amber-500/10 px-1.5 py-0.5 rounded">
+                      <span className="text-[0.625rem] font-mono font-bold text-amber-300 bg-amber-500/10 px-1.5 py-0.5 rounded">
                         {Math.round(musicVolume * 100)}%
                       </span>
                     </div>
@@ -1805,6 +1819,41 @@ export default function ProfilePage() {
                     </div>
                   </div>
                 )}
+
+                {/* Tamanho do texto: disponível também antes de entrar */}
+                <div className="flex flex-col gap-2 border-t border-white/5 pt-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[0.5625rem] uppercase tracking-wider text-white/40 font-bold">
+                      Tamanho do texto
+                    </span>
+                    <span className="text-[0.625rem] font-mono font-bold text-emerald-300 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                      {tamanhoFonte} px
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-[0.625rem] font-bold text-white/30 shrink-0">
+                      A
+                    </span>
+                    <input
+                      type="range"
+                      min={FONTE_MIN}
+                      max={FONTE_MAX}
+                      step={1}
+                      value={tamanhoFonte}
+                      onChange={(e) =>
+                        definirTamanhoFonte(parseInt(e.target.value, 10))
+                      }
+                      aria-label="Tamanho do texto do aplicativo"
+                      className="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-emerald-400"
+                      style={{
+                        background: `linear-gradient(to right, rgb(52, 211, 153) ${((tamanhoFonte - FONTE_MIN) / (FONTE_MAX - FONTE_MIN)) * 100}%, rgba(255, 255, 255, 0.1) ${((tamanhoFonte - FONTE_MIN) / (FONTE_MAX - FONTE_MIN)) * 100}%)`,
+                      }}
+                    />
+                    <span className="text-base font-bold text-white/60 shrink-0">
+                      A
+                    </span>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -1862,7 +1911,7 @@ export default function ProfilePage() {
                 <h2 className="text-2xl font-display font-black tracking-tight flex items-center justify-center gap-1.5">
                   {profile.name}
                   {hasAdminPrivilege && (
-                    <span className="shrink-0 text-amber-400 bg-amber-500/10 border border-amber-500/30 px-2 py-0.6 rounded-full text-[9px] font-black uppercase tracking-wider animate-pulse flex items-center gap-1 shadow-[0_0_12px_rgba(245,158,11,0.3)]">
+                    <span className="shrink-0 text-amber-400 bg-amber-500/10 border border-amber-500/30 px-2 py-0.6 rounded-full text-[0.5625rem] font-black uppercase tracking-wider animate-pulse flex items-center gap-1 shadow-[0_0_12px_rgba(245,158,11,0.3)]">
                       <Crown className="w-3.5 h-3.5 fill-amber-400 shrink-0" />
                       ADM
                     </span>
@@ -1896,7 +1945,7 @@ export default function ProfilePage() {
                     {xpInfo.xp}{" "}
                     <span className="text-xs font-bold text-white/80">XP</span>
                   </p>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-[#93c5fd]">
+                  <p className="text-[0.625rem] font-black uppercase tracking-widest text-[#93c5fd]">
                     Nível {xpInfo.level}
                   </p>
                 </div>
@@ -1911,7 +1960,7 @@ export default function ProfilePage() {
                     className="h-full rounded-full bg-gradient-to-r from-primary to-secondary shadow-[0_0_12px_rgba(var(--color-primary),0.3)]"
                   />
                 </div>
-                <div className="flex justify-between items-center text-[10px] text-white/40 font-bold uppercase tracking-wider">
+                <div className="flex justify-between items-center text-[0.625rem] text-white/40 font-bold uppercase tracking-wider">
                   <span>
                     {xpInfo.xp % 150} / 150 XP para o Nível {xpInfo.level + 1}
                   </span>
@@ -1923,7 +1972,7 @@ export default function ProfilePage() {
             {/* Category breakdown snippet */}
             <section className="grid grid-cols-2 gap-3">
               <div className="glass-panel p-4 rounded-2xl border border-white/5 bg-white/5 text-center">
-                <p className="text-[9px] font-black text-white/40 uppercase tracking-widest">
+                <p className="text-[0.5625rem] font-black text-white/40 uppercase tracking-widest">
                   Questoes Respondidas
                 </p>
                 <p className="text-xl font-black font-display mt-0.5 text-[#a5f3fc]">
@@ -1931,7 +1980,7 @@ export default function ProfilePage() {
                 </p>
               </div>
               <div className="glass-panel p-4 rounded-2xl border border-white/5 bg-white/5 text-center">
-                <p className="text-[9px] font-black text-white/40 uppercase tracking-widest">
+                <p className="text-[0.5625rem] font-black text-white/40 uppercase tracking-widest">
                   Respostas Corretas
                 </p>
                 <p className="text-xl font-black font-display mt-0.5 text-[#a7f3d0]">
@@ -2042,7 +2091,7 @@ export default function ProfilePage() {
                         >
                           {item.label}
                         </span>
-                        <p className="text-[10px] text-white/40 -mt-0.5">
+                        <p className="text-[0.625rem] text-white/40 -mt-0.5">
                           {item.subtitle}
                         </p>
                       </div>
@@ -2051,7 +2100,7 @@ export default function ProfilePage() {
                     <div className="flex items-center gap-2">
                       {item.badge && (
                         <span
-                          className={`text-[8px] font-black uppercase tracking-widest ${item.color ? "bg-red-500/10 text-red-400 border-red-500/25" : "bg-primary/20 text-[#60a5fa] border-primary/20"} px-2.5 py-1 rounded-full border`}
+                          className={`text-[0.5rem] font-black uppercase tracking-widest ${item.color ? "bg-red-500/10 text-red-400 border-red-500/25" : "bg-primary/20 text-[#60a5fa] border-primary/20"} px-2.5 py-1 rounded-full border`}
                         >
                           {item.badge}
                         </span>
@@ -2131,7 +2180,7 @@ export default function ProfilePage() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9, y: 30 }}
                 transition={{ type: "spring", damping: 25, stiffness: 350 }}
-                className={`glass-panel w-full ${activeModal === "admin" ? "max-w-2xl" : "max-w-md"} p-6 rounded-[2.5rem] border border-white/10 shadow-3xl relative overflow-hidden space-y-5 bg-[#0d0c18] z-50 flex flex-col max-h-[85vh]`}
+                className={`glass-panel w-full ${activeModal === "admin" ? "max-w-2xl" : "max-w-md"} p-6 rounded-[40px] border border-white/10 shadow-3xl relative overflow-hidden space-y-5 bg-[#0d0c18] z-50 flex flex-col max-h-[85vh]`}
               >
                 {/* Header */}
                 <div className="flex items-center justify-between border-b border-white/5 pb-3">
@@ -2184,7 +2233,7 @@ export default function ProfilePage() {
                   {activeModal === "edit" && (
                     <div className="space-y-5">
                       <div className="space-y-2 text-left">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-primary-light">
+                        <label className="text-[0.625rem] font-black uppercase tracking-widest text-primary-light">
                           Nome de Explorador
                         </label>
                         <input
@@ -2197,7 +2246,7 @@ export default function ProfilePage() {
                       </div>
 
                       <div className="space-y-2 text-left">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-primary-light">
+                        <label className="text-[0.625rem] font-black uppercase tracking-widest text-primary-light">
                           E-mail
                         </label>
                         <input
@@ -2211,7 +2260,7 @@ export default function ProfilePage() {
 
                       {/* Custom Avatar Upload Zone */}
                       <div className="space-y-3 text-left">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-[#a5b4fc]">
+                        <label className="text-[0.625rem] font-black uppercase tracking-widest text-[#a5b4fc]">
                           Avatar Personalizado (Sua Imagem)
                         </label>
                         <div
@@ -2248,7 +2297,7 @@ export default function ProfilePage() {
                                 <p className="text-xs font-bold text-white">
                                   Sua foto carregada
                                 </p>
-                                <p className="text-[10px] text-white/50">
+                                <p className="text-[0.625rem] text-white/50">
                                   Clique ou arraste para trocar
                                 </p>
                               </div>
@@ -2260,7 +2309,7 @@ export default function ProfilePage() {
                                       e.stopPropagation();
                                       setEditAvatarId("custom");
                                     }}
-                                    className="p-1 px-2.5 rounded-lg bg-[#a5b4fc]/10 hover:bg-[#a5b4fc]/20 text-[10px] font-bold text-[#a5b4fc] uppercase tracking-wider"
+                                    className="p-1 px-2.5 rounded-lg bg-[#a5b4fc]/10 hover:bg-[#a5b4fc]/20 text-[0.625rem] font-bold text-[#a5b4fc] uppercase tracking-wider"
                                   >
                                     Usar
                                   </button>
@@ -2285,7 +2334,7 @@ export default function ProfilePage() {
                               <p className="text-xs font-bold text-white/80">
                                 Arraste sua imagem aqui ou clique para enviar
                               </p>
-                              <p className="text-[9px] text-white/45 uppercase tracking-widest">
+                              <p className="text-[0.5625rem] text-white/45 uppercase tracking-widest">
                                 Suporta JPG, PNG, WEBP (será ajustada para
                                 150x150)
                               </p>
@@ -2307,11 +2356,11 @@ export default function ProfilePage() {
                             <label className="text-xs font-black uppercase tracking-widest text-purple-400">
                               Avatares Gratuitos
                             </label>
-                            <span className="text-[9px] font-black text-purple-200 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                            <span className="text-[0.5625rem] font-black text-purple-200 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded-full uppercase tracking-wider">
                               {avataresLiberados}/{AVATARS.length} por XP
                             </span>
                           </div>
-                          <p className="text-[10px] text-purple-200/70 font-medium tracking-wide">
+                          <p className="text-[0.625rem] text-purple-200/70 font-medium tracking-wide">
                             1 avatar a cada {XP_POR_AVATAR} XP acumulado
                           </p>
                           <div className="grid grid-cols-5 gap-1.5 max-h-[160px] overflow-y-auto p-1 bg-white/5 rounded-2xl border border-white/5">
@@ -2340,7 +2389,7 @@ export default function ProfilePage() {
                                       : `${av.name} — requer ${requiredXp} XP`
                                   }
                                 >
-                                  <div className="absolute top-0.5 left-0.5 px-1 py-0.2 bg-black/80 rounded-md text-[6.5px] font-mono font-black text-white z-10 select-none scale-90 border border-white/10">
+                                  <div className="absolute top-0.5 left-0.5 px-1 py-0.2 bg-black/80 rounded-md text-[0.4063rem] font-mono font-black text-white z-10 select-none scale-90 border border-white/10">
                                     {av.number}
                                   </div>
 
@@ -2370,7 +2419,7 @@ export default function ProfilePage() {
                                   {!canUse && (
                                     <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-0.5 rounded-xl bg-black/60">
                                       <Lock className="w-3 h-3 text-white/75" />
-                                      <span className="text-[6.5px] font-mono font-black text-amber-300">
+                                      <span className="text-[0.4063rem] font-mono font-black text-amber-300">
                                         {requiredXp} XP
                                       </span>
                                     </div>
@@ -2393,7 +2442,7 @@ export default function ProfilePage() {
                             <label className="text-xs font-black uppercase tracking-widest text-amber-400 flex items-center gap-1">
                               <span>🚀</span> Avatares Premium
                             </label>
-                            <span className="text-[9px] font-black text-amber-300 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                            <span className="text-[0.5625rem] font-black text-amber-300 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-full uppercase tracking-wider">
                               Premium
                             </span>
                           </div>
@@ -2419,7 +2468,7 @@ export default function ProfilePage() {
                                   }`}
                                   title={av.name}
                                 >
-                                  <div className="absolute top-0.5 left-0.5 px-1 py-0.2 bg-black/80 rounded-md text-[6.5px] font-mono font-black text-white z-10 select-none scale-90 border border-white/10">
+                                  <div className="absolute top-0.5 left-0.5 px-1 py-0.2 bg-black/80 rounded-md text-[0.4063rem] font-mono font-black text-white z-10 select-none scale-90 border border-white/10">
                                     {av.number}
                                   </div>
 
@@ -2481,7 +2530,7 @@ export default function ProfilePage() {
                   {activeModal === "achievements" && (
                     <div className="space-y-3.5">
                       <div className="flex items-center justify-between text-left h-8">
-                        <p className="text-[10px] font-black uppercase tracking-widest text-amber-300">
+                        <p className="text-[0.625rem] font-black uppercase tracking-widest text-amber-300">
                           Resumo de Jornada
                         </p>
                         <span className="text-xs font-bold text-white/80">
@@ -2517,11 +2566,11 @@ export default function ProfilePage() {
                               >
                                 {ach.title}
                               </h4>
-                              <p className="text-[10px] text-white/50 leading-relaxed">
+                              <p className="text-[0.625rem] text-white/50 leading-relaxed">
                                 {ach.desc}
                               </p>
                               {ach.unlocked && (
-                                <div className="inline-flex items-center gap-1.5 text-[8px] font-black uppercase tracking-widest bg-emerald-500/20 text-[#34d399] border border-emerald-500/20 px-2 py-0.5 rounded-md mt-1.5">
+                                <div className="inline-flex items-center gap-1.5 text-[0.5rem] font-black uppercase tracking-widest bg-emerald-500/20 text-[#34d399] border border-emerald-500/20 px-2 py-0.5 rounded-md mt-1.5">
                                   <Check className="w-2.5 h-2.5" /> Conquistado
                                 </div>
                               )}
@@ -2532,7 +2581,7 @@ export default function ProfilePage() {
 
                       <div className="flex items-start gap-2 text-left bg-white/5 p-3.5 rounded-2xl border border-white/5 mt-2">
                         <Info className="w-5 h-5 text-amber-200 mt-0.5 shrink-0" />
-                        <p className="text-[10px] text-white/50 font-medium leading-normal">
+                        <p className="text-[0.625rem] text-white/50 font-medium leading-normal">
                           Dica: Faça novos Simulados e responda perguntas
                           corretamente nos simulados ou resolvendo
                           charadas/enigmas no aplicativo para ganhar XP e
@@ -2551,7 +2600,7 @@ export default function ProfilePage() {
                           <h4 className="text-sm font-bold tracking-wide">
                             Efeitos e Música de Fundo
                           </h4>
-                          <p className="text-[10px] text-white/40">
+                          <p className="text-[0.625rem] text-white/40">
                             Tocar música na tela inicial e efeitos ao acertar ou
                             errar as questões
                           </p>
@@ -2580,7 +2629,7 @@ export default function ProfilePage() {
                             <h4 className="text-sm font-bold tracking-wide">
                               Volume da Música de Fundo
                             </h4>
-                            <p className="text-[10px] text-white/40">
+                            <p className="text-[0.625rem] text-white/40">
                               Ajuste o som ambiente para o seu nível de foco
                               ideal
                             </p>
@@ -2620,13 +2669,71 @@ export default function ProfilePage() {
                         </div>
                       </div>
 
+                      {/* Tamanho do texto do aplicativo */}
+                      <div className="flex flex-col gap-3 p-4 bg-white/5 border border-white/5 rounded-2xl">
+                        <div className="flex items-start justify-between gap-3">
+                          <div>
+                            <h4 className="flex items-center gap-2 text-sm font-bold tracking-wide">
+                              <Type className="w-4 h-4 text-emerald-300" />
+                              Tamanho do Texto
+                            </h4>
+                            <p className="text-[0.625rem] text-white/40">
+                              Ajuste a fonte de todo o aplicativo, de{" "}
+                              {FONTE_MIN} a {FONTE_MAX} px
+                            </p>
+                          </div>
+                          <span className="shrink-0 text-xs font-mono font-bold text-emerald-300 bg-emerald-500/10 px-2.5 py-1 rounded-lg">
+                            {tamanhoFonte} px
+                          </span>
+                        </div>
+
+                        <div className="flex items-center gap-3">
+                          <span className="text-[0.625rem] font-bold text-white/30 shrink-0">
+                            A
+                          </span>
+                          <input
+                            type="range"
+                            min={FONTE_MIN}
+                            max={FONTE_MAX}
+                            step={1}
+                            value={tamanhoFonte}
+                            onChange={(e) =>
+                              definirTamanhoFonte(
+                                parseInt(e.target.value, 10),
+                              )
+                            }
+                            aria-label="Tamanho do texto do aplicativo"
+                            className="w-full h-1.5 bg-white/10 rounded-lg appearance-none cursor-pointer accent-emerald-400 focus:outline-none"
+                            style={{
+                              background: `linear-gradient(to right, rgb(52, 211, 153) ${((tamanhoFonte - FONTE_MIN) / (FONTE_MAX - FONTE_MIN)) * 100}%, rgba(255, 255, 255, 0.1) ${((tamanhoFonte - FONTE_MIN) / (FONTE_MAX - FONTE_MIN)) * 100}%)`,
+                            }}
+                          />
+                          <span className="text-base font-bold text-white/60 shrink-0">
+                            A
+                          </span>
+                        </div>
+
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                          <p className="text-[0.625rem] text-white/40">
+                            Prévia: assim ficará o texto do aplicativo.
+                          </p>
+                          <button
+                            type="button"
+                            onClick={restaurarFontePadrao}
+                            className="self-start rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[0.625rem] font-bold uppercase tracking-wider text-white/70 transition-all hover:bg-white/10 cursor-pointer"
+                          >
+                            Padrão ({FONTE_PADRAO} px)
+                          </button>
+                        </div>
+                      </div>
+
                       {/* Switch component 2 */}
                       <div className="flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-2xl">
                         <div>
                           <h4 className="text-sm font-bold tracking-wide">
                             Feedback Háptico
                           </h4>
-                          <p className="text-[10px] text-white/40">
+                          <p className="text-[0.625rem] text-white/40">
                             Sentir vibrações ao interagir no aplicativo
                           </p>
                         </div>
@@ -2654,7 +2761,7 @@ export default function ProfilePage() {
                             <h4 className="text-sm font-bold tracking-wide">
                               Cronômetro do Simulado
                             </h4>
-                            <p className="text-[10px] text-white/40">
+                            <p className="text-[0.625rem] text-white/40">
                               Treine sua agilidade de resolução com tempo
                               regressivo
                             </p>
@@ -2682,7 +2789,7 @@ export default function ProfilePage() {
                             animate={{ opacity: 1, height: "auto" }}
                             className="pt-2 border-t border-white/5 space-y-2"
                           >
-                            <label className="text-[10px] font-black uppercase tracking-widest text-[#a5b4fc]">
+                            <label className="text-[0.625rem] font-black uppercase tracking-widest text-[#a5b4fc]">
                               Tempo Limite do Simulado (Em Minutos)
                             </label>
                             <div className="grid grid-cols-5 gap-1.5">
@@ -2695,7 +2802,7 @@ export default function ProfilePage() {
                                     onClick={() =>
                                       handleChangeTimerSeconds(secs)
                                     }
-                                    className={`py-1.5 rounded-xl border text-[10px] font-bold font-mono transition-all capitalize select-none cursor-pointer ${
+                                    className={`py-1.5 rounded-xl border text-[0.625rem] font-bold font-mono transition-all capitalize select-none cursor-pointer ${
                                       isSelected
                                         ? "border-primary bg-primary/20 text-white"
                                         : "border-white/5 bg-white/5 hover:bg-white/10 text-white/60"
@@ -2746,7 +2853,7 @@ export default function ProfilePage() {
                         </button>
                       </div>
 
-                      <div className="flex gap-2 p-3 bg-white/5 rounded-2xl text-[10px] text-white/40 font-semibold border border-white/5">
+                      <div className="flex gap-2 p-3 bg-white/5 rounded-2xl text-[0.625rem] text-white/40 font-semibold border border-white/5">
                         <Volume2 className="w-5 h-5 text-emerald-300 mt-0.5 shrink-0" />
                         <div>
                           Os dados e configurações de preferência são guardados
@@ -2787,7 +2894,7 @@ export default function ProfilePage() {
                           </p>
                         </div>
 
-                        <div className="text-[10px] font-mono text-white/30 uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-full border border-white/5 animate-pulse">
+                        <div className="text-[0.625rem] font-mono text-white/30 uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-full border border-white/5 animate-pulse">
                           Desconectando em {resetSecondsLeft}s
                         </div>
                       </div>
@@ -2809,10 +2916,10 @@ export default function ProfilePage() {
                         </div>
 
                         <div className="bg-red-500/5 p-4 rounded-2xl border border-red-500/10 text-left">
-                          <p className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest mb-1">
+                          <p className="text-[0.625rem] font-bold text-emerald-400 uppercase tracking-widest mb-1">
                             Preservação Cósmica:
                           </p>
-                          <p className="text-[10px] text-white/55 leading-relaxed">
+                          <p className="text-[0.625rem] text-white/55 leading-relaxed">
                             Seu XP atual de{" "}
                             <span className="text-white font-bold">
                               {xpInfo.xp} XP
@@ -2903,7 +3010,7 @@ export default function ProfilePage() {
                                 <Sparkles className="w-4 h-4 text-emerald-400 shrink-0" />
                                 Ficamos imensamente felizes com seu carinho!
                               </p>
-                              <p className="text-[11px] text-white/70 leading-relaxed">
+                              <p className="text-[0.6875rem] text-white/70 leading-relaxed">
                                 Que tal deixar sua avaliação 5 estrelas
                                 diretamente na Google Play Store? Isso ajuda
                                 outros estudantes a encontrarem o Cosmos!
@@ -2937,7 +3044,7 @@ export default function ProfilePage() {
                               animate={{ opacity: 1, y: 0 }}
                               className="space-y-2 text-left"
                             >
-                              <label className="text-[10px] font-black uppercase tracking-widest text-white/40">
+                              <label className="text-[0.625rem] font-black uppercase tracking-widest text-white/40">
                                 Como podemos melhorar?
                               </label>
                               <textarea
@@ -2971,7 +3078,7 @@ export default function ProfilePage() {
                           )}
 
                           {rating === 0 && (
-                            <p className="text-[10px] text-white/45 italic py-2">
+                            <p className="text-[0.625rem] text-white/45 italic py-2">
                               Toque em uma estrela acima para expressar sua
                               satisfação.
                             </p>
@@ -2987,7 +3094,7 @@ export default function ProfilePage() {
                           <h5 className="text-sm font-black text-white uppercase tracking-wider">
                             Agradecemos o apoio!
                           </h5>
-                          <p className="text-[11px] text-white/70 leading-relaxed">
+                          <p className="text-[0.6875rem] text-white/70 leading-relaxed">
                             Sua avaliação foi registrada localmente e processada
                             pela central orbital. Obrigado por fazer parte da
                             constelação!
@@ -3064,7 +3171,7 @@ export default function ProfilePage() {
                               )?.name
                             }
                           </p>
-                          <p className="text-[10px] text-white/50 leading-relaxed max-w-[280px] mx-auto">
+                          <p className="text-[0.625rem] text-white/50 leading-relaxed max-w-[280px] mx-auto">
                             {
                               AVATAR_FRAMES.find(
                                 (f) => f.id === editAvatarFrameId,
@@ -3079,7 +3186,7 @@ export default function ProfilePage() {
                         <button
                           type="button"
                           onClick={() => setSelectedFrameCategory("Todos")}
-                          className={`px-3 py-1.5 rounded-full text-[9px] font-black uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
+                          className={`px-3 py-1.5 rounded-full text-[0.5625rem] font-black uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
                             selectedFrameCategory === "Todos"
                               ? "bg-purple-600 text-purple-100 shadow-md shadow-purple-500/10"
                               : "bg-white/5 hover:bg-white/10 text-white/60"
@@ -3092,7 +3199,7 @@ export default function ProfilePage() {
                         <button
                           type="button"
                           onClick={() => setShowOnlyUnlocked(!showOnlyUnlocked)}
-                          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-[9px] font-black uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
+                          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-[0.5625rem] font-black uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
                             showOnlyUnlocked
                               ? "bg-emerald-500/15 border-emerald-500/30 text-emerald-400 font-bold"
                               : "bg-white/5 border-white/5 text-white/60 hover:text-white hover:bg-white/10"
@@ -3118,7 +3225,7 @@ export default function ProfilePage() {
                               playSubcategorySound();
                               setSelectedFrameCategory(cat);
                             }}
-                            className={`px-3 py-1.5 rounded-full text-[9px] font-black uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
+                            className={`px-3 py-1.5 rounded-full text-[0.5625rem] font-black uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
                               selectedFrameCategory === cat
                                 ? "bg-purple-600 text-purple-100 shadow-md shadow-purple-500/10"
                                 : "bg-white/5 hover:bg-white/10 text-white/60"
@@ -3131,7 +3238,7 @@ export default function ProfilePage() {
 
                       {/* Status das Molduras */}
                       <div className="flex items-center justify-between py-1 text-left px-1">
-                        <span className="text-[10px] font-black text-white/40 uppercase tracking-widest font-mono">
+                        <span className="text-[0.625rem] font-black text-white/40 uppercase tracking-widest font-mono">
                           {showOnlyUnlocked
                             ? "Status: Apenas Liberadas"
                             : "Status: Todas as Molduras"}
@@ -3168,7 +3275,7 @@ export default function ProfilePage() {
 
                           if (filtered.length === 0) {
                             return (
-                              <div className="py-8 text-center text-white/40 text-[11px] font-medium col-span-full">
+                              <div className="py-8 text-center text-white/40 text-[0.6875rem] font-medium col-span-full">
                                 Nenhuma moldura liberada nesta categoria.
                               </div>
                             );
@@ -3211,7 +3318,7 @@ export default function ProfilePage() {
                                       frameId={frame.id}
                                       isHoverable={false}
                                     >
-                                      <div className="text-[12px]">
+                                      <div className="text-[0.75rem]">
                                         {profile.avatarId === "custom"
                                           ? "👤"
                                           : currentAvatarInfo.emoji}
@@ -3226,16 +3333,16 @@ export default function ProfilePage() {
                                       </span>
                                       {frame.badgeText && (
                                         <span
-                                          className={`text-[7px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded-full text-white ${frame.badgeColor || "bg-emerald-500"}`}
+                                          className={`text-[0.4375rem] font-black uppercase tracking-widest px-1.5 py-0.5 rounded-full text-white ${frame.badgeColor || "bg-emerald-500"}`}
                                         >
                                           {frame.badgeText}
                                         </span>
                                       )}
                                     </div>
-                                    <p className="text-[10px] text-white/50 leading-snug">
+                                    <p className="text-[0.625rem] text-white/50 leading-snug">
                                       {frame.desc}
                                     </p>
-                                    <p className="text-[9px] font-mono font-bold text-amber-400 leading-none">
+                                    <p className="text-[0.5625rem] font-mono font-bold text-amber-400 leading-none">
                                       {frame.isPremiumOnly && !isPremiumUser
                                         ? "✨ Exclusivo Premium"
                                         : frame.requiredXp === 0
@@ -3247,25 +3354,25 @@ export default function ProfilePage() {
 
                                 <div className="shrink-0 flex items-center justify-center">
                                   {isPremiumLocked ? (
-                                    <div className="p-1 px-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-[8px] font-display font-bold uppercase text-amber-400 flex items-center gap-1">
+                                    <div className="p-1 px-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-[0.5rem] font-display font-bold uppercase text-amber-400 flex items-center gap-1">
                                       <Crown className="w-2.5 h-2.5 text-amber-400 animate-pulse" />{" "}
                                       Desbloquear Prime
                                     </div>
                                   ) : !isUnlocked ? (
-                                    <div className="p-1 px-2.5 rounded-lg bg-red-500/5 border border-red-500/10 text-[8px] font-display font-bold uppercase text-red-400 flex items-center gap-1">
+                                    <div className="p-1 px-2.5 rounded-lg bg-red-500/5 border border-red-500/10 text-[0.5rem] font-display font-bold uppercase text-red-400 flex items-center gap-1">
                                       <Lock className="w-2.5 h-2.5" /> Requer{" "}
                                       {frame.requiredXp - xpInfo.xp} XP
                                     </div>
                                   ) : isCurrentlyEquipped ? (
-                                    <span className="p-1 px-2 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-[8px] font-bold text-emerald-400 uppercase tracking-wider">
+                                    <span className="p-1 px-2 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-[0.5rem] font-bold text-emerald-400 uppercase tracking-wider">
                                       Equipado
                                     </span>
                                   ) : isSelected ? (
-                                    <span className="p-1 px-2 rounded-lg bg-purple-500/20 border border-purple-500/40 text-[8px] font-bold text-purple-300 uppercase tracking-wider">
+                                    <span className="p-1 px-2 rounded-lg bg-purple-500/20 border border-purple-500/40 text-[0.5rem] font-bold text-purple-300 uppercase tracking-wider">
                                       Ativo
                                     </span>
                                   ) : (
-                                    <span className="text-[10px] text-white/35 font-bold uppercase hover:text-white transition-all">
+                                    <span className="text-[0.625rem] text-white/35 font-bold uppercase hover:text-white transition-all">
                                       Equipar
                                     </span>
                                   )}
@@ -3360,7 +3467,7 @@ export default function ProfilePage() {
                               setAdminSelectedPlayer(null);
                               setAdminEditForm(null);
                             }}
-                            className={`flex-1 py-1.5 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all cursor-pointer ${adminTab === tab ? "bg-amber-500 text-black shadow-lg shadow-amber-500/10 font-black" : "text-white/40 hover:text-white"}`}
+                            className={`flex-1 py-1.5 rounded-xl text-[0.625rem] font-bold uppercase tracking-wider transition-all cursor-pointer ${adminTab === tab ? "bg-amber-500 text-black shadow-lg shadow-amber-500/10 font-black" : "text-white/40 hover:text-white"}`}
                           >
                             {tab === "stats" && "📊 Est"}
                             {tab === "ranking" && "🏆 Rank"}
@@ -3383,7 +3490,7 @@ export default function ProfilePage() {
                         {adminLoading ? (
                           <div className="py-12 flex flex-col items-center justify-center gap-2">
                             <div className="w-8 h-8 rounded-full border-2 border-t-amber-400 border-r-transparent border-b-transparent border-l-transparent animate-spin" />
-                            <span className="text-[10px] font-black uppercase tracking-widest text-amber-400 animate-pulse">Sintonizando banco de dados...</span>
+                            <span className="text-[0.625rem] font-black uppercase tracking-widest text-amber-400 animate-pulse">Sintonizando banco de dados...</span>
                           </div>
                         ) : (
                           <>
@@ -3414,23 +3521,23 @@ export default function ProfilePage() {
                               return (
                                 <div className="grid grid-cols-2 gap-3 pt-1 text-left">
                                   <div className="glass-panel p-4 rounded-2xl border border-white/5 bg-white/5 flex flex-col items-start gap-1">
-                                    <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">Total de Usuários</span>
+                                    <span className="text-[0.5625rem] font-black text-white/40 uppercase tracking-widest">Total de Usuários</span>
                                     <span className="text-xl font-black text-amber-500">{totalUsers}</span>
                                   </div>
                                   <div className="glass-panel p-4 rounded-2xl border border-white/5 bg-white/5 flex flex-col justify-center items-start gap-1">
-                                    <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">Líder do Ranking</span>
-                                    <span className="text-[10.5px] font-black text-white truncate w-full flex items-center gap-1">
+                                    <span className="text-[0.5625rem] font-black text-white/40 uppercase tracking-widest">Líder do Ranking</span>
+                                    <span className="text-[0.6563rem] font-black text-white truncate w-full flex items-center gap-1">
                                       <Crown className="w-3 h-3 fill-amber-500 text-amber-500" />
                                       {topUser}
                                     </span>
-                                    <span className="text-[8px] font-mono font-bold text-white/50">{topUserXp} XP</span>
+                                    <span className="text-[0.5rem] font-mono font-bold text-white/50">{topUserXp} XP</span>
                                   </div>
                                   <div className="glass-panel p-4 rounded-2xl border border-white/5 bg-white/5 flex flex-col items-start gap-1">
-                                    <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">Educativos Respondidos</span>
+                                    <span className="text-[0.5625rem] font-black text-white/40 uppercase tracking-widest">Educativos Respondidos</span>
                                     <span className="text-xl font-black text-indigo-400">{totalAnswered}</span>
                                   </div>
                                   <div className="glass-panel p-4 rounded-2xl border border-white/5 bg-white/5 flex flex-col items-start gap-1">
-                                    <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">Acertos Siderais</span>
+                                    <span className="text-[0.5625rem] font-black text-white/40 uppercase tracking-widest">Acertos Siderais</span>
                                     <span className="text-xl font-black text-emerald-400">{totalCorrect}</span>
                                   </div>
                                 </div>
@@ -3444,12 +3551,12 @@ export default function ProfilePage() {
                                   <div className="glass-panel p-4 rounded-3xl border border-white/10 space-y-4 text-left">
                                     <div className="flex justify-between items-center border-b border-white/5 pb-2">
                                       <span className="text-xs font-black uppercase text-amber-500 tracking-wider">Editar Explorador</span>
-                                      <button type="button" onClick={() => { setAdminSelectedPlayer(null); setAdminEditForm(null); }} className="text-[#60a5fa] hover:text-white text-[10px] font-bold uppercase cursor-pointer">Cancelar</button>
+                                      <button type="button" onClick={() => { setAdminSelectedPlayer(null); setAdminEditForm(null); }} className="text-[#60a5fa] hover:text-white text-[0.625rem] font-bold uppercase cursor-pointer">Cancelar</button>
                                     </div>
                                     
                                     <div className="grid grid-cols-2 gap-3">
                                       <div className="space-y-1">
-                                        <label className="text-[9px] font-black uppercase text-white/40 tracking-wider">Codinome / Nome</label>
+                                        <label className="text-[0.5625rem] font-black uppercase text-white/40 tracking-wider">Codinome / Nome</label>
                                         <input
                                           type="text"
                                           value={adminEditForm.name || ""}
@@ -3459,7 +3566,7 @@ export default function ProfilePage() {
                                       </div>
 
                                       <div className="space-y-1">
-                                        <label className="text-[9px] font-black uppercase text-white/40 tracking-wider">XP Total</label>
+                                        <label className="text-[0.5625rem] font-black uppercase text-white/40 tracking-wider">XP Total</label>
                                         <input
                                           type="number"
                                           value={adminEditForm.xp !== undefined ? adminEditForm.xp : 0}
@@ -3469,14 +3576,14 @@ export default function ProfilePage() {
                                       </div>
 
                                       <div className="space-y-1">
-                                        <label className="text-[9px] font-black uppercase text-white/40 tracking-wider">Nível Recomendado</label>
+                                        <label className="text-[0.5625rem] font-black uppercase text-white/40 tracking-wider">Nível Recomendado</label>
                                         <span className="block text-xs font-bold text-white/70 py-2 p-1 bg-white/5 rounded-xl border border-white/5 text-center">
                                           Lvl {Math.floor(adminEditForm.xp / 150) + 1}
                                         </span>
                                       </div>
 
                                       <div className="space-y-1">
-                                        <label className="text-[9px] font-black uppercase text-white/40 tracking-wider">Pacote Premium</label>
+                                        <label className="text-[0.5625rem] font-black uppercase text-white/40 tracking-wider">Pacote Premium</label>
                                         <select
                                           value={adminEditForm.is_premium ? "yes" : "no"}
                                           onChange={(e) => setAdminEditForm({ ...adminEditForm, is_premium: e.target.value === "yes" })}
@@ -3490,16 +3597,16 @@ export default function ProfilePage() {
 
                                     {/* Stats parameters */}
                                     <div className="border-t border-white/5 pt-3 space-y-2">
-                                      <span className="text-[9px] font-black uppercase text-white/50 tracking-widest block">Ajustar Estatísticas (Acertos / Respondidas)</span>
+                                      <span className="text-[0.5625rem] font-black uppercase text-white/50 tracking-widest block">Ajustar Estatísticas (Acertos / Respondidas)</span>
                                       <div className="grid grid-cols-2 gap-2 bg-white/5 p-3 rounded-2xl border border-white/5">
                                         {(["linguagens", "matematica", "humanas", "natureza"] as const).map(area => {
                                           const areaStats = adminEditForm.stats?.[area] || { correct: 0, incorrect: 0, answered: 0 };
                                           return (
                                             <div key={area} className="space-y-1 border-b border-white/5 last:border-0 pb-1.5 last:pb-0">
-                                              <span className="text-[8px] font-black uppercase text-[#60a5fa] block">{area}</span>
+                                              <span className="text-[0.5rem] font-black uppercase text-[#60a5fa] block">{area}</span>
                                               <div className="grid grid-cols-2 gap-1.5">
                                                 <div>
-                                                  <label className="text-[7px] uppercase text-white/40 block">Acertos</label>
+                                                  <label className="text-[0.4375rem] uppercase text-white/40 block">Acertos</label>
                                                   <input
                                                     type="number"
                                                     value={areaStats.correct || 0}
@@ -3513,11 +3620,11 @@ export default function ProfilePage() {
                                                       };
                                                       setAdminEditForm({ ...adminEditForm, stats: updatedStats });
                                                     }}
-                                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-2 py-1 text-[10px] text-white focus:outline-none"
+                                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-2 py-1 text-[0.625rem] text-white focus:outline-none"
                                                   />
                                                 </div>
                                                 <div>
-                                                  <label className="text-[7px] uppercase text-white/40 block">Total</label>
+                                                  <label className="text-[0.4375rem] uppercase text-white/40 block">Total</label>
                                                   <input
                                                     type="number"
                                                     value={areaStats.answered || 0}
@@ -3531,7 +3638,7 @@ export default function ProfilePage() {
                                                       };
                                                       setAdminEditForm({ ...adminEditForm, stats: updatedStats });
                                                     }}
-                                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-2 py-1 text-[10px] text-white focus:outline-none"
+                                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-2 py-1 text-[0.625rem] text-white focus:outline-none"
                                                   />
                                                 </div>
                                               </div>
@@ -3592,25 +3699,25 @@ export default function ProfilePage() {
                                           .filter(p => p.name.toLowerCase().includes(adminSearchQuery.toLowerCase()));
 
                                         if (nonSystemList.length === 0) {
-                                          return <p className="text-[10px] text-white/30 text-center py-6">Nenhum usuário correspondente encontrado.</p>;
+                                          return <p className="text-[0.625rem] text-white/30 text-center py-6">Nenhum usuário correspondente encontrado.</p>;
                                         }
 
                                         return nonSystemList.map((player) => (
                                           <div key={player.id} className="p-3 bg-white/[0.02] hover:bg-white/[0.04] rounded-xl border border-white/5 flex items-center justify-between text-left transition-all">
                                             <div className="flex items-center gap-2 max-w-[70%]">
-                                              <span className="text-[10px] font-mono text-white/30 w-5 shrink-0">#{player.xp ? Math.floor(player.xp / 150) + 1 : 1}</span>
+                                              <span className="text-[0.625rem] font-mono text-white/30 w-5 shrink-0">#{player.xp ? Math.floor(player.xp / 150) + 1 : 1}</span>
                                               <div className="truncate">
                                                 <span className="text-xs font-bold text-white flex items-center gap-1 leading-none font-sans">
                                                   {player.name}
                                                   {player.email?.toLowerCase() === "klession@gmail.com" && <Crown className="w-2.5 h-2.5 text-amber-500 fill-amber-500" />}
-                                                  {player.is_premium && <span className="bg-[#f59e0b]/10 text-amber-500 border border-amber-500/20 px-1 py-0.2 rounded text-[7px] font-black uppercase font-mono">Premium</span>}
+                                                  {player.is_premium && <span className="bg-[#f59e0b]/10 text-amber-500 border border-amber-500/20 px-1 py-0.2 rounded text-[0.4375rem] font-black uppercase font-mono">Premium</span>}
                                                 </span>
-                                                <p className="text-[8.5px] text-white/40 mt-0.5 truncate">{player.id}</p>
+                                                <p className="text-[0.5313rem] text-white/40 mt-0.5 truncate">{player.id}</p>
                                               </div>
                                             </div>
                                             
                                             <div className="flex items-center gap-2 shrink-0">
-                                              <span className="text-[10px] font-black text-amber-400 mr-1">{player.xp || 0} XP</span>
+                                              <span className="text-[0.625rem] font-black text-amber-400 mr-1">{player.xp || 0} XP</span>
                                               <button
                                                 type="button"
                                                 onClick={() => {
@@ -3628,7 +3735,7 @@ export default function ProfilePage() {
                                                     }
                                                   });
                                                 }}
-                                                className="px-2.5 py-1 bg-white/10 hover:bg-white/25 rounded-md text-[9px] font-extrabold uppercase text-[#60a5fa] transition-all cursor-pointer"
+                                                className="px-2.5 py-1 bg-white/10 hover:bg-white/25 rounded-md text-[0.5625rem] font-extrabold uppercase text-[#60a5fa] transition-all cursor-pointer"
                                               >
                                                 Editar
                                               </button>
@@ -3647,14 +3754,14 @@ export default function ProfilePage() {
                               <div className="space-y-3 pt-1 text-left">
                                 <div className="p-3 bg-[#ef4444]/[0.02] border border-red-500/15 rounded-2xl flex flex-col gap-2">
                                   <div>
-                                    <h5 className="text-[#ef4444] text-[10.5px] font-black uppercase tracking-wide">🚨 Zerar Ranking & Avançar Temporada</h5>
-                                    <p className="text-[9.5px] text-white/50 leading-relaxed mt-0.5">Isto removerá TODAS as pontuações e registros da tabela de ranking global e avançará a temporada do sistema +1.</p>
+                                    <h5 className="text-[#ef4444] text-[0.6563rem] font-black uppercase tracking-wide">🚨 Zerar Ranking & Avançar Temporada</h5>
+                                    <p className="text-[0.5938rem] text-white/50 leading-relaxed mt-0.5">Isto removerá TODAS as pontuações e registros da tabela de ranking global e avançará a temporada do sistema +1.</p>
                                   </div>
                                   <button
                                     type="button"
                                     disabled={adminSaving}
                                     onClick={handleResetRankingSystem}
-                                    className={`w-full py-2 border rounded-xl text-[9px] font-black uppercase tracking-wider transition-all cursor-pointer disabled:opacity-50 ${
+                                    className={`w-full py-2 border rounded-xl text-[0.5625rem] font-black uppercase tracking-wider transition-all cursor-pointer disabled:opacity-50 ${
                                       resetRankingConfirm
                                         ? "bg-red-600 hover:bg-red-700 text-white border-red-600 shadow-[0_0_15px_rgba(239,68,68,0.5)] animate-pulse"
                                         : "bg-red-500/10 hover:bg-red-500/20 border-red-500/10 hover:border-red-500/20 text-[#ef4444]"
@@ -3666,14 +3773,14 @@ export default function ProfilePage() {
 
                                 <div className="p-3 bg-red-500/[0.01] border border-red-500/10 rounded-2xl flex flex-col gap-2">
                                   <div>
-                                    <h5 className="text-red-300 text-[10.5px] font-black uppercase tracking-wide">⚠️ Zerar Progresso de todos os Usuários</h5>
-                                    <p className="text-[9.5px] text-white/50 leading-relaxed mt-0.5">Define o XP de TODOS os exploradores na tabela de ranking para zero e limpa todas as suas estatísticas de estudos respondidos.</p>
+                                    <h5 className="text-red-300 text-[0.6563rem] font-black uppercase tracking-wide">⚠️ Zerar Progresso de todos os Usuários</h5>
+                                    <p className="text-[0.5938rem] text-white/50 leading-relaxed mt-0.5">Define o XP de TODOS os exploradores na tabela de ranking para zero e limpa todas as suas estatísticas de estudos respondidos.</p>
                                   </div>
                                   <button
                                     type="button"
                                     disabled={adminSaving}
                                     onClick={handleResetAllUsersXP}
-                                    className={`w-full py-2 border rounded-xl text-[9px] font-black uppercase tracking-wider transition-all cursor-pointer disabled:opacity-50 ${
+                                    className={`w-full py-2 border rounded-xl text-[0.5625rem] font-black uppercase tracking-wider transition-all cursor-pointer disabled:opacity-50 ${
                                       resetXPConfirm
                                         ? "bg-red-600 hover:bg-red-700 text-white border-red-600 shadow-[0_0_15px_rgba(239,68,68,0.5)] animate-pulse"
                                         : "bg-red-500/10 hover:bg-red-500/20 border-red-500/10 hover:border-red-500/20 text-red-300"
@@ -3685,14 +3792,14 @@ export default function ProfilePage() {
 
                                 <div className="p-3 bg-blue-500/[0.01] border border-blue-500/10 rounded-2xl flex flex-col gap-2">
                                   <div>
-                                    <h5 className="text-[#60a5fa] text-[10.5px] font-black uppercase tracking-wide">🔄 Recalcular Posições & Praticar XP</h5>
-                                    <p className="text-[9.5px] text-white/50 leading-relaxed mt-0.5">Recalcula instantaneamente os totais de XP com base na taxa de acertos histórica registrada de cada explorador e atualiza as datas de sincronização.</p>
+                                    <h5 className="text-[#60a5fa] text-[0.6563rem] font-black uppercase tracking-wide">🔄 Recalcular Posições & Praticar XP</h5>
+                                    <p className="text-[0.5938rem] text-white/50 leading-relaxed mt-0.5">Recalcula instantaneamente os totais de XP com base na taxa de acertos histórica registrada de cada explorador e atualiza as datas de sincronização.</p>
                                   </div>
                                   <button
                                     type="button"
                                     disabled={adminSaving}
                                     onClick={handleRecalculateRanking}
-                                    className="w-full py-2 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/10 hover:border-blue-500/20 text-[#60a5fa] rounded-xl text-[9px] font-black uppercase tracking-wider transition-all cursor-pointer disabled:opacity-50"
+                                    className="w-full py-2 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/10 hover:border-blue-500/20 text-[#60a5fa] rounded-xl text-[0.5625rem] font-black uppercase tracking-wider transition-all cursor-pointer disabled:opacity-50"
                                   >
                                     Recalcular Ranking Sideral
                                   </button>

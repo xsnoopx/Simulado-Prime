@@ -197,7 +197,7 @@ Acesse agora: ${appUrl}`;
               exit={{ opacity: 0, scale: 0.9, y: 15 }}
               className="relative z-10 w-full max-w-sm"
             >
-              <div className="glass-panel p-6 rounded-[2.5rem] border border-white/10 bg-gradient-to-b from-[#12102e] via-[#0d0b21] to-[#04030a] shadow-2xl space-y-6 overflow-hidden">
+              <div className="glass-panel p-6 rounded-[40px] border border-white/10 bg-gradient-to-b from-[#12102e] via-[#0d0b21] to-[#04030a] shadow-2xl space-y-6 overflow-hidden">
                 
                 {/* Close Button */}
                 <button
@@ -216,7 +216,7 @@ Acesse agora: ${appUrl}`;
                   <h3 className="font-display font-black text-sm uppercase tracking-widest text-white">
                     Compartilhar Desempenho
                   </h3>
-                  <p className="text-[10px] text-on-surface-variant uppercase tracking-wider">
+                  <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-wider">
                     Mostre aos seus amigos seu progresso orbital
                   </p>
                 </div>
@@ -232,10 +232,10 @@ Acesse agora: ${appUrl}`;
 
                   {/* Badges */}
                   <div className="flex justify-between items-center mb-4">
-                    <span className="text-[7px] font-black uppercase tracking-widest text-[#a5b4fc] bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 rounded-full">
+                    <span className="text-[0.4375rem] font-black uppercase tracking-widest text-[#a5b4fc] bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 rounded-full">
                       🚀 {categoryName}
                     </span>
-                    <span className="text-[7.5px] font-black text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full uppercase tracking-wider flex items-center gap-1">
+                    <span className="text-[0.4688rem] font-black text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full uppercase tracking-wider flex items-center gap-1">
                       <Sparkles className="w-2.5 h-2.5" /> Cosmos
                     </span>
                   </div>
@@ -267,7 +267,7 @@ Acesse agora: ${appUrl}`;
                       <span className="font-display text-2xl font-extrabold text-white">
                         {accuracy}%
                       </span>
-                      <span className="text-[7.5px] tracking-wider text-white/50 uppercase font-black">
+                      <span className="text-[0.4688rem] tracking-wider text-white/50 uppercase font-black">
                         Acertos
                       </span>
                     </div>
@@ -283,15 +283,15 @@ Acesse agora: ${appUrl}`;
                   {/* Secondary Metrics Row */}
                   <div className="grid grid-cols-3 gap-1.5 pt-3 border-t border-white/5">
                     <div className="p-1 px-1.5 bg-white/5 rounded-lg border border-white/5">
-                      <span className="text-[6.5px] uppercase font-bold text-white/40 block">Feitas</span>
+                      <span className="text-[0.4063rem] uppercase font-bold text-white/40 block">Feitas</span>
                       <p className="text-sm font-display font-extrabold text-white">{totalCovered}</p>
                     </div>
                     <div className="p-1 px-1.5 bg-green-500/5 rounded-lg border border-green-500/10">
-                      <span className="text-[6.5px] uppercase font-bold text-green-400 block">Acertos</span>
+                      <span className="text-[0.4063rem] uppercase font-bold text-green-400 block">Acertos</span>
                       <p className="text-sm font-display font-extrabold text-green-400">{correctCount}</p>
                     </div>
                     <div className="p-1 px-1.5 bg-red-500/5 rounded-lg border border-red-500/10">
-                      <span className="text-[6.5px] uppercase font-bold text-red-400 block">Erros</span>
+                      <span className="text-[0.4063rem] uppercase font-bold text-red-400 block">Erros</span>
                       <p className="text-sm font-display font-extrabold text-red-400">{incorrectCount}</p>
                     </div>
                   </div>
@@ -299,7 +299,7 @@ Acesse agora: ${appUrl}`;
 
                 {/* Status Message Display */}
                 {statusMessage && (
-                  <div className="p-2.5 bg-indigo-500/10 border border-indigo-500/20 text-center text-[10px] uppercase tracking-wider text-[#a5b4fc] font-bold rounded-xl animate-pulse">
+                  <div className="p-2.5 bg-indigo-500/10 border border-indigo-500/20 text-center text-[0.625rem] uppercase tracking-wider text-[#a5b4fc] font-bold rounded-xl animate-pulse">
                     {statusMessage}
                   </div>
                 )}
@@ -324,7 +324,7 @@ Acesse agora: ${appUrl}`;
                     <button
                       onClick={handleDownloadImage}
                       disabled={isSharing || isDownloading}
-                      className="py-3 bg-white/5 hover:bg-white/10 disabled:bg-white/2 disabled:opacity-50 rounded-xl text-white border border-white/10 font-display font-bold text-[10px] uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition-all active:scale-95"
+                      className="py-3 bg-white/5 hover:bg-white/10 disabled:bg-white/2 disabled:opacity-50 rounded-xl text-white border border-white/10 font-display font-bold text-[0.625rem] uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition-all active:scale-95"
                       id="btn_download_card_image"
                     >
                       {isDownloading ? (
@@ -337,7 +337,7 @@ Acesse agora: ${appUrl}`;
 
                     <button
                       onClick={handleCopy}
-                      className="py-3 bg-white/5 hover:bg-white/10 rounded-xl text-white border border-white/10 font-display font-bold text-[10px] uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition-all active:scale-95"
+                      className="py-3 bg-white/5 hover:bg-white/10 rounded-xl text-white border border-white/10 font-display font-bold text-[0.625rem] uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition-all active:scale-95"
                       id="btn_copy_formatted_stats"
                     >
                       {copiedText ? (

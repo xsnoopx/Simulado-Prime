@@ -286,10 +286,10 @@ export default function HumanasPage() {
                 <h1 className="text-2xl font-display font-bold uppercase tracking-widest text-primary-light">C. Humanas</h1>
                 <div className="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-primary/10 border border-primary/20">
                   <Sparkles className="w-2.5 h-2.5 text-primary-light" />
-                  <span className="text-[8px] font-bold text-primary-light tracking-wider uppercase">Cosmos</span>
+                  <span className="text-[0.5rem] font-bold text-primary-light tracking-wider uppercase">Cosmos</span>
                 </div>
               </div>
-              <p className="text-[10px] text-on-surface-variant uppercase tracking-[0.3em] mt-1">
+              <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-[0.3em] mt-1">
                 {isFinished ? "Simulado Concluído" : `Questão ${currentIndex + 1} de ${activeQuestions.length}`}
               </p>
             </div>
@@ -373,7 +373,7 @@ export default function HumanasPage() {
                 <div className="flex flex-wrap gap-2">
                   <div className="px-3 py-1 bg-primary/10 rounded-full border border-primary/20 flex items-center gap-2">
                     <Users className="w-3 h-3 text-primary-light" />
-                    <span className="text-[10px] font-bold text-primary-light uppercase tracking-wider">Ciências Humanas e suas Tecnologias</span>
+                    <span className="text-[0.625rem] font-bold text-primary-light uppercase tracking-wider">Ciências Humanas e suas Tecnologias</span>
                   </div>
 
                 </div>
@@ -383,7 +383,7 @@ export default function HumanasPage() {
                     <div className="flex items-center justify-between text-xs">
                       <div className="flex items-center gap-1.5 text-amber-400">
                         <Timer className="w-4 h-4 text-amber-400 animate-pulse" />
-                        <span className="font-bold uppercase tracking-wider text-[10px]">Tempo da Questão (Desafio)</span>
+                        <span className="font-bold uppercase tracking-wider text-[0.625rem]">Tempo da Questão (Desafio)</span>
                       </div>
                       <div className={cn(
                         "font-mono font-black text-xs px-2.5 py-0.5 rounded-full border",
@@ -538,7 +538,7 @@ export default function HumanasPage() {
                             animate={{ opacity: 1, y: 0 }}
                             className="p-4 rounded-xl bg-amber-500/5 border border-amber-500/10 text-left"
                           >
-                            <span className="text-[9px] font-black uppercase text-amber-400 tracking-wider block mb-1">Dica de Estudo</span>
+                            <span className="text-[0.5625rem] font-black uppercase text-amber-400 tracking-wider block mb-1">Dica de Estudo</span>
                             <p className="text-xs text-white/80 leading-relaxed font-sans">
                               Três palavras aleatórias presentes na resposta correta são: <span className="text-amber-300 font-medium italic">"{randomizedHintWords}"</span>
                             </p>
