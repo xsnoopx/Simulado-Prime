@@ -64,9 +64,9 @@ interface UserProfile {
   isPremium?: boolean;
 }
 
-// Cada avatar gratuito libera a cada 50 XP acumulados.
-// Avatar 01 (padrão) começa disponível; o 100º é liberado com 5.000 XP.
-const XP_POR_AVATAR = 50;
+// Cada avatar gratuito libera a cada 20 XP acumulados.
+// Avatar 01 (padrão) começa disponível; o 100º é liberado com 2.000 XP.
+const XP_POR_AVATAR = 20;
 
 const AVATARS_DATA = [
   {
