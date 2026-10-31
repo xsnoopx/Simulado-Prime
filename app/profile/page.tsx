@@ -64,6 +64,10 @@ interface UserProfile {
   isPremium?: boolean;
 }
 
+// Cada avatar gratuito libera a cada 50 XP acumulados.
+// Avatar 01 (padrão) começa disponível; o 100º é liberado com 5.000 XP.
+const XP_POR_AVATAR = 50;
+
 const AVATARS_DATA = [
   {
     id: "default",
@@ -121,6 +125,8 @@ interface AvatarItem {
   bg: string;
   number: string;
   isPremium?: boolean;
+  // XP necessário para liberar o avatar (avatares gratuitos).
+  requiredXp?: number;
 }
 
 const sanitizeAvatarUrl = (url: string | undefined): string => {
@@ -137,7 +143,7 @@ const sanitizeAvatarUrl = (url: string | undefined): string => {
   return url;
 };
 
-const AVATARS: AvatarItem[] = AVATARS_DATA.map((a) => {
+const AVATARS: AvatarItem[] = AVATARS_DATA.map((a, index) => {
   const rawImg =
     a.id === "default"
       ? rocketLogo.src
@@ -151,6 +157,8 @@ const AVATARS: AvatarItem[] = AVATARS_DATA.map((a) => {
     emoji: a.emoji,
     bg: `${a.bg} border border-white/5 hover:border-white/20`,
     number: a.num,
+    // O índice 0 é o avatar padrão; os demais abrem a cada 50 XP.
+    requiredXp: index * XP_POR_AVATAR,
   };
 });
 
@@ -912,6 +920,9 @@ export default function ProfilePage() {
   // Compute stats-based dynamic XP, level, total correct etc.
   // O XP do admin entra como piso, junto do XP conquistado nas estatísticas.
   const xpInfo = getExperienceDetails(stats, xpDoAdmin);
+  const avataresLiberados = AVATARS.filter(
+    (av) => xpInfo.xp >= (av.requiredXp || 0) || profile.avatarId === av.id
+  ).length;
   const achievementsList = getAchievements(stats);
   const unlockedCount = achievementsList.filter((a) => a.unlocked).length;
 
@@ -2292,23 +2303,42 @@ export default function ProfilePage() {
                       <div className="space-y-4">
                         {/* Standard Avatars */}
                         <div className="space-y-2 text-left">
-                          <label className="text-xs font-black uppercase tracking-widest text-purple-400">
-                            Avatar Espacial Padrão
-                          </label>
+                          <div className="flex items-center justify-between gap-2">
+                            <label className="text-xs font-black uppercase tracking-widest text-purple-400">
+                              Avatares Gratuitos
+                            </label>
+                            <span className="text-[9px] font-black text-purple-200 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                              {avataresLiberados}/{AVATARS.length} por XP
+                            </span>
+                          </div>
+                          <p className="text-[10px] text-purple-200/70 font-medium tracking-wide">
+                            1 avatar a cada {XP_POR_AVATAR} XP acumulado
+                          </p>
                           <div className="grid grid-cols-5 gap-1.5 max-h-[160px] overflow-y-auto p-1 bg-white/5 rounded-2xl border border-white/5">
                             {AVATARS.map((av) => {
+                              const requiredXp = av.requiredXp || 0;
                               const isSelected = editAvatarId === av.id;
+                              const isEquipped = profile.avatarId === av.id;
+                              const isUnlocked = xpInfo.xp >= requiredXp;
+                              // Quem já usa o avatar mantém o acesso mesmo que o XP caia.
+                              const canUse = isUnlocked || isEquipped;
                               return (
                                 <button
                                   key={av.id}
                                   type="button"
-                                  onClick={() => setEditAvatarId(av.id)}
-                                  className={`relative p-1 rounded-xl border aspect-square flex items-center justify-center transition-all cursor-pointer group-hover:scale-105 ${
+                                  onClick={() => {
+                                    if (canUse) setEditAvatarId(av.id);
+                                  }}
+                                  className={`relative p-1 rounded-xl border aspect-square flex items-center justify-center transition-all ${
                                     isSelected
                                       ? "border-primary bg-[#a5b4fc]/20 scale-105 shadow-xl"
                                       : "border-white/5 bg-white/5 hover:bg-white/10"
-                                  }`}
-                                  title={av.name}
+                                  } ${canUse ? "cursor-pointer" : "cursor-not-allowed opacity-40"}`}
+                                  title={
+                                    canUse
+                                      ? av.name
+                                      : `${av.name} — requer ${requiredXp} XP`
+                                  }
                                 >
                                   <div className="absolute top-0.5 left-0.5 px-1 py-0.2 bg-black/80 rounded-md text-[6.5px] font-mono font-black text-white z-10 select-none scale-90 border border-white/10">
                                     {av.number}
@@ -2337,7 +2367,16 @@ export default function ProfilePage() {
                                     </span>
                                   )}
 
-                                  {isSelected && (
+                                  {!canUse && (
+                                    <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-0.5 rounded-xl bg-black/60">
+                                      <Lock className="w-3 h-3 text-white/75" />
+                                      <span className="text-[6.5px] font-mono font-black text-amber-300">
+                                        {requiredXp} XP
+                                      </span>
+                                    </div>
+                                  )}
+
+                                  {isSelected && canUse && (
                                     <div className="absolute bottom-0.5 right-0.5 p-0.5 bg-primary rounded-full z-10">
                                       <Check className="w-2 h-2 text-white" />
                                     </div>
