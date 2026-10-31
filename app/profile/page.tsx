@@ -3236,7 +3236,7 @@ export default function ProfilePage() {
                                       {frame.desc}
                                     </p>
                                     <p className="text-[9px] font-mono font-bold text-amber-400 leading-none">
-                                      {frame.isPremiumOnly
+                                      {frame.isPremiumOnly && !isPremiumUser
                                         ? "✨ Exclusivo Premium"
                                         : frame.requiredXp === 0
                                           ? "Disponível"
