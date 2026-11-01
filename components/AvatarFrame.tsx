@@ -79,11 +79,32 @@ export function AvatarFrame({
       70% { opacity: 1; filter: brightness(1.4) drop-shadow(0 0 12px var(--frame-glow)); }
       100% { opacity: 0.5; filter: brightness(1) drop-shadow(0 0 2px var(--frame-glow)); }
     }
+    /* Exclusivo da moldura do ADM (Soberano Fundador) */
+    @keyframes frame-sovereign-spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes frame-sovereign-spin-reverse {
+      to { transform: rotate(-360deg); }
+    }
+    @keyframes frame-sovereign-halo {
+      0%, 100% { opacity: 0.55; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.07); }
+    }
+    @keyframes frame-sovereign-rays {
+      0% { opacity: 0.3; transform: rotate(0deg); }
+      50% { opacity: 0.75; }
+      100% { opacity: 0.3; transform: rotate(360deg); }
+    }
+    @keyframes frame-sovereign-spark {
+      0%, 100% { opacity: 0.35; transform: scale(0.7); }
+      50% { opacity: 1; transform: scale(1.25); }
+    }
   `;
 
   // Determine target speed or glow values based on hover interaction
   let animationCss = {};
   const glow = frame.glowColor;
+  const isAdminFrame = frame.id === 'frame_owner';
 
   switch (frame.animationStyle) {
     case 'spin-slow':
@@ -139,9 +160,17 @@ export function AvatarFrame({
         animation: `frame-pulse 2s ease-in-out infinite`,
       };
       break;
+    case 'sovereign-aura':
+      animationCss = {
+        animation: `frame-sovereign-spin ${isHovered && isHoverable ? '2.4s' : '7s'} linear infinite`,
+      };
+      break;
     default:
       break;
   }
+
+  const sparkSize =
+    size === 'sm' ? 'w-1 h-1' : size === 'md' ? 'w-1.5 h-1.5' : 'w-2 h-2';
 
   // Create style tag to load the core keyframes once gracefully
   return (
@@ -153,17 +182,76 @@ export function AvatarFrame({
         className
       )}
       style={{
-        boxShadow: isHovered && isHoverable 
-          ? `0 0 25px ${glow}, inset 0 0 10px ${glow}` 
-          : `0 0 10px ${glow}`,
+        boxShadow: isAdminFrame
+          ? isHovered && isHoverable
+            ? `0 0 42px ${glow}, 0 0 18px ${glow}, inset 0 0 12px ${glow}`
+            : `0 0 26px ${glow}, 0 0 10px ${glow}`
+          : isHovered && isHoverable
+            ? `0 0 25px ${glow}, inset 0 0 10px ${glow}`
+            : `0 0 10px ${glow}`,
         '--frame-glow': glow,
       } as React.CSSProperties}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       id={`avatar_frame_${frame.id}`}
+      data-frame-exclusiva={isAdminFrame ? 'adm' : undefined}
     >
       {/* Styles Injection */}
       <style dangerouslySetInnerHTML={{ __html: customAnimationsStyle }} />
+
+      {/* ===== Camadas exclusivas do ADM (Soberano Fundador) ===== */}
+      {isAdminFrame && (
+        <>
+          {/* Aura dourada externa */}
+          <div
+            aria-hidden="true"
+            className="absolute -inset-[18%] rounded-full pointer-events-none"
+            style={{
+              background:
+                'radial-gradient(circle, rgba(255, 214, 10, 0.5) 0%, rgba(255, 170, 0, 0.2) 45%, rgba(255, 140, 0, 0) 72%)',
+              animation: 'frame-sovereign-halo 2.8s ease-in-out infinite',
+            }}
+          />
+
+          {/* Raios de luz girando atrás da coroa */}
+          {size !== 'sm' && (
+            <div
+              aria-hidden="true"
+              className="absolute -inset-[10%] rounded-full pointer-events-none"
+              style={{
+                background:
+                  'repeating-conic-gradient(from 0deg, rgba(255, 215, 0, 0.6) 0deg 1.6deg, transparent 1.6deg 15deg)',
+                WebkitMaskImage:
+                  'radial-gradient(circle, transparent 52%, #000 60%)',
+                maskImage: 'radial-gradient(circle, transparent 52%, #000 60%)',
+                animation: 'frame-sovereign-rays 12s linear infinite',
+              }}
+            />
+          )}
+
+          {/* Anel externo em barber-pole dourado */}
+          <div
+            aria-hidden="true"
+            className="absolute -inset-[5px] rounded-full pointer-events-none"
+            style={{
+              background:
+                'repeating-conic-gradient(from 0deg, #fffbe6 0deg 16deg, #b45309 16deg 32deg, #ffd700 32deg 40deg)',
+              animation: 'frame-sovereign-spin-reverse 9s linear infinite',
+            }}
+          />
+
+          {/* Anel interno espelhado */}
+          <div
+            aria-hidden="true"
+            className="absolute -inset-[2.5px] rounded-full pointer-events-none"
+            style={{
+              background:
+                'conic-gradient(from 180deg, #1c1917 0%, #fde68a 18%, #ffffff 32%, #b45309 55%, #fbbf24 78%, #1c1917 100%)',
+              animation: 'frame-sovereign-spin 5s linear infinite',
+            }}
+          />
+        </>
+      )}
 
       {/* Elegant Independent Border/Moldura Layer (Prevents rotating the profile/face) */}
       <div 
@@ -173,6 +261,52 @@ export function AvatarFrame({
           ...animationCss,
         } as React.CSSProperties}
       />
+
+      {/* Reflexo de luz percorrendo o aro do ADM */}
+      {isAdminFrame && size !== 'sm' && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 rounded-full pointer-events-none"
+          style={{
+            background:
+              'conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 280deg, rgba(255,255,255,0.9) 338deg, rgba(255,255,255,0) 360deg)',
+            mixBlendMode: 'screen',
+            animation: 'frame-sovereign-spin 3.4s linear infinite',
+          }}
+        />
+      )}
+
+      {/* Faíscas orbitando o aro do ADM */}
+      {isAdminFrame &&
+        [
+          { duracao: '6s', atraso: '0s', cor: '#fff7cc' },
+          { duracao: '8.5s', atraso: '-2.8s', cor: '#ffd700' },
+          { duracao: '11s', atraso: '-5.5s', cor: '#ffffff' },
+        ].map((faisca) => (
+          <div
+            key={faisca.duracao}
+            aria-hidden="true"
+            className="absolute inset-0 rounded-full pointer-events-none"
+            style={{
+              animation: `frame-sovereign-spin ${faisca.duracao} linear infinite`,
+              animationDelay: faisca.atraso,
+            }}
+          >
+            <span
+              className={cn(
+                'absolute left-1/2 -translate-x-1/2 rotate-45 rounded-[1px]',
+                sparkSize
+              )}
+              style={{
+                top: '-4%',
+                background: faisca.cor,
+                boxShadow: `0 0 8px ${faisca.cor}, 0 0 16px rgba(255, 215, 0, 0.9)`,
+                animation: 'frame-sovereign-spark 1.8s ease-in-out infinite',
+              }}
+            />
+          </div>
+        ))}
+
 
       {/* Orbiting particles inside the border for orbiting animations */}
       {frame.animationStyle === 'orbit-gems' && (
@@ -204,15 +338,36 @@ export function AvatarFrame({
         {children}
       </div>
 
+      {/* Coroa flutuante exclusiva do ADM */}
+      {isAdminFrame && (size === 'xl' || size === 'lg') && (
+        <span
+          aria-hidden="true"
+          className={cn(
+            'absolute left-1/2 -translate-x-1/2 pointer-events-none z-20 select-none',
+            size === 'xl' ? '-top-[20%] text-[1.6rem]' : '-top-[11%] text-[1.1rem]'
+          )}
+          style={{
+            filter: 'drop-shadow(0 0 8px rgba(255, 214, 10, 0.95))',
+            animation: 'frame-sovereign-halo 2.4s ease-in-out infinite',
+          }}
+        >
+          👑
+        </span>
+      )}
+
       {/* Ribbon title badge for frames with custom status tags */}
       {frame.badgeText && (size === 'xl' || size === 'lg') && (
         <span 
           className={cn(
             "absolute -bottom-1 px-2.5 py-0.5 rounded-full text-[0.5rem] font-black uppercase tracking-widest border border-white/10 shadow-md pointer-events-none z-20 text-white leading-none scale-90",
-            frame.badgeColor || "bg-[#10b981] bg-gradient-to-r from-emerald-500 to-teal-500"
+            isAdminFrame
+              ? "-bottom-2 scale-100 justify-center border-yellow-200/80 bg-gradient-to-r from-amber-600 via-yellow-300 to-amber-500 px-3 py-1 text-[0.5625rem] text-[#2a1a00] animate-pulse"
+              : frame.badgeColor || "bg-[#10b981] bg-gradient-to-r from-emerald-500 to-teal-500"
           )}
           style={{
-            boxShadow: `0 2px 8px ${glow}`,
+            boxShadow: isAdminFrame
+              ? '0 0 18px rgba(255, 214, 10, 0.9), 0 2px 8px rgba(0, 0, 0, 0.5)'
+              : `0 2px 8px ${glow}`,
           }}
         >
           {frame.badgeText}

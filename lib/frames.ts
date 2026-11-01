@@ -5,7 +5,7 @@ export interface AvatarFrame {
   desc: string;
   borderGradient: string; // Tailwind linear-gradient or custom CSS gradient
   glowColor: string; // Shadow styling e.g., 'rgba(57, 137, 246, 0.4)'
-  animationStyle: "spin-slow" | "pulse-glow" | "neon-flicker" | "rainbow-flow" | "fire-aura" | "stars-shimmer" | "retro-lines" | "matrix-rain" | "waves-flow" | "orbit-gems" | "none";
+  animationStyle: "spin-slow" | "pulse-glow" | "neon-flicker" | "rainbow-flow" | "fire-aura" | "stars-shimmer" | "retro-lines" | "matrix-rain" | "waves-flow" | "orbit-gems" | "sovereign-aura" | "none";
   requiredXp: number; // Gamified: unlock requirement (accumulated study XP)
   emojiSymbol?: string;
   badgeText?: string;
@@ -18,10 +18,11 @@ export const AVATAR_FRAMES: AvatarFrame[] = [
     id: "frame_owner",
     name: "Soberano Fundador",
     category: "Imperial",
-    desc: "A moldura celestial suprema reservada exclusivamente para o ADM do Cosmos.",
-    borderGradient: "linear-gradient(135deg, #fff2a3 0%, #ffd700 30%, #f1a80a 70%, #9a6b05 100%)",
-    glowColor: "rgba(251, 191, 36, 0.85)",
-    animationStyle: "stars-shimmer",
+    desc: "A moldura celestial suprema reservada exclusivamente para o ADM do Cosmos: coroa viva, raios dourados e anéis giratórios.",
+    borderGradient:
+      "conic-gradient(from 0deg, #fffbe6 0%, #ffd700 18%, #b45309 34%, #fffdf2 50%, #fbbf24 66%, #7c2d12 82%, #fffbe6 100%)",
+    glowColor: "rgba(255, 214, 10, 0.95)",
+    animationStyle: "sovereign-aura",
     requiredXp: 0,
     emojiSymbol: "👑",
     badgeText: "ADM",

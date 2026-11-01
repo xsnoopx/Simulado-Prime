@@ -3340,6 +3340,7 @@ export default function ProfilePage() {
                             const isSelected = editAvatarFrameId === frame.id;
                             const isCurrentlyEquipped =
                               profile.avatarFrameId === frame.id;
+                            const isAdminFrame = frame.id === "frame_owner";
 
                             return (
                               <button
@@ -3355,11 +3356,19 @@ export default function ProfilePage() {
                                   }
                                 }}
                                 className={`p-3 rounded-2xl border transition-all text-left flex items-center justify-between gap-3 relative overflow-hidden w-full ${
-                                  isSelected
-                                    ? "bg-purple-600/10 border-purple-500/50 shadow-inner"
-                                    : "bg-white/5 hover:bg-white/[0.08] border-white/5"
+                                  isAdminFrame
+                                    ? "bg-gradient-to-r from-amber-500/20 via-yellow-400/5 to-transparent border-amber-300/50 shadow-[0_0_24px_rgba(251,191,36,0.28)]"
+                                    : isSelected
+                                      ? "bg-purple-600/10 border-purple-500/50 shadow-inner"
+                                      : "bg-white/5 hover:bg-white/[0.08] border-white/5"
                                 } ${!isUnlocked && !isPremiumLocked ? "opacity-40 cursor-not-allowed" : "cursor-pointer"}`}
                               >
+                                {isAdminFrame && (
+                                  <span
+                                    aria-hidden="true"
+                                    className="pointer-events-none absolute inset-0 bg-[linear-gradient(110deg,transparent_35%,rgba(255,255,255,0.16)_48%,transparent_62%)] animate-pulse"
+                                  />
+                                )}
                                 <div className="flex items-center gap-3">
                                   {/* Small previews inside frame row */}
                                   <div className="shrink-0 scale-95">
@@ -3393,11 +3402,13 @@ export default function ProfilePage() {
                                       {frame.desc}
                                     </p>
                                     <p className="text-[0.5625rem] font-mono font-bold text-amber-400 leading-none">
-                                      {frame.isPremiumOnly && !isPremiumUser
-                                        ? "✨ Exclusivo Premium"
-                                        : frame.requiredXp === 0
-                                          ? "Disponível"
-                                          : `Requer ${frame.requiredXp} XP`}
+                                      {isAdminFrame
+                                        ? "👑 Exclusivo do Administrador"
+                                        : frame.isPremiumOnly && !isPremiumUser
+                                          ? "✨ Exclusivo Premium"
+                                          : frame.requiredXp === 0
+                                            ? "Disponível"
+                                            : `Requer ${frame.requiredXp} XP`}
                                     </p>
                                   </div>
                                 </div>
