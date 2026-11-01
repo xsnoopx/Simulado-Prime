@@ -39,7 +39,7 @@ const RIVAL_PLAYERS_DATA = [
     avatarUnsplashId: "photo-1464802686167-b939a6910659",
     emoji: "🌟",
     bg: "bg-emerald-500/20 text-emerald-300",
-    avatarFrameId: "frame_01",
+    avatarFrameId: "frame_03",
   },
   {
     id: "rival_2",
@@ -49,7 +49,7 @@ const RIVAL_PLAYERS_DATA = [
     avatarUnsplashId: "photo-1451187580459-43490279c0fa",
     emoji: "🔭",
     bg: "bg-sky-500/20 text-sky-300",
-    avatarFrameId: "frame_01",
+    avatarFrameId: "frame_02",
   },
   {
     id: "rival_3",
@@ -59,7 +59,7 @@ const RIVAL_PLAYERS_DATA = [
     avatarUnsplashId: "photo-1543722530-d2c3201371e7",
     emoji: "🧑‍🚀",
     bg: "bg-indigo-500/20 text-indigo-300",
-    avatarFrameId: "frame_01",
+    avatarFrameId: "frame_05",
   },
   {
     id: "rival_4",
@@ -69,7 +69,7 @@ const RIVAL_PLAYERS_DATA = [
     avatarUnsplashId: "photo-1506318137071-a8e063b4bec0",
     emoji: "🌠",
     bg: "bg-violet-500/20 text-violet-300",
-    avatarFrameId: "frame_01",
+    avatarFrameId: "frame_07",
   },
   {
     id: "rival_5",
@@ -79,7 +79,7 @@ const RIVAL_PLAYERS_DATA = [
     avatarUnsplashId: "photo-1563089145-599997674d42",
     emoji: "⚡",
     bg: "bg-fuchsia-500/20 text-fuchsia-300",
-    avatarFrameId: "frame_01",
+    avatarFrameId: "frame_04",
   },
   {
     id: "rival_6",
@@ -89,7 +89,7 @@ const RIVAL_PLAYERS_DATA = [
     avatarUnsplashId: "photo-1485827404703-89b55fcc595e",
     emoji: "🧠",
     bg: "bg-purple-500/20 text-purple-300",
-    avatarFrameId: "frame_01",
+    avatarFrameId: "frame_11",
   },
   {
     id: "rival_7",
@@ -99,7 +99,7 @@ const RIVAL_PLAYERS_DATA = [
     avatarUnsplashId: "photo-1534447677768-be436bb09401",
     emoji: "🔥",
     bg: "bg-orange-500/20 text-orange-300",
-    avatarFrameId: "frame_01",
+    avatarFrameId: "frame_06",
   },
   {
     id: "rival_8",
@@ -109,7 +109,7 @@ const RIVAL_PLAYERS_DATA = [
     avatarUnsplashId: "photo-1569336415962-a4bd9f69cd83",
     emoji: "🔷",
     bg: "bg-teal-500/20 text-teal-300",
-    avatarFrameId: "frame_01",
+    avatarFrameId: "frame_10",
   },
   {
     id: "rival_9",
@@ -119,7 +119,7 @@ const RIVAL_PLAYERS_DATA = [
     avatarUnsplashId: "photo-1618005182384-a83a8bd57fbe",
     emoji: "🔮",
     bg: "bg-pink-500/20 text-pink-300",
-    avatarFrameId: "frame_01",
+    avatarFrameId: "frame_35",
   },
   {
     id: "rival_10",
@@ -129,7 +129,7 @@ const RIVAL_PLAYERS_DATA = [
     avatarUnsplashId: "photo-1535223289827-42f1e9919769",
     emoji: "⚙️",
     bg: "bg-neutral-800/40 text-neutral-400",
-    avatarFrameId: "frame_01",
+    avatarFrameId: "frame_15",
   },
 ];
 
@@ -1174,17 +1174,24 @@ export default function RankingPage() {
                     {/* Ring glow */}
                     <div className="absolute -inset-1 rounded-full bg-slate-400/20 blur-md" />
                     {/* Circle image container */}
-                    <div className="w-14 h-14 rounded-full border-2 border-slate-400 overflow-hidden relative bg-[#131924]">
-                      <img
-                        src={getAvatarUrl(podium[1].avatarUnsplashId)}
-                        alt={podium[1].name}
-                        className="w-full h-full object-cover"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
+                    <AvatarFrame
+                      size="custom"
+                      frameId={podium[1].avatarFrameId}
+                      isHoverable={false}
+                      className="w-14 h-14 p-[2px]"
+                    >
+                      <div className="relative w-full h-full rounded-full overflow-hidden">
+                        <img
+                          src={getAvatarUrl(podium[1].avatarUnsplashId)}
+                          alt={podium[1].name}
+                          className="w-full h-full object-cover"
+                          referrerPolicy="no-referrer"
+                        />
+                      </div>
+                    </AvatarFrame>
                     {/* Position badge */}
-                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-slate-400 text-slate-950 font-black text-[0.5625rem] px-2 py-0.5 rounded-full shadow border border-white/20">
-                      2º
+                    <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-slate-400 text-slate-950 font-black text-[0.5625rem] flex items-center justify-center border-2 border-[#0d0c18] shadow">
+                      2
                     </div>
                   </div>
                   <span className="font-bold text-[0.6875rem] text-white truncate w-full px-1 flex items-center justify-center gap-0.5">
@@ -1215,17 +1222,24 @@ export default function RankingPage() {
                     {/* Golden glow */}
                     <div className="absolute -inset-1.5 rounded-full bg-yellow-400/30 blur-lg" />
                     {/* Circle image container */}
-                    <div className="w-18 h-18 rounded-full border-3 border-yellow-400 overflow-hidden relative bg-[#131924]">
-                      <img
-                        src={getAvatarUrl(podium[0].avatarUnsplashId)}
-                        alt={podium[0].name}
-                        className="w-full h-full object-cover"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
+                    <AvatarFrame
+                      size="custom"
+                      frameId={podium[0].avatarFrameId}
+                      isHoverable={false}
+                      className="w-18 h-18 p-[3px]"
+                    >
+                      <div className="relative w-full h-full rounded-full overflow-hidden">
+                        <img
+                          src={getAvatarUrl(podium[0].avatarUnsplashId)}
+                          alt={podium[0].name}
+                          className="w-full h-full object-cover"
+                          referrerPolicy="no-referrer"
+                        />
+                      </div>
+                    </AvatarFrame>
                     {/* Position badge */}
-                    <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-950 font-black text-[0.625rem] px-2.5 py-0.5 rounded-full shadow-lg border border-white/30 flex items-center gap-0.5">
-                      1º 👑
+                    <div className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-yellow-950 font-black text-[0.625rem] flex items-center justify-center border-2 border-[#0d0c18] shadow-lg">
+                      1
                     </div>
                   </div>
                   <span className="font-extrabold text-[0.75rem] text-white truncate w-full px-1 flex items-center justify-center gap-0.5">
@@ -1254,17 +1268,24 @@ export default function RankingPage() {
                     {/* Ring glow */}
                     <div className="absolute -inset-1 rounded-full bg-amber-600/15 blur-md" />
                     {/* Circle image container */}
-                    <div className="w-14 h-14 rounded-full border-2 border-amber-600 overflow-hidden relative bg-[#131924]">
-                      <img
-                        src={getAvatarUrl(podium[2].avatarUnsplashId)}
-                        alt={podium[2].name}
-                        className="w-full h-full object-cover"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
+                    <AvatarFrame
+                      size="custom"
+                      frameId={podium[2].avatarFrameId}
+                      isHoverable={false}
+                      className="w-14 h-14 p-[2px]"
+                    >
+                      <div className="relative w-full h-full rounded-full overflow-hidden">
+                        <img
+                          src={getAvatarUrl(podium[2].avatarUnsplashId)}
+                          alt={podium[2].name}
+                          className="w-full h-full object-cover"
+                          referrerPolicy="no-referrer"
+                        />
+                      </div>
+                    </AvatarFrame>
                     {/* Position badge */}
-                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-amber-600 text-amber-50 font-black text-[0.5625rem] px-2 py-0.5 rounded-full shadow border border-white/20">
-                      3º
+                    <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-amber-600 text-amber-50 font-black text-[0.5625rem] flex items-center justify-center border-2 border-[#0d0c18] shadow">
+                      3
                     </div>
                   </div>
                   <span className="font-bold text-[0.6875rem] text-white truncate w-full px-1 flex items-center justify-center gap-0.5">
