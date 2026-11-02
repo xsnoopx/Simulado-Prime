@@ -280,8 +280,8 @@ export default function LinguagensPage() {
                 <ChevronLeft className="w-5 h-5" />
               </motion.button>
             </Link>
-            <div className="text-center flex-1">
-              <div className="flex items-center justify-center gap-2">
+            <div className="text-center flex-1 min-w-0">
+              <div className="flex flex-wrap items-center justify-center gap-2">
                 <h1 className="text-2xl font-display font-bold uppercase tracking-widest text-secondary">Linguagens</h1>
                 <div className="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-secondary/10 border border-secondary/20">
                   <Sparkles className="w-2.5 h-2.5 text-secondary" />

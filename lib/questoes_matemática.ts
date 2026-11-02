@@ -54,14 +54,13 @@ export const questoes = {
     },
     {
       "id": 161,
-      "pergunta": "A Lei de Zipf, batizada com o nome do linguista americano George Zipf, é uma lei empírica que relaciona a frequência ( f ) de uma palavra em um dado texto com o seu ranking (r). Ela é dada por f = A r B .\nO ranking da palavra é a sua posição ao ordenar as palavras por ordem de frequência. Ou seja, r = 1 para a palavra mais frequente, r = 2 para a segunda palavra mais frequente e assim sucessivamente. A e B são constantes positivas.\nDiponível em: http://klein.sbm.org.br. Acesso em: 12 ago. 2020 (adatpado).\nCom base nos valores de X = log (r) e Y = log ( f ) , é possível estimar valores para A e B.\nNo caso hipotético em que a lei é verificada exatamente, a relação entre Y e X é",
+      "pergunta": "A Lei de Zipf, batizada com o nome do linguista americano George Zipf, é uma lei empírica que relaciona a frequência (f) de uma palavra em um dado texto com o seu ranking (r). Ela é dada por f = A / r^B.\nO ranking da palavra é a sua posição ao ordenar as palavras por ordem de frequência. Ou seja, r = 1 para a palavra mais frequente, r = 2 para a segunda palavra mais frequente e assim sucessivamente. A e B são constantes positivas.\nDisponível em: http://klein.sbm.org.br. Acesso em: 12 ago. 2020 (adaptado).\nCom base nos valores de X = log (r) e Y = log (f), é possível estimar valores para A e B.\nNo caso hipotético em que a lei é verificada exatamente, a relação entre Y e X é",
       "opcoes": [
-        "A) Y = log A −B X",
-        "B) Y = log A X + log B",
-        "C) Y = BA − X log",
-        "D) Y =",
-        "B) XA log",
-        "E) Y = X B log"
+        "A) Y = log A − B X",
+        "B) Y = log A / (X + log B)",
+        "C) Y = (log A / B) − X",
+        "D) Y = log A / (B · X)",
+        "E) Y = log A / X^B"
       ],
       "correta": "A",
       "ano": 2020
@@ -2057,7 +2056,7 @@ export const questoes = {
     },
     {
       "id": 9003,
-      "pergunta": "Uma usina de energia limpa baseada em fusão nuclear experimental (reator Tokamak comercial) atua no fornecimento de energia para áreas urbanas e industriais inteligentes de maneira inovadora. A geração contínua de eletricidade após t minutos de confinamento estável do plasma superaquecido é dada pela equação exponencial P(t) = P_0 * 2^(0,1 * t), onde P_0 representa a carga inicial de ignição correspondente a 50 megawatts (MW) de base. Para que a matriz de distribuição metropolitana atinja a autossustentação sem comprometer o fluxo térmico do reator, a potência total de fornecimento deve chegar a exatamente 1 600 MW.\nO intervalo exato de tempo, expresso em minutos, exigido para que a fusão alcance essa marca energética de segurança estabelecida no projeto é de:",
+      "pergunta": "Uma usina de energia limpa baseada em fusão nuclear experimental (reator Tokamak comercial) atua no fornecimento de energia para áreas urbanas e industriais inteligentes de maneira inovadora. A geração contínua de eletricidade após t minutos de confinamento estável do plasma superaquecido é dada pela equação exponencial P(t) = P₀ · 2^(0,1 · t), onde P₀ representa a carga inicial de ignição correspondente a 50 megawatts (MW) de base. Para que a matriz de distribuição metropolitana atinja a autossustentação sem comprometer o fluxo térmico do reator, a potência total de fornecimento deve chegar a exatamente 1 600 MW.\nO intervalo exato de tempo, expresso em minutos, exigido para que a fusão alcance essa marca energética de segurança estabelecida no projeto é de:",
       "opcoes": [
         "A) 100 minutos.",
         "B) 50 minutos.",
@@ -2093,6 +2092,2359 @@ export const questoes = {
       ],
       "correta": "D",
       "ano": 2026
+    },
+    {
+      "id": 2018136,
+      "pergunta": "A Transferência Eletrônica Disponível (TED) é uma transferência financeira de valores entre diferentes bancos. Um economista decide analisar os valores enviados por meio de TEDs entre cinco bancos (1, 2, 3, 4 e 5) durante um mês. Para isso, ele dispõe esses valores em uma matriz A = [aij], em que 1 ≤ i, j ≤ 5, e aij corresponde ao total proveniente das operações feitas via TED, em milhão de real, transferidos do banco i para o banco j durante o mês. Observe que os elementos aii = 0, uma vez que TED é uma transferência entre bancos distintos. Esta é a matriz obtida para essa análise:\nA =\n[0, 2, 0, 2, 1]\n[0, 0, 2, 1, 0]\n[0, 1, 0, 0, 1]\n[0, 2, 2, 0, 0]\n[3, 0, 1, 1, 0]\nCom base nessas informações, o banco que transferiu a maior quantia via TED é o banco",
+      "opcoes": [
+        "A) 1.",
+        "B) 2.",
+        "C) 3.",
+        "D) 4.",
+        "E) 5."
+      ],
+      "correta": "A",
+      "ano": 2018
+    },
+    {
+      "id": 2018137,
+      "pergunta": "Em um contrato de empréstimo prevê que quando uma parcela é paga de forma antecipada, conceder-se-á uma redução no juro de acordo com o período de antecipação. Nesse caso, paga-se o valor presente, que é o valor naquele momento, onde qualquer um deveria ser paga em uma data futura. Um valor presente P submetido a juros compostos sem taxa i, por um período de tempo n, produz um valor futuro F determinado pela fórmula F = P (1 + i)^n Em um contrato de empréstimo com sessenta parcelas fixas mensais, de R$ 820,00, a uma taxa de juros de 1,32% ao mês, junto com a trigésima parcela será paga antecipadamente uma outra parcela, desde que o desconto seja superior a 25% do valor da parcela. Utilize 0,287 como aproximação para ln(4/3) e 0,0131 como aproximação para ln(1,0132). A primeira das parcelas que poderá ser antecipada junto com a 30ª é a",
+      "opcoes": [
+        "A) 56ª",
+        "B) 55ª",
+        "C) 52ª",
+        "D) 51ª",
+        "E) 45ª"
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018141,
+      "pergunta": "A prefeitura de um pequeno município do interior decide colocar postes para iluminação ao longo de uma estrada retilínea, que inicia em uma praça central e termina numa fazenda na zona rural. Como a praça já possui iluminação, o primeiro poste será colocado a 80 metros da praça, o segundo, a 100 metros, o terceiro, a 120 metros, e assim sucessivamente, mantendo-se sempre uma distância de vinte metros entre os postes, até que o último poste seja colocado a uma distância de 1 380 metros da praça.\nSe a prefeitura pode pagar, no máximo, R$ 8 000,00 por poste colocado, o maior valor que poderá gastar com a colocação desses postes é",
+      "opcoes": [
+        "A) R$ 512 000,00.",
+        "B) R$ 520 000,00.",
+        "C) R$ 528 000,00.",
+        "D) R$ 552 000,00.",
+        "E) R$ 584 000,00."
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018143,
+      "pergunta": "Os tipos de prata normalmentes vendidos são 975, 950 e 925. Essa classificação é feita de acordo com a sua pureza. Por exemplo, a prata 975 é a substância constituída de 975 partes de prata pura e 25 partes de cobre em 1 000 partes da substância. Já a prata 950 é constituída de 950 partes de prata pura e 50 de cobre em 1 000; e a prata 925 é constituída de 925 partes de prata pura e 75 partes de cobre em 1 000. Um ourives possui 10 gramas de prata 925 e deseja obter 40 gramas de prata 950 para produção de uma joia.\nNessas condições, quantos gramas de prata e de cobre, respectivamente, devem ser fundidos com os 10 gramas de prata 925?",
+      "opcoes": [
+        "A) 28,75 e 0,75",
+        "B) 28,75 e 1,25",
+        "C) 28,50 e 1,50",
+        "D) 27,75 e 2,25",
+        "E) 25,00 e 5,00"
+      ],
+      "correta": "B",
+      "ano": 2018
+    },
+    {
+      "id": 2018146,
+      "pergunta": "Numa atividade de treinamento realizada no Exército de um determinado país, três equipes — Alpha, Beta e Gama — foram designadas a percorrer diferentes caminhos, todos com os mesmos pontos de partida e de chegada. A equipe Alpha realizou seu percurso em 90 minutos com uma velocidade média de 60 km/h. A equipe Beta também percorreu sua trajetória em 90 minutos, mas sua velocidade média foi de 5,0 km/h. Com uma velocidade média de 6,5 km/h, a equipe Gama concluiu seu caminho em 60 minutos. Com base nesses dados, foram comparadas as distâncias dAlpha, dBeta e dGama percorridas pelas equipes.\nA ordem das distâncias percorridas pelas equipes Alpha, Beta e Gama é",
+      "opcoes": [
+        "A) dGama < dBeta < dAlpha",
+        "B) dAlpha < dBeta < dGama",
+        "C) dGama < dAlpha = dBeta",
+        "D) dBeta < dAlpha < dGama",
+        "E) dGama < dAlpha < dBeta"
+      ],
+      "correta": "A",
+      "ano": 2018
+    },
+    {
+      "id": 2018148,
+      "pergunta": "Uma empresa deseja iniciar uma campanha publicitária divulgando uma promoção para seus possíveis consumidores. Para esse tipo de campanha, os meios mais viáveis são a distribuição de panfletos na rua e anúncios na rádio. Sabe-se e considera-se que a população alcançada para distribuição de panfletos seja igual à quantidade de panfletos distribuídos, enquanto que a alcançada por um anúncio na rádio seja igual à quantidade de ouvintes desse anúncio. O custo de cada anúncio na rádio é de R$ 120,00, e a estimativa é de que seja ouvido por 1 500 pessoas. Já a produção e a distribuição dos panfletos custam R$ 180,00 cada 1 000 unidades, considerando que cada pessoa será alcançada por um único desses meios de divulgação, a empresa pretende investir em ambas as mídias. Considere X e Y os valores (em real) gastos em anúncios na rádio e com panfletos, respectivamente.\nO número de pessoas alcançadas pela campanha será dado pela expressão",
+      "opcoes": [
+        "A) 50X/4 + 50Y/9",
+        "B) 50X/9 + 50Y/4",
+        "C) 4X/50 + 50Y/50",
+        "D) 50/50 + 4X/9Y",
+        "E) 50/50 + 9X/4Y"
+      ],
+      "correta": "A",
+      "ano": 2018
+    },
+    {
+      "id": 2018150,
+      "pergunta": "Para ganhar um prêmio, uma pessoa deverá retirar, sucessivamente e sem reposição, duas bolas pretas de uma mesma urna. Inicialmente, as quantidades e cores das bolas são como descritas a seguir: Urna A – Possui três bolas brancas, duas bolas pretas e uma bola verde; Urna B – Possui seis bolas brancas, três bolas pretas e uma bola verde; Urna C – Possui duas bolas pretas e duas bolas verdes; Urna D – Possui três bolas brancas e três bolas pretas. A pessoa deve escolher uma entre as cinco opções apresentadas: Opção 1 – Retirar, aleatoriamente, duas bolas da urna A; Opção 2 – Retirar, aleatoriamente, duas bolas da urna B; Opção 3 – Passar, aleatoriamente, uma bola da urna C para a urna A; após isso, retirar, aleatoriamente, duas bolas da urna A; Opção 4 – Passar, aleatoriamente, uma bola da urna D para a urna C; após isso, retirar, aleatoriamente, duas bolas da urna C; Opção 5 – Passar, aleatoriamente, uma bola da urna C para a urna D; após isso, retirar, aleatoriamente, duas bolas da urna D.\nCom o objetivo de obter a maior probabilidade possível de ganhar o prêmio, a pessoa deve escolher a opção",
+      "opcoes": [
+        "A) 1.",
+        "B) 2.",
+        "C) 3.",
+        "D) 4.",
+        "E) 5."
+      ],
+      "correta": "E",
+      "ano": 2018
+    },
+    {
+      "id": 2018156,
+      "pergunta": "Um rapaz estuda em uma escola que fica longe de sua casa e por isso precisa utilizar o transporte público. Como é muito reservado, adora ter dias de folga para exata (sem considerar os segundos) em que o ônibus passa pelo ponto de espera. Também gosta que nunca cheguem chegar ao ponto de ônibus antes de 6 h 15 min da manhã, analisando os dados coletados durante o mês de fevereiro, o qual tem 29 dias letivos, ele concluiu que 6 h 21 min foi o que mais se repetiu, e que a mediana do conjunto de dados é 6 h 22 min. A probabilidade de que, em algum dos dias letivos de fevereiro, esse rapaz tenha apanhado o ônibus antes de 6 h 21 min da manhã é, no máximo,",
+      "opcoes": [
+        "A) 4/29",
+        "B) 5/29",
+        "C) 7/29",
+        "D) 21/29",
+        "E) 8/29"
+      ],
+      "correta": "D",
+      "ano": 2018
+    },
+    {
+      "id": 2018161,
+      "pergunta": "Para apagar os focos A e B de um incêndio, que estavam a uma distância de 30 m um do outro, os bombeiros de um quartel decidiram se posicionar de modo que a distância de um bombeiro ao foco A, de temperatura mais elevada, fosse sempre o dobro da distância desse bombeiro ao foco B, de temperatura menos elevada.\nNessas condições, a maior distância, em metro, que dois bombeiros poderiam ter entre eles é",
+      "opcoes": [
+        "A) 30.",
+        "B) 40.",
+        "C) 45.",
+        "D) 60.",
+        "E) 68."
+      ],
+      "correta": "B",
+      "ano": 2018
+    },
+    {
+      "id": 2018162,
+      "pergunta": "Torneios de tênis, em geral, são disputados em sistema de eliminatória simples. Nesse sistema, são disputadas partidas entre dois competidores, com a eliminação do perdedor e promoção do vencedor para a fase seguinte. Dessa forma, se na 1ª fase o torneio conta com 2n competidores, então na 2ª fase restarão n competidores, e assim sucessivamente até a partida final. Em um torneio de tênis, disputado nesse sistema, participam 128 tenistas.\nPara se definir o campeão desse torneio, o número de partidas necessárias é dado por",
+      "opcoes": [
+        "A) 128.",
+        "B) 64 + 32 + 16 + 8 + 4 + 2",
+        "C) 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1",
+        "D) 128 + 64 + 32 + 16 + 8 + 4 + 2",
+        "E) 64 + 32 + 16 + 8 + 4 + 2 + 1"
+      ],
+      "correta": "E",
+      "ano": 2018
+    },
+    {
+      "id": 2018164,
+      "pergunta": "Um edifício tem a numeração dos andares iniciando no térreo (T), e continuando com primeiro, segundo, terceiro, ..., até o último andar. Uma criança entrou no elevador e, tocando no painel, seguiu uma sequência de andares, parando, subindo e descendo, e porta em diversos andares. A partir de onde entrou a criança, o elevador subiu sete andares, em seguida desceu dez, desceu mais treze, subiu nove, desceu quatro e parou no quinto andar, finalizando a sequência. Considere que, no trajeto seguido pela criança, o elevador parou uma vez no último andar do edifício.\nDe acordo com as informações dadas, o último andar do edifício é o",
+      "opcoes": [
+        "A) 16º",
+        "B) 20º",
+        "C) 23º",
+        "D) 25º",
+        "E) 32º"
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018165,
+      "pergunta": "O Salão do Automóvel de São Paulo é um evento no qual vários fabricantes expõem seus modelos mais recentes de veículos, mostrando, principalmente, suas inovações em design e tecnologia. Disponível em: www.salaodoautomovel.com.br. Acesso em: 4 fev. 2018 (adaptado). Uma montadora pretende participar desse evento com dois estandes, um na entrada e outro na região central do salão, expondo, em cada um deles, um carro compacto e uma caminhonete. Para compor os estandes, foram disponibilizados pela montadora quatro carros compactos, de modelos distintos, e seis caminhonetes de diferentes cores para serem escolhidos aqueles que serão expostos. A posição dos carros dentro de cada estande é irrelevante.\nUma expressão que fornece a quantidade de maneiras diferentes que os estandes podem ser compostos é",
+      "opcoes": [
+        "A) A⁴₁₀",
+        "B) C⁴₁₀",
+        "C) C²₄ × C²₆ × 2 × 2",
+        "D) A²₄ × A²₆ × 2 × 2",
+        "E) C²₄ × C²₆"
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018166,
+      "pergunta": "Os alunos da disciplina de estatística, em um curso universitário, realizam quatro avaliações por semestre com os pesos de 20%, 10%, 30% e 40%, respectivamente. No final do semestre, precisam obter uma média nas quatro avaliações de, no mínimo, 60 pontos para serem aprovados. Um estudante dessa disciplina obteve os seguintes pontos nas três primeiras avaliações: 46, 60 e 50, respectivamente.\nO mínimo de pontos que esse estudante precisa obter na quarta avaliação para ser aprovado é",
+      "opcoes": [
+        "A) 29.8.",
+        "B) 71.0.",
+        "C) 74.5.",
+        "D) 75.5.",
+        "E) 84.0."
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018167,
+      "pergunta": "O gerente do setor de recursos humanos de uma empresa está organizando uma avaliação em que uma das etapas é um jogo de perguntas e respostas. Para essa etapa, ele classificou as perguntas por nível de dificuldade em fácil, médio e difícil, e escreveu cada pergunta em cartões para colocação em uma urna. Contudo, após depositar vinte perguntas de diferentes níveis na urna, ele observou que 25% delas eram de nível fácil. Sabendo que as perguntas de nível fácil sejam, a maioria, o gerente decidiu acrescentar mais perguntas de nível fácil à urna, de modo que a probabilidade de o primeiro participante retirar, aleatoriamente, uma pergunta de nível fácil seja de 75%.\nCom essas informações, a quantidade de perguntas de nível fácil que o gerente deve acrescentar à urna é igual a",
+      "opcoes": [
+        "A) 10.",
+        "B) 15.",
+        "C) 35.",
+        "D) 40.",
+        "E) 45."
+      ],
+      "correta": "D",
+      "ano": 2018
+    },
+    {
+      "id": 2018169,
+      "pergunta": "Uma empresa de comunicação tem a tarefa de elaborar um material publicitário de um estaleiro para divulgar um novo navio, equipado com um guindaste de 15 m de altura e uma esteira de 90 m de comprimento. No desenho desse navio, a representação do guindaste deve ter sua altura entre 0,5 cm e 1 cm, enquanto a esteira deve apresentar comprimento superior a 4 cm. Todo o desenho deverá ser feito em uma escala 1 : X.\nOs valores possíveis para X são, apenas,",
+      "opcoes": [
+        "A) X > 1 500.",
+        "B) X < 3 000.",
+        "C) 1 500 < X < 2 250.",
+        "D) 1 500 < X < 3 000.",
+        "E) 2 250 < X < 3 000."
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018174,
+      "pergunta": "O avanço em ciência da computação, estamos próximos do momento em que o número de transistores no processador de um computador pessoal será da mesma ordem de grandeza que o número de neurônios em um cérebro humano, que é da ordem de 100 bilhões. Uma das grandezas determinantes para o desempenho de um processador é a densidade de transistores, que é o número de transistores por centímetro quadrado. Em 1986, uma empresa fabricava um processador contendo 100 000 transistores distribuídos em 0,25 cm² de área. Desde então, o número de transistores por centímetro quadrado que se pode colocar em um processador dobra a cada dois anos (Lei de Moore). Disponível em: www.pocket-lint.com. Acesso em: 1 dez. 2017 (adaptado).\nConsidere 0,30 como aproximação para log₁₀2. Em que ano uma empresa atingiu ou atingirá a densidade de 100 bilhões de transistores?",
+      "opcoes": [
+        "A) 1999",
+        "B) 2002",
+        "C) 2022",
+        "D) 2026",
+        "E) 2146"
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018175,
+      "pergunta": "Uma loja vende automóveis em N parcelas iguais sem juros. No momento de contratar o financiamento, caso o cliente queira aumentar o prazo, acrescentando mais 5 parcelas, o valor de cada uma das parcelas diminui R$ 200,00. Ou se ele quiser diminuir o prazo, com 5 parcelas a menos, o valor de cada uma das parcelas sobe R$ 232,00. Considere ainda que, nas três possibilidades de pagamento, o valor do automóvel é o mesmo. Todas são sem juros e não é dado desconto em nenhuma das situações.\nNessas condições, qual é a quantidade N de parcelas a serem pagas de acordo com a proposta inicial da loja?",
+      "opcoes": [
+        "A) 20",
+        "B) 24",
+        "C) 29",
+        "D) 40",
+        "E) 58"
+      ],
+      "correta": "B",
+      "ano": 2018
+    },
+    {
+      "id": 2018178,
+      "pergunta": "Durante uma festa de colégio, um grupo de alunos organizou uma rifa. Oitenta alunos faltaram à festa e não participaram da rifa. Entre os que compareceram, alguns compraram três bilhetes, 20 compraram 2 bilhetes, e muitos compraram apenas um. O total de alunos que comprou um único bilhete era 20% do número total de bilhetes vendidos, e o total de bilhetes vendidos excedeu em 30 o número total de alunos do colégio.\nQuantos alunos compraram somente um bilhete?",
+      "opcoes": [
+        "A) 34",
+        "B) 42",
+        "C) 47",
+        "D) 48",
+        "E) 79"
+      ],
+      "correta": "D",
+      "ano": 2018
+    },
+    {
+      "id": 2021136,
+      "pergunta": "O sistema de numeração romano ainda é utilizado na indicação de capítulos e volumes de livros, na designação de séculos e, em ordem cronológica, de papas e reis de mesmo nome. São utilizadas sete letras do alfabeto:Quatro fundamentais: I (vale 1); X (vale 10); C (vale 100) e M (vale 1 000). Três secundárias: V (vale 5); L (vale 50) e D (vale 500). As regras para escrever números romanos são:1. Não existe símbolo correspondente ao zero;2. Os símbolos fundamentais podem ser repetidos até três vezes e seus valores são adicionados. Exemplo: XXX = 30;3. Uma letra posta à esquerda de outra de maior valor indica subtração dos respectivos valores. Exemplo: IX = 10 – 1 = 9;4. Uma letra posta à direita de outra de maior valor indica adição dos respectivos valores. Exemplo: XI = 10 + 1 = 11. Em uma cidade europeia há uma placa indicando o ano de sua fundação: MCDLXIX.\nQuantos anos de fundação essa cidade comemorará em 2050?",
+      "opcoes": [
+        "A) 379",
+        "B) 381",
+        "C) 579",
+        "D) 581",
+        "E) 601"
+      ],
+      "correta": "D",
+      "ano": 2021
+    },
+    {
+      "id": 2021138,
+      "pergunta": "Uma unidade de medida comum usada para expressar áreas de terrenos de grandes dimensões é o hectare, que equivale a 10 000 m². Um fazendeiro decide fazer um loteamento utilizando 3 hectares de sua fazenda, dos quais 0,9 hectare será usado para a construção de ruas e calçadas e o restante será dividido em terrenos com área de 300 m² cada um. Os 20 primeiros terrenos vendidos terão preços promocionais de R$ 20 000,00 cada, e os demais, R$ 30 000,00 cada.\nNas condições estabelecidas, o valor total, em real, obtido pelo fazendeiro com a venda de todos os terrenos será igual a",
+      "opcoes": [
+        "A) 700 000.",
+        "B) 1 600 000.",
+        "C) 1 900 000.",
+        "D) 2 200 000.",
+        "E) 2 800 000."
+      ],
+      "correta": "C",
+      "ano": 2021
+    },
+    {
+      "id": 2021139,
+      "pergunta": "Uma pessoa produzirá uma fantasia utilizando como materiais: 2 tipos de tecidos diferentes e 5 tipos distintos de pedras ornamentais. Essa pessoa tem à sua disposição 6 tecidos diferentes e 15 pedras ornamentais distintas. A quantidade de fantasias com materiais diferentes que podem ser produzidas é representada pela expressão",
+      "opcoes": [
+        "A) 6! / 4!2! + 15! / 10!5!",
+        "B) 6! / 4!2! * 15! / 10!5!",
+        "C) 6! / 2! + 15! / 5!",
+        "D) 6! / 2! * 15! / 5!",
+        "E) 21! / 7!14!"
+      ],
+      "correta": "A",
+      "ano": 2021
+    },
+    {
+      "id": 2021140,
+      "pergunta": "Os diretores de uma escola precisam construir um laboratório para uso dos alunos. Há duas possibilidades:(i) um laboratório do tipo A, com capacidade para 100 usuários, a um custo de 180 mil reais e gastos de 60 mil reais por ano para manutenção;(ii) um laboratório do tipo B, com capacidade para 80 usuários, a um custo de 120 mil reais e gastos com manutenção de 16 mil reais por ano. Considera-se que, em qualquer caso, o laboratório implantado será utilizado na totalidade de sua capacidade. A economia da escola, na utilização de um laboratório tipo B, em vez de um laboratório tipo A, num período de 4 anos, por usuário, será de",
+      "opcoes": [
+        "A) 1,31 mil reais.",
+        "B) 1,90 mil reais.",
+        "C) 2,30 mil reais.",
+        "D) 2,36 mil reais.",
+        "E) 2,95 mil reais."
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021142,
+      "pergunta": "Um lava-rápido oferece dois tipos de lavagem de veículos: lavagem simples, ao preço de R$ 20,00, e lavagem completa, ao preço de R$ 35,00. Para cobrir as despesas com produtos e funcionários, e não ter prejuízos, o lava-rápido deve ter uma receita diária de, pelo menos, R$ 300,00. Para não ter prejuízo, o menor número de lavagens diárias que o lava-rápido deve efetuar é",
+      "opcoes": [
+        "A) 6.",
+        "B) 8.",
+        "C) 9.",
+        "D) 15.",
+        "E) 20."
+      ],
+      "correta": "C",
+      "ano": 2021
+    },
+    {
+      "id": 2021148,
+      "pergunta": "O dono de uma loja pretende usar cartões imantados para a divulgação de sua loja. A empresa que fornecerá o serviço lhe informa que o custo de fabricação do cartão é de R$ 0,01 por centímetro quadrado e que disponibiliza modelos tendo como faces úteis para impressão:um triângulo equilátero de lado 12 cm;um quadrado de lado 8 cm;um retângulo de lados 11 cm e 8 cm;um hexágono regular de lado 6 cm;um círculo de diâmetro 10 cm. O dono da loja está disposto a pagar, no máximo, R$ 0,80 por cartão. Ele escolherá, dentro desse limite de preço, o modelo que tiver maior área de impressão. Use 3 como aproximação para π e use 1,7 como aproximação para √3.\nNessas condições, o modelo que deverá ser escolhido tem como face útil para impressão um",
+      "opcoes": [
+        "A) triângulo.",
+        "B) quadrado.",
+        "C) retângulo.",
+        "D) hexágono.",
+        "E) círculo."
+      ],
+      "correta": "E",
+      "ano": 2021
+    },
+    {
+      "id": 2021149,
+      "pergunta": "A relação de Newton-Laplace estabelece que o módulo volumétrico de um fluido é diretamente proporcional ao quadrado da velocidade do som (em metro por segundo) no fluido e à sua densidade (em quilograma por metro cúbico), com uma constante de proporcionalidade adimensional.\nNessa relação, a unidade de medida adequada para o módulo volumétrico é",
+      "opcoes": [
+        "A) kg·m⁻²·s⁻¹",
+        "B) kg·m⁻¹·s⁻²",
+        "C) kg·m⁻⁵·s⁻²",
+        "D) kg⁻¹·m¹·s⁻²",
+        "E) kg⁻¹·m⁵·s⁻²"
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021151,
+      "pergunta": "Um automóvel apresenta um desempenho médio de 16 km/L. Um engenheiro desenvolveu um novo motor a combustão que economiza, em relação ao consumo do motor anterior, 0,1 L de combustível a cada 20 km percorridos. O valor do desempenho médio do automóvel com o novo motor, em quilômetro por litro, expresso com uma casa decimal, é",
+      "opcoes": [
+        "A) 15,9.",
+        "B) 16,1.",
+        "C) 16,4.",
+        "D) 17,4.",
+        "E) 18,0."
+      ],
+      "correta": "D",
+      "ano": 2021
+    },
+    {
+      "id": 2021152,
+      "pergunta": "O projeto de um contêiner, em forma de paralelepípedo reto retangular, previa a pintura dos dois lados (interno e externo) de cada uma das quatro paredes com tinta acrílica e a pintura do piso interno com tinta epóxi. O construtor havia pedido, a cinco fornecedores diferentes, orçamentos das tintas necessárias, mas, antes de iniciar a obra, resolveu mudar o projeto original, alterando o comprimento e a largura para o dobro do originalmente previsto, mantendo inalterada a altura. Ao pedir novos orçamentos aos fornecedores, para as novas dimensões, cada um deu uma resposta diferente sobre as novas quantidades de tinta necessárias. Em relação ao previsto para o projeto original, as novas quantidades de tinta necessárias informadas pelos fornecedores foram as seguintes:• Fornecedor I: “O dobro, tanto para as paredes quanto para o piso.”• Fornecedor II: “O dobro para as paredes e quatro vezes para o piso.”• Fornecedor III: “Quatro vezes, tanto para as paredes quanto para o piso.”• Fornecedor IV: “Quatro vezes para as paredes e o dobro para o piso.”• Fornecedor V: “Oito vezes para as paredes e quatro vezes para o piso.”Analisando as informações dos fornecedores, o construtor providenciará a quantidade adequada de material. Considere a porta de acesso do contêiner como parte de uma das paredes. Qual dos fornecedores prestou as informações adequadas, devendo ser o escolhido pelo construtor para a aquisição do material?",
+      "opcoes": [
+        "A) I",
+        "B) II",
+        "C) III",
+        "D) IV",
+        "E) V"
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021153,
+      "pergunta": "Um povoado com 100 habitantes está passando por uma situação de seca prolongada e os responsáveis pela administração pública local decidem contratar a construção de um reservatório. Ele deverá ter a forma de um cilindro circular reto, cuja base tenha 5 metros de diâmetro interno, e atender à demanda de água da população por um período de exatamente sete dias consecutivos. No oitavo dia, o reservatório vazio é completamente reabastecido por carros-pipa. Considere que o consumo médio diário por habitante é de 120 litros de água. Use 3 como aproximação para π. Nas condições apresentadas, o reservatório deverá ser construído com uma altura interna mínima, em metro, igual a",
+      "opcoes": [
+        "A) 1,12.",
+        "B) 3,10.",
+        "C) 4,35.",
+        "D) 4,48.",
+        "E) 5,60."
+      ],
+      "correta": "D",
+      "ano": 2021
+    },
+    {
+      "id": 2021157,
+      "pergunta": "Para realizar um voo entre duas cidades que distam 2 000 km uma da outra, uma companhia aérea utilizava um modelo de aeronave A, capaz de transportar até 200 passageiros. Quando uma dessas aeronaves está lotada de passageiros, o consumo de combustível é de 0,02 litro por quilômetro e por passageiro. Essa companhia resolveu trocar o modelo de aeronave A pelo modelo de aeronave B, que é capaz de transportar 10% de passageiros a mais do que o modelo A, mas consumindo 10% menos combustível por quilômetro e por passageiro.\nA quantidade de combustível consumida pelo modelo de aeronave B, em relação à do modelo de aeronave A, em um voo lotado entre as duas cidades, é",
+      "opcoes": [
+        "A) 10% menor.",
+        "B) 1% menor.",
+        "C) igual.",
+        "D) 1% maior.",
+        "E) 11% maior."
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021158,
+      "pergunta": "Em uma corrida automobilística, os carros podem fazer paradas nos boxes para efetuar trocas de pneus. Nessas trocas, o trabalho é feito por um grupo de três pessoas em cada pneu. Considere que os grupos iniciam o trabalho no mesmo instante, trabalham à mesma velocidade e cada grupo trabalha em um único pneu. Com os quatro grupos completos, são necessários 4 segundos para que a troca seja efetuada. O tempo gasto por um grupo para trocar um pneu é inversamente proporcional ao número de pessoas trabalhando nele. Em uma dessas paradas, um dos trabalhadores passou mal, não pôde participar da troca e nem foi substituído, de forma que um dos quatro grupos de troca ficou reduzido.\nNessa parada específica, com um dos grupos reduzido, qual foi o tempo gasto, em segundo, para trocar os quatro pneus?",
+      "opcoes": [
+        "A) 6,0",
+        "B) 5,7",
+        "C) 5,0",
+        "D) 4,5",
+        "E) 4,4"
+      ],
+      "correta": "A",
+      "ano": 2021
+    },
+    {
+      "id": 2021159,
+      "pergunta": "Um nutricionista verificou, na dieta diária do seu cliente, a falta de 800 mg do mineral A, de 1 000 mg do mineral B e de 1 200 mg do mineral C. Por isso, recomendou a compra de suplementos alimentares que forneçam os minerais faltantes e informou que não haveria problema se consumisse mais desses minerais do que o recomendado. O cliente encontrou cinco suplementos, vendidos em sachês unitários, cujos preços e as quantidades dos minerais estão apresentados a seguir:• Suplemento I: contém 50 mg do mineral A, 100 mg do mineral B e 200 mg do mineral C e custa R$ 2,00;• Suplemento II: contém 800 mg do mineral A, 250 mg do mineral B e 200 mg do mineral C e custa R$ 3,00;• Suplemento III: contém 250 mg do mineral A, 1 000 mg do mineral B e 300 mg do mineral C e custa R$ 5,00;• Suplemento IV: contém 600 mg do mineral A, 500 mg do mineral B e 1 000 mg do mineral C e custa R$ 6,00;• Suplemento V: contém 400 mg do mineral A, 800 mg do mineral B e 1 200 mg do mineral C e custa R$ 8,00. O cliente decidiu comprar sachês de um único suplemento no qual gastasse menos dinheiro e ainda suprisse a falta de minerais indicada pelo nutricionista, mesmo que consumisse alguns deles além de sua necessidade.\nNessas condições, o cliente deverá comprar sachês do suplemento",
+      "opcoes": [
+        "A) I.",
+        "B) II.",
+        "C) III.",
+        "D) IV.",
+        "E) V."
+      ],
+      "correta": "D",
+      "ano": 2021
+    },
+    {
+      "id": 2021173,
+      "pergunta": "Um zootecnista pretende testar se uma nova ração para coelhos é mais eficiente do que a que ele vem utilizando atualmente. A ração atual proporciona uma massa média de 10 kg por coelho, com um desvio padrão de 1 kg, alimentado com essa ração durante um período de três meses. O zootecnista selecionou uma amostra de coelhos e os alimentou com a nova ração pelo mesmo período de tempo. Ao final, anotou a massa de cada coelho, obtendo um desvio padrão de 1,5 kg para a distribuição das massas dos coelhos dessa amostra. Para avaliar a eficiência dessa ração, ele utilizará o coeficiente de variação (CV) que é uma medida de dispersão definida por CV = s/x̄, em que s representa o desvio padrão e x̄, a média das massas dos coelhos que foram alimentados com uma determinada ração. O zootecnista substituirá a ração que vinha utilizando pela nova, caso o coeficiente de variação da distribuição das massas dos coelhos que foram alimentados com a nova ração for menor do que o coeficiente de variação da distribuição das massas dos coelhos que foram alimentados com a ração atual.\nA substituição da ração ocorrerá se a média da distribuição das massas dos coelhos da amostra, em quilograma, for superior a",
+      "opcoes": [
+        "A) 5,0.",
+        "B) 9,5.",
+        "C) 10,0.",
+        "D) 10,5.",
+        "E) 15,0."
+      ],
+      "correta": "E",
+      "ano": 2021
+    },
+    {
+      "id": 2021176,
+      "pergunta": "Aplicativos que gerenciam serviços de hospedagem têm ganhado espaço no Brasil e no mundo por oferecer opções diferenciadas em termos de localização e valores de hospedagem. Em um desses aplicativos, o preço P a ser pago pela hospedagem é calculado considerando um preço por diária d, acrescido de uma taxa fixa de limpeza L e de uma taxa de serviço. Essa taxa de serviço é um valor percentual s calculado sobre o valor pago pelo total das diárias.\nNessa situação, o preço a ser pago ao aplicativo para uma hospedagem de n diárias pode ser obtido pela expressão",
+      "opcoes": [
+        "A) P = d . n + L + d . n . s",
+        "B) P = d . n + L + d . s",
+        "C) P = d + L + s",
+        "D) P = d . n . s + L",
+        "E) P = d . n + L + s"
+      ],
+      "correta": "A",
+      "ano": 2021
+    },
+    {
+      "id": 2021177,
+      "pergunta": "O organizador de uma competição de lançamento de dardos pretende tornar o campeonato mais competitivo. Pelas regras atuais da competição, numa rodada, o jogador lança 3 dardos e pontua caso acerte pelo menos um deles no alvo. O organizador considera que, em média, os jogadores têm, em cada lançamento, 2/3 de probabilidade de acertar um dardo no alvo. A fim de tornar o jogo mais atrativo, planeja modificar as regras de modo que a probabilidade de um jogador pontuar em uma rodada seja igual ou superior a 9/10. Para isso, decide aumentar a quantidade de dardos a serem lançados em cada rodada.\nCom base nos valores considerados pelo organizador da competição, a quantidade mínima de dardos que devem ser disponibilizados em uma rodada para tornar o jogo mais atrativo é",
+      "opcoes": [
+        "A) 2.",
+        "B) 4.",
+        "C) 6.",
+        "D) 9.",
+        "E) 10."
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2022138,
+      "pergunta": "Ao escutar a notícia de que um filme recém-lançado arrecadou, no primeiro mês de lançamento, 1,35 bilhão de reais em bilheteria, um estudante escreveu corretamente o número que representa essa quantia, com todos os seus algarismos.\nO número escrito pelo estudante foi",
+      "opcoes": [
+        "A) 135 000,00.",
+        "B) 1 350 000,00.",
+        "C) 13 500 000,00.",
+        "D) 135 000 000,00.",
+        "E) 1 350 000 000,00."
+      ],
+      "correta": "E",
+      "ano": 2022
+    },
+    {
+      "id": 2022141,
+      "pergunta": "Uma cozinheira produz docinhos especiais por encomenda. Usando uma receita-base de massa, ela prepara uma porção, com a qual produz 50 docinhos maciços de formato esférico, com 2 centímetros de diâmetro. Um cliente encomenda 150 desses docinhos, mas pede que cada um tenha formato esférico com 4 centímetros de diâmetro. A cozinheira pretende preparar o número exato de porções da receita-base de massa necessário para produzir os docinhos dessa encomenda.\nQuantas porções da receita-base de massa ela deve preparar para atender esse cliente?",
+      "opcoes": [
+        "A) 2",
+        "B) 3",
+        "C) 6",
+        "D) 12",
+        "E) 24"
+      ],
+      "correta": "E",
+      "ano": 2022
+    },
+    {
+      "id": 2022143,
+      "pergunta": "Um casal planeja construir em sua chácara uma piscina com o formato de um paralelepípedo reto retângulo com capacidade para 90 000 litros de água. O casal contratou uma empresa de construções que apresentou cinco projetos com diferentes combinações nas dimensões internas de profundidade, largura e comprimento. A piscina a ser construída terá revestimento interno em suas paredes e fundo com uma mesma cerâmica, e o casal irá escolher o projeto que exija a menor área de revestimento.\nAs dimensões internas de profundidade, largura e comprimento, respectivamente, para cada um dos projetos, são:\n• projeto 1: 1,8 metro, 2,0 metros e 25,0 metros;\n• projeto 2: 2,0 metros, 5,0 metros e 9,0 metros;\n• projeto 3: 1,0 metro, 6,0 metros e 15,0 metros;\n• projeto 4: 1,5 metro, 15,0 metros e 4,0 metros;\n• projeto 5: 2,5 metros, 3,0 metros e 12,0 metros.\nO projeto que o casal deverá escolher será o",
+      "opcoes": [
+        "A) 1",
+        "B) 2",
+        "C) 3",
+        "D) 4",
+        "E) 5"
+      ],
+      "correta": "B",
+      "ano": 2022
+    },
+    {
+      "id": 2022145,
+      "pergunta": "Peças metálicas de aeronaves abandonadas em aeroportos serão recicladas. Uma dessas peças é maciça e tem o formato cilíndrico, com a medida do raio da base igual a 4 centímetros e a da altura igual a 50 centímetros. Ela será derretida, e o volume de metal resultante será utilizado para a fabricação de esferas maciças com diâmetro de 1 centímetro, a serem usadas para confeccionar rolamentos. Para estimar a quantidade de esferas que poderão ser produzidas a partir de cada uma das peças cilíndricas, admite-se que não ocorre perda de material durante o processo de derretimento.\nQuantas dessas esferas poderão ser obtidas a partir de cada peça cilíndrica?",
+      "opcoes": [
+        "A) 800",
+        "B) 1 200",
+        "C) 2 400",
+        "D) 4 800",
+        "E) 6 400"
+      ],
+      "correta": "D",
+      "ano": 2022
+    },
+    {
+      "id": 2022147,
+      "pergunta": "Uma loja comercializa cinco modelos de caixas-d’água (1, 2, 3, 4 e 5), todos em formato de cilindro reto de base circular. Os modelos 2, 3, 4 e 5 têm as especificações de suas dimensões dadas em relação às dimensões do modelo 1, cuja profundidade é P e área da base é Ab, como segue:\n• modelo 2: o dobro da profundidade e a metade da área da base do modelo 1;\n• modelo 3: o dobro da profundidade e a metade do raio da base do modelo 1;\n• modelo 4: a metade da profundidade e o dobro da área da base do modelo 1;\n• modelo 5: a metade da profundidade e o dobro do raio da base do modelo 1.\nUma pessoa pretende comprar nessa loja o modelo de caixa-d’água que ofereça a maior capacidade volumétrica. O modelo escolhido deve ser o",
+      "opcoes": [
+        "A) 1",
+        "B) 2",
+        "C) 3",
+        "D) 4",
+        "E) 5"
+      ],
+      "correta": "E",
+      "ano": 2022
+    },
+    {
+      "id": 2022149,
+      "pergunta": "Em uma universidade, atuam professores que estão enquadrados funcionalmente pela sua maior titulação: mestre ou doutor. Nela há, atualmente, 60 mestres e 40 doutores. Os salários mensais dos professores mestres e dos doutores são, respectivamente, 8 000 reais e 12 000 reais.\nA diretoria da instituição pretende proporcionar um aumento salarial diferenciado para o ano seguinte, de tal forma que o salário médio mensal dos professores dessa instituição não ultrapasse 12 240 reais. A universidade já estabeleceu que o aumento salarial será de 25 por cento para os mestres e precisa ainda definir o percentual de reajuste para os doutores.\nMantido o número atual de professores com suas atuais titulações, o aumento salarial, em porcentagem, a ser concedido aos doutores deverá ser de, no máximo,",
+      "opcoes": [
+        "A) 14,4.",
+        "B) 20,7.",
+        "C) 22,0.",
+        "D) 30,0.",
+        "E) 37,5."
+      ],
+      "correta": "D",
+      "ano": 2022
+    },
+    {
+      "id": 2022150,
+      "pergunta": "Um borrifador de atuação automática libera, a cada acionamento, uma mesma quantidade de inseticida. O recipiente desse produto, quando cheio, contém 360 mililitros de inseticida, que duram 60 dias se o borrifador permanecer ligado ininterruptamente e for acionado a cada 48 minutos.\nA quantidade de inseticida que é liberada a cada acionamento do borrifador, em mililitro, é",
+      "opcoes": [
+        "A) 0,125.",
+        "B) 0,200.",
+        "C) 4,800.",
+        "D) 6,000.",
+        "E) 12,000."
+      ],
+      "correta": "B",
+      "ano": 2022
+    },
+    {
+      "id": 2022151,
+      "pergunta": "Definem-se o dia e o ano de um planeta de um sistema solar como sendo, respectivamente, o tempo que o planeta leva para dar 1 volta completa em torno de seu próprio eixo de rotação e o tempo para dar 1 volta completa em torno de seu Sol.\nSuponha que exista um planeta Z, em algum sistema solar, onde um dia corresponda a 73 dias terrestres e que 2 de seus anos correspondam a 1 ano terrestre. Considere que 1 ano terrestre tem 365 de seus dias.\nNo planeta Z, seu ano corresponderia a quantos de seus dias?",
+      "opcoes": [
+        "A) 2,5",
+        "B) 10,0",
+        "C) 730,0",
+        "D) 13 322,5",
+        "E) 53 290,0"
+      ],
+      "correta": "A",
+      "ano": 2022
+    },
+    {
+      "id": 2022152,
+      "pergunta": "Quarenta mudas de flores devem ser plantadas no contorno de um canteiro circular de 2,2 metros de diâmetro, com um espaçamento padrão de 12 centímetros entre mudas. Fazendo-se os cálculos, chegou-se à conclusão de que não havia mudas suficientes e optou-se, então, por alterar o espaçamento padrão.\nUse 3 como aproximação para pi.\nEm quantos centímetros deve ser aumentado o espaçamento padrão entre as mudas?",
+      "opcoes": [
+        "A) 4,50",
+        "B) 6,15",
+        "C) 9,07",
+        "D) 21,00",
+        "E) 24,30"
+      ],
+      "correta": "A",
+      "ano": 2022
+    },
+    {
+      "id": 2022153,
+      "pergunta": "Em uma loja, o preço promocional de uma geladeira é de 1 000 reais para pagamento somente em dinheiro. Seu preço normal, fora da promoção, é 10 por cento maior. Para pagamento feito com o cartão de crédito da loja, é dado um desconto de 2 por cento sobre o preço normal.\nUma cliente decidiu comprar essa geladeira, optando pelo pagamento com o cartão de crédito da loja. Ela calculou que o valor a ser pago seria o preço promocional acrescido de 8 por cento. Ao ser informada pela loja do valor a pagar, segundo sua opção, percebeu uma diferença entre seu cálculo e o valor que lhe foi apresentado.\nO valor apresentado pela loja, comparado ao valor calculado pela cliente, foi",
+      "opcoes": [
+        "A) 2 reais menor.",
+        "B) 100 reais menor.",
+        "C) 200 reais menor.",
+        "D) 42 reais maior.",
+        "E) 80 reais maior."
+      ],
+      "correta": "A",
+      "ano": 2022
+    },
+    {
+      "id": 2022158,
+      "pergunta": "Ao analisar os dados de uma epidemia em uma cidade, peritos obtiveram um modelo que avalia a quantidade de pessoas infectadas a cada mês, ao longo de um ano. O modelo é dado por p(t) = −t² + 10t + 24, sendo t um número natural, variando de 1 a 12, que representa os meses do ano, e p de t a quantidade de pessoas infectadas no mês t do ano. Para tentar diminuir o número de infectados no próximo ano, a Secretaria Municipal de Saúde decidiu intensificar a propaganda oficial sobre os cuidados com a epidemia. Foram apresentadas cinco propostas (1, 2, 3, 4 e 5), com diferentes períodos de intensificação das propagandas:\n• 1: 1 ≤ t ≤ 2;\n• 2: 3 ≤ t ≤ 4;\n• 3: 5 ≤ t ≤ 6;\n• 4: 7 ≤ t ≤ 9;\n• 5: 10 ≤ t ≤ 12.\nA sugestão dos peritos é que seja escolhida a proposta cujo período de intensificação da propaganda englobe o mês em que, segundo o modelo, há a maior quantidade de infectados. A sugestão foi aceita. A proposta escolhida foi a",
+      "opcoes": [
+        "A) 1",
+        "B) 2",
+        "C) 3",
+        "D) 4",
+        "E) 5"
+      ],
+      "correta": "C",
+      "ano": 2022
+    },
+    {
+      "id": 2022160,
+      "pergunta": "No ano de 2015 o Brasil enfrentou uma grave crise hídrica. O diretor da empresa de abastecimento de água e saneamento do estado de São Paulo afirmou, no dia 27 de janeiro de 2015, que não estava descartado um possível racionamento em toda a capital. Segundo o diretor, para ampliar a economia de água praticada durante esse período, em uma semana seria necessário escolher dois dias não consecutivos para fornecimento de água e nos demais cinco dias seria interrompido o fornecimento.\nDe quantas maneiras diferentes podem ser escolhidos os dias para fornecimento e para interrupção de água nessa semana?",
+      "opcoes": [
+        "A) 6",
+        "B) 12",
+        "C) 15",
+        "D) 21",
+        "E) 42"
+      ],
+      "correta": "C",
+      "ano": 2022
+    },
+    {
+      "id": 2022161,
+      "pergunta": "Uma empresa produz e vende um tipo de chocolate, maciço, em formato de cone circular reto com as medidas do diâmetro da base e da altura iguais a 8 centímetros e 10 centímetros, respectivamente.\nDevido a um aumento de preço dos ingredientes utilizados na produção desse chocolate, a empresa decide produzir esse mesmo tipo de chocolate com um volume 19 por cento menor, no mesmo formato de cone circular reto com altura de 10 centímetros.\nPara isso, a empresa produzirá esses novos chocolates com medida do raio da base, em centímetro, igual a",
+      "opcoes": [
+        "A) 1,52.",
+        "B) 3,24.",
+        "C) 3,60.",
+        "D) 6,48.",
+        "E) 7,20."
+      ],
+      "correta": "C",
+      "ano": 2022
+    },
+    {
+      "id": 2022163,
+      "pergunta": "Um prédio, com 9 andares e 8 apartamentos de 2 quartos por andar, está com todos os seus apartamentos à venda. Os apartamentos são identificados por números formados por dois algarismos, sendo que a dezena indica o andar onde se encontra o apartamento, e a unidade, um algarismo de 1 a 8, que diferencia os apartamentos de um mesmo andar. Quanto à incidência de sol nos quartos desses apartamentos, constatam-se as seguintes características, em função de seus números de identificação:\n• naqueles que finalizam em 1 ou 2, ambos os quartos recebem sol apenas na parte da manhã;\n• naqueles que finalizam em 3, 4, 5 ou 6, apenas um dos quartos recebe sol na parte da manhã;\n• naqueles que finalizam em 7 ou 8, ambos os quartos recebem sol apenas na parte da tarde.\nUma pessoa pretende comprar 2 desses apartamentos em um mesmo andar, mas quer que, em ambos, pelo menos um dos quartos receba sol na parte da manhã.\nDe quantas maneiras diferentes essa pessoa poderá escolher 2 desses apartamentos para compra nas condições desejadas?",
+      "opcoes": [
+        "A) 9 x (6! / (6 - 2)!)",
+        "B) 9 x (6! / ((6 - 2)! x 2!))",
+        "C) 9 x (4! / ((4 - 2)! x 2!))",
+        "D) 9 x (2! / ((2 - 2)! x 2!))",
+        "E) 9 x ((8! / ((8 - 2)! x 2!)) - 1)"
+      ],
+      "correta": "B",
+      "ano": 2022
+    },
+    {
+      "id": 2022164,
+      "pergunta": "Um médico faz o acompanhamento clínico de um grupo de pessoas que realizam atividades físicas diariamente. Ele observou que a perda média de massa dessas pessoas para cada hora de atividade física era de 1,5 quilograma. Sabendo que a massa de 1 litro de água é de 1 quilograma, ele recomendou que ingerissem, ao longo das 3 horas seguintes ao final da atividade, uma quantidade total de água correspondente a 40 por cento a mais do que a massa perdida na atividade física, para evitar desidratação.\nSeguindo a recomendação médica, uma dessas pessoas ingeriu, certo dia, um total de 1,7 litro de água após terminar seus exercícios físicos.\nPara que a recomendação médica tenha efetivamente sido respeitada, a atividade física dessa pessoa, nesse dia, durou",
+      "opcoes": [
+        "A) 30 minutos ou menos.",
+        "B) mais de 35 e menos de 45 minutos.",
+        "C) mais de 45 e menos de 55 minutos.",
+        "D) mais de 60 e menos de 70 minutos.",
+        "E) 70 minutos ou mais."
+      ],
+      "correta": "C",
+      "ano": 2022
+    },
+    {
+      "id": 2022166,
+      "pergunta": "A luminosidade L de uma estrela está relacionada com o raio R e com a temperatura T dessa estrela segundo a Lei de Stefan-Boltzmann: L = c · R² · T⁴, em que c é uma constante igual para todas as estrelas.\nConsidere duas estrelas E e F, sendo que a estrela E tem metade do raio da estrela F e o dobro da temperatura de F.\nIndique por LE e LF suas respectivas luminosidades.\nA relação entre as luminosidades dessas duas estrelas é dada por",
+      "opcoes": [
+        "A) LE = LF/2",
+        "B) LE = LF/4",
+        "C) LE = LF",
+        "D) LE = 4 · LF",
+        "E) LE = 8 · LF"
+      ],
+      "correta": "D",
+      "ano": 2022
+    },
+    {
+      "id": 2022169,
+      "pergunta": "O pacote básico de um jogo para smartphone, que é vendido a 50 reais, contém 2 000 gemas e 100 000 moedas de ouro, que são itens utilizáveis nesse jogo.\nA empresa que comercializa esse jogo decidiu criar um pacote especial que será vendido a 100 reais e que se diferenciará do pacote básico por apresentar maiores quantidades de gemas e moedas de ouro. Para estimular as vendas desse novo pacote, a empresa decidiu inserir nele 6 000 gemas a mais, em relação ao que o cliente teria caso optasse por comprar, com a mesma quantia, dois pacotes básicos.\nA quantidade de moedas de ouro que a empresa deverá inserir ao pacote especial, para que seja mantida a mesma proporção existente entre as quantidades de gemas e de moedas de ouro contidas no pacote básico, é",
+      "opcoes": [
+        "A) 50 000.",
+        "B) 100 000.",
+        "C) 200 000.",
+        "D) 300 000.",
+        "E) 400 000."
+      ],
+      "correta": "E",
+      "ano": 2022
+    },
+    {
+      "id": 2022171,
+      "pergunta": "Uma equipe de marketing digital foi contratada para aumentar as vendas de um produto ofertado em um site de comércio eletrônico. Para isso, elaborou um anúncio que, quando o cliente clica sobre ele, é direcionado para a página de vendas do produto. Esse anúncio foi divulgado em duas redes sociais, A e B, e foram obtidos os seguintes resultados:\n• rede social A: o anúncio foi visualizado por 3 000 pessoas; 10 por cento delas clicaram sobre o anúncio e foram redirecionadas para o site; 3 por cento das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de 100 reais;\n• rede social B: o anúncio foi visualizado por 1 000 pessoas; 30 por cento delas clicaram sobre o anúncio e foram redirecionadas para o site; 2 por cento das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de 200 reais.\nPor experiência, o pessoal da equipe de marketing considera que a quantidade de novas pessoas que verão o anúncio é diretamente proporcional ao investimento realizado, e que a quantidade de pessoas que comprarão o produto também se manterá proporcional à quantidade de pessoas que clicarão sobre o anúncio.\nO responsável pelo produto decidiu, então, investir mais 300 reais em cada uma das duas redes sociais para a divulgação desse anúncio e obteve, de fato, o aumento proporcional esperado na quantidade de clientes que compraram esse produto. Para classificar o aumento obtido na quantidade (Q) de compradores desse produto, em consequência dessa segunda divulgação, em relação aos resultados observados na primeira divulgação, o responsável pelo produto adotou o seguinte critério:\n• Q menor ou igual a 60 por cento: não satisfatório;\n• 60 por cento menor que Q menor ou igual a 100 por cento: regular;\n• 100 por cento menor que Q menor ou igual a 150 por cento: bom;\n• 150 por cento menor que Q menor ou igual a 190 por cento: muito bom;\n• 190 por cento menor que Q menor ou igual a 200 por cento: excelente.\nO aumento na quantidade de compradores, em consequência dessa segunda divulgação, em relação ao que foi registrado com a primeira divulgação, foi classificado como",
+      "opcoes": [
+        "A) não satisfatório.",
+        "B) regular.",
+        "C) bom.",
+        "D) muito bom.",
+        "E) excelente."
+      ],
+      "correta": "C",
+      "ano": 2022
+    },
+    {
+      "id": 2022172,
+      "pergunta": "Uma montadora de automóveis divulgou que oferta a seus clientes mais de 1 000 configurações diferentes de carro, variando o modelo, a motorização, os opcionais e a cor do veículo. Atualmente, ela oferece 7 modelos de carros com 2 tipos de motores: 1.0 e 1.6. Já em relação aos opcionais, existem 3 escolhas possíveis: central multimídia, rodas de liga leve e bancos de couro, podendo o cliente optar por incluir um, dois, três ou nenhum dos opcionais disponíveis.\nPara ser fiel à divulgação feita, a quantidade mínima de cores que a montadora deverá disponibilizar a seus clientes é",
+      "opcoes": [
+        "A) 8.",
+        "B) 9.",
+        "C) 11.",
+        "D) 18.",
+        "E) 24."
+      ],
+      "correta": "B",
+      "ano": 2022
+    },
+    {
+      "id": 2022173,
+      "pergunta": "Um casal deseja recarregar seu cartão bancário pré-pago, para realizar uma viagem ao exterior. Eles recarregarão esse cartão com 3 000 dólares, em uma única transação. A unidade monetária do país onde reside o casal é o zed e a taxa cambial é de 2,20 zeds por dólar. É cobrado um imposto de 3 por cento sobre o valor pago, em zed, pela recarga, além de uma quantia fixa de 40 zeds pela transação bancária.\nQual o valor mínimo, em zed, que esse casal deve possuir para recarregar o cartão?",
+      "opcoes": [
+        "A) 6 640,00",
+        "B) 6 690,00",
+        "C) 6 730,00",
+        "D) 6 838,00",
+        "E) 6 886,00"
+      ],
+      "correta": "D",
+      "ano": 2022
+    },
+    {
+      "id": 2022174,
+      "pergunta": "Cada número que identifica uma agência bancária tem quatro dígitos: N1, N2, N3, N4 mais um dígito verificador N5, sendo todos esses dígitos números naturais pertencentes ao conjunto formado por 0, 1, 2, 3, 4, 5, 6, 7, 8 e 9. Para a determinação de N5, primeiramente multiplica-se ordenadamente os quatro primeiros dígitos do número da agência por 5, 4, 3 e 2, respectivamente, somam-se os resultados e obtém-se S é igual a 5 vezes N1 mais 4 vezes N2 mais 3 vezes N3 mais 2 vezes N4.\nPosteriormente, encontra-se o resto da divisão de S por 11, denotando por R esse resto. Dessa forma, N5 é a diferença 11 menos R.\nConsidere o número de uma agência bancária cujos quatro primeiros dígitos são 0100.\nQual é o dígito verificador N5 dessa agência bancária?",
+      "opcoes": [
+        "A) 0",
+        "B) 6",
+        "C) 7",
+        "D) 8",
+        "E) 9"
+      ],
+      "correta": "C",
+      "ano": 2022
+    },
+    {
+      "id": 2022176,
+      "pergunta": "Foram convidadas 32 equipes para um torneio de futebol, que foram divididas em 8 grupos com 4 equipes, sendo que, dentro de um grupo, cada equipe disputa uma única partida contra cada uma das demais equipes de seu grupo. A primeira e a segunda colocadas de cada grupo seguem para realizar as 8 partidas da próxima fase do torneio, chamada oitavas de final. Os vencedores das partidas das oitavas de final seguem para jogar as 4 partidas das quartas de final. Os vencedores das quartas de final disputam as 2 partidas das semifinais, e os vencedores avançam para a grande final, que define a campeã do torneio.\nPelas regras do torneio, cada equipe deve ter um período de descanso de, no mínimo, 3 dias entre dois jogos por ela disputados, ou seja, se um time disputar uma partida, por exemplo, num domingo, só poderá disputar a partida seguinte a partir da quinta-feira da mesma semana.\nO número mínimo de dias necessários para a realização desse torneio é",
+      "opcoes": [
+        "A) 22.",
+        "B) 25.",
+        "C) 28.",
+        "D) 48.",
+        "E) 64."
+      ],
+      "correta": "B",
+      "ano": 2022
+    },
+    {
+      "id": 2022179,
+      "pergunta": "A World Series é a decisão do campeonato norte-americano de beisebol. Os dois times que chegam a essa fase jogam, entre si, até sete partidas. O primeiro desses times que completar quatro vitórias é declarado campeão.\nConsidere que, em todas as partidas, a probabilidade de qualquer um dos dois times vencer é sempre 1/2.\nQual é a probabilidade de o time campeão ser aquele que venceu a primeira partida da World Series?",
+      "opcoes": [
+        "A) 35/64",
+        "B) 40/64",
+        "C) 42/64",
+        "D) 44/64",
+        "E) 52/64"
+      ],
+      "correta": "C",
+      "ano": 2022
+    },
+    {
+      "id": 2023137,
+      "pergunta": "O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos são vendidas por 32,40 reais. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.\nQual o preço, em real, de uma cartela de tíquetes vermelhos?",
+      "opcoes": [
+        "A) 4,68",
+        "B) 6,30",
+        "C) 9,30",
+        "D) 10,50",
+        "E) 10,65"
+      ],
+      "correta": "B",
+      "ano": 2023
+    },
+    {
+      "id": 2023140,
+      "pergunta": "Um supermercado conta com cinco caixas disponíveis para pagamento. Foram instaladas telas que apresentam o tempo médio gasto por cada caixa para iniciar e finalizar o atendimento de cada cliente, e o número de pessoas presentes na fila de cada caixa em tempo real. Um cliente, na hora de passar sua compra, sabendo que cada um dos cinco caixas iniciará um novo atendimento naquele momento, pretende gastar o menor tempo possível de espera na fila. Ele observa que as telas apresentavam as informações a seguir.\n• Caixa 1: atendimento 12 minutos, 5 pessoas na fila.\n• Caixa 2: atendimento 6 minutos, 9 pessoas na fila.\n• Caixa 3: atendimento 5 minutos, 6 pessoas na fila.\n• Caixa 4: atendimento 15 minutos, 2 pessoas na fila.\n• Caixa 5: atendimento 9 minutos, 3 pessoas na fila.\nPara alcançar seu objetivo, o cliente deverá escolher o caixa",
+      "opcoes": [
+        "A) 1.",
+        "B) 2.",
+        "C) 3.",
+        "D) 4.",
+        "E) 5."
+      ],
+      "correta": "E",
+      "ano": 2023
+    },
+    {
+      "id": 2023144,
+      "pergunta": "Uma loja vende seus produtos de duas formas: à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20 por cento o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas, em 30 e 60 dias após a compra.\nUm cliente da loja decidiu comprar, de forma financiada, um produto cujo valor à vista é 1 500 reais.\nUtilize 5,29 como aproximação para √28.\nA taxa mensal de juros compostos praticada nesse financiamento é de",
+      "opcoes": [
+        "A) 6,7%",
+        "B) 10%",
+        "C) 20%",
+        "D) 21,5%",
+        "E) 23,3%"
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023145,
+      "pergunta": "Para concretar a laje de sua residência, uma pessoa contratou uma construtora. Tal empresa informa que o preço y do concreto bombeado é composto de duas partes: uma fixa, chamada de taxa de bombeamento, e uma variável, que depende do volume x de concreto utilizado. Sabe-se que a taxa de bombeamento custa 500 reais e que o metro cúbico do concreto bombeado é de 250 reais.\nA expressão que representa o preço y em função do volume x, em metro cúbico, é",
+      "opcoes": [
+        "A) y = 250x.",
+        "B) y = 500x.",
+        "C) y = 750x.",
+        "D) y = 250x + 500.",
+        "E) y = 500x + 250."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023146,
+      "pergunta": "Lucas precisa estacionar o carro pelo período de 40 minutos, e sua irmã Clara também precisa estacionar o carro pelo período de 6 horas. O estacionamento Verde cobra 5 reais por hora de permanência. O estacionamento Amarelo cobra 6 reais por 4 horas de permanência e mais 2,50 reais por hora ou fração de hora ultrapassada. O estacionamento Preto cobra 7 reais por 3 horas de permanência e mais 1 real por hora ou fração de hora ultrapassada.\nOs estacionamentos mais econômicos para Lucas e Clara, respectivamente, são",
+      "opcoes": [
+        "A) Verde e Preto.",
+        "B) Verde e Amarelo.",
+        "C) Amarelo e Amarelo.",
+        "D) Preto e Preto.",
+        "E) Verde e Verde."
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023149,
+      "pergunta": "Um tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar a previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020 - 2021, ele obteve os seguintes dados:\n• outubro/2020: ImPC é igual a 250 milímetros;\n• novembro/2020: ImPC é igual a 150 milímetros;\n• dezembro/2020: ImPC é igual a 200 milímetros;\n• janeiro/2021: ImPC é igual a 450 milímetros;\n• fevereiro/2021: ImPC é igual a 100 milímetros;\n• março/2021: ImPC é igual a 200 milímetros.\nCom base nessas previsões, ele precisa escolher dois meses consecutivos em que a média mensal de precipitação seja a maior possível.\nNo início de qual desses meses o produtor deverá plantar esse tipo de semente?",
+      "opcoes": [
+        "A) Outubro.",
+        "B) Novembro.",
+        "C) Dezembro.",
+        "D) Janeiro.",
+        "E) Fevereiro."
+      ],
+      "correta": "C",
+      "ano": 2023
+    },
+    {
+      "id": 2023152,
+      "pergunta": "Visando atrair mais clientes, o gerente de uma loja anunciou uma promoção em que cada cliente que realizar uma compra pode ganhar um voucher para ser usado em sua próxima compra. Para ganhar seu voucher, o cliente precisa retirar, ao acaso, uma bolinha de dentro de cada uma das duas urnas A e B disponibilizadas pelo gerente, nas quais há apenas bolinhas pretas e brancas. Atualmente, a probabilidade de se escolher, ao acaso, uma bolinha preta na urna A é igual a 20 por cento e a probabilidade de se escolher uma bolinha preta na urna B é 25 por cento. Ganha o voucher o cliente que retirar duas bolinhas pretas, uma de cada urna.\nCom o passar dos dias, o gerente percebeu que, para a promoção ser viável aos negócios, era preciso alterar a probabilidade de acerto do cliente sem alterar a regra da promoção. Para isso, resolveu alterar a quantidade de bolinhas brancas na urna B de forma que a probabilidade de um cliente ganhar o voucher passasse a ser menor ou igual a 1 por cento. Sabe-se que a urna B tem 4 bolinhas pretas e que, em ambas as urnas, todas as bolinhas têm a mesma probabilidade de serem retiradas.\nQual é o número mínimo de bolinhas brancas que o gerente deve adicionar à urna B?",
+      "opcoes": [
+        "A) 20",
+        "B) 60",
+        "C) 64",
+        "D) 68",
+        "E) 80"
+      ],
+      "correta": "C",
+      "ano": 2023
+    },
+    {
+      "id": 2023153,
+      "pergunta": "Dirigir após ingerir bebidas alcoólicas é uma atitude extremamente perigosa, uma vez que, a partir da primeira dose, a pessoa já começa a ter perda de sensibilidade de movimentos e de reflexos. Apesar de a eliminação e absorção do álcool depender de cada pessoa e de como o organismo consegue metabolizar a substância, ao final da primeira hora após a ingestão, a concentração de álcool (C) no sangue corresponde a aproximadamente 90 por cento da quantidade (q) de álcool ingerida, e a eliminação total dessa concentração pode demorar até 12 horas.\nNessas condições, ao final da primeira hora após a ingestão da quantidade q de álcool, a concentração C dessa substância no sangue é expressa algebricamente por",
+      "opcoes": [
+        "A) C = 0,9q.",
+        "B) C = 0,1q.",
+        "C) C = 1 - 0,1q.",
+        "D) C = 1 - 0,9q.",
+        "E) C = q - 10."
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023155,
+      "pergunta": "A exposição a alguns níveis sonoros pode causar lesões auditivas. Por isso, em uma indústria, são adotadas medidas preventivas de acordo com a máquina que o funcionário opera e o nível N de intensidade do som, medido em decibel (dB), a que o operário é exposto, sendo N = 10 · log₁₀(I) − 10 · log₁₀(I₀), I a intensidade do som e I₀ = 10⁻¹², watts por metro quadrado.\nQuando o som é considerado baixo, ou seja, N = 48 dB ou menos, deve ser utilizada a medida preventiva 1. No caso de o som ser moderado, quando N está no intervalo (48 dB, 55 dB), deve ser utilizada a medida preventiva 2. Quando o som é moderado alto, que equivale a N no intervalo (55 dB, 80 dB), a medida preventiva a ser usada é a 3. Se N estiver no intervalo (80 dB, 115 dB), quando o som é considerado alto, deve ser utilizada a medida preventiva 4. E se o som é considerado muito alto, com N > 115 dB, deve-se utilizar a medida preventiva 5.\nUma nova máquina, com I = 8 × 10⁻⁸ W/m², foi adquirida e será classificada de acordo com o nível de ruído que produz.\nConsidere 0,3 como aproximação para log₁₀ 2.\nO funcionário que operará a nova máquina deverá adotar a medida preventiva",
+      "opcoes": [
+        "A) 1.",
+        "B) 2.",
+        "C) 3.",
+        "D) 4.",
+        "E) 5."
+      ],
+      "correta": "B",
+      "ano": 2023
+    },
+    {
+      "id": 2023156,
+      "pergunta": "Em um colégio público, a admissão no primeiro ano se dá por sorteio. Neste ano há 55 candidatos, cujas inscrições são numeradas de 01 a 55. O sorteio de cada número de inscrição será realizado em etapas, utilizando-se duas urnas. Da primeira urna será sorteada uma bola, dentre bolas numeradas de 0 a 9, que representará o algarismo das unidades do número de inscrição a ser sorteado e, em seguida, da segunda urna, será sorteada uma bola para representar o algarismo das dezenas desse número. Depois do primeiro sorteio, e antes de se sortear o algarismo das dezenas, as bolas que estarão presentes na segunda urna serão apenas aquelas cujos números formam, com o algarismo já sorteado, um número de 01 a 55.\nAs probabilidades de os candidatos de inscrição número 50 e 02 serem sorteados são, respectivamente,",
+      "opcoes": [
+        "A) 1/50 e 1/60.",
+        "B) 1/50 e 1/50.",
+        "C) 1/50 e 1/10.",
+        "D) 1/55 e 1/54.",
+        "E) 1/100 e 1/100."
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023158,
+      "pergunta": "Analisando as vendas de uma empresa, o gerente concluiu que o montante diário arrecadado, em milhar de real, poderia ser calculado pela expressão V(x) = x²/4 − 10x + 105, em que os valores de x representam os dias do mês, variando de 1 a 30.\nUm dos fatores para avaliar o desempenho mensal da empresa é verificar qual é o menor montante diário V₀ arrecadado ao longo do mês e classificar o desempenho conforme as categorias apresentadas a seguir, em que as quantidades estão expressas em milhar de real.\n• Ótimo: V₀ ≥ 24.\n• Bom: 20 ≤ V₀ < 24.\n• Normal: 10 ≤ V₀ < 20.\n• Ruim: 4 ≤ V₀ < 10.\n• Péssimo: V₀ < 4.\nNo caso analisado, qual seria a classificação do desempenho da empresa?",
+      "opcoes": [
+        "A) Ótimo.",
+        "B) Bom.",
+        "C) Normal.",
+        "D) Ruim.",
+        "E) Péssimo."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023160,
+      "pergunta": "Um pescador tem um custo fixo diário de 900 reais com combustível, iscas, manutenção de seu barco e outras pequenas despesas. Ele vende cada quilograma de peixe por 5 reais. Sua meta é obter um lucro mínimo de 800 reais por dia. Sozinho, ele consegue, ao final de um dia de trabalho, pescar 180 quilogramas de peixe, o que é suficiente apenas para cobrir o custo fixo diário. Portanto, precisa contratar ajudantes, pagando para cada um 250 reais por dia de trabalho. Além desse valor, 4 por cento da receita obtida pela venda de peixe é repartida igualmente entre os ajudantes. Considerando o tamanho de seu barco, ele pode contratar até 5 ajudantes. Ele sabe que com um ajudante a pesca diária é de 300 quilogramas e que, a partir do segundo ajudante contratado, aumenta-se em 100 quilogramas a quantidade de peixe pescada por ajudante em um dia de trabalho.\nA quantidade mínima de ajudantes que esse pescador precisa contratar para conseguir o lucro diário pretendido é",
+      "opcoes": [
+        "A) 1.",
+        "B) 2.",
+        "C) 3.",
+        "D) 4.",
+        "E) 5."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023161,
+      "pergunta": "Um agricultor é informado sobre um método de proteção para sua lavoura que consiste em inserir larvas específicas, de rápida reprodução. A reprodução dessas larvas faz com que sua população multiplique-se por 10 a cada 3 dias e, para evitar eventuais desequilíbrios, é possível cessar essa reprodução aplicando-se um produto X. O agricultor decide iniciar esse método com 100 larvas e dispõe de 5 litros do produto X, cuja aplicação recomendada é de exatamente 1 litro para cada população de 200 000 larvas. A quantidade total do produto X de que ele dispõe deverá ser aplicada de uma única vez.\nQuantos dias após iniciado esse método o agricultor deverá aplicar o produto X?",
+      "opcoes": [
+        "A) 2",
+        "B) 4",
+        "C) 6",
+        "D) 12",
+        "E) 18"
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023162,
+      "pergunta": "Ao realizar o cadastro em um aplicativo de investimentos, foi solicitado ao usuário que criasse uma senha, sendo permitido o uso somente dos seguintes caracteres:\n•algarismos de 0 a 9;\n•26 letras minúsculas do alfabeto;\n•26 letras maiúsculas do alfabeto;\n•6 caracteres especiais exclamação, arroba, hashtag, cifrão, asterisco, e comercial.\nTrês tipos de estruturas para senha foram apresentadas ao usuário:\n• tipo 1: formada por quaisquer quatro caracteres distintos, escolhidos dentre os permitidos;\n• tipo 2: formada por cinco caracteres distintos, iniciando por três letras, seguidas por um algarismo e, ao final, um caractere especial;\n• tipo 3: formada por seis caracteres distintos, iniciando por duas letras, seguidas por dois algarismos e, ao final, dois caracteres especiais.\nConsidere p1, p2 e p3 as probabilidades de se descobrirem ao acaso, na primeira tentativa, as senhas dos tipos 1, 2 e 3, respectivamente.\nNessas condições, o tipo de senha que apresenta a menor probabilidade de ser descoberta ao acaso, na primeira tentativa, é o",
+      "opcoes": [
+        "A) tipo 1, pois p1 < p2 < p3.",
+        "B) tipo 1, pois tem menor quantidade de caracteres.",
+        "C) tipo 2, pois tem maior quantidade de letras.",
+        "D) tipo 3, pois p3 < p2 < p1.",
+        "E) tipo 3, pois tem maior quantidade de caracteres."
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023163,
+      "pergunta": "Em primeiro de junho, um canil que cria 98 cães tem, em estoque, a quantidade exata de ração para fornecer, diariamente, 1 000 gramas para cada animal durante 30 dias. No início do décimo primeiro dia o canil recebeu dois novos cães. Com isso, a quantidade de ração diária por animal teve que ser recalculada para que o restante de ração em estoque fosse suficiente para alimentar a todos até o fim do mês, garantindo, para cada cão, uma mesma porção diária da ração.\nQual a quantidade de ração, em grama, que deverá ser dada diariamente para cada cão, do dia 11 de junho até o final desse mês?",
+      "opcoes": [
+        "A) 306",
+        "B) 500",
+        "C) 510",
+        "D) 653",
+        "E) 980"
+      ],
+      "correta": "E",
+      "ano": 2023
+    },
+    {
+      "id": 2023165,
+      "pergunta": "No alojamento de uma universidade, há alguns quartos com o padrão superior ao dos demais. Um desses quartos ficou disponível, e muitos estudantes se candidataram para morar no local. Para escolher quem ficará com o quarto, um sorteio será realizado. Para esse sorteio, cartões individuais com os nomes de todos os estudantes inscritos serão depositados em uma urna, sendo que, para cada estudante de primeiro ano, será depositado um único cartão com seu nome; para cada estudante de segundo ano, dois cartões com seu nome; e, para cada estudante de terceiro ano, três cartões com seu nome. Foram inscritos 200 estudantes de primeiro ano, 150 de segundo ano e 100 de terceiro ano. Todos os cartões têm a mesma probabilidade de serem sorteados.\nQual a probabilidade de o vencedor do sorteio ser um estudante de terceiro ano?",
+      "opcoes": [
+        "A) 1/2.",
+        "B) 1/3.",
+        "C) 1/8.",
+        "D) 2/9.",
+        "E) 3/8."
+      ],
+      "correta": "E",
+      "ano": 2023
+    },
+    {
+      "id": 2023166,
+      "pergunta": "A água utilizada pelos 75 moradores de um vilarejo provém de um reservatório de formato cilíndrico circular reto cujo raio da base mede 5 metros, sempre abastecido no primeiro dia de cada mês por caminhões-pipa. Cada morador desse vilarejo consome, em média, 200 litros de água por dia.\nNo mês de junho de um determinado ano, o vilarejo festejou o dia do seu padroeiro e houve um gasto extra de água nos primeiros 20 dias. Passado esse período, as pessoas verificaram a quantidade de água presente no reservatório e constataram que o nível da coluna de água estava em 1,5 metro. Decidiram, então, fazer um racionamento de água durante os 10 dias seguintes. Considere 3 como aproximação para pi.\nQual é a quantidade mínima de água, em litro, que cada morador, em média, deverá economizar por dia, de modo que o reservatório não fique sem água nos próximos 10 dias?",
+      "opcoes": [
+        "A) 50",
+        "B) 60",
+        "C) 80",
+        "D) 140",
+        "E) 150"
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023167,
+      "pergunta": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10 por cento.\nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25 por cento menor que o deste ano.\nOnúmero mínimo de salas que deverão ser construídas é",
+      "opcoes": [
+        "A) 10.",
+        "B) 11.",
+        "C) 13.",
+        "D) 30.",
+        "E) 33."
+      ],
+      "correta": "B",
+      "ano": 2023
+    },
+    {
+      "id": 2023174,
+      "pergunta": "A cada bimestre, a diretora de uma escola compra uma quantidade de folhas de papel ofício proporcional ao número de alunos matriculados. No bimestre passado, ela comprou 6 000 folhas para serem utilizadas pelos 1 200 alunos matriculados. Neste bimestre, alguns alunos cancelaram suas matrículas e a escola tem, agora, 1 150 alunos. A diretora só pode gastar 220 reais nessa compra, e sabe que o fornecedor da escola vende as folhas de papel ofício em embalagens de 100 unidades a 4 reais a embalagem. Assim, será preciso convencer o fornecedor a dar um desconto à escola, de modo que seja possível comprar a quantidade total de papel ofício necessária para o bimestre.\nO desconto necessário no preço final da compra, em porcentagem, pertence ao intervalo",
+      "opcoes": [
+        "A) (5,0 ; 5,5).",
+        "B) (8,0 ; 8,5).",
+        "C) (11,5 ; 12,5).",
+        "D) (19,5 ; 20,5).",
+        "E) (3,5 ; 4,0)."
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023175,
+      "pergunta": "Alguns estudos comprovam que os carboidratos fornecem energia ao corpo, preservam as proteínas estruturais dos músculos durante a prática de atividade física e ainda dão força para o cérebro coordenar os movimentos, o que de fato tem impacto positivo no desenvolvimento do praticante. O ideal é consumir 1 grama de carboidrato para cada minuto de caminhada.\nUm casal realizará diariamente 30 minutos de caminhada, ingerindo, antes dessa atividade, a quantidade ideal de carboidratos recomendada. Para ter o consumo ideal apenas por meio do consumo de pão de fôrma integral, o casal planeja garantir o suprimento de pães para um período de 30 dias ininterruptos. Sabe-se que cada pacote desse pão vem com 18 fatias, e que cada uma delas tem 15 gramas de carboidratos.\nA quantidade mínima de pacotes de pão de fôrma necessários para prover o suprimento a esse casal é",
+      "opcoes": [
+        "A) 1.",
+        "B) 4.",
+        "C) 6.",
+        "D) 7.",
+        "E) 8."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023178,
+      "pergunta": "O calendário maia apresenta duas contagens simultâneas de anos, o chamado ano Tzolkim, composto por 260 dias e que determinava o calendário religioso, e o ano Haab, composto por 365 dias e que determinava o calendário agrícola. Um historiador encontrou evidências de que gerações de uma mesma família governaram certa comunidade maia pelo período de 20 ciclos, sendo cada ciclo formado por 52 anos Haab.\nDe acordo com as informações fornecidas, durante quantos anos Tzolkim aquela comunidade maia foi governada por tal família?",
+      "opcoes": [
+        "A) 741",
+        "B) 1 040",
+        "C) 1 460",
+        "D) 2 100",
+        "E) 5 200"
+      ],
+      "correta": "C",
+      "ano": 2023
+    },
+    {
+      "id": 2023180,
+      "pergunta": "Entre maratonistas, um parâmetro utilizado é o de economia de corrida (EC). O valor desse parâmetro é calculado pela razão entre o consumo de oxigênio, em mililitro (mL) por minuto (min), e a massa, em quilograma (kg), do atleta correndo a uma velocidade constante.\nUm maratonista, visando melhorar sua performance, auxiliado por um médico, mensura o seu consumo de oxigênio por minuto a velocidade constante. Com base nesse consumo e na massa do atleta, o médico calcula o EC do atleta.\nA unidade de medida da grandeza descrita pelo parâmetro EC é",
+      "opcoes": [
+        "A) min/(mL.kg).",
+        "B) mL/(min.kg).",
+        "C) (min.mL)/kg.",
+        "D) (min.kg)/mL.",
+        "E) (mL.kg)/min."
+      ],
+      "correta": "B",
+      "ano": 2023
+    },
+    {
+      "id": 2024138,
+      "pergunta": "O uso de aplicativos de transporte tem sido uma alternativa à população que busca preços mais competitivos para se locomover, principalmente nas grandes cidades. As formas usadas para determinar o valor cobrado por cada viagem variam de um aplicativo para outro, mas, em geral, o valor V a ser pago, em real, varia em função de:\n•tarifa base F: valor fixo, em real, cobrado no início da viagem;\n•tempo T: tempo, em minuto, de duração da viagem;\n•distância D: distância percorrida, em quilômetro.\nUm desses aplicativos cobra 2,00 reais de valor fixo, acrescido de 0,26 real por minuto de viagem e de 1,40 real por quilômetro rodado.\nNessas condições, a expressão que fornece o valor V a ser pago por uma viagem desse aplicativo é",
+      "opcoes": [
+        "A) 2,00 x F + 0,26 x T + 1,40 x D",
+        "B) 2,00 + 0,26 x T + 1,40 x D",
+        "C) 2,00 + 0,26 x T + D",
+        "D) 0,26 x T + 1,40 x D",
+        "E) F + T + D"
+      ],
+      "correta": "B",
+      "ano": 2024
+    },
+    {
+      "id": 2024140,
+      "pergunta": "O arquiteto Renzo Piano exibiu a maquete da nova sede do Museu Whitney de Arte Americana, um prédio assimétrico que tem um vão aberto para a galeria principal, cuja medida da área é 1672 metros quadrados.\nConsidere que a escala da maquete exibida é 1 para 200.\nA medida da área do vão aberto nessa maquete, em centímetro quadrado, é",
+      "opcoes": [
+        "A) 4,18",
+        "B) 8,36.",
+        "C) 41,80.",
+        "D) 83,60.",
+        "E) 418,00."
+      ],
+      "correta": "E",
+      "ano": 2024
+    },
+    {
+      "id": 2024142,
+      "pergunta": "Um instituto de pesquisa constatou que, nos últimos dez anos, o crescimento populacional de uma cidade foi de 135,25 por cento.\nQual é a representação decimal da taxa percentual desse crescimento populacional?",
+      "opcoes": [
+        "A) 13525,0",
+        "B) 135,25",
+        "C) 13,525",
+        "D) 1,3525",
+        "E) 0,13525"
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2024143,
+      "pergunta": "Um fazendeiro pretende construir um galinheiro ocupando uma região plana de formato retangular, com lados de comprimentos L metro e C metro. Os lados serão cercados por telas de tipos diferentes. Nos lados de comprimento L metro, será utilizada uma tela cujo metro linear custa 20 reais, enquanto, nos outros dois lados, uma que custa 15 reais. O fazendeiro quer gastar, no máximo, 6000 reais na compra de toda a tela necessária para o galinheiro, e deseja que o galinheiro tenha a maior área possível.\nQual será a medida, em metro, do maior lado do galinheiro?",
+      "opcoes": [
+        "A) 85",
+        "B) 100",
+        "C) 175",
+        "D) 200",
+        "E) 350"
+      ],
+      "correta": "B",
+      "ano": 2024
+    },
+    {
+      "id": 2024146,
+      "pergunta": "Em uma empresa é comercializado um produto em embalagens em formato de cilindro circular reto, com raio medindo 3 centímetros, e altura medindo 15 centímetros. Essa empresa planeja comercializar o mesmo produto em embalagens em formato de cubo, com capacidade igual a 80 por cento da capacidade da embalagem cilíndrica utilizada atualmente.\nUse 3 como valor aproximado para pi.\nA medida da aresta da nova embalagem, em centímetro, deve ser",
+      "opcoes": [
+        "A) 6",
+        "B) 18",
+        "C) 6 vezes raiz quadrada de 6",
+        "D) 6 vezes raiz cúbica de 6",
+        "E) 3 vezes raiz cúbica de 12"
+      ],
+      "correta": "E",
+      "ano": 2024
+    },
+    {
+      "id": 2024148,
+      "pergunta": "Uma casa de shows terá um evento cujo custo total de produção é de 34 350 reais, sendo que comporta 500 pessoas. O preço do ingresso será de 130 reais e, normalmente, 60 por cento das pessoas adquirem meia-entrada, pagando 65 reais pelo ingresso. Além do faturamento proveniente da venda de ingressos, a casa de shows vende, com 60 por cento de lucro, bebidas e petiscos ao público no dia do evento.\nApós ter vendido todos os 500 ingressos, constatou-se que a quantidade de meias-entradas vendidas superou em 50 por cento o que estava previsto, impactando o faturamento estimado com a venda de ingressos.\nNo dia do evento, decidiu-se manter o percentual de 60 por cento de lucro sobre as bebidas e petiscos, pois todo o público que comprou ingresso compareceu ao show. Com isso, espera-se ter lucro de 17000 reais nesse evento.\nPara que se alcance o lucro esperado, o gasto médio por pessoa com bebidas e petiscos, em real, deverá ser de",
+      "opcoes": [
+        "A) 19,50.",
+        "B) 28,80.",
+        "C) 34,00.",
+        "D) 52,00.",
+        "E) 68,70."
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2024150,
+      "pergunta": "O estádio do Maracanã passou por algumas modificações estruturais para a realização da Copa do Mundo de 2014, como, por exemplo, as dimensões do campo retangular. Para se adaptar aos padrões da Fifa, as dimensões do campo foram reduzidas de 110 metros por 75 metros para 105 metros por 68 metros.\nEm quantos metros quadrados a área do campo do Maracanã foi reduzida?",
+      "opcoes": [
+        "A) 24",
+        "B) 35",
+        "C) 555",
+        "D) 1110",
+        "E) 1145"
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2024152,
+      "pergunta": "João e Felipe participaram, na escola, de uma maratona de matemática na qual, durante uma semana, resolveram 200 questões cada. Nessa maratona, a porcentagem P de acertos de cada participante é convertida em um conceito:\n•insatisfatório: se zero é menor ou igual a P que é menor que 50;\n•regular: se 50 é menor ou igual a P que é menor que 60;\n•bom: se 60 é menor ou igual a P que é menor que 75;\n•muito bom: se 75 é menor ou igual a P que é menor que 90;\n•excelente: se 90 é menor ou igual a P que é menor ou igual a 100.\nJoão acertou 75 por cento das questões da maratona e Felipe acertou 30 por cento a menos que a quantidade de questões que João acertou.\nOs conceitos de João e Felipe foram, respectivamente,",
+      "opcoes": [
+        "A) muito bom e bom.",
+        "B) muito bom e regular.",
+        "C) muito bom e insatisfatório.",
+        "D) bom e regular.",
+        "E) bom e insatisfatório."
+      ],
+      "correta": "B",
+      "ano": 2024
+    },
+    {
+      "id": 2024155,
+      "pergunta": "Ao calcular a média de suas notas em 4 provas, um estudante dividiu, por engano, a soma das notas por 5. Com isso, a média obtida foi 1 unidade menor do que deveria ser, caso fosse calculada corretamente.\nO valor correto da média das notas desse estudante é",
+      "opcoes": [
+        "A) 4",
+        "B) 5",
+        "C) 6",
+        "D) 19",
+        "E) 21"
+      ],
+      "correta": "B",
+      "ano": 2024
+    },
+    {
+      "id": 2024158,
+      "pergunta": "Uma doceira vende e entrega, em seu bairro, porções de 100 gramas de docinhos de aniversário. Atualmente, a taxa única de entrega é 10 reais, e o valor cobrado por uma porção é 25 reais. Por uma estratégia de vendas, a partir da próxima semana, a taxa única de entrega será 15 reais, e um novo valor será cobrado por uma porção, de maneira que o valor total a ser pago por um cliente na compra de 5 porções permaneça o mesmo.\nA partir da próxima semana, qual será o novo valor cobrado, em real, por uma porção?",
+      "opcoes": [
+        "A) 12,50",
+        "B) 20,00",
+        "C) 24,00",
+        "D) 30,00",
+        "E) 37,50"
+      ],
+      "correta": "C",
+      "ano": 2024
+    },
+    {
+      "id": 2024159,
+      "pergunta": "Uma piscina tem capacidade de 2500000 litros. Seu sistema de abastecimento foi regulado para ter uma vazão constante de 6000 litros de água por minuto.\nO mesmo sistema foi instalado em uma segunda piscina, com capacidade de 2750000 litros, e regulado para ter uma vazão, também constante, capaz de enchê-la em um tempo 20 por cento maior que o gasto para encher a primeira piscina.\nA vazão do sistema de abastecimento da segunda piscina, em litro por minuto, é",
+      "opcoes": [
+        "A) 8250",
+        "B) 7920.",
+        "C) 6545.",
+        "D) 5500.",
+        "E) 5280."
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2024160,
+      "pergunta": "Uma tubulação despeja sempre o mesmo volume de água por unidade de tempo em uma caixa-d’água, o que significa dizer que a vazão de água nessa tubulação é constante. Na junção dessa tubulação com a caixa-d’água, está instalada uma membrana de filtragem cujo objetivo é filtrar eventuais impurezas presentes na água, combinado a um bom fluxo de água. O fluxo (fi) de água através da superfície da membrana é diretamente proporcional à vazão de água na tubulação, medida em mililitro por segundo, e inversamente proporcional à área da superfície da membrana, medida em centímetro quadrado.\nA unidade de medida adequada para descrever o fluxo (fi) de água que atravessa a superfície da membrana é",
+      "opcoes": [
+        "A) mL · s · cm²",
+        "B) (mL/s) · cm²",
+        "C) mL/(cm² · s)",
+        "D) (cm² · s)/mL",
+        "E) cm²/(mL · s)"
+      ],
+      "correta": "C",
+      "ano": 2024
+    },
+    {
+      "id": 2024163,
+      "pergunta": "Uma empresa de engenharia foi contratada para realizar um serviço no valor de 71250 reais. Os sócios da empresa decidiram que 40 por cento desse valor seria destinado ao pagamento de três engenheiros que gerenciaram o serviço. O pagamento para cada um deles será feito de forma diretamente proporcional ao total de horas trabalhadas. O número de dias e o número de horas diárias trabalhadas pelos engenheiros foram, respectivamente:\n•engenheiro 1: 4 dias, numa jornada de 5 horas e meia por dia;\n•engenheiro 2: 5 dias, numa jornada de 4 horas por dia;\n•engenheiro 3: 6 dias, numa jornada de 2 horas e meia por dia.\nQual a maior diferença, em real, entre os valores recebidos por esse serviço entre dois desses engenheiros?",
+      "opcoes": [
+        "A) 1000",
+        "B) 1500",
+        "C) 3500",
+        "D) 3800",
+        "E) 5250"
+      ],
+      "correta": "C",
+      "ano": 2024
+    },
+    {
+      "id": 2024164,
+      "pergunta": "Um hospital tem 7 médicos cardiologistas e 6 médicos neurologistas em seu quadro de funcionários. Para executar determinada atividade, a direção desse hospital formará uma equipe com 5 médicos, sendo, pelo menos, 3 cardiologistas.\nA expressão numérica que representa o número máximo de maneiras distintas de formar essa equipe é",
+      "opcoes": [
+        "A) (7!/4!) · (6!/4!)",
+        "B) (7!/(3! · 4!)) · (6!/(2! · 4!))",
+        "C) (7!/(3! · 4!)) + (6!/(2! · 4!)) + (5!/(1! · 4!))",
+        "D) ((7!/(3! · 4!)) + (6!/(2! · 4!))) · ((7!/(4! · 3!)) + (6!/(1! · 5!))) · ((7!/(5! · 2!)) + (6!/(0! · 6!)))",
+        "E) ((7!/(3! · 4!)) · (6!/(2! · 4!))) + ((7!/(4! · 3!)) · (6!/(1! · 5!))) + ((7!/(5! · 2!)) · (6!/(0! · 6!)))"
+      ],
+      "correta": "E",
+      "ano": 2024
+    },
+    {
+      "id": 2024168,
+      "pergunta": "Na construção de uma varanda retangular, com 5 metros de largura e 6 metros de comprimento, decidiu-se usar dois tipos de pedras para revestir o piso. Uma das pedras é quadrada, com 1 metro de lado, e a outra é retangular, com 0,25 metro de largura e 0,50 metro de comprimento. Serão utilizadas 10 pedras quadradas para decorar parte do piso, e o restante da área será revestida com pedras retangulares. A pedra do tipo retangular é vendida somente em caixas de 30 unidades.\nQuantas caixas da pedra retangular deverão ser compradas?",
+      "opcoes": [
+        "A) 4",
+        "B) 5",
+        "C) 6",
+        "D) 8",
+        "E) 11"
+      ],
+      "correta": "C",
+      "ano": 2024
+    },
+    {
+      "id": 2024169,
+      "pergunta": "Um jardineiro dispõe de k metros lineares de cerca baixa para fazer um jardim ornamental. O jardim, delimitado por essa cerca, deve ter a forma de um triângulo equilátero, um quadrado ou um hexágono regular. A escolha será pela forma que resulte na maior área.\nO jardineiro escolherá a forma de",
+      "opcoes": [
+        "A) hexágono regular, pois a área do jardim, em metro quadrado, será (k²√3)/24.",
+        "B) hexágono regular, pois a área do jardim, em metro quadrado, será (3k²√3)/2.",
+        "C) quadrado, pois a área do jardim, em metro quadrado, será k²/16.",
+        "D) triângulo equilátero, pois a área do jardim, em metro quadrado, será (k²√3)/36.",
+        "E) triângulo equilátero, pois a área do jardim, em metro quadrado, será (k²√3)/4."
+      ],
+      "correta": "A",
+      "ano": 2024
+    },
+    {
+      "id": 2024172,
+      "pergunta": "Em uma região com grande incidência de terremotos, observou-se que dois terremotos ocorridos apresentaram magnitudes M₁ e M₂, medidos segundo a escala Richter, e liberaram energias iguais a E₁ e E₂, respectivamente. Entre os estudiosos do assunto, é conhecida uma expressão algébrica relacionando esses valores dada por M₂ − M₁ = (2/3) · log(E₂/E₁).\nEstudos mais abrangentes observaram que o primeiro terremoto apresentou a magnitude M₁ = 6,9 e a energia liberada foi um décimo da observada no segundo terremoto.\nO valor aproximado da magnitude M₂ do segundo terremoto, expresso com uma casa decimal, é igual a",
+      "opcoes": [
+        "A) 5,4.",
+        "B) 6,2.",
+        "C) 7,6.",
+        "D) 8,2.",
+        "E) 8,4."
+      ],
+      "correta": "C",
+      "ano": 2024
+    },
+    {
+      "id": 2024173,
+      "pergunta": "Um comprador assinou um contrato com uma construtora adquirindo um imóvel, ainda na fase de lançamento da construção, cujo valor total, em reais, era de 420 000 reais, pagando o equivalente a 35 por cento desse valor, sem quaisquer outros ônus até a data de entrega das chaves. Nesse contrato existia uma cláusula prévia que, no caso de desistência da compra, quando da entrega das chaves, o comprador poderia cancelar o contrato e a construtora pagaria a ele 75 por cento do valor que ele já havia pago inicialmente, a título de devolução. Suponha que em função de problemas inesperados, o comprador desistiu da aquisição do imóvel, cancelando o contrato de compra no momento da entrega das chaves.\nQual o valor, em real, que o comprador recebeu da construtora como devolução?",
+      "opcoes": [
+        "A) 110250",
+        "B) 147000",
+        "C) 168000",
+        "D) 257250",
+        "E) 315000"
+      ],
+      "correta": "A",
+      "ano": 2024
+    },
+    {
+      "id": 2024174,
+      "pergunta": "Para melhorar o fluxo de ônibus em uma avenida que tem dois semáforos, a prefeitura reduzirá o tempo em que cada sinal ficará vermelho, que atualmente é de 15 segundos a cada 60 segundos. Admita que o instante de chegada de um ônibus a cada semáforo é aleatório.\nO engenheiro de tráfego da prefeitura calculou a probabilidade de um ônibus encontrar cada um deles vermelho, obtendo quinze sessenta avos. A partir daí, estabeleceu uma mesma redução na quantidade do tempo, em segundo, em que cada sinal ficará vermelho, de maneira que a probabilidade de um ônibus encontrar ambos os sinais vermelhos numa mesma viagem seja igual a quatro centésimos, considerando os eventos independentes.\nPara isso, a redução do tempo em que o sinal ficará vermelho, em segundo, estabelecida pelo engenheiro foi de",
+      "opcoes": [
+        "A) 1,35.",
+        "B) 3,00.",
+        "C) 9,00.",
+        "D) 12,60.",
+        "E) 13,80."
+      ],
+      "correta": "B",
+      "ano": 2024
+    },
+    {
+      "id": 2024175,
+      "pergunta": "A densidade demográfica de uma região é definida como sendo a razão entre o número de habitantes dessa região e sua área, expressa na unidade habitante por quilômetro quadrado.\nUma região R é subdividida em várias outras, sendo uma delas a região Q. A área de Q é igual a três quartos da área de R, e o número de habitantes de Q é igual à metade do número de habitantes de R. As densidades demográficas correspondentes a essas regiões são denotadas por d de Q e d de R.\nA expressão que relaciona d de Q e d de R é",
+      "opcoes": [
+        "A) d de Q é igual a um quarto de d de R",
+        "B) d de Q é igual a um meio de d de R",
+        "C) d de Q é igual a três quartos de d de R",
+        "D) d de Q é igual a três meios de d de R",
+        "E) d de Q é igual a dois terços de d de R"
+      ],
+      "correta": "E",
+      "ano": 2024
+    },
+    {
+      "id": 2024177,
+      "pergunta": "Uma imobiliária iniciou uma campanha de divulgação para promover a venda de apartamentos que podem ser pagos em 100 parcelas mensais. O valor da primeira delas é fixado no momento da compra, com o pagamento dessa primeira parcela. A partir da segunda parcela, o valor é determinado pela aplicação de um acréscimo percentual fixo ao valor da parcela anterior. Como atrativo, a imobiliária fará o pagamento de todas as parcelas correspondentes ao mês de aniversário do comprador.\nUm cliente, que faz aniversário no mês de maio, decidiu comprar um desses apartamentos por meio do financiamento oferecido pela imobiliária, e pretende escolher o mês mais adequado para realizar essa compra, de modo que o valor total dos pagamentos seja o menor possível.\nQual é o mês que esse cliente deverá escolher para realizar a compra do apartamento?",
+      "opcoes": [
+        "A) Fevereiro.",
+        "B) Abril.",
+        "C) Maio.",
+        "D) Junho.",
+        "E) Agosto."
+      ],
+      "correta": "A",
+      "ano": 2024
+    },
+    {
+      "id": 2024178,
+      "pergunta": "Um professor de desenho, apresentou uma peça de 45 centímetros de comprimento e solicitou aos alunos reproduzir no papel o objeto, onde as medidas devem ser proporcionais às medidas reais, e o comprimento deste desenho tem que ser de 9 centímetros.\nA escala utilizada para realizar esse desenho é",
+      "opcoes": [
+        "A) 50 para 1.",
+        "B) 1 para 36.",
+        "C) 1 para 45.",
+        "D) 1 para 5.",
+        "E) 1 para 54."
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2025136,
+      "pergunta": "Uma pessoa pretende instalar um kit de gás natural veicular (GNV) em seu carro. Na loja que escolheu para realizar a compra e instalação do desse kit, havia cinco modelos de cilindro para armazenamento do gás, cujas capacidades, em metro cúbico, eram, respectivamente: 10, 14, 17, 21 e 25. O preço do cilindro é proporcional à sua capacidade. Esse carro rodará 30 km diariamente, 7 dias por semana, e o consumo de GNV é de 1 m³ a cada 13 km rodados. A pessoa escolherá o modelo de cilindro de menor preço e que garanta apenas um abastecimento semanal.\nNessas condições, qual será a capacidade, em metro cúbico, do cilindro escolhido por essa pessoa?",
+      "opcoes": [
+        "A) 10",
+        "B) 14",
+        "C) 17",
+        "D) 21",
+        "E) 25"
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025140,
+      "pergunta": "Em um laboratório, um recipiente contém 10 litros de uma solução composta apenas pelas substâncias S₁ e S₂. Dessa solução, 99,95% é de S₁. Uma quantidade de S₂ será retirada dessa solução, mantendo a quantidade inicial de S₁ de modo que 99,90% da nova solução seja de S₁. Qual é a quantidade de S₂, em litro, que será retirada?",
+      "opcoes": [
+        "A) 0,0005",
+        "B) 0,0100",
+        "C) 0,0500",
+        "D) 4,9775",
+        "E) 5,0000"
+      ],
+      "correta": "E",
+      "ano": 2025
+    },
+    {
+      "id": 2025141,
+      "pergunta": "Uma distribuidora de combustível possui caminhões tanque com capacidade de 30 000 litros cada. Em qualquer transporte realizado por esses caminhões, um mesmo volume de combustível é descartado, pois fica com muitas impurezas. Esse volume descartado independe da quantidade transportada. Um posto de combustível encomendou 10 000 litros de gasolina dessa distribuidora e enviou 10 200 litros, considerando o volume descartado no transporte. Mesmo assim, a quantidade de gasolina entregue ao posto foi de 9 900 litros. Em um novo pedido, esse posto solicitou que fosse entregue exatamente o dobro do volume de gasolina encomendado no pedido anterior.\nUtilizando o mesmo caminhão da entrega anterior, qual é o volume mínimo de gasolina, em litro, que a distribuidora deverá enviar para garantir a entrega da quantidade encomendada nesse novo pedido?",
+      "opcoes": [
+        "A) 20 100",
+        "B) 20 200",
+        "C) 20 300",
+        "D) 20 400",
+        "E) 20 600"
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025144,
+      "pergunta": "Uma fábrica utilizou uma impressora 3D para produzir o protótipo de uma peça. O protótipo tem forma de um poliedro convexo, obtido pela justaposição de dois sólidos distintos, um com a forma de um prisma hexagonal regular reto e o outro com a forma de um tronco de pirâmide hexagonal reta. A base maior do tronco de pirâmide coincide com uma das bases do prisma. Após a impressão do protótipo, ele foi encaminhado ao setor de customização para realização da pintura de sua superfície. O critério definido para realização da pintura considera que faces congruentes entre si devem ser pintadas com uma mesma cor, e faces não congruentes entre si devem apresentar cores distintas.\nQual é a quantidade de cores utilizadas para pintar o protótipo?",
+      "opcoes": [
+        "A) 9",
+        "B) 8",
+        "C) 6",
+        "D) 4",
+        "E) 3"
+      ],
+      "correta": "D",
+      "ano": 2025
+    },
+    {
+      "id": 2025146,
+      "pergunta": "No atletismo, um grande desafio da prova de 100 metros rasos é a sua conclusão num tempo abaixo da marca de referência dos 10,00 segundos. Vários atletas já alcançaram esse feito. Em 2009, o jamaicano Usain Bolt estabeleceu o recorde mundial masculino dessa prova, com o tempo de 9,58 segundos.\nQual é a diferença, em segundo, entre a marca de referência e a marca estabelecida por Usain Bolt em 2009?",
+      "opcoes": [
+        "A) 0,02",
+        "B) 0,42",
+        "C) 0,52",
+        "D) 1,02",
+        "E) 1,42"
+      ],
+      "correta": "B",
+      "ano": 2025
+    },
+    {
+      "id": 2025150,
+      "pergunta": "Uma fábrica de tijolos ecológicos com 3 funcionários, cada um trabalhando 6 horas diárias, produz 720 unidades por dia. Para atender ao crescimento da demanda por esse tipo de tijolo, essa fábrica passou a ter 5 funcionários, cada um trabalhando 8 horas por dia, aumentando, assim, sua capacidade de produção. Todos os funcionários produzem igual quantidade de tijolos a cada hora, independentemente de trabalharem 6 ou 8 horas diárias. O número de tijolos fabricados diariamente após o aumento da capacidade de produção é",
+      "opcoes": [
+        "A) 800.",
+        "B) 1 080.",
+        "C) 1 200.",
+        "D) 1 800.",
+        "E) 2 520."
+      ],
+      "correta": "D",
+      "ano": 2025
+    },
+    {
+      "id": 2025155,
+      "pergunta": "Dez casais formaram um grupo de dança e decidiram constituir uma diretoria com três cargos: presidente, secretário e tesoureiro. Para maior representatividade, decidiu-se que no máximo uma pessoa por casal poderá ocupar um cargo nessa diretoria.\nQuantas diretorias diferentes podem ser constituídas por esses 10 casais?",
+      "opcoes": [
+        "A) 10 x 9 x 8",
+        "B) 10 x 18 x 16",
+        "C) 20 x 19 x 18",
+        "D) 10 x 9 x 8 x 2",
+        "E) 20 x 18 x 16 x 2"
+      ],
+      "correta": "B",
+      "ano": 2025
+    },
+    {
+      "id": 2025162,
+      "pergunta": "Uma empresa produziu, em um determinado mês, 110 toneladas de plástico a partir de derivados de petróleo e 80 toneladas a partir de plásticos reciclados. O custo para reciclar uma tonelada de plástico é de R$ 500,00, que equivale a 5% do custo para produzir a mesma quantidade de plástico a partir de derivados de petróleo. Para o mês seguinte, a meta dessa empresa é produzir a mesma quantidade de plástico que foi produzida nesse mês, mas com redução de, pelo menos, 50% no custo de produção. Para que no mês seguinte a empresa atinja a meta, a quantidade mínima de toneladas de plástico que devem ser produzidas a partir de reciclagem deverá ser",
+      "opcoes": [
+        "A) 135.",
+        "B) 140.",
+        "C) 155.",
+        "D) 160.",
+        "E) 175."
+      ],
+      "correta": "B",
+      "ano": 2025
+    },
+    {
+      "id": 2025171,
+      "pergunta": "Um confeiteiro precisou produzir tortas em formato de cilindro circular reto, com raio da base variando entre 12 cm e 16 cm e altura de 6 cm. Essas tortas deverão ser embaladas em caixas com formato de prisma reto de base quadrada, de modo que seja possível acomodar a torta em seu interior, sendo estas perfeitamente 1 cm equidistantes entre a torta e as superfícies internas da caixa, lateral e superior. Ele dispõe, originalmente, de caixas no formato pretendido, cujas dimensões internas são 14 cm de comprimento do lado da base e 7 cm de altura, que não atendem às suas necessidades. Portanto, ele precisará novas caixas, com o mesmo formato das caixas originais, mas com comprimento do lado da base maior, que sejam adequadas para embalar todos os tipos de torta que produz. A aresta da base das novas caixas deve ser, no mínimo, quantos centímetros maior do que a das caixas originais?",
+      "opcoes": [
+        "A) 4",
+        "B) 12",
+        "C) 16",
+        "D) 18",
+        "E) 20"
+      ],
+      "correta": "E",
+      "ano": 2025
+    },
+    {
+      "id": 2025172,
+      "pergunta": "Um empresário utiliza máquinas cuja pressão interna P, em atmosfera, depende do tempo contínuo de utilização t, em hora, e de um parâmetro positivo K, que define o modelo da máquina, segundo a expressãoP = 4 . logK-t + (t - 19)O fabricante dessas máquinas recomenda ao usuário que a pressão interna desse tipo de máquina não ultrapasse 10 atmosferas durante seu funcionamento. O empresário pretende comprar novas máquinas desse tipo que deverão funcionar, diariamente, por um período contínuo de 10 horas. Para isso, precisa definir o modelo de máquina a ser adquirida escolhendo o maior valor possível do parâmetro K, atendendo à recomendação do fabricante. O maior valor a ser escolhido para K é",
+      "opcoes": [
+        "A) 10^0,5",
+        "B) 10^8",
+        "C) 10^2,584",
+        "D) 10^2,599",
+        "E) 25 x 10^-2"
+      ],
+      "correta": "A",
+      "ano": 2025
+    },
+    {
+      "id": 2025175,
+      "pergunta": "Um pai comprou oito presentes diferentes (dentre os quais, uma bicicleta e um celular) para dar a seus três filhos. Ele pretende distribuir os presentes de modo que o filho mais velho e o mais novo recebam três presentes cada um, e o do meio receba os dois presentes restantes. O mais velho ganhará, entre seus presentes, ou uma bicicleta ou um celular, mas não ambos. De quantas maneiras distintas a distribuição dos presentes pode ser feita?",
+      "opcoes": [
+        "A) 36",
+        "B) 53",
+        "C) 300",
+        "D) 320",
+        "E) 560"
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025176,
+      "pergunta": "A final de um campeonato de futebol foi disputada em 2 tempos regulamentares, de 45 minutos cada, sem acréscimos, com uma prorrogação de 30 minutos, também sem acréscimos. Um jogador entrou no início do segundo tempo, com um equipamento para medir a distância percorrida durante sua participação no jogo. Ao final do segundo tempo regulamentar, esse jogador havia percorrido 4,5 km. Ele manteve na prorrogação a mesma velocidade média que havia mantido no segundo tempo regulamentar. A distância percorrida por esse jogador durante sua participação na partida, em quilômetro, foi",
+      "opcoes": [
+        "A) 5,5.",
+        "B) 6,0.",
+        "C) 7,5.",
+        "D) 9,0.",
+        "E) 12,0."
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025178,
+      "pergunta": "Três dados cúbicos, com faces numeradas de 1 a 6, foram utilizados em um jogo. Artur escolheu dois dados, e João ficou com o terceiro. O jogo consiste em ambos lançarem seus dados, observarem os números nas faces voltadas para cima e compararem o maior número obtido por Artur com o número obtido por João. Vence o jogador que obtiver o maior número. Em caso de empate, a vitória é de João. O jogador que tem a maior probabilidade de vitória é",
+      "opcoes": [
+        "A) Artur, com probabilidade de 2/3",
+        "B) João, com probabilidade de 4/9",
+        "C) Artur, com probabilidade de 91/216",
+        "D) João, com probabilidade de 91/216",
+        "E) Artur, com probabilidade de 125/216"
+      ],
+      "correta": "E",
+      "ano": 2025
+    },
+    {
+      "id": 2025179,
+      "pergunta": "A luminância de um objeto é a grandeza que descreve a quantidade de luz produzida ou refletida por sua superfície. Ela está definida como a razão entre a intensidade luminosa, medida em candela (cd), e o quadrado da distância do objeto até o foco de luz, medida em metro (m). A unidade de medida da luminância de um objeto é",
+      "opcoes": [
+        "A) cd/m²",
+        "B) m²/cd",
+        "C) cd/m",
+        "D) m/cd",
+        "E) cd.m"
+      ],
+      "correta": "A",
+      "ano": 2025
+    },
+    {
+      "id": 2009141,
+      "pergunta": "Uma resolução do Conselho Nacional de Política Energética (CNPE) estabeleceu a obrigatoriedade de adição de biodiesel ao óleo diesel comercializado nos postos. A exigência é que, a partir de 1.º de julho de 2009, 4% do volume da mistura final seja formada por biodiesel. Até junho de 2009, esse percentual era de 3%. Essa medida estimula a demanda de biodiesel, bem como possibilita a redução da importação de dísel de petróleo.\nDisponível em: http://www1.folha.uol.com.br. Acesso em: 12 jul. 2009 (adaptado).\nEstimativas indicam que, com a adição de 4% de biodiesel ao dísel, serão consumidos 925 milhões de litros de biodiesel no segundo semestre de 2009. Considerando-se essa estimativa, para o mesmo volume da mistura final dísel/biodiesel consumida no segundo semestre de 2009, qual seria o consumo de biodiesel com a adição de 3%?",
+      "opcoes": [
+        "A) 27,75 milhões de litros.",
+        "B) 37,00 milhões de litros.",
+        "C) 231,25 milhões de litros.",
+        "D) 693,75 milhões de litros.",
+        "E) 888,00 milhões de litros."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009145,
+      "pergunta": "O controle de qualidade de uma empresa fabricante de telefones celulares aponta que a probabilidade de um aparelho de determinado modelo apresentar defeito de fabricação é de 0,2%. Se uma loja acaba de vender 4 aparelhos desse modelo para um cliente, qual é a probabilidade de esse cliente sair da loja com exatamente dois aparelhos defeituosos?",
+      "opcoes": [
+        "A) 2 × (0,2%)4.",
+        "B) 4 × (0,2%)2.",
+        "C) 6 × (0,2%)2 × (99,8%)2.",
+        "D) 4 × (0,2%).",
+        "E) 6 × (0,2%) × (99,8%)."
+      ],
+      "correta": "C",
+      "ano": 2009
+    },
+    {
+      "id": 2009151,
+      "pergunta": "Um grupo de 50 pessoas fez um orçamento inicial para organizar uma festa, que seria dividido entre elas em cotas iguais. Verificou-se ao final que, para arcar com todas as despesas, faltavam R$ 510,00, e que 5 novas pessoas haviam ingressado no grupo. No acerto foi decidido que a despesa total seria dividida em partes iguais pelas 55 pessoas. Quem não havia ainda contribuído pagaria a sua parte, e cada uma das 50 pessoas do grupo inicial deveria contribuir com mais R$ 7,00.\nDe acordo com essas informações, qual foi o valor da cota calculada no acerto final para cada uma das 55 pessoas?",
+      "opcoes": [
+        "A) R$ 14,00.",
+        "B) R$ 17,00.",
+        "C) R$ 22,00.",
+        "D) R$ 32,00.",
+        "E) R$ 57,00."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009152,
+      "pergunta": "Técnicos concluem mapeamento do aquífero Guarani\nO aquífero Guarani localiza-se no subterrâneo dos territórios da Argentina, Brasil, Paraguai e Uruguai, com extensão total de 1.200.000 quilômetros quadrados, dos quais 840.000 quilômetros quadrados estão no Brasil. O aquífero armazena cerca de 30 mil quilômetros cúbicos de água e é considerado um dos maiores do mundo.\nNa maioria das vezes em que são feitas referências à água, são usadas as unidades metro cúbico e litro, e não as unidades já descritas. A Companhia de Saneamento Básico do Estado de São Paulo (SABESP) divulgou, por exemplo, um novo reservatório cuja capacidade de armazenagem é de 20 milhões de litros. Disponível em: http://noticias.terra.com.br. Acesso em: 10 jul. 2009 (adaptado).\nComparando as capacidades do aquífero Guarani e desse novo reservatório da SABESP, a capacidade do aquífero Guarani é",
+      "opcoes": [
+        "A) 1,5 x 102 vezes a capacidade do reservatório novo.",
+        "B) 1,5 x 103 vezes a capacidade do reservatório novo.",
+        "C) 1,5 x 106 vezes a capacidade do reservatório novo.",
+        "D) 1,5 x 108 vezes a capacidade do reservatório novo.",
+        "E) 1,5 x 109 vezes a capacidade do reservatório novo."
+      ],
+      "correta": "E",
+      "ano": 2009
+    },
+    {
+      "id": 2009154,
+      "pergunta": "A rampa de um hospital tem na sua parte mais elevada uma altura de 2,2 metros. Um paciente ao caminhar sobre a rampa percebe que se deslocou 3,2 metros e alcançou uma altura de 0,8 metro.\nA distância em metros que o paciente ainda deve caminhar para atingir o ponto mais alto da rampa é",
+      "opcoes": [
+        "A) 1,16 metros.",
+        "B) 3,0 metros.",
+        "C) 5,4 metros.",
+        "D) 5,6 metros.",
+        "E) 7,04 metros."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009155,
+      "pergunta": "Um posto de combustível vende 10.000 litros de álcool por dia a R$ 1,50 cada litro. Seu proprietário percebeu que, para cada centavo de desconto que concedia por litro, eram vendidos 100 litros a mais por dia. Por exemplo, no dia em que o preço do álcool foi R$ 1,48, foram vendidos 10.200 litros.\nConsiderando x o valor, em centavos, do desconto dado no preço de cada litro, e V o valor, em R$, arrecadado por dia com a venda do álcool, então a expressão que relaciona V e x é",
+      "opcoes": [
+        "A) V = 10.000 + 50x – x².",
+        "B) V = 10.000 + 50x + x².",
+        "C) V = 15.000 – 50x – x².",
+        "D) V = 15.000 + 50x – x².",
+        "E) V = 15.000 – 50x + x²."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009156,
+      "pergunta": "Para cada indivíduo, a sua inscrição no Cadastro de Pessoas Físicas (CPF) é composto por um número de 9 algarismos e outro número de 2 algarismos, na forma d1 e d2, em que os dígitos d1 e d2 são denominados dígitos verificadores. Os dígitos verificadores são calculados, a partir da esquerda, da seguinte maneira: os 9 primeiros algarismos são multiplicados pela sequência 10, 9, 8, 7, 6, 5, 4, 3, 2 (o primeiro por 10, o segundo por 9, e assim sucessivamente); em seguida, calcula-se o resto r da divisão da soma dos resultados das multiplicações por 11, e se esse resto r for 0 ou 1, d1 é zero, caso contrário d1 = (11 – r). O dígito d2 é calculado pela mesma regra, na qual os números a serem multiplicados pela sequência dada são contados a partir do segundo algarismo, sendo d1 o último algarismo, isto é, d2 é zero se o resto s da divisão por 11 das somas das multiplicações for 0 ou 1, caso contrário, d2 = (11 – s).\nSuponha que João tenha perdido seus documentos, inclusive o cartão de CPF e, ao dar queixa da perda na delegacia, não conseguisse lembrar quais eram os dígitos verificadores, recordando-se apenas que os nove primeiros algarismos eram 123.456.789. Neste caso, os dígitos verificadores d1 e d2 esquecidos são, respectivamente,",
+      "opcoes": [
+        "A) 0 e 9.",
+        "B) 1 e 4.",
+        "C) 1 e 7.",
+        "D) 9 e 1.",
+        "E) 0 e 1."
+      ],
+      "correta": "A",
+      "ano": 2009
+    },
+    {
+      "id": 2009157,
+      "pergunta": "Uma empresa que fabrica esferas de aço, de 6 cm de raio, utiliza caixas de madeira, na forma de um cubo, para transportá-las.\nSabendo que a capacidade da caixa é de 13.824 cm³, então o número máximo de esferas que podem ser transportadas em uma caixa é igual a",
+      "opcoes": [
+        "A) 4.",
+        "B) 8.",
+        "C) 16.",
+        "D) 24.",
+        "E) 32."
+      ],
+      "correta": "B",
+      "ano": 2009
+    },
+    {
+      "id": 2009160,
+      "pergunta": "Uma cooperativa de colheita propôs a um fazendeiro um contrato de trabalho nos seguintes termos: a cooperativa forneceria 12 trabalhadores e 4 máquinas, em um regime de trabalho de 6 horas diárias, capazes de colher 20 hectares de milho por dia, ao custo de R$ 10,00 por trabalhador por dia de trabalho, e R$ 1.000,00 pelo aluguel diário de cada máquina. O fazendeiro argumentou que fecharia contrato se a cooperativa colhesse 180 hectares de milho em 6 dias, com gasto inferior a R$ 25.000,00.\nPara atender às exigências do fazendeiro e supondo que o ritmo dos trabalhadores e das máquinas seja constante, a cooperativa deveria",
+      "opcoes": [
+        "A) Manter sua proposta.",
+        "B) Oferecer 4 máquinas a mais.",
+        "C) Oferecer 6 trabalhadores a mais.",
+        "D) Aumentar a jornada de trabalho para 9 horas diárias.",
+        "E) Reduzir em R$ 400,00 o valor do aluguel diário de uma máquina."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009161,
+      "pergunta": "Suponha que a etapa final de uma gincana escolar consista em um desafio de conhecimentos. Cada equipe escolheria 10 alunos para realizar uma prova objetiva, e a pontuação da equipe seria dada pela mediana das notas obtidas pelos alunos. As provas valiam, no máximo, 10 pontos cada. Ao final, a vencedora foi a equipe Ômega, com 7,8 pontos, seguida pela equipe Delta, com 7,6 pontos. Um dos alunos da equipe Gama, a qual ficou na terceira e última colocação, não pôde comparecer, tendo recebido nota zero na prova. As notas obtidas pelos 10 alunos da equipe Gama foram 10; 6,5; 8; 10; 7; 6,5; 7; 8; 6; 0.\nSe o aluno da equipe Gama que faltou tivesse comparecido, essa equipe",
+      "opcoes": [
+        "A) Teria a pontuação igual a 6,5 se ele obtivesse nota 0.",
+        "B) Seria a vencedora se ele obtivesse nota 10.",
+        "C) Seria a segunda colocada se ele obtivesse nota 8.",
+        "D) Permaneceria na terceira posição, independentemente da nota obtida pelo aluno.",
+        "E) Empataria com a equipe Ômega na primeira colocação se o aluno obtivesse nota 9."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009162,
+      "pergunta": "Uma escola lançou uma campanha para seus alunos arrecadarem, durante 30 dias, alimentos não perecíveis para doar a uma comunidade carente da região. Vinte alunos aceitaram a tarefa e nos primeiros 10 dias trabalharam 3 horas diárias, arrecadando 12 kg de alimentos por dia. Animados com os resultados, 30 novos alunos somaram-se ao grupo, e passaram a trabalhar 4 horas por dia nos dias seguintes até o término da campanha.\nAdmitindo-se que o ritmo de coleta tenha se mantido constante, a quantidade de alimentos arrecadados ao final do prazo estipulado seria de",
+      "opcoes": [
+        "A) 920 kg.",
+        "B) 800 kg.",
+        "C) 720 kg.",
+        "D) 600 kg.",
+        "E) 570 kg."
+      ],
+      "correta": "A",
+      "ano": 2009
+    },
+    {
+      "id": 2009163,
+      "pergunta": "Segundo as regras da Fórmula 1, o peso mínimo do carro, de tanque vazio, com o piloto, é de 605 kg, e a gasolina deve ter densidade entre 725 e 780 gramas por litro. Entre os circuitos nos quais ocorrem competições dessa categoria, o mais longo é Spa-Francorchamps, na Bélgica, cujo traçado tem 7 km de extensão. O consumo médio de um carro da Fórmula 1 é de 75 litros para cada 100 km.\nSuponha que um piloto de uma equipe específica, que utiliza um tipo de gasolina com densidade de 750 g/L, esteja no circuito de Spa-Francorchamps, parado no box para reabastecimento. Caso ele pretenda dar mais 16 voltas, ao ser liberado para retornar à pista, seu carro deverá pesar, no mínimo,",
+      "opcoes": [
+        "A) 617 kg.",
+        "B) 668 kg.",
+        "C) 680 kg.",
+        "D) 689 kg.",
+        "E) 717 kg."
+      ],
+      "correta": "B",
+      "ano": 2009
+    },
+    {
+      "id": 2009165,
+      "pergunta": "Doze times se inscreveram em um torneio de futebol amador. O jogo de abertura do torneio foi escolhido da seguinte forma: primeiro foram sorteados 4 times para compor o Grupo A. Em seguida, entre os times do Grupo A, foram sorteados 2 times para realizar o jogo de abertura do torneio, sendo que o primeiro deles jogaria em seu próprio campo, e o segundo seria o time visitante.\nA quantidade total de escolhas possíveis para o Grupo A e a quantidade total de escolhas dos times do jogo de abertura podem ser calculadas através de",
+      "opcoes": [
+        "A) Uma combinação e um arranjo, respectivamente.",
+        "B) Um arranjo e uma combinação, respectivamente.",
+        "C) Um arranjo e uma permutação, respectivamente.",
+        "D) Duas combinações.",
+        "E) Dois arranjos."
+      ],
+      "correta": "A",
+      "ano": 2009
+    },
+    {
+      "id": 2009170,
+      "pergunta": "A resolução das câmeras digitais modernas é dada em megapixels, unidade de medida que representa um milhão de pontos. As informações sobre cada um desses pontos são armazenadas, em geral, em 3 bytes. Porém, para evitar que as imagens ocupem muito espaço, elas são submetidas a algoritmos de compressão, que reduzem em até 95% a quantidade de bytes necessários\npara armazená-las. Considere 1 KB = 1.000 bytes, 1 MB = 1.000 KB, 1 GB = 1.000 MB.\nUtilizando uma câmera de 2.0 megapixels cujo algoritmo de compressão é de 95%, João fotografou 150 imagens para seu trabalho escolar. Se ele deseja armazená-las de modo que o espaço restante no dispositivo seja o menor espaço possível, ele deve utilizar",
+      "opcoes": [
+        "A) Um CD de 700 MB.",
+        "B) Um pendrive de 1 GB.",
+        "C) Um HD externo de 16 GB.",
+        "D) Um memory stick de 16 MB.",
+        "E) Um cartão de memória de 64 MB."
+      ],
+      "correta": "E",
+      "ano": 2009
+    },
+    {
+      "id": 2009171,
+      "pergunta": "A população brasileira sabe, pelo menos intuitivamente, que a probabilidade de acertar as seis dezenas da mega sena não é zero, mas é quase. Mesmo assim, milhões de pessoas são atraídas por essa loteria, especialmente quando o prêmio se acumula em valores altos. Até junho de 2009, cada aposta de seis dezenas, pertencentes ao conjunto {01, 02, 03, …, 59, 60}, custava R$ 1,50.\nDisponível em: www.caixa.gov.br. Acesso em: 7 jul. 2009.\nConsidere que uma pessoa decida apostar exatamente R$ 126,00 e que esteja mais interessada em acertar apenas cinco das seis dezenas da mega sena, justamente pela dificuldade desta última.\nNesse caso, é melhor que essa pessoa faça 84 apostas de seis dezenas diferentes, que não tenham cinco números em comum, do que uma única aposta com nove dezenas, porque a probabilidade de acertar a quina no segundo caso em relação ao primeiro é, aproximadamente,",
+      "opcoes": [
+        "A) 1 1/2 vez menor.",
+        "B) 2 1/2 vezes menor.",
+        "C) 4 vezes menor.",
+        "D) 9 vezes menor.",
+        "E) 14 vezes menor."
+      ],
+      "correta": "C",
+      "ano": 2009
+    },
+    {
+      "id": 2009175,
+      "pergunta": "O Indicador do CadÚnico (ICadÚnico), que compõe o cálculo do Índice de Gestão Descentralizada do Programa Bolsa Família (IGD), é obtido por meio da média aritmética entre a taxa de cobertura qualificada de cadastros (TC) e a taxa de atualização de cadastros (TA), em que, TC= NV/NF, TA= NA/NV, NV é o número de cadastros domiciliares válidos no perfil do CadÚnico, NF é o número de famílias estimadas como público alvo do CadÚnico e NA é o número de cadastros domiciliares atualizados no perfil do CadÚnico.\nPortaria n° 148 de 27 de abril de 2006 (adaptado).\nSuponha que o IcadÚnico de um município específico é 0,6. Porém, dobrando NF o IcadÚnico cairá para 0,5. Se NA + NV = 3.600, então NF é igual a",
+      "opcoes": [
+        "A) 10.000.",
+        "B) 7.500.",
+        "C) 5.000.",
+        "D) 4.500.",
+        "E) 3.000."
+      ],
+      "correta": "C",
+      "ano": 2009
+    },
+    {
+      "id": 2009176,
+      "pergunta": "Joana frequenta uma academia de ginástica onde faz exercícios de musculação. O programa de Joana requer que ela faça 3 séries de exercícios em 6 aparelhos diferentes, gastando 30 segundos em cada série. No aquecimento, ela caminha durante 10 minutos na esteira e descansa durante 60 segundos para começar o primeiro exercício no primeiro aparelho. Entre uma série e outra, assim como ao mudar de aparelho, Joana descansa por 60 segundos.\nSuponha que, em determinado dia, Joana tenha iniciado seus exercícios às 10h30min e finalizado às 11h7min. Nesse dia e nesse tempo, Joana",
+      "opcoes": [
+        "A) Não poderia fazer sequer a metade dos exercícios e dispor dos períodos de descanso especificados em seu programa.",
+        "B) Poderia ter feito todos os exercícios e cumprido rigorosamente os períodos de descanso especificados em seu programa.",
+        "C) Poderia ter feito todos os exercícios, mas teria de ter deixado de cumprir um dos períodos de descanso especificados em seu programa.",
+        "D) Conseguiria fazer todos os exercícios e cumpriria todos os períodos de descanso especificados em seu programa, e ainda se permitiria uma pausa de 7 min.",
+        "E) Não poderia fazer todas as 3 séries dos exercícios especificados em seu programa; em alguma dessas séries deveria ter feito uma série a menos e não deveria ter cumprido um dos períodos de descanso."
+      ],
+      "correta": "B",
+      "ano": 2009
+    },
+    {
+      "id": 2009177,
+      "pergunta": "Um artesão construiu peças de artesanato interceptando uma pirâmide de base quadrada com um plano. Após fazer um estudo das diferentes peças que poderia obter, ele concluiu que uma delas poderia ter uma das faces pentagonal.\nQual dos argumentos a seguir justifica a conclusão do artesão?",
+      "opcoes": [
+        "A) Uma pirâmide de base quadrada tem 4 arestas laterais e a interseção de um plano com a pirâmide intercepta suas arestas laterais. Assim, esses pontos formam um polígono de 4 lados.",
+        "B) Uma pirâmide de base quadrada tem 4 faces triangulares e, quando um plano intercepta essa pirâmide, divide cada face em um triângulo e um trapézio. Logo, um dos polígonos tem 4 lados.",
+        "C) Uma pirâmide de base quadrada tem 5 faces e a interseção de uma face com um plano é um segmento de reta. Assim, se o plano interceptar todas as faces, o polígono obtido nessa interseção tem 5 lados.",
+        "D) O número de lados de qualquer polígono obtido como interseção de uma pirâmide com um plano é igual ao número de faces da pirâmide. Como a pirâmide tem 5 faces, o polígono tem 5 lados.",
+        "E) O número de lados de qualquer polígono obtido interceptando-se uma pirâmide por um plano é igual ao número de arestas laterais da pirâmide. Como a pirâmide tem 4 arestas laterais, o polígono tem 4 lados."
+      ],
+      "correta": "C",
+      "ano": 2009
+    },
+    {
+      "id": 2009178,
+      "pergunta": "João deve 12 parcelas de R$ 150,00 referentes ao cheque especial de seu banco e cinco parcelas de R$ 80,00 referentes ao cartão de crédito. O gerente do banco lhe ofereceu duas parcelas de desconto no cheque especial, caso João quitasse esta dívida imediatamente ou, na mesma condição, isto é, quitação imediata, com 25% de desconto na dívida do cartão. João também poderia renegociar suas dívidas em 18 parcelas mensais de R$ 125,00. Sabendo desses termos, José, amigo de João, ofereceu-lhe emprestar o dinheiro que julgasse necessário pelo tempo de 18 meses, com juros de 25% sobre o total emprestado.\nA opção que dá a João o menor gasto seria",
+      "opcoes": [
+        "A) Renegociar suas dívidas com o banco.",
+        "B) Pegar emprestado de José o dinheiro referente à quitação das duas dívidas.",
+        "C) Recusar o empréstimo de José e pagar todas as parcelas pendentes nos devidos prazos.",
+        "D) Pegar emprestado de José o dinheiro referente à quitação do cheque especial e pagar as parcelas do cartão de crédito.",
+        "E) Pegar emprestado de José o dinheiro referente à quitação do cartão de crédito e pagar as parcelas do cheque especial."
+      ],
+      "correta": "E",
+      "ano": 2009
+    },
+    {
+      "id": 2009179,
+      "pergunta": "A cisterna é um recipiente utilizado para armazenar água da chuva. Os principais critérios a serem observados para captação e armazenagem de água da chuva são: a demanda diária de água na propriedade; o índice médio de precipitação (chuva), por região, em cada período do ano; o tempo necessário para armazenagem; e a área de telhado necessária ou disponível para captação. Para fazer o cálculo do volume de uma cisterna, deve-se acrescentar um adicional relativo ao coeficiente de evaporação. Na dificuldade em se estabelecer um coeficiente confiável, a Empresa Brasileira de Pesquisa Agropecuária (EMBRAPA) sugere que sejam adicionados 10% ao volume calculado de água.\nDesse modo, o volume, em m³, de uma cisterna é calculado por Vc = Vd × Ndia, em que Vd = volume de demanda da água diária (m³), Ndia = número de dias de armazenagem, e este resultado deve ser acrescido de 10%.\nPara melhorar a qualidade da água, recomenda-se que a captação seja feita somente nos telhados das edificações.\nConsiderando que a precipitação de chuva de 1 mm sobre uma área de 1 m²\nproduz 1 litro de água, pode-se calcular a área de um telhado a fim de atender a\nnecessidade de armazenagem da seguinte maneira: área do telhado (em m²) = volume da cisterna (em litros)/precipitação.\nDisponível em: www.cnpsa.embrapa.br. Acesso em: 8 jun. 2009 (adaptado).\nPara atender a uma demanda diária de 2.000 litros de água, com período de armazenagem de 15 dias e precipitação média de 110 mm, o telhado, retangular, deverá ter as dimensões mínimas de",
+      "opcoes": [
+        "A) 6 metros por 5 metros, pois assim teria uma área de 30 m².",
+        "B) 15 metros por 20 metros, pois assim teria uma área de 300 m².",
+        "C) 50 metros por 60 metros, pois assim teria uma área de 3.000 m².",
+        "D) 91 metros por 30 metros, pois assim teria uma área de 2.730 m².",
+        "E) 110 metros por 30 metros, pois assim teria uma área de 3.300 m²."
+      ],
+      "correta": "B",
+      "ano": 2009
+    },
+    {
+      "id": 2009180,
+      "pergunta": "Um médico está estudando um novo medicamento que combate um tipo de câncer em estágios avançados. Porém, devido ao forte efeito dos seus componentes, a cada dose administrada há uma chance de 10% de que o paciente sofra algum dos efeitos colaterais observados no estudo, tais como dores de cabeça, vômitos ou mesmo agravamento dos sintomas da doença. O médico oferece tratamentos compostos por 3, 4, 6, 8 ou 10 doses do medicamento, de acordo com o risco que o paciente pretende assumir.\nSe um paciente considera aceitável um risco de até 35% de chances de que ocorra algum dos efeitos colaterais durante o tratamento, qual é o maior número admissível de doses para esse paciente?",
+      "opcoes": [
+        "A) 3 doses.",
+        "B) 4 doses.",
+        "C) 6 doses.",
+        "D) 8 doses.",
+        "E) 10 doses."
+      ],
+      "correta": "B",
+      "ano": 2009
+    },
+    {
+      "id": 2010137,
+      "pergunta": "No monte de Cerro Armazones, no deserto de Atacama, no Chile, ficará o maior telescópio da superfície terrestre, o Telescópio Europeu Extremamente Grande (E-ELT). O E-ELT terá um espelho primário de 42 m de diâmetro, “o maior olho do mundo voltado para o céu”.\nDisponível em: http://www.estadao.com.br. Acesso em: 27 abr. 2010 (adaptado).\nAo ler esse texto em uma sala de aula, uma professora fez uma suposição de que o diâmetro do olho humano mede aproximadamente 2,1 cm.\nQual a razão entre o diâmetro aproximado do olho humano, suposto pela professora, e o diâmetro do espelho primário do telescópio citado?",
+      "opcoes": [
+        "A) 1 : 20",
+        "B) 1 : 100",
+        "C) 1 : 200",
+        "D) 1 : 1 000",
+        "E) 1 : 2 000"
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2010139,
+      "pergunta": "Uma fábrica produz barras de chocolates no formato de paralelepípedos e de cubos, com o mesmo volume. As arestas da barra de chocolate no formato de paralelepípedo medem 3 cm de largura, 18 cm de comprimento e 4 cm de espessura.\nAnalisando as características das figuras geométricas descritas, a medida das arestas dos chocolates que têm o formato de cubo é igual a",
+      "opcoes": [
+        "A) 5 cm.",
+        "B) 6 cm.",
+        "C) 12 cm.",
+        "D) 24 cm.",
+        "E) 25 cm."
+      ],
+      "correta": "A",
+      "ano": 2010
+    },
+    {
+      "id": 2010150,
+      "pergunta": "A loja Telas & Molduras cobra 20 reais por metro quadrado de tela, 15 reais por metro linear de moldura, mais uma taxa fixa de entrega de 10 reais. Uma artista plástica precisa encomendar telas e molduras a essa loja, suficientes para 8 quadros retangulares (25 cm × 50 cm). Em seguida, fez uma segunda encomenda, mas agora para 8 quadros retangulares (50 cm × 100 cm).\nO valor da segunda encomenda será",
+      "opcoes": [
+        "A) O dobro do valor da primeira encomenda, porque a altura e a largura dos quadros dobraram.",
+        "B) Maior do que o valor da primeira encomenda, mas não o dobro.",
+        "C) A metade do valor da primeira encomenda, porque a altura e a largura dos quadros dobraram.",
+        "D) Menor do que o valor da primeira encomenda, mas não a metade.",
+        "E) Igual ao valor da primeira encomenda, porque o custo de entrega será o mesmo."
+      ],
+      "correta": "B",
+      "ano": 2010
+    },
+    {
+      "id": 2010154,
+      "pergunta": "Uma empresa possui um sistema de controle de qualidade que classifica o seu desempenho financeiro anual, tendo como base o do ano anterior. Os conceitos são: insuficiente, quando o crescimento é menor que 1%; regular, quando o crescimento é maior ou igual a 1% e menor que 5%; bom, quando o crescimento é maior ou igual a 5% e menor que 10%; ótimo, quando é maior ou igual a 10% e menor que 20%; e excelente, quando é maior ou igual a 20%. Essa empresa apresentou lucro de R$132000,00 em 2008 e de R$145000,00 em 2009.\nDe acordo com esse sistema de controle de qualidade, o desempenho financeiro dessa empresa no ano de 2009 deve ser considerado",
+      "opcoes": [
+        "A) Insuficiente.",
+        "B) Regular.",
+        "C) Bom.",
+        "D) Ótimo.",
+        "E) Excelente."
+      ],
+      "correta": "C",
+      "ano": 2010
+    },
+    {
+      "id": 2010155,
+      "pergunta": "Uma escola recebeu do governo uma verba de R$ 1000,00 para enviar dois tipos de folhetos pelo correio. O diretor da escola pesquisou que tipos de selos deveriam ser utilizados. Concluiu que, para o primeiro tipo de folheto, bastava um selo de R$ 0,65 enquanto para folhetos do segundo tipo seriam necessários três selos, um de R$ 0,65, um de R$ 0,60 e um de R$ 0,20. O diretor solicitou que se comprassem selos de modo que fossem postados exatamente 500 folhetos do segundo tipo e uma quantidade restante de selos que permitisse o envio do máximo possível de folhetos do primeiro tipo.\nQuantos selos de R$ 0,65 foram comprados?",
+      "opcoes": [
+        "A) 476",
+        "B) 675",
+        "C) 923",
+        "D) 965",
+        "E) 1538"
+      ],
+      "correta": "C",
+      "ano": 2010
+    },
+    {
+      "id": 2010157,
+      "pergunta": "Para construir uma manilha de esgoto, um cilindro com 2 m de diâmetro e 4 m de altura (de espessura desprezível), foi envolvido homogeneamente por uma camada de concreto, contendo 20 cm de espessura.\nSupondo que cada metro cúbico de concreto custe R$ 10,00 e tomando 3,1 como valor aproximado de π, então o preço dessa manilha é igual a",
+      "opcoes": [
+        "A) R$ 230,40.",
+        "B) R$ 124,00.",
+        "C) R$ 104,16.",
+        "D) R$ 54,56.",
+        "E) R$ 49,60."
+      ],
+      "correta": "D",
+      "ano": 2010
+    },
+    {
+      "id": 2010169,
+      "pergunta": "O Salto Triplo é uma modalidade do atletismo em que o atleta dá um salto em um só pé, uma passada e um salto, nessa ordem. Sendo que o salto com impulsão em um só pé será feito de modo que o atleta caia primeiro sobre o mesmo pé que deu a implusão; na passada ele cairá com o outro pé, do qual o salto é realizado. Disponível em: www.cbat.org.br (adaptado).\nUm atleta da modalidade Salto Triplo, depois de estudar seus movimentos, percebeu que, do segundo para o primeiro salto, o alcance diminuía em 1,2 m, e, do terceiro para o segundo salto, o alcance diminuía 1,5 m.\nQuerendo atingir a meta de 17,4 m nessa prova e considerando os seus estudos, a distância alcançada no primeiro salto teria de estar entre",
+      "opcoes": [
+        "A) 4,0 m e 5,0 m.",
+        "B) 5,0 m e 6,0 m.",
+        "C) 6,0 m e 7,0 m.",
+        "D) 7,0 m e 8,0 m.",
+        "E) 8,0 m e 9,0 m."
+      ],
+      "correta": "D",
+      "ano": 2010
+    },
+    {
+      "id": 2010171,
+      "pergunta": "Um grupo de pacientes com Hepatite C foi submetido a um tratamento tradicional em que 40% desses pacientes foram completamente curados. Os pacientes que não obtiveram cura foram distribuídos em dois grupos de mesma quantidade e submetidos a dois tratamentos inovadores. No primeiro tratamento inovador, 35% dos pacientes foram curados e, no segundo, 45%.\nEm relação aos pacientes submetidos inicialmente, os tratamentos inovadores proporcionaram cura de",
+      "opcoes": [
+        "A) 16%",
+        "B) 24%",
+        "C) 32%",
+        "D) 48%",
+        "E) 64%"
+      ],
+      "correta": "B",
+      "ano": 2010
+    },
+    {
+      "id": 2010172,
+      "pergunta": "Em 2006, a produção mundial de etanol foi de 40 bilhões de litros e a de biodiesel, de 6,5 bilhões. Neste mesmo ano, a produção brasileira de etanol correspondeu a 43% da produção mundial, ao passo que a produção dos Estados Unidos da América, usando milho, foi de 45%. Disponível em: planetasustentavel.abril.com.br.Acesso em: 02 maio 2009.\nConsiderando que, em 2009, a produção mundial de etanol seja a mesma de 2006 e que os Estados Unidos produzirão somente a metade de sua produção de 2006, para que o total produzido pelo Brasil e pelos Estados Unidos continue correspondendo a 88% da produção mundial, o Brasil deve aumentar sua produção em, aproximadamente,",
+      "opcoes": [
+        "A) 22,5%.",
+        "B) 50,0%.",
+        "C) 52,3%.",
+        "D) 65,5%.",
+        "E) 77,5%."
+      ],
+      "correta": "C",
+      "ano": 2010
+    },
+    {
+      "id": 2010176,
+      "pergunta": "A disparidade de volume entre os planetas é tão grande que seria possível colocá-los uns dentro dos outros. O planeta Mercúrio é o menor de todos. Marte é o segundo menor: dentro dele cabem três Mercúrios. Terra é o único com vida: dentro dela cabem sete Martes. Netuno é o quarto maior: dentro dele cabem 58 Terras. Júpiter é o maior dos planetas: dentro dele cabem 23 Netunos.\nRevista Veja. Ano 41, no 25, 25 jun. 2008 (adaptado).\nSeguindo o raciocínio proposto, quantas Terras cabem dentro de Júpiter?",
+      "opcoes": [
+        "A) 406",
+        "B) 1 334",
+        "C) 4 002",
+        "D) 9 338",
+        "E) 28 014"
+      ],
+      "correta": "B",
+      "ano": 2010
+    },
+    {
+      "id": 2010177,
+      "pergunta": "Um dos grandes problemas da poluição dos mananciais (rios, córregos e outros) ocorre pelo hábito de jogar óleo utilizado em frituras nos encanamentos que estão interligados com o sistema de esgoto. Se isso ocorrer, cada 10 litros de óleo poderão contaminar 10 milhões (10⁷) de litros de água potável.\nManual de etiqueta. Parte integrante das revistas Veja (ed. 2055), Cláudia (ed. 555), National Geographic (ed. 93) e Nova Escola (ed. 208) (adaptado).\nSuponha que todas as famílias de uma cidade descartem os óleos de frituras através dos encanamentos e consomem 1 000 litros de óleo em frituras por semana.\nQual seria, em litros, a quantidade de água potável contaminada por semana nessa cidade?",
+      "opcoes": [
+        "A) 10⁻²",
+        "B) 10³",
+        "C) 10⁴",
+        "D) 10⁶",
+        "E) 10⁹"
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2011136,
+      "pergunta": "Para colocar o pistão no motor que está sendo consertado, o dono da oficina terá de adquirir aquele que tenha o diâmetro mais próximo do que precisa.\nNessa condição, o dono da oficina deverá comprar o pistão de diâmetro",
+      "opcoes": [
+        "A) 68,21 mm.",
+        "B) 68,102 mm.",
+        "C) 68,02 mm.",
+        "D) 68,012 mm.",
+        "E) 68,001 mm."
+      ],
+      "correta": "E",
+      "ano": 2011
+    },
+    {
+      "id": 2011141,
+      "pergunta": "– Enquanto você fala ao telefone, faça agachamentos: 100 calorias gastas em 20 minutos.\n– Meia hora de supermercado: 100 calorias.\n– Cuidar do jardim por 30 minutos: 200 calorias.\n– Passear com o cachorro: 200 calorias em 30 minutos.\n– Tirar o pó dos móveis: 150 calorias em 30 minutos.\n– Lavar roupas por 30 minutos: 200 calorias.\nDisponível em: http://cyberdiet.terra.com.br. Acesso em: 27 abr. 2010 (adaptado).\nUma pessoa deseja executar essas atividades, porém, ajustando o tempo para que, em cada uma, gaste igualmente 200 calorias.\nA partir dos ajustes, quanto tempo a mais será necessário para realizar todas as atividades?",
+      "opcoes": [
+        "A) 50 minutos.",
+        "B) 60 minutos.",
+        "C) 80 minutos.",
+        "D) 120 minutos.",
+        "E) 170 minutos."
+      ],
+      "correta": "B",
+      "ano": 2011
+    },
+    {
+      "id": 2011146,
+      "pergunta": "Sabe-se que a distância real, em linha reta, de uma cidade A, localizada no estado de São Paulo, a uma cidade B, localizada no estado de Alagoas, é igual a 2 000 km. Um estudante, ao analisar um mapa, verificou com sua régua que a distância entre essas duas cidades, A e B, era 8 cm.\nOs dados nos indicam que o mapa observado pelo estudante está na escala de",
+      "opcoes": [
+        "A) 1 : 250.",
+        "B) 1 : 2 500.",
+        "C) 1 : 25 000.",
+        "D) 1 : 250 000.",
+        "E) 1 : 25 000 000."
+      ],
+      "correta": "E",
+      "ano": 2011
+    },
+    {
+      "id": 2011156,
+      "pergunta": "O saldo de contratações no mercado formal no setor varejista da região metropolitana de São Paulo registrou alta. Comparando as contratações deste setor no mês de fevereiro com as de janeiro deste ano, houve incremento de 4 300 vagas no setor, totalizando 880 605 trabalhadores com carteira assinada. Disponível em: http://www.folha.uol.com.br. Acesso em: 26 abr. 2010 (adaptado).\nConsiderando-se que y e x representam, respectivamente, as quantidades de trabalhadores no setor varejista e os meses, janeiro sendo o primeiro, fevereiro, o segundo, e assim por diante, a expressão algébrica que relaciona essas quantidades nesses meses é",
+      "opcoes": [
+        "A) Y = 4 300x",
+        "B) Y = 884 905x",
+        "C) Y = 872 005 + 4 300x",
+        "D) Y = 876 305 + 4 300x",
+        "E) Y = 880 605 + 4 300x"
+      ],
+      "correta": "C",
+      "ano": 2011
+    },
+    {
+      "id": 2011159,
+      "pergunta": "O prefeito de uma cidade deseja construir uma rodovia para dar acesso a outro município. Para isso, foi aberta uma licitação na qual concorreram duas empresas. A primeira cobrou R$ 100 000,00 por km construído (n), acrescidos de um valor fixo de R$ 350 000,00, enquanto a segunda cobrou R$ 120 000,00 por km construído (n) acrescido de um valor fixo de R$ 150 000,00. As duas empresas apresentam o mesmo padrão de qualidade dos serviços prestados, mas apenas uma delas poderá ser contratada.\nDo ponto de vista econômico, qual equação possibilitaria encontrar a extensão da rodovia que tornaria indiferente para a prefeitura escolher qualquer uma das propostas apresentadas?",
+      "opcoes": [
+        "A) 100n + 350 = 120n + 150",
+        "B) 100n + 150 = 120n + 350",
+        "C) 100(n + 350) = 120(n + 150)",
+        "D) 100(n + 350 000) = 120(n + 150 000)",
+        "E) 350(n + 100 000) = 150(n + 120 000)"
+      ],
+      "correta": "A",
+      "ano": 2011
+    },
+    {
+      "id": 2011160,
+      "pergunta": "Uma pessoa aplicou certa quantia em ações. No primeiro mês, ela perdeu 30% do total do investimento e, no segundo mês, recuperou 20% do que havia perdido. Depois desses dois meses, resolveu tirar o montante de R$ 3 800,00 gerado pela aplicação.\nA quantia inicial que essa pessoa aplicou em ações corresponde ao valor de",
+      "opcoes": [
+        "A) R$ 4 222,22.",
+        "B) R$ 4 523,80.",
+        "C) R$ 5 000,00.",
+        "D) R$ 13 300,00.",
+        "E) R$ 17 100,00."
+      ],
+      "correta": "C",
+      "ano": 2011
+    },
+    {
+      "id": 2011161,
+      "pergunta": "Cerca de 20 milhões de brasileiros vivem na região coberta pela caatinga, em quase 800 mil km² de área. Quando não chove, o homem do sertão e dua família precisam caminhar quilômetros em busca da água dos açudes. A irregularidade climática é um dos fatores que mais interferem na vida do sertanejo. Disponível em: http://www.wwf.org.br. Acesso em: 23 abr. 2010.\nSegundo este levantamento, a densidade demográfica da região coberta pela caatinga, em habitantes por km², é de",
+      "opcoes": [
+        "A) 250.",
+        "B) 25.",
+        "C) 2,5.",
+        "D) 0,25.",
+        "E) 0,025."
+      ],
+      "correta": "B",
+      "ano": 2011
+    },
+    {
+      "id": 2012150,
+      "pergunta": "Jogar baralho é uma atividade que estimula o raciocínio. Um jogo tradicional é a Paciência, que utiliza 52 cartas. Inicialmente são formadas sete colunas com as cartas. A primeira coluna tem uma carta, a segunda tem duas cartas, a terceira tem três cartas, a quarta tem quatro cartas, e assim sucessivamente até a sétima coluna, a qual tem sete cartas, e o que sobra forma o monte, que são as cartas não utilizadas nas colunas.\nA quantidade de cartas que forma o monte é",
+      "opcoes": [
+        "A) 21.",
+        "B) 24.",
+        "C) 26.",
+        "D) 28.",
+        "E) 31."
+      ],
+      "correta": "B",
+      "ano": 2012
+    },
+    {
+      "id": 2012168,
+      "pergunta": "Dentre outros objetos de pesquisa, a Alometria estuda a relação entre medidas de diferentes partes do corpo humano. Por exemplo, segundo a Alometria, a área A da superfície corporal de uma pessoa relaciona-se com a sua massa m pela fórmula A = k⋅m2/3, em que k é uma constante positiva.\nSe no período que vai da infância até a maioridade de um indivíduo sua massa é multiplicada por 8, por quanto será multiplicada a área da superfície corporal?",
+      "opcoes": [
+        "A) ∛16",
+        "B) 4",
+        "C) √24",
+        "D) 8",
+        "E) 64"
+      ],
+      "correta": "B",
+      "ano": 2012
+    },
+    {
+      "id": 2013150,
+      "pergunta": "Numa escola com 1 200 alunos foi realizada uma pesquisa sobre o conhecimento desses em duas línguas estrangeiras, inglês e espanhol.\nNessa pesquisa constatou-se que 600 alunos falam inglês, 500 falam espanhol e 300 não falam qualquer um desses idiomas.\nEscolhendo-se um aluno dessa escola ao acaso e sabendo-se que ele não fala inglês, qual a probabilidade de que esse aluno fale espanhol?",
+      "opcoes": [
+        "A) 1/2",
+        "B) 5/8",
+        "C) 1/4",
+        "D) 5/6",
+        "E) 5/14"
+      ],
+      "correta": "A",
+      "ano": 2013
+    },
+    {
+      "id": 2013156,
+      "pergunta": "Uma fábrica de fórmicas produz placas quadradas de lados de medida igual a y centímetros. Essas placas são vendidas em caixas com N unidades e, na caixa, é\nespecificada a área máxima S que pode ser coberta pelas N placas.\nDevido a uma demanda do mercado por placas maiores, a fábrica triplicou a medida dos lados de suas placas e conseguiu reuni-las em uma nova caixa, de tal forma que a área coberta S não fosse alterada.\nA quantidade X, de placas do novo modelo, em cada nova caixa será igual a:",
+      "opcoes": [
+        "A) N/9",
+        "B) N/6",
+        "C) N/3",
+        "D) 3N",
+        "E) 9N"
+      ],
+      "correta": "A",
+      "ano": 2013
+    },
+    {
+      "id": 2013158,
+      "pergunta": "O contribuinte que vende mais de R$ 20 mil de ações em Bolsa de Valores em um mês deverá pagar Imposto de Renda. O pagamento para a Receita Federal consistirá em 15% do lucro obtido com a venda das ações. Disponível em: www1.folha.uol.com.br. Acesso em: 26 abr. 2010 (adaptado).\nUm contribuinte que vende por R$ 34 mil um lote de ações que custou R$ 26 mil terá de pagar de Imposto de Renda à Receita Federal o valor de:",
+      "opcoes": [
+        "A) R$ 900,00.",
+        "B) R$ 1 200,00.",
+        "C) R$ 2 100,00.",
+        "D) R$ 3 900,00.",
+        "E) R$ 5 100,00."
+      ],
+      "correta": "B",
+      "ano": 2013
+    },
+    {
+      "id": 2013167,
+      "pergunta": "Disponível em: www.arq.ufsc.br. Acesso em: 3 mar. 2012.\nSuponha que uma peça, quando moldada em argila, possuía uma base retangular cujos lados mediam 30 cm e 15 cm. Após o cozimento, esses lados foram reduzidos em 20%.\nEm relação à área original, a área da base dessa peça, após o cozimento, ficou reduzida em",
+      "opcoes": [
+        "A) 4%",
+        "B) 20%",
+        "C) 36%",
+        "D) 64%",
+        "E) 96%"
+      ],
+      "correta": "C",
+      "ano": 2013
+    },
+    {
+      "id": 2013173,
+      "pergunta": "O ciclo de atividade magnética do Sol tem um período de 11 anos. O início do primeiro ciclo registrado se deu no começo de 1755 e se estendeu até o final de 1765. Desde então, todos os ciclos de atividade magnética do Sol têm sido registrados. Disponível em: http://g1.globo.com. Acesso em: 27 fev. 2013.\nNo ano de 2101, o Sol estará no ciclo de atividade magnética de número",
+      "opcoes": [
+        "A) 32",
+        "B) 34",
+        "C) 33",
+        "D) 35",
+        "E) 31"
+      ],
+      "correta": "A",
+      "ano": 2013
+    },
+    {
+      "id": 2014168,
+      "pergunta": "O Brasil é um país com uma vantagem econômica clara no terreno dos recursos naturais, dispondo de uma das maiores áreas com vocação agrícola do mundo. Especialistas calculam que, dos 853 milhões de hectares do país, as cidades, as reservas indígenas e as áreas de preservação, incluindo florestas e mananciais, cubram por volta de 470 milhões de hectares. Aproximadamente 280 milhões se destinam à agropecuária, 200 milhões para pastagens e 80 milhões para a agricultura, somadas as lavouras anuais e as perenes, como o café e a fruticultura.\nFORTES, G. Recuperação de pastagens é alternativa para ampliar cultivos. Folha de S. Paulo, 30 out. 2011.\nDe acordo com os dados apresentados, o percentual correspondente à área utilizada para agricultura em relação à área do território brasileiro é mais próximo de",
+      "opcoes": [
+        "A) 32,8%",
+        "B) 28,6%",
+        "C) 10,7%",
+        "D) 9,4%",
+        "E) 8,0%"
+      ],
+      "correta": "D",
+      "ano": 2014
+    },
+    {
+      "id": 2015150,
+      "pergunta": "q = 400 – 100p,\nna qual q representa a quantidade de pães especiais vendidos diariamente e p, o seu preço em reais.\nA fim de aumentar o fluxo de clientes, o gerente da padaria decidiu fazer uma promoção. Para tanto, modificará o preço do pão especial de modo que a quantidade a ser vendida diariamente seja a maior possível, sem diminuir a média de arrecadação diária na venda desse produto.\nO preço p, em reais, do pão especial nessa promoção deverá estar no intervalo",
+      "opcoes": [
+        "A) R$ 0,50 ≤ p < R$ 1,50",
+        "B) R$ 1,50 ≤ p < R$ 2,50",
+        "C) R$ 2,50 ≤ p < R$ 3,50",
+        "D) R$ 3,50 ≤ p < R$ 4,50",
+        "E) R$ 4,50 ≤ p < R$ 5,50"
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015157,
+      "pergunta": "As exportações de soja do Brasil totalizaram 4,129 milhões de toneladas no mês de julho de 2012, e registraram um aumento em relação ao mês de julho de 2011, embora tenha havido uma baixa em relação ao mês de maio de 2012. Disponível em: www.noticiasagricolas.com.br. Acesso em: 2 ago. 2012.\nA quantidade, em quilogramas, de soja exportada pelo Brasil no mês de julho de 2012 foi de",
+      "opcoes": [
+        "A) 4,129 x 10³",
+        "B) 4,129 x 106",
+        "C) 4,129 x 109",
+        "D) 4,129 x 1012",
+        "E) 4,129 x 1015"
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2016145,
+      "pergunta": "Art. 93. A empresa com 100 (cem) ou mais empregados está obrigada a preencher de 2% (dois por cento) a 5% (cinco por cento) dos seus cargos com beneficiários reabilitados ou pessoas com deficiência, habilitadas, na seguinte proporção:\nI. até 200 empregados……………….. 2%;\nII. de 201 a 500 empregados…………… 3%;\nIII. de 501 a 1 000 empregados………… 4%;\nIV. de 1 001 em diante………………. 5%.\nDisponível em: www.planalto.gov.br. Acesso em: 3 fev. 2015.\nConstatou-se que a empresa possui 1 200 funcionários, dos quais 10 são reabilitados ou com deficiência, habilitados.\nPara adequar-se à referida lei, a empresa contratará apenas empregados que atendem ao perfil indicado no artigo 93.\nO número mínimo de empregados reabilitados ou com deficiência, habilitados, que deverá ser contratado pela empresa é",
+      "opcoes": [
+        "A) 74",
+        "B) 70",
+        "C) 64",
+        "D) 60",
+        "E) 53"
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016154,
+      "pergunta": "• Marca A: 2 g de fibras a cada 50 g de pão;\n• Marca B: 5 g de fibras a cada 40 g de pão;\n• Marca C: 5 g de fibras a cada 100 g de pão;\n• Marca D: 6 g de fibras a cada 90 g de pão;\n• Marca E: 7 g de fibras a cada 70 g de pão.\nRecomenda-se a ingestão do pão que possui a maior concentração de fibras. Disponível em: www.blog.saude.gov.br. Acesso em: 25 fev. 2013.\nA marca a ser escolhida é",
+      "opcoes": [
+        "A) A",
+        "B) B",
+        "C) C",
+        "D) D",
+        "E) E"
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016177,
+      "pergunta": "O LIRAa, Levantamento Rápido do Índice de Infestação por Aedes aegypti, consiste num mapeamento da infestação do mosquito Aedes aegypti. O LIRAa é dado pelo percentual do número de imóveis com focos do mosquito, entre os escolhidos de uma região em avaliação.\nO serviço de vigilância sanitária de um município, no mês de outubro do ano corrente, analisou o LIRAa de cinco bairros que apresentaram o maior índice de infestação no ano anterior. Os dados obtidos para cada bairro foram:\nI. 14 imóveis com focos de mosquito em 400 imóveis no bairro;\nII. 6 imóveis com focos de mosquito em 500 imóveis no bairro;\nIII. 13 imóveis com focos de mosquito em 520 imóveis no bairro;\nIV. 9 imóveis com focos de mosquito em 360 imóveis no bairro;\nV. 15 imóveis com focos de mosquito em 500 imóveis no bairro. Disponível em: http://bvsms.saude.gov.br. Acesso em: 28 out. 2015\nAs ações de controle iniciarão pelo bairro",
+      "opcoes": [
+        "A) I",
+        "B) II",
+        "C) III",
+        "D) IV",
+        "E) V"
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2017162,
+      "pergunta": "O fisiologista inglês Archibald Vivian Hill propôs, em seus estudos, que a velocidade V de contração de um músculo ao ser submetido a um peso p é dada pela equação (p + a) (v +b) = K, com a, b e K constantes.\nUm fisioterapeuta, com o intuito de maximizar o efeito benéfico dos exercícios que recomendaria a um de seus pacientes, quis estudar essa equação e a classificou desta forma:\n##### TIPO DE CURVA\nSemirreta oblíqua\nSemirreta horizontal\nRamo de parábola\nArco de circunferência\nRamo de hipérbola\nO fisioterapeuta analisou a dependência entre v e p na equação de Hill e a classificou de acordo com sua representação geométrica no plano cartesiano, utilizando o par de coordenadas (p. V). Admita que K> 0. Disponível em: http://rspb.royalsocietypublishing.org. Acesso em: 14jul2015 (adaptado).\nO gráfico da equação que o fisioterapeuta utilizou para maximizar o efeito dos exercícios é do tipo",
+      "opcoes": [
+        "A) Semirreta oblíqua.",
+        "B) Semirreta horizontal.",
+        "C) Ramo de parábola.",
+        "D) Arco de circunferência.",
+        "E) Ramo de hipérbole."
+      ],
+      "correta": "E",
+      "ano": 2017
+    },
+    {
+      "id": 2017164,
+      "pergunta": "A mensagem digitada no celular, enquanto você dirige, tira a sua atenção e, por isso, deve ser evitada. Pesquisas mostram que um motorista que dirige um carro a uma velocidade constante percorre “às cegas” (isto é, sem ter visão da pista) uma distância proporcional ao tempo gasto ao olhar para o celular durante a digitação da mensagem. Considere que isso de fato aconteça. Suponha que dois motoristas (X e Y) dirigem com a mesma velocidade constante e digitam a mesma mensagem em seus celulares. Suponha, ainda, que o tempo gasto pelo motorista X olhando para seu celular enquanto digita a mensagem corresponde a 25% do tempo gasto pelo motorista Y para executar a mesma tarefa. Disponível em: http://g1.globo.com. Acesso em: 21 jul. 2012 (adaptado).\nA razão entre as distâncias percorridas às cegas por X e Y, nessa ordem, é igual a",
+      "opcoes": [
+        "A) 5/4",
+        "B) 1/4",
+        "C) 4/3",
+        "D) 4/1",
+        "E) 3/4"
+      ],
+      "correta": "B",
+      "ano": 2017
+    },
+    {
+      "id": 2017173,
+      "pergunta": "Para uma temporada das corridas de Fórmula 1, a capacidade do tanque de combustível de cada carro passou a ser de 100 kg de gasolina. Uma equipe optou por utilizar uma gasolina com densidade de 750 gramas por litro, iniciando a corrida com o tanque cheio. Na primeira parada de reabastecimento, um carro dessa equipe apresentou um registro em seu computador de bordo acusando o consumo de quatro décimos da gasolina originalmente existente no tanque. Para minimizar o peso desse carro e garantir o término da corrida, a equipe de apoio reabasteceu o carro com a terça parte do que restou no tanque na chegada ao reabastecimento. Disponível em: www.superdanilof1page.com.br. Acesso em: 6 jul. 2015 (adaptado).\nA quantidade de gasolina utilizada, em litro, no reabastecimento foi",
+      "opcoes": [
+        "A) 20/0,075",
+        "B) 20/0,75",
+        "C) 20/7,5",
+        "D) 20 x 0,075",
+        "E) 20 x 0,75"
+      ],
+      "correta": "B",
+      "ano": 2017
+    },
+    {
+      "id": 2018158,
+      "pergunta": "Um produtor de milho utiliza uma área de 160 hectares para as suas atividades agrícolas. Essa área é dividida em duas partes: uma de 40 hectares, com maior produtividade, e outra, de 120 hectares, com menor produtividade. A produtividade é dada pela razão entre a produção, em tonelada, e a área cultivada. Sabe-se que a área de 40 hectares tem produtividade igual a 2,5 vezes à\nda outra. Esse fazendeiro pretende aumentar sua produção total em 15%, aumentando o tamanho da sua propriedade. Para tanto, pretende comprar uma parte de uma fazenda vizinha, que possui a mesma produtividade da parte de 120 hectares de suas terras.\nQual é a área mínima, em hectare, em que o produtor precisará comprar?",
+      "opcoes": [
+        "A) 36",
+        "B) 33",
+        "C) 27",
+        "D) 24",
+        "E) 21"
+      ],
+      "correta": "B",
+      "ano": 2018
+    },
+    {
+      "id": 2018163,
+      "pergunta": "O artigo 33 da lei brasileira sobre drogas prevê a pena de reclusão de 5 a 15 anos para qualquer pessoa que seja condenada por tráfico ilícito ou produção não autorizada de drogas. Entretanto, caso o condenado seja réu primário, com bons antecedentes criminais, essa pena pode sofrer uma redução de um sexto a dois terços.\nSuponha que um réu primário, com bons antecedentes criminais, foi condenado pelo artigo 33 da lei brasileira sobre drogas.\nApós o benefício da redução de pena, sua pena poderá variar de",
+      "opcoes": [
+        "A) 1 ano e 8 meses a 12 anos e 6 meses.",
+        "B) 1 ano e 8 meses a 5 anos.",
+        "C) 3 anos e 4 meses a 10 anos.",
+        "D) 4 anos e 2 meses a 5 anos.",
+        "E) 4 anos e 2 meses a 12 anos e 6 meses."
+      ],
+      "correta": "A",
+      "ano": 2018
+    },
+    {
+      "id": 2019140,
+      "pergunta": "A gripe é uma infecção respiratória aguda de curtaduração causada pelo vírus influenza. Ao entrar no nosso organismo pelo nariz, esse vírus multiplica-se, disseminando-se para a garganta e demais partes das vias respiratórias, incluindo os pulmões. O vírus influenza é uma partícula esférica que tem um diâmetro interno de 0,00011 mm.\nDisponível em: www.gripenet.pt. Acesso em: 2 nov. 2013 (adaptado).\nEm notação científica, o diâmetro interno do vírus influenza, em mm, é",
+      "opcoes": [
+        "A) 1,1x10​−1​​",
+        "B) 1,1x10​−2​​",
+        "C) 1,1x10​−3​​",
+        "D) 1,1x10​−4​​",
+        "E) 1,1x10​−5​​"
+      ],
+      "correta": "D",
+      "ano": 2019
+    },
+    {
+      "id": 2019146,
+      "pergunta": "O serviço de meteorologia de uma cidade emite relatórios diários com a previsão do tempo. De posse dessas informações, a prefeitura emite três tipos de alertas para a população:\n• Alerta cinza: deverá ser emitido sempre que a previsão do tempo estimar que a temperatura será\ninferior a 10 °C, e a umidade relativa do ar for inferior a 40%;\n• Alerta laranja: deverá ser emitido sempre que a previsão do tempo estimar que a temperatura deve\nvariar entre 35 °C e 40 °C, e a umidade relativa do ar deve ficar abaixo de 30%;\n• Alerta vermelho: deverá ser emitido sempre que a previsão do tempo estimar que a temperatura será superior a 40 ºC, e a umidade relativa do ar for inferior a 25%.\nUm resumo da previsão do tempo nessa cidade, para um período de 15 dias, foi apresentado no gráfico.\nDecorridos os 15 dias de validade desse relatório, um funcionário percebeu que, no período a que se refere o gráfico, foram emitidos os seguintes alertas:\n• Dia 1: alerta cinza;\n• Dia 12: alerta laranja;\n• Dia 13: alerta vermelho.\nEm qual(is) desses dias o(s) aviso(s) foi(ram) emitido(s) corretamente?",
+      "opcoes": [
+        "A) 1.",
+        "B) 12.",
+        "C) 1 e 12.",
+        "D) 1 e 13.",
+        "E) 1, 12 e 13."
+      ],
+      "correta": "A",
+      "ano": 2019
+    },
+    {
+      "id": 2019151,
+      "pergunta": "Três sócios resolveram fundar uma fábrica. O investimento inicial foi de R$ 1 000 000,00. E, independentemente do valor que cada um investiu nesse primeiro momento, resolveram considerar que cada um deles contribuiu com um terço do investimento inicial.\nAlgum tempo depois, um quarto sócio entrou para a sociedade, e os quatro, juntos, investiram mais R$ 800 000,00 na fábrica. Cada um deles contribuiu com um quarto desse valor. Quando venderam a fábrica, nenhum outro investimento havia sido feito. Os sócios decidiram então dividir o montante de R$ 1 800 000,00 obtido com a venda, de modo proporcional à quantia total investida por cada sócio.\nQuais os valores mais próximos, em porcentagens, correspondentes às parcelas financeiras que cada um dos més sócios iniciais e o quarto sócio, respectivamente, receberam?",
+      "opcoes": [
+        "A) 29,60 e 11,11.",
+        "B) 28,70 e 13,89.",
+        "C) 25,00 e 25,00.",
+        "D) 18,52 e 11,11.",
+        "E) 12,96 e 13,89."
+      ],
+      "correta": "A",
+      "ano": 2019
+    },
+    {
+      "id": 2019170,
+      "pergunta": "A bula de um antibiótico infantil, fabricado na forma de xarope, recomenda que sejam ministrados, diariamente, no máximo 500 mg desse medicamento para cada quilograma de massa do paciente. Um pediatra prescreveu a dosagem máxima desse antibiótico para ser ministrada diariamente a uma criança de 20 kg pelo período de 5 dias.\nEsse medicamento pode ser comprado em frascos de 10 mL, 50 mL, 100 mL, 250 mL e 500 mL. Os pais dessa criança decidiram comprar a quantidade exata de medicamento que precisará ser ministrada no tratamento, evitando a sobra de medicamento.\nConsidere que 1 g desse medicamento ocupe um volume de 1 cm³.\nA capacidade do frasco, em mililitro, que esses pais deverão comprar é",
+      "opcoes": [
+        "A) 10",
+        "B) 50",
+        "C) 100",
+        "D) 250",
+        "E) 500"
+      ],
+      "correta": "B",
+      "ano": 2019
+    },
+    {
+      "id": 2020140,
+      "pergunta": "O proprietário de um apartamento decidiu instalar porcelanato no piso da sala. Essa sala tem formato retangular com 3,2 m de largura e 3,6 m de comprimento. As peças do porcelanato têm formato de um quadrado com lado medindo 80 cm. Esse porcelanato é vendido em dois tipos de caixas, com os preços indicados a seguir.\n- Caixas do tipo A: 4 unidades de piso, R$ 35,00;\n- Caixas do tipo B: 3 unidades de piso, R$ 27,00.\nNa instalação do porcelanato, as peças podem ser recortadas e devem ser assentadas sem espaçamento entre elas, aproveitando-se ao máximo os recortes feitos.\nA compra que atende às necessidades do proprietário, proporciona a menor sobra de pisos e resulta no menor preço é",
+      "opcoes": [
+        "A) 5 caixas do tipo A.",
+        "B) 1 caixa do tipo A e 4 caixas do tipo B.",
+        "C) 3 caixas do tipo A e 1 caixa do tipo B.",
+        "D) 5 caixas do tipo A e 1 caixa do tipo B.",
+        "E) 6 caixas do tipo B."
+      ],
+      "correta": "C",
+      "ano": 2020
+    },
+    {
+      "id": 2020151,
+      "pergunta": "Uma das Sete Maravilhas do Mundo Moderno é o Templo de Kukulkán, localizado na cidade de Chichén Itzá, no México. Geometricamente, esse templo pode ser representado por um tronco reto de pirâmide de base quadrada.\nAs quantidades de cada tipo de figura plana que formam esse tronco de pirâmide são",
+      "opcoes": [
+        "A) 2 quadrados e 4 retângulos.",
+        "B) 1 retângulo e 4 triângulos isósceles.",
+        "C) 2 quadrados e 4 trapézios isósceles.",
+        "D) 1 quadrado, 3 retângulos e 2 trapézios retângulos.",
+        "E) 2 retângulos, 2 quadrados e 2 trapézios retângulos."
+      ],
+      "correta": "C",
+      "ano": 2020
+    },
+    {
+      "id": 2020160,
+      "pergunta": "Um motociclista planeja realizar uma viagem cujo destino fica a 500 km de sua casa. Sua moto consome 5 litros de gasolina para cada 100 km rodados, e o tanque da moto tem capacidade para 22 litros. Pelo mapa, observou que no trajeto da viagem o último posto disponível para reabastecimento, chamado Estrela, fica a 80 km do seu destino. Ele pretende partir com o tanque da moto cheio e planeja fazer somente duas paradas para reabastecimento, uma na ida e outra na volta, ambas no posto Estrela. No reabastecimento para a viagem de ida, deve considerar também combustível suficiente para se deslocar por 200 km no seu destino.\nA quantidade mínima de combustível, em litro, que esse motociclista deve reabastecer no posto Estrela na viagem de ida, que seja suficiente para fazer o segundo reabastecimento, é",
+      "opcoes": [
+        "A) 13.",
+        "B) 14.",
+        "C) 17.",
+        "D) 18.",
+        "E) 21."
+      ],
+      "correta": "C",
+      "ano": 2020
+    },
+    {
+      "id": 2020166,
+      "pergunta": "“1, 2, 3, GOL, 5, 6, 7, GOL, 9, 10, 11, GOL, 13, GOL, 15, GOL, 17, 18, 19, GOL, 21, 22, 23, GOL, 25,...” Para a Copa do Mundo de Futebol de 2014, um bar onde se reuniam amigos para assistir aos jogos criou uma brincadeira. Um dos presentes era escolhido e tinha que dizer, numa sequência em ordem crescente, os números naturais não nulos, trocando os múltiplos de 4 e os números terminados em 4 pela palavra GOL. A brincadeira acabava quando o participante errava um termo da sequência. Um dos participantes conseguiu falar até o número 103, respeitando as regras da brincadeira.\nO total de vezes em que esse participante disse a palavra GOL foi",
+      "opcoes": [
+        "A) 20.",
+        "B) 28.",
+        "C) 30.",
+        "D) 35.",
+        "E) 40."
+      ],
+      "correta": "C",
+      "ano": 2020
+    },
+    {
+      "id": 2020176,
+      "pergunta": "Três pessoas, X, Y e Z, compraram plantas ornamentais de uma mesma espécie que serão cultivadas em vasos de diferentes tamanhos. O vaso escolhido pela pessoa X tem capacidade de 4 dm³. O vaso da pessoa Y tem capacidade de 7 000 cm³ e o de Z tem capacidade igual a 20 L. Após um tempo do plantio das mudas, um botânico que acompanha o desenvolvimento delas realizou algumas medições e registrou que a planta que está no vaso da pessoa X tem 0,6 m de altura. Já as plantas que estão nos vasos de Y e Z têm, respectivamente, alturas medindo 120 cm e 900 mm.\nO vaso de maior capacidade e a planta de maior altura são, respectivamente, os de",
+      "opcoes": [
+        "A) Y e X.",
+        "B) Y e Z.",
+        "C) Z e X.",
+        "D) Z e Y.",
+        "E) Z e Z."
+      ],
+      "correta": "D",
+      "ano": 2020
     }
   ]
 };

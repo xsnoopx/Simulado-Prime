@@ -3041,6 +3041,3048 @@ export const questoes = {
       ],
       "correta": "A",
       "ano": 2026
+    },
+    {
+      "id": 2018096,
+      "pergunta": "Para serem absorvidos pelas células do intestino humano, os lipídios ingeridos precisam ser primeiramente emulsificados. Nessa etapa da digestão, torna-se necessária a ação dos ácidos biliares, visto que os lipídios apresentam uma natureza apolar e são insolúveis em água.\nEsses ácidos atuam no processo de modo a",
+      "opcoes": [
+        "A) hidrolisar os lipídios.",
+        "B) agir como detergentes.",
+        "C) tornar os lipídios anfílicos.",
+        "D) promover a secreção de lipases.",
+        "E) estimular o trânsito intestinal dos lipídios."
+      ],
+      "correta": "B",
+      "ano": 2018
+    },
+    {
+      "id": 2018097,
+      "pergunta": "A tecnologia de comunicação da etiqueta RFID (chamada de etiqueta inteligente) é usada há anos para rastrear gado, vagões de trem, bagagem aérea e carros nos pedágios. Um modelo com circuito dessas etiquetas pode funcionar sem baterias e é constituído por três componentes: um microprocessador de silício, uma bobina de metal feita de cobre ou de alumínio, que é enrolada em um padrão circular; e um encapsulador, que é um material de vidro ou polímero envolvendo o microprocessador e a bobina. Na presença de um campo de radiofrequência gerado pelo leitor, a etiqueta transmite sinais. A distância de leitura é determinada pelo tamanho da bobina e pela potência da onda de rádio emitida pelo leitor. Disponível em: www.uol.com.br. Acesso em: 27 fev. 2012 (adaptado).\nA etiqueta funciona sem pilhas porque o campo",
+      "opcoes": [
+        "A) elétrico da onda de rádio agita elétrons da bobina.",
+        "B) elétrico da onda de rádio cria uma tensão na bobina.",
+        "C) magnético da onda de rádio induz corrente na bobina.",
+        "D) magnético da onda de rádio aquece os fios da bobina.",
+        "E) magnético da onda de rádio diminui a ressonância no interior da bobina."
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018098,
+      "pergunta": "Corredores ecológicos visam mitigar os efeitos da fragmentação dos ecossistemas promovendo a ligação entre diferentes áreas, com o objetivo de proporcionar o deslocamento de animais, a dispersão de sementes e o aumento da cobertura vegetal. São mantidos com base em informações como estudos sobre o desmatamento de espécies, sua área de vida (área necessária para o suprimento de suas necessidades vitais e reprodutivas) e a distribuição de suas populações. Disponível em: www.mma.gov.br. Acesso em: 30 nov. 2017 (adaptado).\nNessa estratégia, a recuperação da biodiversidade é efetiva porque",
+      "opcoes": [
+        "A) propicia o fluxo gênico.",
+        "B) intensifica a caça de espécies.",
+        "C) amplia o processo de ocupação humana.",
+        "D) aumenta o número de indivíduos nas populações.",
+        "E) favorece a formação de ilhas de proteção integral."
+      ],
+      "correta": "A",
+      "ano": 2018
+    },
+    {
+      "id": 2018100,
+      "pergunta": "No ciclo celular, atua molécula reguladora. Dentre elas, a proteína p53, ativada em resposta a mutações no DNA, evitando a progressão do ciclo até que os danos sejam reparados, ou induzindo a célula à autodestruição. ALBERTS, B. et al. Fundamentos da biologia celular. Porto Alegre: Artmed, 2011 (adaptado).\nA ausência dessa proteína poderá favorecer a",
+      "opcoes": [
+        "A) redução da síntese de DNA, acelerando o ciclo celular.",
+        "B) saída imediata do ciclo celular, antecipando a proteção do DNA.",
+        "C) ativação de outras proteínas reguladoras, induzindo a apoptose.",
+        "D) manutenção da estabilidade genética, favorecendo a longevidade.",
+        "E) proliferação celular exagerada, resultando na formação de um tumor."
+      ],
+      "correta": "E",
+      "ano": 2018
+    },
+    {
+      "id": 2018101,
+      "pergunta": "O deserto é um bioma que se localiza em regiões de pouca umidade. A fauna é, predominantemente, composta por animais roedores, aves, répteis e artrópodes. Uma adaptação associada a esse bioma, presente nos seres vivos dos grupos citados, é a(o)",
+      "opcoes": [
+        "A) existência de numerosas glândulas sudoríparas na epiderme.",
+        "B) eliminação de excretas nitrogenadas de forma concentrada.",
+        "C) desenvolvimento do embrião no interior de ovo com casca.",
+        "D) capacidade de controlar a temperatura corporal.",
+        "E) respiração realizada por pulmões foliáceos."
+      ],
+      "correta": "B",
+      "ano": 2018
+    },
+    {
+      "id": 2018102,
+      "pergunta": "O sulfeto de mercúrio(II) foi usado como pigmento vermelho para pinturas de quadros e murais. Esse pigmento, conhecido como vermilion, escurece com o passar dos anos, fenômeno cuja origem é alvo de pesquisas. Aventou-se a hipótese de que o vermilion seja decomposto sob a ação da luz, produzindo uma fina camada de mercúrio metálico na superfície. Essa reação seria catalisada por íon cloreto, presente na umidade do ar. Texto adaptado de: MENEZES, M. A. et al. A degradação do pigmento vermilion. Química Nova, n. 2, 2010. Segundo a hipótese proposta, o íon cloreto atua na decomposição fotoquímica do vermilion",
+      "opcoes": [
+        "A) reagindo como agente oxidante.",
+        "B) deslocando o equilíbrio químico.",
+        "C) diminuindo a energia de ativação.",
+        "D) precipitando cloreto de mercúrio.",
+        "E) absorvendo a energia da luz visível."
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018103,
+      "pergunta": "O sonorizador é um dispositivo físico implantado sobre a superfície de uma rodovia de modo que provoque uma trepidação e ruído quando da passagem de um veículo sobre ele, alertando para uma situação atípica à frente, como obras, pedágios ou travessia de pedestres. Ao passar sobre os sonorizadores, a suspensão do veículo sofre vibrações que produzem ondas sonoras, resultando em um barulho peculiar. Considere um veículo que passe com velocidade constante igual a 108 km/h sobre um sonorizador cujas faixas são separadas por 8 cm. Disponível em: www.denatran.gov.br. Acesso em: 2 set. 2018 (adaptado). A frequência da vibração do automóvel percebida pelo condutor durante a passagem nesse sonorizador é mais próxima de",
+      "opcoes": [
+        "A) 8,6 hertz.",
+        "B) 13,5 hertz.",
+        "C) 375 hertz.",
+        "D) 1 350 hertz.",
+        "E) 4 860 hertz."
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018105,
+      "pergunta": "Na mitologia grega, Niobe era a filha de Tântalo, dois personagens conhecidos pelo sofrimento. O elemento químico de número atômico 41, igual a 41, tem propriedades químicas e físicas tão parecidas com as do elemento de número atômico 73 que chegaram a ser confundidos. Por isso, em homenagem a esses dois personagens da mitologia grega, foi conferido a esses elementos os nomes de Nióbio (Z = 41) e Tântalo (Z = 73). Esses dois elementos químicos adquirem grande importância econômica na metalurgia, na produção de supercondutores e em outras aplicações na indústria, de ponta, exatamente pelas propriedades químicas e físicas comuns aos dois. SEABRA, A. A. A colher que desaparece. Outras histórias de amor, amor e morte a partir da mitologia grega. São Paulo: Companhia das Letras, 2014 (adaptado). A importância econômica e tecnológica desses elementos, pela similaridade de suas propriedades químicas e físicas, deve-se a",
+      "opcoes": [
+        "A) terem elétrons no subnível f.",
+        "B) serem elementos de transição interna.",
+        "C) pertencerem ao mesmo grupo na tabela periódica.",
+        "D) terem seus elétrons mais externos nos níveis 4 e 5, respectivamente.",
+        "E) estarem localizados na família dos alcalinos terrosos e alcalinos, respectivamente."
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018107,
+      "pergunta": "O cruzamento de duas espécies da família das Anonáceas, a cherimola (Annona cherimola) com a fruta-pinha (Annona squamosa), resultou em uma planta híbrida denominada de atemoia. Recomenda-se que o seu plantio seja por meio de enxertia. Um dos benefícios dessa forma de plantio é a",
+      "opcoes": [
+        "A) ampliação da variabilidade genética.",
+        "B) produção de frutos das duas espécies.",
+        "C) manutenção do genótipo da planta híbrida.",
+        "D) reprodução de clones das plantas parentais.",
+        "E) modificação do genoma decorrente da transgenia."
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018110,
+      "pergunta": "Um estudante relatou que o mapeamento do DNA da cevada foi quase todo concluído e seu código genético desvendado. Chamou atenção para o número de genes que compõem esse código genético e que a semente da cevada, apesar de pequena, possui um genoma mais complexo que o humano, sendo boa parte desse código constituída de sequências repetidas. Nesse contexto, o conceito de código genético está abordado de forma equivocada. Cientificamente esse conceito é definido como",
+      "opcoes": [
+        "A) trincas de nucleotídeos que codificam os aminoácidos.",
+        "B) localização de todos os genes encontrados em um genoma.",
+        "C) codificação de sequências repetidas presentes em um genoma.",
+        "D) conjunto de todos os RNAs mensageiros transcritos em um organismo.",
+        "E) todas as sequências de pares de bases presentes em um organismo."
+      ],
+      "correta": "A",
+      "ano": 2018
+    },
+    {
+      "id": 2018111,
+      "pergunta": "A polinização, que viabiliza o transporte do grão de pólen de uma planta até o estigma de outra, pode ser realizada biótica ou abioticamente. Nos processos abióticos, as plantas dependem de fatores como o vento e a água. A estratégia evolutiva que resulta em polinização mais eficiente quando esta depende do vento é o(a)",
+      "opcoes": [
+        "A) diminuição do cálice.",
+        "B) alongamento do ovário.",
+        "C) dispensa da cor das pétalas.",
+        "D) aumento do número de estames.",
+        "E) numeração do néctar."
+      ],
+      "correta": "E",
+      "ano": 2018
+    },
+    {
+      "id": 2018113,
+      "pergunta": "Companhias que fabricam jeans usam cloro para o clareamento, seguido de lavagem. Algumas estão substituindo o cloro por substâncias ambientalmente mais seguras, como peróxidos, que podem ser degradados por enzimas chamadas peroxidases. Pensando nisso, pesquisadores inspiraram genes codificadores de peroxidases em leveduras cultivadas em condições de clareamento e lavagem dos jeans e selecionaram as sobreviventes para produção dessas enzimas. Adaptado de: SOUZA, A. P. et al. Biotecnologia no Rio de Janeiro. Arinter, 2016 (adaptado). Nesse caso, o uso dessas leveduras modificadas objetiva",
+      "opcoes": [
+        "A) reduzir a quantidade de resíduos tóxicos nos efluentes da lavagem.",
+        "B) eliminar a necessidade de tratamento da água consumida.",
+        "C) elevar a capacidade de clareamento dos jeans.",
+        "D) aumentar a resistência do jeans a peróxidos.",
+        "E) associar ação bactericida ao clareamento."
+      ],
+      "correta": "A",
+      "ano": 2018
+    },
+    {
+      "id": 2018114,
+      "pergunta": "Por meio de reações químicas que envolvem carboidratos, lipídeos e proteínas, nossas células obtêm energia e produzem gás carbônico e água. A oxidação da glicose no organismo humano libera energia, conforme ilustra a equação química, sendo que aproximadamente 40% dela é disponibilizada para atividade muscular. C₆H₁₂O₆(s) + 6O₂(g) → 6CO₂(g) + 6H₂O(l) ΔH = –2800 kJConsidere as massas molares (em g mol⁻¹): H = 1; C = 12; O = 16. LIMA, L. M.; FRAGA, C. A. M. Carboidratos. In: ______. Química na saúde: uma abordagem para o ensino médio. São Paulo: Sociedade Brasileira de Química, 2010 (adaptado). Na oxidação de 1,0 grama de glicose, a energia obtida para atividade muscular, em quilojoule, é mais próxima de",
+      "opcoes": [
+        "A) 6,2.",
+        "B) 15,6.",
+        "C) 70,0.",
+        "D) 622,2.",
+        "E) 1 120,0."
+      ],
+      "correta": "A",
+      "ano": 2018
+    },
+    {
+      "id": 2018121,
+      "pergunta": "O manejo adequado do solo possibilita a manutenção de sua fertilidade à medida que as trocas de nutrientes entre matéria orgânica, água, solo e o ar são mantidas para garantir a produção. Algumas espécies iônicas de alumínio são tóxicas, não só para a planta, mas para muitos organismos como as bactérias, responsáveis pelas transformações no ciclo do nitrogênio. O alumínio danifica as membranas das células das raízes e restringe a expansão de suas paredes; com isso, a planta não cresce adequadamente. Para promover benefícios para a produção agrícola, é recomendada a remediação do solo utilizando calcário (CaCO₃). BRADY, N. C.; WEIL, R. R. Elementos da natureza e propriedades dos solos. Porto Alegre: Bookman, 2013 (adaptado).\nEssa remediação promove no solo o(a)",
+      "opcoes": [
+        "A) diminuição do pH, deixando-o fértil.",
+        "B) solubilização do alumínio, ocorrendo sua lixiviação pela chuva.",
+        "C) interação do íon cálcio com o íon alumínio, produzindo uma liga metálica.",
+        "D) reação do carbonato de cálcio com os íons alumínio, formando alumínio metálico.",
+        "E) aumento da sua alcalinidade, tornando os íons alumínio menos disponíveis."
+      ],
+      "correta": "E",
+      "ano": 2018
+    },
+    {
+      "id": 2018122,
+      "pergunta": "Visando a melhoria estética de um veículo, o vendedor de uma loja sugere ao consumidor que ele troque as rodas de seu automóvel de aro 16 polegadas para aro 17 polegadas, o que corresponde a um diâmetro maior do conjunto roda e pneu.\nDuas consequências provocadas por essa troca de aro são:",
+      "opcoes": [
+        "A) Elevar a posição do centro de massa do veículo tornando-o mais instável e aumentar a velocidade do automóvel em relação à indicada no velocímetro.",
+        "B) Abaixar a posição do centro de massa do veículo tornando-o mais estável e diminuir a velocidade do automóvel em relação à indicada no velocímetro.",
+        "C) Elevar a posição do centro de massa do veículo tornando-o mais estável e aumentar a velocidade do automóvel em relação à indicada no velocímetro.",
+        "D) Abaixar a posição do centro de massa do veículo tornando-o mais instável e diminuir a velocidade do automóvel em relação à indicada no velocímetro.",
+        "E) Elevar a posição do centro de massa do veículo tornando-o mais estável e diminuir a velocidade do automóvel em relação à indicada no velocímetro."
+      ],
+      "correta": "A",
+      "ano": 2018
+    },
+    {
+      "id": 2018132,
+      "pergunta": "As abelhas utilizam a sinalização química para distinguir da abelha-rainha de uma operária, sendo capazes de reconhecer diferenças entre moléculas. A rainha produz o sinalizador químico conhecido como ácido 9-hidroxidec-2-enoico, enquanto as abelhas-operárias produzem ácido 10-hidroxidec-2-enoico. Nós podemos distinguir as abelhas-operárias das rainhas por sua aparência, mas, entre si, elas usam essa sinalização química para perceber a diferença. Pode-se dizer que veem por meio da química. LE COUTEUR, P.; BURRESON, J. Os botões de Napoleão: 17 moléculas que mudaram a história. Rio de Janeiro: Jorge Zahar, 2006 (adaptado).\nAs abelhas produtoras dos sinais químicos, produzidos pelas abelhas operárias, possuem diferença na",
+      "opcoes": [
+        "A) fórmula estrutural.",
+        "B) fórmula molecular.",
+        "C) identificação dos tipos de ligação.",
+        "D) contagem do número de carbonos.",
+        "E) identificação dos grupos funcionais."
+      ],
+      "correta": "A",
+      "ano": 2018
+    },
+    {
+      "id": 2018133,
+      "pergunta": "Insetos podem apresentar três tipos de desenvolvimento: I) direto, II) hemimetabólico (desenvolvimento incompleto), é constituído pelas fases de ovo, larva, pupa e adulto sexualmente maduro, que ocupam diversos hábitats. Os insetos que metamorfoseiam pertencem ordens mais numerosas em termos de espécies conhecidas.\nEsse tipo de desenvolvimento está relacionado a um maior número de espécies em razão da",
+      "opcoes": [
+        "A) proteção na fase de pupa, favorecendo a sobrevivência de adultos férteis.",
+        "B) produção de muitos ovos, larvas e pupas, aumentando o número de adultos.",
+        "C) exploração de diferentes nichos, evitando a competição entre as fases da vida.",
+        "D) redução de alimento em todas as fases de vida, garantindo o surgimento do adulto.",
+        "E) nutrição na fase presente, que é o valor naquele momento, onde qualquer um deveria ser paga em uma data futura. Um valor presente P submetido a juros compostos sem taxa i, por um período de tempo n, produz um valor futuro F determinado pela fórmula"
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018134,
+      "pergunta": "Talvez você já tenha bebido suco usando dois canudinhos iguais. Entretanto, pode-se verificar que ao colocar um canudo imerso no suco e outro do lado de fora do líquido, fazendo a sucção simultaneamente em ambos, haverá dificuldade em bebê-lo.\nEssa dificuldade ocorre porque o(a)",
+      "opcoes": [
+        "A) força necessária para a sucção do ar e do suco simultaneamente dobra de valor.",
+        "B) densidade do ar é menor que a do suco, portanto, o volume de ar aspirado é muito maior que o volume de suco.",
+        "C) velocidade com que o suco sobe deve ser constante nos dois canudos, o que é impossível com um dos canudos de fora.",
+        "D) peso da coluna de suco é consideravelmente maior que o peso da coluna de ar, o que dificulta a sucção do líquido.",
+        "E) pressão no interior da boca assume praticamente o mesmo valor daquela que atua sobre o suco."
+      ],
+      "correta": "E",
+      "ano": 2018
+    },
+    {
+      "id": 2018135,
+      "pergunta": "O químico Fritz Haber recebeu o prêmio Nobel de química de 1918 pelo desenvolvimento de um processo viável para a síntese da amônia (NH₃). Em seu discurso de premiação, Haber justificou a importância do feito dizendo que: \"Desde a metade do século passado, tornou-se conhecido que um suprimento de nitrogênio é uma necessidade básica para o aumento da safra de alimentos; entretanto, também se sabia que as plantas não podem absorver o nitrogênio em sua forma simples, que o principal constituinte da atmosfera. Elas precisam que o nitrogênio seja combinado [...] para poderem assimilá-lo. Economias agrícolas basicamente mantêm o balanço do nitrogênio ligado. No entanto, com o advento da era industrial, a produção do nitrogênio levado de onde cresce a colheita para lugares distantes, onde são consumidos, fazendo com que o nitrogênio ligado não retorne à terra da qual foi retirado. Isso tem gerado a necessidade econômica mundial de abastecer o solo com nitrogênio ligado [...]. A demanda por nitrogênio, tal como a do carvão, indica que diferente nosso modo de vida se tornou com relação ao das pessoas que com seus próprios corpos, fertilizam o solo que cultivam. Desde a metade do último século, nós vínhamos aproveitando o suprimento de nitrogênio do salitre, que a natureza tinha depositado nos desertos montanhosos do Chile. Comparando o rápido crescimento da demanda com o extenso calculado desses depósitos, ficou claro que em menos do século atual uma emergência seríssima seria inevitável, a menos que a química encontrasse uma saída.\" Disponível em: HABER, F. The Synthesis of Ammonia from its Elements. Nobel Lecture, June 2, 1920 (adaptado).\nDe acordo com os argumentos de Haber, qual fenômeno teria provocado o desequilíbrio no \"balanço do nitrogênio ligado\"?",
+      "opcoes": [
+        "A) O esgotamento das reservas de salitre no Chile.",
+        "B) O aumento da exploração de carvão vegetal e carvão mineral.",
+        "C) A redução da fertilidade do solo nas economias agrícolas.",
+        "D) A intensificação no fluxo de pessoas do campo para as cidades.",
+        "E) A necessidade das plantas de absorverem sais de nitrogênio disponíveis no solo."
+      ],
+      "correta": "D",
+      "ano": 2018
+    },
+    {
+      "id": 2021091,
+      "pergunta": "A deficiência de lipase ácida lisossômica é uma doença hereditária associada a um gene do cromossomo 10. Os pais dos pacientes podem não saber que são portadores dos genes da doença até o nascimento do primeiro filho afetado. Quando ambos os progenitores são portadores, existe uma chance, em quatro, de que seu bebê possa nascer com essa doença. ANDERSON, R. A. et al. In: Situ Localization of the Genetic Locus Encoding the Lysosomal Acid Lipase/Cholesteryl Esterase (LIPA) Deficient in Wolman Disease to Chromosome 10q23.2-q23.3. Genomics, n. 1, jan. 1990 (adaptado).\nEssa é uma doença hereditária de caráter",
+      "opcoes": [
+        "A) recessivo.",
+        "B) dominante.",
+        "C) codominante.",
+        "D) poligênico.",
+        "E) polialélico."
+      ],
+      "correta": "A",
+      "ano": 2021
+    },
+    {
+      "id": 2021095,
+      "pergunta": "Estudo aponta que a extinção de preguiças-gigantes, cuja base da dieta eram frutos e sementes, provocou impactos consideráveis na vegetação do Pantanal brasileiro. A flora, embora não tenha desaparecido, tornou-se menos abundante que no passado, além de ocupar áreas mais restritas. BICUDO, F. Jardineiros da pesada. Ecologia. Pesquisa Fapesp, ed. 231, maio 2015 (adaptado).\nO evento descrito com a flora ocorreu em razão da redução",
+      "opcoes": [
+        "A) da produção de flores.",
+        "B) do tamanho das plantas.",
+        "C) de fatores de disseminação das sementes.",
+        "D) da quantidade de sementes por fruto.",
+        "E) dos hábitats disponíveis para as plantas."
+      ],
+      "correta": "C",
+      "ano": 2021
+    },
+    {
+      "id": 2021096,
+      "pergunta": "Carros elétricos estão cada vez mais baratos, no entanto, os órgãos governamentais e a indústria se preocupam com o tempo de recarga das baterias, que é muito mais lento quando comparado ao tempo gasto para encher o tanque de combustível. Portanto, os usuários de transporte individual precisam se conscientizar dos ganhos ambientais dessa mudança e planejar com antecedência seus percursos, pensando em pausas necessárias para recargas. Após realizar um percurso de 110 km, um motorista pretende recarregar as baterias de seu carro elétrico, que tem um desempenho médio de 5,0 km/kWh, usando um carregador ideal que opera a uma tensão de 220 V e é percorrido por uma corrente de 20 A.\nQuantas horas são necessárias para recarregar a energia utilizada nesse percurso?",
+      "opcoes": [
+        "A) 0,005",
+        "B) 0,125",
+        "C) 2,5",
+        "D) 5,0",
+        "E) 8,0"
+      ],
+      "correta": "D",
+      "ano": 2021
+    },
+    {
+      "id": 2021097,
+      "pergunta": "Nas angiospermas, além da fertilização da oosfera, existe uma segunda fertilização que resulta num tecido triploide.\nEssa segunda fertilização foi importante evolutivamente, pois viabilizou a formação de um tecido de",
+      "opcoes": [
+        "A) nutrição para o fruto.",
+        "B) reserva para o embrião.",
+        "C) revestimento para a semente.",
+        "D) proteção para o megagametófito.",
+        "E) vascularização para a planta jovem."
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021100,
+      "pergunta": "Entre 2014 e 2016, as regiões central e oeste da África sofreram uma grave epidemia de febre hemorrágica causada pelo vírus ebola, que se manifesta em até 21 dias após a infecção e cuja taxa de letalidade (enfermos que vão a óbito) pode chegar a 90%. Em regiões de clima tropical e subtropical, um outro vírus também pode causar febre hemorrágica: o vírus da dengue, que, embora tenha período de incubação menor (até 10 dias), apresenta taxa de letalidade abaixo de 1%. Disponível em: www.who.int. Acesso em: 1 fev. 2017 (adaptado).\nSegundo as informações do texto e aplicando princípios de evolução biológica às relações do tipo patógeno-hospedeiro, qual dos dois vírus infecta seres humanos há mais tempo?",
+      "opcoes": [
+        "A) Ebola, pois o maior período de incubação reflete duração mais longa do processo de coevolução patógeno-hospedeiro.",
+        "B) Dengue, pois o menor período de incubação reflete duração mais longa do processo de coevolução patógeno-hospedeiro.",
+        "C) Ebola, cuja alta letalidade indica maior eficiência do vírus em parasitar seus hospedeiros, estabelecida ao longo de sua evolução.",
+        "D) Ebola, cujos surtos epidêmicos concentram-se no continente africano, reconhecido como berço da origem evolutiva dos seres humanos.",
+        "E) Dengue, cuja baixa letalidade indica maior eficiência do vírus em parasitar seus hospedeiros, estabelecida ao longo da coevolução patógeno-hospedeiro."
+      ],
+      "correta": "E",
+      "ano": 2021
+    },
+    {
+      "id": 2021102,
+      "pergunta": "O plantio por estaquia é um método de propagação de plantas no qual partes de um espécime são colocadas no solo para produzir novas gerações. Na floricultura, é comum utilizar o caule das roseiras para estaquia, pois a propagação da planta é positiva em razão da aplicação de auxinas na porção inferior do caule.\nA utilização de auxinas no método de estaquia das roseiras contribui para",
+      "opcoes": [
+        "A) floração da planta.",
+        "B) produção de gemas laterais.",
+        "C) formação de folhas maiores.",
+        "D) formação de raízes adventícias.",
+        "E) produção de compostos energéticos."
+      ],
+      "correta": "D",
+      "ano": 2021
+    },
+    {
+      "id": 2021109,
+      "pergunta": "Com o aumento da população de suínos no Brasil, torna-se necessária a adoção de métodos para reduzir o potencial poluidor dos resíduos dessa agroindústria, uma vez que, comparativamente ao esgoto doméstico, os dejetos suínos são 200 vezes mais poluentes. Sendo assim, a utilização desses resíduos como matéria-prima na obtenção de combustíveis é uma alternativa que permite diversificar a matriz energética nacional, ao mesmo tempo em que parte dos recursos hídricos do país são preservados. BECK, A. M. Resíduos suínos como alternativa energética sustentável. XXVII Encontro Nacional de Engenharia de Produção. Anais ENEGEP. Foz do Iguaçu, 2007 (adaptado).\nO biocombustível a que se refere o texto é o",
+      "opcoes": [
+        "A) etanol.",
+        "B) biogás.",
+        "C) butano.",
+        "D) metanol.",
+        "E) biodiesel."
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021110,
+      "pergunta": "A curcumina, uma das substâncias que confere a cor alaranjada ao açafrão, pode auxiliar no combate à dengue quando adicionada à água de criadouros do mosquito transmissor. Essa substância acumula-se no intestino do inseto após ser ingerida com a água do criadouro e, quando ativada pela luz, induz a produção de espécies reativas de oxigênio que danificam de forma fatal o tecido do tubo digestório. TOLEDO, K. Corante extraído do açafrão pode ser útil no combate à dengue. Disponível em: http://agencia.fapesp.br. Acesso em: 25 abr. 2017 (adaptado).\nA forma de combate relatada tem como atividade o(a)",
+      "opcoes": [
+        "A) morte do indivíduo adulto.",
+        "B) redução da eclosão dos ovos.",
+        "C) comprometimento da metamorfose.",
+        "D) impedimento do desenvolvimento da larva.",
+        "E) repelência da forma transmissora da doença."
+      ],
+      "correta": "D",
+      "ano": 2021
+    },
+    {
+      "id": 2021112,
+      "pergunta": "No seu estudo sobre a queda dos corpos, Aristóteles afirmava que se abandonarmos corpos leves e pesados de uma mesma altura, o mais pesado chegaria mais rápido ao solo. Essa ideia está apoiada em algo que é difícil de refutar, a observação direta da realidade baseada no senso comum. Após uma aula de física, dois colegas estavam discutindo sobre a queda dos corpos, e um tentava convencer o outro de que tinha razão:Colega A: “O corpo mais pesado cai mais rápido que um menos pesado, quando largado de uma mesma altura. Eu provo, largando uma pedra e uma rolha. A pedra chega antes. Pronto! Tá provado!”. Colega B: “Eu não acho! Peguei uma folha de papel esticado e deixei cair. Quando amassei, ela caiu mais rápido. Como isso é possível? Se era a mesma folha de papel, deveria cair do mesmo jeito. Tem que ter outra explicação!”. HÜLSENDEGER, M. Uma análise das concepções dos alunos sobre a queda dos corpos. Caderno Brasileiro de Ensino de Física. n. 3, dez. 2004 (adaptado).\nO aspecto físico comum que explica a diferença de comportamento dos corpos em queda nessa discussão é o(a)",
+      "opcoes": [
+        "A) peso dos corpos.",
+        "B) resistência do ar.",
+        "C) massa dos corpos.",
+        "D) densidade dos corpos.",
+        "E) aceleração da gravidade."
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021118,
+      "pergunta": "Organismos autótrofos e heterótrofos realizam processos complementares que associam os ciclos do carbono e do oxigênio. O carbono fixado pela energia luminosa ou a partir de compostos inorgânicos é eventualmente degradado pelos organismos, resultando em fontes de carbono como metano ou gás carbônico. Ainda, outros compostos orgânicos são catabolizados pelos seres com menor rendimento energético, produzindo compostos secundários (subprodutos) que podem funcionar como combustíveis ambientais.\nO processo metabólico associado à expressão combustíveis ambientais é a",
+      "opcoes": [
+        "A) fotossíntese.",
+        "B) fermentação.",
+        "C) quimiossíntese.",
+        "D) respiração aeróbica.",
+        "E) fosforilação oxidativa."
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021120,
+      "pergunta": "O rompimento da barragem de rejeitos de mineração no município mineiro de Mariana e o derramamento de produtos tóxicos nas águas do Rio Doce, ocorridos em 2015, ainda têm consequências para os organismos que habitam o Parque Nacional Marinho de Abrolhos, localizado a mais de 1000 quilômetros de distância. Esse desastre ambiental afetou o fitoplâncton, as esponjas, as algas macroscópicas, os peixes herbívoros e os golfinhos. FRAINER, G.; SICILIANO, S.; TAVARES, D. C. Franciscana calls for help: [...] International Whaling Commission, Conference Paper, jun. 2016 (adaptado).\nConcentrações mais elevadas dos compostos citados são encontradas em",
+      "opcoes": [
+        "A) esponjas.",
+        "B) golfinhos.",
+        "C) fitoplâncton.",
+        "D) peixes herbívoros.",
+        "E) algas macroscópicas."
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021122,
+      "pergunta": "Uma escola iniciou o processo educativo para implantação da coleta seletiva e destino de materiais recicláveis. Para atingir seus objetivos, a instituição planejou:1) sensibilizar a comunidade escolar, desenvolvendo atividades em sala e extraclasse de maneira contínua;2) capacitar o pessoal responsável pela limpeza da escola quanto aos novos procedimentos adotados com a coleta seletiva; e3) distribuir coletores de materiais recicláveis específicos nas salas, pátio e outros ambientes para acondicionamento dos resíduos.\nPara completar a ação proposta no ambiente escolar, o que falta ser inserido no planejamento?",
+      "opcoes": [
+        "A) Realizar campanhas educativas de sensibilização em bairros vizinhos para fortalecer a coleta seletiva.",
+        "B) Firmar parceria com a prefeitura ou cooperativa de catadores para recolhimento dos materiais recicláveis e destinação apropriada.",
+        "C) Organizar visitas ao lixão ou aterro local para identificar aspectos importantes sobre a disposição final do lixo.",
+        "D) Divulgar na rádio local, no jornal impresso e nas redes sociais que a escola está realizando a coleta seletiva.",
+        "E) Colocar recipientes coletores de lixo reciclável fora da escola para entrega voluntária pela população."
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021123,
+      "pergunta": "Os búfalos são animais considerados rústicos pelos criadores e, por isso, são deixados no campo sem controle reprodutivo. Por causa desse tipo de criação, a consanguinidade é favorecida, proporcionando o aparecimento de enfermidades, como o albinismo, defeitos cardíacos, entre outros. Separar os animais de forma adequada minimizaria a ocorrência desses problemas. DAMÉ, M. C. F.; RIET-CORRÊA, F.; SCHILD, A. L. Pesq. Vet. Bras., n. 7, 2013 (adaptado).\nQual procedimento biotecnológico prévio é recomendado nessa situação?",
+      "opcoes": [
+        "A) Transgenia.",
+        "B) Terapia gênica.",
+        "C) Vacina de DNA.",
+        "D) Clonagem terapêutica.",
+        "E) Mapeamento genético."
+      ],
+      "correta": "E",
+      "ano": 2021
+    },
+    {
+      "id": 2021125,
+      "pergunta": "Um dos exames clínicos mais tradicionais para medir a capacidade reflexa dos indivíduos é o exame do reflexo patelar. Esse exame consiste na estimulação da patela, um pequeno osso localizado na parte anterior da articulação do joelho, com um pequeno martelo. A resposta reflexa ao estímulo é caracterizada pelo levantamento da perna em que o estímulo foi aplicado.\nQual região específica do sistema nervoso coordena essa resposta?",
+      "opcoes": [
+        "A) Ponte.",
+        "B) Medula.",
+        "C) Cerebelo.",
+        "D) Hipotálamo.",
+        "E) Neuro-hipófise."
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021126,
+      "pergunta": "Na montagem de uma cozinha para um restaurante, a escolha do material correto para as panelas é importante, pois a panela que conduz mais calor é capaz de cozinhar os alimentos mais rapidamente e, com isso, há economia de gás. A taxa de condução do calor depende da condutividade k do material, de sua área A, da diferença de temperatura ΔT e da espessura d do material, sendo dada pela relação ΔQ/Δt = k A ΔT/d. Em panelas com dois materiais, a taxa de condução é dada por ΔQ/Δt = A ΔT / (d1/k1 + d2/k2), em que d1 e d2 são as espessuras dos dois materiais, e k1 e k2 são as condutividades de cada material. Os materiais mais comuns no mercado para panelas são o alumínio (k = 20 W/m K), o ferro (k = 8 W/m K) e o aço (k = 5 W/m K) combinado com o cobre (k = 40 W/m K). Compara-se uma panela de ferro, uma de alumínio e uma composta de 1/2 da espessura em cobre e 1/2 da espessura em aço, todas com a mesma espessura total e com a mesma área de fundo.\nA ordem crescente da mais econômica para a menos econômica é",
+      "opcoes": [
+        "A) cobre-aço, alumínio e ferro.",
+        "B) alumínio, cobre-aço e ferro.",
+        "C) cobre-aço, ferro e alumínio.",
+        "D) alumínio, ferro e cobre-aço.",
+        "E) ferro, alumínio e cobre-aço."
+      ],
+      "correta": "B",
+      "ano": 2021
+    },
+    {
+      "id": 2021129,
+      "pergunta": "Os pesticidas organoclorados foram amplamente empregados na agricultura, contudo, em razão das suas elevadas toxicidades e persistências no meio ambiente, eles foram banidos. Considere a aplicação de 500 g de um pesticida organoclorado em uma cultura e que, em certas condições, o tempo de meia-vida do pesticida no solo seja de 5 anos.\nA massa do pesticida no decorrer de 35 anos será mais próxima de",
+      "opcoes": [
+        "A) 3,9 g.",
+        "B) 31,2 g.",
+        "C) 62,5 g.",
+        "D) 125,0 g.",
+        "E) 250,0 g."
+      ],
+      "correta": "A",
+      "ano": 2021
+    },
+    {
+      "id": 2021131,
+      "pergunta": "A simples atitude de não jogar direto no lixo ou no ralo da pia o óleo de cozinha usado pode contribuir para a redução da poluição ambiental. Mas o que fazer com o óleo vegetal que não será mais usado? Não existe um modelo ideal de descarte, mas uma alternativa simples tem sido reaproveitá-lo para fazer sabão. Para isso, são necessários, além do próprio óleo, água e soda cáustica. LOBO, I. Sabão feito com óleo de cozinha. Disponível em: http://pqa.agr.mdf.gov.br. Acesso em: 23 fev. 2012 (adaptado).\nCom base no texto, a reação química que permite o reaproveitamento do óleo vegetal é denominada",
+      "opcoes": [
+        "A) redução.",
+        "B) epoxidação.",
+        "C) substituição.",
+        "D) esterificação.",
+        "E) saponificação."
+      ],
+      "correta": "E",
+      "ano": 2021
+    },
+    {
+      "id": 2021132,
+      "pergunta": "Durante o desenvolvimento embrionário humano ocorre uma comunicação entre os átrios direito e esquerdo através do forame oval (ou forame de Botal). Essa comunicação não causa prejuízos à circulação do bebê em formação, exceto se ela perdurar após o nascimento.\nOs prejuízos no período embrionário são evitados porque a circulação fetal se assemelha à dos(as)",
+      "opcoes": [
+        "A) aves, porque a pequena circulação e a grande circulação estão presentes.",
+        "B) répteis, porque a mistura de sangue é minimizada por um metabolismo lento.",
+        "C) crocodilianos, porque a separação dos ventrículos impede a mistura sanguínea.",
+        "D) peixes, porque a circulação é simples, ocorrendo uma passagem única pelo coração.",
+        "E) anfíbios, porque pressões diferenciais isolam temporalmente o sangue venoso do arterial."
+      ],
+      "correta": "D",
+      "ano": 2021
+    },
+    {
+      "id": 2022091,
+      "pergunta": "O protozoário Trypanosoma cruzi, causador da doença de Chagas, pode ser a nova arma da medicina contra o câncer. Pesquisadores brasileiros conseguiram criar uma vacina contra a doença usando uma variação do protozoário incapaz de desencadear a patologia (não patogênico). Para isso, realizaram uma modificação genética criando um T. cruzi capaz de produzir também moléculas fabricadas pelas células tumorais. Quando o organismo inicia o combate ao protozoário, entra em contato também com a molécula tumoral, que passa a ser vista também pelo sistema imune como um indicador de células do protozoário. Depois de induzidas as defesas, estas passam a destruir todas as células com a molécula tumoral, como se lutassem apenas contra o protozoário.\nQual o mecanismo utilizado no experimento para enganar as células de defesa, fazendo com que ataquem o tumor?",
+      "opcoes": [
+        "A) Autoimunidade.",
+        "B) Hipersensibilidade.",
+        "C) Ativação da resposta inata.",
+        "D) Apresentação de antígeno específico.",
+        "E) Desencadeamento de processo anti-inflamatório."
+      ],
+      "correta": "D",
+      "ano": 2022
+    },
+    {
+      "id": 2022095,
+      "pergunta": "Estudo confirma eficácia do Método Wolbachia para dengue\nOs resultados de um ensaio clínico randomizado na Indonésia apontaram uma redução de 77 por cento dos casos de dengue nas áreas que receberam o mosquito Aedes aegypti infectado com a bactéria Wolbachia. Trata-se da mesma técnica utilizada no Brasil pelo Método Wolbachia, iniciativa conduzida pela Fundação Oswaldo Cruz — Fiocruz. Essa bactéria induz a redução da carga viral no mosquito e, consequentemente, o número de casos de dengue na área, sendo repassada por meio do cruzamento entre os insetos. Como essa bactéria é um organismo intracelular e o vírus também precisa entrar nas células para se reproduzir, ambos necessitarão de recursos comuns.\nEssa tecnologia utilizada no combate à dengue consiste na",
+      "opcoes": [
+        "A) predação do vírus pela bactéria.",
+        "B) esterilização de mosquitos infectados.",
+        "C) alteração no genótipo do mosquito pela bactéria.",
+        "D) competição do vírus e da bactéria no hospedeiro.",
+        "E) inserção de material genético do vírus na bactéria."
+      ],
+      "correta": "D",
+      "ano": 2022
+    },
+    {
+      "id": 2022096,
+      "pergunta": "A água bruta coletada de mananciais apresenta alto índice de sólidos suspensos, o que a deixa com um aspecto turvo. Para se obter uma água límpida e potável, ela deve passar por um processo de purificação numa estação de tratamento de água. Nesse processo, as principais etapas são, nesta ordem: coagulação, decantação, filtração, desinfecção e fluoretação. Qual é a etapa de retirada de grande parte desses sólidos?",
+      "opcoes": [
+        "A) Coagulação.",
+        "B) Decantação.",
+        "C) Filtração.",
+        "D) Desinfecção.",
+        "E) Fluoretação."
+      ],
+      "correta": "B",
+      "ano": 2022
+    },
+    {
+      "id": 2022097,
+      "pergunta": "Vida: a ciência da biologia\nOs ursos, por não apresentarem uma hibernação verdadeira, acordam por causa da presença de termogenina, uma proteína mitocondrial que impede a chegada dos prótons até a ATP sintetase, gerando calor. Esse calor é importante para aquecer o organismo, permitindo seu despertar.\nEm qual etapa do metabolismo energético celular a termogenina interfere?",
+      "opcoes": [
+        "A) Glicólise.",
+        "B) Fermentação lática.",
+        "C) Ciclo do ácido cítrico.",
+        "D) Oxidação do piruvato.",
+        "E) Fosforilação oxidativa."
+      ],
+      "correta": "E",
+      "ano": 2022
+    },
+    {
+      "id": 2022100,
+      "pergunta": "No processo de captação da luz pelo olho para a formação de imagens estão envolvidas duas estruturas celulares: os cones e os bastonetes. Os cones são sensíveis à energia dos fótons, e os bastonetes, à quantidade de fótons incidentes. A energia dos fótons que compõem os raios luminosos está associada à sua frequência, e a intensidade, ao número de fótons incidentes.\nUm animal que tem bastonetes mais sensíveis irá",
+      "opcoes": [
+        "A) apresentar daltonismo.",
+        "B) perceber cores fora do espectro do visível.",
+        "C) enxergar bem em ambientes mal iluminados.",
+        "D) necessitar de mais luminosidade para enxergar.",
+        "E) fazer uma pequena distinção de cores em ambientes iluminados."
+      ],
+      "correta": "C",
+      "ano": 2022
+    },
+    {
+      "id": 2022101,
+      "pergunta": "Técnica modifica proteína do veneno de cascavel e permite criar fármaco que modula a coagulação sanguínea\nO veneno da cascavel pode causar hemorragia com risco de morte a quem é picado pela serpente. No entanto, pesquisadores do Brasil e da Bélgica desenvolveram uma molécula de interesse farmacêutico, a PEG-collineína-1, a partir de uma proteína encontrada no veneno dessa cobra, capaz de modular a coagulação sanguínea. Embora a técnica não seja nova, foi a primeira vez que o método foi usado a partir de uma toxina animal na sua forma recombinante, ou seja, produzida em laboratório por um fungo geneticamente modificado.\nEsse novo medicamento apresenta potencial aplicação para",
+      "opcoes": [
+        "A) impedir a formação de trombos, típicos em alguns casos de acidente vascular cerebral.",
+        "B) tratar consequências da anemia profunda, em razão da perda de grande volume de sangue.",
+        "C) evitar a manifestação de urticárias, comumente relacionadas a processos alérgicos.",
+        "D) reduzir o inchaço dos linfonodos, parte da resposta imunitária de diferentes infecções.",
+        "E) regular a oscilação da pressão arterial, característica dos quadros de hipertensão."
+      ],
+      "correta": "A",
+      "ano": 2022
+    },
+    {
+      "id": 2022102,
+      "pergunta": "On the Gravitational Field of a Mass Point According to Einstein’s Theory\nUm Buraco Negro é um corpo celeste que possui uma grande quantidade de matéria concentrada em uma pequena região do espaço, de modo que sua força gravitacional é tão grande que qualquer partícula fica aprisionada em sua superfície, inclusive a luz. O raio dessa região caracteriza uma superfície-limite, chamada de horizonte de eventos, da qual nada consegue escapar. Considere que o Sol foi instantaneamente substituído por um Buraco Negro com a mesma massa solar, de modo que o seu horizonte de eventos seja de aproximadamente 3,0 quilômetros.\nApós a substituição descrita, o que aconteceria aos planetas do Sistema Solar?",
+      "opcoes": [
+        "A) Eles se moveriam em órbitas espirais, aproximando-se sucessivamente do Buraco Negro.",
+        "B) Eles oscilariam aleatoriamente em torno de suas órbitas elípticas originais.",
+        "C) Eles se moveriam em direção ao centro do Buraco Negro.",
+        "D) Eles passariam a precessionar mais rapidamente.",
+        "E) Eles manteriam suas órbitas inalteradas."
+      ],
+      "correta": "E",
+      "ano": 2022
+    },
+    {
+      "id": 2022103,
+      "pergunta": "Aplicações e implicações do ozônio na indústria, ambiente e saúde\nDurante o ano de 2020, impulsionado pela necessidade de respostas rápidas e eficientes para desinfectar ambientes de possíveis contaminações com o SARS-CoV-2, causador da covid-19, diversas alternativas foram buscadas para os procedimentos de descontaminação de materiais e ambientes. Entre elas, o uso de ozônio em meio aquoso como agente sanitizante para pulverização em humanos e equipamentos de proteção em câmaras ou túneis, higienização de automóveis e de ambientes fechados e descontaminação de trajes. No entanto, pouca atenção foi dada à toxicidade do ozônio, à formação de subprodutos, ao nível de concentração segura e às precauções necessárias.\nO grande risco envolvido no emprego indiscriminado dessa substância deve-se à sua ação química como",
+      "opcoes": [
+        "A) catalisador.",
+        "B) oxidante.",
+        "C) redutor.",
+        "D) ácido.",
+        "E) base."
+      ],
+      "correta": "B",
+      "ano": 2022
+    },
+    {
+      "id": 2022105,
+      "pergunta": "Uma lanterna funciona com três pilhas de resistência interna igual a 0,5 ohm cada, ligadas em série. Quando posicionadas corretamente, devem acender a lâmpada incandescente de especificações 4,5 watts e 4,5 volts. Cada pilha na posição correta gera uma f.e.m. (força eletromotriz) de 1,5 volt. Uma pessoa, ao trocar as pilhas da lanterna, comete o equívoco de inverter a posição de uma das pilhas. Considere que as pilhas mantêm contato independentemente da posição.\nCom esse equívoco, qual é a intensidade de corrente que passa pela lâmpada ao se ligar a lanterna?",
+      "opcoes": [
+        "A) 0,25 ampère",
+        "B) 0,33 ampère",
+        "C) 0,75 ampère",
+        "D) 1,00 ampère",
+        "E) 1,33 ampère"
+      ],
+      "correta": "A",
+      "ano": 2022
+    },
+    {
+      "id": 2022109,
+      "pergunta": "Um grupo de alunos realizou um experimento para observar algumas propriedades dos ácidos, adicionando um pedaço de mármore (CaCO3) a uma solução aquosa de ácido clorídrico (HCl), observando a liberação de um gás e o aumento da temperatura.\nO gás obtido no experimento é o:",
+      "opcoes": [
+        "A) H2",
+        "B) O2",
+        "C) CO2",
+        "D) CO",
+        "E) Cl2"
+      ],
+      "correta": "C",
+      "ano": 2022
+    },
+    {
+      "id": 2022111,
+      "pergunta": "Um pai faz um balanço utilizando dois segmentos paralelos e iguais da mesma corda para fixar uma tábua a uma barra horizontal. Por segurança, opta por um tipo de corda cuja tensão de ruptura seja 25 por cento superior à tensão máxima calculada nas seguintes condições:\n• O ângulo máximo atingido pelo balanço em relação à vertical é igual a 90 graus;\n• Os filhos utilizarão o balanço até que tenham uma massa de 24 quilogramas.\nAlém disso, ele aproxima o movimento do balanço para o movimento circular uniforme, considera que a aceleração da gravidade é igual a 10 metros por segundo ao quadrado e despreza forças dissipativas.\nQual é a tensão de ruptura da corda escolhida?",
+      "opcoes": [
+        "A) 120 newtons",
+        "B) 300 newtons",
+        "C) 360 newtons",
+        "D) 450 newtons",
+        "E) 900 newtons"
+      ],
+      "correta": "D",
+      "ano": 2022
+    },
+    {
+      "id": 2022113,
+      "pergunta": "As células da epiderme da folha da Tradescantia pallida purpurea, uma herbácea popularmente conhecida como trapoeraba-roxa, contém um vacúolo onde se encontra um pigmento que dá a coloração arroxeada a esse tecido. Em um experimento, um corte da epiderme de uma folha da trapoeraba-roxa foi imerso em ambiente hipotônico e, logo em seguida, foi colocado em uma lâmina e observado em microscópio óptico.\nDurante a observação desse corte, foi possível identificar o(a)",
+      "opcoes": [
+        "A) acúmulo do solvente com fragmentação da organela.",
+        "B) rompimento da membrana celular com liberação do citosol.",
+        "C) aumento do vacúolo com diluição do pigmento no seu interior.",
+        "D) quebra da parede celular com extravasamento do pigmento.",
+        "E) murchamento da célula com expulsão do pigmento do vacúolo."
+      ],
+      "correta": "C",
+      "ano": 2022
+    },
+    {
+      "id": 2022116,
+      "pergunta": "Desde a proposição da teoria de seleção natural por Darwin, os seres vivos nunca mais foram olhados da mesma forma. No que diz respeito à reprodução de anfíbios anuros, os cientistas já descreveram diferentes padrões reprodutivos, como os exemplificados a seguir:\nEspécie 1 – As fêmeas produzem cerca de 5 000 gametas, que são fecundados na água, em lagoas temporárias de estação chuvosa. Todo o desenvolvimento embrionário, do ovo à metamorfose, ocorre, nesse ambiente, independente dos pais.\nEspécie 2 – As fêmeas produzem aproximadamente 200 gametas, que são depositados em poças próximas a corpos-d’água. Os embriões são vigiados pelos machos durante boa parte do seu desenvolvimento.\nEspécie 3 – As fêmeas produzem por volta de 20 gametas, que são fecundados sobre a superfície das folhas de plantas cujos galhos estão dispostos acima da superfície de corpos-d’água e aí se desenvolvem até a eclosão.\nEspécie 4 – As fêmeas produzem poucos gametas que, quando fecundados, são \"abocanhados\" pelos machos. Os embriões se desenvolvem no interior do saco vocal do macho até a metamorfose, quando saem através da boca do pai.\nOs padrões descritos evidenciam que",
+      "opcoes": [
+        "A) as fêmeas influenciam o comportamento dos machos.",
+        "B) o cuidado parental é necessário para o desenvolvimento.",
+        "C) o grau de evolução determina o comportamento reprodutivo.",
+        "D) o sucesso reprodutivo pode ser garantido por estratégias diferentes.",
+        "E) o ambiente induz modificação na produção do número de gametas femininos."
+      ],
+      "correta": "D",
+      "ano": 2022
+    },
+    {
+      "id": 2022120,
+      "pergunta": "Diversas substâncias são empregadas com a intenção de incrementar o desempenho esportivo de atletas de alto nível. O chamado doping sanguíneo, por exemplo, pela utilização da eritropoietina, é proibido pelas principais federações de esportes no mundo. A eritropoietina é um hormônio produzido pelos rins e fígado e sua principal ação é regular o processo de eritropoiese. Seu uso administrado intravenosamente em quantidades superiores àquelas presentes naturalmente no organismo permite que o indivíduo aumente a sua capacidade de realização de exercícios físicos.\nEsse tipo de doping está diretamente relacionado ao aumento da",
+      "opcoes": [
+        "A) frequência cardíaca.",
+        "B) capacidade pulmonar.",
+        "C) massa muscular do indivíduo.",
+        "D) atividade anaeróbica da musculatura.",
+        "E) taxa de transporte de oxigênio pelo sangue."
+      ],
+      "correta": "E",
+      "ano": 2022
+    },
+    {
+      "id": 2022121,
+      "pergunta": "Em um autódromo, os carros podem derrapar em uma curva e bater na parede de proteção. Para diminuir o impacto de uma batida, pode-se colocar na parede uma barreira de pneus, isso faz com que a colisão seja mais demorada e o carro retorne com velocidade reduzida. Outra opção é colocar uma barreira de blocos de um material que se deforma, tornando-a tão demorada quanto a colisão com os pneus, mas que não permite a volta do carro após a colisão.\nComparando as duas situações, como ficam a força média exercida sobre o carro e a energia mecânica dissipada?",
+      "opcoes": [
+        "A) A força é maior na colisão com a barreira de pneus, e a energia dissipada é maior na colisão com a barreira de blocos.",
+        "B) A força é maior na colisão com a barreira de blocos, e a energia dissipada é maior na colisão com a barreira de pneus.",
+        "C) A força é maior na colisão com a barreira de blocos, e a energia dissipada é a mesma nas duas situações.",
+        "D) A força é maior na colisão com a barreira de pneus, e a energia dissipada é maior na colisão com a barreira de pneus.",
+        "E) A força é maior na colisão com a barreira de blocos, e a energia dissipada é maior na colisão com a barreira de blocos."
+      ],
+      "correta": "A",
+      "ano": 2022
+    },
+    {
+      "id": 2022124,
+      "pergunta": "A extinção de espécies é uma ameaça real que afeta diversas regiões do país. A introdução de espécies exóticas pode ser considerada um fator maximizador desse processo. A jaqueira (Artocarpus heterophyllus), por exemplo, é uma árvore originária da Índia e de regiões do Sudeste Asiático que foi introduzida ainda na era colonial e se aclimatou muito bem em praticamente todo o território nacional.\nCasos como o dessa árvore podem provocar a redução da biodiversidade, pois elas",
+      "opcoes": [
+        "A) ocupam áreas de vegetação nativa e substituem parcialmente a flora original.",
+        "B) estimulam a competição por seus frutos entre animais típicos da região e eliminam as espécies perdedoras.",
+        "C) alteram os nichos e aumentam o número de possibilidades de relações entre os seres vivos daquele ambiente.",
+        "D) apresentam alta taxa de reprodução e se mantêm com um número de indivíduos superior à capacidade suporte do ambiente.",
+        "E) diminuem a relação de competição entre os polinizadores e facilitam a ação de dispersores de sementes de espécies nativas."
+      ],
+      "correta": "A",
+      "ano": 2022
+    },
+    {
+      "id": 2022125,
+      "pergunta": "Em um dia de calor intenso, dois colegas estão a brincar com a água da mangueira. Um deles quer saber até que altura o jato de água alcança, a partir da saída de água, quando a mangueira está posicionada totalmente na direção vertical. O outro colega propõe então o seguinte experimento: eles posicionarem a saída de água da mangueira na direção horizontal, a 1 metro de altura em relação ao chão, e então medirem a distância horizontal entre a mangueira e o local onde a água atinge o chão. A medida dessa distância foi de 3 metros, e a partir disso eles calcularam o alcance vertical do jato de água. Considere a aceleração da gravidade de 10 metros por segundo ao quadrado.\nO resultado que eles obtiveram foi de",
+      "opcoes": [
+        "A) 1,50 metro.",
+        "B) 2,25 metros.",
+        "C) 4,00 metros.",
+        "D) 4,50 metros.",
+        "E) 5,00 metros."
+      ],
+      "correta": "B",
+      "ano": 2022
+    },
+    {
+      "id": 2022127,
+      "pergunta": "Entre as diversas técnicas para diagnóstico da covid-19, destaca-se o teste genético. Considerando as diferentes variantes e cargas virais, um exemplo é a PCR, reação efetuada por uma enzima do tipo polimerase. Essa técnica permite identificar, com confiabilidade, o material genético do SARS-CoV-2, um vírus de RNA. Para comprovação da infecção por esse coronavírus, são coletadas amostras de secreções do indivíduo. Uma etapa que antecede a reação de PCR precisa ser realizada para permitir a amplificação do material genético do vírus.\nEssa etapa deve ser realizada para",
+      "opcoes": [
+        "A) concentrar o RNA viral para otimizar a técnica.",
+        "B) identificar nas amostras anticorpos anti-SARS-CoV-2.",
+        "C) proliferar o vírus em culturas, aumentando a carga viral.",
+        "D) purificar ácidos nucleicos virais, facilitando a ação da enzima.",
+        "E) obter moléculas de cDNA viral por meio da transcrição reversa."
+      ],
+      "correta": "E",
+      "ano": 2022
+    },
+    {
+      "id": 2022129,
+      "pergunta": "Princípios de química: questionando a vida moderna e o meio ambiente\nO urânio é empregado como fonte de energia em reatores nucleares. Para tanto, o seu mineral deve ser refinado, convertido a hexafluoreto de urânio e posteriormente enriquecido, para aumentar de 0,7 por cento a 3 por cento a abundância de um isótopo específico — o urânio-235. Uma das formas de enriquecimento utiliza a pequena diferença de massa entre os hexafluoretos de urânio-235 e de urânio-238 para separá-los por efusão, precedida pela vaporização. Esses vapores devem efundir repetidamente milhares de vezes através de barreiras porosas formadas por telas com grande número de pequenos orifícios. No entanto, devido à complexidade e à grande quantidade de energia envolvida, cientistas e engenheiros continuam a pesquisar procedimentos alternativos de enriquecimento.\nConsiderando a diferença de massa mencionada entre os dois isótopos, que tipo de procedimento alternativo ao da efusão pode ser empregado para tal finalidade?",
+      "opcoes": [
+        "A) Peneiração.",
+        "B) Centrifugação.",
+        "C) Extração por solvente.",
+        "D) Destilação fracionada.",
+        "E) Separação magnética."
+      ],
+      "correta": "B",
+      "ano": 2022
+    },
+    {
+      "id": 2022130,
+      "pergunta": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou um produto de terapia gênica no país, indicado para o tratamento da distrofia hereditária da retina. O procedimento é recomendado para crianças acima de 12 meses e adultos com perda de visão causada pela mutação do gene humano RPE65. O produto, elaborado por engenharia genética, é composto por um vírus, no qual foi inserida uma cópia do gene normal humano RPE65 para corrigir o funcionamento das células da retina.\nO sucesso dessa terapia advém do fato de que o produto favorecerá a",
+      "opcoes": [
+        "A) correção do código genético para a tradução da proteína.",
+        "B) alteração do RNA ribossômico ligado à síntese da proteína.",
+        "C) produção de mutações benéficas para a correção do problema.",
+        "D) liberação imediata da proteína normal na região ocular humana.",
+        "E) expressão do gene responsável pela produção da enzima normal."
+      ],
+      "correta": "E",
+      "ano": 2022
+    },
+    {
+      "id": 2022133,
+      "pergunta": "De acordo com a Organização Mundial da Saúde, a filariose e a leishmaniose são consideradas doenças tropicais infecciosas e constituem uma preocupação para a saúde pública por ser alto o índice de mortalidade a elas associado.\nUma medida profilática comum a essas duas doenças é o(a)",
+      "opcoes": [
+        "A) incineração do lixo orgânico.",
+        "B) construção de rede de esgoto.",
+        "C) uso de vermífugo pela população.",
+        "D) controle das populações dos vetores.",
+        "E) consumo de carnes vermelhas bem cozidas."
+      ],
+      "correta": "D",
+      "ano": 2022
+    },
+    {
+      "id": 2022134,
+      "pergunta": "Parque Solar Lapa entra em operação\nEm 2017, foi inaugurado, no estado da Bahia, o Parque Solar Lapa, composto por duas usinas (Bom Jesus da Lapa e Lapa) e capaz de gerar cerca de 300 gigawatts-hora de energia por ano. Considere que cada usina apresente potência igual a 75 megawatts, com o parque totalizando uma potência instalada de 150 megawatts. Considere ainda que a irradiância solar média é de 1 500 watts por metro quadrado e que a eficiência dos painéis é de 20 por cento.\nNessas condições, a área total dos painéis solares que compõem o Parque Solar Lapa é mais próxima de:",
+      "opcoes": [
+        "A) 1 000 000 de metros quadrados",
+        "B) 500 000 metros quadrados",
+        "C) 250 000 metros quadrados",
+        "D) 100 000 metros quadrados",
+        "E) 20 000 metros quadrados"
+      ],
+      "correta": "B",
+      "ano": 2022
+    },
+    {
+      "id": 2023091,
+      "pergunta": "É comum em viagens de avião sermos solicitados a desligar aparelhos cujo funcionamento envolva a emissão ou a recepção de ondas eletromagnéticas, como celulares. A justificativa dada para esse procedimento é, entre outras coisas, a necessidade de eliminar fontes de sinais eletromagnéticos que possam interferir nas comunicações, via rádio, dos pilotos com a torre de controle.\nEssa interferência poderá ocorrer somente se as ondas emitidas pelo celular e as recebidas pelo rádio do avião",
+      "opcoes": [
+        "A) forem ambas audíveis.",
+        "B) tiverem a mesma potência.",
+        "C) tiverem a mesma frequência.",
+        "D) tiverem a mesma intensidade.",
+        "E) propagarem-se com velocidades diferentes."
+      ],
+      "correta": "C",
+      "ano": 2023
+    },
+    {
+      "id": 2023093,
+      "pergunta": "Cafeteria adota copo reutilizável feito com casca de café\nUma cafeteria adotou copos fabricados a partir de uma composição de 50 por cento de plástico reciclado não biodegradável e 50 por cento de casca de café. O copo é reutilizável e retornável, pois o material, semelhante a uma cerâmica, suporta a lavagem. Embora ele seja comercializado por um preço considerado alto quando comparado ao de um copo de plástico descartável, essa cafeteria possibilita aos clientes retornarem o copo sujo e levarem o café quente servido em outro copo já limpo e higienizado. O material desse copo oferece também o conforto de não esquentar na parte externa.\nQuais duas vantagens esse copo apresenta em comparação ao copo descartável?",
+      "opcoes": [
+        "A) Ter a durabilidade de uma cerâmica e ser totalmente biodegradável.",
+        "B) Ser tão durável quanto uma cerâmica e ter alta condutividade térmica.",
+        "C) Ser um mau condutor térmico e aumentar o resíduo biodegradável na natureza.",
+        "D) Ter baixa condutividade térmica e reduzir o resíduo não biodegradável na natureza.",
+        "E) Ter alta condutividade térmica e possibilitar a degradação do material no meio ambiente."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023094,
+      "pergunta": "Um método simples para avaliar o teor de sacarose e CO2 em refrigerantes\nO consumo exagerado de refrigerantes é preocupante, pois contribui para o aumento de casos de obesidade e diabetes. Considere dois refrigerantes enlatados, um comum e um diet, e que ambos possuam a mesma quantidade de aditivos, exceto pela presença de açúcar. O refrigerante comum contém basicamente água carbonatada e grande quantidade de açúcar; já o refrigerante diet tem água carbonatada e adoçantes, cujas massas são muito pequenas.\nEntre as duas versões apresentadas, o refrigerante comum possui",
+      "opcoes": [
+        "A) maior densidade.",
+        "B) menor viscosidade.",
+        "C) maior volume de gás dissolvido.",
+        "D) menor massa de solutos dissolvidos.",
+        "E) maior temperatura de congelamento."
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023096,
+      "pergunta": "Avaliação de substâncias genotóxicas\nMicronúcleos em células tumorais: biologia e implicações para a tumorigênese\nO ensaio de micronúcleos é um teste de avaliação de genotoxicidade que associa a presença de micronúcleos (pequenos núcleos que aparecem próximo aos núcleos das células) com lesões genéticas. Os micronúcleos são fragmentos de DNA encapsulados, provenientes do fuso mitótico durante a divisão celular.\nOs micronúcleos se originam dos(as)",
+      "opcoes": [
+        "A) nucléolos.",
+        "B) lisossomos.",
+        "C) ribossomos.",
+        "D) mitocôndrias.",
+        "E) cromossomos."
+      ],
+      "correta": "E",
+      "ano": 2023
+    },
+    {
+      "id": 2023099,
+      "pergunta": "Pais com síndrome de Down\nTrês anos após dar à luz, mãe portadora de síndrome de Down revela detalhes de seu dia a dia\nA síndrome de Down é uma alteração genética associada à trissomia do cromossomo 21, ou seja, o indivíduo possui três cromossomos 21 e não um par, como é normal. Isso ocorre pela união de um gameta contendo um cromossomo 21 com um gameta possuidor de dois cromossomos 21. Embora, normalmente, as mulheres com a síndrome sejam estéreis, em 2008, no interior de São Paulo, uma delas deu à luz uma menina sem a síndrome de Down.\nSabendo disso, um jovem casal, ambos com essa síndrome, procura um médico especialista para aconselhamento genético porque querem ter um bebê.\nO médico informa ao casal que, com relação ao cromossomo 21, os zigotos formados serão",
+      "opcoes": [
+        "A) todos normais.",
+        "B) todos tetrassômicos.",
+        "C) apenas normais ou tetrassômicos.",
+        "D) apenas trissômicos ou tetrassômicos.",
+        "E) normais, trissômicos ou tetrassômicos."
+      ],
+      "correta": "E",
+      "ano": 2023
+    },
+    {
+      "id": 2023102,
+      "pergunta": "Os cientistas conseguem determinar a idade de um fóssil com menos de 40 000 anos de idade utilizando o método do carbono-14 ou carbono radioativo. Isso é feito a partir da relação existente entre a quantidade de carbono-14 restante no fóssil e a quantidade de carbono-14 em uma espécie semelhante atual. Apesar de sofrer decaimento radioativo, a quantidade de carbono-14 na atmosfera, em particular em moléculas de CO2, é praticamente constante, devido à incidência dos raios cósmicos que atingem a Terra a todo instante. Assim, por fazerem parte do ciclo do carbono, animais e vegetais mantêm uma quantidade praticamente constante de carbono-14 em sua constituição enquanto estão vivos. Porém, quando morrem, cessa a entrada de carbono no organismo e esse número vai diminuindo à medida que o carbono-14 vai decaindo radioativamente. A meia-vida do carbono-14, isto é, o tempo necessário para que metade dos átomos radioativos de uma amostra decaia, é constante e de aproximadamente 5 730 anos.\nPara descobrir a idade de um fóssil que não poderia ter mais de 40 000 anos, é relevante determinar",
+      "opcoes": [
+        "A) a meia-vida do carbono-14.",
+        "B) se o fóssil é animal ou vegetal.",
+        "C) se o fóssil tem mais de 5 730 anos.",
+        "D) a quantidade de carbono-14 presente no fóssil.",
+        "E) a relação entre as quantidades de carbono-14 em uma parte do fóssil e no fóssil todo."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023103,
+      "pergunta": "Uma concessionária é responsável por um trecho de 480 quilômetros de uma rodovia. Nesse trecho foram construídas 10 praças de pedágio, onde funcionários recebem os pagamentos nas cabines de cobrança. Também existe o serviço automático, em que os veículos providos de um dispositivo passam por uma cancela, que se abre automaticamente, evitando filas e diminuindo o tempo de viagem. Segundo a concessionária, o tempo médio para efetuar a passagem em uma cabine é de 3 minutos, e as velocidades máximas permitidas na rodovia são 100 quilômetros por hora, para veículos leves, e 80 quilômetros por hora, para veículos de grande porte.\nConsidere um carro e um caminhão viajando, ambos com velocidades constantes e iguais às máximas permitidas, e que somente o caminhão tenha o serviço automático de cobrança.\nComparado ao caminhão, quantos minutos a menos o carro leva para percorrer toda a rodovia?",
+      "opcoes": [
+        "A) 30",
+        "B) 42",
+        "C) 72",
+        "D) 288",
+        "E) 360"
+      ],
+      "correta": "B",
+      "ano": 2023
+    },
+    {
+      "id": 2023105,
+      "pergunta": "Em uma indústria alimentícia, para produção de doce de leite, utiliza-se um tacho de parede oca com uma entrada para vapor de água a 120 graus Celsius e uma saída para água líquida em equilíbrio com o vapor a 100 graus Celsius. Ao passar pela parte oca do tacho, o vapor de água transforma-se em líquido, liberando energia. A parede transfere essa energia para o interior do tacho, resultando na evaporação de água e consequente concentração do produto.\nNo processo de concentração do produto, é utilizada energia proveniente",
+      "opcoes": [
+        "A) somente do calor latente de vaporização.",
+        "B) somente do calor latente de condensação.",
+        "C) do calor sensível e do calor latente de vaporização.",
+        "D) do calor sensível e do calor latente de condensação.",
+        "E) do calor latente de condensação e do calor latente de vaporização."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023107,
+      "pergunta": "Cartilha de limpeza urbana\nDe acordo com a Constituição Federal, é competência dos municípios o gerenciamento dos serviços de limpeza e coleta dos resíduos urbanos (lixo). No entanto, há relatos de que parte desse lixo acaba sendo incinerado, liberando substâncias tóxicas para o ambiente e causando acidentes por explosões, principalmente quando ocorre a incineração de frascos de aerossóis (por exemplo: desodorantes, inseticidas e repelentes). A temperatura elevada provoca a vaporização de todo o conteúdo dentro desse tipo de frasco, aumentando a pressão em seu interior até culminar na explosão da embalagem.\nSuponha um frasco metálico de um aerossol de capacidade igual a 100 mililitros, contendo 0,1 mol de produtos gasosos à temperatura de 650 graus Celsius, no momento da explosão.\nConsidere: R = 0,082 (L⋅atm)/(mol⋅K).\nA pressão, em atmosfera, dentro do frasco, no momento da explosão, é mais próxima de",
+      "opcoes": [
+        "A) 756.",
+        "B) 533.",
+        "C) 76.",
+        "D) 53.",
+        "E) 13."
+      ],
+      "correta": "C",
+      "ano": 2023
+    },
+    {
+      "id": 2023110,
+      "pergunta": "A biorremediação designa tratamentos que usam organismos para reduzir a quantidade de substâncias tóxicas no ambiente ou degradá-las em substâncias não tóxicas ou de menor toxicidade. Uma planta aquática, o aguapé, tem sido utilizada para a biorremediação de ambientes contaminados por metais tóxicos. Sabe-se que esses poluentes serão captados para dentro do corpo do vegetal.\nDentro do corpo do vegetal, esses contaminantes serão",
+      "opcoes": [
+        "A) digeridos por enzimas.",
+        "B) acumulados nos tecidos.",
+        "C) eliminados pelos estômatos.",
+        "D) metabolizados por glândulas.",
+        "E) utilizados como fonte energética."
+      ],
+      "correta": "B",
+      "ano": 2023
+    },
+    {
+      "id": 2023112,
+      "pergunta": "O tripulante de aeronaves e a radiação ionizante\nOs raios cósmicos são fontes de radiação ionizante potencialmente perigosas para o organismo humano. Para quantificar a dose de radiação recebida, utiliza-se o sievert, definido como a unidade de energia recebida por unidade de massa. A exposição à radiação proveniente de raios cósmicos aumenta com a altitude, o que pode representar um problema para as tripulações de aeronaves. Recentemente, foram realizadas medições acuradas das doses de radiação ionizante para voos entre Rio de Janeiro e Roma. Os resultados têm indicado que a dose média de radiação recebida na fase de cruzeiro (que geralmente representa 80 por cento do tempo total de voo) desse trecho intercontinental é 2 microsieverts por hora. As normas internacionais da aviação civil limitam em 1 000 horas por ano o tempo de trabalho para as tripulações que atuem em voos intercontinentais. Considere que a dose de radiação ionizante para uma radiografia torácica é estimada em 0,2 milisievert.\nA quantas radiografias torácicas corresponde a dose de radiação ionizante à qual um tripulante que atue no trecho Rio de Janeiro–Roma é exposto ao longo de um ano?",
+      "opcoes": [
+        "A) 8",
+        "B) 10",
+        "C) 80",
+        "D) 100",
+        "E) 1 000"
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023115,
+      "pergunta": "Informações digitais — dados — são gravadas em discos ópticos, como CD e DVD, na forma de cavidades microscópicas. A gravação e a leitura óptica dessas informações são realizadas por um laser (fonte de luz monocromática). Quanto menores as dimensões dessas cavidades, mais dados são armazenados na mesma área do disco. O fator limitante para a leitura de dados é o espalhamento da luz pelo efeito de difração, fenômeno que ocorre quando a luz atravessa um obstáculo com dimensões da ordem de seu comprimento de onda. Essa limitação motivou o desenvolvimento de lasers com emissão em menores comprimentos de onda, possibilitando armazenar e ler dados em cavidades cada vez menores.\nEm qual região espectral se situa o comprimento de onda do laser que otimiza o armazenamento e a leitura de dados em discos de uma mesma área?",
+      "opcoes": [
+        "A) Violeta.",
+        "B) Azul.",
+        "C) Verde.",
+        "D) Vermelho.",
+        "E) Infravermelho."
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023116,
+      "pergunta": "O bluetooth é uma tecnologia de comunicação sem fio, de curto alcance, presente em diferentes dispositivos eletrônicos de consumo. Ela permite que aparelhos eletrônicos diferentes se conectem e troquem dados entre si. No padrão bluetooth, denominado de Classe 2, as antenas transmitem sinais de potência igual a 2,4 miliwatts e possibilitam conectar dois dispositivos distanciados até 10metros. Considere que essas antenas se comportam como fontes puntiformes que emitem ondas eletromagnéticas esféricas e que a intensidade do sinal é calculada pela potência por unidade de área. Considere 3 como valor aproximado para pi.\nPara que o sinal de bluetooth seja detectado pelas antenas, o valor mínimo de sua intensidade, em watt por metro quadrado, é mais próximo de",
+      "opcoes": [
+        "A) 2,0 × 10^–6",
+        "B) 2,0 × 10^–5",
+        "C) 2,4 × 10^–5",
+        "D) 2,4 × 10^–3",
+        "E) 2,4 × 10^–1"
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023117,
+      "pergunta": "A tecnologia de vacinas de RNA mensageiro (RNAm) é investigada há anos. Avanços científicos em genética molecular permitiram desenvolver uma vacina para controle da pandemia da covid-19 causada pelo vírus de RNA SARS-CoV-2. A vacina de RNAm tem sequências de genes do vírus. Entretanto, por ser muito instável, o RNAm deve ser recoberto por uma capa de lipídios que evita sua degradação e favorece sua ação. Dessa forma, o RNAm desempenhará sua função específica atuando no mesmo compartimento celular de sempre.\nA imunização produzida por esse tipo de vacina é alcançada por meio da",
+      "opcoes": [
+        "A) estimulação de leucócitos induzida pela capa lipídica contendo RNAm.",
+        "B) atuação do RNAm como sequestrador do vírus para o meio extracelular.",
+        "C) tradução do RNAm em proteína viral, desencadeando a resposta antigênica.",
+        "D) competição entre o RNAm vacinal e o RNA viral pelos sítios dos ribossomos.",
+        "E) incorporação do RNAm viral ao genoma do hospedeiro, gerando novo fenótipo."
+      ],
+      "correta": "C",
+      "ano": 2023
+    },
+    {
+      "id": 2023118,
+      "pergunta": "Na fertilização in vitro, espermatozoides são adicionados aos gametas femininos retirados de uma mulher. Após o período de incubação, a fecundação é favorecida pela ação de enzimas. Em um procedimento realizado, observou-se que nenhum dos gametas femininos foi fertilizado e, posteriormente, verificou-se que havia sido adicionado, equivocadamente, um coquetel de inibidores das enzimas do acrossomo, no lugar de um dos nutrientes constituintes do meio de cultura.\nO coquetel de inibidores impediu o(a)",
+      "opcoes": [
+        "A) formação do pronúcleo masculino.",
+        "B) início da divisão mitótica do zigoto.",
+        "C) término da segunda divisão meiótica do ovócito.",
+        "D) passagem do espermatozoide pela corona radiata e zona pelúcida.",
+        "E) fusão das membranas plasmáticas do ovócito e do espermatozoide."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023119,
+      "pergunta": "O fogão por indução funciona a partir do surgimento de uma corrente elétrica induzida no fundo da panela, com consequente transformação de energia elétrica em calor por efeito Joule. A principal vantagem desses fogões é a eficiência energética, que é substancialmente maior que a dos fogões convencionais.\nA corrente elétrica mencionada é induzida por",
+      "opcoes": [
+        "A) indução",
+        "B) condução.",
+        "C) campo elétrico variável.",
+        "D) campo magnético variável.",
+        "E) ressonância eletromagnética."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023121,
+      "pergunta": "Efficacy of Selective Serotonin-Reuptake Inhibitors in Premenstrual Syndrome\nMuitas mulheres sofrem com desconfortos nos dias que antecedem a menstruação, a chamada tensão pré-menstrual. Entre outros sintomas, podem ocorrer alterações de humor. Atualmente, acredita-se que os sintomas são resultado da queda na concentração do neurotransmissor serotonina, que, por sua vez, está relacionado com a diminuição na produção dos hormônios ovarianos estrógeno e progesterona, observada nessa fase do ciclo feminino.\nA redução da produção desses hormônios nessa fase está relacionada com o(a)",
+      "opcoes": [
+        "A) regressão do corpo lúteo ovariano.",
+        "B) diminuição na produção de ocitocina.",
+        "C) liberação do gameta feminino na ovulação.",
+        "D) aumento nos níveis dos hormônios LH e FSH.",
+        "E) elevação nos níveis sorológicos de adrenalina."
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023122,
+      "pergunta": "As cetonas fazem parte de famílias olfativas encontradas em muitos alimentos. A molécula de hexan-3-ona é um exemplo desses compostos voláteis responsáveis pelo aroma, podendo ser obtida por processos energéticos realizados em meio ácido, na presença de oxidantes como o permanganato de potássio.\nPara se produzir esse composto volátil em laboratório, deve-se oxidar a molécula de",
+      "opcoes": [
+        "A) hexanal.",
+        "B) hexan-1-ol.",
+        "C) hexan-3-ol.",
+        "D) hex-1-en-1-ol.",
+        "E) ácido hexanoico."
+      ],
+      "correta": "C",
+      "ano": 2023
+    },
+    {
+      "id": 2023123,
+      "pergunta": "Durante a evolução das plantas, ocorreu uma transição do ambiente aquático para o ambiente terrestre graças ao surgimento de algumas estruturas que as tornaram independentes da água. Esse fato permitiu maior dispersão desse grupo de seres vivos, sendo possível observá-los em diferentes ambientes na atualidade.\nQual estrutura possibilitou a independência da água para a fecundação dos seres vivos citados acima?",
+      "opcoes": [
+        "A) Fruto.",
+        "B) Esporo.",
+        "C) Semente.",
+        "D) Tubo polínico.",
+        "E) Vaso condutor."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023124,
+      "pergunta": "Atualização da recomendação da Sociedade Portuguesa de Neonatologia\nO vidro contendo alumínio em sua composição é um excelente material para acondicionar medicamentos e suplementos, porque pode ser esterilizado por aquecimento. No entanto, quando o medicamento ou suplemento contém substâncias que se ligam fortemente ao íon desse metal, a dissolução do alumínio é promovida em função do deslocamento do equilíbrio químico estabelecido entre a espécie imobilizada no vidro e a espécie em solução. Por essa razão, recomenda-se que suplementos de nutrição de recém-nascidos contendo gluconato de cálcio sejam acondicionados em embalagens plásticas, e não nesse tipo de vidro.\nCaso esse suplemento seja acondicionado em embalagem desse tipo de vidro, o risco de contaminação por alumínio será maior se o(a)",
+      "opcoes": [
+        "A) vidro do frasco for translúcido.",
+        "B) concentração de gluconato de cálcio for alta.",
+        "C) frasco de vidro apresentar uma maior espessura.",
+        "D) vidro for previamente esterilizado em altas temperaturas.",
+        "E) reação do alumínio com gluconato de cálcio for endotérmica."
+      ],
+      "correta": "B",
+      "ano": 2023
+    },
+    {
+      "id": 2023125,
+      "pergunta": "Barbatimão é o nome popular de uma árvore cuja casca é utilizada para fins medicinais. Essa casca é constituída principalmente de dois tecidos vegetais: periderme e floema. A extração da casca tem levado à morte muitos indivíduos dessa espécie, quando o corte retira um anel completo ao longo da circunferência do tronco. Aqueles que têm parte da casca retirada sem completar essa circunferência podem sobreviver.\nA morte desses indivíduos, decorrente da retirada do anel completo da casca, é provocada pela interrupção da",
+      "opcoes": [
+        "A) fotossíntese.",
+        "B) transpiração.",
+        "C) troca de gases.",
+        "D) formação de brotos.",
+        "E) nutrição das raízes."
+      ],
+      "correta": "E",
+      "ano": 2023
+    },
+    {
+      "id": 2023126,
+      "pergunta": "Um garoto comprou vários abacates na feira, mas descobriu que eles não estavam maduros o suficiente para serem consumidos. Sua mãe recomendou que ele colocasse os abacates em um recipiente fechado, pois isso aceleraria seu amadurecimento. Com certa dúvida, o garoto realizou esta experiência: colocou alguns abacates no recipiente e deixou os demais em uma fruteira aberta. Surpreendendo-se, ele percebeu que os frutos que estavam no recipiente fechado amadureceram mais rapidamente.\nA aceleração desse processo é causada por",
+      "opcoes": [
+        "A) acúmulo de gás etileno.",
+        "B) redução da umidade do ar.",
+        "C) aumento da concentração de CO2.",
+        "D) diminuição da intensidade luminosa.",
+        "E) isolamento do contato com O2 atmosférico."
+      ],
+      "correta": "A",
+      "ano": 2023
+    },
+    {
+      "id": 2023127,
+      "pergunta": "Há muito tempo são conhecidas espécies de lesmas-do-mar com uma capacidade ímpar: guardar parte da maquinaria das células das algas que consomem — os cloroplastos — e mantê-los funcionais dentro das suas próprias células, obtendo assim parte do seu alimento. Investigadores portugueses descobriram que essas lesmas-do-mar podem ser mais eficientes nesse processo do que as próprias algas que consomem.\nEssa adaptação confere a esse organismo a capacidade de obter primariamente",
+      "opcoes": [
+        "A) ácidos nucleicos.",
+        "B) carboidratos.",
+        "C) proteínas.",
+        "D) vitaminas.",
+        "E) lipídios."
+      ],
+      "correta": "B",
+      "ano": 2023
+    },
+    {
+      "id": 2023128,
+      "pergunta": "A leishmaniose visceral é uma zoonose causada por um protozoário do gênero Leishmania que é encontrado em diversos tecidos. Ela é transmitida ao homem de forma indireta, por vetores do ambiente doméstico. O cão é considerado um importante hospedeiro desse protozoário, podendo ou não apresentar os sintomas da doença, como perda de peso, anemia, ferimentos na pele, diarreia, conjuntivite e insuficiência renal. Em uma região que sofre com alta incidência dessa doença, uma campanha do centro de zoonoses buscou verificar a presença desse protozoário nos cães para tentar controlar a doença.\nEm qual material biológico dos cães a presença desse protozoário representa risco de transmissão dessa zoonose?",
+      "opcoes": [
+        "A) Urina.",
+        "B) Saliva.",
+        "C) Fezes.",
+        "D) Sangue.",
+        "E) Secreção ocular."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023130,
+      "pergunta": "O número de abelhas encontra-se em declínio em várias regiões do mundo, inclusive no Brasil, sendo que vários fatores contribuem para o colapso de suas colmeias. Nos Estados Unidos, bombas de sementes de espécies vegetais nativas têm sido utilizadas para combater o desaparecimento desses insetos. Elas são pequenas bolinhas recheadas com sementes, adubo e argila. Quando são arremessadas e ficam expostas ao sol e à chuva, germinam até mesmo em solo pouco fértil.\nEsse método contribui para a preservação das abelhas porque",
+      "opcoes": [
+        "A) reduz sua predação.",
+        "B) reduz o uso de pesticidas.",
+        "C) reduz a competição por abrigo.",
+        "D) aumenta a oferta de alimento.",
+        "E) aumenta os locais de reprodução."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2023131,
+      "pergunta": "Os mais antigos cozinhavam o feijão na panela de ferro a fim de acabar com a palidez de seus filhos. Alguns chegavam até a colocar um prego enferrujado nesse cozimento para liberar o ferro contido nele. Sabe-se que esse elemento pode ser encontrado na sua forma metálica ou iônica, sendo essencial para a manutenção da vida humana.\nAs estratégias citadas eram utilizadas com o objetivo de",
+      "opcoes": [
+        "A) tratar a diarreia.",
+        "B) prevenir a anemia.",
+        "C) evitar as verminoses.",
+        "D) remediar o raquitismo.",
+        "E) combater a febre amarela."
+      ],
+      "correta": "B",
+      "ano": 2023
+    },
+    {
+      "id": 2023132,
+      "pergunta": "A utilização de tecnologia nuclear é um tema bastante controverso, por causa do risco de acidentes graves, como aqueles ocorridos em Chernobyl (1986), em Goiânia (1987) e em Fukushima (2011). Apesar de muitas desvantagens, como a geração de resíduos tóxicos, a descontaminação ambiental dispendiosa em caso de acidentes e a utilização em armas nucleares, a geração de energia nuclear apresenta vantagens em comparação a outras fontes de energia.\nA geração dessa energia tem como característica:",
+      "opcoes": [
+        "A) Formar resíduos facilmente recicláveis.",
+        "B) Promover o aumento do desmatamento.",
+        "C) Contribuir para a produção de chuva ácida.",
+        "D) Emitir gases tóxicos que são lançados no ambiente.",
+        "E) Produzir calor sem o consumo de combustíveis fósseis."
+      ],
+      "correta": "E",
+      "ano": 2023
+    },
+    {
+      "id": 2023134,
+      "pergunta": "As aves apresentam dois tipos de músculos em seus corpos: vermelhos e brancos. Aves migratórias como garças, gansos e patos selvagens têm os músculos vermelhos bem desenvolvidos, com ampla rede de vasos sanguíneos.\nNas viagens por grandes distâncias, tais músculos são fundamentais, pois favorecem o(a)",
+      "opcoes": [
+        "A) execução de manobras.",
+        "B) metabolismo corpóreo elevado.",
+        "C) manutenção da aerodinâmica.",
+        "D) deslocamento a grandes velocidades.",
+        "E) capacidade de voo em grandes altitudes."
+      ],
+      "correta": "B",
+      "ano": 2023
+    },
+    {
+      "id": 2023135,
+      "pergunta": "Existe no comércio um produto antimofo constituído por uma embalagem com tampa perfurada contendo cloreto de cálcio anidro, CaCl2. Uma vez aberto o lacre, essa substância absorve a umidade ambiente, transformando-se em cloreto de cálcio di-hidratado, fórmula CaCl2⋅2H2O.\nConsidere a massa molar da água igual a 18 gramas por mol, e a massa molar do cloreto de cálcio anidro igual a 111 gramas por mol.\nNa hidratação da substância presente no antimofo, o ganho percentual, em massa, é mais próximo de",
+      "opcoes": [
+        "A) 14%.",
+        "B) 16%.",
+        "C) 24%.",
+        "D) 32%.",
+        "E) 75%."
+      ],
+      "correta": "D",
+      "ano": 2023
+    },
+    {
+      "id": 2024092,
+      "pergunta": "O exoesqueleto dos crustáceos é formado por quitina e impregnações de sais calcários e, por isso, é mais duro quando comparado com o exoesqueleto de outros artrópodes. Esse revestimento externo confere proteção, mas, por ser duro, limita o crescimento desses animais.\nPara superar essa limitação, o exoesqueleto deve ser",
+      "opcoes": [
+        "A) formado somente na fase adulta do animal.",
+        "B) fragmentado para expansão nas áreas de articulação.",
+        "C) modelado continuamente para ajuste ao tamanho do corpo.",
+        "D) substituído por meio de mudas que ocorrem periodicamente.",
+        "E) impregnado por pequena quantidade de sais para sua distensão."
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2024094,
+      "pergunta": "Impactos do microplástico\nA ação de fatores abióticos aliada à biodeterioração contribuem para a formação de microplásticos, os quais se aderem a outros poluentes orgânicos apolares persistentes, como os derivados de pesticidas lipossolúveis. Há uma proporcionalidade direta entre a solubilidade desses tipos de poluentes e sua concentração nos tecidos dos organismos expostos a eles.\nEm animais vertebrados, essa associação de poluentes será preferencialmente acumulada no tecido",
+      "opcoes": [
+        "A) ósseo.",
+        "B) nervoso.",
+        "C) epitelial.",
+        "D) adiposo.",
+        "E) sanguíneo."
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2024095,
+      "pergunta": "Em aeroportos, por razões de segurança, os passageiros devem ter suas bagagens de mão examinadas antes do embarque, passando-as em esteiras para sua inspeção por aparelhos de raios X. Nessas inspeções, os passageiros são orientados a retirar seus computadores portáteis (notebooks ou laptops) de malas, mochilas ou bolsas para passá-los isoladamente pela esteira.\nQue explicação física justifica esse procedimento?",
+      "opcoes": [
+        "A) Os raios X não interagem com os componentes metálicos do computador, o que impede a formação de imagens.",
+        "B) Os raios X desmagnetizam o disco rígido do computador, quando refratados pelos componentes metálicos das bagagens de mão.",
+        "C) Os raios X aquecem os materiais metálicos encontrados em bagagens de mão, quando refletidos pelos componentes do computador.",
+        "D) Os raios X não atravessam os componentes densos do computador, o que impede a visualização de objetos que estão à frente ou atrás deles.",
+        "E) Os raios X ionizam os materiais metálicos normalmente encontrados em bagagens de mão, quando difratados pelos componentes do computador."
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2024096,
+      "pergunta": "Com base em testes realizados em ratos, concluiu-se que os compostos nitrosos são substâncias mutagênicas, ou seja, produzem mutações nas células e possivelmente câncer. Esses compostos podem ser obtidos pela reação entre o nitrito de sódio, que é um conservante adicionado às carnes, e o ácido clorídrico. O ácido nitroso produzido irá reagir com compostos nitrogenados, como as aminas, dando origem aos compostos nitrosos.\nEm qual órgão esse processo será iniciado?",
+      "opcoes": [
+        "A) Rim.",
+        "B) Fígado.",
+        "C) Intestino.",
+        "D) Pâncreas.",
+        "E) Estômago"
+      ],
+      "correta": "E",
+      "ano": 2024
+    },
+    {
+      "id": 2024097,
+      "pergunta": "Sistemas agroflorestais (SAFs)\nOs sistemas agroflorestais alinham os interesses econômicos aos ecológicos. Esses sistemas podem ser usados na recuperação ambiental de áreas degradadas que se tornaram pouco produtivas, como as utilizadas por muito tempo para pastagem. Para isso, num primeiro momento, as árvores nativas são plantadas em conjunto com culturas agrícolas anuais, como feijão, mandioca, milho e abóbora, que geram renda para os proprietários da terra e incentivam a manutenção do sistema. Em um segundo momento, são introduzidas outras espécies, como trepadeiras e arbustos, de acordo com um arranjo espacial e temporal preestabelecido. Nesse processo, ocorrerão mudanças graduais na estrutura e composição das comunidades vegetais ao longo do tempo, que culminarão no aumento da diversidade do ambiente. O conjunto dessas mudanças graduais é análogo ao processo natural denominado",
+      "opcoes": [
+        "A) A rotação de culturas.",
+        "B) sucessão ecológica.",
+        "C) coevolução específica.",
+        "D) adaptação por seleção.",
+        "E) convergência adaptativa."
+      ],
+      "correta": "B",
+      "ano": 2024
+    },
+    {
+      "id": 2024098,
+      "pergunta": "Vida: a ciência da biologia\nAs fibras musculares esqueléticas não são todas iguais. As fibras lentas, também conhecidas como fibras vermelhas, apresentam muitas mitocôndrias e são bem supridas por vasos sanguíneos. Já as fibras rápidas, ou fibras brancas, apresentam poucas mitocôndrias e recebem menor suprimento sanguíneo. Dessa forma, a distribuição das fibras nos músculos esqueléticos do corpo auxilia de forma diferenciada no desempenho físico de um atleta. Um atleta que sonha em disputar os Jogos Olímpicos e tem uma maior proporção de fibras brancas que fibras vermelhas teria mais vantagens na realização da prova de:",
+      "opcoes": [
+        "A) Triatlo.",
+        "B) Salto em altura.",
+        "C) Marcha atlética.",
+        "D) Maratona aquática.",
+        "E) Ciclismo em estrada."
+      ],
+      "correta": "B",
+      "ano": 2024
+    },
+    {
+      "id": 2024100,
+      "pergunta": "Uma agricultora, com a intenção de comercializar o milho recém-colhido, testou uma forma de preservar o sabor adocicado do seu produto. O melhor resultado foi obtido quando ela imergiu as espigas em água fervente durante alguns minutos e, em seguida, em água gelada. Com esse procedimento, parte da glicose do milho não foi transformada em amido, mantendo o seu sabor adocicado.\nUtilizando esse procedimento, o sabor foi conservado porque houve",
+      "opcoes": [
+        "A) desnaturação enzimática pela alta temperatura.",
+        "B) conversão de nutrientes pela redução de temperatura.",
+        "C) degradação das reservas nutritivas pelo choque térmico.",
+        "D) impedimento da entrada de oxigênio pela fervura da água.",
+        "E) desidratação dos grãos por causa da alteração da temperatura."
+      ],
+      "correta": "A",
+      "ano": 2024
+    },
+    {
+      "id": 2024107,
+      "pergunta": "No senso comum, considera-se, ainda hoje, que compostos orgânicos são substâncias presentes nos seres vivos. Na Química, a expressão “compostos orgânicos” tem um uso histórico de mais de 200 anos, adquirindo diferentes conotações ao longo do desenvolvimento dessa ciência. Atualmente, atribui-se a essa expressão outro significado.\nA concepção científica atual define esses compostos como substâncias",
+      "opcoes": [
+        "A) benéficas à saúde humana.",
+        "B) capazes de serem biodegradadas.",
+        "C) formadas a partir de gás carbônico.",
+        "D) produzidas sem o uso de agrotóxicos.",
+        "E) contendo carbono como elemento principal."
+      ],
+      "correta": "E",
+      "ano": 2024
+    },
+    {
+      "id": 2024109,
+      "pergunta": "Uma ambulância em alta velocidade com a sirene ligada desloca-se em direção a um radar operado por uma pessoa. O radar emite ondas de rádio com frequência f zero que são refletidas pela dianteira da ambulância, retornando para o detector com frequência fr. A percepção do operador do radar, em relação ao som emitido pela sirene, é de que este se altera à medida que a ambulância se aproxima ou se afasta.\nDurante a aproximação, como o operador percebe o som da sirene e qual é a relação entre as frequências fr e f zero medidas pelo radar?",
+      "opcoes": [
+        "A) Mais grave do que o som emitido e fr menor que f zero.",
+        "B) Mais agudo do que o som emitido e fr menor que f zero.",
+        "C) Mais agudo do que o som emitido e fr igual a f zero.",
+        "D) Mais agudo do que o som emitido e fr maior que f zero.",
+        "E) Mais grave do que o som emitido e fr maior que f zero."
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2024112,
+      "pergunta": "O desenvolvimento da biotecnologia e da clonagem gênica em procariotos fez com que a produção de proteínas se tornasse mais intensa, rápida e econômica. Para a produção de hormônios, enzimas e proteínas de resistência a drogas, uma variação da técnica de reação em cadeia pela polimerase (PCR, na sigla em inglês) utiliza a enzima transcriptase reversa (RT-PCR), que sintetiza moléculas de DNA complementares a partir de fitas de RNA.\nNesse contexto, essa técnica é importante para detectar genes",
+      "opcoes": [
+        "A) expressos.",
+        "B) plasmidiais.",
+        "C) bacterianos.",
+        "D) dominantes.",
+        "E) autossômicos."
+      ],
+      "correta": "A",
+      "ano": 2024
+    },
+    {
+      "id": 2024114,
+      "pergunta": "O soro caseiro serve para combater a desidratação por meio da reposição da água e sais minerais perdidos, por exemplo, por diarreia. Uma receita simples para a sua preparação consiste em utilizar duas colheres grandes (de sopa) de açúcar e duas colheres pequenas (de café) de sal de cozinha, dissolvidos em 2 litros de água fervida, obtendo-se uma solução com concentração de íon sódio de 1,4 miligrama por mililitro.\nConsidere as massas molares: NaCl igual a 58,5 gramas por mol; Na igual a 23 gramas por mol.\nQual é o valor mais próximo da massa, em grama, de cloreto de sódio presente em uma única colher pequena?",
+      "opcoes": [
+        "A) 0,7 grama.",
+        "B) 1,8 grama.",
+        "C) 2,8 gramas.",
+        "D) 3,6 gramas.",
+        "E) 7,0 gramas."
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2024115,
+      "pergunta": "A tuberculose é uma doença infecciosa causada pela bactéria Mycobacterium tuberculosis. O principal reservatório é o homem, e a sua transmissão ocorre principalmente pela inalação de aerossóis. No Brasil, a doença representa um sério problema de saúde pública e, muitas vezes, está ligada às precárias condições socioeconômicas e sanitárias. Para prevenir a doença, é essencial a adoção de medidas dirigidas ao homem e ao ambiente.\nQue práticas são eficazes para evitar essa doença?",
+      "opcoes": [
+        "A) Utilizar seringas descartáveis e realizar a coleta de lixo com frequência.",
+        "B) Tratar pessoas doentes e melhorar a ventilação nos ambientes fechados.",
+        "C) Proteger a boca ao tossir e usar telas em portas e janelas nas moradias.",
+        "D) Vacinar crianças recém-nascidas e dar destino adequado ao esgoto domiciliar.",
+        "E) Monitorar os contatos que convivem com o doente e melhorar a qualidade da água."
+      ],
+      "correta": "B",
+      "ano": 2024
+    },
+    {
+      "id": 2024117,
+      "pergunta": "O biogás é uma alternativa energética muito importante, pois, além de reduzir a dependência por combustíveis fósseis, sua obtenção pode ser realizada a partir de resíduos da produção agroindustrial. Considere que o biogás produzido em um empreendimento de suinocultura contém 70 por cento em volume de metano (massa molar 16 gramas por mol; volume molar 22 litros por mol). Ele será utilizado para geração de energia em substituição ao etanol (massa molar 46 gramas por mol) em um gerador no qual 1 metro cúbico de biogás de origem suína substitui 0,59 litro de etanol anidro (densidade 0,78 grama por mililitro).\nNessas condições, a massa de metano necessária para substituir 10 mol de etanol na produção de energia é mais próxima de",
+      "opcoes": [
+        "A) 300 gramas.",
+        "B) 400 gramas.",
+        "C) 510 gramas.",
+        "D) 590 gramas.",
+        "E) 720 gramas."
+      ],
+      "correta": "C",
+      "ano": 2024
+    },
+    {
+      "id": 2024119,
+      "pergunta": "Brasil fecha 2020 entre os maiores recicladores de latas de alumínio\nA bauxita contém alumina (Al2O3), que é a matéria-prima para produção do alumínio (Al). De forma geral, são necessários 50 quilogramas de bauxita para produzir 10 quilogramas de alumínio. O Brasil fechou 2020 como um dos principais líderes mundiais em reciclagem de latas de alumínio. De acordo com levantamento da Associação Brasileira dos Fabricantes de Latas de Alumínio (Abralatas), o país obteve um índice de reciclagem de 97,4 por cento, de um total de 4,0 vezes 10 elevado a 5 toneladas de latas vendidas. Considere que a lata é constituída de alumínio puro.\nLevando em conta apenas a reciclagem de latas, qual é o valor mais próximo da massa de bauxita, em tonelada, que deixou de ser extraída da natureza em 2020 no Brasil?",
+      "opcoes": [
+        "A) 1,0 vezes 10 elevado a 4 toneladas.",
+        "B) 3,9 vezes 10 elevado a 5 toneladas.",
+        "C) 5,0 vezes 10 elevado a 5 toneladas.",
+        "D) 1,9 vezes 10 elevado a 6 toneladas.",
+        "E) 2,0 vezes 10 elevado a 7 toneladas."
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2024121,
+      "pergunta": "O vírus linfotrópico de células T humanas tipo 1 (HTLV-1): quando suspeitar da infecção?\nO vírus linfotrópico de células T humanas tipo 1 (HTLV-1) é um retrovírus do mesmo grupo do vírus da imunodeficiência humana (HIV). Ambos são transmitidos da mesma forma e infectam as mesmas células de defesa do organismo, os linfócitos T. A diferença entre eles é que o HTLV-1 estimula o aumento da produção desses linfócitos, enquanto o HIV causa destruição dessas células.\nUma possível consequência da infecção por HTLV-1 é o desenvolvimento de",
+      "opcoes": [
+        "A) aids.",
+        "B) câncer.",
+        "C) diabetes.",
+        "D) hepatite B.",
+        "E) hemorragia."
+      ],
+      "correta": "B",
+      "ano": 2024
+    },
+    {
+      "id": 2024127,
+      "pergunta": "O que são vacinas?\nIndústrias farmacêuticas e instituições científicas têm trabalhado no desenvolvimento de diferentes vacinas contra a covid-19. Em algumas dessas vacinas, a principal estrutura antigênica é uma proteína de superfície viral chamada espícula (spike, em inglês). Essa proteína só existe em coronavírus, incluindo o SARS-CoV-2. Ela se liga a receptores de membrana específicos das células humanas por um mecanismo do tipo “chave-fechadura”. Dessa forma, os vírus entram nas células, podendo se multiplicar e acarretar a doença.\nNessas vacinas, essa proteína viral induz a",
+      "opcoes": [
+        "A) produção de anticorpos específicos contra os vírus.",
+        "B) imunidade passiva contra o desenvolvimento da doença.",
+        "C) alteração genômica para formação da memória imunológica.",
+        "D) neutralização direta dos vírus presentes na circulação sanguínea.",
+        "E) modificação dos receptores de membrana específicos para o vírus"
+      ],
+      "correta": "A",
+      "ano": 2024
+    },
+    {
+      "id": 2024134,
+      "pergunta": "Pererecas-assobiadoras tiram o sono de moradores do Brooklin\nMoradores do Brooklin, bairro de São Paulo, perdem o sono com um som alto, constante e estridente. O barulho é causado por anfíbios anuros trazidos do Caribe, da espécie Eleutherodactylus jahnstonei, que têm tamanho um pouco maior que o de um grão de feijão e que encontraram na capital um ambiente favorável. Cientistas foram até o local e encontraram esses animais nos jardins das casas.\nAo emitirem o som estridente, esses anfíbios",
+      "opcoes": [
+        "A) indicam que estão fora de seu hábitat natural.",
+        "B) alertam para a presença de poluição urbana.",
+        "C) sinalizam a existência de superpopulação.",
+        "D) direcionam insetos para sua alimentação.",
+        "E) atraem fêmeas para o acasalamento."
+      ],
+      "correta": "E",
+      "ano": 2024
+    },
+    {
+      "id": 2025092,
+      "pergunta": "A maioria dos seres vivos tem um relógio biológico (ciclo circadiano), que regula as mudanças metabólicas e comportamentais de acordo com o ciclo de 24 horas de rotação da Terra. Em 2013, um artigo publicado na revista Science Advantage mostrou ser possível a transferência dos genes do relógio circadiano da cianobactéria Synechococcus elongatus para o genoma da bactéria Escherichia coli, um organismo não circadiano. ODIN, A. H. et al. Transplantability of a Circadian Lock to Noncircadian Organism. Science Advantage, n. 3, 2013 (adaptado).\nEstarão presentes no organismo geneticamente modificado os genes do",
+      "opcoes": [
+        "A) metabolismo de E. coli, apenas.",
+        "B) ciclo circadiano de E. coli, apenas.",
+        "C) metabolismo de S. elongatus e do ciclo circadiano de E. coli.",
+        "D) ciclo circadiano de S. elongatus e do metabolismo de E. coli.",
+        "E) ciclo circadiano de S. elongatus e do ciclo circadiano de S. elongatus."
+      ],
+      "correta": "D",
+      "ano": 2025
+    },
+    {
+      "id": 2025093,
+      "pergunta": "Os funcionários de um zoológico observaram um aumento na taxa de mortalidade de aves aquáticas por afogamento. Um grupo de biólogos analisou o comportamento das aves por várias semanas e observou que elas apresentavam dificuldade de flutuação, por causa do encharcamento das penas com água.\nO aumento na taxa de mortalidade dessas aves estava associado a uma redução na",
+      "opcoes": [
+        "A) dilatação do papo.",
+        "B) produção de penas das asas.",
+        "C) secreção da glândula uropigial.",
+        "D) formação da membrana natatória.",
+        "E) largura das cavidades de ossos pneumáticos."
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025095,
+      "pergunta": "TEXTO I\nAs mariposas\nA mariposa, quando chega o frio\nFica dando volta em volta da lâmpada pra se esquentar. [sic]\nBARBOSA, A. Reviva: Adoniran Barbosa. São Paulo: Som Livre, 2002 (fragmento).\nTEXTO II\nAs mariposas se aproximam das lâmpadas atraídas pela luz, pois, sendo largamente criaturas noturnas, estão adaptadas a seguir o brilho da lua, em um processo conhecido como orientação transversal. Assim, o que o sambista Adoniran Barbosa, no Texto I, descreve não é a causa, mas sim uma das consequências possíveis dessa aproximação. De fato, o calor gerado pelas lâmpadas, sobretudo as incandescentes, pode aquecer as mariposas. HERTZBERG, R. Por que as mariposas são tão atraídas por luzes fortes? National Geographic, nov. 2020 (adaptado).\nNesse contexto, o processo de transferência de calor para as mariposas que independe da presença de fluidos é a",
+      "opcoes": [
+        "A) reflexão.",
+        "B) refração.",
+        "C) irradiação.",
+        "D) dispersão.",
+        "E) convecção."
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025096,
+      "pergunta": "Os sapinhos-ponta-de-flecha constituem um grupo de espécies encontradas na América Central e do Sul. Seus venenos são obtidos por meio do consumo de algumas formigas e cupins que se alimentam de plantas que contêm esses venenos. Esses anfíbios são usados para envenenar as flechas das zarabatanas dos caçadores nativos. Quando capturados e criados em condições artificiais, ou quando nascidos em cativeiro, não são tóxicos. BADIO, B. et al. Epibatidine: Discovery and Definition as a Potent Analgesic and Nicotinic Agonist. Med. Chem. Res., n. 4, 1994 (adaptado).\nA perda da capacidade de se obter a toxina nos nascidos em cativeiro é causada pela",
+      "opcoes": [
+        "A) diferença de umidade entre os ambientes.",
+        "B) ausência de alimentação natural.",
+        "C) adaptação ao novo ambiente.",
+        "D) mudança de comportamento.",
+        "E) variabilidade genética."
+      ],
+      "correta": "B",
+      "ano": 2025
+    },
+    {
+      "id": 2025098,
+      "pergunta": "O Bioma Cerrado é caracterizado por apresentar ampla e natural diversidade de espécies vegetais. Nos últimos tempos, o homem vem modificando esse cenário pela inserção de plantas exóticas nesse ambiente. Exemplo disso é o cultivo do capim-gordura, nativo do continente africano e utilizado nesse tipo de ecossistema como forragem de pastagem. É importante ressaltar que essa espécie vegetal é capaz de se espalhar por grandes áreas, devido à sua agressividade e poder competitivo. CARLOS JR., L. A.; BARBOSA, N. P. U.; FERNANDES, G. W. O capim-gordura (Melinis minutiflora) no Cerrado brasileiro. Jornal do Biólogo, n. 1, 2008 (adaptado).\nEm longo prazo, essa ação do homem pode gerar qual consequência?",
+      "opcoes": [
+        "A) Diversificar nichos ecológicos.",
+        "B) Assoar as nascentes do bioma.",
+        "C) Dificultar a infiltração de água na terra.",
+        "D) Diminuir as espécies nativas do bioma.",
+        "E) Produzir menos resíduos sólidos urbanos."
+      ],
+      "correta": "D",
+      "ano": 2025
+    },
+    {
+      "id": 2025099,
+      "pergunta": "O monstro de gila, um lagarto encontrado em um deserto dos Estados Unidos, apresenta adaptações à falta de alimento nesse ambiente. Esse lagarto possui um hormônio que controla os níveis de açúcar em seu próprio sangue. Foi observado que esse hormônio também controla os níveis de açúcar no sangue de pessoas diabéticas. RUSSELL, C. Ozempic e outros remédios inspirados em veneno de animais. Disponível em: www.bbc.com. Acesso em: 10 jan. 2023 (adaptado).\nConsiderando que animais de um mesmo grupo taxonômico podem apresentar características adaptativas semelhantes em ambientes similares, onde seria mais provável encontrar lagartos com essas características no território brasileiro?",
+      "opcoes": [
+        "A) Cerrado.",
+        "B) Pampas.",
+        "C) Caatinga.",
+        "D) Restinga.",
+        "E) Pantanal."
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025100,
+      "pergunta": "Existe um processo de purificação de água em que são removidos os sais dissolvidos. A água que passa por esse processo é muito utilizada em laboratórios, de química, em indústrias (como solvente), em baterias de carros etc. Entretanto, esse tipo de água não é adequado para ingestão, pois pode causar problemas de saúde, como carência iônica e diarreia.\nEssa água é chamada de",
+      "opcoes": [
+        "A) dura.",
+        "B) pesada.",
+        "C) sanitária.",
+        "D) destilada.",
+        "E) oxigenada."
+      ],
+      "correta": "D",
+      "ano": 2025
+    },
+    {
+      "id": 2025101,
+      "pergunta": "Por que os olhos ficam vermelhos\nem algumas fotografias?\nEm fotos tiradas com câmeras fotográficas antigas, por vezes as pessoas aparecem com os olhos vermelhos. Isso ocorre porque a luz do flash da câmera incide diretamente na globo ocular, sendo refletida por uma região repleta de vasos sanguíneos. Disponível em: www.uol.com.br. Acesso em: 14 jun. 2017 (adaptado).\nEsse efeito é mais comum à noite ou em lugares pouco iluminados porque, com a pupila",
+      "opcoes": [
+        "A) dilatada, chega mais luz à retina.",
+        "B) retraída, chega mais luz vermelha à retina.",
+        "C) retraída, chega menos luz vermelha aos bastonetes.",
+        "D) dilatada, chegam menos luzes azul e verde aos cones.",
+        "E) dilatada, chegam menos luzes azul e verde aos bastonetes."
+      ],
+      "correta": "A",
+      "ano": 2025
+    },
+    {
+      "id": 2025102,
+      "pergunta": "O sashimi (prato de peixe cru) de baiacu é uma iguaria muito apreciada no Japão. Entretanto, sua ingestão pode causar a morte por parada respiratória, pois esse peixe contém uma potente neurotoxina termoestável, a tetrodotoxina, que é produzida e armazenada nas gônadas e vísceras.\nQue ação poderia evitar essa intoxicação?",
+      "opcoes": [
+        "A) Criar os peixes em cativeiro.",
+        "B) Realizar a pesca com redes.",
+        "C) Preparar peixes cozidos ou fritos.",
+        "D) Manter o peixe em condições adequadas de higiene.",
+        "E) Manusear o peixe sem provocar o rompimento dos órgãos internos."
+      ],
+      "correta": "E",
+      "ano": 2025
+    },
+    {
+      "id": 2025103,
+      "pergunta": "A deficiência da enzima lipase ácida causa uma doença em que o portador apresenta células que não degradam colesterol esterificado nem triglicerídeos, resultando no depósito desses compostos em diversos órgãos, principalmente no fígado. ANDERSON, R. A. et al. In situ localization of the genetic locus causing [...]. Genomics,n. 1, jan. 1993 (adaptado).\nEssa doença resulta da insuficiência funcional de qual estrutura celular?",
+      "opcoes": [
+        "A) Lisossomos.",
+        "B) Ribossomos.",
+        "C) Mitocôndrias.",
+        "D) Peroxissomos.",
+        "E) Retículo endoplasmático liso."
+      ],
+      "correta": "A",
+      "ano": 2025
+    },
+    {
+      "id": 2025104,
+      "pergunta": "A quantidade de CO₂ na atmosfera do Terra aumentou em 50%, e a temperatura está agora cerca de 1,2 °C mais quente em comparação ao século XIX. O ritmo de aumento da temperatura precisa diminuir se quisermos evitar as piores consequências das mudanças climáticas. Cientistas estimam que o aquecimento global precisa ser mantido em 1,5 °C até o ano 2100. No entanto, a menos que outras ações sejam tomadas, o planeta ainda pode aquecer mais de 3 °C no final desse século. Na prática, os países precisam aumentar as mudanças climáticas com ações mitigadoras, que reduzam tanto as emissões quanto os níveis de CO₂ na atmosfera. Um guia rápido para entender as mudanças climáticas. Disponível em: www.bbc.com. Acesso em: 6 dez. 2021 (adaptado).\nQual ação mitigadora auxilia na remoção desse gás presente na atmosfera, reduzindo seus níveis?",
+      "opcoes": [
+        "A) Plantar mais árvores.",
+        "B) Instalar mais usinas eólicas.",
+        "C) Ampliar o uso de energia solar.",
+        "D) Manter os combustíveis fósseis no solo.",
+        "E) Produzir menos resíduos sólidos urbanos."
+      ],
+      "correta": "A",
+      "ano": 2025
+    },
+    {
+      "id": 2025110,
+      "pergunta": "A química nuclear é uma importante ferramenta na produção de substâncias utilizadas na área da saúde humana. A radiação emitida pelo cobalto-60 é utilizada na medicina como ferramenta de diagnóstico e no tratamento do câncer. No entanto, esse radioisótopo tem um tempo de armazenamento limitado, pois seu tempo de meia-vida é de 5 anos. Considere um frasco com uma amostra contendo 2,00 mg de cobalto-60, armazenado durante um período de 26,5 anos.\nA massa de cobalto-60, em miligrama, que restará ao final desse tempo é mais próxima de",
+      "opcoes": [
+        "A) 2,00 mg.",
+        "B) 1,00 mg.",
+        "C) 0,40 mg.",
+        "D) 0,13 mg.",
+        "E) 0,06 mg."
+      ],
+      "correta": "E",
+      "ano": 2025
+    },
+    {
+      "id": 2025112,
+      "pergunta": "Golden Rice, ou arroz dourado, é uma variedade de arroz enriquecida em betacaroteno, precursor da vitamina A. Foi desenvolvida para ajudar a combater a doença decorrente da deficiência dessa vitamina. Para a obtenção dessa variedade de arroz, foram utilizados métodos de engenharia genética. BORÉM, A.; SANTOS, F. R. Entendendo a biotecnologia. Viçosa: UFV, 2009 (adaptado).\nEsse alimento contribui para diminuir a carência associada a qual doença?",
+      "opcoes": [
+        "A) Hemofilia.",
+        "B) Escorbuto.",
+        "C) Raquitismo.",
+        "D) Cegueira noturna.",
+        "E) Anemia perniciosa."
+      ],
+      "correta": "D",
+      "ano": 2025
+    },
+    {
+      "id": 2025116,
+      "pergunta": "A longa exposição a ambientes resultantes da atuação, ao longo de milhões de anos, de chuvas, enxurradas, calor e ventos em rochas ricas em ferro. São compostas por até 90% de óxidos de ferro e contêm solos muito ácidos, rasos, com reduzidos índices de fertilidade e temperaturas que atingem quase 50 °C na superfície. Ao contrário do que se imagina, esse tipo de ambiente abriga comunidades de plantas e animais com elevado número de espécies e distribuição restrita. GARMO, T. F. et al. Ilhas de ferro ecológicas para a conservação. Disponível em: http://cienciahoje.org.br. Acesso em: 2 dez. 2018 (adaptado).\nA seleção adaptativa nesses ambientes favorece a ocorrência de espécies",
+      "opcoes": [
+        "A) exóticas.",
+        "B) migratórias.",
+        "C) endêmicas.",
+        "D) dominantes.",
+        "E) generalistas."
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025117,
+      "pergunta": "Para a produção de titânio metálico ou dióxido de titânio puros, é necessário fazer a cloração do minério que contém dióxido de titânio, com o objetivo de separar esse óxido de outras substâncias presentes no minério. A principal reação química de cloração é representada por:TiO₂(s) + 2 Cl₂(g) ⇌ TiCl₄(g) + O₂(g) ΔH = +175 kJ/molDepois da cloração, o tetracloreto de titânio é condensado e convertido, novamente, a dióxido de titânio.\nApós o sistema atingir o equilíbrio químico, como a formação do TiCl₄ pode ser favorecida?",
+      "opcoes": [
+        "A) Aumentando a pressão total do sistema.",
+        "B) Diminuindo a temperatura do sistema.",
+        "C) Aumentando a pressão parcial de O₂.",
+        "D) Aumentando a pressão parcial de Cl₂.",
+        "E) Variando a quantidade de TiO₂."
+      ],
+      "correta": "D",
+      "ano": 2025
+    },
+    {
+      "id": 2025118,
+      "pergunta": "A loja de um depósito de bebidas tem 50 m² de área útil de armazenamento e foi projetada para suportar pressões de até 10⁴ Pa. O gerente do estabelecimento pretende armazenar um produto cuja densidade é 1 250 kg/m³. Considere a aceleração da gravidade igual a 10 m/s².\nA altura máxima, em metro, de empilhamento do produto que essa loja é capaz de suportar é",
+      "opcoes": [
+        "A) 0,16 m.",
+        "B) 0,50 m.",
+        "C) 0,80 m.",
+        "D) 1,60 m.",
+        "E) 8,00 m."
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025121,
+      "pergunta": "A dimetilamina é uma substância de elevada toxidez que entra em ebulição a 7 °C. Na madrugada de um dia frio, essa substância se espalhou por uma rodovia após um acidente de trânsito envolvendo um caminhão que transportava esse produto. Para minimizar a agressão ao meio ambiente, bem como evitar a evaporação da dimetilamina com a elevação da temperatura ao longo do dia, um químico considerou o uso de algumas substâncias ou misturas como água, vinagre, óleo de soja, sal de cozinha e bicarbonato de sódio.\nDentre as opções apresentadas, o tratamento correto para minimizar esse problema é usar",
+      "opcoes": [
+        "A) água.",
+        "B) vinagre.",
+        "C) óleo de soja.",
+        "D) sal de cozinha.",
+        "E) bicarbonato de sódio."
+      ],
+      "correta": "B",
+      "ano": 2025
+    },
+    {
+      "id": 2025124,
+      "pergunta": "Objetos de prata escurecem em contato com compostos contendo enxofre por causa da formação de uma fina camada de sulfeto de prata. Um método simples para clarear o objeto consiste em forrar um recipiente com papel alumínio, adicionar ao recipiente uma solução aquosa de cloreto de sódio e, enfim, mergulhar o objeto de prata escurecido. Em cerca de três minutos, a prata volta à coloração original. As seguintes semirreações e os respectivos potenciais-padrão de redução são úteis para a compreensão dos fenômenos ocorridos. Ag₂S(s) + 2 e⁻ ⇌ 2 Ag(s) + S²⁻(aq) –0,69 V O₂(g) + 4 H⁺(aq) + 4 e⁻ ⇌ 2 H₂O(l) +1,23 V Al³⁺(aq) + 3 e⁻ ⇌ Al(s) –1,68 V SARTORI, L. R.; BATISTA, E. F.; REBELLO, D. O. Escurecimento e limpeza de objetos de prata: um experimento simples e de fácil execução envolvendo reações de oxirredução. Química Nova na Escola, n. 30, 2008 (adaptado).\nOs valores das diferenças de potencial-padrão das reações que representam o escurecimento e o clareamento do objeto de prata são, respectivamente:",
+      "opcoes": [
+        "A) +0,54 V e +2,37 V.",
+        "B) +0,54 V e +0,99 V.",
+        "C) +0,15 V e +2,37 V.",
+        "D) +2,61 V e +1,29 V.",
+        "E) +0,15 V e –1,29 V."
+      ],
+      "correta": "B",
+      "ano": 2025
+    },
+    {
+      "id": 2025125,
+      "pergunta": "Apaixonada por culinária e química, uma chefe de cozinha calculou que, para promover o crescimento adequado da massa durante o cozimento de um bolo a 180 °C (453 K) e 1,00 atm, ela precisaria utilizar uma quantidade de fermento químico suficiente para produzir um volume de gás igual a 4,00 L. Com esse objetivo, ela escolheu utilizar o bicarbonato de amônio, um composto que, sob aquecimento, degrada-se em três gases distintos que são os responsáveis pelo crescimento da massa. A decomposição do bicarbonato de amônio ocorre conforme a equação química apresentada e, nas condições do cozimento, seu rendimento é de 80%. NH₄HCO₃(s) → NH₃(g) + CO₂(g) + H₂O(g)Considere que a mistura dos gases se comporta como gás ideal nas condições de cozimento utilizadas pela chefe. Dados: Massa molar do NH₄HCO₃ = 79 g · mol⁻¹ e R = 0,082 atm · L · mol⁻¹ · K⁻¹.\nEm uma grama, de bicarbonato de amônio que ela deve utilizar é mais próxima de",
+      "opcoes": [
+        "A) 2,3 g.",
+        "B) 3,5 g.",
+        "C) 5,9 g.",
+        "D) 6,8 g.",
+        "E) 8,9 g."
+      ],
+      "correta": "B",
+      "ano": 2025
+    },
+    {
+      "id": 2025131,
+      "pergunta": "O Brasil é o maior produtor mundial de nióbio (massa molar = 93 g mol⁻¹), metal utilizado na fabricação de vários tipos de aço: automotivos, estruturais e inoxidáveis. O processo utilizado na produção do nióbio é a redução aluminotérmica de Nb₂O₅ com excesso de 10% de Al (massa molar = 27 g mol⁻¹). A reação é a quantidade estequiométrica da reação, representada pela equação química:3 Nb₂O₅ (s) + 10 Al (s) → 6 Nb (s) + 5 Al₂O₃ (s)Uma engenheira metalúrgica estimou a massa de alumínio necessária para produzir 9,3 kg de nióbio, nas condições descritas, para a produção de um lote de peças de aço encomendado por uma indústria, considerando um rendimento de 100%. Disponível em: www.cbmm.com.br (acesso em: 17 out. 2015 (adaptado)). A massa de alumínio, em quilograma, estimada pela engenheira é mais próxima de\nNessas condições, qual será a quantidade de nióbio (massa molar = 93 g mol⁻¹), metal utilizado na fabricação de um lote de peças de aço, que será produzida?",
+      "opcoes": [
+        "A) 2,7 kg.",
+        "B) 3,0 kg.",
+        "C) 4,1 kg.",
+        "D) 4,5 kg.",
+        "E) 5,0 kg."
+      ],
+      "correta": "E",
+      "ano": 2025
+    },
+    {
+      "id": 2009001,
+      "pergunta": "A atmosfera terrestre é composta pelos gases nitrogênio (N2) e oxigênio (O2), que somam cerca de 99%, e por gases traços, entre eles o gás carbônico (CO2), vapor de água (H2O), metano (CH4), ozônio (O3) e o óxido nitroso (N2O), que compõem o restante 1% do ar que respiramos. Os gases traços, por serem constituídos por pelo menos três átomos, conseguem absorver o calor irradiado pela Terra, aquecendo o planeta. Esse fenômeno, que acontece\nhá bilhões de anos, é chamado de efeito estufa. A partir da Revolução Industrial (século XIX), a concentração de gases traços na atmosfera, em particular o CO2, tem aumentado significativamente, o que resultou no aumento da temperatura em escala global. Mais recentemente, outro fator tornou-se diretamente envolvido no aumento da concentração de CO2 na atmosfera: o desmatamento.\nBROWN, I. F.; ALECHANDRE, A. S. Conceitos básicos sobre clima,carbono, florestas e comunidades. A.G. Moreira & S. Schwartzman. As mudanças climáticas globais e os ecossistemas brasileiros. Brasília: Instituto de Pesquisa Ambiental da Amazônia, 2000 (adaptado).\nConsiderando o texto, uma alternativa viável para combater o efeito estufa é",
+      "opcoes": [
+        "A) Reduzir o calor irradiado pela Terra mediante a substituição da produção primária pela industrialização refrigerada.",
+        "B) Promover a queima da biomassa vegetal, responsável pelo aumento do efeito estufa devido à produção de CH4.",
+        "C) Reduzir o desmatamento, mantendo-se, assim, o potencial da vegetação em absorver o CO2 da atmosfera.",
+        "D) Aumentar a concentração atmosférica de H2O, molécula capaz de absorver grande quantidade de calor.",
+        "E) Remover moléculas orgânicas polares da atmosfera, diminuindo a capacidade delas de reter calor."
+      ],
+      "correta": "C",
+      "ano": 2009
+    },
+    {
+      "id": 2009003,
+      "pergunta": "Estima-se que haja atualmente no mundo 40 milhões de pessoas infectadas pelo HIV (o vírus que causa a AIDS), sendo que as taxas de novas infecções continuam crescendo, principalmente na África, Ásia e Rússia. Nesse cenário de pandemia, uma vacina contra o HIV teria imenso impacto, pois salvaria milhões de vidas. Certamente seria um marco na história planetária e também uma esperança para as populações carentes de tratamento antiviral e de acompanhamento médico.\nTANURI, A.; FERREIRA JUNIOR, O. C. Vacina contra Aids: desafios e esperanças. Ciência Hoje (44) 26, 2009 (adaptado).\nUma vacina eficiente contra o HIV deveria",
+      "opcoes": [
+        "A) Induzir a imunidade, para proteger o organismo da contaminação viral.",
+        "B) Ser capaz de alterar o genoma do organismo portador, induzindo a síntese de enzimas protetoras.",
+        "C) Produzir antígenos capazes de se ligarem ao vírus, impedindo que este entre nas células do organismo humano.",
+        "D) Ser amplamente aplicada em animais, visto que esses são os principais transmissores do vírus para os seres humanos.",
+        "E) Estimular a imunidade, minimizando a transmissão do vírus por gotículas de saliva."
+      ],
+      "correta": "A",
+      "ano": 2009
+    },
+    {
+      "id": 2009004,
+      "pergunta": "Em um experimento, preparou-se um conjunto de plantas por técnica de clonagem a partir de uma planta original que apresentava folhas verdes. Esse conjunto foi dividido em dois grupos, que foram tratados de maneira idêntica, com exceção das condições de iluminação, sendo um grupo exposto a ciclos de iluminação solar natural e outro mantido no escuro. Após alguns dias, observou-se que o grupo exposto à luz apresentava folhas verdes como a planta original e o grupo cultivado no escuro apresentava folhas amareladas.\nAo final do experimento, os dois grupos de plantas apresentaram",
+      "opcoes": [
+        "A) Os genótipos e os fenótipos idênticos.",
+        "B) Os genótipos idênticos e os fenótipos diferentes.",
+        "C) Diferenças nos genótipos e fenótipos.",
+        "D) O mesmo fenótipo e apenas dois genótipos diferentes.",
+        "E) O mesmo fenótipo e grande variedade de genótipos."
+      ],
+      "correta": "B",
+      "ano": 2009
+    },
+    {
+      "id": 2009005,
+      "pergunta": "Na linha de uma tradição antiga, o astrônomo grego Ptolomeu (100-170 d.C.) afirmou a tese do geocentrismo, segundo a qual a Terra seria o centro do universo, sendo que o Sol, a Lua e os planetas girariam em seu redor em órbitas circulares. A teoria de Ptolomeu resolvia de modo razoável os problemas astronômicos da sua época. Vários séculos mais tarde, o clérigo e astrônomo polonês Nicolau Copérnico (1473-1543), ao encontrar inexatidões na teoria de Ptolomeu, formulou a teoria do heliocentrismo, segundo a qual o Sol deveria ser considerado o centro do universo, com a Terra, a Lua e os planetas girando circularmente em torno dele. Por fim, o astrônomo e matemático alemão Johannes Kepler (1571- 1630), depois de estudar o planeta Marte por cerca de trinta anos, verificou que a sua órbita é elíptica. Esse resultado generalizou-se para os demais planetas.\nA respeito dos estudiosos citados no texto, é correto afirmar que",
+      "opcoes": [
+        "A) Ptolomeu apresentou as ideias mais valiosas, por serem mais antigas e tradicionais.",
+        "B) Copérnico desenvolveu a teoria do heliocentrismo inspirado no contexto político do Rei Sol.",
+        "C) Copérnico viveu em uma época em que a pesquisa científica era livre e amplamente incentivada pelas autoridades.",
+        "D) Kepler estudou o planeta Marte para atender às necessidades de expansão econômica e científica da Alemanha.",
+        "E) Kepler apresentou uma teoria científica que, graças aos métodos aplicados, pôde ser testada e generalizada."
+      ],
+      "correta": "E",
+      "ano": 2009
+    },
+    {
+      "id": 2009006,
+      "pergunta": "O ciclo biogeoquímico do carbono compreende diversos compartimentos, entre os quais a Terra, a atmosfera e os oceanos, e diversos processos que permitem a transferência de compostos entre esses reservatórios. Os estoques de carbono armazenados na forma de recursos não renováveis, por exemplo, o petróleo, são limitados, sendo de grande relevância que se perceba a importância da substituição de combustíveis fósseis por combustíveis de fontes renováveis.\nA utilização de combustíveis fósseis interfere no ciclo do carbono, pois provoca",
+      "opcoes": [
+        "A) Aumento da porcentagem de carbono contido na Terra.",
+        "B) Redução na taxa de fotossíntese dos vegetais superiores.",
+        "C) Aumento da produção de carboidratos de origem vegetal.",
+        "D) Aumento na quantidade de carbono presente na atmosfera.",
+        "E) Redução da quantidade global de carbono armazenado nos oceanos."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009007,
+      "pergunta": "Um novo método para produzir insulina artificial que utiliza tecnologia de DNA recombinante foi desenvolvido por pesquisadores do Departamento de Biologia Celular da Universidade de Brasília (UnB) em parceria com a iniciativa privada. Os pesquisadores modificaram geneticamente a bactéria Escherichia coli para torná-la capaz de sintetizar o hormônio. O processo permitiu fabricar insulina em maior quantidade e em apenas 30 dias, um terço do tempo necessário para obtê-la pelo método tradicional, que consiste na extração do hormônio a partir do pâncreas de animais abatidos.\nCiência Hoje, 24 abr. 2001. Disponível em: http://cienciahoje.uol.com.br (adaptado).\nA produção de insulina pela técnica do DNA recombinante tem, como consequência,",
+      "opcoes": [
+        "A) O aperfeiçoamento do processo de extração de insulina a partir do pâncreas suíno.",
+        "B) A seleção de microrganismos resistentes a antibióticos.",
+        "C) O progresso na técnica da síntese química de hormônios.",
+        "D) Impacto favorável na saúde de indivíduos diabéticos.",
+        "E) A criação de animais transgênicos."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009008,
+      "pergunta": "A economia moderna depende da disponibilidade de muita energia em diferentes formas, para funcionar e crescer. No Brasil, o consumo total de energia pelas indústrias cresceu mais de quatro vezes no período entre 1970 e 2005. Enquanto os investimentos em energias limpas e renováveis, como solar e eólica, ainda são incipientes, ao se avaliar a possibilidade de instalação de usinas geradoras de energia elétrica, diversos fatores devem ser levados em consideração, tais como os impactos causados ao ambiente e às populações locais.\nRICARDO, B.; CAMPANILI, M. Almanaque Brasil Socioambiental. São Paulo: Instituto Socioambiental, 2007 (adaptado).\nEm uma situação hipotética, optou-se por construir uma usina hidrelétrica em região que abrange diversas quedas d’água em rios cercados por mata, alegando-se que causaria impacto ambiental muito menor que uma usina termelétrica. Entre os possíveis impactos da instalação de uma usina hidrelétrica nessa região, inclui-se",
+      "opcoes": [
+        "A) A poluição da água por metais da usina.",
+        "B) A destruição do habitat de animais terrestres.",
+        "C) O aumento expressivo na liberação de CO2 para a atmosfera.",
+        "D) O consumo não renovável de toda água que passa pelas turbinas.",
+        "E) O aprofundamento no leito do rio, com a menor deposição de resíduos no trecho de rio anterior à represa."
+      ],
+      "correta": "B",
+      "ano": 2009
+    },
+    {
+      "id": 2009009,
+      "pergunta": "As mudanças climáticas e da vegetação ocorridas nos trópicos da América do Sul têm sido bem documentadas por diversos autores, existindo um grande acúmulo de evidências geológicas ou paleoclimatológicas que evidenciam essas mudanças ocorridas durante o Quaternário nessa região. Essas mudanças resultaram em restrição da distribuição das florestas pluviais, com expansões concomitantes de habitats não-florestais durante períodos áridos (glaciais), seguido da expansão das florestas pluviais e restrição das áreas não-florestais durante períodos úmidos (interglaciais). Disponível em: http://zoo.bio.ufpr.br. Acesso em: 1 maio 2009.\nDurante os períodos glaciais,",
+      "opcoes": [
+        "A) As áreas não-florestais ficam restritas a refúgios ecológicos devido à baixa adaptabilidade de espécies não-florestais a ambientes áridos.",
+        "B) Grande parte da diversidade de espécies vegetais é reduzida, uma vez que necessitam de condições semelhantes a dos períodos interglaciais.",
+        "C) A vegetação comum ao cerrado deve ter se limitado a uma pequena região do centro do Brasil, da qual se expandiu até atingir a atual distribuição.",
+        "D) Plantas com adaptações ao clima árido, como o desenvolvimento de estruturas que reduzem a perda de água, devem apresentar maior área de distribuição.",
+        "E) Florestas tropicais como a amazônica apresentam distribuição geográfica mais ampla, uma vez que são densas e diminuem a ação da radiação solar sobre o solo e reduzem os efeitos da aridez."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009010,
+      "pergunta": "A fotossíntese é importante para a vida na Terra. Nos cloroplastos dos organismos fotossintetizantes, a energia solar é convertida em energia química que, juntamente com água e gás carbônico (CO2), é utilizada para a síntese de compostos orgânicos (carboidratos). A fotossíntese é o único processo de importância biológica capaz de realizar essa conversão. Todos os organismos, incluindo os produtores, aproveitam a energia armazenada nos carboidratos para impulsionar os processos celulares, liberando CO2 para a atmosfera e água para a célula por meio da respiração celular. Além disso, grande fração dos recursos energéticos do planeta, produzidos tanto no presente (biomassa) como em tempos remotos (combustível fóssil), é resultante da atividade fotossintética.\nAs informações sobre obtenção e transformação dos recursos naturais por meio dos processos vitais de fotossíntese e respiração, descritas no texto, permitem concluir que",
+      "opcoes": [
+        "A) O CO2 e a água são moléculas de alto teor energético.",
+        "B) Os carboidratos convertem energia solar em energia química.",
+        "C) A vida na Terra depende, em última análise, da energia proveniente do Sol.",
+        "D) O processo respiratório é responsável pela retirada de carbono da atmosfera.",
+        "E) A produção de biomassa e de combustível fóssil, por si, é responsável pelo aumento de CO2 atmosférico."
+      ],
+      "correta": "C",
+      "ano": 2009
+    },
+    {
+      "id": 2009011,
+      "pergunta": "Para que todos os órgãos do corpo humano funcionem em boas condições, é necessário que a temperatura do corpo fique sempre entre 36ºC e 37ºC. Para manter-se dentro dessa faixa, em dias de muito calor ou durante intensos exercícios físicos, uma série de mecanismos fisiológicos é acionada.\nPode-se citar como o principal responsável pela manutenção da temperatura corporal humana o sistema",
+      "opcoes": [
+        "A) Digestório, pois produz enzimas que atuam na quebra de alimentos calóricos.",
+        "B) Imunológico, pois suas células agem no sangue, diminuindo a condução do calor.",
+        "C) Nervoso, pois promove a sudorese, que permite perda de calor por meio da evaporação da água.",
+        "D) Reprodutor, pois secreta hormônios que alteram a temperatura, principalmente durante a menopausa.",
+        "E) Endócrino, pois fabrica anticorpos que, por sua vez, atuam na variação do diâmetro dos vasos periféricos."
+      ],
+      "correta": "C",
+      "ano": 2009
+    },
+    {
+      "id": 2009013,
+      "pergunta": "A abertura e a pavimentação de rodovias em zonas rurais e regiões afastadas dos centros urbanos, por um lado, possibilita melhor acesso e maior integração entre as comunidades, contribuindo com o desenvolvimento social e urbano de populações isoladas. Por outro lado, a construção de rodovias pode trazer impactos indesejáveis ao meio ambiente, visto que a abertura de estradas pode resultar na fragmentação de habitats, comprometendo o fluxo gênico e as interações entre espécies silvestres, além de prejudicar o fluxo natural de rios e riachos, possibilitar o ingresso de espécies exóticas em ambientes naturais e aumentar a pressão antrópica sobre os ecossistemas nativos.\nBARBOSA, N. P. U.; FERNANDES, G. W. A destruição do jardim. Scientific American Brasil. Ano 7, número 80, dez. 2008 (adaptado).\nNesse contexto, para conciliar os interesses aparentemente contraditórios entre o progresso social e urbano e a conservação do meio ambiente, seria razoável",
+      "opcoes": [
+        "A) Impedir a abertura e a pavimentação de rodovias em áreas rurais e em regiões preservadas, pois a qualidade de vida e as tecnologias encontradas nos centros urbanos são prescindíveis às populações rurais.",
+        "B) Impedir a abertura e a pavimentação de rodovias em áreas rurais e em regiões preservadas, promovendo a migração das populações rurais para os centros urbanos, onde a qualidade de vida é melhor.",
+        "C) Permitir a abertura e a pavimentação de rodovias apenas em áreas rurais produtivas, haja vista que nas demais áreas o retorno financeiro necessário para produzir uma melhoria na qualidade de vida da região não é garantido.",
+        "D) Permitir a abertura e a pavimentação de rodovias, desde que comprovada a sua real necessidade e após a realização de estudos que demonstrem ser possível contornar ou compensar seus impactos ambientais.",
+        "E) Permitir a abertura e a pavimentação de rodovias, haja vista que os impactos ao meio ambiente são temporários e podem ser facilmente revertidos com as tecnologias existentes para recuperação de áreas degradadas."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009017,
+      "pergunta": "O Brasil pode se transformar no primeiro país das Américas a entrar no seleto grupo das nações que dispõem de trens-bala. O Ministério dos Transportes prevê o lançamento do edital de licitação internacional para a construção da ferrovia de alta velocidade Rio-São Paulo. A viagem ligará os 403 quilômetros entre a Central do Brasil, no Rio, e a Estação da Luz, no centro da capital paulista, em uma hora e 25 minutos. Disponível em: http://oglobo.globo.com. Acesso em: 14 jul. 2009\nDevido à alta velocidade, um dos problemas a ser enfrentado na escolha do trajeto que será percorrido pelo trem é o dimensionamento das curvas. Considerando-se que uma aceleração lateral confortável para os passageiros e segura para o trem seja de 0,1 g, em que g é a aceleração da gravidade (considerada igual a 10 m/s²), e que a velocidade do trem se mantenha constante em todo o percurso, seria correto prever que as curvas existentes no trajeto deveriam ter raio de curvatura mínimo de, aproximadamente,",
+      "opcoes": [
+        "A) 80 m.",
+        "B) 430 m.",
+        "C) 800 m.",
+        "D) 1.600 m.",
+        "E) 6.400 m."
+      ],
+      "correta": "E",
+      "ano": 2009
+    },
+    {
+      "id": 2009023,
+      "pergunta": "Cerca de 1% do lixo urbano é constituído por resíduos sólidos contendo elementos tóxicos. Entre esses elementos estão metais pesados como o cádmio, o chumbo e o mercúrio, componentes de pilhas e baterias, que são perigosos à saúde humana e ao meio ambiente. Quando descartadas em lixos comuns, pilhas e baterias vão para aterros sanitários ou lixões a céu aberto, e o vazamento de seus componentes contamina o solo, os rios e o lençol freático, atingindo a flora e a fauna. Por serem bioacumulativos e não biodegradáveis, esses metais chegam de forma acumulada aos seres humanos, por meio da cadeia alimentar. A legislação vigente (Resolução CONAMA no 257/1999) regulamenta o destino de pilhas e baterias após seu esgotamento energético e determina aos fabricantes e/ou importadores a quantidade máxima permitida desses metais em cada tipo de pilha/bateria, porém o problema ainda persiste.\nDisponível em: http://www.mma.gov.br. Acesso em: 11 jul. 2009 (adaptado).\nUma medida que poderia contribuir para acabar definitivamente com o problema da poluição ambiental por metais pesados relatado no texto seria",
+      "opcoes": [
+        "A) Deixar de consumir aparelhos elétricos que utilizem pilha ou bateria como fonte de energia.",
+        "B) Usar apenas pilhas ou baterias recarregáveis e de vida útil longa e evitar ingerir alimentos contaminados, especialmente peixes.",
+        "C) Devolver pilhas e baterias, após o esgotamento da energia armazenada, à rede de assistência técnica especializada para repasse a fabricantes e/ou importadores.",
+        "D) Criar nas cidades, especialmente naquelas com mais de 100 mil habitantes, pontos estratégicos de coleta de baterias e pilhas, para posterior repasse a fabricantes e/ou importadores.",
+        "E) Exigir que fabricantes invistam em pesquisa para a substituição desses metais tóxicos por substâncias menos nocivas ao homem e ao ambiente, e que não sejam bioacumulativas."
+      ],
+      "correta": "E",
+      "ano": 2009
+    },
+    {
+      "id": 2009026,
+      "pergunta": "O processo de industrialização tem gerado sérios problemas de ordem ambiental, econômica e social, entre os quais se pode citar a chuva ácida. Os ácidos usualmente presentes em maiores proporções na água da chuva são o H2CO3, formado pela reação do CO2 atmosférico com a água, o HNO3, o HNO2, o H2SO4 e o H2SO3. Esses quatro últimos são formados principalmente a partir da reação da água com os óxidos de nitrogênio e de enxofre gerados pela queima de combustíveis fósseis.\nA formação de chuva mais ou menos ácida depende não só da concentração do ácido formado, como também do tipo de ácido. Essa pode ser uma informação útil na elaboração de estratégias para minimizar esse problema ambiental. Se consideradas concentrações idênticas, quais dos ácidos citados no texto conferem maior acidez às águas das chuvas?",
+      "opcoes": [
+        "A) HNO3 e HNO2.",
+        "B) H2SO4 e H2SO3.",
+        "C) H2SO3 e HNO2.",
+        "D) H2SO4 e HNO3.",
+        "E) H2CO3 e H2SO3."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009030,
+      "pergunta": "É possível, com 1 litro de gasolina, usando todo o calor produzido por sua combustão direta, aquecer 200 litros de água de 20 °C a 55 °C. Pode-se efetuar esse mesmo aquecimento por um gerador de eletricidade, que consome 1 litro de gasolina por hora e fornece 110 V a um resistor de 11 Ω, imerso na água, durante um certo intervalo de tempo. Todo o calor liberado pelo resistor é transferido à água.\nConsiderando que o calor específico da água é igual a 4,19 J g-1 °C-1, aproximadamente qual a quantidade de gasolina consumida para o aquecimento de água obtido pelo gerador, quando comparado ao obtido a partir da combustão?",
+      "opcoes": [
+        "A) A quantidade de gasolina consumida é igual para os dois casos.",
+        "B) A quantidade de gasolina consumida pelo gerador é duas vezes maior que a consumida na combustão.",
+        "C) A quantidade de gasolina consumida pelo gerador é duas vezes menor que a consumida na combustão.",
+        "D) A quantidade de gasolina consumida pelo gerador é sete vezes maior que a consumida na combustão.",
+        "E) A quantidade de gasolina consumida pelo gerador é sete vezes menor que a consumida na combustão."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009031,
+      "pergunta": "O progresso da tecnologia introduziu diversos artefatos geradores de campos eletromagnéticos. Uma das mais empregadas invenções nessa área são os telefones celulares e smartphones. As tecnologias de transmissão de celular atualmente em uso no Brasil contemplam dois sistemas. O primeiro deles é operado entre as frequências de 800 MHz e 900 MHz e constitui os chamados sistemas TDMA/CDMA. Já a tecnologia GSM, ocupa a frequência de 1.800 MHz.\nConsiderando que a intensidade de transmissão e o nível de recepção “celular” sejam os mesmos para as tecnologias de transmissão TDMA/CDMA ou GSM, se um engenheiro tiver de escolher entre as duas tecnologias para obter a mesma cobertura, levando em consideração apenas o número de antenas em uma região, ele deverá escolher:",
+      "opcoes": [
+        "A) A tecnologia GSM, pois é a que opera com ondas de maior comprimento de onda.",
+        "B) A tecnologia TDMA/CDMA, pois é a que apresenta Efeito Doppler mais pronunciado.",
+        "C) A tecnologia GSM, pois é a que utiliza ondas que se propagam com maior velocidade.",
+        "D) Qualquer uma das duas, pois as diferenças nas frequências são compensadas pelas diferenças nos comprimentos de onda.",
+        "E) Qualquer uma das duas, pois nesse caso as intensidades decaem igualmente da mesma forma, independentemente da frequência."
+      ],
+      "correta": "E",
+      "ano": 2009
+    },
+    {
+      "id": 2009034,
+      "pergunta": "O lixo orgânico de casa – constituído de restos de verduras, frutas, legumes, cascas de ovo, aparas de grama, entre outros –, se for depositado nos lixões, pode contribuir para o aparecimento de animais e de odores indesejáveis. Entretanto, sua reciclagem gera um excelente adubo orgânico, que pode ser usado no cultivo de hortaliças, frutíferas e plantas ornamentais. A produção do adubo ou composto orgânico se dá por meio da compostagem, um processo simples que requer alguns cuidados especiais. O material que é acumulado diariamente em recipientes próprios deve ser revirado com auxílio de ferramentas adequadas, semanalmente, de forma a homogeneizá-lo. É preciso também umedecê-lo periodicamente. O material de restos de capina pode ser intercalado entre uma camada e outra de lixo da cozinha. Por meio desse método, o adubo orgânico estará pronto em aproximadamente dois a três meses.\nComo usar o lixo orgânico em casa? Ciência Hoje, v. 42, jun. 2008 (adaptado).\nSuponha que uma pessoa, desejosa de fazer seu próprio adubo orgânico, tenha seguido o procedimento descrito no texto exceto no que se refere ao umedecimento periódico do composto. Nessa situação,",
+      "opcoes": [
+        "A) O processo de compostagem iria produzir intenso mau cheiro.",
+        "B) O adubo formado seria pobre em matéria orgânica que não foi transformada em composto.",
+        "C) A falta de água no composto vai impedir que microrganismos decomponham a matéria orgânica.",
+        "D) A falta de água no composto iria elevar a temperatura da mistura, o que resultaria na perda de nutrientes essenciais.",
+        "E) Apenas microrganismos que independem de oxigênio poderiam agir sobre a matéria orgânica e transformá-la em adubo."
+      ],
+      "correta": "C",
+      "ano": 2009
+    },
+    {
+      "id": 2009038,
+      "pergunta": "Durante uma ação de fiscalização em postos de combustíveis, foi encontrado um mecanismo inusitado para enganar o consumidor. Durante o inverno, o responsável por um posto de combustível compra álcool por R$ 0,50/litro, a uma temperatura de 5 °C. Para revender o líquido aos motoristas, instalou um mecanismo na bomba de combustível para aquecê-lo, para que atinja a temperatura de 35 °C, sendo o litro de álcool revendido a R$ 1,60. Diariamente o posto compra 20 mil litros de álcool a 5 ºC e os revende.\nCom relação à situação hipotética descrita no texto e dado que o coeficiente de dilatação volumétrica do álcool é de 1×10-3 ºC-1, desprezando-se o custo da energia gasta no aquecimento do combustível, o ganho financeiro que o dono do posto teria obtido devido ao aquecimento do álcool após uma semana de vendas estaria entre",
+      "opcoes": [
+        "A) R$ 500,00 e R$ 1.000,00.",
+        "B) R$ 1.050,00 e R$ 1.250,00.",
+        "C) R$ 4.000,00 e R$ 5.000,00.",
+        "D) R$ 6.000,00 e R$ 6.900,00.",
+        "E) R$ 7.000,00 e R$ 7.950,00."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009040,
+      "pergunta": "Na manipulação em escala nanométrica, os átomos revelam características peculiares, podendo apresentar tolerância à temperatura, reatividade química, condutividade elétrica, ou mesmo exibir força de intensidade extraordinária. Essas características explicam o interesse industrial pelos nanomateriais que estão sendo muito pesquisados em diversas áreas, desde o desenvolvimento de cosméticos, tintas e tecidos, até o de terapias contra o câncer.\nLACAVA, Z. G. M; MORAIS, P. C. Nanobiotecnologia e Saúde. Disponível em: http://www.comciencia.br (adaptado).\nA utilização de nanopartículas na indústria e na medicina requer estudos mais detalhados, pois",
+      "opcoes": [
+        "A) As partículas, quanto menores, mais potentes e radiativas se tornam.",
+        "B) As partículas podem ser manipuladas, mas não caracterizadas com a atual tecnologia.",
+        "C) As propriedades biológicas das partículas somente podem ser testadas em microrganismos.",
+        "D) As partículas podem atravessar poros e canais celulares, o que poderia causar impactos desconhecidos aos seres vivos e, até mesmo, aos ecossistemas.",
+        "E) O organismo humano apresenta imunidade contra partículas tão pequenas, já que apresentam a mesma dimensão das bactérias (um bilionésimo de metro)."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009041,
+      "pergunta": "Uma vítima de acidente de carro foi encontrada carbonizada devido a uma explosão. Indícios, como certos adereços de metal usados pela vítima, sugerem que a mesma seja filha de um determinado casal. Uma equipe policial de perícia teve acesso ao material biológico carbonizado da vítima, reduzido, praticamente, a fragmentos de ossos. Sabe-se que é possível obter DNA em condições para análise genética de parte do tecido interno de ossos. Os peritos necessitam escolher, entre cromossomos autossômicos, cromossomos sexuais (X e Y) ou DNAmt (DNA mitocondrial), a melhor opção para identificação do parentesco da vítima com o referido casal. Sabe-se que, entre outros aspectos, o número de cópias de um mesmo cromossomo por célula maximiza a chance de se obter moléculas não degradadas pelo calor da explosão.\nCom base nessas informações e tendo em vista os diferentes padrões de herança de cada fonte de DNA citada, a melhor opção para a perícia seria a utilização",
+      "opcoes": [
+        "A) Do DNAmt, transmitido ao longo da linhagem materna, pois, em cada célula humana, há várias cópias dessa molécula.",
+        "B) Do cromossomo X, pois a vítima herdou duas cópias desse cromossomo, estando assim em número superior aos demais.",
+        "C) Do cromossomo autossômico, pois esse cromossomo apresenta maior quantidade de material genético quando comparado aos nucleares, como, por exemplo, o DNAmt.",
+        "D) Do cromossomo Y, pois, em condições normais, este é transmitido integralmente do pai para toda a prole e está presente em duas cópias em células de indivíduos do sexo feminino.",
+        "E) De marcadores genéticos em cromossomos autossômicos, pois estes, além de serem transmitidos pelo pai e pela mãe, estão presentes em 44 cópias por célula, e os demais, em apenas uma."
+      ],
+      "correta": "A",
+      "ano": 2009
+    },
+    {
+      "id": 2009042,
+      "pergunta": "O cultivo de camarões de água salgada vem se desenvolvendo muito nos últimos anos na região Nordeste do Brasil e, em algumas localidades, passou a ser a principal atividade econômica. Uma das grandes preocupações dos impactos negativos dessa atividade está relacionada à descarga, sem nenhum tipo de tratamento, dos efluentes dos viveiros diretamente no ambiente marinho, em estuários ou em manguezais. Esses efluentes possuem matéria orgânica particulada e dissolvida, amônia, nitrito, nitrato, fosfatos, partículas de sólidos em suspensão e outras substâncias que podem ser consideradas contaminantes potenciais.\nCASTRO, C. B.; ARAGÃO, J. S.; COSTA-LOTUFO, L. V. Monitoramento da toxicidade de efluentes de uma fazenda de cultivo de camarão marinho. Anais do IX Congresso Brasileiro de Ecotoxicologia, 2006 (adaptado).\nSuponha que tenha sido construída uma fazenda de carcinicultura próximo a um manguezal. Entre as perturbações ambientais causadas pela fazenda, espera-se que",
+      "opcoes": [
+        "A) A atividade microbiana se torne responsável pela reciclagem do fósforo orgânico excedente no ambiente marinho.",
+        "B) A relativa instabilidade das condições marinhas torne as alterações de fatores físico-químicos pouco críticas à vida no mar.",
+        "C) A amônia excedente seja convertida em nitrito, por meio do processo de nitrificação, e em nitrato, formado como produto intermediário desse processo.",
+        "D) Os efluentes promovam o crescimento excessivo de plantas aquáticas devido à alta diversidade de espécies vegetais permanentes no manguezal.",
+        "E) O impedimento da penetração da luz pelas partículas em suspensão venha a comprometer a produtividade primária do ambiente marinho, que resulta da atividade metabólica do fitoplâncton."
+      ],
+      "correta": "E",
+      "ano": 2009
+    },
+    {
+      "id": 2009044,
+      "pergunta": "O álcool hidratado utilizado como combustível veicular é obtido por meio da destilação fracionada de soluções aquosas geradas a partir da fermentação de biomassa. Durante a destilação, o teor de etanol da mistura é aumentado, até o limite de 96% em massa.\nConsidere que, em uma usina de produção de etanol, 800 kg de uma mistura etanol/água com concentração 20% em massa de etanol foram destilados, sendo obtidos 100 kg de álcool hidratado 96% em massa de etanol. A partir desses dados, é correto concluir que a destilação em questão gerou um resíduo com uma concentração de etanol em massa",
+      "opcoes": [
+        "A) De 0%.",
+        "B) De 8,0%.",
+        "C) Entre 8,4% e 8,6%.",
+        "D) Entre 9,0% e 9,2%.",
+        "E) Entre 13% e 14%."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2010046,
+      "pergunta": "A vacina, o soro e os antibióticos submetem os organismos a processos biológicos diferentes. Pessoas que viajam para regiões em que ocorrem altas incidências de febre amarela, de picadas de cobras peçonhentas e de leptospirose e querem evitar ou tratar problemas de saúde relacionados a essas ocorrências devem seguir determinadas orientações.\nAo procurar um posto de saúde, um viajante deveria ser orientado por um médico a tomar preventivamente ou como medida de tratamento",
+      "opcoes": [
+        "A) Antibiótico contra o vírus da febre amarela, soro antiofídico caso seja picado por uma cobra e vacina contra a leptospirose.",
+        "B) Vacina contra o vírus da febre amarela, soro antiofídico caso seja picado por uma cobra e antibiótico caso entre em contato com a Leptospira sp.",
+        "C) Soro contra o vírus da febre amarela, antibiótico caso seja picado por uma cobra e soro contra toxinas bacterianas.",
+        "D) Antibiótico ou soro, tanto contra o vírus da febre amarela como para veneno de cobras, e vacina contra a leptospirose.",
+        "E) Soro antiofídico e antibiótico contra a Leptospira sp e vacina contra a febre amarela caso entre em contato com o vírus causador da doença."
+      ],
+      "correta": "B",
+      "ano": 2010
+    },
+    {
+      "id": 2010047,
+      "pergunta": "As ondas eletromagnéticas, como a luz visível e as ondas de rádio, viajam em linha reta em um meio homogêneo. Então, as ondas de rádio emitidas na região litorânea do Brasil não alcançariam a região amazônica do Brasil por causa da curvatura da Terra. Entretanto sabemos que é possível transmitir ondas de rádio entre essas localidades devido à ionosfera.\nCom ajuda da ionosfera, a transmissão de ondas planas entre o litoral do Brasil e a região amazônica é possível por meio da",
+      "opcoes": [
+        "A) Reflexão.",
+        "B) Refração.",
+        "C) Difração.",
+        "D) Polarização.",
+        "E) Interferência."
+      ],
+      "correta": "A",
+      "ano": 2010
+    },
+    {
+      "id": 2010049,
+      "pergunta": "A cárie dental resulta da atividade de bactérias que degradam os açúcares e os transformam em ácidos que corroem a porção mineralizada dos dentes. O flúor, juntamente com o cálcio e um açúcar chamado xilitol, agem inibindo esse processo. Quando não se escovam os dentes corretamente e neles acumulam-se restos de alimentos, as bactérias que vivem na boca aderem aos dentes, formando a placa bacteriana ou biofilme. Na placa, elas transformam o açúcar dos restos de alimentos em ácidos, que corroem o esmalte do dente formando uma cavidade, que é a cárie. Vale lembrar que a placa bacteriana se forma mesmo na ausência de ingestão de carboidratos fermentáveis, pois as bactérias possuem polissacarídeos intracelulares de reserva.\nDisponível em: http://www.diariodasaude.com.br. Acesso em: 11 ago. 2010 (adaptado).\ncárie 1. destruição de um osso por corrosão progressiva.\ncárie dentária: efeito da destruição da estrutura dentária por bactérias.\nHOUAISS, Antônio. Dicionário eletrônico. Versão 1.0. Editora\nObjetiva, 2001 (adaptado).\nA partir da leitura do texto, que discute as causas do aparecimento de cáries, e da sua relação com as informações do dicionário, conclui-se que a cárie dental resulta, principalmente, de",
+      "opcoes": [
+        "A) Falta de flúor e de cálcio na alimentação diária da população brasileira.",
+        "B) Consumo exagerado do xilitol, um açúcar, na dieta alimentar diária do indivíduo.",
+        "C) Redução na proliferação bacteriana quando a saliva é desbalanceada pela má alimentação.",
+        "D) Uso exagerado do flúor, um agente que em alta quantidade torna-se tóxico à formação dos dentes.",
+        "E) Consumo excessivo de açúcares na alimentação e má higienizaçao bucal, que contribuem para a proliferação de bactérias."
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2010050,
+      "pergunta": "Em nosso cotidiano, utilizamos as palavras “calor” e “temperatura” de forma diferente de como elas são usadas no meio científico. Na linguagem corrente, calor é identificado como “algo quente” e temperatura mede a “quantidade de calor de um corpo”. Esses significados, no entanto, não conseguem explicar diversas situações que podem ser verificadas na prática.\nDo ponto de vista científico, que situação prática mostra a limitação dos conceitos corriqueiros de calor e temperatura?",
+      "opcoes": [
+        "A) A temperatura da água pode ficar constante durante o tempo em que estiver fervendo.",
+        "B) Uma mãe coloca a mão na água da banheira do bebê para verificar a temperatura da água.",
+        "C) A chama de um fogão pode ser usada para aumentar a temperatura da água em uma panela.",
+        "D) A água quente que está em uma caneca é passada para outra caneca a fim de diminuir sua temperatura.",
+        "E) Um forno pode fornecer calor para uma vasilha de água que está em seu interior com menor temperatura do que a dele."
+      ],
+      "correta": "A",
+      "ano": 2010
+    },
+    {
+      "id": 2010051,
+      "pergunta": "O texto “O vôo das Folhas” traz uma visão dos índios\nTicunas para um fenômeno usualmente observado na\nnatureza:\nO vôo das Folhas\nCom o vento\nas folhas se movimentam.\nE quando caem no chão\nficam paradas em silêncio.\nAssim se forma o ngaura. O ngaura cobre o chão da\nfloresta, enriquece a terra e alimenta as árvores.]\nAs folhas velhas morrem para ajudar o crescimento das\nfolhas novas.]\nDentro do ngaura vivem aranhas, formigas, escorpiões,\ncentopeias, minhocas, cogumelos e vários tipos de outros\nseres muito pequenos.]\nAs folhas também caem nos lagos, nos igarapés e igapós.\nA natureza segundo os Ticunas/Livro das Árvores.\nOrganização Geral dos Professores Bilíngues Ticunas, 2000\nNa visão dos índios Ticunas, a descrição sobre o ngaura permite classificá-lo como um produto diretamente relacionado ao ciclo",
+      "opcoes": [
+        "A) Da água.",
+        "B) Do oxigênio.",
+        "C) Do fósforo.",
+        "D) Do carbono.",
+        "E) Do nitrogênio."
+      ],
+      "correta": "D",
+      "ano": 2010
+    },
+    {
+      "id": 2010052,
+      "pergunta": "Com o objetivo de se testar a eficiência de fornos de micro-ondas, planejou-se o aquecimento em 10°C de amostras de diferentes substâncias, cada uma com determinada massa, em cinco fornos de marcas distintas. Nesse teste, cada forno operou à potência máxima.\nO forno mais eficiente foi aquele que",
+      "opcoes": [
+        "A) Forneceu a maior quantidade de energia às amostras.",
+        "B) Cedeu energia à amostra de maior massa em mais tempo.",
+        "C) Forneceu a maior quantidade de energia em menos tempo.",
+        "D) Cedeu energia à amostra de menor calor específico mais lentamente.",
+        "E) Forneceu a menor quantidade de energia às amostras em menos tempo."
+      ],
+      "correta": "C",
+      "ano": 2010
+    },
+    {
+      "id": 2010053,
+      "pergunta": "O fósforo, geralmente representado pelo íon de fosfato (PO4−3), é um ingrediente insubstituível da vida, já que é parte constituinte das membranas celulares e das moléculas do DNA e do trifosfato de adenosina (ATP), principal forma de armazenamento de energia das células. O fósforo utilizado nos fertilizantes agrícolas é extraído de minas, cujas reservas estão cada vez mais escassas. Certas práticas agrícolas aceleram a erosão do solo, provocando o transporte de fósforo para sistemas aquáticos, que fica imobilizado nas rochas. Ainda, a colheita das lavouras e o transporte dos restos alimentares para os lixões diminuem a disponibilidade dos íons no solo. Tais fatores têm ameaçado a sustentabilidade desse íon.\nUma medida que amenizaria esse problema seria:",
+      "opcoes": [
+        "A) Incentivar a reciclagem de resíduos biológicos, utilizando dejetos animais e restos de culturas para produção de adubo.",
+        "B) Repor o estoque retirado das minas com um íon sintético de fósforo para garantir o abastecimento da indústria de fertilizantes.",
+        "C) Aumentar a importação de íons fosfato dos países ricos para suprir as exigências das indústrias nacionais de fertilizantes.",
+        "D) Substituir o fósforo dos fertilizantes por outro elemento com a mesma função para suprir as necessidades do uso de seus íons.",
+        "E) Proibir, por meio de lei federal, o uso de fertilizantes com fósforo pelos agricultores, para diminuir sua extração das reservas naturais."
+      ],
+      "correta": "A",
+      "ano": 2010
+    },
+    {
+      "id": 2010055,
+      "pergunta": "Em visita a uma usina sucroalcooleira, um grupo de alunos pôde observar a série de processos de beneficiamento da cana-de-açúcar, entre os quais se destacam:\n1. A cana chega cortada da lavoura por meio de caminhões e é despejada em mesas alimentadoras que a conduzem para as moendas. Antes de ser esmagada\npara a retirada do caldo açucarado, toda a cana é transportada por esteiras e passada por um eletroímã para a retirada de materiais metálicos.\n2. Após se esmagar a cana, o bagaço segue para as caldeiras, que geram vapor e energia para toda a usina.\n3. O caldo primário, resultante do esmagamento, é passado por filtros e sofre tratamento para transformar-se em açúcar refinado e etanol.\nCom base nos destaques da observação dos alunos, quais operações físicas de separação de materiais foram realizadas nas etapas de beneficiamento da cana-de-açúcar?",
+      "opcoes": [
+        "A) Separação mecânica, extração, decantação.",
+        "B) Separação magnética, combustão, filtração.",
+        "C) Separação magnética, extração, filtração.",
+        "D) Imantação, combustão, peneiração.",
+        "E) Imantação, destilação, filtração."
+      ],
+      "correta": "C",
+      "ano": 2010
+    },
+    {
+      "id": 2010057,
+      "pergunta": "O despejo de dejetos de esgotos domésticos e industriais vem causando sérios problemas aos rios brasileiros. Esses poluentes são ricos em substâncias que contribuem para a eutrofização de ecossistemas, que é um enriquecimento da água por nutrientes, o que provoca um grande crescimento bacteriano e, por fim, pode promover escassez de oxigênio.\nUma maneira de evitar a diminuição da concentração de oxigênio no ambiente é:",
+      "opcoes": [
+        "A) Aquecer as águas dos rios para aumentar a velocidade de decomposição dos dejetos.",
+        "B) Retirar do esgoto os materiais ricos em nutrientes para diminuir a sua concentração nos rios.",
+        "C) Adicionar bactérias anaeróbicas às águas dos rios para que elas sobrevivam mesmo sem oxigênio.",
+        "D) Substituir produtos não degradáveis por biodegradáveis para que as bactérias possam utilizar os nutrientes.",
+        "E) Aumentar a solubilidade dos dejetos no esgoto para que os nutrientes fiquem mais acessíveis às bactérias."
+      ],
+      "correta": "B",
+      "ano": 2010
+    },
+    {
+      "id": 2010058,
+      "pergunta": "Sob pressão normal (ao nível do mar), a água entra em ebulição à temperatura de 100 °C. Tendo por base essa afirmação, um garoto residente em uma cidade litorânea fez a seguinte experiência:\n- Colocou uma caneca metálica contendo água no fogareiro do fogão de sua casa.\n- Quando a água começou a ferver, encostou, cuidadosamente, a extremidade mais estreita de uma seringa de injeção, desprovida de agulha, na superfície do líquido e, erguendo o êmbolo da seringa, aspirou certa quantidade de água para seu interior, tampando-a em seguida.\n- Verificando após alguns instantes que a água da seringa havia parado de ferver, ele ergueu o êmbolo da seringa, constatando, intrigado, que a água voltou a ferver após um pequeno deslocamento do êmbolo.\nConsiderando o procedimento anterior, a água volta a ferver porque esse deslocamento",
+      "opcoes": [
+        "A) Permite a entrada de calor do ambiente externo para o interior da seringa.",
+        "B) Provoca, por atrito, um aquecimento da água contida na seringa.",
+        "C) Produz um aumento de volume que aumenta o ponto de ebulição da água.",
+        "D) Proporciona uma queda de pressão no interior da seringa que diminui o ponto de ebulição da água.",
+        "E) Possibilita uma diminuição da densidade da água que facilita sua ebulição."
+      ],
+      "correta": "D",
+      "ano": 2010
+    },
+    {
+      "id": 2010059,
+      "pergunta": "As cidades industrializadas produzem grandes proporções de gases como o CO2. o principal gás causador de efeito estufa. Isso ocorre por causa da quantidade de combustíveis fósseis queimados, principalmente no transporte, mas também em caldeiras industriais. Além disso, nessas cidades concentram-se as maiores áreas com solos asfaltados e concretados, o que aumenta a retenção de calor, formando o que se conhece por “ilhas de calor”. Tal fenômeno ocorre porque esses materiais absorvem o calor e o devolvem para o ar sob a forma de radiação térmica.\nEm áreas urbanas, devido à atuação conjunta do efeito estufa e das “ilhas de calor”, espera-se que o consumo de energia elétrica",
+      "opcoes": [
+        "A) Diminua devido a utilização de caldeiras por indústrias metalúrgicas.",
+        "B) Aumente devido ao bloqueio da luz do sol pelos gases do efeito estufa.",
+        "C) Diminua devido à não necessidade de aquecer a água utilizada em indústrias.",
+        "D) Aumente devido à necessidade de maior refrigeração de indústrias e residências.",
+        "E) Diminua devido à grande quantidade de radiação térmica reutilizada."
+      ],
+      "correta": "D",
+      "ano": 2010
+    },
+    {
+      "id": 2010060,
+      "pergunta": "A lavoura arrozeira na planície costeira da região sul do Brasil comumente sofre perdas elevadas devido a salinização da água de irrigação, que ocasiona prejuízos diretos, como a redução de produção da lavoura. Solos com processo de salinização avançado não são indicados, por exemplo, para o cultivo de arroz. As plantas retiram a água do solo quando as forças de embebição dos tecidos das raízes são superiores às forças com que a água é retida no solo.\nWINKEL, H.L.; TSCHIEDEL, M. Cultura do arroz: salinização de solos em cultivo do arroz. Disponível em: http://agropage.tripod.com/saliniza.hml. Acesso em: 25 jun. 2010 (adaptado).\nA presença de sais na solução do solo faz com que seja dificultada a absorção de água pelas plantas, o que provoca o fenômeno conhecido por seca fisiológica, caracterizado pelo(a)",
+      "opcoes": [
+        "A) Aumento da salinidade, em que a água do solo atinge uma concentração de sais maior que a das células das raízes das plantas, impedindo, assim, que a água seja absorvida.",
+        "B) Aumento da salinidade, em que o solo atinge um nível muito baixo de água, e as plantas não tem força de sucção para absorver a água.",
+        "C) Diminuição da salinidade, que atinge um nível em que as plantas não têm força de sucção, fazendo com que a água não seja absorvida.",
+        "D) Aumento da salinidade, que atinge um nível em que as plantas têm muita sudação, não tendo força de sucção para superá-la.",
+        "E) Diminuição da salinidade, que atinge um nível em que as plantas ficam túrgidas e não têm força de sudação para superá-la."
+      ],
+      "correta": "A",
+      "ano": 2010
+    },
+    {
+      "id": 2010061,
+      "pergunta": "No ano de 2000, um vazamento em um duto de óleo na baía de Guanabara (RJ) causou um dos maiores acidentes ambientais do Brasil. Além de afetar a fauna e a flora, o acidente abalou o equilíbrio da cadeia alimentar de toda a baía. O petróleo forma uma película na superfície da água, o que prejudica as trocas gasosas da atmosfera com a água e desfavorece a realização de fotossíntese pelas algas, que estão na base da cadeia alimentar hídrica. Além disso, o derramamento de óleo contribuiu para o envenenamento das árvores e, consequentemente, para a intoxicação da fauna e flora aquáticas, bem como conduziu à morte diversas espécies de animais, entre outras formas de vida, afetando também a atividade pesqueira.\nLAUBIER, L. Diversidade da Maré Negra. In: Scientific American Brasil. 4(39), ago. 2005 (adaptado).\nA situação exposta no texto e suas implicações",
+      "opcoes": [
+        "A) Indicam a independência da espécie humana com relação ao ambiente marinho.",
+        "B) Alertam para a necessidade do controle da poluição ambiental para a redução do efeito estufa.",
+        "C) Ilustram a interdependência das diversas formas de vida (animal, vegetal e outras) e o seu habitat.",
+        "D) Indicam a alta resistência do meio ambiente à ação do homem, além de evidenciar a sua sustentabilidade mesmo em condições extremas de poluição.",
+        "E) Evidenciam a grande capacidade animal de se adaptar às mudanças ambientais, em contraste com a baixa capacidade das espécies vegetais, que estão na base da cadeia alimentar hídrica."
+      ],
+      "correta": "C",
+      "ano": 2010
+    },
+    {
+      "id": 2010064,
+      "pergunta": "Alguns anfíbios e répteis são adaptados à vida subterrânea. Nessa situação, apresentam algumas características corporais como, por exemplo, ausência de patas, corpo anelado que facilita o deslocamento no subsolo e, em alguns casos, ausência de olhos.\nSuponha que um biólogo tentasse explicar a origem das adaptações mencionadas no texto utilizando conceitos da teoria evolutiva de Lamark. Ao adotar esse ponto de vista, ele diria que",
+      "opcoes": [
+        "A) As características citadas no texto foram originadas pela seleção natural.",
+        "B) A ausência de olhos teria sido causada pela falta de uso dos mesmos, segundo a lei do uso e desuso.",
+        "C) O corpo anelado é uma característica fortemente adaptativa, mas transmitida apenas à primeira geração de descendentes.",
+        "D) As patas teriam sido perdidas pela falta de uso e, em seguida, essa característica foi incorporada ao patrimônio genético e então transmitidas aos descendentes.",
+        "E) As características citadas no texto foram adquiridas por meio de mutações e depois, ao longo do tempo, foram selecionadas por serem mais adaptadas ao ambiente em que os organismos se encontram."
+      ],
+      "correta": "B",
+      "ano": 2010
+    },
+    {
+      "id": 2010065,
+      "pergunta": "As misturas efervescentes, em pó ou comprimidos, são comuns para a administração de vitamina C ou de medicamentos para azia. Essa forma farmacêutica sólida foi desenvolvida para facilitar o transporte, aumentar a estabilidade de substâncias e, quando em solução, acelerar a absorção do fármaco pelo organismo.\nAs matérias primas que atuam na efervescência são, em geral, o ácido tartárico ou ácido cítrico que reagem como um sal de caráter básico, como o bicarbonato de sódio (NaHCO3), quando em contato com a água. A partir do contato da mistura efervescente com a água, ocorre uma série de reações químicas simultâneas: liberação de íons, formação de ácido e liberação de gás carbônico – gerando a efervescência.\nAs equações a seguir representam as etapas da reação da mistura efervescente na água, em que foram omitidos os estados de agregação dos reagentes, e H3A representa o ácido cítrico.\nI – NaHCO3 → NA+ + HCO3\nII – H2CO3 ↔H2O + CO2\nIII – HCO3 + H+ ↔ H2CO3\nIV – H3A ↔ 3H+ + A−\nA ionização, a dissociação iônica, a formação do ácido e a liberação do gás ocorrem, respectivamente, nas seguintes etapas:",
+      "opcoes": [
+        "A) IV, I, II e III.",
+        "B) I, IV, III e II.",
+        "C) IV, III, I e II.",
+        "D) I, IV, II e III.",
+        "E) IV, I, III e II."
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2010066,
+      "pergunta": "Um ambiente capaz de asfixiar todos os animais conhecidos do planeta foi colonizado por pelo menos três espécies diferentes de invertebrados marinhos. Descobertos a mais de 3.000 m de profundidade no Mediterrâneo, eles são os primeiros membros do reino animal a prosperar mesmo diante da ausência total de oxigênio. Até agora, achava-se que só bactérias pudessem ter esse estilo de vida. Não admira que os bichos pertençam a um grupo pouco conhecido, o dos loriciferos, que mal chegam a 1,0 mm. Apesar do tamanho, possuem cabeça, boca, sistema digestivo e carapaça. A adaptação dos bichos à vida no sufoco é tão profunda que suas células dispensaram as chamadas mitocôndrias.\nLOPES, R. J. Italianos descobrem animal que vive em água sem oxigênio. Disponível em: http://www1.folha.uol.com.br. Acesso em: 10 abr. 2010 (adaptado).\nQue substâncias poderiam ter a mesma função do O 2 na respiração celular realizada pelos loricíferos?",
+      "opcoes": [
+        "A) S e CH4",
+        "B) S e NO3-",
+        "C) H2 e NO3-",
+        "D) CO2 e CH4",
+        "E) H2 e CO2"
+      ],
+      "correta": "B",
+      "ano": 2010
+    },
+    {
+      "id": 2010067,
+      "pergunta": "O abastecimento de nossas necessidades energéticas futuras dependerá certamente do desenvolvimento de tecnologias para aproveitar a energia solar com maior eficiência. A energia solar é a maior fonte de energia mundial. Num dia ensolarado, por exemplo, aproximadamente 1 kJ de energia solar atinge cada metro quadrado de superfície terrestre por segundo. No entanto, o aproveitamento dessa energia é difícil porque ela é diluída (distribuída por uma área muito extensa) e oscila com o horário e as condições climáticas. O uso efetivo da energia solar depende de formas de estocar a energia coletada para o uso posterior.\nBROWN, T. Química e Ciência Central. São Paulo: Pearson Prentice Hall, 2005.\nAtualmente, uma das formas de se utilizar a energia solar tem sido armazená-la por meio de processos químicos endotérmicos que mais tarde podem ser revertidos para liberar calor. Considerando a reação: CH4(g)+ H2O(v) + calor ↔CO(g) + 3H2(g) e analisando-a como potencial mecanismo para aproveitamento posterior da energia solar, conclui-se que se trata de uma estratégia",
+      "opcoes": [
+        "A) Insatisfatória, pois a reação apresentada não permite que a energia presente no meio externo seja absorvida pelo sistema para ser utilizada posteriormente.",
+        "B) Insatisfatória, uma vez que há formação de gases poluentes e com potencial poder explosivo, tornando-a uma reação perigosa e de difícil controle.",
+        "C) Insatisfatória, uma vez que a a formação do gás CO que não possui conteúdo energético passível de ser aproveitado posteriormente e é considerado um gás poluente.",
+        "D) Satisfatória, uma vez que a reação direta ocorre com absorção de calor e promove a formação das substâncias combustíveis que poderão ser utilizadas posteriormente para a obtenção de energia e realização de trabalho útil.",
+        "E) Satisfatória, uma vez que a reação direta ocorre com liberação de calor havendo ainda a formação das substâncias combustíveis que poderão ser utilizadas posteriormente para a obtenção de energia a realização de trabalho útil."
+      ],
+      "correta": "D",
+      "ano": 2010
+    },
+    {
+      "id": 2010071,
+      "pergunta": "O uso prolongado de lentes de contato, sobretudo durante a noite, aliado a condições precárias de higiene representam fatores de risco para o aparecimento de uma infecção denominada ceratite microbiana, que causa ulceração inflamatória na córnea. Para interromper o processo da doença, é necessário tratamento antibiótico. De modo geral, os fatores de risco provocam a diminuição da oxigenação corneana e determinam mudanças no seu metabolismo, de um estado aeróbico para anaeróbico. Como decorrência, observa-se a diminuição no número e na velocidade de mitoses do epitélio, o que predispõe ao aparecimento de defeitos epiteliais e à invasão bacteriana.\nCRESTA, F. Lente de contato e infecção ocular. Revista Sinopse de Oftalmologia. São Paulo: Moreira Jr., v.04, n.04, 2002 (adaptado).\nA instalação das bactérias e o avanço do processo infeccioso na córnea estão relacionados a algumas características gerais desses micro-organismos, tais como:",
+      "opcoes": [
+        "A) A grande capacidade de adaptação, considerando as constantes mudanças no ambiente em que se reproduzem e o processo aeróbico como a melhor opção desses micro-organismos para a obtenção de energia.",
+        "B) A grande capacidade de sofrer mutações, aumentando a probabilidade do aparecimento de formas resistentes e o processo anaeróbico da fermentação como a principal via de obtenção de energia.",
+        "C) A diversidade morfológica entre as bactérias, aumentando a variedade de tipos de agentes infecciosos e a nutrição heterotrófica, como forma de esses micro-organismos obterem matéria-prima e energia.",
+        "D) O alto poder de reprodução, aumentando a variabilidade genética dos milhares de indivíduos e a nutrição heterotrófica, como única forma de obtenção de matéria-prima e energia desses micro-organismos.",
+        "E) O alto poder de reprodução, originando milhares de descendentes geneticamente idênticos entre si e a diversidade metabólica, considerando processos aeróbicos e anaeróbicos para a obtenção de energia."
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2010072,
+      "pergunta": "Todos os organismos necessitam de água e grande parte deles vive em rios, lagos e oceanos. Os processos biológicos, como respiração e fotossíntese, exercem profunda influência na química das águas naturais em todo o planeta. O oxigênio é ator dominante na química e na bioquímica da hidrosfera. Devido a sua baixa solubilidade em água (9,0 mg/l a 20 °C) a disponibilidade de oxigênio nos ecossistemas aquáticos estabelece o limite entre a vida aeróbica e anaeróbica. Nesse contexto, um parâmetro chamado Demanda Bioquímica de Oxigênio (DBO) foi definido para medir a quantidade de matéria orgânica presente em um sistema hídrico. A DBO corresponde à massa de O2 em miligramas necessárias para realizar a oxidação total do carbono orgânico em um litro de água.\nBAIRD, C. Química Ambiental. Ed. Bookmam, 2005 (adaptado).\nDados: Massas molares em g/mol: C = 12; H = 1; O = 16.\nSuponha que 10 mg de açúcar (fórmula mínima CH2O e massa molar a 30 g/mol) são dissolvidos em um litro de água; em quanto a DBO será aumentada?",
+      "opcoes": [
+        "A) 0,4 mg de O2/litro",
+        "B) 1,7 mg de O2/litro",
+        "C) 2,7 mg de O2/litro",
+        "D) 9,4 mg de O2/litro",
+        "E) 10,7 mg de O2/litro"
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2010074,
+      "pergunta": "A eletrólise é muito empregada na indústria com o objetivo de reaproveitar parte dos metais sucateados. O cobre, por exemplo, é um dos metais com maior rendimento no processo de eletrólise, com uma recuperação de aproximadamente 99,9%. Por ser um metal de alto valor comercial e de múltiplas aplicações, sua recuperação torna-se viável economicamente.\nSuponha que, em um processo de recuperação de cobre puro, tenha-se eletrolisado uma solução de sulfato de cobre (II) (CuSO4) durante 3h, empregando-se uma corrente elétrica de intensidade igual a 10A. A massa de cobre puro recuperada é de aproximadamente\nDados: Constante de Faraday F = 96500C/mol; Massa molar em g/mol: Cu = 63,5",
+      "opcoes": [
+        "A) 0,02 g",
+        "B) 0,04 g",
+        "C) 2,40 g",
+        "D) 35,5 g",
+        "E) 71,0 g"
+      ],
+      "correta": "D",
+      "ano": 2010
+    },
+    {
+      "id": 2010076,
+      "pergunta": "Investigadores das Universidades de Oxford e da Califórnia desenvolveram uma variedade de Aedes aegypti geneticamente modificada que é candidata para uso na busca de redução na transmissão do vírus da dengue. Nessa nova variedade de mosquito, as fêmeas não conseguem voar devido à interrupção do desenvolvimento do músculo das asas. A modificação genética introduzida é um gene dominante condicional, isso é, o gene tem\nexpressão dominante (basta apenas uma cópia do alelo) e este só atua nas fêmeas.\nFU, G. et al. Female-specific flightless phenotype for mosquito control.\nPNAS 107 (10): 4550-4554, 2010.\nPrevê-se, porém, que a utilização dessa variedade de Aedes aegypti demore ainda anos para ser implementada, pois há demanda de muitos estudos com relação ao impacto ambiental. A liberação de machos de Aedes aegypti dessa variedade geneticamente modificada reduziria o número de casos de dengue em uma determinada região porque",
+      "opcoes": [
+        "A) Diminuiria o sucesso reprodutivo desses machos transgênicos.",
+        "B) Restringiria a área geográfica de voo dessa espécie de mosquito.",
+        "C) Dificultaria a contaminação e reprodução do vetor natural da doença.",
+        "D) Tornaria o mosquito menos resistente ao agente etiológico da doença.",
+        "E) Dificultaria a obtenção de alimentos pelos machos geneticamente modificados."
+      ],
+      "correta": "C",
+      "ano": 2010
+    },
+    {
+      "id": 2010078,
+      "pergunta": "Duas irmãs que dividem o mesmo quarto de estudos combinaram de comprar duas caixas com tampas para guardarem seus pertences dentro de suas caixas, evitando, assim, a bagunça sobre a mesa de estudos. Uma delas comprou uma metálica, e a outra, uma caixa de madeira de área e espessura lateral diferentes, para facilitar a identificação. Um dia as meninas foram estudar para a prova de Física e, ao se acomodarem na mesa de estudos, guardarem seus celulares ligados dentro de suas caixas. Ao longo desse dia, uma delas recebeu ligações telefônicas, enquanto os amigos da outra tentavam ligar e recebiam a mensagem de que o celular estava fora da área de cobertura ou desligado.\nPara explicar essa situação, um físico deveria afirmar que o material da caixa, cujo telefone celular não recebeu as ligações é de",
+      "opcoes": [
+        "A) Madeira, e o telefone não funcionava porque a madeira não é um bom condutor de eletricidade.",
+        "B) Metal, e o telefone não funcionava devido à blindagem eletrostática que o metal proporcionava.",
+        "C) Metal, e o telefone não funcionava porque o metal refletia todo tipo de radiação que nele incidia.",
+        "D) Metal, e o telefone não funcionava porque a área lateral da caixa de metal era maior.",
+        "E) Madeira, e o telefone não funcionava porque a espessura desta caixa era maior que a espessura da caixa de metal."
+      ],
+      "correta": "B",
+      "ano": 2010
+    },
+    {
+      "id": 2010079,
+      "pergunta": "As mobilizações para promover um planeta melhor para as futuras gerações são cada vez frequentes. A maior parte dos meios de transporte de massa é atualmente movida pela queima de um combustível fóssil. A título de exemplificação do ônus causado por essa prática, basta saber que um carro produz, em média, cerca de 200g de dióxido de carbono por km percorrido.\nRevista Aquecimento Global. Ano 2, no 8. Publicação do Instituto Brasileiro de Cultura Ltda.\nUm dos principais constituintes da gasolina é o octano (C8H18). Por meio da combustão do octano é possível a liberação de energia, permitindo que o carro entre em movimento. A equação que representa a reação química desse processo demonstra que",
+      "opcoes": [
+        "A) No processo há liberação de oxigênio, sob a forma de O2",
+        "B) O coeficiente estequiométrico para a água é de 8 para 1 do octano.",
+        "C) No processo há consumo de água, para que haja liberação de energia.",
+        "D) O coeficiente estequiométrico para o oxigênio é de 12,5 para 1 do octano.",
+        "E) O coeficiente estequiométrico para o gás carbônico é de 9 para 1 do octano"
+      ],
+      "correta": "D",
+      "ano": 2010
+    },
+    {
+      "id": 2010081,
+      "pergunta": "Durante uma obra em um clube, um grupo de trabalhadores teve de remover uma escultura de ferro maciço colocada no fundo de uma piscina vazia. Cinco trabalhadores amarraram cordas à escultura e tentaram puxá-la para cima, sem sucesso.\nSe a piscina for preenchida com água, ficará mais fácil para os trabalhadores removerem a escultura, pois a",
+      "opcoes": [
+        "A) Escultura flutuará, desta forma, os homens não precisarão fazer força para remover a escultura do fundo.",
+        "B) Escultura ficará como peso menor. Desta forma, a intensidade da força necessária para elevar a escultura será menor.",
+        "C) Água exercerá uma força na escultura proporcional a sua massa, e para cima. Esta força se somará à força que os trabalhadores fazem para anular a ação da força peso da escultura.",
+        "D) Água exercerá uma força na escultura para baixo, e esta passará a receber uma força ascendente do piso da piscina. Esta força ajudará a anular a ação da força peso na escultura.",
+        "E) Água exercerá uma força na escultura proporcional ao seu volume, e para cima. Esta força se somará à força que os trabalhadores fazem, podendo resultar em uma força ascendente maior que o peso da escultura."
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2010085,
+      "pergunta": "Decisão de asfaltamento da rodovia MG-010, acompanha da introdução de espécies exóticas, e a prática de incêndios criminosos, ameaçam o sofisticado ecossistema do campo rupestre da reserva da Serra do Espinhaço. As plantas nativas desta região, altamente adaptadas a uma alta concentração de alumínio, que inibe o crescimento das raízes e dificultam a absorção de nutrientes e água, estão sendo substituídas por espécies invasoras que não teriam naturalmente adaptação para este ambiente, no entanto elas estão dominando as margens da rodovia, equivocadamente chamada de “estrada ecológica”. Possivelmente a entrada de espécies de plantas exóticas neste ambiente foi provocada pelo uso, neste empreendimento, de um tipo de asfalto (cimento-solo), que possui uma mistura rica em cálcio, que causou modificações químicas aos solos adjacentes à rodovia MG-010.\nScientific American. Brasil. Ano 7, nº 79. 2008 (adaptado).\nEssa afirmação baseia-se no uso de cimento-solo, mistura rica em cálcio que",
+      "opcoes": [
+        "A) Inibe a toxicidade do alumínio, elevando o pH dessas áreas.",
+        "B) Inibe a toxicidade do alumínio, reduzindo o pH dessas áreas.",
+        "C) Aumenta a toxicidade do alumínio, elevando o pH dessas áreas.",
+        "D) Aumenta a toxicidade do alumínio, reduzindo o pH dessas áreas.",
+        "E) Neutraliza a toxicidade do alumínio, reduzindo o pH dessas áreas."
+      ],
+      "correta": "A",
+      "ano": 2010
+    },
+    {
+      "id": 2010087,
+      "pergunta": "De 15% a 20% da área de um canavial precisa ser renovada anualmente. Entre o período de corte e o de plantação de novas canas, os produtores estão optando por plantar leguminosas, pois elas fixam nitrogênio no solo, um adubo natural para a cana. Essa opção de rotação é agronomicamente favorável, de forma que municípios canavieiros são hoje grandes produtores de soja, amendoim e feijão.\nAs encruzilhadas da fome. Planeta. São Paulo, ano 36, no 430, jul. 2008 (adaptado).\nA rotação de culturas citada no texto pode beneficiar economicamente os produtores de cana porque",
+      "opcoes": [
+        "A) A decomposição da cobertura morta dessas culturas resulta em economia na aquisição de adubos industrializados.",
+        "B) O plantio de cana-de-açúcar propicia um solo mais adequado para o cultivo posterior da soja, do amendoim e do feijão.",
+        "C) As leguminosas absorvem do solo elementos químicos diferentes dos absorvidos pela cana, restabelecendo o equilíbrio do solo.",
+        "D) A queima dos restos de vegetais do cultivo da cana-de-açúcar transforma-se em cinzas, sendo reincorporadas ao solo, o que gera economia na aquisição de adubo.",
+        "E) A soja, o amendoim e o feijão, além de possibilitarem a incorporação ao solo de determinadas moléculas disponíveis na atmosfera, são grãos comercializados no mercado produtivo."
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2010088,
+      "pergunta": "Diversos comportamentos e funções fisiológicas do nosso corpo são periódicos, sendo assim, são classificados como ritmo biológico. Quando o ritmo biológico responde a um período aproximado de 24 horas, ele é denominado ritmo circadiano. Esse ritmo diário é mantido pelas pistas ambientais de claro-escuro e determina comportamentos como o ciclo do sono-vigília e o da alimentação. Uma pessoa, em condições normais, acorda às 8 h e vai dormir às 21 h, mantendo seu ciclo de sono dentro do ritmo dia e noite. Imagine que essa mesma pessoa tenha sido mantida numa sala totalmente escura por mais de quinze dias. Ao sair de lá, ela dormia às 18 h e acordava às 3 h da manhã. Além disso, dormia mais vezes durante o dia, por curtos períodos de tempo, e havia perdido a noção da contagem dos dias, pois, quando saiu, achou que havia passado muito mais tempo no escuro.\nBrandão, M. L. Psicofisiologia. São Paulo: Atheneu, 2000 (adaptado).\nEm função das características observadas, conclui-se que a pessoa",
+      "opcoes": [
+        "A) Apresentou aumento do seu período de sono contínuo e passou a dormir durante o dia, pois seu ritmo biológico foi alterado apenas no período noturno.",
+        "B) Apresentou pouca alteração do seu ritmo circadiano, sendo que sua noção de tempo foi alterada somente pela sua falta de atenção à passagem do tempo.",
+        "C) Estava com seu ritmo já alterado antes de entrar na sala, o que significa que apenas progrediu para um estado mais avançado de perda do ritmo biológico no escuro.",
+        "D) Teve seu ritmo biológico alterado devido à ausência de luz e de contato com o mundo externo, no qual a noção de tempo de um dia é modulada pela presença ou ausência do sol.",
+        "E) Deveria não ter apresentado nenhuma mudança do seu período de sono porque, na realidade, continua com seu ritmo normal, independentemente do ambiente em que seja colocada."
+      ],
+      "correta": "D",
+      "ano": 2010
+    },
+    {
+      "id": 2010089,
+      "pergunta": "Deseja-se instalar uma estação de geração de energia elétrica em um município localizado no interior de um pequeno vale cercado de altas montanhas de difícil acesso. A cidade é cruzada por um rio, que é fonte de água para consumo, irrigação das lavouras de subsistência e pesca. Na região, que possui pequena extensão territorial, a incidência solar é alta o ano todo. A estação em questão irá abastecer apenas o município apresentado.\nQual forma de obtenção de energia, entre as apresentadas, é a mais indicada para ser implantada nesse município de modo a causar o menor impacto ambiental?",
+      "opcoes": [
+        "A) Termoelétrica, pois é possível utilizar a água do rio no sistema de refrigeração.",
+        "B) Eólica, pois a geografia do local é própria para a captação desse tipo de energia.",
+        "C) Nuclear, pois o modo de resfriamento de seus sistemas não afetariam a população.",
+        "D) Fotovoltaica, pois é possível aproveitar a energia solar que chega à superfície do local.",
+        "E) Hidrelétrica, pois o rio que corta o município é suficiente para abastecer a usina construída."
+      ],
+      "correta": "D",
+      "ano": 2010
+    },
+    {
+      "id": 2010090,
+      "pergunta": "O lixão que recebia 130 toneladas de lixo e contaminava a região com seu chorume (líquido derivado da decomposição de compostos orgânicos) foi recuperado, transformando-se em um aterro sanitário controlado, mudando a qualidade de vida e a paisagem e proporcionando condições dignas de trabalho para os que dele subsistiam.\nRevista Promoção da Saúde da Secretaria de Políticas da Saúde. Ano 1, nº 4, dez. 2000 (adaptado).\nQuais procedimentos técnicos tornam o aterro sanitário mais vantajoso que o lixão, em relação às problemáticas abordadas no texto?",
+      "opcoes": [
+        "A) O lixo é recolhido e incinerado pela combustão a altas temperaturas.",
+        "B) O lixo hospitalar é separado para ser enterrado e sobre ele, colocada cal virgem.",
+        "C) O lixo orgânico e inorgânico é encoberto, e o chorume canalizado para ser tratado e neutralizado.",
+        "D) O lixo orgânico é completamente separado do lixo inorgânico, evitando a formação de chorume.",
+        "E) O lixo industrial é separado e acondicionado de forma adequada, formando uma bolsa de resíduos."
+      ],
+      "correta": "C",
+      "ano": 2010
+    },
+    {
+      "id": 2011048,
+      "pergunta": "A produção de soro antiofídico é feita por meio da extração da peçonha de serpentes que, após tratamento é introduzida em um cavalo. Em seguida são feitas sangrias para avaliar a concentração de anticorpos produzidos pelo cavalo. Quando essa concentração atinge o valor desejado, é realizada a sangria final para obtenção do soro. As hemácias são devolvidas ao animal, por meio de uma técnica denominada plasmaferese, a fim de reduzir os efeitos colaterais provocados pela sangria. Disponível em: http://www.infobibos.com. Acesso em: 28 abr. 2010 (adaptado).\nA plasmaferese é importante, pois, se o animal ficar com uma baixa quantidade de hemácias, poderá apresentar",
+      "opcoes": [
+        "A) Febre alta e constante.",
+        "B) Redução de imunidade.",
+        "C) Aumento da pressão arterial.",
+        "D) Quadro de leucemia profunda.",
+        "E) Problemas no transporte de oxigênio."
+      ],
+      "correta": "E",
+      "ano": 2011
+    },
+    {
+      "id": 2011059,
+      "pergunta": "A cal (óxido de cálcio, CaO), cuja suspensão em água é muito usada como uma tinta de baixo custo, dá uma tonalidade branca aos troncos de árvores. Essa é uma prática muito comum em praças públicas e locais privados, geralmente usada para combater a proliferação de parasitas. Essa aplicação, também chamada de caiação, gera um problema: elimina microrganismos benéficos para a árvore. Disponível em: http://super.abril.com.br. Acesso em: 1 abr. 2010 (adaptado).\nA destruição do microambiente, no tronco de árvores pintadas com cal, é devida ao processo de",
+      "opcoes": [
+        "A) Difusão, pois a cal se difunde nos corpos dos seres do microambiente e os intoxica.",
+        "B) Osmose, pois a cal retira água do microambiente, tornando-o inviável ao desenvolvimento de microrganismos.",
+        "C) Oxidação, pois a luz solar que incide sobre o tronco ativa fotoquimicamente a cal, que elimina os seres vivos do microambiente.",
+        "D) Aquecimento, pois a luz do Sol incide sobre o tronco e aquece a cal, que mata os seres vivos do microambiente.",
+        "E) Vaporização, pois a cal facilita a volatilização da água para a atmosfera, eliminando os seres vivos do microambiente."
+      ],
+      "correta": "B",
+      "ano": 2011
+    },
+    {
+      "id": 2011074,
+      "pergunta": "Uma equipe de cientistas lançará uma expedição ao Titanic para criar um detalhado mapa 3D que “vai tirar, virtualmente, o Titanic do fundo do mar para o público”. A expedição ao local, a 4 quilômetros de profundidade no Oceano Atlântico, está sendo apresentada como a mais sofisticada expedição científica ao Titanic. Ela utilizará tecnologias de imagem e sonar que nunca tinham sido aplicadas ao navio, para obter o mais completo inventário de seu conteúdo. Esta complementação é necessária em razão das condições do navio, naufragado há um século.\nO Estado de São Paulo. Disponível em: http://www.estadao.com.br. Acesso em: 27 jul. 2010 (adaptado)\nNo problema apresentado para gerar imagens através de camadas de sedimentos depositados no navio, o sonar é mais adequado, pois a",
+      "opcoes": [
+        "A) Propagação da luz na água ocorre a uma velocidade maior que a do som neste meio.",
+        "B) Absorção da luz ao longo de uma camada de água é facilitada enquanto a absorção do som não.",
+        "C) Refração da luz a uma grande profundidade acontece com uma intensidade menor que a do som.",
+        "D) Atenuação da luz nos materiais analisados é distinta da atenuação de som nestes mesmos materiais.",
+        "E) Reflexão da luz nas camadas de sedimento é menos intensa do que a reflexão do som neste material."
+      ],
+      "correta": "D",
+      "ano": 2011
+    },
+    {
+      "id": 2011076,
+      "pergunta": "Diferente do que o senso comum acredita, as lagartas de borboletas não possuem voracidade generalizada. Um estudo mostrou que as borboletas de asas transparentes da família Ithomiinae, comuns na Floresta Amazônica e na Mata Atlântica, consomem, sobretudo, plantas da família Solanaceae, a mesma do tomate. Contudo, os ancestrais dessas borboletas consumiam espécies vegetais da família Apocinaceae, mas a quantidade dessas plantas parece não ter sido suficiente para garantir o suprimento alimentar dessas borboletas. Dessa forma, as solanáceas tornaram-se uma opção de alimento, pois são abundantes na Mata Atlântica e na Floresta Amazônica.\nNesse texto, a ideia do senso comum é confrontada com os conhecimentos científicos, ao se entender que as larvas das borboletas Ithomiinae encontradas atualmente na Mata Atlântica e na Floresta Amazônica, apresentam",
+      "opcoes": [
+        "A) Facilidade em digerir todas as plantas desses locais.",
+        "B) Interação com as plantas hospedeiras da família Apocinaceae.",
+        "C) Adaptação para se alimentar de todas as plantas desses locais.",
+        "D) Voracidade indiscriminada por todas as plantas existentes nesses locais.",
+        "E) Especificidade pelas plantas da família Solanaceae existentes nesses locais."
+      ],
+      "correta": "E",
+      "ano": 2011
+    },
+    {
+      "id": 2011079,
+      "pergunta": "Moradores sobreviventes da tragédia que destruiu aproximadamente 60 casas no Morro do Bumba, na Zona Norte de Niterói (RJ), ainda defendem a hipótese de o deslizamento ter sido causado por uma explosão provocada por gás metano, visto que esse local foi um lixão entre os anos 1960 e 1980.\nJornal Web. Disponível em: http://www.ojornalweb.com. Acesso em: 12 abr. 2010 (adaptado).\nO gás mencionado no texto é produzido",
+      "opcoes": [
+        "A) Como subproduto da respiração aeróbia bacteriana.",
+        "B) Pela degradação anaeróbia de matéria orgânica por bactérias.",
+        "C) Como produto da fotossíntese de organismos pluricelulares autotróficos.",
+        "D) Pela transformação química do gás carbônico em condições anaeróbias.",
+        "E) Pela conversão, por oxidação química, do gás carbônico sob condições aeróbias."
+      ],
+      "correta": "B",
+      "ano": 2011
+    },
+    {
+      "id": 2012046,
+      "pergunta": "Para diminuir o acúmulo de lixo e o desperdício de materiais de valor econômico e, assim, reduzir a exploração de recursos naturais, adotou-se, em escala internacional, a política dos três erres: Redução, Reutilização e Reciclagem.\nUm exemplo de reciclagem é a utilização de:",
+      "opcoes": [
+        "A) Garrafas de vidro retornáveis para cerveja ou refrigerante.",
+        "B) Latas de alumínio como material para fabricação de lingotes.",
+        "C) Sacos plásticos de supermercado como acondicionantes de lixo caseiro.",
+        "D) Embalagens plásticas vazias e limpas para acondicionar outros alimentos.",
+        "E) Garrafas PET recortadas em tiras para fabricação de cerdas de vassouras."
+      ],
+      "correta": "B",
+      "ano": 2012
+    },
+    {
+      "id": 2012048,
+      "pergunta": "O milho transgênico é produzido a partir da manipulação do milho original, com a transferência, para este, de um gene de interesse retirado de outro organismo de espécie diferente.\nA característica de interesse será manifestada em decorrência",
+      "opcoes": [
+        "A) Do incremento do DNA a partir da duplicação do gene transferido.",
+        "B) Da transcrição do RNA transportador a partir do gene transferido.",
+        "C) Da expressão de proteínas sintetizadas a partir do DNA não hibridizado.",
+        "D) Da síntese de carboidratos a partir da ativação do DNA do milho original.",
+        "E) Da tradução do RNA mensageiro sintetizado a partir do DNA recombinante."
+      ],
+      "correta": "E",
+      "ano": 2012
+    },
+    {
+      "id": 2012050,
+      "pergunta": "Os carrinhos de brinquedo podem ser de vários tipos. Dentre eles, há os movidos a corda, em que uma mola em seu interior é comprimida quando a criança puxa o carrinho para trás. Ao ser solto, o carrinho entra em movimento enquanto a mola volta à sua forma inicial.\nO processo de conversão de energia que ocorre no carrinho descrito também é verificado em",
+      "opcoes": [
+        "A) Um dínamo.",
+        "B) Um freio de automóvel.",
+        "C) Um motor a combustão.",
+        "D) Uma usina hidroelétrica.",
+        "E) Uma atiradeira (estilingue)."
+      ],
+      "correta": "E",
+      "ano": 2012
+    },
+    {
+      "id": 2012070,
+      "pergunta": "Em uma planície, ocorreu um acidente ambiental em decorrência do derramamento de grande quantidade de um hidrocarboneto que se apresenta na\nforma pastosa à temperatura ambiente. Um químico ambiental utilizou uma quantidade apropriada de uma solução de para-dodecil-benzenossulfonato de\nsódio, um agente tensoativo sintético, para diminuir os impactos desse acidente.\nEssa intervenção produz resultados positivos para o ambiente porque",
+      "opcoes": [
+        "A) Promove uma reação de substituição no hidrocarboneto, tornando-o menos letal ao ambiente.",
+        "B) A hidrólise do para-dodecil-benzenossulfonato de sódio produz energia térmica suficiente para vaporizar o hidrocarboneto.",
+        "C) A mistura desses reagentes provoca a combustão do hidrocarboneto, o que diminui a quantidade dessa substância na natureza.",
+        "D) A solução de para-dodecil-benzenossulfonato possibilita a solubilização do hidrocarboneto.",
+        "E) O reagente adicionado provoca uma solidificação do hidrocarboneto, o que facilita sua retirada do ambiente."
+      ],
+      "correta": "D",
+      "ano": 2012
+    },
+    {
+      "id": 2012076,
+      "pergunta": "Os tubos de PVC, material organoclorado sintético, são normalmente utilizados como encanamento na construção civil. Ao final da sua vida útil, uma das formas de descarte desses tubos pode ser a incineração. Nesse processo libera-se HCℓ(g), cloreto de hidrogênio, dentre outras substâncias. Assim, é necessário um tratamento para evitar o problema da emissão desse poluente.\nEntre as alternativas possíveis para o tratamento, é apropriado canalizar e borbulhar os gases provenientes da incineração em",
+      "opcoes": [
+        "A) Água dura.",
+        "B) Água de cal.",
+        "C) Água salobra.",
+        "D) Água destilada.",
+        "E) Água desmineralizada."
+      ],
+      "correta": "B",
+      "ano": 2012
+    },
+    {
+      "id": 2012084,
+      "pergunta": "“Uma companhia aérea negou-se a transportar material médico por este portar um certificado de esterilização por irradiação.”\nFísica na Escola, v. 8, n. 2, 2007 (adaptado).\nA decisão tomada pela companhia é equivocada, pois",
+      "opcoes": [
+        "A) O material é incapaz de acumular radiação, não se tornando radioativo por ter sido irradiado.",
+        "B) A utilização de uma embalagem é suficiente para bloquear a radiação emitida pelo material.",
+        "C) A contaminação radioativa do material não se prolifera da mesma forma que as infecções por microrganismos.",
+        "D) O material irradiado emite radiação de intensidade abaixo daquela que ofereceria risco à saúde.",
+        "E) O intervalo de tempo após a esterilização é suficiente para que o material não emita mais radiação."
+      ],
+      "correta": "A",
+      "ano": 2012
+    },
+    {
+      "id": 2013063,
+      "pergunta": "No Brasil, cerca de 80% da energia elétrica advém de hidrelétricas, cuja construção implica o represamento de rios. A formação de um reservatório para esse fim, por sua vez, pode modificar a ictiofauna local. Um exemplo é o represamento do Rio Paraná, onde se observou o desaparecimento de peixes cascudos quase que simultaneamente ao aumento do número de peixes de espécies exóticas introduzidas, como o mapará e a corvina, as três espécies com nichos ecológicos semelhantes.\nPETESSE, M. L.; PETRERE JR., M. Ciência Hoje, São Paulo, n. 293, v. 49, jun. 2012 (adaptado).\nNessa modificação da ictiofauna, o desaparecimento de cascudos é explicado pelo(a)",
+      "opcoes": [
+        "A) Redução do fluxo gênico da espécie nativa.",
+        "B) Diminuição da competição intraespecífica.",
+        "C) Aumento da competição interespecífica.",
+        "D) Isolamento geográfico dos peixes.",
+        "E) Extinção de nichos ecológicos."
+      ],
+      "correta": "C",
+      "ano": 2013
+    },
+    {
+      "id": 2013069,
+      "pergunta": "A formação frequente de grandes volumes de pirita (FeS2) em uma variedade de depósitos minerais favorece a formação de soluções ácidas ferruginosas, conhecidas como “drenagem ácida de minas”. Esse fenômeno tem sido bastante pesquisado pelos cientistas e representa uma grande preocupação entre os impactos da mineração no ambiente. Em contato com oxigênio, a 25 °C, a pirita sofre reação, de acordo com a equação química:\n4 FeS2(s) + 15 O2(g) + 2 H2O(l) → 2 Fe2(SO4)3(aq) + 2 H2SO4(aq)\nFIGUEIREDO, B. R. Minérios e ambiente. Campinas: Unicamp, 2000.\nPara corrigir os problemas ambientais causados por essa drenagem, a substância mais recomendada a ser adicionada ao meio é o",
+      "opcoes": [
+        "A) Sulfeto de sódio.",
+        "B) Cloreto de amônio.",
+        "C) Dióxido de enxofre.",
+        "D) Dióxido de carbono.",
+        "E) Carbonato de cálcio."
+      ],
+      "correta": "E",
+      "ano": 2013
+    },
+    {
+      "id": 2013071,
+      "pergunta": "Qual é o máximo volume da solução do medicamento que pode ser administrado a esse indivíduo, pela via intravenosa, de maneira que não ocorram hemorragias causadas pelo anticoagulante?",
+      "opcoes": [
+        "A) 1,0 mL",
+        "B) 1,7 mL",
+        "C) 2,7 mL",
+        "D) 4,0 mL",
+        "E) 6,7 mL"
+      ],
+      "correta": "D",
+      "ano": 2013
+    },
+    {
+      "id": 2013081,
+      "pergunta": "Entre as substâncias usadas para o tratamento de água está o sulfato de alumínio que, em meio alcalino, forma partículas em suspensão na água, às quais as impurezas presentes no meio se aderem.\nO método de separação comumente usado para retirar o sulfato de alumínio com as impurezas aderidas é a",
+      "opcoes": [
+        "A) Flotação.",
+        "B) Levigação.",
+        "C) Ventilação.",
+        "D) Peneiração.",
+        "E) Centrifugação."
+      ],
+      "correta": "A",
+      "ano": 2013
+    },
+    {
+      "id": 2013088,
+      "pergunta": "Para a identificação de um rapaz vítima de acidente, fragmentos de tecidos foram retirados e submetidos à extração de DNA nuclear, para comparação com o DNA disponível dos possíveis familiares (pai, avô materno, avó materna, filho e filha). Como o teste com o DNA nuclear não foi conclusivo, os peritos optaram por usar também DNA mitocondrial, para dirimir dúvidas.\nPara identificar o corpo, os peritos devem verificar se há homologia entre o DNA mitocondrial do rapaz e o DNA mitocondrial do(a)",
+      "opcoes": [
+        "A) Pai.",
+        "B) Filho.",
+        "C) Filha.",
+        "D) Avó materna.",
+        "E) Avô materno."
+      ],
+      "correta": "D",
+      "ano": 2013
+    },
+    {
+      "id": 2014086,
+      "pergunta": "Grande quantidade dos maus odores do nosso dia a dia está relacionada a compostos alcalinos. Assim, em vários desses casos, pode-se utilizar o vinagre, que contém entre 3,5% e 5% de ácido acético, para diminuir ou eliminar o mau cheiro. Por exemplo, lavar as mãos com vinagre e depois enxaguá-las com água elimina o odor de peixe, já que a molécula de piridina (C5H5N) é uma das substâncias responsáveis pelo odor característico de peixe podre.\nSILVA, V. A.; BENITE, A. M. C.; SOARES, M. H. F. B. Algo aqui não cheira bem… A química do mau cheiro. Química Nova na Escola, v. 33, n. 1, fev. 2011 (adaptado).\nA eficiência do uso do vinagre nesse caso se explica pela",
+      "opcoes": [
+        "A) Sobreposição de odor, propiciada pelo cheiro característico do vinagre.",
+        "B) Solubilidade da piridina, de caráter ácido, na solução ácida empregada.",
+        "C) Inibição da proliferação das bactérias presentes, devido à ação do ácido acético.",
+        "D) Degradação enzimática da molécula de piridina, acelerada pela presença de ácido acético.",
+        "E) Reação de neutralização entre o ácido acético e a piridina, que resulta em compostos sem mau odor."
+      ],
+      "correta": "E",
+      "ano": 2014
+    },
+    {
+      "id": 2014087,
+      "pergunta": "Quando adolescente, as nossas tardes, após as aulas, consistiam em tomar às mãos o violão e o dicionário de acordes de Almir Chediak e desafiar nosso amigo Hamilton a descobrir, apenas ouvindo o acorde, quais notas eram escolhidas. Sempre perdíamos a aposta, ele possui o ouvido absoluto.\nO ouvido absoluto é uma característica perceptual de poucos indivíduos capazes de identificar notas isoladas sem outras referências, isto é, sem precisar relacioná-las com outras notas de uma melodia.\nLENT, R. O cérebro do meu professor de acordeão. Disponível em: http://cienciahoje.uol.com.br. Acesso em: 15 ago. 2012 (adaptado).\nNo contexto apresentado, a propriedade física das ondas que permite essa distinção entre as notas é a",
+      "opcoes": [
+        "A) Frequência.",
+        "B) Intensidade.",
+        "C) Forma de onda.",
+        "D) Amplitude de onda.",
+        "E) Velocidade de propagação."
+      ],
+      "correta": "A",
+      "ano": 2014
+    },
+    {
+      "id": 2014088,
+      "pergunta": "Grandes fontes de emissão do gás dióxido de enxofre são as indústrias de extração de cobre e níquel, em decorrência da oxidação dos minérios sulfurados. Para evitar a liberação desses óxidos na atmosfera e a consequente formação da chuva ácida, o gás pode ser lavado, em um processo conhecido como dessulfurização, conforme mostrado na equação (1).\nCaCO3(s) + SO2(g) → CaSO3(s) + CO2(g) (1)\nPor sua vez, o sulfito de cálcio formado por ser oxidado, com o auxílio do ar atmosférico, para a obtenção do sulfato de cálcio, como mostrado na equação (2). Essa etapa é de grande interesse porque o produto da reação, popularmente conhecido como gesso, é utilizado para fins agrícolas.\n2 CaSO3(s) + O2(g) → 2CaSO4(s) (2)\nAs massas molares dos elementos carbono, oxigênio, enxofre e cálcio são iguais a 12 g/mol, 16 g/mol, 32 g/mol e 40 g/mol, respectivamente.\nBAIRD, C. Química ambiental. Porto Alegre: Bookman, 2002 (adaptado).\nConsiderando um rendimento de 90% no processo, a massa de gesso obtida, em gramas, por mol de gás retido é mais próxima de",
+      "opcoes": [
+        "A) 64.",
+        "B) 108.",
+        "C) 122.",
+        "D) 136.",
+        "E) 245."
+      ],
+      "correta": "C",
+      "ano": 2014
+    },
+    {
+      "id": 2015051,
+      "pergunta": "Um grupo de pesquisadores desenvolveu um método simples, barato e eficaz de remoção de petróleo contaminante na água, que utiliza um plástico produzido a partir do líquido da castanha-de-caju (LCC). A composição química do LCC é muito parecida com a do petróleo e suas moléculas, por suas características, interagem formando agregados com o petróleo. Para retirar os agregados da água, os pesquisadores misturam ao LCC nanopartículas magnéticas.\nKIFFER, D. Novo método para remoção de petróleo usa óleo de mamona e castanha-de-caju. Disponível em: www.faperj.br. Acesso em: 31 jul. 2012 (adaptado).\nEssa técnica considera dois processos de separação de misturas, sendo eles, respectivamente,",
+      "opcoes": [
+        "A) Flotação e decantação.",
+        "B) Decomposição e centrifugação.",
+        "C) Floculação e separação magnética.",
+        "D) Destilação fracionada e peneiração.",
+        "E) Dissolução fracionada e magnetização."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015056,
+      "pergunta": "Algumas raças de cães domésticos não conseguem copular entre si devido à grande diferença em seus tamanhos corporais. Ainda assim, tal dificuldade reprodutiva não ocasiona a formação de novas espécies (especiação).\nEssa especiação não ocorre devido ao(à)",
+      "opcoes": [
+        "A) Oscilação genética das raças.",
+        "B) Convergência adaptativa das raças.",
+        "C) Isolamento geógrafico entre as raças.",
+        "D) Seleção natural que ocorre entre as raças.",
+        "E) Manutenção do fluxo gênico entre as raças."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015057,
+      "pergunta": "O ar atmosférico pode ser utilizado para armazenar o excedente de energia gerada no sistema elétrico, diminuindo seu desperdício, por meio do seguinte processo: água e gás carbônico são inicialmente removidos do ar atmosférico e a massa de ar restante é resfriada ate -198°C. Presente na proporção de 78% dessa massa de ar, o nitrogênio gasoso é liquefeito, ocupando um volume 700 vezes menor. A energia excedente do sistema elétrico é utilizada nesse processo, sendo parcialmente recuperada quando o nitrogênio líquido, exposto à temperatura ambiente, entra em ebulição e se expande, fazendo girar turbinas que convertem energia mecânica em energia elétrica.\nMACHADO, R. Disponível em: www.correiobraziliense.com.br. Acesso em: 9 set. 2013 (adaptado).\nNo processo descrito, o excedente de energia elétrica é armazenado pela",
+      "opcoes": [
+        "A) Expansão do nitrogênio durante a ebulição.",
+        "B) Absorção de calor pelo nitrogênio durante a ebulição.",
+        "C) Realização de trabalho sobre o nitrogênio durante a liquefação.",
+        "D) Retirada de água e gás carbônico da atmosfera antes do resfriamento.",
+        "E) Liberação de calor do nitrogênio para a vizinhança durante a liquefação"
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015066,
+      "pergunta": "A cariotipagem é um método que analisa células de um indivíduo para determinar seu padrão cromossômico. Essa técnica consiste na montagem fotográfica, em sequência, dos pares de cromossomos e permite identificar um indivíduo normal (46, XX ou 46, XY) ou com alguma alteração cromossômica. A investigação do cariótipo de uma criança do sexo masculino com alterações morfológicas e comprometimento cognitivo verificou que ela apresentava fórmula cariotípica 47, XY, +18.\nA alteração cromossômica da criança pode ser classificada como",
+      "opcoes": [
+        "A) Estrutural, do tipo deleção.",
+        "B) Numérica, do tipo euploidia.",
+        "C) Numérica, do tipo poliploidia.",
+        "D) Estrutural, do tipo duplicação.",
+        "E) Numérica, do tipo aneuploidia."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015070,
+      "pergunta": "Um garoto foi à loja comprar um estilingue e encontrou dois modelos: um com borracha mais “dura” e outro com borracha mais “mole”. O garoto concluiu que o mais adequado seria o que proporcionasse maior alcance horizontal, D, para as mesmas condições de arremesso, quando submetidos à mesma força aplicada. Sabe-se que a constante elástica kd (do estilingue mais “duro”) é o dobro da constante elástica Km (do estilingue mais “mole”).\nA razão entre os alcances Dd / Dm, referentes aos estilingues com borrachas “dura” e “mole”, respectivamente, é igual a",
+      "opcoes": [
+        "A) 1 / 4.",
+        "B) 1 / 2.",
+        "C) 1.",
+        "D) 2.",
+        "E) 4."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015074,
+      "pergunta": "A palavra “biotecnologia” surgiu no século XX, quando o cientista Herbert Boyer introduziu a informação responsável pela fabricação da insulina humana em uma bactéria, para que ela passasse a produzir a substância. Disponível em: www.brasil.gov.br. Acesso em: 28 jul. 2012 (adaptado).\nAs bactérias modificadas por Herbert Boyer passaram a produzir insulina humana porque receberam",
+      "opcoes": [
+        "A) A sequência de DNA codificante de insulina humana.",
+        "B) A proteína sintetizada por células humanas.",
+        "C) Um RNA recombinante de insulina humana.",
+        "D) O RNA mensageiro de insulina humana.",
+        "E) Um cromossomo da espécie humana."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015076,
+      "pergunta": "Considere as massas molares: ZnS (97 g/mol); O2 (32 g/mol); ZnO (81 g/mol); SO2 (64 g/mol); CO (28 g/mol); CO2 (44 g/mol); e Zn (65 g/mol).\nQue valor mais próximo de massa de zinco metálico, em quilogramas, será produzido a partir de 100 kg de esfalerita?",
+      "opcoes": [
+        "A) 25",
+        "B) 33",
+        "C) 40",
+        "D) 50",
+        "E) 54"
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2016046,
+      "pergunta": "Em sua formulação, o spray de pimenta contém porcentagens variadas de oleorresina de Capsicum, cujo princípio ativo é a capsaicina, e um solvente (um álcool como etanol ou isopropanol). Em contato com os olhos, pele ou vias respiratórias, a capsaicina causa um efeito inflamatório que gera uma sensação de dor e ardor, levando à cegueira temporária. O processo é desencadeado pela liberação de neuropeptídios das terminações nervosas.\nComo funciona o gás de pimenta. Disponível em: http://pessoas.hsw.uol.com.br. Acesso em: 1 mar. 2012 (adaptado).\nQuando uma pessoa é atingida com o spray de pimenta nos olhos ou na pele, a lavagem da região atingida com água é ineficaz porque a",
+      "opcoes": [
+        "A) Reação entre etanol e água libera calor, intensificando o ardor.",
+        "B) Solubilidade do princípio ativo em água é muito baixa, dificultando a sua remoção.",
+        "C) Permeabilidade da água na pele é muito alta, não permitindo a remoção do princípio ativo.",
+        "D) Solubilização do óleo em água causa um maior espalhamento além das áreas atingidas.",
+        "E) Ardência faz evaporar rapidamente a água, não permitindo que haja contato entre o óleo e o solvente."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016051,
+      "pergunta": "Em meados de 2003, mais de 20 pessoas morreram no Brasil após terem ingerido uma suspensão de sulfato de bário utilizada como contraste em exames radiológicos. O sulfato de bário é um sólido pouquíssimo solúvel em água, que não se dissolve mesmo na presença de ácidos. As mortes ocorreram porque um laboratório farmacêutico forneceu o produto contaminado com carbonato de bário, que é solúvel em meio ácido. Um simples teste para verificar a existência de íons bário solúveis poderia ter evitado a tragédia. Esse teste consiste em tratar a amostra com solução aquosa de HCl e, após filtrar para separar os compostos insolúveis de bário, adiciona-se solução aquosa de H2SO4 sobre o filtrado e observa-se por 30 minutos\nTUBINO, M.; SIMONI, J.A. Refletindo sobre o caso celobar® Química Nova, n. 2, 2007 (adaptado).\nA presença de íons bário solúveis na amostra é indicada pela",
+      "opcoes": [
+        "A) Liberação de calor.",
+        "B) Alteração da cor para rosa.",
+        "C) Precipitação de um sólido branco.",
+        "D) Formação de gás hidrogênio.",
+        "E) Volatilização de gás cloro."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016069,
+      "pergunta": "Recentemente um estudo feito em campos de trigo mostrou que níveis elevados do dióxido de carbono na atmosfera prejudicam a absorção de nitrato pelas plantas. Consequentemente, a qualidade nutricional desses alimentos pode diminuir à medida que os níveis de dióxido de carbono na atmosfera atingirem as estimativas para as próximas décadas.\nBloom, A J et al. Nitrate assimilation is inhibited by elevated CO2 in field grown wheat. Nature Climate Change, n. 4., abr 2014, adaptado.\nNesse contexto, a qualidade nutricional do grão de trigo será modificada primeiramente pela redução de",
+      "opcoes": [
+        "A) Amido.",
+        "B) Frutose.",
+        "C) Lipídeos.",
+        "D) Celulose.",
+        "E) Proteínas."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016070,
+      "pergunta": "Pesquisadores recuperaram DNA de ossos de mamute (Mammuthus primigenius) encontrados na Sibéria, que tiveram sua idade de cerca de 28 mil anos confirmada pela técnica do carbono-14.\nFAPESP. DNA de mamute é revelado. Disponível em: http://agencia.fapesp.br. Acesso em: 13 ago. 2012 (adaptado).\nA técnica de datação apresentada no texto só é possível devido à",
+      "opcoes": [
+        "A) Proporção conhecida entre carbono-14 e carbono-12 na atmosfera ao longo dos anos.",
+        "B) Decomposição de todo o carbono-12 presente no organismo após a morte.",
+        "C) Fixação maior do carbono-14 nos tecidos de organismos após a morte.",
+        "D) Emissão de carbono-12 pelos tecidos de organismos após a morte.",
+        "E) Transformação do carbono-12 em carbono-14 ao longo dos anos."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016073,
+      "pergunta": "Os ecossistemas degradados por intensa atividade agrícola apresentam geralmente, diminuição de sua a estabilidade. Nesse contexto, o uso integrado de árvores aos sistemas agrícolas (sistemas agroflorestais) pode cumprir um papel inovador ao buscar a aceleração do processo sucessional e, ao mesmo tempo, uma produção escalonada e diversificada. Disponível em: saf.cnpgc.embrapa.br. Acesso em 21 jan. 2012 (adaptado)\nEssa é uma estratégia de conciliação entre recuperação ambiental e produção agrícola, pois",
+      "opcoes": [
+        "A) Substitui gradativamente as espécies cultiváveis por espécies arbóreas.",
+        "B) Intensifica a fertilização do solo com o uso de técnicas apropriadas e biocidas.",
+        "C) Promove maior diversidade de vida no solo como aumento da matéria orgânica.",
+        "D) Favorece a dispersão das sementes cultivadas pela fauna residente nas áreas florestais.",
+        "E) Cria condições para o estabelecimento de espécies pioneiras com a diminuição da insolação sobre o solo."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2017100,
+      "pergunta": "Pesquisadores criaram um tipo de plaqueta artificial, feita com um polímero gelatinoso coberto de anticorpos, que promete agilizar o processo de coagulação quando injetada no corpo. Se houver sangramento, esses anticorpos fazem com que a plaqueta mude sua forma e se transforme em uma espécie de rede que gruda nas lesões dos vasos sanguíneos e da pele.\nMOUTINHO, S. Coagulação acelerada. Disponível em: http://cienciahoje.uol.com.br. Acesso em: 19 fev. 2013 (adaptado).\nQual a doença cujos pacientes teriam melhora de seu estado de saúde com o uso desse material?",
+      "opcoes": [
+        "A) Filariose.",
+        "B) Hemofilia.",
+        "C) Aterosclerose.",
+        "D) Doença de Chagas.",
+        "E) Síndrome da imunodeficiência adquirida."
+      ],
+      "correta": "B",
+      "ano": 2017
+    },
+    {
+      "id": 2017102,
+      "pergunta": "Partículas microscópicas existentes na atmosfera funcionam como núcleos de condensação de vapor de água que, sob condições adequadas de temperatura e pressão, propiciam a formação das nuvens e consequentemente das chuvas. No ar atmosférico, tais partículas são formadas pela reação de ácidos (HX) com a base NH3, de forma natural ou antropogênica, dando origem a sais de amônio (NH4X), de acordo com a\nequação química genérica:\nHX (g) + NH3 (g) –> NH4X (s)\nFELIX, E. P.; CARDOSO, A. A. Fatores ambientais que afetam a precipitação úmida.\nQuímica Nova na Escola, n. 21, maio 2005 (adaptado).\nA fixação de moléculas de vapor de água pelos núcleos de condensação ocorre por",
+      "opcoes": [
+        "A) Ligações iônicas.",
+        "B) Interações dipolo-dipolo.",
+        "C) Interações dipolo-dipolo induzido.",
+        "D) Interações íon-dipolo.",
+        "E) Ligações covalentes."
+      ],
+      "correta": "D",
+      "ano": 2017
+    },
+    {
+      "id": 2017111,
+      "pergunta": "Os botos-cinza (Sotalia guianensis), mamíferos da família dos golfinhos, são excelentes indicadores da poluição das áreas em que vivem, pois passam toda a sua vida — cerca de 30 anos — na mesma região. Além disso, a espécie acumula mais contaminantes em seu organismo, como o mercúrio, do que outros animais da sua cadeia alimentar.\nMARCOLINO, B. Sentinelas do mar. Disponível em: http://cienciahoje.uol.com.br. Acesso em: 1 ago. 2012 (adaptado).\nOs botos-cinza acumulam maior concentração dessas substâncias porque",
+      "opcoes": [
+        "A) São animais herbívoros.",
+        "B) São animais detritívoros.",
+        "C) São animais de grande porte.",
+        "D) Digerem o alimento lentamente",
+        "E) Estão no topo da cadeia alimentar"
+      ],
+      "correta": "E",
+      "ano": 2017
+    },
+    {
+      "id": 2017115,
+      "pergunta": "As centrífugas são equipamentos utilizados em laboratórios, clínicas e indústrias. Seu funcionamento faz uso da aceleração centrífuga obtida pela rotação de um recipiente e que serve para a separação de sólidos em suspensão em líquidos ou de líquidos misturados entre si.\nRODITI, I. Dicionário Houaiss de física. Rio de Janeiro: Objetiva, 2005 (adaptado).\nNesse aparelho, a separação das substâncias ocorre em função",
+      "opcoes": [
+        "A) Das diferentes densidades.",
+        "B) Dos diferentes raios de rotação.",
+        "C) Das diferentes velocidades angulares.",
+        "D) Das diferentes quantidades de cada substância.",
+        "E) Da diferente coesão molecular de cada substância."
+      ],
+      "correta": "A",
+      "ano": 2017
+    },
+    {
+      "id": 2017123,
+      "pergunta": "A Mata Atlântica caracteriza-se por uma grande diversidade de epífitas, como as bromélias. Essas plantas estão adaptadas a esse ecossistema e conseguem captar luz, água e nutrientes mesmo vivendo sobre as árvores. Disponível em: www.ib.usp.br. Acesso em: 23 fev. 2013 (adaptado).\nEssas espécies captam água do(a)",
+      "opcoes": [
+        "A) Organismo das plantas vizinhas",
+        "B) Solo através de suas longas raízes.",
+        "C) Chuva acumulada entre suas folhas.",
+        "D) Seiva bruta das plantas hospedeiras.",
+        "E) Comunidade que vive em seu interior."
+      ],
+      "correta": "C",
+      "ano": 2017
+    },
+    {
+      "id": 2017124,
+      "pergunta": "O ferro é encontrado na natureza na forma de seus minérios, tais como a hematita (α-Fe2O3), a magnetita (Fe3O4) e a wustita (FeO). Na siderurgia, o ferro gusa é obtido pela fusão de minérios de ferro em altos fornos em condições adequadas. Uma das etapas nesse processo é a formação de monóxido de carbono. O CO (gasoso) é utilizado para reduzir o FeO (sólido), conforme a equação química:\nFeO (s) + CO (g) –> Fe (s) + CO2 (g)\nConsidere as seguintes equações termoquímicas:\nFe2O3 (s) + 3 CO (g) –> 2 Fe (s) + 3 CO2 (g) ∆rH = –25 kJ/mol de Fe2O3\n3 FeO (s) + CO2 (g) –> Fe3O4 (s) + CO (g) ∆rH = –36 kJ/mol de CO2\n2 Fe3O4 (s) + CO2 (g) –> 3 Fe2O3 (s) + CO (g) ∆rH = +47 kJ/mol de CO2\nO valor mais próximo de ∆rH em kJ/mol de FeO, para a reação indicada do FeO (sólido) com o CO (gasoso) é",
+      "opcoes": [
+        "A) -14",
+        "B) -17",
+        "C) -50",
+        "D) -64",
+        "E) -100"
+      ],
+      "correta": "B",
+      "ano": 2017
+    },
+    {
+      "id": 2017128,
+      "pergunta": "A retina é um tecido sensível à luz, localizado na parte posterior do olho, onde ocorre o processo de formação de imagem. Nesse tecido, encontram-se vários tipos celulares específicos. Um desses tipos celulares são cones, os quais convertem os diferentes comprimentos de onda da luz visível em sinais elétricos, que são transmitidos pelo nervo óptico até o cérebro. Disponível em: www.portaldaretina.com.br. Acesso em: 13 jun. 2012 (adaptado)\nEm relação à visão, a degeneração desse tipo celular irá",
+      "opcoes": [
+        "A) Comprometer a capacidade de visão em cores.",
+        "B) Impedir a projeção dos raios luminosos na retina.",
+        "C) Provocar a formação de imagens invertidas na retina.",
+        "D) Causar dificuldade de visualização de objetos próximos.",
+        "E) Acarretar a perda da capacidade de alterar o diâmetro da pupila."
+      ],
+      "correta": "A",
+      "ano": 2017
+    },
+    {
+      "id": 2017133,
+      "pergunta": "Para demonstrar o processo de transformação de energia mecânica em elétrica, um estudante constrói um pequeno gerador utilizando:\n- um fio de cobre de diâmetro D enrolado em N espiras circulares de área A;\n- dois ímãs que criam no espaço entre eles um campo magnético uniforme de intensidade B; e\n- um sistema de engrenagens que lhe permite girar as espiras em torno de um eixo com uma frequência f.\nAo fazer o gerador funcionar, o estudante obteve uma tensão máxima V e uma corrente de curto-circuito i.\nPara dobrar o valor da tensão máxima V do gerador mantendo constante o Valor da corrente de Curto i, o estudante deve dobrar o(a)",
+      "opcoes": [
+        "A) Número de espiras.",
+        "B) Frequência de giro.",
+        "C) Intensidade do campo magnético.",
+        "D) Área das espiras.",
+        "E) Diâmetro do fio."
+      ],
+      "correta": "A",
+      "ano": 2017
+    },
+    {
+      "id": 2018094,
+      "pergunta": "Anabolismo e catabolismo são processos celulares antagônicos, que são controlados principalmente pela ação hormonal. Por exemplo, no fígado a insulina atua como um hormônio com ação anabólica, enquanto o glucagon tem ação catabólica e ambos são secretados em resposta ao nível de glicose sanguínea.\nEm caso de um indivíduo com hipoglicemia, o hormônio citado que atua no catabolismo induzirá o organismo a",
+      "opcoes": [
+        "A) Realizar a fermentação lática.",
+        "B) Metabolizar aerobicamente a glicose.",
+        "C) Produzir aminoácidos a partir de ácidos graxos.",
+        "D) Transformar ácidos graxos em glicogênio.",
+        "E) Estimular a utilização do glicogênio."
+      ],
+      "correta": "E",
+      "ano": 2018
+    },
+    {
+      "id": 2018302,
+      "pergunta": "O sulfeto de mercúrio(ll) foi usado como pigmento vermelho para pinturas de quadros e murais. Esse pigmento, conhecido como vermilion, escurece com o passar dos anos, fenômeno cuja origem é alvo de pesquisas. Aventou-se a hipótese de que o vermilion seja decomposto sob a ação da luz, produzindo uma fina camada de mercúrio metálico na superfície. Essa reação seria catalisada por íon cloreto presente na umidade do ar\nWOGAN, T. Mercury’s Dark Influence on Art. Disponível em: www.chemistryworld.com. Acesso em: 26 abr. 2018 (adaptado).\nSegundo a hipótese proposta, o íon cloreto atua na decomposição fotoquímica do vermilion",
+      "opcoes": [
+        "A) Reagindo como agente oxidante.",
+        "B) Deslocando o equilíbrio químico.",
+        "C) Diminuindo a energia de ativação.",
+        "D) Precipitando cloreto de mercúrio.",
+        "E) Absorvendo a energia da luz visível."
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018305,
+      "pergunta": "Na mitologia grega, Nióbia era a filha de Tãntalo, dois personagens conhecidos pelo sofrimento. O elemento químico de número atômico (Z) igual a 41 tem propriedades químicas e físicas tão parecidas com as do elemento de número atômico 73 que chegaram a ser confundidos.\nPor isso, em homenagem a esses dois personagens da mitologia grega, foi conferido a esses elementos os nomes de nióbio (Z = 41) e tãntalo (Z = 73). Esses dois elementos químicos adquiriram grande importância econômica na metalurgia, na produção de supercondutores e em outras aplicações na indústria de ponta, exatamente pelas propriedades químicas e físicas comuns aos dois.\nKEAN, S. A colher que desaparece: e outras histórias reais de loucura, amor e morte a partir dos elementos químicos. Rio de Janeiro: Zahar, 2011 (adaptado).\nA importância econômica e tecnológica desses elementos, pela similaridade de suas propriedades químicas e físicas, deve-se a",
+      "opcoes": [
+        "A) Terem elétrons no subnível f",
+        "B) Serem elementos de transição interna.",
+        "C) Pertencerem ao mesmo grupo na tabela periódica.",
+        "D) Terem seus elétrons mais externos nos níveis 4 e 5, respectivamente.",
+        "E) Estarem localizados na família dos alcalinos terrosos e alcalinos, respectivamente."
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018119,
+      "pergunta": "A utilização de extratos de origem natural tem recebido a atenção de pesquisadores em todo o mundo, principalmente nos países em desenvolvimento que são altamente acometidos por doenças infecciosas e parasitárias. Um bom exemplo dessa utilização são os produtos de origem botânica que combatem insetos.\nO uso desses produtos pode auxiliar no controle da",
+      "opcoes": [
+        "A) Esquistossomose.",
+        "B) Leptospirose.",
+        "C) Leishmaniose.",
+        "D) Hanseníase.",
+        "E) Aids."
+      ],
+      "correta": "C",
+      "ano": 2018
+    },
+    {
+      "id": 2018124,
+      "pergunta": "O petróleo é uma fonte de energia de baixo custo e de larga utilização como matéria-prima para uma grande variedade de produtos. É um óleo formado de várias substâncias de origem orgânica, em sua maioria hidrocarbonetos de diferentes massas molares.\nSão utilizadas técnicas de separação para obtenção dos componentes comercializáveis do petróleo.\nAlém disso, para aumentar a quantidade de frações comercializáveis, otimizando o produto de origem fóssil, utiliza-se o processo de craqueamento.\nO que ocorre nesse processo?",
+      "opcoes": [
+        "A) Transformação das frações do petróleo em outras moléculas menores.",
+        "B) Reação de óxido-redução com transferência de elétrons entre as moléculas.",
+        "C) Solubilização das frações do petróleo com a utilização de diferentes solventes.",
+        "D) Decantação das moléculas com diferentes massas molares pelo uso de centrífugas.",
+        "E) Separação dos diferentes componentes do petróleo em função de suas temperaturas de ebulição."
+      ],
+      "correta": "A",
+      "ano": 2018
+    },
+    {
+      "id": 2019094,
+      "pergunta": "Em 1962, um jingle (vinheta musical) criado por Heitor Carillo fez tanto sucesso que extrapolou as fronteiras do rádio e chegou à televisão ilustrado por um desenho animado. Nele, uma pessoa respondia ao fantasma que batia em sua porta, personificando o “frio”, que não o deixaria entrar, pois não abriria a porta e compraria lãs e cobertores para aquecer sua casa. Apesar de memorável, tal comercial televisivo continha incorreções a respeito de conceitos físicos relativos à calorimetria.\nDUARTE, M. Jingle é a alma do negócio: livro revela os bastidores das músicas de propagandas. Disponível em: https://guiadoscuriosos.uol.com.br. Acesso em: 24 abr. 2019 (adaptado).\nPara solucionar essas incorreções, deve-se associar à porta e aos cobertores, respectivamente, as funções de:",
+      "opcoes": [
+        "A) Aquecer a casa e os corpos.",
+        "B) Evitar a entrada do frio na casa e nos corpos.",
+        "C) Minimizar a perda de calor pela casa e pelos corpos.",
+        "D) Diminuir a entrada do frio na casa e aquecer os corpos.",
+        "E) Aquecer a casa e reduzir a perda de calor pelos corpos."
+      ],
+      "correta": "C",
+      "ano": 2019
+    },
+    {
+      "id": 2019108,
+      "pergunta": "Por terem camada de valência completa, alta energia de ionização e afinidade eletrônica praticamente nula, considerou-se por muito tempo que os gases nobres não formariam compostos químicos. Porém, em 1962, foi realizada com sucesso a reação entre o xenônio (camada de valência 5s25p6) e o hexafluoreto de platina e, desde então, mais compostos novos de gases nobres vêm sendo sintetizados. Tais compostos demonstram que não se pode aceitar acriticamente a regra do octeto, na qual se considera que, numa ligação química, os átomos tendem a adquirir estabilidade assumindo a configuração eletrônica de gás nobre. Dentre os compostos conhecidos, um dos mais estáveis é o difluoreto de xenônio, no qual dois átomos do halogênio flúor (camada de valência 2s22p5) se ligam covalentemente ao átomo de gás nobre para ficarem com oito elétrons de valência.\nAo se escrever a fórmula de Lewis do composto de xenônio citado, quantos elétrons na camada de valência haverá no átomo do gás nobre?",
+      "opcoes": [
+        "A) 6",
+        "B) 8",
+        "C) 10",
+        "D) 12",
+        "E) 14"
+      ],
+      "correta": "C",
+      "ano": 2019
+    },
+    {
+      "id": 2019111,
+      "pergunta": "Em qualquer obra de construção civil é fundamental a utilização de equipamentos de proteção individual, tal como capacetes. Por exemplo, a queda livre de um tijolo de massa 2,5kg de uma altura de 5m, cujo impacto contra um capacete pode durar até 0,5s, resulta em uma força impulsiva média maior do que o peso do tijolo. Suponha que a aceleração gravitacional seja 10 m s–2 e que o efeito de resistência do ar seja desprezível.\nA força impulsiva média gerada por esse impacto equivale ao peso de quantos tijolos iguais?",
+      "opcoes": [
+        "A) 2",
+        "B) 5",
+        "C) 10",
+        "D) 20",
+        "E) 50"
+      ],
+      "correta": "A",
+      "ano": 2019
+    },
+    {
+      "id": 2019115,
+      "pergunta": "O concreto utilizado na construção civil é um material formado por cimento misturado a areia, a brita e a água.\nA areia é normalmente extraída de leitos de rios e a brita, oriunda da fragmentação de rochas. Impactos ambientais gerados no uso do concreto estão associados à extração de recursos minerais e ao descarte indiscriminado desse material. Na tentativa de reverter esse quadro, foi proposta a utilização de concreto reciclado moído em substituição ao particulado rochoso graúdo na fabricação de novo concreto, obtendo um material com as mesmas propriedades que o anterior.\nO benefício ambiental gerado nessa proposta é a redução do(a):",
+      "opcoes": [
+        "A) Extração da brita.",
+        "B) Extração da areia.",
+        "C) Consumo de água.",
+        "D) Consumo de concreto.",
+        "E) Fabricação de cimento."
+      ],
+      "correta": "A",
+      "ano": 2019
+    },
+    {
+      "id": 2020093,
+      "pergunta": "Para se deslocar e obter alimentos, alguns mamíferos, como morcegos e golfinhos, contam com a sofisticada capacidade biológica de detectar a posição de objetos e animais pela emissão e recepção de ondas ultrassônicas.\nO fenômeno ondulatório que permite o uso dessa capacidade biológica é a",
+      "opcoes": [
+        "A) reflexão.",
+        "B) difração.",
+        "C) refração.",
+        "D) dispersão.",
+        "E) polarização."
+      ],
+      "correta": "A",
+      "ano": 2020
+    },
+    {
+      "id": 2020104,
+      "pergunta": "Grupos de proteção ao meio ambiente conseguem resgatar muitas aves aquáticas vítimas de vazamentos de petróleo. Essas aves são lavadas com água e detergente neutro para a retirada completa do óleo de seu corpo e, posteriormente, são aquecidas, medicadas, desintoxicadas e alimentadas. Mesmo após esses cuidados, o retorno ao ambiente não pode ser imediato, pois elas precisam recuperar a capacidade de flutuação.\nPara flutuar, essas aves precisam",
+      "opcoes": [
+        "A) Recuperar o tônus muscular.",
+        "B) Restaurar a massa corporal.",
+        "C) Substituir as penas danificadas.",
+        "D) Restabelecer a capacidade de homeotermia.",
+        "E) Refazer a camada de cera impermeabilizante das penas."
+      ],
+      "correta": "E",
+      "ano": 2020
+    },
+    {
+      "id": 2020113,
+      "pergunta": "Entre os materiais mais usados no nosso dia a dia destacam-se os plásticos, constituídos por polímeros. A consequência de seu amplo uso é a geração de resíduos, que necessitam de um destino final adequado em termos ambientais. Uma das alternativas tem sido a reciclagem, que deve respeitar as características dos polímeros que compõem o material. Esse processo envolve algumas etapas, como: separação do resíduo (catação), moagem, hidrólise, lavagem, secagem, pirólise e aquecimento (fusão). SPINACÉ, M. A. S., PAOLI, M. A. D. Tecnologia de reciclagem de polímeros. Química Nova, n.1, 2005 (adaptado).\nQuais das etapas citadas do processo de reciclagem são classificadas como métodos químicos?",
+      "opcoes": [
+        "A) Hidrólise e pirólise",
+        "B) Secagem e pirólise",
+        "C) Moagem e lavagem",
+        "D) Separação e hidrólise",
+        "E) Secagem e aquecimento"
+      ],
+      "correta": "A",
+      "ano": 2020
+    },
+    {
+      "id": 2020114,
+      "pergunta": "Dois engenheiros estão verificando se uma cavidade perfurada no solo está de acordo com o planejamento de uma obra, cuja profundidade requerida é de 30 m. O teste é feito por um dispositivo denominado oscilador de áudio de frequência variável, que permite relacionar a profundidade com os valores da frequência de duas ressonâncias consecutivas, assim como em um tubo sonoro fechado. A menor frequência de ressonância que o aparelho mediu foi 135 Hz. Considere que a velocidade do som dentro da cavidade perfurada é de 360 m s–1.\nSe a profundidade estiver de acordo com o projeto, qual será o valor da próxima frequência de ressonância que\nserá medida?",
+      "opcoes": [
+        "A) 137 Hz.",
+        "B) 138 Hz.",
+        "C) 141 Hz.",
+        "D) 144 Hz",
+        "E) 159 Hz"
+      ],
+      "correta": "C",
+      "ano": 2020
+    },
+    {
+      "id": 2020120,
+      "pergunta": "O crescimento da frota de veículos em circulação no mundo tem levado à busca e desenvolvimento de tecnologias que permitam minimizar emissões de poluentes atmosféricos. O uso de veículos elétricos é uma das propostas mais propagandeadas por serem de emissão zero. Podemos comparar a emissão de carbono na forma de CO2 (massa molar igual a 44 g mol–1) para os dois tipos de carros (a combustão e elétrico). Considere que os veículos tradicionais a combustão, movidos a etanol (massa molar igual a 46 g mol–1), emitem uma média de 2,6 mol de CO2 por quilômetro rodado, e os elétricos emitem o equivalente a 0,45 mol de CO2 por quilômetro rodado (considerando as emissões na geração e transmissão da eletricidade). A reação e combustão do etanol pode ser representada pela equação química:\nC2H5OH (l) + 3 O2 (g) → 2 CO2 (g) + 3 H2O (g)\nForam analisadas as emissões de CO2 envolvidas em dois veículos, um movido a etanol e outro elétrico, em um mesmo trajeto de 1 000 km.\nCHIARADIA, C. A. Estudo da viabilidade da implantação de frotas de veículos elétricos e híbridos elétricos no atual cenário econômico, político, energético e ambiental brasileiro. Guaratinguetá: Unesp, 2015 (adaptado)\nA quantidade equivalente de etanol economizada, em quilograma, com o uso do veículo elétrico nesse trajeto, é mais próxima de",
+      "opcoes": [
+        "A) 50.",
+        "B) 60.",
+        "C) 95.",
+        "D) 99.",
+        "E) 120."
+      ],
+      "correta": "A",
+      "ano": 2020
+    },
+    {
+      "id": 2020131,
+      "pergunta": "A Química Verde é um ramo da química que prega o desenvolvimento de processos eficientes, que transformem a maior parte do reagente em produto, de forma mais rápida e seletiva, que utilizem poucos reagentes, que produzam somente o produto desejado, evitando a formação de coprodutos, e que utilizem solventes não agressivos ao meio ambiente. Assim, as indústrias contornariam problemas relacionados à poluição ambiental e ao desperdício de água e energia.\nO perfil de um processo que segue todos os princípios desse ramo da química pode ser representado por:",
+      "opcoes": [
+        "A) A + B + C → D (a reação ocorre a altas pressões).",
+        "B) A + B → C + D (a reação é fortemente endotérmica).",
+        "C) A +3B → C (a reação ocorre com uso de solvente orgânico).",
+        "D) 3A + 2B → 2C → 3D + 2E (a reação ocorre sob pressão atmosférica).",
+        "E) A + 1/2 B → C (a reação ocorre com o uso de um catalisador contendo um metal não tóxico)."
+      ],
+      "correta": "E",
+      "ano": 2020
+    },
+    {
+      "id": 2020135,
+      "pergunta": "Os diferentes tipos de café que consumimos nem sempre vêm da mesma espécie de planta. As duas espécies de café mais utilizadas são Coffea canephora e Coffea arabica. A primeira é diploide (2n = 22) e a segunda é tetraploide (2n\n= 44). Acredita-se que a espécie tetraploide surgiu de um cruzamento natural entre C. canephora e C. eugenioides, ambas diploides, há milhões de anos. De fato, as análises genéticas atuais nos cromossomos de C. arabica detectam os alelos de ambas as origens.\nA alteração cromossômica que poderia explicar o surgimento do café da espécie C. arabica é:",
+      "opcoes": [
+        "A) Duplicação em uma das plantas parentais antes do cruzamento.",
+        "B) Inversão durante a meiose gamética em ambas as plantas parentais.",
+        "C) Separação desigual na meiose gamética de uma das plantas parentais.",
+        "D) Falha na separação durante a meiose gamética em ambas as plantas parentais.",
+        "E) Deleções durante as primeiras mitoses zigóticas na planta descendente C. arabica"
+      ],
+      "correta": "A",
+      "ano": 2020
+    },
+    {
+      "id": 2020335,
+      "pergunta": "BTU é a sigla para British Thermal Unit (Unidade Térmica Inglesa), que é definida como a quantidade de calor necessária para elevar a temperatura de 1 libra (0,45 kg) de água de 59,5 °F a 60,5 °F sob pressão constante de 1 atmosfera. A unidade BTU é utilizada, de forma errônea, por diversos profissionais como sendo a potência de resfriamento do aparelho. RODITI, I. Dicionário Houaiss de Física. Rio de Janeiro: Objetiva, 2005 (adaptado).\nComo se pode representar corretamente a unidade de potência com base na definição de BTU?",
+      "opcoes": [
+        "A) BTU × h⁻¹",
+        "B) BTU × m²",
+        "C) BTU × h⁻¹ × m²",
+        "D) BTU × h",
+        "E) BTU × m⁻²"
+      ],
+      "correta": "A",
+      "ano": 2020
+    },
+    {
+      "id": 2021107,
+      "pergunta": "Analisando a ficha técnica de um automóvel popular, verificam-se algumas características em relação ao seu desempenho. Considerando o mesmo automóvel em duas versões, uma delas funcionando a álcool e outra, a gasolina, tem-se os dados apresentados no quadro, em relação ao desempenho de cada motor.\nConsiderando desprezível a resistência do ar, qual versão apresenta a maior potência?",
+      "opcoes": [
+        "A) Como a versão a gasolina consegue a maior aceleração, esta é a que desenvolve a maior potência.",
+        "B) Como a versão a gasolina atinge a maior valor de energia cinética, esta é a que desenvolve a maior potência.",
+        "C) Como a versão a álcool apresenta a maior taxa de variação de energia cinética, esta é a que desenvolve a maior potência.",
+        "D) Como ambas as versões apresentam a mesma variação de velocidade no cálculo da aceleração, a potência desenvolvida é a mesma.",
+        "E) Como a versão a gasolina fica com o motor trabalhando por mais tempo para atingir os 100 km/h, esta é a que desenvolve a maior potência."
+      ],
+      "correta": "C",
+      "ano": 2021
+    },
+    {
+      "id": 2022093,
+      "pergunta": "Em 2017, foi inaugurado, no estado da Bahia, o Parque Solar Lapa, composto por duas usinas (Bom Jesus\nda Lapa e Lapa) e capaz de gerar cerca de 300 GWh de energia por ano. Considere que cada usina apresente potência igual a 75 MW, com o parque totalizando uma potência instalada de 150 MW. Considere ainda que a irradiância solar média é de 1 500 W/m² e que a eficiência dos painéis é de 20%.\nParque Solar Lapa entra em operação. Disponível em: www.canalbioenergia.com.br. Acesso em: 9 jun. 2022 (adaptado).\nNessas condições, a área total dos painéis solares que compõem o Parque Solar Lapa é mais próxima de:",
+      "opcoes": [
+        "A) 1 000 000 m²",
+        "B) 500 000 m²",
+        "C) 250 000 m²",
+        "D) 100 000 m²",
+        "E) 20 000 m²"
+      ],
+      "correta": "B",
+      "ano": 2022
     }
   ]
 };
