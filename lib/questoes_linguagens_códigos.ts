@@ -8150,6 +8150,240 @@ export const questoes = {
       ],
       "correta": "B",
       "ano": 2025
+    },
+    {
+      "id": 2024002,
+      "pergunta": "“Y si llueve, que llueva” es un refrán gallego. Para mí cobró sentido una noche de febrero, cuando vivía en el barrio de la Macarena de Sevilla con dos buenos amigos, gallegos también. Mi compañero y yo nos decidimos a salir ese sábado de noche, pese a que había estado lloviendo algunas horas a lo largo del día. La idea era una locura, al parecer. Le propusimos salir “de parranda” con nosotros a una amiga andaluza, ésta respondió que no, nos dijo que no iba a salir un día de lluvia. Flipamos. Comentamos entre nosotros que si los gallegos no saliésemos de casa cuando llueve, en invierno saldríamos poco. Habríamos inventado el confinamiento hace mucho. Los gallegos no dejamos de salir por la lluvia. Disponível em: https://politicahora.es. Acesso em: 26 out. 2021.\nO comportamento dos personagens narrado no texto destaca o(a)",
+      "opcoes": [
+        "A) abandono da própria identidade.",
+        "B) medo dos perigos durante a noite.",
+        "C) influência do grupo na tomada de decisão.",
+        "D) diferença cultural entre galegos e andaluzes.",
+        "E) variação meteorológica entre Sevilha e Galiza."
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2024205,
+      "pergunta": "El vírus de la cancelación ¿De qué se trata este fenómeno? Se entiende por cultura de la cancelación a una práctica popular que consiste en “quitarle apoyo” especialmente a figuras públicas y compañías multinacionales después de que hayan hecho o dicho algo considerado objetable u ofensivo. Cuando alguien o algo está cancelado se descarta, se deja de ver, se deja de escuchar, se desclasifica, se aísla, se abandona, se niega, se deja de consumir hasta que eventualmente puede o no desaparecer. Es una estrategia muy extendida en la historia de las luchas anticoloniales, antiespecistas, sexodisidentes, feministas y, especialmente en nuestro país, también llevadas adelante por el movimiento de derechos humanos. Entonces, ¿dónde radica el problema? Se puede observar positivamente que hay un proceso cada vez más agudo de socialización de herramientas críticas para desmantelar formas de desigualdad incrustadas en los lazos sociales. Pero la popularización irrestricta y el uso amplificado de esta herramienta por fuera de sus contextos colectivos de emergencia han despertado efectos adversos en una sociedad atravesada por las pantallas como formas de encierro-consumo, la representación online como única esfera pública y un imperativo felicista cuya moral nos obliga a trabajar ansiosamente por una vida sin desacuerdos, sin errores y sin dolor, a como dé lugar. Disponível em: www.revistaanfibia.com. Acesso em: 7 out. 2021 (adaptado).\nNa argumentação apresentada sobre cultura do cancelamento, esse texto objetiva",
+      "opcoes": [
+        "A) apresentar o conceito desse tipo de prática.",
+        "B) mostrar a contrariedade das mídias com relação a essa atitude.",
+        "C) criticar o impacto dessa cultura sobre a vida representada nas redes.",
+        "D) evidenciar a democratização dessa prática na sociedade virtual.",
+        "E) discorrer historicamente sobre a origem e as causas dessa cultura."
+      ],
+      "correta": "C",
+      "ano": 2024
+    },
+    {
+      "id": 2024232,
+      "pergunta": "Uma definição possível para o conceito de arte afro-brasileira pode ser: produção plástica que é feita por negros, mestiços ou brancos a partir de suas experiências sociais com a cultura negra nacional. Exemplos clássicos dessa abordagem são Carybé (1911-1997), Mestre Didi (1917-2013) e Djanira da Motta e Silva (1914-1979), cujas obras emergem e ganham forma em razão do ambiente social no qual habitaram e viveram. Se Didi era um célebre representante da cultura religiosa nagô baiana e brasileira, iniciado desde o ventre no candomblé, Carybé era argentino e, naturalizado brasileiro, envolveu-se de tal modo com essa religião que alguns dos orixás dos quais conhecemos a imagem visual são produções suas. Disponível em: www.premiopipa.com. Acesso em: 13 nov. 2021 (adaptado).\nSob a perspectiva da multiculturalidade e de acordo com o texto, a produção artística afro-brasileira caracteriza-se pelo(a)",
+      "opcoes": [
+        "A) estranhamento no modo de apropriação da cultura religiosa de matriz africana.",
+        "B) distanciamento entre as raízes de matriz africana e a estética de outras culturas.",
+        "C) visão uniformizadora das religiões de matriz africana expressada nas diferentes produções.",
+        "D) relação complexa entre as vivências pessoais dos artistas e os referenciais estéticos de matriz africana.",
+        "E) padronização da forma de produção e da temática da matriz africana presente nas obras dos artistas citados."
+      ],
+      "correta": "D",
+      "ano": 2024
+    },
+    {
+      "id": 2025006,
+      "pergunta": "¿Dónde está nuestro pan, patrón? ¿Dónde quedó todo ese dinero? ¿Lo tiene oculto bajo el colchón o lo escondió en otro sucio agujero? Yo tengo un Tàpies, dice Juan Luis; yo tengo un Antonio López, dice Jaume. ¿Quién de los dos sabrá decir cuántos muertos tiene a sus espaldas? NACHO VEGAS. Disponível em: www.lahiguera.net. Acesso em: 12 abr. 2024 (fragmento).\nNa letra da canção Polvorado, ao apresentar as reflexões do eu poético, o cantor espanhol Nacho Vegas",
+      "opcoes": [
+        "A) demonstra o orgulho dos trabalhadores para com artistas de referência.",
+        "B) critica a postura dos patrões frente aos direitos dos trabalhadores.",
+        "C) apresenta propostas para diminuir as desigualdades sociais.",
+        "D) evidencia o diálogo horizontal entre patrão e trabalhadores.",
+        "E) questiona a insalubridade do ambiente de trabalho."
+      ],
+      "correta": "B",
+      "ano": 2025
+    },
+    {
+      "id": 2025007,
+      "pergunta": "Guagua, las palabras también migran Pocas palabras del idioma castellano despiertan tanto interés y asombro como guagua. En España su uso se reduce a las Islas Canarias, donde se registra a partir de los años 30 del pasado siglo. El origen de guagua resulta algo polémico. Todo parece indicar que la voz vino de Cuba. La trajeron de vuelta, junto con sus maletas y sus recuerdos, aquellos inmigrantes canarios que viajaron a la isla antillana en busca de fortuna. Recientemente en Lanzarote, las autoridades acuñaron “guagüismo” para potenciar el uso del transporte público y han solicitado a la Real Academia Española que introduzca dicho término en el diccionario. El origen de guagua cambia si nos vamos al sur del continente. Autobús no es la única acepción de la palabra guagua que se usa en América. En los países del sur, tales como Colombia, Argentina o Perú, como una derivación del término quechua wáwa, también se le dice guagua a un niño de pecho o bebé. Algunos autores chilenos han defendido también que esta acepción de guagua como bebé proviene del idioma mapuche. Sea uno u otro el origen, es común en todo el cono sur oír a hombres y mujeres hablar con ternura de sus “guaguas lindas”. Disponível em: www.escribirbienyclaro.com. Acesso em: 13 maio 2024.\nAo abordar a trajetória da palavra “guagua”, o texto destaca a",
+      "opcoes": [
+        "A) presença de empréstimo linguístico no espanhol.",
+        "B) validação de um vocábulo por uma instituição renomada.",
+        "C) concorrência entre línguas indígenas e a língua espanhola.",
+        "D) valorização da língua de um país em detrimento da de outro.",
+        "E) disputa entre hispano-americanos e espanhóis por sua origem."
+      ],
+      "correta": "A",
+      "ano": 2025
+    },
+    {
+      "id": 2025008,
+      "pergunta": "Cuando yo era chiquito todo quedaba cerca, cerquita. Para llegar al cielo no más bastaba una subidita. El sueño me alcanzaba para ir tan lejos como quería. Cuando yo era chiquito yo sí podía, yo sí podía. Libertad, libertad, libertad para mi niño. [...] Cuando yo era vejigo me iba pa’l río porque era hermoso, aunque estaba prohibido por peligroso, por peligroso. Como jagüey y ceiba, como la palma y la yagruma, cuando yo era vejigo yo era del monte y soñaba espuma. Libertad, libertad, libertad para mi niño. RODRÍGUEZ, S. Cuando yo era un enano. In: Oh Melancolía. Havana: Empresa de Grabaciones y Ediciones Musicales, 1988 (fragmento).\nO recurso que caracteriza essa letra de canção como um relato das memórias do eu poético é o uso de",
+      "opcoes": [
+        "A) palavras no grau diminutivo.",
+        "B) adjetivos na descrição da paisagem.",
+        "C) vocábulos relacionados à fauna cubana.",
+        "D) verbos no pretérito imperfeito do indicativo.",
+        "E) marcas linguísticas de uma variedade caribenha."
+      ],
+      "correta": "D",
+      "ano": 2025
+    },
+    {
+      "id": 2025010,
+      "pergunta": "¿Qué es la generación Alfa? Hacer cortes generacionales no es una ciencia exacta. Sin embargo, según un análisis de 2018 del centro de estudios Pew Research Center, analizar las generaciones ofrece “una manera de entender cómo los acontecimientos globales y los cambios tecnológicos, económicos y sociales interactúan para definir la forma en que la gente ve el mundo”. Y está claro cómo ve el mundo la próxima generación: a través de una pantalla. “Antes las generaciones se definían a partir de sucesos históricos o sociales importantes. Hoy se delimitan por el uso de determinada tecnología”, le explica a BBC Mundo un psicólogo, docente, escritor y experto en el uso — y abuso — de las redes sociales. Ninguna de las generaciones anteriores será comparable a nivel digital con los Alfa, que, como contraparte, serán la primera a la que le serán ajenos muchos aspectos del mundo analógico. Disponível em: www.bbc.com. Acesso em: 9 maio 2024 (adaptado).\nNesse texto, a expressão “a través de una pantalla” evidencia que a geração Alfa estabelece com o mundo uma relação marcada pelo(a)",
+      "opcoes": [
+        "A) conflito etário.",
+        "B) efemeridade da tecnologia.",
+        "C) dependência de recursos digitais.",
+        "D) valor dos acontecimentos sociais.",
+        "E) indiferença em relação a fatos históricos."
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025016,
+      "pergunta": "De próprio punho A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda que vai do simples bilhete aos originais de um livro Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade, o que importava era a autenticidade da minha caligrafia, que à época ainda era mais fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra, hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca, mais rotunda e mais cheia de arestas. É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita, manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje, são elas que batucam meu teclado de computador ou que tocam suavemente duas ou três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times New Roman, Arial, Calibri e mais uma centena de “letras” à minha escolha. Eu e Deus e o mundo. A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico comigo mesma, a evitar um comportamento esquecido e relapso. No escritório, costumo ser mais suave comigo mesma, mas também muito mais lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais ainda as adultas) precisa conviver. As formas de escrever mudam, as necessidades também, e o resultado é um elenco complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando, mudando de status, numa ciranda interessante e importante que pode ser vista à luz de certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados, e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma frase filosoficamente correta. O negócio é mais “o punho e o pixel”. RIBEIRO, A. E. Disponível em: https://rascunho.com.br. Acesso em: 16 jan. 2024 (adaptado).\nNo que diz respeito ao gênero bilhete, a autora dessa crônica",
+      "opcoes": [
+        "A) ressalta a formalidade na comunicação com as pessoas de sua convivência.",
+        "B) critica a ansiedade causada pela velocidade da comunicação.",
+        "C) expressa a obrigatoriedade de concisão nas anotações.",
+        "D) questiona a prática da escrita de próprio punho.",
+        "E) apresenta a diversidade de usos no cotidiano."
+      ],
+      "correta": "E",
+      "ano": 2025
+    },
+    {
+      "id": 2025217,
+      "pergunta": "De próprio punho A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda que vai do simples bilhete aos originais de um livro Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade, o que importava era a autenticidade da minha caligrafia, que à época ainda era mais fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra, hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca, mais rotunda e mais cheia de arestas. É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita, manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje, são elas que batucam meu teclado de computador ou que tocam suavemente duas ou três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times New Roman, Arial, Calibri e mais uma centena de “letras” à minha escolha. Eu e Deus e o mundo. A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico comigo mesma, a evitar um comportamento esquecido e relapso. No escritório, costumo ser mais suave comigo mesma, mas também muito mais lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais ainda as adultas) precisa conviver. As formas de escrever mudam, as necessidades também, e o resultado é um elenco complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando, mudando de status, numa ciranda interessante e importante que pode ser vista à luz de certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados, e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma frase filosoficamente correta. O negócio é mais “o punho e o pixel”. RIBEIRO, A. E. Disponível em: https://rascunho.com.br. Acesso em: 16 jan. 2024 (adaptado).\nO elemento que caracteriza esse texto como uma crônica é a",
+      "opcoes": [
+        "A) defesa das opiniões da autora sobre um tema de interesse coletivo.",
+        "B) exposição sobre o uso de tecnologias nas práticas de escrita atuais.",
+        "C) abordagem de fatos do contexto pessoal em uma perspectiva reflexiva.",
+        "D) utilização de recursos linguísticos para a interlocução direta com o leitor.",
+        "E) apresentação de acontecimentos segundo a ordem de sucessão no tempo."
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025218,
+      "pergunta": "De próprio punho A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda que vai do simples bilhete aos originais de um livro Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade, o que importava era a autenticidade da minha caligrafia, que à época ainda era mais fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra, hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca, mais rotunda e mais cheia de arestas. É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita, manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje, são elas que batucam meu teclado de computador ou que tocam suavemente duas ou três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times New Roman, Arial, Calibri e mais uma centena de “letras” à minha escolha. Eu e Deus e o mundo. A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico comigo mesma, a evitar um comportamento esquecido e relapso. No escritório, costumo ser mais suave comigo mesma, mas também muito mais lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais ainda as adultas) precisa conviver. As formas de escrever mudam, as necessidades também, e o resultado é um elenco complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando, mudando de status, numa ciranda interessante e importante que pode ser vista à luz de certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados, e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma frase filosoficamente correta. O negócio é mais “o punho e o pixel”. RIBEIRO, A. E. Disponível em: https://rascunho.com.br. Acesso em: 16 jan. 2024 (adaptado).\nNesse texto, o que caracteriza a escrita “de próprio punho” é a letra manuscrita, enquanto a escrita digital é ilustrada pelo(a)",
+      "opcoes": [
+        "A) utilização de tecnologias diversificadas.",
+        "B) desenvolvimento de novos recursos de escrita.",
+        "C) possibilidade de interações mediadas por telas.",
+        "D) diversidade de fontes tipográficas que estão disponíveis.",
+        "E) delimitação dos espaços onde a produção textual ocorre."
+      ],
+      "correta": "D",
+      "ano": 2025
+    },
+    {
+      "id": 2025219,
+      "pergunta": "De próprio punho A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda que vai do simples bilhete aos originais de um livro Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade, o que importava era a autenticidade da minha caligrafia, que à época ainda era mais fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra, hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca, mais rotunda e mais cheia de arestas. É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita, manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje, são elas que batucam meu teclado de computador ou que tocam suavemente duas ou três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times New Roman, Arial, Calibri e mais uma centena de “letras” à minha escolha. Eu e Deus e o mundo. A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico comigo mesma, a evitar um comportamento esquecido e relapso. No escritório, costumo ser mais suave comigo mesma, mas também muito mais lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais ainda as adultas) precisa conviver. As formas de escrever mudam, as necessidades também, e o resultado é um elenco complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando, mudando de status, numa ciranda interessante e importante que pode ser vista à luz de certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados, e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma frase filosoficamente correta. O negócio é mais “o punho e o pixel”. RIBEIRO, A. E. Disponível em: https://rascunho.com.br. Acesso em: 16 jan. 2024 (adaptado).\nA autora conclui que as novas tecnologias de escrita",
+      "opcoes": [
+        "A) evoluem para facilitar a vida cotidiana.",
+        "B) alcançam diferentes realidades sociais.",
+        "C) coexistem com outras já estabelecidas.",
+        "D) promovem maior agilidade na comunicação.",
+        "E) surgem nos contextos em que são necessárias."
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025220,
+      "pergunta": "De próprio punho A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda que vai do simples bilhete aos originais de um livro Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade, o que importava era a autenticidade da minha caligrafia, que à época ainda era mais fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra, hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca, mais rotunda e mais cheia de arestas. É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita, manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje, são elas que batucam meu teclado de computador ou que tocam suavemente duas ou três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times New Roman, Arial, Calibri e mais uma centena de “letras” à minha escolha. Eu e Deus e o mundo. A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico comigo mesma, a evitar um comportamento esquecido e relapso. No escritório, costumo ser mais suave comigo mesma, mas também muito mais lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais ainda as adultas) precisa conviver. As formas de escrever mudam, as necessidades também, e o resultado é um elenco complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando, mudando de status, numa ciranda interessante e importante que pode ser vista à luz de certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados, e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma frase filosoficamente correta. O negócio é mais “o punho e o pixel”. RIBEIRO, A. E. Disponível em: https://rascunho.com.br. Acesso em: 16 jan. 2024 (adaptado).\nO recurso linguístico usado para marcar a síntese da opinião da autora sobre a temática desenvolvida foi o(a)",
+      "opcoes": [
+        "A) emprego da primeira pessoa em “Estranhei muito na primeira vez que escutei a expressão ‘de próprio punho’”. (l. 1)",
+        "B) utilização de locução adverbial em “Na verdade, o que importava era a autenticidade da minha caligrafia”. (l. 3-4)",
+        "C) uso de pronome possessivo em “Minha letra, hoje, tem uma espécie de alternância”. (l. 5-6)",
+        "D) adoção de termo autorreflexivo em “No escritório, costumo ser mais suave comigo mesma”. (l. 30)",
+        "E) substituição da expressão “Do punho ao pixel” (l. 44) pela expressão “o punho e o pixel”. (l. 45)"
+      ],
+      "correta": "E",
+      "ano": 2025
+    },
+    {
+      "id": 2025221,
+      "pergunta": "— Vejo, disse ele com algum acanhamento, que o doutor não é nenhum pé-rapado, mas nunca é bom facilitar... Minha filha Nocência fez 18 anos pelo Natal, e é rapariga que pela feição parece moça de cidade, muito ariscazinha de modos, mas bonita e boa deveras... Coitada, foi criada sem mãe, e aqui nestes fundões. [...] — Ora muito que bem, continuou Pereira caindo aos poucos na habitual garrulice, quando vi a menina tomar corpo, tratei logo de casá-la. — Ah! é casada? perguntou Cirino. — Isto é, é e não é. A coisa está apalavrada. Por aqui costuma labutar no costeio do gado para São Paulo um homem de mão- cheia, que talvez o sr. conheça... o Manecão Doca... — Não, respondeu Cirino abanando a cabeça. — Pois isso é um homem às direitas, desempenado e trabucador como ele só... fura estes sertões todos e vem tangendo pontes de gado que metem pasmo. Também dizem que tem bichado muito e ajuntado cobre grosso, o que é possível, porque não é gastador nem dado a mulheres. Uma feita que estava aqui de pousada... olhe, mesmo neste lugar onde estava mecê inda agorinha, falei-lhe em casamento... isto é, dei-lhe uns toques... porque os pais devem tomar isso a si para bem de suas famílias; não acha? — Boa dúvida, aprovou Cirino, dou-lhe toda a razão; era do seu dever. TAUNAY, A. d’E. Inocência. Disponível em: www.dominiopublico.gov.br. Acesso em: 29 fev. 2024.\nNesse trecho, ao se referir à sua filha, o pai de Inocência reproduz os ideais românticos, presentes na",
+      "opcoes": [
+        "A) valorização do ambiente rural na formação moral da mulher.",
+        "B) figura decorativa da mulher ante o protagonismo masculino.",
+        "C) equivalência de origem social para a harmonia do casal.",
+        "D) importância do dote como condição para o casamento.",
+        "E) aura de mistério sobre a identidade da jovem."
+      ],
+      "correta": "B",
+      "ano": 2025
+    },
+    {
+      "id": 2025022,
+      "pergunta": "O Ministério do Esporte no Brasil lançou o programa Maré Inclusiva, em 2024, ano dos Jogos Paralímpicos de Paris. Esse programa visa ampliar as oportunidades para pessoas com deficiência que desejam praticar o surf. O parasurf é a prática do surf adaptada para permitir que pessoas com deficiência pratiquem o esporte em todas as suas categorias, modalidades e manifestações. Para a Secretaria Nacional do Paradesporto, a iniciativa é mais do que um programa de esporte, é uma iniciativa que busca transformar vidas e promover a inclusão por meio do parasurf, criando um legado de igualdade e respeito. Disponível em: www.gov.br/esporte. Acesso em: 6 set. 2024 (adaptado).\nDe acordo com esse texto, o programa voltado ao estímulo da prática do parasurf evidencia a",
+      "opcoes": [
+        "A) adesão de diferentes países a programas inclusivos.",
+        "B) preocupação política em atender a demandas paralímpicas.",
+        "C) importância de uma política pública esportiva para a inclusão.",
+        "D) eficiência das iniciativas de inclusão em megaeventos esportivos.",
+        "E) escassez de investimento em práticas corporais de aventura na natureza."
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025023,
+      "pergunta": "Art. 26-A. Nos estabelecimentos de ensino fundamental e médio, oficiais e particulares, torna-se obrigatório o ensino sobre História e Cultura Afro-Brasileira. § 1º O conteúdo programático a que se refere o caput deste artigo incluirá o estudo da História da África e dos Africanos, a luta dos negros no Brasil, a cultura negra brasileira e o negro na formação da sociedade nacional, resgatando a contribuição do povo negro nas áreas social, econômica e política pertinentes à História do Brasil. § 2º Os conteúdos referentes à História e Cultura Afro- -Brasileira serão ministrados no âmbito de todo o currículo escolar, em especial nas áreas de Educação Artística e de Literatura e História Brasileiras. BRASIL. Lei n. 10 639/2003. Disponível em: www.gov.br/planalto. Acesso em: 5 maio 2024.\nO emprego da norma-padrão é justificado nesse texto",
+      "opcoes": [
+        "A) pela especialização de seu público-alvo.",
+        "B) pela relevância cultural de seu conteúdo.",
+        "C) pelos contextos pedagógicos em que circula.",
+        "D) pela importância para os grupos étnico-raciais.",
+        "E) pelas características do gênero a que pertence."
+      ],
+      "correta": "E",
+      "ano": 2025
+    },
+    {
+      "id": 2025026,
+      "pergunta": "Símbolos Eu e tu, ante a noite e o amplo desdobramento do mar, fero, a estourar de encontro à rocha nua... Um símbolo descubro aqui, neste momento esta rocha, este mar... a minha vida e a tua. O mar vem, o mar vai, nele há o gesto violento de quem maltrata e, após, se arrepende e recua. Como compreendo bem da rocha o sentimento! São muito iguais, por certo, a minha mágoa e a sua. Contemplo neste quadro a nossa triste vida; tu és dúbio mar que, na sua inconsciência, tem carinhos de amor e fúrias de demência! Eu sou a dor estanque, a dor empedernida, sou rocha a emergir de um côncavo de areia, imóvel, muda, isenta e alheia ao mar, alheia. MACHADO, G. Poesia completa. Rio de Janeiro: Cátedra/MEC, 1978.\nNesse soneto, os traços da estética simbolista são resgatados pelo eu lírico ao",
+      "opcoes": [
+        "A) rejeitar as emoções de “amor” e “mágoa”.",
+        "B) expressar a dubiedade do olhar sobre o outro.",
+        "C) representar o “eu” e o “tu” como sujeitos volúveis.",
+        "D) associar a sua inconsciência a elementos da natureza.",
+        "E) metaforizar o conflito amoroso nas imagens de “mar” e “rocha”."
+      ],
+      "correta": "E",
+      "ano": 2025
+    },
+    {
+      "id": 2025242,
+      "pergunta": "Muitos pensam que narrativa curta é sinônimo de conto, perdendo de vista gêneros que, por tradição ruim, continuam à margem da nobreza. Acontece que o conto tem uma densidade específica, centrando-se na exemplaridade de um instante da condição humana, sem que essa exemplaridade se refira à valoração moral, já que uma grande mazela pode muito bem exemplificar uma das nossas faces. A crônica não tem essa característica. Conservou a marca do registro circunstancial feito por narrador-repórter que relata um fato para muitos leitores que formam um público determinado. Mas que público é esse? Sendo a crônica uma soma de jornalismo e literatura (daí a imagem do narrador-repórter), dirige-se a uma classe que tem preferência pelo jornal em que ela é publicada, o que significa uma espécie de censura ou, pelo menos, de limitação: a ideologia do veículo corresponde ao interesse dos seus consumidores, direcionados pelos proprietários dos periódicos e/ou pelos editores- -chefes da redação. Ocorre ainda o limite de espaço, uma vez que a página comporta várias matérias, o que impõe a cada uma delas um número restrito de laudas, obrigando o redator a explorar, da maneira mais econômica possível, o pequeno espaço de que dispõe. É dessa economia que nasce sua riqueza estrutural. SÁ, J. A crônica. São Paulo: Ática, 1987 (adaptado).\nDe acordo com esse texto, o aspecto tecnológico que influencia a composição do gênero crônica advém da",
+      "opcoes": [
+        "A) conexão ideológica.",
+        "B) densidade temática.",
+        "C) ênfase no público leitor.",
+        "D) apresentação de uma moral.",
+        "E) restrição espacial do suporte."
+      ],
+      "correta": "E",
+      "ano": 2025
+    },
+    {
+      "id": 2025047,
+      "pergunta": "TEXTO I Os Doze Trabalhos de Hércules Hércules é uma figura lendária da mitologia greco-romana. Ele é frequentemente retratado como um herói de força sobre-humana e coragem, filho de Zeus, o rei dos deuses, e Alcmena, uma mulher mortal. O episódio mais conhecido de Hércules é a realização dos Doze Trabalhos. Esses trabalhos são impostos a ele como uma forma de expiação pelos crimes cometidos durante um acesso de loucura, causado pela deusa Hera, esposa de Zeus. Os Doze Trabalhos são: matar o Leão de Nemeia; matar a Hidra de Lerna; capturar a corça de Cerineia; capturar o javali de Erimanto; limpar os estábulos de Áugias; matar as aves do lago Estínfalo; matar o touro de Creta; capturar os cavalos de Diomedes; roubar o cinturão de Hipólita, a rainha das Amazonas; capturar o gado de Gerião; capturar os pomos de ouro do Jardim das Hespérides; capturar o cão de Hades, Cérbero. HERTEL, R. Mitologia. Disponível em: https://osmelhoreslivros.com.br. Acesso em: 4 jun. 2025 (adaptado). TEXTO II Os Doze Trabalhos O que lhe faltava de estudo lhe sobrava de boa vontade e inteligência. No escritório improvisado na salinha da casa, anunciava seus serviços de bombeiro hidráulico e eletricista. Nas horas vagas entregava panfletos e lavava carros. Quando a cidade fervia com alguma festa, postava-se à entrada vendendo cerveja. Se fosse algum show infantil, cocadas. Aos sábados, era pedreiro e, aos domingos, conservava um jardim de uma mansão, além de tratar da piscina e dos cachorros. Nas férias, abrigava-se na fazenda dos donos da mansão, onde trabalhava como caseiro e motorista. Seu nome: João Antonio da Silva. Mas pode chamar de Hércules. FERREIRA, G. V. Os doze trabalhos. Disponível em: www.minicontos.com.br. Acesso em: 15 jul. 2015 (adaptado).\nA comparação entre os textos I e II indica que o(a)",
+      "opcoes": [
+        "A) intertextualidade com o mito apresentado no Texto I é um recurso presente no Texto II.",
+        "B) narração de fatos do Texto II sintetiza os acontecimentos retratados no Texto I.",
+        "C) vocabulário empregado no Texto II é ancorado em conhecimento literário.",
+        "D) tema do trabalho como reparação é abordado em ambos os textos.",
+        "E) marcação temporal no passado predomina em ambos os textos."
+      ],
+      "correta": "A",
+      "ano": 2025
     }
   ]
 };

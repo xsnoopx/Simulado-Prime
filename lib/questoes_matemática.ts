@@ -4445,6 +4445,136 @@ export const questoes = {
       ],
       "correta": "D",
       "ano": 2020
+    },
+    {
+      "id": 2024136,
+      "pergunta": "Uma empresa produz mochilas escolares sob encomenda. Essa empresa tem um custo total de produção, composto por um custo fixo, que não depende do número de mochilas, mais um custo variável, que é proporcional ao número de mochilas produzidas. O custo total cresce de forma linear, e a tabela apresenta esse custo para três quantidades de mochilas produzidas.\nQuantidade de mochilas: 30, 50 e 100. Custo total (R$): 1 050,00; 1 650,00 e 3 150,00.\nO custo total, em real, para a produção de 80 mochilas será",
+      "opcoes": [
+        "A) 2 400,00.",
+        "B) 2 520,00.",
+        "C) 2 550,00.",
+        "D) 2 700,00.",
+        "E) 2 800,00."
+      ],
+      "correta": "C",
+      "ano": 2024
+    },
+    {
+      "id": 2024137,
+      "pergunta": "A umidade relativa do ar é um dos indicadores utilizados na meteorologia para fazer previsões sobre o clima. O quadro apresenta as médias mensais, em porcentagem, da umidade relativa do ar em um período de seis meses consecutivos em uma cidade.\nMeses: maio, junho, julho, agosto, setembro e outubro. Média mensal da umidade relativa do ar (%): 66, 64, 54, 46, 60 e 64.\nNessa cidade, a mediana desses dados, em porcentagem, da umidade relativa do ar no período considerado foi",
+      "opcoes": [
+        "A) 56.",
+        "B) 58.",
+        "C) 59.",
+        "D) 60.",
+        "E) 62."
+      ],
+      "correta": "E",
+      "ano": 2024
+    },
+    {
+      "id": 2024154,
+      "pergunta": "Contratos de vários serviços disponíveis na internet apresentam uma quantidade excessiva de informações. Isso faz com que o tempo necessário para a leitura desses contratos possa ser longo.\nO quadro apresenta uma amostra do tempo considerado necessário para a leitura completa do contrato de alguns serviços digitais.\nTipo de serviço: A, B, C, D, E e F. Tempo necessário para a leitura completa do contrato (em minuto): 36, 17, 27, 13, 13 e 13, respectivamente.\nO tempo médio, em minuto, necessário para a leitura completa de um contrato de serviço dentre os listados no quadro é, com uma casa decimal, aproximadamente,",
+      "opcoes": [
+        "A) 13,0.",
+        "B) 15,0.",
+        "C) 19,8.",
+        "D) 20,0.",
+        "E) 23,3."
+      ],
+      "correta": "C",
+      "ano": 2024
+    },
+    {
+      "id": 2024166,
+      "pergunta": "Um artesão utiliza dois tipos de componentes, X e Y, nos enfeites que produz. Ele sempre compra todos os componentes em uma mesma loja. O quadro apresenta os preços dos dois tipos de componentes nas lojas I e II.\nLojas: I e II. Preços dos componentes (R$): na loja I, X custa 3,00 e Y custa 1,00; na loja II, X custa 2,00 e Y custa 4,00.\nEle confeccionará enfeites formados por duas unidades do componente X e uma unidade do componente Y e efetuará a compra na loja que oferecer o menor valor total para a confecção de um enfeite.\nO artesão efetuará a compra na loja",
+      "opcoes": [
+        "A) I, pois o valor é R$ 7,00.",
+        "B) I, pois o valor é R$ 4,00.",
+        "C) II, pois o valor é R$ 6,00.",
+        "D) I, pois anuncia o componente com o menor preço.",
+        "E) II, pois o componente X, que é o mais utilizado, tem menor preço."
+      ],
+      "correta": "A",
+      "ano": 2024
+    },
+    {
+      "id": 2024369,
+      "pergunta": "Uma criança, utilizando um aplicativo, escreveu uma mensagem para enviar a um amigo. Essa mensagem foi escrita seguindo estas etapas:\n1ª etapa: inseriu três figuras do tipo 🙂 no visor de escrita da mensagem;\n2ª etapa: copiou o que havia inserido anteriormente e colou (inseriu o que havia copiado) ao lado;\n3ª etapa: copiou o que tinha no visor na 2ª etapa e colou ao lado.\nA criança seguiu copiando e colando, em cada etapa, o que tinha no visor na etapa imediatamente anterior, até concluir a 20ª etapa. Em seguida, enviou a mensagem.\nQual foi o total de figuras contidas na mensagem enviada?",
+      "opcoes": [
+        "A) 3 × 2¹⁹",
+        "B) 3 × 2²⁰",
+        "C) 3 × 2²¹",
+        "D) 3 × 2²⁰ − 1",
+        "E) 3 × 2²⁰ − 3"
+      ],
+      "correta": "A",
+      "ano": 2024
+    },
+    {
+      "id": 2025418,
+      "pergunta": "Para acompanhar o fluxo de visitantes em seu prédio, uma empresa estabeleceu um código de identificação para a visitação. De acordo com a regra estabelecida, cada visitante será identificado com um código sequencial numérico com 7 dígitos, determinado, da esquerda para a direita, da seguinte forma: • o primeiro dígito indica o andar ao qual o visitante se dirige, que é um número de 1 a 4; • os dois próximos dígitos correspondem ao número do setor da empresa ao qual o visitante se destina. Esse número varia de 01 a 20; • os três dígitos seguintes correspondem ao número do funcionário da empresa com quem o visitante irá se reunir. Esse número varia de 001 a 135; • o último dígito indica se o visitante chegou à empresa pela manhã, dígito 0, ou à tarde, dígito 1. Um visitante chegou à empresa às 10 horas da manhã para se reunir com o funcionário identificado pelo número 109, que trabalha no setor 08 da empresa, localizado no 2º andar.\nO código de identificação desse visitante é",
+      "opcoes": [
+        "A) 0109082.",
+        "B) 0281090.",
+        "C) 1010982.",
+        "D) 2081090.",
+        "E) 2810910."
+      ],
+      "correta": "D",
+      "ano": 2025
+    },
+    {
+      "id": 2025419,
+      "pergunta": "Quatro candidatos se apresentaram para realizar a prova de um concurso. Antes de iniciar a prova, os celulares dos quatro candidatos foram recolhidos pelo aplicador, que os guardou, cada um, dentro de um envelope preto. Ao término da prova, o aplicador devolveu os quatro envelopes com os celulares aos quatro candidatos, de maneira aleatória, já que não havia feito a identificação dos envelopes.\nA probabilidade de que todos os candidatos tenham recebido de volta os envelopes com os seus respectivos celulares é",
+      "opcoes": [
+        "A) 1/2",
+        "B) 1/10",
+        "C) 1/16",
+        "D) 1/24",
+        "E) 1/256"
+      ],
+      "correta": "D",
+      "ano": 2025
+    },
+    {
+      "id": 2025229,
+      "pergunta": "O cortisol é um hormônio produzido pelas glândulas adrenais e pode ser considerado um importante marcador do estresse fisiológico. Em um estudo desenvolvido com enfermeiros, foi verificado que a concentração de cortisol salivar em um dia de trabalho, denotada por T, era, em média, 1,59 vezes a concentração de cortisol salivar em um dia de folga, denotada por F. ROCHA, M. C. P. et al. Estresse em enfermeiros: o uso do cortisol salivar no dia de trabalho e de folga. Rev. Esc. Enferm. USP, n. 5, 2013 (adaptado).\nNesse estudo, a relação obtida entre T e F foi",
+      "opcoes": [
+        "A) T = 1,59 + F",
+        "B) F = 1,59 + T",
+        "C) T/F = 1,59",
+        "D) F/T = 1,59",
+        "E) F ⋅ T = 1,59"
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025430,
+      "pergunta": "Um estacionamento possui 120 vagas para veículos, e todas essas vagas estão ocupadas. Cada cliente paga uma mensalidade para utilizar uma vaga, que é calculada com base nas despesas mensais do estacionamento e no lucro pretendido. As despesas mensais do estacionamento são: R$ 14 240,00 com manutenção mais R$ 36,00 de seguro por veículo. O lucro do estacionamento é determinado pela diferença do valor arrecadado com as mensalidades pelas despesas efetuadas. A partir do mês seguinte, o valor do seguro por veículo aumentará em 20%, e as despesas com manutenção permanecerão sem alterações. Com isso, o dono do estacionamento reajustará as mensalidades para obter um lucro mensal de R$ 10 000,00. Apesar desse reajuste, todas as vagas continuarão ocupadas.\nO valor, em real, da mensalidade reajustada será",
+      "opcoes": [
+        "A) 185,60.",
+        "B) 226,09.",
+        "C) 245,20.",
+        "D) 268,93.",
+        "E) 285,60."
+      ],
+      "correta": "C",
+      "ano": 2025
+    },
+    {
+      "id": 2025031,
+      "pergunta": "O dono de uma sorveteria armazena sorvete em potes de 20 000 cm3. Ele serve o sorvete em taças, em porções de 250 mL.\nA quantidade de taças que ele consegue servir a partir de um pote cheio de sorvete é",
+      "opcoes": [
+        "A) 5.",
+        "B) 8.",
+        "C) 50.",
+        "D) 80.",
+        "E) 800."
+      ],
+      "correta": "D",
+      "ano": 2025
     }
   ]
 };

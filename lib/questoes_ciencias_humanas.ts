@@ -6032,28 +6032,28 @@ export const questoes = {
       "correta": "E",
       "ano": 2025
     },
-    {
+        {
       "id": 2025050,
-      "pergunta": "O direito não é a justiça. O direito é o elemento do cálculo, é justo que haja um direito, mas a justiça é incalculável, ela exige que se calcule o incalculável e as experiências teoréticas são superficiais. Isso improvável, quanto necessária. Da justiça, isto é, são momentos em que a decisão entre o justo e o injusto nunca é garantida por uma regra. DERRIDA, J. Força de lei. São Paulo: Martins Fontes, 2010 (adaptado).",
+      "pergunta": "O direito não é a justiça. O direito é o elemento do cálculo, é justo que haja um direito, mas a justiça é incalculável, ela exige que se calcule o incalculável; e as experiências aporéticas são experiências tão improváveis quanto necessárias da justiça, isto é, são momentos em que a decisão entre o justo e o injusto nunca é garantida por uma regra. DERRIDA, J. Força de lei. São Paulo: Martins Fontes, 2010 (adaptado).\nDe acordo com o texto, ainda que estejam em desconformidade com o ordenamento jurídico, são exemplos de ação justa:",
       "opcoes": [
-        "A) a dimensão do comprometimento coletivo.",
-        "B) a importância da memória coletiva.",
-        "C) a redução da mobilidade urbana.",
-        "D) a efemeridade dos vínculos de afetividade.",
-        "E) a obsolescência dos meios de comunicação."
+        "A) Casos de desobediência civil.",
+        "B) Repressões do aparato estatal.",
+        "C) Conflitos de natureza intercontinental.",
+        "D) Manifestações do movimento sindical.",
+        "E) Mobilizações de agremiações estudantis."
       ],
       "correta": "A",
       "ano": 2025
     },
-    {
+        {
       "id": 2025051,
-      "pergunta": "Sinal fechadoOlá, como vai? Eu vou indo e você, tudo bem? Tudo bem, eu vou indo, correndoPegar meu lugar no futuro, e você? Tudo bem, eu vou indo em buscaDe um sono tranquilo, quem sabe? Quanto tempo? Pois é, quanto tempo... Me perdoe a pressaE a alma dos nossos negócios... Ok, não tem de quêEu também só ando a cemQuando é que você telefona? Precisamos nos ver por aíPra semana, prometo,Talvez nos vejamos, quem sabe? Quanto tempo... Pois é, quanto tempo... Tanta coisa que eu tinha a dizerMas eu sumi na poeira das ruasEu também tenho algo a dizerMas me logo, lembrei-mePor favor, telefone, eu preciso beberAlguma coisa rapidamentePra semana... O sinal... Eu procuro você... Vai abrir! Vai abrir! Prometo, não esqueçoPor favor, não esqueçoNão esqueço, não esqueçoAdeus... PAULINHO DA VIOLA. Foi um rio que passou em minha vida. Rio de Janeiro: Odeon, 1970.\nDe acordo com o texto, ainda que estejam em desconformidade com o ordenamento jurídico, são exemplos de ação justa:",
+      "pergunta": "Sinal fechado Olá, como vai? Eu vou indo e você, tudo bem? Tudo bem, eu vou indo, correndo Pegar meu lugar no futuro, e você? Tudo bem, eu vou indo em busca De um sono tranquilo, quem sabe? Quanto tempo... Pois é, quanto tempo... Me perdoe a pressa É a alma dos nossos negócios... Oh, não tem de que Eu também só ando a cem Quando é que você telefona? Precisamos nos ver por aí Pra semana, prometo, Talvez nos vejamos, quem sabe? Quanto tempo... Pois é, quanto tempo... Tanta coisa que eu tinha a dizer Mas eu sumi na poeira das ruas Eu também tenho algo a dizer Mas me foge a lembrança Por favor, telefone, eu preciso beber Alguma coisa rapidamente Pra semana... O sinal... Eu procuro você... Vai abrir! Vai abrir! Prometo, não esqueço Por favor, não esqueça Não esqueço, não esqueço Adeus... PAULINHO DA VIOLA. Foi um rio que passou em minha vida. Rio de Janeiro: Odeon, 1970.\nA letra da canção apresenta a permanência de uma situação da vida cotidiana ao destacar a",
       "opcoes": [
-        "A) Casos de desobediência civil.",
-        "B) Representações do aparato estatal.",
-        "C) Conflitos de natureza intercontinental.",
-        "D) Manifestações do movimento sindical.",
-        "E) Mobilizações de agremiações estudantis."
+        "A) diminuição do comportamento competitivo.",
+        "B) importância da memória coletiva.",
+        "C) redução da mobilidade urbana.",
+        "D) efemeridade dos vínculos de afetividade.",
+        "E) obsolescência dos meios de comunicação."
       ],
       "correta": "D",
       "ano": 2025
