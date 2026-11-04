@@ -8748,6 +8748,903 @@ export const questoes = {
       ],
       "correta": "B",
       "ano": 2024
+    },
+    {
+      "id": 2010006,
+      "pergunta": "Muitos processos erosivos se concentram nas encostas, principalmente aqueles motivados pela água e pelo vento. No entanto, os reflexos também são sentidos nas áreas de baixada, onde geralmente há ocupação urbana. TEIXEIRA, W. et al. (Orgs). Decifrando a Terra. São Paulo: Companhia Editora Nacional, 2009.\nUm exemplo desses reflexos na vida cotidiana de muitas cidades brasileiras é",
+      "opcoes": [
+        "a maior ocorrência de enchentes, já que os rios assoreados comportam menos água em seus leitos.",
+        "a contaminação da população pelos sedimentos trazidos pelo rio e carregados de matéria orgânica.",
+        "o desgaste do solo nas áreas urbanas, causado pela redução do escoamento superficial pluvial na encosta.",
+        "a maior facilidade de captação de água potável para o abastecimento público, já que é maior o efeito do escoamento sobre a infiltração.",
+        "o aumento da incidência de doenças como a amebíase na população urbana, em decorrência do escoamento de água poluída do topo das encostas."
+      ],
+      "correta": "A",
+      "ano": 2010
+    },
+    {
+      "id": 2010028,
+      "pergunta": "Em nosso país queremos substituir o egoísmo pela moral, a honra pela probidade, os usos pelos princípios, as conveniências pelos deveres, a tirania da moda pelo império da razão, o desprezo à desgraça pelo desprezo ao vício, a insolência pelo orgulho, a vaidade pela grandeza de alma, o amor ao dinheiro pelo amor à glória, a boa companhia pelas boas pessoas, a intriga pelo mérito, o espirituoso pelo gênio, o brilho pela verdade, o tédio da volúpia pelo encanto da felicidade, a mesquinharia dos grandes pela grandeza do homem. HUNT, L. Revolução Francesa e Vida Privada. in: PERROT, M. (Org). História da Vida Privada: da Revolução Francesa à Primeira Guerra. Vol.4. São Paulo: Companhia das Letras,1991(adaptado).\nO discurso de Robespierre, de 5 de fevereiro de 1794, do qual o trecho transcrito é parte, relaciona-se a qual dos grupos político-sociais envolvidos na Revolução Francesa?",
+      "opcoes": [
+        "À alta burguesia, que desejava participar do poder legislativo francês como força política dominante.",
+        "Ao clero francês, que desejava justiça social e era ligado à alta burguesia.",
+        "A militares oriundos da pequena e média burguesia, que derrotaram as potências rivais e queriam reorganizar a França internamente.",
+        "À nobreza esclarecida, que, em função do seu contato com os intelectuais iluministas, desejava extinguir o absolutismo francês.",
+        "Aos representantes da pequena e média burguesia e das camadas populares, que desejavam justiça social e direitos políticos."
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2010045,
+      "pergunta": "A poluição e outras ofensas ambientais ainda não tinham esse nome, mas já eram largamente notadas no século XIX, nas grandes cidades inglesas e continentais. E a própria chegada ao campo das estradas de ferro suscitou protestos. A reação antimaquinista, protagonizada pelos diversos luddismos, antecipa a batalha atual dos ambientalistas. Esse era, então, o combate social contra os miasmas urbanos. SANTOS, M. A natureza do espaço: técnica e tempo, razão e emoção. São Paulo: EDUSP, 2002 (adaptado).\nO crescente desenvolvimento técnico-produtivo impõe modificações na paisagem e nos objetos culturais vivenciados pelas sociedades. De acordo com o texto, pode-se dizer que tais movimentos sociais emergiram e se expressaram por meio",
+      "opcoes": [
+        "das ideologias conservacionistas, com milhares de adeptos no meio urbano.",
+        "das políticas governamentais de preservação dos objetos naturais e culturais.",
+        "das teorias sobre a necessidade de harmonização entre técnica e natureza.",
+        "dos boicotes aos produtos das empresas exploradoras e poluentes.",
+        "da contestação à degradação do trabalho, das tradições e da natureza."
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2011033,
+      "pergunta": "O açúcar e suas técnicas de produção foram levados à Europa pelos árabes no século VIII, durante a Idade Média, mas foi principalmente a partir das Cruzadas (séculos XI e XIII) que a sua procura foi aumentando. Nessa época passou a ser importado do Oriente Médio e produzido em pequena escala no sul da Itália, mas continuou a ser um produto de luxo, extremamente caro, chegando a figurar nos dotes de princesas casadoiras. CAMPOS, R. Grandeza do Brasil no tempo de Antonil (1681-1716). São Paulo: Atual, 1996.\nConsiderando o conceito do Antigo Sistema Colonial, o açúcar foi o produto escolhido por Portugal para dar início à colonização brasileira, em virtude de",
+      "opcoes": [
+        "o lucro obtido com o seu comércio ser muito vantajoso.",
+        "os árabes serem aliados históricos dos portugueses.",
+        "a mão de obra necessária para o cultivo ser insuficiente.",
+        "as feitorias africanas facilitarem a comercialização desse produto.",
+        "os nativos da América dominarem uma técnica de cultivo semelhante."
+      ],
+      "correta": "A",
+      "ano": 2011
+    },
+    {
+      "id": 2015001,
+      "pergunta": "Em 1881, a Câmara dos Deputados aprovou uma reforma na lei eleitoral brasileira, a fim de introduzir o voto direto. A grande novidade, porém, ficou por conta da exigência de que os eleitores soubessem ler e escrever. As consequências logo se refletiram nas estatísticas. Em 1872, havia mais de 1 milhão de votantes, já em 1886, pouco mais de 100 mil cidadãos participaram das eleições parlamentares. Houve um corte de quase 90 por cento do eleitorado. CARVALHO, J. M. Cidadania no Brasil: o longo caminho. Rio de Janeiro: Civilização Brasileira, 2006 (adaptado).\nNas últimas décadas do século XIX, o Império do Brasil passou por transformações como as descritas, que representaram a",
+      "opcoes": [
+        "ascensão dos “homens bons”.",
+        "restrição dos direitos políticos.",
+        "superação dos currais eleitorais.",
+        "afirmação do eleitorado monarquista.",
+        "ampliação da representação popular."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015002,
+      "pergunta": "Em 1943, Getúlio Vargas criou o Departamento de Propaganda e Difusão Cultural junto ao Ministério da Justiça, esvaziando o Ministério da Educação não só da propaganda, mas também do rádio e do cinema. A decisão tinha como objetivo colocar os meios de comunicação de massa a serviço direto do Poder Executivo, iniciativa que tinha inspiração direta no recém-criado Ministério da Propaganda alemão. CAPELATO, M. H. Propaganda política e controle dos meios de comunicação. Rio de Janeiro: FGV, 1999.\nNo contexto citado, a transferência de funções entre ministérios teve como finalidade o(a)",
+      "opcoes": [
+        "desativação de um sistema tradicional de comunicação voltado para a educação.",
+        "controle do conteúdo da informação por meio de uma orientação política e ideológica.",
+        "subordinação do Ministério da Educação ao Ministério da Justiça e ao Poder Executivo.",
+        "ampliação do raio de atuação das emissoras de rádio como forma de difusão da cultura popular.",
+        "demonstração de força política do Executivo diante de ministérios herdados do governo anterior."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015003,
+      "pergunta": "A população negra teve que enfrentar sozinha o desafio da ascensão social, e frequentemente procurou fazê-lo por rotas originais, como o esporte, a música e a dança. Esporte, sobretudo o futebol, música, sobretudo o samba, e dança, sobretudo o carnaval, foram os principais canais de ascensão social dos negros até recentemente. A libertação dos escravos não trouxe consigo a igualdade efetiva. Essa igualdade era afirmada nas leis, mas negada na prática. Ainda hoje, apesar das leis, aos privilégios e arrogâncias de poucos correspondem o desfavorecimento e a humilhação de muitos. CARVALHO, J. M. Cidadania no Brasil: o longo caminho. Rio de Janeiro: Civilização Brasileira, 2006 (adaptado).\nEm relação ao argumento de que no Brasil existe uma democracia racial, o autor demonstra que",
+      "opcoes": [
+        "essa ideologia equipara a nação a outros países modernos.",
+        "esse modelo de democracia foi possibilitado pela miscigenação.",
+        "essa peculiaridade nacional garantiu mobilidade social aos negros.",
+        "esse mito camuflou formas de exclusão em relação aos afrodescendentes.",
+        "essa dinâmica política depende da participação ativa de todas as etnias."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015006,
+      "pergunta": "A crescente conscientização sobre os efeitos do modelo intensivo de produção, adotado de forma geral na agricultura, tem gerado também uma série de reações. De fato, a agricultura está cada vez mais pressionada pelo conjunto de relações que mantém com a sociedade em geral, sendo emergente o que comumente se denomina “questão ambiental”. Essas relações, às vezes de dependência, às vezes de conflito, são as que determinam uma chamada ampla para mudanças orientadas à sustentabilidade, não só da atividade agrícola em si, senão que afete de maneira geral a todo o entorno no qual a agricultura está inserida. GOMES, J. C. C. Desenvolvimento rural, transição de formatos tecnológicos, elaboração social da qualidade, interdisciplinaridade e participação. In: PORTO, V. H.; WIZNIEWSKY, C. R. F. ; SIMICH, T. (Org.). Agricultor familiar: sujeito de um novo método de pesquisa, o participativo. Pelotas: Embrapa, 2004.\nNo texto, faz-se referência a um tipo de pressão da sociedade contemporânea sobre a agricultura. Essa pressão objetiva a seguinte transformação na atividade agrícola:",
+      "opcoes": [
+        "Ampliação de políticas de financiamento voltadas para a produção de transgênicos.",
+        "Modernização do modo de produção focado na alta produtividade da terra.",
+        "Expansão do agronegócio relacionado ao mercado consumidor externo.",
+        "Promoção de práticas destinadas à conservação de recursos naturais.",
+        "Inserção de modelos orientados ao uso intensivo de agroquímicos."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015007,
+      "pergunta": "Uma dimensão da flexibilização do tempo de trabalho é a sutileza cada vez maior das fronteiras que separam o espaço de trabalho e o do lar, o tempo de trabalho e o de não trabalho. Os mecanismos modernos de comunicação permitem que, no horário de descanso, os trabalhadores permaneçam ligados à empresa. Mesmo não exercendo diretamente suas atividades profissionais, o trabalhador fica à disposição da empresa ou leva problemas para refletir em casa. É muito comum o trabalhador estar de plantão, para o caso de a empresa ligar para o seu celular ou pager. A remuneração para esse estado de alerta é irrisória ou inexistente. KREIN, J. D. Mudanças e tendências recentes na regulação do trabalho. In: DEDECCA, C. S.; PRONI, M. W. (Org.). Políticas públicas e trabalho: textos para estudo dirigido. Campinas: IE/Unicamp; Brasília: MTE, 2006 (adaptado).\nA relação entre mudanças tecnológicas e tempo de trabalho apresentada pelo texto implica o",
+      "opcoes": [
+        "prolongamento da jornada de trabalho com a intensificação da exploração.",
+        "aumento da fragmentação da produção com a racionalização do trabalho.",
+        "privilégio de funcionários familiarizados com equipamentos eletrônicos.",
+        "crescimento da contratação de mão de obra pouco qualificada.",
+        "declínio dos salários pagos aos empregados mais idosos."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015008,
+      "pergunta": "O reconhecimento da união homoafetiva levou o debate à esfera pública, dividindo opiniões. Apesar da grande repercussão gerada pela mídia, a população ainda não se faz suficientemente esclarecida, confundindo o conceito de união estável com casamento. Apesar de ter sido legitimado pelo Supremo Tribunal Federal (STF), o reconhecimento da união homoafetiva é fruto do protagonismo dos movimentos sociais como um todo. ARÊDES, N.; SOUZA, I.; FERREIRA, E. Disponível em: http://reporterpontocom.wordpress.com. Acesso em: 1 mar. 2012 (adaptado).\nAs decisões em favor das minorias, tomadas pelo Poder Judiciário, foram possíveis pela organização desses grupos. Ainda que não sejam assimiladas por toda a população, essas mudanças",
+      "opcoes": [
+        "contribuem para a manutenção da ordem social.",
+        "reconhecem a legitimidade desses pleitos.",
+        "dependem da iniciativa do Poder Legislativo Federal.",
+        "resultam na celebração de um consenso político.",
+        "excedem o princípio da isonomia jurídica."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015011,
+      "pergunta": "Decreto-lei 3.509, de 12 de setembro de 1865 Art. 1º – O cidadão guarda-nacional que por si apresentar outra pessoa para o serviço do Exército por tempo de nove anos, com a idoneidade regulada pelas leis militares, ficará isento não só do recrutamento, senão também do serviço da Guarda Nacional. O substituído é responsável por o que o substituiu, no caso de deserção. Arquivo Histórico do Exército. Ordem do dia do Exército, n. 455, 1865 (adaptado). No artigo, tem-se um dos mecanismos de formação dos “Voluntários da Pátria”, encaminhados para lutar na Guerra do Paraguai. Tal prática passou a ocorrer com muita frequência no Brasil nesse período e indica o(a)",
+      "opcoes": [
+        "forma como o Exército brasileiro se tornou o mais bem equipado da América do Sul.",
+        "incentivo dos grandes proprietários à participação dos seus filhos no conflito.",
+        "solução adotada pelo país para aumentar o contingente de escravos no conflito.",
+        "envio de escravos para os conflitos armados, visando sua qualificação para o trabalho.",
+        "fato de que muitos escravos passaram a substituir seus proprietários em troca de liberdade."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015013,
+      "pergunta": "O acúmulo gradual de sais nas camadas superiores do solo, um processo chamado salinização, retarda o crescimento das safras, diminui a produção das culturas e, consequentemente, mata as plantas e arruína o solo. A salinização mais grave ocorre na Ásia, em especial na China, na Índia e no Paquistão. MILLER, G. Ciência ambiental. São Paulo: Thomson, 2007.\nO fenômeno descrito no texto representa um grande impacto ambiental em áreas agrícolas e tem como causa direta o(a)",
+      "opcoes": [
+        "rotação de cultivos.",
+        "associação de culturas.",
+        "plantio em curvas de nível.",
+        "manipulação genética das plantas.",
+        "instalação de sistemas de irrigação."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015014,
+      "pergunta": "Os nossos ancestrais dedicavam-se à caça, à pesca e à coleta de frutas e vegetais, garantindo sua subsistência, porque ainda não conheciam as práticas de agricultura e pecuária. Uma vez esgotados os alimentos, viam-se obrigados a transferir o acampamento para outro lugar. HALL, P. P. Gestão ambiental. São Paulo: Pearson, 2011 (adaptado).\nO texto refere-se ao movimento migratório denominado",
+      "opcoes": [
+        "sedentarismo.",
+        "transumância.",
+        "êxodo rural.",
+        "nomadismo.",
+        "pendularismo."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015016,
+      "pergunta": "Dubai é uma cidade-estado planejada para estarrecer os visitantes. São tamanhos e formatos grandiosos, em hotéis e centros comerciais reluzentes, numa colagem de estilos e atrações que parece testar diariamente os limites da arquitetura voltada para o lazer. O maior shopping do tórrido Oriente Médio abriga uma pista de esqui, a orla do Golfo Pérsico ganha milionárias ilhas artificiais, o centro financeiro anuncia para breve a torre mais alta do mundo (a Burj Dubai) e tem ainda o projeto de um campo de golfe coberto! Coberto e refrigerado, para usar com sol e chuva, inverno e verão. Disponível em: http://viagem.uol.com.br. Acesso em: 30 jul. 2012 (adaptado).\nNo texto, são descritas algumas características da paisagem de uma cidade do Oriente Médio. Essas características descritas são resultado do(a)",
+      "opcoes": [
+        "criação de territórios políticos estratégicos.",
+        "preocupação ambiental pautada em decisões governamentais.",
+        "utilização de tecnologia para transformação do espaço.",
+        "demanda advinda da extração local de combustíveis fósseis.",
+        "emprego de recursos públicos na redução de desigualdades sociais."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015017,
+      "pergunta": "Sabe-se o que era a mata do Nordeste, antes da monocultura da cana: um arvoredo tanto e tamanho e tão basto e de tantas prumagens que não podia homem dar conta. O canavial desvirginou todo esse mato grosso do modo mais cru: pela queimada. A fogo é que foram se abrindo no mato virgem os claros por onde se estendeu o canavial civilizador, mas ao mesmo tempo devastador. FREYRE, G. Nordeste. São Paulo: Global, 2004 (adaptado).\nAnalisando os desdobramentos da atividade canavieira sobre o meio físico, o autor salienta um paradoxo, caracterizado pelo(a)",
+      "opcoes": [
+        "demanda de trabalho, que favorecia a escravidão.",
+        "modelo civilizatório, que acarretou danos ambientais.",
+        "rudimento das técnicas produtivas, que eram ineficientes.",
+        "natureza da atividade econômica, que concentrou riqueza.",
+        "predomínio da monocultura, que era voltada para exportação."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015018,
+      "pergunta": "Na sociedade democrática, as opiniões de cada um não são fortalezas ou castelos para que neles nos encerremos como forma de autoafirmação pessoal. Não só temos de ser capazes de exercer a razão em nossas argumentações, como também devemos desenvolver a capacidade de ser convencidos pelas melhores razões. A partir dessa perspectiva, a verdade buscada é sempre um resultado, não ponto de partida: e essa busca inclui a conversação entre iguais, a polêmica, o debate, a controvérsia. SAVATER, F. As perguntas da vida. São Paulo: Martins Fontes, 2001 (adaptado).\nA ideia de democracia presente no texto, baseada na concepção de Habermas acerca do discurso, defende que a verdade é um(a)",
+      "opcoes": [
+        "alvo objetivo alcançável por cada pessoa, como agente racional autônomo.",
+        "critério acima dos homens, de acordo com o qual podemos julgar quais opiniões são as melhores.",
+        "construção da atividade racional de comunicação entre os indivíduos, cujo resultado é um consenso.",
+        "produto da razão, que todo indivíduo traz latente desde o nascimento, mas que só se firma no processo educativo.",
+        "resultado que se encontra mais desenvolvido nos espíritos elevados, a quem cabe a tarefa de convencer os outros."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015019,
+      "pergunta": "Colonizar, afirmava, em 1912, um eminente jurista, “é relacionar-se com os países novos para tirar benefícios dos recursos de qualquer natureza desses países, aproveitá-los no interesse nacional, e ao mesmo tempo levar às populações primitivas as vantagens da cultura intelectual, social, científica, moral, artística, literária, comercial e industrial, apanágio das raças superiores. A colonização é, pois, um estabelecimento fundado em país novo por uma raça de civilização avançada, para realizar o duplo fim que acabamos de indicar”. MÉRIGNHAC. Précis de législation et d´économie coloniales. Apud LINHARES, M. Y. A luta contra a Metrópole (Ásia e África). São Paulo: Brasiliense, 1981.\nA definição de colonização apresentada no texto tinha a função ideológica de",
+      "opcoes": [
+        "dissimular a prática da exploração mediante a ideia de civilização.",
+        "compensar o saque das riquezas mediante a educação formal dos colonos.",
+        "formar uma identidade colonial mediante a recuperação de sua ancestralidade.",
+        "reparar o atraso da Colônia mediante a incorporação dos hábitos da Metrópole.",
+        "promover a elevação cultural da Colônia mediante a incorporação de tradições metropolitanas."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015020,
+      "pergunta": "TEXTO I Não é possível passar das trevas da ignorância para a luz da ciência a não ser lendo, com um amor sempre mais vivo, as obras dos Antigos. Ladrem os cães, grunhem os porcos! Nem por isso deixarei de ser um seguidor dos Antigos. Para eles irão todos os meus cuidados e, todos os dias, a aurora me encontrará entregue ao seu estudo. BLOIS, P. Apud PEDRERO SÁNCHEZ, M. G. História da Idade Média: texto e testemunhas. São Paulo: Unesp, 2000. TEXTO II A nossa geração tem arraigado o defeito de recusar admitir tudo o que parece vir dos modernos. Por isso, quando descubro uma ideia pessoal e quero torná-la pública, atribuo-a a outrem e declaro: — Foi fulano de tal que o disse, não sou eu. E para que acreditem totalmente nas minhas opiniões, digo: — O inventor foi fulano de tal, não sou eu. BATH, A. Apud PEDRERO SÁNCHEZ, M. G. História da Idade Média: texto e testemunhas. São Paulo: Unesp, 2000.\nNos textos são apresentados pontos de vista distintos sobre as mudanças culturais ocorridas no século XII no Ocidente. Comparando os textos, os autores discutem o(a)",
+      "opcoes": [
+        "produção do conhecimento face à manutenção dos argumentos de autoridade da Igreja.",
+        "caráter dinâmico do pensamento laico frente à estagnação dos estudos religiosos.",
+        "surgimento do pensamento científico em oposição à tradição teológica cristã.",
+        "desenvolvimento do racionalismo crítico ao opor fé e razão.",
+        "construção de um saber teológico científico."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015021,
+      "pergunta": "Suponha homens numa morada subterrânea, em forma de caverna, cuja entrada, aberta à luz, se estende sobre todo o comprimento da fachada; eles estão lá desde a infância, as pernas e o pescoço presos por correntes, de tal sorte que não podem trocar de lugar e só podem olhar para frente, pois os grilhões os impedem de voltar a cabeça; a luz de uma fogueira acesa ao longe, numa elevada do terreno, brilha por detrás deles; entre a fogueira e os prisioneiros, há um caminho ascendente; ao longo do caminho, imagine um pequeno muro, semelhante aos tapumes que os manipuladores de marionetes armam entre eles e o público e sobre os quais exibem seus prestígios. PLATÃO. A República. Lisboa: Fundação Calouste Gulbenkian, 2007.\nEssa narrativa de Platão é uma importante manifestação cultural do pensamento grego antigo, cuja ideia central, do ponto de vista filosófico, evidencia o(a)",
+      "opcoes": [
+        "caráter antropológico, descrevendo as origens do homem primitivo.",
+        "sistema penal da época, criticando o sistema carcerário da sociedade ateniense.",
+        "vida cultural e artística, expressa por dramaturgos trágicos e cômicos gregos.",
+        "sistema político elitista, provindo do surgimento da pólis e da democracia ateniense.",
+        "teoria do conhecimento, expondo a passagem do mundo ilusório para o mundo das ideias."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015024,
+      "pergunta": "Se os nossos adversários, que admitem a existência de uma natureza não criada por Deus, o Sumo Bem, quisessem admitir que essas considerações estão certas, deixariam de proferir tantas blasfêmias, como a de atribuir a Deus tanto a autoria dos bens quanto dos males. Pois sendo Ele fonte suprema da Bondade, nunca poderia ter criado aquilo que é contrário à sua natureza. AGOSTINHO. A natureza do Bem. Rio de Janeiro: Sétimo Selo, 2005 (adaptado).\nPara Agostinho, não se deve atribuir a Deus a origem do mal porque",
+      "opcoes": [
+        "o surgimento do mal é anterior à existência de Deus.",
+        "o mal, enquanto princípio ontológico, independe de Deus.",
+        "Deus apenas transforma a matéria, que é, por natureza, má.",
+        "por ser bom, Deus não pode criar o que lhe é oposto, o mal.",
+        "Deus se limita a administrar a dialética existente entre o bem e o mal."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015023,
+      "pergunta": "Em 1960, os 20% mais ricos da população mundial dispunham de um capital trinta vezes mais elevado do que o dos 20% mais pobres, o que já era escandaloso. Mas, ao invés de melhorar, a situação ainda se agravou. Hoje, o capital dos ricos em relação ao dos pobres é, não mais trinta, mas oitenta e duas vezes mais elevado. RAMONET, I. Guerras do século XXI: novos temores e novas ameaças. Petrópolis: Vozes, 2003 (adaptado).\nQue característica socioeconômica está expressa no texto?",
+      "opcoes": [
+        "Expansão demográfica.",
+        "Homogeneidade social.",
+        "Concentração de renda.",
+        "Desemprego conjuntural.",
+        "Desenvolvimento econômico."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015025,
+      "pergunta": "TEXTO I A melhor banda de todos os tempos da última semana O melhor disco brasileiro de música americana O melhor disco dos últimos anos de sucessos do passado O maior sucesso de todos os tempos entre os dez maiores fracassos Não importa contradição O que importa é televisão Dizem que não há nada que você não se acostume Cala a boca e aumenta o volume então. MELLO, B.; BRITTO, S. A melhor banda de todos os tempos da última semana. São Paulo: Abril Music, 2001 (fragmento). TEXTO II O fetichismo na música e a regressão da audição Aldous Huxley levantou em um de seus ensaios a seguinte pergunta: quem ainda se diverte realmente hoje num lugar de diversão? Com o mesmo direito poder-se-ia perguntar: para quem a música de entretenimento serve ainda como entretenimento? Ao invés de entreter, parece que tal música contribui ainda mais para o emudecimento dos homens, para a morte da linguagem como expressão, para a incapacidade de comunicação. ADORNO, T. Textos escolhidos. São Paulo: Nova Cultural, 1999.\nA aproximação entre a letra da canção e a crítica de Adorno indica o(a)",
+      "opcoes": [
+        "lado efêmero e restritivo da indústria cultural.",
+        "baixa renovação da indústria de entretenimento.",
+        "influência da música americana na cultura brasileira.",
+        "fusão entre elementos da indústria cultural e da cultura popular.",
+        "declínio da forma musical em prol de outros meios de entretenimento."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015026,
+      "pergunta": "A pura lealdade na amizade, embora até o presente não tenha existido nenhum amigo leal, é imposta a todo homem, essencialmente, pelo fato de tal dever estar implicado como dever em geral, anteriormente a toda experiência, na ideia de uma razão que determina a vontade segundo princípios a priori. KANT, I. Fundamentação da metafísica dos costumes. São Paulo: Barcarolla, 2009.\nA passagem citada expõe um pensamento caracterizado pela",
+      "opcoes": [
+        "eficácia prática da razão empírica.",
+        "transvaloração dos valores judaico-cristãos.",
+        "recusa em fundamentar a moral pela experiência.",
+        "comparação da ética a uma ciência de rigor matemático.",
+        "importância dos valores democráticos nas relações de amizade."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015027,
+      "pergunta": "A conquista pelos ingleses de grandes áreas da Índia deu o impulso inicial à produção e venda organizada de ópio. A Companhia das Índias Orientais obteve o monopólio da compra do ópio indiano e depois vendeu licenças para mercadores selecionados, conhecidos como “mercadores nativos”. Depois de vender ópio na China, esses mercadores depositavam a prata que recebiam por ele com agentes da companhia em Cantão, em troca de cartas de crédito; a companhia, por sua vez, usava a prata para comprar chá, porcelana e outros artigos que seriam vendidos na Inglaterra. SPENCE, J. Em busca da China moderna. São Paulo: Cia. das Letras, 1996 (adaptado).\nA análise das trocas comerciais citadas permite interpretar as relações de poder que foram estabelecidas. A partir desse pressuposto, o processo sócio-histórico identificado no texto é",
+      "opcoes": [
+        "a expansão político-econômica de países do Oriente, iniciada nas últimas décadas do século XX.",
+        "a consolidação do cenário político entreguerras, na primeira metade do século XX.",
+        "o colonialismo europeu, que marcou a expansão europeia no século XV.",
+        "o imperialismo, cujo ápice ocorreu na segunda metade do século XIX.",
+        "as libertações nacionais, ocorridas na segunda metade do século XX."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015029,
+      "pergunta": "Não acho que seja possível identificar a globalização apenas com a criação de uma economia global, embora este seja seu ponto focal e sua característica mais óbvia. Precisamos olhar além da economia. Antes de tudo, a globalização depende da eliminação de obstáculos técnicos, não de obstáculos econômicos. Isso tornou possível organizar a produção, e não apenas o comércio, em escala internacional. HOBSBAWM, E. O novo século: entrevista a Antonio Polito. São Paulo: Cia. das Letras, 2000 (adaptado).\nUm fator essencial para a organização da produção, na conjuntura destacada no texto, é a",
+      "opcoes": [
+        "criação de uniões aduaneiras.",
+        "difusão de padrões culturais.",
+        "melhoria na infraestrutura de transportes.",
+        "supressão das barreiras para comercialização.",
+        "organização de regras nas relações internacionais."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015030,
+      "pergunta": "Após ter examinado cuidadosamente todas as coisas, cumpre enfim concluir e ter por constante que esta proposição, eu sou, eu existo, é necessariamente verdadeira todas as vezes que a enuncio ou que a concebo em meu espírito. DESCARTES, R. Meditações. Pensadores. São Paulo: Abril Cultural, 1979.\nA proposição “eu sou, eu existo” corresponde a um dos momentos mais importantes na ruptura da filosofia do século XVII com os padrões da reflexão medieval, por",
+      "opcoes": [
+        "estabelecer o ceticismo como opção legítima.",
+        "utilizar silogismos linguísticos como prova ontológica.",
+        "inaugurar a posição teórica conhecida como empirismo.",
+        "estabelecer um princípio indubitável para o conhecimento.",
+        "questionar a relação entre a filosofia e o tema da existência de Deus."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015031,
+      "pergunta": "O impulso para o ganho, a perseguição do lucro, do dinheiro, da maior quantidade possível de dinheiro não tem, em si mesma, nada que ver com o capitalismo. Tal impulso existe e sempre existiu. Pode-se dizer que tem sido comum a toda sorte e condição humanas em todos os tempos e em todos os países, sempre que se tenha apresentada a possibilidade objetiva para tanto. O capitalismo, porém, identifica-se com a busca do lucro, do lucro sempre renovado por meio da empresa permanente, capitalista e racional. Pois assim deve ser: numa ordem completamente capitalista da sociedade, uma empresa individual que não tirasse vantagem das oportunidades de obter lucros estaria condenada à extinção. WEBER, M. A ética protestante e o espírito do capitalismo. São Paulo: Martin Claret, 2001 (adaptado).\nO capitalismo moderno, segundo Max Weber, apresenta como característica fundamental a",
+      "opcoes": [
+        "competitividade decorrente da acumulação de capital.",
+        "implementação da flexibilidade produtiva e comercial.",
+        "ação calculada e planejada para obter rentabilidade.",
+        "socialização das condições de produção.",
+        "mercantilização da força de trabalho."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015033,
+      "pergunta": "A humanidade conhece, atualmente, um fenômeno espacial novo: pela primeira vez na história humana, a população urbana ultrapassa a rural no mundo. Todavia, a urbanização é diferenciada entre os continentes. DURAND, M. F. et al. Atlas da mundialização: compreender o espaço mundial contemporâneo. São Paulo: Saraiva, 2009.\nNo texto, faz-se referência a um processo espacial de escala mundial. Um indicador das diferenças continentais desse processo espacial está presente em:",
+      "opcoes": [
+        "Orientação política de governos locais.",
+        "Composição religiosa de povos originais.",
+        "Tamanho desigual dos espaços ocupados.",
+        "Distribuição etária dos habitantes do território.",
+        "Grau de modernização de atividades econômicas."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015035,
+      "pergunta": "O ícone dos conflitos que assolam a região da bacia do Xingu na atualidade é o projeto da hidrelétrica de Belo Monte. Prevista para ser implantada no Médio Xingu, tem a capacidade de gerar, segundo os estudos da Eletronorte, 11 mil megawatts de energia, o que faria dela a segunda maior hidrelétrica do Brasil. Entre adesivos que refletem o teor polêmico do projeto — “Eu quero Belo Monte” e “Fora Belo Monte” —, os moradores de Altamira, cidade polo da região onde a usina deverá ser construída, se dividem. MARTINHO, N. O coração do Brasil. Horizonte Geográfico, n. 129, jun. 2010 (adaptado).\nNa polêmica apresentada, de acordo com a perspectiva dos trabalhadores da região, um argumento favorável e outro contrário à implementação do projeto estão, respectivamente, na",
+      "opcoes": [
+        "urbanização da periferia e valorização dos imóveis rurais.",
+        "recuperação da autoestima e criação de empregos qualificados.",
+        "expansão de lavouras e crescimento do assalariamento agrícola.",
+        "captação de investimentos e expropriação dos posseiros pobres.",
+        "adoção do preservacionismo e estabelecimento de reservas permanentes."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015036,
+      "pergunta": "É simplesmente espantoso que esses núcleos tão desiguais e tão diferentes se tenham mantido aglutinados numa só nação. Durante o período colonial, cada um deles teve relação direta com a metrópole. Ocorreu o extraordinário, fizemos um povo-nação, englobando todas aquelas províncias ecológicas numa só entidade cívica e política. RIBEIRO, D. O povo brasileiro: formação e sentido do Brasil. São Paulo: Cia. das Letras, 1988.\nApós a conquista da autonomia, a questão primordial do Brasil residia em como garantir sua unidade político-territorial diante das características e práticas herdadas da colonização. Relacionando o projeto de independência à construção do Estado nacional brasileiro, a sua particularidade decorreu da",
+      "opcoes": [
+        "ordenação de um pacto que reconheceu os direitos políticos aos homens, independentemente de cor, sexo ou religião.",
+        "estruturação de uma sociedade que adotou os privilégios de nascimento como critério de hierarquização social.",
+        "realização de acordos entre as elites regionais, que evitou confrontos armados contrários ao projeto luso-brasileiro.",
+        "concessão da autonomia política regional, que atendeu aos interesses socioeconômicos dos grandes proprietários.",
+        "afirmação de um regime constitucional monárquico, que garantiu a ordem associada à permanência da escravidão."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015039,
+      "pergunta": "Se vamos ter mais tempo de lazer no futuro automatizado, o problema não é como as pessoas vão consumir essas unidades adicionais de tempo de lazer, mas que capacidade para a experiência terão as pessoas com esse tempo livre. Mas se a notação útil do emprego do tempo se torna menos compulsiva, as pessoas talvez tenham de reaprender algumas das artes de viver que foram perdidas na Revolução Industrial: como preencher os interstícios de seu dia com relações sociais e pessoais; como derrubar mais uma vez as barreiras entre o trabalho e a vida. THOMPSON, E. P. Costumes em comum: estudos sobre a cultura popular tradicional. São Paulo: Cia. das Letras, 1998 (adaptado).\nA partir da reflexão do historiador, um argumento contrário à transformação promovida pela Revolução Industrial na relação dos homens com o uso do tempo livre é o(a)",
+      "opcoes": [
+        "intensificação da busca do lucro econômico.",
+        "flexibilização dos períodos de férias trabalhistas.",
+        "esquecimento das formas de sociabilidade tradicionais.",
+        "aumento das oportunidades de confraternização familiar.",
+        "multiplicação das possibilidades de entretenimento virtual."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015041,
+      "pergunta": "A razão principal que leva o capitalismo como sistema a ser tão terrivelmente destrutivo da biosfera é que, na maioria dos casos, os produtores que lucram com a destruição não a registram como um custo de produção, mas sim, precisamente ao contrário, como uma redução no custo. Por exemplo, se um produtor joga lixo em um rio, poluindo suas águas, esse produtor considera que está economizando o custo de outros métodos mais seguros, porém mais caros de dispor do lixo. WALLERSTEIN, I. Utopística ou as decisões históricas do século vinte e um. Petrópolis: Vozes, 2003.\nA pressão dos movimentos socioambientais, na tentativa de reverter a lógica descrita no texto, aponta para a",
+      "opcoes": [
+        "emergência de um sistema econômico global que secundariza os lucros.",
+        "redução dos custos de tratamento de resíduos pela isenção fiscal das empresas.",
+        "flexibilização do trabalho como estratégia positiva de corte de custos empresariais.",
+        "incorporação de um sistema normativo ambiental no processo de produção industrial.",
+        "minimização do papel do Estado em detrimento das organizações não governamentais."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015042,
+      "pergunta": "A utilidade do escravo é semelhante à do animal. Ambos prestam serviços corporais para atender às necessidades da vida. A natureza faz o corpo do escravo e do homem livre de forma diferente. O escravo tem corpo forte, adaptado naturalmente ao trabalho servil. Já o homem livre tem corpo ereto, inadequado ao trabalho braçal, porém apto à vida do cidadão. ARISTÓTELES. Política. Brasília: UnB, 1985.\nO trabalho braçal é considerado, na filosofia aristotélica, como",
+      "opcoes": [
+        "indicador da imagem do homem no estado de natureza.",
+        "condição necessária para a realização da virtude humana.",
+        "atividade que exige força física e uso limitado da racionalidade.",
+        "referencial que o homem deve seguir para viver uma vida ativa.",
+        "mecanismo de aperfeiçoamento do trabalho por meio da experiência."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015043,
+      "pergunta": "As autoridades de Kiribati, arquipélago do Oceano Pacífico formado por 33 atóis e uma ilha de coral, estão conscientizando sua população para que aceitem que, nas próximas décadas, terão de fugir do país. A estimativa é que, em um período de 50 anos, as ilhas podem desaparecer. O governo convocou os líderes de todas as ilhas para convencê-los da importância de mudar a mentalidade das pessoas, com pleno conhecimento que é uma questão muito sensível porque ameaça a própria identidade de um país. Kiribati já antecipou convênios com Austrália e Nova Zelândia para enviar seus cidadãos aos países vizinhos, algo que muitos dos moradores do arquipélago não aceitam. Disponível em: http://noticias.terra.com.br. Acesso em: 28 jul. 2012.\nNo texto, faz-se referência a um problema que se tornou um tema recorrente na agenda global. Nesse sentido, a preocupação apresentada pela população de Kiribati fundamenta-se na previsão de",
+      "opcoes": [
+        "submersão de terras habitadas, decorrente da elevação do nível do mar.",
+        "ocorrência de tsunamis, derivada de mudanças no eixo de rotação do planeta.",
+        "erupções vulcânicas frequentes, visto que estão assentados sobre o Círculo do Fogo.",
+        "terremotos com magnitude extrema, devido à proximidade de bordas de placas tectônicas.",
+        "furacões de grande intensidade, em função de redução da temperatura média do Oceano Pacífico."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015044,
+      "pergunta": "Energia de Noronha virá da força das águas A energia de Fernando de Noronha virá do mar, do ar, do sol e até do lixo produzido por seus moradores e visitantes. É o que promete o projeto de substituição da matriz energética da ilha, que prevê a troca dos geradores atuais, que consomem 310 mil litros de diesel por mês. GUIBU, F. Folha de S. Paulo, 19 ago. 2012 (adaptado).\nNo texto, está apresentada a nova matriz energética do Parque Nacional Marinho de Fernando de Noronha. A escolha por essa nova matriz prioriza o(a)",
+      "opcoes": [
+        "expansão da oferta de energia, para aumento da atividade turística.",
+        "uso de fontes limpas, para manutenção das condições ecológicas da região.",
+        "barateamento dos custos energéticos, para estímulo da ocupação permanente.",
+        "desenvolvimento de unidades complementares, para solução da carência energética local.",
+        "diminuição dos gastos operacionais de transporte, para superação da distância do continente."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015045,
+      "pergunta": "Falava-se, antes, de autonomia da produção para significar que uma empresa, ao assegurar uma produção, buscava também manipular a opinião pela via da publicidade. Nesse caso, o fato gerador do consumo seria a produção. Mas, atualmente, as empresas hegemônicas produzem o consumidor antes mesmo de produzirem os produtos. Um dado essencial do entendimento do consumo é que a produção do consumidor, hoje, precede a produção dos bens e dos serviços. SANTOS, M. Por uma outra globalização: do pensamento único à consciência universal. Rio de Janeiro: Record, 2000 (adaptado).\nO tipo de relação entre produção e consumo discutido no texto pressupõe o(a)",
+      "opcoes": [
+        "aumento do poder aquisitivo.",
+        "estímulo à livre concorrência.",
+        "criação de novas necessidades.",
+        "formação de grandes estoques.",
+        "implantação de linhas de montagem."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2016010,
+      "pergunta": "A Operação Condor está diretamente vinculada às experiências históricas das ditaduras civil-militares que se disseminaram pelo Cone Sul entre as décadas de 1960 e 1980. Depois do Brasil (e do Paraguai de Stroessner), foi a vez da Argentina (1966), Bolívia (1966 e 1971), Uruguai e Chile (1973) e Argentina (novamente, em 1976). Em todos os casos se instalaram ditaduras civil-militares (em menor ou maior medida) com base na Doutrina de Segurança Nacional e tendo como principais características um anticomunismo militante, a identificação do inimigo interno, a imposição do papel político das Forças Armadas e a definição de fronteiras ideológicas. PADRÓS, E. S. et al. Ditadura de Segurança Nacional no Rio Grande do Sul (1964-1985): história e memória. Porto Alegre: Corag, 2009 (adaptado).\nLevando-se em conta o contexto em que foi criada, a referida operação tinha como objetivo coordenar a",
+      "opcoes": [
+        "modificação de limites territoriais.",
+        "sobrevivência de oficiais exilados.",
+        "interferência de potências mundiais.",
+        "repressão de ativistas oposicionistas.",
+        "implantação de governos nacionalistas."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016020,
+      "pergunta": "TEXTO I Tradução: “As mulheres do futuro farão da Lua um lugar mais limpo para se viver”. Disponível em: www.propagandashistoricas.com.br. Acesso em: 16 out. 2015. TEXTO II Metade da nova equipe da Nasa é composta por mulheres Até hoje, cerca de 350 astronautas americanos já estiveram no espaço, enquanto as mulheres não chegam a ser um terço desse número. Após o anúncio da turma composta 50% por mulheres, alguns internautas escreveram comentários machistas e desrespeitosos sobre a escolha nas redes sociais. Disponível em: https://catracalivre.com.br. Acesso em: 10 mar. 2016.\nA comparação entre o anúncio publicitário de 1968 e a repercussão da notícia de 2016 mostra a",
+      "opcoes": [
+        "elitização da carreira científica.",
+        "qualificação da atividade doméstica.",
+        "ambição de indústrias patrocinadoras.",
+        "manutenção de estereótipos de gênero.",
+        "equiparação de papéis nas relações familiares."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016502,
+      "pergunta": "A característica fundamental é que ele não é mais somente um agricultor ou um pecuarista: ele combina atividades agropecuárias com outras atividades não agrícolas dentro ou fora de seu estabelecimento, tanto nos ramos tradicionais urbano-industriais como nas novas atividades que vêm se desenvolvendo no meio rural, como lazer, turismo, conservação da natureza, moradia e prestação de serviços pessoais. SILVA, J. G. O novo rural brasileiro. Revista Nova Economia, n. 1, maio 1997 (adaptado).\nEssa nova forma de organização social do trabalho é denominada",
+      "opcoes": [
+        "terceirização.",
+        "pluriatividade.",
+        "agronegócio.",
+        "cooperativismo.",
+        "associativismo."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016503,
+      "pergunta": "[...] O SERVIDOR — Diziam ser filho do rei... ÉDIPO — Foi ela quem te entregou a criança? O SERVIDOR — Foi ela, Senhor. ÉDIPO — Com que intenção? O SERVIDOR — Para que eu a matasse. ÉDIPO — Uma mãe! Mulher desgraçada! O SERVIDOR — Ela tinha medo de um oráculo dos deuses. ÉDIPO — O que ele anunciava? O SERVIDOR — Que essa criança um dia mataria seu pai. ÉDIPO — Mas por que tu a entregaste a este homem? O SERVIDOR — Tive piedade dela, mestre. Acreditei que ele a levaria ao país de onde vinha. Ele te salvou a vida, mas para os piores males! Se és realmente aquele de quem ele fala, saibas que nasceste marcado pela infelicidade. ÉDIPO — Oh! Ai de mim! Então no final tudo seria verdade! Ah! Luz do dia, que eu te veja aqui pela última vez, já que hoje me revelo o filho de quem não devia nascer, o esposo de quem não devia ser, o assassino de quem não deveria matar! SÓFOCLES. Édipo Rei. Porto Alegre: L&PM, 2011.\nO trecho da obra de Sófocles, que expressa o núcleo da tragédia grega, revela o(a)",
+      "opcoes": [
+        "condenação eterna dos homens pela prática injustificada do incesto.",
+        "legalismo estatal ao punir com a prisão perpétua o crime de parricídio.",
+        "busca pela explicação racional sobre os fatos até então desconhecidos.",
+        "caráter antropomórfico dos deuses na medida em que imitavam os homens.",
+        "impossibilidade de o homem fugir do destino predeterminado pelos deuses."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016505,
+      "pergunta": "TEXTO I Dezenas de milhares de pessoas compareceram à maior manifestação anti-troika (Comissão Europeia, Banco Central Europeu e FMI) em Atenas contra a austeridade e os cortes de gastos públicos aprovados neste domingo no parlamento grego. Disponível em: www.cartamaior.com.br. Acesso em: 8 nov. 2013. TEXTO II As políticas de austeridade transferem o ônus econômico para as classes trabalhadoras. Para diminuir os prejuízos do capital financeiro, socializam as perdas entre as classes trabalhadoras. O capitalismo não foi capaz de integrar os trabalhadores e ao mesmo tempo protegê-los. Entrevista com Ruy Braga. Revista IHU online. Disponível em: www.ihu.unisinos.br. Acesso em: 8 nov. 2013 (adaptado).\nDiante dos fatos e da análise apresentados, a política econômica e a demanda popular correlacionada encontram-se, respectivamente, em",
+      "opcoes": [
+        "controle da dívida interna e implementação das regras patronais.",
+        "afrouxamento da economia de mercado e superação da lógica individualista.",
+        "aplicação de plano desenvolvimentista e afirmação das conquistas neoliberais.",
+        "defesa dos interesses corporativos do capital e manutenção de direitos sociais.",
+        "mudança na estrutura do sistema produtivo e democratização do acesso ao trabalho."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016507,
+      "pergunta": "A Lei das Doze Tábuas, de meados do século V a.C., fixou por escrito um velho direito costumeiro. No relativo às dívidas não pagas, o código permitia, em última análise, matar o devedor; ou vendê-lo como escravo “do outro lado do Tibre” — isto é, fora do território de Roma. CARDOSO, C. F. S. O trabalho compulsório na Antiguidade. Rio de Janeiro: Graal, 1984.\nA referida lei foi um marco na luta por direitos na Roma Antiga, pois possibilitou que os plebeus",
+      "opcoes": [
+        "modificassem a estrutura agrária assentada no latifúndio.",
+        "exercessem a prática da escravidão sobre seus devedores.",
+        "conquistassem a possibilidade de casamento com os patrícios.",
+        "ampliassem a participação política nos cargos políticos públicos.",
+        "reinvindicassem as mudanças sociais com base no conhecimento das leis."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016508,
+      "pergunta": "Os andróginos tentaram escalar o céu para combater os deuses. No entanto, os deuses em um primeiro momento pensam em matá-los de forma sumária. Depois decidem puni-los da forma mais cruel: dividem-nos em dois. Por exemplo, é como se pegássemos um ovo cozido e, com uma linha, dividíssemos ao meio. Desta forma, até hoje as metades separadas buscam reunir-se. Cada um com saudade de sua metade, tenta juntar-se novamente a ela, abraçando-se, enlaçando-se um ao outro, desejando formar um único ser. PLATÃO. O banquete. São Paulo: Nova Cultural, 1987.\nNo trecho da obra O banquete, Platão explicita, por meio de uma alegoria, o",
+      "opcoes": [
+        "bem supremo como fim do homem.",
+        "prazer perene como fundamento da felicidade.",
+        "ideal inteligível como transcendência desejada.",
+        "amor como falta constituinte do ser humano.",
+        "autoconhecimento como caminho da verdade."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016510,
+      "pergunta": "TEXTO I O Cerrado brasileiro apresenta diversos aspectos favoráveis, mas tem como problema a baixa fertilidade de seus solos. A grande maioria é ácido, com baixo pH. Disponível em: www.fmb.edu.br. Acesso em: 21 dez. 2012 (adaptado). TEXTO II O crescimento da participação da Região Central do Brasil na produção de soja foi estimulado, entre outros fatores, por avanços científicos em tecnologias para manejo de solos. Disponível em: www.conhecer.org.br. Acesso em: 19 dez. 2012 (adaptado).\nNos textos, são apresentados aspectos do processo de ocupação de um bioma brasileiro. Uma tecnologia que permite corrigir os limites impostos pelas condições naturais está indicada em:",
+      "opcoes": [
+        "Calagem.",
+        "Hidroponia.",
+        "Terraceamento.",
+        "Cultivo orgânico.",
+        "Rotação de culturas."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016511,
+      "pergunta": "A favela é vista como um lugar sem ordem, capaz de ameaçar os que nela não se incluem. Atribuir-lhe a ideia de perigo é o mesmo que reafirmar os valores e estruturas da sociedade que busca viver diferentemente do que se considera viver na favela. Alguns oficiantes do direito, ao defenderem ou acusarem réus moradores de favelas, usam em seus discursos representações previamente formuladas pela sociedade e incorporadas nesse campo profissional. Suas falas se fundamentam nas representações inventadas a respeito da favela e que acabam por marcar a identidade dos indivíduos que nela residem. RINALDI, A. Marginais, delinquentes e vítimas: um estudo sobre a representação da categoria favelado no tribunal do júri da cidade do Rio de Janeiro. In: ZALUAR, A.; ALVITO, M. (Orgs.). Um século de favela. Rio de Janeiro: Editora FGV, 1998.\nO estigma apontado no texto tem como consequência o(a)",
+      "opcoes": [
+        "aumento da impunidade criminal.",
+        "enfraquecimento dos direitos civis.",
+        "distorção na representação política.",
+        "crescimento dos índices de criminalidade.",
+        "ineficiência das medidas socioeducativas."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016513,
+      "pergunta": "Cúpula dos Povos começa como contraponto à Rio+20 Enquanto a conferência oficial no Riocentro, na Barra, é restrita a participantes credenciados, que só entram depois de passar por um forte controle de segurança, a Cúpula dos Povos é aberta ao público, em tendas ao ar livre no Aterro do Flamengo. Ela é aberta também às tribos e discussões mais diversas, em mesas de debate e painéis geridos pelos próprios participantes, buscando promover a mobilização social. Problemas ambientais, econômicos, sociais, políticos e de minorias serão discutidos no evento, afirma uma ativista norte-americana, em alusão ao movimento que ocupou Wall Street, em Nova York, no ano passado. Disponível em: www.bbc.co.uk. Acesso em: 14 ago. 2012.\nUma articulação entre as agendas ambientalistas e a antiglobalização indica a",
+      "opcoes": [
+        "humanização do sistema capitalista financeiro.",
+        "consolidação do movimento operário internacional.",
+        "promoção de consenso com as elites políticas locais.",
+        "constituição de espaços de debates transversais globais.",
+        "construção das pautas com os partidos políticos socialistas."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016515,
+      "pergunta": "Ações de educação patrimonial são realizadas em diferentes contextos e localidades e têm mostrado resultados surpreendentes ao trazer à tona a autoestima das comunidades. Em alguns casos, promovem o desenvolvimento local e indicam soluções inovadoras de reconhecimento e salvaguarda do patrimônio cultural para muitas populações. PELEGRINI, S. C. A.; PINHEIRO, A. P. (Orgs.). Tempo, memória e patrimônio cultural. Piauí: Edupi, 2010.\nA valorização dos bens mencionados encontra-se correlacionada a ações educativas que promovem a(s)",
+      "opcoes": [
+        "evolução de atividades artesanais herdadas do passado.",
+        "representações sociais formadoras de identidades coletivas.",
+        "mobilizações políticas criadoras de tradições culturais urbanas.",
+        "hierarquização de festas folclóricas praticadas por grupos locais.",
+        "formação escolar dos jovens para o trabalho realizado nas comunidades."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016516,
+      "pergunta": "O número de votantes potenciais em 1872 era de 1 097 698, o que correspondia a 10,8% da população total. Esse número poderia chegar a 13%, quando separamos os escravos dos demais indivíduos. Em 1886, cinco anos depois de a Lei Saraiva ter sido aprovada, o número de cidadãos que poderiam se qualificar eleitores era de 117 022, isto é, 0,8% da população. CASTELLUCCI, A. A. S. Trabalhadores, máquina política e eleições na Primeira República. Disponível em: www.ifch.unicamp.br. Acesso em: 28 jul. 2012.\nA explicação para a alteração envolvendo o número de eleitores no período é a",
+      "opcoes": [
+        "criação da Justiça Eleitoral.",
+        "exigência da alfabetização.",
+        "redução da renda nacional.",
+        "exclusão do voto feminino.",
+        "coibição do voto de cabresto."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016517,
+      "pergunta": "A justiça e a conformidade ao contrato consistem em algo com que a maioria dos homens parece concordar. Constitui um princípio julgado estender-se até os esconderijos dos ladrões e às confederações dos maiores vilões; até os que se afastaram a tal ponto da própria humanidade conservam entre si a fé e as regras da justiça. LOCKE, J. Ensaio acerca do entendimento humano. São Paulo: Nova Cultural, 2000 (adaptado).\nDe acordo com Locke, até a mais precária coletividade depende de uma noção de justiça, pois tal noção",
+      "opcoes": [
+        "identifica indivíduos despreparados para a vida em comum.",
+        "contribui com a manutenção da ordem e do equilíbrio social.",
+        "estabelece um conjunto de regras para a formação da sociedade.",
+        "determina o que é certo ou errado num contexto de interesses conflitantes.",
+        "representa os interesses da coletividade, expressos pela vontade da maioria."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016518,
+      "pergunta": "Aquarela do Brasil Brasil! Meu Brasil brasileiro Meu mulato inzoneiro Vou cantar-te nos meus versos O Brasil, samba que dá Bamboleio que faz gingar O Brasil do meu amor Terra de Nosso Senhor Brasil! Pra mim! Pra mim, pra mim! Ah! Abre a cortina do passado Tira a mãe preta do Cerrado Bota o rei congo no congado Brasil! Pra mim! Deixa cantar de novo o trovador A merencória luz da lua Toda canção do meu amor Quero ver a sá dona caminhando Pelos salões arrastando O seu vestido rendado Brasil! Pra mim, pra mim, pra mim! ARY BARROSO. Aquarela do Brasil, 1939 (fragmento).\nMuito usual no Estado Novo de Vargas, a composição de Ary Barroso é um exemplo típico de",
+      "opcoes": [
+        "música de sátira.",
+        "samba exaltação.",
+        "hino revolucionário.",
+        "propaganda eleitoral.",
+        "marchinha de protesto."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016519,
+      "pergunta": "A geografia mundial da inovação sofreu uma reviravolta que mobiliza fatores humanos, financeiros e tecnológicos. Esforço humano: com 1,15 milhão de pesquisadores, a China dispõe de um potencial equivalente a 82% da capacidade norte-americana e 79% da europeia; segundo a National Science Foundation norte-americana, o país deverá concentrar 30% de todos os pesquisadores do mundo até 2025. Esforço financeiro: em 2009, pela primeira vez, a China apresentou um orçamento para pesquisa que a colocou em segundo lugar no mundo — ainda bastante longe dos Estados Unidos, mas à frente do Japão. Esforço tecnológico: em 2011, o país se tornou o primeiro depositante mundial de patentes, graças a uma estratégia nacional que visa passar do Made in China (produzido na China) para o Designed in China (projetado na China). CARROUÉ, L. Desindustrialização. Disponível em: www.diplomatique.org.br. Acesso em: 30 jul. 2013 (adaptado).\nO texto apresenta um novo fator a ser considerado para refletir sobre o papel produtivo entre os países, representado pela",
+      "opcoes": [
+        "aplicação da ciência e tecnologia no desenvolvimento produtivo, que aumenta o potencial inventivo.",
+        "ampliação da capacidade da indústria de base, que coopera para diversificar os níveis produtivos.",
+        "exploração da mão de obra barata, que atrai fluxo de investimentos industriais para os países.",
+        "inserção de pesquisas aplicadas ao setor financeiro, que incentiva a livre concorrência.",
+        "transnacionalização do capital industrial, que eleva os lucros em escala planetária."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016520,
+      "pergunta": "A demanda da comunidade afro-brasileira por reconhecimento, valorização e afirmação de direitos, no que diz respeito à educação, passou a ser particularmente apoiada com a promulgação da Lei 10.639/2003, que alterou a Lei 9.394/1996, estabelecendo a obrigatoriedade do ensino de história e cultura afro-brasileiras e africanas. Diretrizes Curriculares Nacionais para a Educação das Relações Etnicorraciais e para o Ensino de História e Cultura Afro-brasileira e Africana. Brasília: Ministério da Educação, 2005.\nA alteração legal no Brasil contemporâneo descrita no texto é resultado do processo de",
+      "opcoes": [
+        "aumento da renda nacional.",
+        "mobilização do movimento negro.",
+        "melhoria da infraestrutura escolar.",
+        "ampliação das disciplinas obrigatórias.",
+        "politização das universidades públicas."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016522,
+      "pergunta": "Em virtude da importância dos grandes volumes de matérias-primas na indústria química — eram necessárias dez a doze toneladas de ingredientes para fabricar uma tonelada de soda —, a indústria teve uma localização bem definida quase que desde o início. Os três centros principais eram a área de Glasgow e as margens do Mersey e do Tyne. LANDES, D. S. Prometeu desacorrentado: transformação tecnológica e desenvolvimento industrial na Europa ocidental, desde 1750 até a nossa época. Rio de Janeiro: Nova Fronteira, 1994.\nA relação entre a localização das indústrias químicas e das matérias-primas nos primórdios da Revolução Industrial provocou a",
+      "opcoes": [
+        "busca pela isenção de impostos.",
+        "intensa qualificação da mão de obra.",
+        "diminuição da distância dos mercados consumidores.",
+        "concentração da produção em determinadas regiões do país.",
+        "necessidade do desenvolvimento de sistemas de comunicação."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016523,
+      "pergunta": "A Justiça de São Paulo decidiu multar os supermercados que não fornecerem embalagens de papel ou material biodegradável. De acordo com a decisão, os estabelecimentos que descumprirem a norma terão de pagar multa diária de R$ 20 mil, por ponto de venda. As embalagens deverão ser disponibilizadas de graça e em quantidade suficiente. Disponível em: www.estadao.com.br. Acesso em: 31 jul. 2012 (adaptado).\nA legislação e os atos normativos descritos estão ancorados na seguinte concepção:",
+      "opcoes": [
+        "Implantação da ética comercial.",
+        "Manutenção da livre concorrência.",
+        "Garantia da liberdade de expressão.",
+        "Promoção da sustentabilidade ambiental.",
+        "Enfraquecimento dos direitos do consumidor."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016525,
+      "pergunta": "TEXTO I Cidadão Tá vendo aquele edifício, moço? Ajudei a levantar Foi um tempo de aflição Eram quatro condução Duas pra ir, duas pra voltar Hoje depois dele pronto Olho pra cima e fico tonto Mas me vem um cidadão E me diz desconfiado “Tu tá aí admirado Ou tá querendo roubar?” Meu domingo tá perdido Vou pra casa entristecido Dá vontade de beber E pra aumentar meu tédio Eu nem posso olhar pro prédio Que eu ajudei a fazer. BARBOSA, L. In: ZÉ RAMALHO. 20 Super Sucessos. Rio de Janeiro: Sony Music, 1999 (fragmento). TEXTO II O trabalhador fica mais pobre à medida que produz mais riqueza e sua produção cresce em força e extensão. O trabalhador torna-se uma mercadoria ainda mais barata à medida que cria mais bens. Esse fato simplesmente subentende que o objeto produzido pelo trabalho, o seu produto, agora se lhe opõe como um ser estranho, como uma força independente do produtor. MARX, K. Manuscritos econômicos-filosóficos (Primeiro manuscrito). São Paulo: Boitempo Editorial, 2004 (adaptado).\nCom base nos textos, a relação entre trabalho e modo de produção capitalista é",
+      "opcoes": [
+        "baseada na desvalorização do trabalho especializado e no aumento da demanda social por novos postos de emprego.",
+        "fundada no crescimento proporcional entre o número de trabalhadores e o aumento da produção de bens e serviços.",
+        "estruturada na distribuição equânime de renda e no declínio do capitalismo industrial e tecnocrata.",
+        "instaurada a partir do fortalecimento da luta de classes e da criação da economia solidária.",
+        "derivada do aumento da riqueza e da ampliação da exploração do trabalhador."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016526,
+      "pergunta": "Pode-se admitir que a experiência passada dá somente uma informação direta e segura sobre determinados objetos em determinados períodos do tempo, dos quais ela teve conhecimento. Todavia, é esta a principal questão sobre a qual gostaria de insistir: por que esta experiência tem de ser estendida a tempos futuros e a outros objetos que, pelo que sabemos, unicamente são similares em aparência. O pão que outrora comi alimentou-me, isto é, um corpo dotado de tais qualidades sensíveis estava, a este tempo, dotado de tais poderes desconhecidos. Mas, segue-se daí que este outro pão deve também alimentar-me como ocorreu na outra vez, e que qualidades sensíveis semelhantes devem sempre ser acompanhadas de poderes ocultos semelhantes? A consequência não parece de nenhum modo necessária. HUME, D. Investigação acerca do entendimento humano. São Paulo: Abril Cultural, 1995.\nO problema descrito no texto tem como consequência a",
+      "opcoes": [
+        "universabilidade do conjunto das proposições de observação.",
+        "normatividade das teorias científicas que se valem da experiência.",
+        "dificuldade de se fundamentar as leis científicas em bases empíricas.",
+        "inviabilidade de se considerar a experiência na construção da ciência.",
+        "correspondência entre afirmações singulares e afirmações universais."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016527,
+      "pergunta": "Fundamos, como afirmam alguns cientistas, o antropoceno: uma nova era geológica com altíssimo poder de destruição, fruto dos últimos séculos que significaram um transtorno perverso do equilíbrio do sistema-Terra. Como enfrentar esta nova situação nunca ocorrida antes de forma globalizada e profunda? Temos pessoalmente trabalhado os paradigmas da sustentabilidade e do cuidado como relação amigável e cooperativa para com a natureza. Queremos, agora, agregar a ética da responsabilidade. BOFF, L. Responsabilidade coletiva. Disponível em: http://leonardoboff.wordpress.com. Acesso em: 14 maio 2013.\nA ética da responsabilidade protagonizada pelo filósofo alemão Hans Jonas e reinvindicada no texto é expressa pela máxima:",
+      "opcoes": [
+        "\"A tua ação possa valer como norma para todos os homens.\"",
+        "\"A norma aceita por todos advenha da ação comunicativa e do discurso.\"",
+        "\"A tua ação possa produzir a máxima felicidade para a maioria das pessoas.\"",
+        "\"O teu agir almeje alcançar determinados fins que possam justificar os meios.\"",
+        "\"O efeito de tuas ações não destrua a possibilidade futura da vida das novas gerações.\""
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016529,
+      "pergunta": "O mercado tende a gerir e regulamentar todas as atividades humanas. Até há pouco, certos campos — cultura, esporte, religião — ficavam fora do seu alcance. Agora, são absorvidos pela esfera do mercado. Os governos confiam cada vez mais nele (abandono dos setores de Estado, privatizações). RAMONET, I. Guerras do século XXI: novos temores e novas ameaças. Petrópolis: Vozes, 2003.\nNo texto é apresentada uma lógica que constitui uma característica central do seguinte sistema socioeconômico:",
+      "opcoes": [
+        "Socialismo.",
+        "Feudalismo.",
+        "Capitalismo.",
+        "Anarquismo.",
+        "Comunitarismo."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016530,
+      "pergunta": "Quando a Corte chegou ao Rio de Janeiro, a Colônia tinha acabado de passar por uma explosão populacional. Em pouco mais de cem anos, o número de habitantes aumentara dez vezes. GOMES, L. 1808: como uma rainha louca, um príncipe medroso e uma Corte corrupta enganaram Napoleão e mudaram a história de Portugal e do Brasil. São Paulo: Planeta do Brasil, 2008 (adaptado).\nA alteração demográfica destacada no período teve como causa a atividade",
+      "opcoes": [
+        "cafeeira, com a atração da imigração europeia.",
+        "industrial, com a intensificação do êxodo rural.",
+        "mineradora, com a ampliação do tráfico africano.",
+        "canavieira, com o aumento do apresamento indígena.",
+        "manufatureira, com a incorporação do trabalho assalariado."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016531,
+      "pergunta": "O processo de justiça é um processo ora de diversificação do diverso, ora de unificação do idêntico. A igualdade entre todos os seres humanos em relação aos direitos fundamentais é o resultado de um processo de gradual eliminação de discriminações e, portanto, de unificação daquilo que ia sendo reconhecido como idêntico: uma natureza comum do homem acima de qualquer diferença de sexo, raça, religião etc. BOBBIO, N. Teoria geral da política: a filosofia política e as lições dos clássicos. Rio de Janeiro: Campus, 2000.\nDe acordo com o texto, a construção de uma sociedade democrática fundamenta-se em:",
+      "opcoes": [
+        "A norma estabelecida pela disciplina social.",
+        "A pertença dos indivíduos à mesma categoria.",
+        "A ausência de constrangimentos de ordem pública.",
+        "A debilitação das esperanças na condição humana.",
+        "A garantia da segurança das pessoas e valores sociais."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016533,
+      "pergunta": "Ninguém delibera sobre coisas que não podem ser de outro modo, nem sobre as que lhe é impossível fazer. Por conseguinte, como o conhecimento científico envolve demonstração, mas não há demonstração de coisas cujos primeiros princípios são variáveis (pois todas elas poderiam ser diferentemente), e como é impossível deliberar sobre coisas que são por necessidade, a sabedoria prática não pode ser ciência, nem arte: nem ciência, porque aquilo que se pode fazer é capaz de ser diferentemente, nem arte, porque o agir e o produzir são duas espécies diferentes de coisa. Resta, pois, a alternativa de ser ela uma capacidade verdadeira e raciocinada de agir com respeito às coisas que são boas ou más para o homem. ARISTÓTELES. Ética a Nicômaco. São Paulo: Abril Cultural, 1980.\nAristóteles considera a ética como pertencente ao campo do saber prático. Nesse sentido, ela difere-se dos outros saberes porque é caracterizada como",
+      "opcoes": [
+        "conduta definida pela capacidade racional de escolha.",
+        "capacidade de escolher de acordo com padrões científicos.",
+        "conhecimento das coisas importantes para a vida do homem.",
+        "técnica que tem como resultado a produção de boas ações.",
+        "política estabelecida de acordo com padrões democráticos de deliberação."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016534,
+      "pergunta": "O Movimento Negro Unificado (MNU) distingue-se do Teatro Experimental do Negro (TEN) por sua crítica ao discurso nacional hegemônico. Isto é, enquanto o TEN defende a plena integração simbólica dos negros na identidade nacional “híbrida”, o MNU condena qualquer tipo de assimilação, fazendo do combate à ideologia da democracia racial uma das suas principais bandeiras de luta, visto que, aos olhos desse movimento, a igualdade formal assegurada pela lei entre negros e brancos e a difusão do mito de que a sociedade brasileira não é racista teriam servido para sustentar, ideologicamente, a opressão racial. COSTA, S. Dois Atlânticos: teoria social, antirracismo, cosmopolitismo. Belo Horizonte: UFMG, 2006 (adaptado).\nNo texto, são comparadas duas organizações do movimento negro brasileiro, criadas em diferentes contextos históricos: o TEN, em 1944, e o MNU, em 1978. Ao assumir uma postura divergente da do TEN, o MNU pretendia",
+      "opcoes": [
+        "pressionar o governo brasileiro a decretar a igualdade racial.",
+        "denunciar a permanência do racismo nas relações sociais.",
+        "contestar a necessidade da igualdade entre negros e brancos.",
+        "defender a assimilação do negro por meios não democráticos.",
+        "divulgar a ideia da miscigenação como marca da nacionalidade."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016535,
+      "pergunta": "A presença de uma corrente migratória por si só não explica a condição de vida dos imigrantes. Esta será somente a aparência de um fenômeno mais profundo, estruturado em relações socioeconômicas muitas vezes perversas. É o que podemos dizer dos indivíduos que são deslocados do campo para as cidades e obrigados a viver em condições de vida culturalmente diferentes das que vivenciaram em seu lugar de origem. SCARLATO, F. C. População e urbanização brasileira. In: ROSS, J. L. S. Geografia do Brasil. São Paulo: Edusp, 2009.\nO texto faz referência a um movimento migratório que reflete o(a)",
+      "opcoes": [
+        "processo de deslocamento de trabalhadores motivados pelo aumento da oferta de empregos no campo.",
+        "dinâmica experimentada por grande quantidade de pessoas, que resultou no inchaço das grandes cidades.",
+        "permuta de locais específicos, obedecendo a fatores cíclicos naturais.",
+        "circulação de pessoas diariamente em função do emprego.",
+        "cultura de localização itinerante no espaço."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016536,
+      "pergunta": "As convicções religiosas dos escravos eram entretanto colocadas a duras provas quando de sua chegada ao Novo Mundo, onde eram batizados obrigatoriamente “para a salvação de sua alma” e deviam curvar-se às doutrinas religiosas de seus mestres. Iemanjá, mãe de numerosos outros orixás, foi sincretizada com Nossa Senhora da Conceição, e Nanã Buruku, a mais idosa das divindades das águas, foi comparada a Sant’Ana, mãe da Virgem Maria. VERGER, P. Orixás: deuses iorubás na África e no Novo Mundo. São Paulo: Corrupio, 1981.\nO sincretismo religioso no Brasil colônia foi uma estratégia utilizada pelos negros escravizados para",
+      "opcoes": [
+        "compreender o papel do sagrado para a cultura europeia.",
+        "garantir a aceitação pelas comunidades dos convertidos.",
+        "preservar as crenças e a sua relação com o sagrado.",
+        "integrar as distintas culturas no Novo Mundo.",
+        "possibilitar a adoração de santos católicos."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016538,
+      "pergunta": "Arrependimentos terminais Em Antes de partir, uma cuidadora especializada em doentes terminais fala do que eles mais se arrependem na hora de morrer. “Não deveria ter trabalhado tanto”, diz um dos pacientes. “Desejaria ter ficado em contato com meus amigos”, lembra outro. “Desejaria ter coragem de expressar meus sentimentos.” “Não deveria ter levado a vida baseando-me no que esperavam de mim”, diz um terceiro. Há cem anos ou cinquenta, quem sabe, sem dúvida seriam outros os arrependimentos terminais. “Gostaria de ter sido mais útil à minha pátria.” “Deveria ter sido mais obediente a Deus.” “Gostaria de ter deixado mais patrimônio aos meus descendentes.” COELHO, M. Folha de São Paulo, 2 jan. 2013.\nO texto compara hipoteticamente dois padrões morais que divergem por se basearem respectivamente em",
+      "opcoes": [
+        "satisfação pessoal e valores tradicionais.",
+        "relativismo cultural e postura ecumênica.",
+        "tranquilidade espiritual e costumes liberais.",
+        "realização profissional e culto à personalidade.",
+        "engajamento político e princípios nacionalistas."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016539,
+      "pergunta": "TEXTO I Até aqui expus a natureza do homem (cujo orgulho e outras paixões o obrigaram a submeter-se ao governo), juntamente com o grande poder do seu governante, o qual comparei com o Leviatã, tirando essa comparação dos dois últimos versículos do capítulo 41 de Jó, onde Deus, após ter estabelecido o grande poder do Leviatã, lhe chamou Rei dos Soberbos. Não há nada na Terra, disse ele, que se lhe possa comparar. HOBBES, T. O Leviatã. São Paulo: Martins Fontes, 2003. TEXTO II Eu asseguro, tranquilamente, que o governo civil é a solução adequada para as inconveniências do estado de natureza, que devem certamente ser grandes quando os homens podem ser juízes em causa própria, pois é fácil imaginar que um homem tão injusto a ponto de lesar o irmão dificilmente será justo para condenar a si mesmo pela mesma ofensa. LOCKE, J. Segundo tratado sobre o governo civil. Petrópolis: Vozes, 1994.\nThomas Hobbes e John Locke, importantes teóricos contratualistas, discutiram aspectos ligados à natureza humana e ao Estado. Thomas Hobbes, diferentemente de John Locke, entende o estado de natureza como um(a)",
+      "opcoes": [
+        "condição de guerra de todos contra todos, miséria universal, insegurança e medo da morte violenta.",
+        "organização pré-social e pré-política em que o homem nasce com os direitos naturais: vida, liberdade, igualdade e propriedade.",
+        "capricho típico da menoridade, que deve ser eliminado pela exigência moral, para que o homem possa constituir o Estado civil.",
+        "situação em que os homens nascem como detentores de livre-arbítrio, mas são feridos em sua livre decisão pelo pecado original.",
+        "estado de felicidade, saúde e liberdade que é destruído pela civilização, que perturba as relações sociais e violenta a humanidade."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016542,
+      "pergunta": "Simples, saborosa e, acima de tudo, exótica. Se a culinária brasileira tem o tempero do estranhamento, esta verdade decorre de dois elementos: a dimensão do território e a infinidade de ingredientes. Percebe-se que o segredo da cozinha brasileira é a mistura com ingredientes e técnicas indígenas. É esse o elemento que a torna autêntica. POMBO, N. Cardápio Brasil. Nossa História, n. 29, mar. 2006 (adaptado).\nO processo de formação identitária descrito no texto está associado à",
+      "opcoes": [
+        "imposição de rituais sagrados.",
+        "assimilação de tradições culturais.",
+        "tipificação de hábitos comunitários.",
+        "hierarquização de conhecimentos tribais.",
+        "superação de diferenças etnorraciais."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016543,
+      "pergunta": "Durante as três últimas décadas, algumas regiões do Centro-Sul do Brasil mudaram do ponto de vista da organização humana, dos espaços herdados da natureza, incorporando padrões que abafaram, por substituição parcial, anteriores estruturas sociais e econômicas. Essas mudanças ocorreram, principalmente, devido à implantação de infraestruturas viárias e energéticas, além da descoberta de impensadas vocações dos solos regionais para atividades agrárias rentáveis. AB’SABER, A. N. Os domínios de natureza no Brasil: potencialidades paisagísticas. São Paulo: Ateliê Editorial, 2003 (adaptado).\nA transformação regional descrita está relacionada ao seguinte processo característico desse espaço rural:",
+      "opcoes": [
+        "Expansão do mercado interno.",
+        "Valorização do manejo familiar.",
+        "Exploração de espécies nativas.",
+        "Modernização de métodos produtivos.",
+        "Incorporação de mão de obra abundante."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016545,
+      "pergunta": "Quando surgiram as primeiras notícias sobre a presença de seres estranhos, chegados em barcos grandes como montanhas, que montavam numa espécie de veados enormes, tinham cães grandes e ferozes e possuíam instrumentos lançadores de fogo, Montezuma e seus conselheiros ficaram pensando: de um lado, talvez Quetzalcóatl houvesse regressado, mas, de outro, não tinham essa confirmação. PINSKY, J. et. al. História da América através de textos. São Paulo: Contexto, 2007 (adaptado).\nA dúvida apresentada inseria-se no contexto da chegada dos primeiros europeus à América, e sua origem estava relacionada ao",
+      "opcoes": [
+        "domínio da religião e do mito.",
+        "exercício do poder e da política.",
+        "controle da guerra e da conquista.",
+        "nascimento da filosofia e da razão.",
+        "desenvolvimento da ciência e da técnica."
+      ],
+      "correta": "A",
+      "ano": 2016
     }
   ]
 };

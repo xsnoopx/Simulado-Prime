@@ -6083,6 +6083,695 @@ export const questoes = {
       ],
       "correta": "B",
       "ano": 2022
+    },
+    {
+      "id": 2009027,
+      "pergunta": "O ônibus espacial Atlantis foi lançado ao espaço com cinco astronautas a bordo e uma câmera nova, que iria substituir uma outra danificada por um curto-circuito no telescópio Hubble. Depois de entrarem em órbita a 560 km de altura, os astronautas se aproximaram do Hubble. Dois astronautas saíram da Atlantis e se dirigiram ao telescópio. Ao abrir a porta de acesso, um deles exclamou: “Esse telescópio tem a massa grande, mas o peso é pequeno.”\nConsiderando o texto e as leis de Kepler, pode-se afirmar que a frase dita pelo astronauta",
+      "opcoes": [
+        "se justifica porque o tamanho do telescópio determina a sua massa, enquanto seu pequeno peso decorre da falta de ação da aceleração da gravidade.",
+        "se justifica ao verificar que a inércia do telescópio é grande comparada à dele próprio, e que o peso do telescópio é pequeno porque a atração gravitacional criada por sua massa era pequena.",
+        "não se justifica, porque a avaliação da massa e do peso de objetos em órbita tem por base as leis de Kepler, que não se aplicam a satélites artificiais.",
+        "não se justifica, porque a força-peso é a força exercida pela gravidade terrestre, neste caso, sobre o telescópio e é a responsável por manter o próprio telescópio em órbita.",
+        "não se justifica, pois a ação da força-peso implica a ação de uma força de reação contrária, que não existe naquele ambiente. A massa do telescópio poderia ser avaliada simplesmente pelo seu volume."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2011070,
+      "pergunta": "Em um experimento realizado para determinar a densidade da água de um lago, foram utilizados alguns materiais conforme ilustrado: um dinamômetro D com graduação de 0 N a 50 N e um cubo maciço e homogêneo de 10 cm de aresta e 3 kg de massa. Inicialmente, foi conferida a calibração do dinamômetro, constatando-se a leitura de 30 N quando o cubo era preso ao dinamômetro e suspenso no ar. Ao mergulhar o cubo na água do lago, até que metade do seu volume ficasse submersa, foi registrada a leitura de 24 N no dinamômetro.\nConsiderando que a aceleração da gravidade local é de 10 m/s², a densidade da água do lago, em g/cm³, é",
+      "opcoes": [
+        "0,6.",
+        "1,2.",
+        "1,5.",
+        "2,4.",
+        "4,8."
+      ],
+      "correta": "B",
+      "ano": 2011
+    },
+    {
+      "id": 2014080,
+      "pergunta": "O principal processo industrial utilizado na produção de fenol é a oxidação do cumeno (isopropilbenzeno). A equação mostra que esse processo envolve a formação do hidroperóxido de cumila, que em seguida é decomposto em fenol e acetona, ambos usados na indústria química como precursores de moléculas mais complexas. Após o processo de síntese, esses dois insumos devem ser separados para comercialização individual.\nConsiderando as características físico-químicas dos dois insumos formados, o método utilizado para a separação da mistura, em escala industrial, é a",
+      "opcoes": [
+        "filtração.",
+        "ventilação.",
+        "decantação.",
+        "evaporação.",
+        "destilação fracionada."
+      ],
+      "correta": "E",
+      "ano": 2014
+    },
+    {
+      "id": 2015047,
+      "pergunta": "Durante a aula, um professor apresentou uma pesquisa nacional que mostrava que o consumo de sódio pelos adolescentes brasileiros é superior ao determinado pela Organização Mundial da Saúde. O professor, então, destacou que esse hábito deve ser evitado.\nA doença associada a esse hábito é a",
+      "opcoes": [
+        "obesidade.",
+        "osteoporose.",
+        "diabetes tipo II.",
+        "hipertensão arterial.",
+        "hipercolesterolemia."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015052,
+      "pergunta": "Sais de amônio são sólidos iônicos com alto ponto de fusão, muito mais solúveis em água que as aminas originais e ligeiramente solúveis em solventes orgânicos apolares, sendo compostos convenientes para serem usados em xaropes e medicamentos injetáveis. Um exemplo é a efedrina, que funde a 79 °C, tem um odor desagradável e oxida na presença do ar atmosférico formando produtos indesejáveis. O cloridrato de efedrina funde a 217 °C, não se oxida e é inodoro, sendo o ideal para compor os medicamentos. SOUTO, C. R. O.; DUARTE, H. C. Química da vida: aminas. Natal: EDUFRN, 2006.\nDe acordo com o texto, que propriedade química das aminas possibilita a formação de sais de amônio estáveis, facilitando a manipulação de princípios ativos?",
+      "opcoes": [
+        "Acidez.",
+        "Basicidade.",
+        "Solubilidade.",
+        "Volatilidade.",
+        "Aromaticidade."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015053,
+      "pergunta": "Além de ser uma prática ilegal, a adulteração de combustíveis é prejudicial ao meio ambiente, ao governo e, especialmente, ao consumidor final. Em geral, essa adulteração é feita utilizando compostos com propriedades físicas semelhantes às do combustível, mas de menor valor agregado.\nConsiderando um combustível com 20% de adulterante, a mistura em que a adulteração seria identificada visualmente é",
+      "opcoes": [
+        "etanol e água.",
+        "etanol e acetona.",
+        "gasolina e água.",
+        "gasolina e benzeno.",
+        "gasolina e querosene."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015054,
+      "pergunta": "Sabe-se que nas proximidades dos polos do planeta Terra é comum a formação dos icebergs, que são grandes blocos de gelo, flutuando nas águas oceânicas. Estudos mostram que a parte de gelo que fica emersa durante a flutuação corresponde a aproximadamente 10% do seu volume total. Um estudante resolveu simular essa situação introduzindo um bloquinho de gelo no interior de um recipiente contendo água, observando a variação de seu nível desde o instante de introdução até o completo derretimento do bloquinho.\nCom base nessa simulação, verifica-se que o nível da água no recipiente",
+      "opcoes": [
+        "subirá com a introdução do bloquinho de gelo e, após o derretimento total do gelo, esse nível subirá ainda mais.",
+        "subirá com a introdução do bloquinho de gelo e, após o derretimento total do gelo, esse nível descerá, voltando ao seu valor inicial.",
+        "subirá com a introdução do bloquinho de gelo e, após o derretimento total do gelo, esse nível permanecerá sem alteração.",
+        "não sofrerá alteração com a introdução do bloquinho de gelo, porém, após seu derretimento, o nível subirá devido a um aumento em torno de 10% no volume de água.",
+        "subirá em torno de 90% do seu valor inicial com a introdução do bloquinho de gelo e, após seu derretimento, o nível descerá apenas 10% do valor inicial."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015055,
+      "pergunta": "A rede elétrica de uma residência tem tensão de 110 V e o morador compra, por engano, uma lâmpada incandescente com potência nominal de 100 W e tensão nominal de 220 V.\nSe essa lâmpada for ligada na rede de 110 V, o que acontecerá?",
+      "opcoes": [
+        "A lâmpada brilhará normalmente, mas como a tensão é a metade da prevista, a corrente elétrica será o dobro da normal, pois a potência elétrica é o produto de tensão pela corrente.",
+        "A lâmpada não acenderá, pois ela é feita para trabalhar apenas com tensão de 220 V, e não funciona com tensão abaixo desta.",
+        "A lâmpada irá acender dissipando uma potência de 50 W, pois como a tensão é metade da esperada, a potência também será reduzida à metade.",
+        "A lâmpada irá brilhar fracamente, pois com a metade da tensão nominal, a corrente elétrica também será menor e a potência dissipada será menos da metade da nominal.",
+        "A lâmpada queimará, pois como a tensão é menor do que a esperada, a corrente será maior, ultrapassando a corrente para a qual o filamento foi projetado."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015058,
+      "pergunta": "A obtenção de sistemas coloidais estáveis depende das interações entre as partículas dispersas e o meio onde se encontram. Em um sistema coloidal aquoso, cujas partículas são hidrofílicas, a adição de um solvente orgânico miscível em água, como etanol, desestabiliza o coloide, podendo ocorrer a agregação das partículas preliminarmente dispersas.\nA desestabilização provocada pelo etanol ocorre porque",
+      "opcoes": [
+        "a polaridade da água no sistema coloidal é reduzida.",
+        "as cargas superficiais das partículas coloidais são diminuídas.",
+        "as camadas de solvatação de água nas partículas são diminuídas.",
+        "o processo de miscibilidade da água e do solvente libera calor para o meio.",
+        "a intensidade dos movimentos brownianos das partículas coloidais é reduzida."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015059,
+      "pergunta": "Dentre outras características, uma determinada vegetação apresenta folhas durante três a quatro meses ao ano, com limbo reduzido, mecanismo rápido de abertura e fechamento dos estômatos e caule suculento. Essas são algumas características adaptativas das plantas ao bioma onde se encontram.\nQue fator ambiental é o responsável pela ocorrência dessas características adaptativas?",
+      "opcoes": [
+        "Escassez de nutrientes no solo.",
+        "Estratificação da vegetação.",
+        "Elevada insolação.",
+        "Baixo pH do solo.",
+        "Escassez de água."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015060,
+      "pergunta": "A remoção de petróleo derramado em ecossistemas marinhos é complexa e muitas vezes envolve a adição de mais sustâncias ao ambiente. Para facilitar o processo de recuperação dessas áreas, pesquisadores têm estudado a bioquímica de bactérias encontradas em locais sujeitos a esse tipo de impacto. Eles verificaram que algumas dessas espécies utilizam as moléculas de hidrocarbonetos como fonte energética, atuando como biorremediadores, removendo o óleo do ambiente. KREPSKY, N.; SILVA SOBRINHO, F.; CRAPEZ, M. A. C. Ciência Hoje, n. 223, jan.-fev. 2006 (adaptado).\nPara serem eficientes no processo de biorremediação citado, as espécies escolhidas devem possuir",
+      "opcoes": [
+        "células flageladas, que capturem as partículas de óleo presentes na água.",
+        "altas taxas de mutação, para se adaptarem ao ambiente impactado pelo óleo.",
+        "enzimas, que catalisem reações de quebra das moléculas constituintes do óleo.",
+        "parede celular espessa, que impossibilite que as bactérias se contaminem com o óleo.",
+        "capacidade de fotossíntese, que possibilite a liberação de oxigênio para a renovação do ambiente poluído."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015062,
+      "pergunta": "Uma enzima foi retirada de um dos órgãos do sistema digestório de um cachorro e, após ser purificada, foi diluída em solução fisiológica e distribuída em três tubos de ensaio com os seguintes conteúdos: • Tubo 1: carne • Tubo 2: macarrão • Tubo 3: banha Em todos os tubos foi adicionado ácido clorídrico (HCl), e o pH da solução baixou para um valor próximo a 2. Além disso, os tubos foram mantidos por duas horas a uma temperatura de 37 °C. A digestão do alimento ocorreu somente no tubo 1.\nDe qual órgão do cachorro a enzima foi retirada?",
+      "opcoes": [
+        "Fígado.",
+        "Pâncreas.",
+        "Estômago.",
+        "Vesícula biliar.",
+        "Intestino delgado."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015065,
+      "pergunta": "Em altos-fornos siderúrgicos, as temperaturas acima de 600 °C são mensuradas por meio de pirômetros óticos.Esses dispositivos apresentam a vantagem de medir a temperatura de um objeto aquecido sem necessidade de contato. Dentro de um pirômetro ótico, um filamento metálico é aquecido pela passagem de corrente elétrica até que sua cor seja a mesma que a do objeto aquecido em observação. Nessa condição, a temperatura conhecida do filamento é idêntica à do objeto aquecido em observação. Disponível em: www.if.usp.br. Acesso em: 4 ago. 2012 (adaptado).\nA propriedade da radiação eletromagnética avaliada nesse processo é a",
+      "opcoes": [
+        "amplitude.",
+        "coerência.",
+        "frequência.",
+        "intensidade.",
+        "velocidade."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015067,
+      "pergunta": "A fenilcetonúria é uma doença hereditária autossômica recessiva, associada à mutação do gene PAH, que limita a metabolização do aminoácido fenilalanina. Por isso, é obrigatório, por lei, que as embalagens de alimentos, como refrigerantes dietéticos, informem a presença de fenilalanina em sua composição. Uma mulher portadora de mutação para o gene PAH tem três filhos normais, com um homem normal, cujo pai sofria de fenilcetonúria, devido à mesma mutação no gene PAH encontrada em um dos alelos da mulher.\nQual a probabilidade de a quarta criança gerada por esses pais apresentar fenilcetonúria?",
+      "opcoes": [
+        "0%",
+        "12,5%",
+        "25%",
+        "50%",
+        "75%"
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015072,
+      "pergunta": "Um gel vaginal poderá ser um recurso para as mulheres na prevenção contra a aids. Esse produto tem como princípio ativo um composto que inibe a transcriptase reversa viral.\nEssa ação inibidora é importante, pois a referida enzima",
+      "opcoes": [
+        "corta a dupla hélice do DNA, produzindo um molde para o RNA viral.",
+        "produz moléculas de DNA viral que vão infectar células sadias.",
+        "polimeriza molécula de DNA, tendo como molde o RNA viral.",
+        "promove a entrada do vírus da aids nos linfócitos T.",
+        "sintetiza os nucleotídeos que compõem o DNA viral."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015075,
+      "pergunta": "Os parasitoides são insetos diminutos, que têm hábitos bastante peculiares: suas larvas se desenvolvem dentro do corpo de outros animais. Em geral, cada parasitoide ataca hospedeiros de determinada espécie e, por isso, esses organismos vêm sendo amplamente usados para o controle biológico de pragas agrícolas. SANTO, M. M. E. et al. Parasitoides: insetos benéficos e cruéis. Ciência Hoje, n. 291, abr. 2012 (adaptado).\nO uso desses insetos na agricultura traz benefícios ambientais, pois diminui o(a)",
+      "opcoes": [
+        "tempo de produção agrícola.",
+        "diversidade de insetos-praga.",
+        "aplicação de inseticidas tóxicos.",
+        "emprego de fertilizantes agrícolas.",
+        "necessidade de combate a ervas daninhas."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015078,
+      "pergunta": "De acordo com estatísticas do Ministério da Saúde, cerca de 5% das pessoas com dengue hemorrágica morrem. A dengue hemorrágica tem como base fisiopatológica uma resposta imune anômala, causando aumento da permeabilidade de vasos sanguíneos, queda da pressão arterial e manifestações hemorrágicas, podendo ocorrer manchas vermelhas na pele e sangramento pelo nariz, boca e gengivas. O hemograma do paciente pode apresentar como resultado leucopenia (diminuição do número de glóbulos brancos), linfocitose (aumento do número de linfócitos), aumento do hematócrito e trombocitopenia (contagem de plaquetas abaixo de 100 000/mm³). Disponível em: www.ciencianews.com.br. Acesso em: 28 fev. 2012 (adaptado).\nRelacionando os sintomas apresentados pelo paciente com dengue hemorrágica e os possíveis achados do hemograma, constata-se que",
+      "opcoes": [
+        "as manifestações febris ocorrem em função da diminuição dos glóbulos brancos, uma vez que estes controlam a temperatura do corpo.",
+        "a queda na pressão arterial é ocasionada pelo aumento do número de linfócitos, que têm como função principal a produção de anticorpos.",
+        "o sangramento pelo nariz, pela boca e gengiva é ocasionado pela quantidade reduzida de plaquetas, que são responsáveis pelo transporte de oxigênio.",
+        "as manifestações hemorrágicas estão associadas à trombocitopenia, uma vez que as plaquetas estão envolvidas na cascata decoagulação sanguínea.",
+        "os sangramentos observados ocorrem em função da linfocitose, uma vez que os linfócitos são responsáveis pela manutenção da integridade dos vasos sanguíneos."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015079,
+      "pergunta": "O caramujo gigante africano, Achatina fulica, é uma espécie exótica que tem despertado o interesse das autoridades brasileiras, uma vez que tem causado danos ambientais e prejuízos econômicos à agricultura. A introdução da espécie no Brasil ocorreu clandestinamente, com o objetivo de ser utilizada na alimentação humana. Porém, o molusco teve pouca aceitação no comércio de alimentos, o que resultou em abandono e liberação intencional das criações por vários produtores. Por ser uma espécie herbívora generalista (alimenta-se de mais de 500 espécies diferentes de vegetais), com grande capacidade reprodutiva, tornou-se uma praga agrícola de difícil erradicação. Associada a isto, a ausência de predadores naturais fez com que ocorresse um crescimento descontrolado da população.\nO desequilíbrio da cadeia alimentar observado foi causado pelo aumento da densidade populacional de",
+      "opcoes": [
+        "consumidores terciários, em função da elevada disponibilidade de consumidores secundários.",
+        "consumidores primários, em função da ausência de consumidores secundários.",
+        "consumidores secundários, em função da ausência de consumidores primários.",
+        "consumidores terciários, em função da elevada disponibilidade de produtores.",
+        "consumidores primários, em função do aumento de produtores."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015081,
+      "pergunta": "A toxina botulínica (produzida pelo bacilo Clostridium botulinum) pode ser encontrada em alimentos malconservados, causando até a morte de consumidores. No entanto, essa toxina modificada em laboratório está sendo usada cada vez mais para melhorar a qualidade de vida das pessoas com problemas físicos e/ou estéticos, atenuando problemas como o blefaroespasmo, que provoca contrações involuntárias das pálpebras. BACHUR, T. P. R. et al. Toxina botulínica: de veneno a tratamento. Revista Eletrônica Pesquisa Médica, n. 1, jan.-mar. 2009 (adaptado).\nO alívio dos sintomas do blefaroespasmo é consequência da ação da toxina modificada sobre o tecido",
+      "opcoes": [
+        "glandular, uma vez que ela impede a produção de secreção de substâncias na pele.",
+        "muscular, uma vez que ela provoca a paralisia das fibras que formam esse tecido.",
+        "epitelial, uma vez que ela leva ao aumento da camada de queratina que protege a pele.",
+        "conjuntivo, uma vez que ela aumenta a quantidade de substância intercelular no tecido.",
+        "adiposo, uma vez que ela reduz a espessura da camada de células de gordura do tecido."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015084,
+      "pergunta": "O acúmulo de plásticos na natureza pode levar a impactos ambientais negativos, tanto em ambientes terrestres quanto aquáticos. Uma das formas de minimizar esse problema é a reciclagem, para a qual é necessária a separação dos diferentes tipos de plásticos. Em um processo de separação foi proposto o seguinte procedimento: I. Coloque a mistura de plásticos picados em um tanque e acrescente água até a metade da sua capacidade. II. Mantenha essa mistura em repouso por cerca de 10 minutos. III. Retire os pedaços que flutuaram e transfira-os para outro tanque com uma solução de álcool. IV. Coloque os pedaços sedimentados em outro tanque com solução de sal e agite bem.\nQual propriedade da matéria possibilita a utilização do procedimento descrito?",
+      "opcoes": [
+        "Massa.",
+        "Volume.",
+        "Densidade.",
+        "Porosidade.",
+        "Maleabilidade."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015085,
+      "pergunta": "Para irrigar sua plantação, um produtor rural construiu um reservatório a 20 metros de altura a partir da barragem de onde será bombeada a água. Para alimentar o motor elétrico das bombas, ele instalou um painel fotovoltaico. A potência do painel varia de acordo com a incidência solar, chegando a um valor de pico de 80 W ao meio-dia. Porém, entre as 11 horas e 30 minutos e as 12 horas e 30 minutos, disponibiliza uma potência média de 50 W. Considere a aceleração da gravidade igual a 10 m/s² e uma eficiência de transferência energética de 100%.\nQual é o volume de água, em litros, bombeado para o reservatório no intervalo de tempo citado?",
+      "opcoes": [
+        "150",
+        "250",
+        "450",
+        "900",
+        "1 440"
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015088,
+      "pergunta": "Bioindicador ou indicador biológico é uma espécie ou grupo de espécies que reflete o estado biótico ou abiótico de um meio ambiente, o impacto produzido sobre um hábitat, comunidade ou ecossistema, entre outras funções. A posição trófica do organismo bioindicador é uma das características mais relevantes quanto ao seu grau de importância para essa função: quanto mais baixo o nível trófico do organismo, maior é a sua utilidade, pois pressupõe-se que toda a cadeia trófica é contaminada a partir dele. ANDRÉA, M. M. Bioindicadores ecotoxicológicos de agrotóxicos. Disponível em: www.biologico.sp.gov.br. Acesso em: 11 mar. 2013 (adaptado).\nO grupo de organismos mais adequado para essa condição, do ponto de vista da sua posição na cadeia trófica, é constituído por",
+      "opcoes": [
+        "algas.",
+        "peixes.",
+        "baleias.",
+        "camarões.",
+        "anêmonas."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2016084,
+      "pergunta": "Para cada litro de etanol produzido em uma indústria de cana-de-açúcar são gerados cerca de 18 L de vinhaça que é utilizada na irrigação das plantações de cana-de-açúcar, já que contém teores médios de nutrientes N, P e K iguais a 357 mg/L, 60 mg/L e 2034 mg/L, respectivamente. SILVA, M. A. S.; GRIEBELER, N. P.; BORGES, L. C. Uso de vinhaça e impactos nas propriedades do solo e lençol freático. Revista Brasileira de Engenharia Agrícola e Ambiental, n. 1, 2007 (adaptado).\nNa produção de 27000 L de etanol, a quantidade total de fósforo, em Kg, disponível na vinhaça será mais próxima de",
+      "opcoes": [
+        "1.",
+        "29.",
+        "60.",
+        "170.",
+        "1000."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016547,
+      "pergunta": "Um jovem suspeita que não é filho biológico de seus pais, pois descobriu que o seu tipo sanguíneo é O Rh negativo, o de sua mãe é B Rh positivo e de seu pai é A Rh positivo.\nA condição genotípica que possibilita que ele seja realmente filho biológico de seus pais é que",
+      "opcoes": [
+        "o pai e a mãe sejam heterozigotos para o sistema sanguíneo ABO e para o fator Rh.",
+        "o pai e a mãe sejam heterozigotos para o sistema sanguíneo ABO e homozigotos para o fator Rh.",
+        "o pai seja homozigoto para as duas características e a mãe heterozigota para as duas características.",
+        "o pai seja homozigoto para as duas características e a mãe heterozigota para o sistema ABO e homozigota para o fator Rh.",
+        "o pai seja homozigoto para o sistema ABO e heterozigoto para o fator Rh e a mãe homozigota para as duas características."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016548,
+      "pergunta": "Um cosmonauta russo estava a bordo da estação espacial MIR quando um de seus rádios de comunicação quebrou. Ele constatou que dois capacitores do rádio de 3 μF e 7 μF ligados em série estavam queimados. Em função da disponibilidade, foi preciso substituir os capacitores defeituosos por um único capacitor que cumpria a mesma função.\nQual foi a capacitância, medida em μF, do capacitor utilizado pelo cosmonauta?",
+      "opcoes": [
+        "0,10",
+        "0,50",
+        "2,1",
+        "10",
+        "21"
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016549,
+      "pergunta": "Em 1950, Erwin Chargaff e colaboradores estudavam a composição química do DNA e observaram que a quantidade de adenina (A) é igual à de timina (T), e a quantidade de guanina (G) é igual à de citosina (C) na grande maioria das duplas fitas de DNA. Em outras palavras, esses cientistas descobriram que o total de purinas (A + G) e o total de pirimidinas (C + T) eram iguais. Um professor trabalhou esses conceitos em sala de aula e apresentou como exemplo uma fita simples de DNA com 20 adeninas, 25 timinas, 30 guaninas e 25 citosinas.\nQual a quantidade de cada um dos nucleotídeos, quando considerada a dupla fita de DNA formada pela fita simples exemplificada pelo professor?",
+      "opcoes": [
+        "Adenina: 20; Timina: 25; Guanina: 25; Citosina: 30.",
+        "Adenina: 25; Timina: 20; Guanina: 45; Citosina: 45.",
+        "Adenina: 45; Timina: 45; Guanina: 55; Citosina: 55.",
+        "Adenina: 50; Timina: 50; Guanina: 50; Citosina: 50.",
+        "Adenina: 55; Timina: 55; Guanina: 45; Citosina: 45."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016551,
+      "pergunta": "Companheira viajante Suavemente revelada? Bem no interior de nossas células, uma clandestina e estranha alma existe. Silenciosamente, ela trama e aparece cumprindo seus afazeres domésticos cotidianos, descobrindo seu nicho especial em nossa fogosa cozinha metabólica, mantendo entropia em apuros, em ciclos variáveis noturnos e diurnos. Contudo, raramente ela nos acende, apesar de sua fornalha consumi-la. Sua origem? Microbiana, supomos. Julga-se adaptada às células eucariontes, considerando-se como escrava — uma serva a serviço de nossa verdadeira evolução. McMURRAY, W. C. The traveler. Trends in Biochemical Sciences, 1994 (adaptado).\nA organela celular descrita de forma poética no texto é o(a)",
+      "opcoes": [
+        "centríolo.",
+        "lisossomo.",
+        "mitocôndria.",
+        "complexo golgiense.",
+        "retículo endoplasmático liso."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016554,
+      "pergunta": "Darwin, em viagem às Ilhas Galápagos, observou que os tentilhões apresentavam bicos com formatos diferentes em cada ilha, de acordo com o tipo de alimentação disponível. Lamarck, ao explicar que o pescoço da girafa teria esticado para colher folhas e frutos no alto das árvores, elaborou ideias importantes sobre a evolução dos seres vivos.\nO texto aponta que uma ideia comum às teorias da evolução, propostas por Darwin e por Lamarck, refere-se à interação entre os organismos e seus ambientes, que é denominada de",
+      "opcoes": [
+        "mutação.",
+        "adaptação.",
+        "seleção natural.",
+        "recombinação gênica.",
+        "variabilidade genética."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016556,
+      "pergunta": "A sombra do cedro vem se encostar no cocho. Primo Ribeiro levantou os ombros; começa a tremer. Com muito atraso. Mas ele tem no baço duas colmeias de bichinhos maldosos, que não se misturam, soltando enxames no sangue em dias alternados. E assim nunca precisa de passar um dia sem tremer. ROSA, J. G. Sagarana. Rio de Janeiro: Nova Fronteira, 1984. O texto de João Guimarães Rosa descreve as manifestações das crises paroxísticas da malária em seu personagem. Essas se caracterizam por febre alta, calafrios, sudorese intensa e tremores, com intervalos de 48 h ou 72 h, dependendo da espécie de Plasmodium.\nEssas crises periódicas ocorrem em razão da",
+      "opcoes": [
+        "lise das hemácias, liberando merozoítos e substâncias denominadas hemozoínas.",
+        "invasão das hemácias por merozoítos com maturação até a forma esquizonte.",
+        "reprodução assexuada dos esporozoítos no fígado do indivíduo infectado.",
+        "liberação de merozoítos dos hepatócitos para a corrente sanguínea.",
+        "formação de gametócitos dentro das hemácias."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016557,
+      "pergunta": "O soro fisiológico é uma solução aquosa de cloreto de sódio (NaCl) comumente utilizada para higienização ocular, nasal, de ferimentos e de lentes de contato. Sua concentração é 0,90% em massa e densidade igual a 1,00 g/mL.\nQual massa de NaCl, em grama, deverá ser adicionada à água para preparar 500 mL desse soro?",
+      "opcoes": [
+        "0,45",
+        "0,90",
+        "4,50",
+        "9,00",
+        "45,00"
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016558,
+      "pergunta": "Um eletricista deve instalar um chuveiro que tem as especificações 220 V — 4 400 W a 6 800 W. Para a instalação de chuveiros, recomenda-se uma rede própria, com fios de diâmetro adequado e um disjuntor dimensionado à potência e à corrente elétrica previstas, com uma margem de tolerância próxima de 10%. Os disjuntores são dispositivos de segurança utilizados para proteger as instalações elétricas de curtos-circuitos e sobrecargas elétricas e devem desarmar sempre que houver passagem de corrente elétrica superior à permitida no dispositivo.\nPara fazer uma instalação segura desse chuveiro, o valor da corrente máxima do disjuntor deve ser",
+      "opcoes": [
+        "20 A.",
+        "25 A.",
+        "30 A.",
+        "35 A.",
+        "40 A."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016559,
+      "pergunta": "Suponha que uma doença desconhecida esteja dizimando um rebanho bovino de uma cidade e alguns veterinários tenham conseguido isolar o agente causador da doença, verificando que se trata de um ser unicelular e procarionte.\nPara combater a doença, os veterinários devem administrar, nos bovinos contaminados,",
+      "opcoes": [
+        "vacinas.",
+        "antivirais.",
+        "fungicidas.",
+        "vermífugos.",
+        "antibióticos."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016560,
+      "pergunta": "As sacolas plásticas são utilizadas em grande quantidade no Brasil por serem práticas, leves e de baixo custo. Porém, o tempo necessário para que sofram degradação nas condições do meio é de, no mínimo, 100 anos. Com o intuito de reduzir o impacto ambiental desses produtos, as sacolas biodegradáveis foram introduzidas no mercado. Essas sacolas são confeccionadas de um material polimérico que confere a elas uma característica que as torna biodegradáveis.\nA qual característica das sacolas biodegradáveis o texto faz referência?",
+      "opcoes": [
+        "Elevada massa molecular do polímero.",
+        "Espessura fina do material que as constitui.",
+        "Baixa resistência aos líquidos nas condições de uso.",
+        "Baixa resistência ao ataque por microrganismos em condições adequadas.",
+        "Ausência de anéis aromáticos na estrutura do polímero usado na confecção das sacolas."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016561,
+      "pergunta": "Até 1824 acreditava-se que as máquinas térmicas, cujos exemplos são as máquinas a vapor e os atuais motores a combustão, poderiam ter um funcionamento ideal. Sadi Carnot demonstrou a impossibilidade de uma máquina térmica, funcionando em ciclos entre duas fontes térmicas (uma quente e outra fria), obter 100% de rendimento.\nTal limitação ocorre porque essas máquinas",
+      "opcoes": [
+        "realizam trabalho mecânico.",
+        "produzem aumento da entropia.",
+        "utilizam transformações adiabáticas.",
+        "contrariam a lei da conservação de energia.",
+        "funcionam com temperatura igual à da fonte quente."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016562,
+      "pergunta": "Em uma aula de biologia sobre formação vegetal brasileira, a professora destacou que, em uma região, a flora convive com condições ambientais curiosas. As características dessas plantas não estão relacionadas com a falta de água, mas com as condições do solo, que é pobre em sais minerais, ácido e rico em alumínio. Além disso, essas plantas possuem adaptações ao fogo.\nAs características adaptativas das plantas que correspondem à região destacada pela professora são:",
+      "opcoes": [
+        "Raízes escoras e respiratórias.",
+        "Raízes tabulares e folhas largas.",
+        "Casca grossa e galhos retorcidos.",
+        "Raízes aéreas e perpendiculares ao solo.",
+        "Folhas reduzidas ou modificadas em espinhos."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016563,
+      "pergunta": "Em Bangladesh, mais da metade dos poços artesianos cuja água serve à população local está contaminada com arsênio proveniente de minerais naturais e de pesticidas. O arsênio apresenta efeitos tóxicos cumulativos. A ONU desenvolveu um kit para tratamento dessa água a fim de torná-la segura para o consumo humano. O princípio desse kit é a remoção do arsênio por meio de uma reação de precipitação com sais de ferro(III) que origina um sólido volumoso de textura gelatinosa. Disponível em: http://tc.iaea.org. Acesso em: 11 dez. 2012 (adaptado).\nCom o uso desse kit, a população local pode remover o elemento tóxico por meio de",
+      "opcoes": [
+        "fervura.",
+        "filtração.",
+        "destilação.",
+        "calcinação.",
+        "evaporação."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016564,
+      "pergunta": "Nos dias frios, é comum ouvir expressões como: “Esta roupa é quentinha” ou então “Feche a janela para o frio não entrar”. As expressões do senso comum utilizadas estão em desacordo com o conceito de calor da termodinâmica. A roupa não é “quentinha”, muito menos o frio “entra” pela janela.\nA utilização das expressões “roupa é quentinha” e “para o frio não entrar” é inadequada, pois o(a)",
+      "opcoes": [
+        "roupa absorve a temperatura do corpo da pessoa, e o frio não entra pela janela, o calor é que sai por ela.",
+        "roupa não fornece calor por ser um isolante térmico, e o frio não entra pela janela, pois é a temperatura da sala que sai por ela.",
+        "roupa não é uma fonte de temperatura, e o frio não pode entrar pela janela, pois o calor está contido na sala, logo o calor é que sai por ela.",
+        "calor não está contido num corpo, sendo uma forma de energia em trânsito de um corpo de maior temperatura para outro de menor temperatura.",
+        "calor está contido no corpo da pessoa, e não na roupa, sendo uma forma de temperatura em trânsito de um corpo mais quente para um corpo mais frio."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016565,
+      "pergunta": "Num dia em que a temperatura ambiente é de 37 °C, uma pessoa, com essa mesma temperatura corporal, repousa à sombra. Para regular sua temperatura corporal e mantê-la constante, a pessoa libera calor através da evaporação do suor. Considere que a potência necessária para manter seu metabolismo é 120 W e que, nessas condições, 20% dessa energia é dissipada pelo suor, cujo calor de vaporização é igual ao da água (540 cal/g). Utilize 1 cal igual a 4 J.\nApós duas horas nessa situação, que quantidade de água essa pessoa deve ingerir para repor a perda pela transpiração?",
+      "opcoes": [
+        "0,08 g",
+        "0,44 g",
+        "1,30 g",
+        "1,80 g",
+        "80,0 g"
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016567,
+      "pergunta": "Os métodos empregados nas análises químicas são ferramentas importantes para se conhecer a composição dos diversos materiais presentes no meio ambiente. É comum, na análise de metais presentes em amostras ambientais, como água de rio ou de mar, a adição de um ácido mineral forte, normalmente o ácido nítrico (HNO3), com a finalidade de impedir a precipitação de compostos pouco solúveis desses metais ao longo do tempo.\nNa ocorrência de precipitação, o resultado da análise pode ser subestimado, porque",
+      "opcoes": [
+        "ocorreu passagem de parte dos metais para uma fase sólida.",
+        "houve volatilização de compostos dos metais para a atmosfera.",
+        "os metais passaram a apresentar comportamento de não metais.",
+        "formou-se uma nova fase líquida, imiscível com a solução original.",
+        "os metais reagiram com as paredes do recipiente que contém a amostra."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016568,
+      "pergunta": "O paclitaxel é um triterpeno poli-hidroxilado que foi originalmente isolado da casca de Taxus brevifolia, árvore de crescimento lento e em risco de extinção, mas agora é obtido por rota química semissintética. Esse fármaco é utilizado como agente quimioterápico no tratamento de tumores de ovário, mama e pulmão. Seu mecanismo de ação antitumoral envolve sua ligação à tubulina interferindo com a função dos microtúbulos. KRETZER, I. F. Terapia antitumoral combinada de derivados do paclitaxel e etoposídeo associados à nanoemulsão lipídica rica em colesterol - LDE. Disponível em: www.teses.usp.br. Acesso em: 29 fev. 2012 (adaptado).\nDe acordo com a ação antitumoral descrita, que função celular é diretamente afetada pelo paclitaxel?",
+      "opcoes": [
+        "Divisão celular.",
+        "Transporte passivo.",
+        "Equilíbrio osmótico.",
+        "Geração de energia.",
+        "Síntese de proteínas."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016569,
+      "pergunta": "Para a instalação de um aparelho de ar-condicionado, é sugerido que ele seja colocado na parte superior da parede do cômodo, pois a maioria dos fluidos (líquidos e gases), quando aquecidos, sofrem expansão, tendo sua densidade diminuída e sofrendo um deslocamento ascendente. Por sua vez, quando são resfriados, tornam-se mais densos e sofrem um deslocamento descendente.\nA sugestão apresentada no texto minimiza o consumo de energia, porque",
+      "opcoes": [
+        "diminui a umidade do ar dentro do cômodo.",
+        "aumenta a taxa de condução térmica para fora do cômodo.",
+        "torna mais fácil o escoamento da água para fora do cômodo.",
+        "facilita a circulação das correntes de ar frio e quente dentro do cômodo.",
+        "diminui a taxa de emissão de calor por parte do aparelho para dentro do cômodo."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016572,
+      "pergunta": "A descoberta dos organismos extremófilos foi uma surpresa para os pesquisadores. Alguns desses organismos, chamados de acidófilos, são capazes de sobreviver em ambientes extremamente ácidos. Uma característica desses organismos é a capacidade de produzir membranas celulares compostas de lipídeos feitos de éteres em vez dos ésteres de glicerol, comuns nos outros seres vivos (mesófilos), o que preserva a membrana celular desses organismos mesmo em condições extremas de acidez.\nA degradação das membranas celulares de organismos não extremófilos em meio ácido é classificada como",
+      "opcoes": [
+        "hidrólise.",
+        "termólise.",
+        "eterificação.",
+        "condensação.",
+        "saponificação."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016575,
+      "pergunta": "Uma lâmpada LED (diodo emissor de luz), que funciona com 12 V e corrente contínua de 0,45 A, produz a mesma quantidade de luz que uma lâmpada incandescente de 60 W de potência.\nQual é o valor da redução da potência consumida ao se substituir a lâmpada incandescente pela de LED?",
+      "opcoes": [
+        "54,6 W",
+        "27,0 W",
+        "26,6 W",
+        "5,4 W",
+        "5,0 W"
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016576,
+      "pergunta": "Para lavar e refrescar o ambiente, que estava a 40 °C, uma pessoa resolveu jogar água sobre um piso de granito. Ela observou que o líquido se concentrou em algumas regiões, molhando parcialmente a superfície. Ao adicionar detergente sobre essa água, a pessoa verificou que o líquido se espalhou e deixou o piso totalmente molhado.\nA molhabilidade da superfície foi melhorada em função da",
+      "opcoes": [
+        "solubilidade do detergente em água ser alta.",
+        "tensão superficial da água ter sido reduzida.",
+        "pressão de vapor da água ter sido diminuída.",
+        "densidade da solução ser maior que a da água.",
+        "viscosidade da solução ser menor que a da água."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016577,
+      "pergunta": "Em um hospital, acidentalmente, uma funcionária ficou exposta a alta quantidade de radiação liberada por um aparelho de raios X em funcionamento. Posteriormente, ela engravidou e seu filho nasceu com grave anemia. Foi verificado que a criança apresentava a doença devido à exposição anterior da mãe à radiação.\nO que justifica, nesse caso, o aparecimento da anemia na criança?",
+      "opcoes": [
+        "A célula-ovo sofreu uma alteração genética.",
+        "As células somáticas da mãe sofreram uma mutação.",
+        "A célula gamética materna que foi fecundada sofreu uma mutação.",
+        "As hemácias da mãe que foram transmitidas à criança não eram normais.",
+        "As células hematopoiéticas sofreram alteração do número de cromossomos."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016578,
+      "pergunta": "Chamamos de lixo a grande diversidade de resíduos sólidos de diferentes procedências, como os gerados em residências. O aumento na produção de resíduos sólidos leva à necessidade de se pensar em maneiras adequadas de tratamento. No Brasil, 76% do lixo é disposto em lixões e somente 24% tem como destino um tratamento adequado, considerando os aterros sanitários, as usinas de compostagem ou a incineração. FADINI, P. S.; FADINI, A. A. A. Lixo: desafios e compromissos. Química Nova na Escola, maio 2001 (adaptado).\nComparando os tratamentos descritos, as usinas de compostagem apresentam como vantagem serem o destino",
+      "opcoes": [
+        "que gera um produto passível de utilização na agricultura.",
+        "onde ocorre a eliminação da matéria orgânica presente no lixo.",
+        "mais barato, pois não implica custos de tratamento nem controle.",
+        "que possibilita o acesso de catadores, pela disposição do lixo a céu aberto.",
+        "em que se podem utilizar áreas contaminadas com resíduos de atividades de mineração."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016579,
+      "pergunta": "As notas musicais podem ser agrupadas de modo a formar um conjunto. Esse conjunto pode formar uma escala musical. Dentre as diversas escalas existentes, a mais difundida é a escala diatônica, que utiliza as notas denominadas dó, ré, mi, fá, sol, lá e si. Essas notas estão organizadas em ordem crescente de alturas, sendo a nota dó a mais baixa e a nota si a mais alta.\nConsiderando uma mesma oitava, a nota si é a que tem menor",
+      "opcoes": [
+        "amplitude.",
+        "frequência.",
+        "velocidade.",
+        "intensidade.",
+        "comprimento de onda."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016580,
+      "pergunta": "O ambiente marinho pode ser contaminado com rejeitos radioativos provenientes de testes com armas nucleares. Os materiais radioativos podem se acumular nos organismos. Por exemplo, o estrôncio-90 é quimicamente semelhante ao cálcio e pode substituir esse elemento nos processos biológicos. FIGUEIRA, R. C. L.; CUNHA, I. I. L. A contaminação dos oceanos por radionuclídeos antropogênicos. Química Nova na Escola, n. 1, 1998 (adaptado). Um pesquisador analisou as seguintes amostras coletadas em uma região marinha próxima a um local que manipula o estrôncio radioativo: coluna vertebral de tartarugas, concha de moluscos, endoesqueleto de ouriços-do-mar, sedimento de recife de corais e tentáculos de polvo.\nEm qual das amostras analisadas a radioatividade foi menor?",
+      "opcoes": [
+        "Concha de moluscos.",
+        "Tentáculos de polvo.",
+        "Sedimento de recife de corais.",
+        "Coluna vertebral de tartarugas.",
+        "Endoesqueleto de ouriços-do-mar."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016583,
+      "pergunta": "O principal componente do sal de cozinha é o cloreto de sódio, mas o produto pode ter aluminossilicato de sódio em pequenas concentrações. Esse sal, que é insolúvel em água, age como antiumectante, evitando que o sal de cozinha tenha um aspecto empedrado.\nO procedimento de laboratório adequado para verificar a presença do antiumectante em uma amostra de sal de cozinha é o(a)",
+      "opcoes": [
+        "realização do teste de chama.",
+        "medida do pH de uma solução aquosa.",
+        "medida da turbidez de uma solução aquosa.",
+        "ensaio da presença de substâncias orgânicas.",
+        "verificação da presença de cátions monovalentes."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016585,
+      "pergunta": "A modernização da agricultura, também conhecida como Revolução Verde, ficou marcada pela expansão da agricultura nacional. No entanto, trouxe consequências como o empobrecimento do solo, o aumento da erosão e dos custos de produção, entre outras. Atualmente, a preocupação com a agricultura sustentável tem suscitado práticas como a adubação verde, que consiste na incorporação ao solo de fitomassa de espécies vegetais distintas, sendo as mais difundidas as leguminosas. ANUNCIAÇÃO, G. C. F. Disponível em: www.muz.ifsuldeminas.edu.br. Acesso em: 20 dez. 2012 (adaptado).\nA utilização de leguminosas nessa prática de cultivo visa reduzir a",
+      "opcoes": [
+        "utilização de agrotóxicos.",
+        "atividade biológica do solo.",
+        "necessidade do uso de fertilizantes.",
+        "decomposição da matéria orgânica.",
+        "capacidade de armazenamento de água no solo."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016586,
+      "pergunta": "Nos anos 1990, verificou-se que o rio Potomac, situado no estado norte-americano de Maryland, tinha, em parte de seu curso, águas extremamente ácidas por receber um efluente de uma mina de carvão desativada, o qual continha ácido sulfúrico (H2SO4). Essa água, embora límpida, era desprovida de vida. Alguns quilômetros adiante, instalou-se uma fábrica de papel e celulose que emprega hidróxido de sódio (NaOH) e carbonato de sódio (NaCO3) em seus processos. Em pouco tempo, observou-se que, a partir do ponto em que a fábrica lança seus rejeitos no rio, a vida aquática voltou a florescer. HARRIS, D. C. Análise química quantitativa. Rio de Janeiro: Livros Técnicos e Científicos, 2012 (adaptado).\nA explicação para o retorno da vida aquática nesse rio é a",
+      "opcoes": [
+        "diluição das águas do rio pelo novo efluente lançado nele.",
+        "precipitação do íon sulfato na presença do efluente da nova fábrica.",
+        "biodegradação do ácido sulfúrico em contato com o novo efluente descartado.",
+        "diminuição da acidez das águas do rio pelo efluente da fábrica de papel e celulose.",
+        "volatilização do ácido sulfúrico após contato com o novo efluente introduzido no rio."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016587,
+      "pergunta": "Para um salto no Grand Canyon usando motos, dois paraquedistas vão utilizar uma moto cada, sendo que uma delas possui massa três vezes maior. Foram construídas duas pistas idênticas até a beira do precipício, de forma que no momento do salto as motos deixem a pista horizontalmente e ao mesmo tempo. No instante em que saltam, os paraquedistas abandonam suas motos e elas caem praticamente sem resistência do ar.\nAs motos atingem o solo simultaneamente porque",
+      "opcoes": [
+        "possuem a mesma inércia.",
+        "estão sujeitas à mesma força resultante.",
+        "têm a mesma quantidade de movimento inicial.",
+        "adquirem a mesma aceleração durante a queda.",
+        "são lançadas com a mesma velocidade horizontal."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016588,
+      "pergunta": "Uma nova estratégia para o controle da dengue foi apresentada durante o Congresso Internacional de Medicina Tropical, no Rio de Janeiro, em 2012. O projeto traz uma abordagem nova e natural para o combate à doença e já está em fase de testes. O objetivo do programa é cessar a transmissão do vírus da dengue pelo Aedes aegypti, a partir da introdução da bactéria Wolbachia — que é naturalmente encontrada em insetos — nas populações locais de mosquitos. Quando essa bactéria é introduzida no A. aegypti, atua como uma “vacina”, estimulando o sistema imunológico e bloqueando a multiplicação do vírus dentro do inseto. Disponível em: http://portalsaude.saude.gov.br. Acesso em: 20 dez. 2012 (adaptado).\nQual o conceito fundamental relacionado a essa estratégia?",
+      "opcoes": [
+        "Clonagem.",
+        "Mutualismo.",
+        "Parasitismo.",
+        "Transgênese.",
+        "Controle biológico."
+      ],
+      "correta": "E",
+      "ano": 2016
     }
   ]
 };

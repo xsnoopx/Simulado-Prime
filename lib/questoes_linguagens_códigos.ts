@@ -8384,6 +8384,812 @@ export const questoes = {
       ],
       "correta": "A",
       "ano": 2025
+    },
+    {
+      "id": 2009108,
+      "pergunta": "Texto I É praticamente impossível imaginarmos nossas vidas sem o plástico. Ele está presente em embalagens de alimentos, bebidas e remédios, além de eletrodomésticos, automóveis etc. Esse uso ocorre devido à sua atoxicidade e à inércia, isto é: quando em contato com outras substâncias, o plástico não as contamina; ao contrário, protege o produto embalado. Outras duas grandes vantagens garantem o uso dos plásticos em larga escala: são leves, quase não alteram o peso do material embalado, e são 100% recicláveis, fato que, infelizmente, não é aproveitado, visto que, em todo o mundo, a percentagem de plástico reciclado, quando comparado ao total produzido, ainda é irrelevante. Revista Mãe Terra. Minuano, ano I, n. 6 (adaptado). Texto II Sacolas plásticas são leves e voam ao vento. Por isso, elas entopem esgotos e bueiros, causando enchentes. São encontradas até no estômago de tartarugas marinhas, baleias, focas e golfinhos, mortos por sufocamento. Sacolas plásticas descartáveis são gratuitas para os consumidores, mas têm um custo incalculável para o meio ambiente. Veja, 8 jul. 2009. Fragmentos de texto publicitário do Instituto Akatu pelo Consumo Consciente.\nNa comparação dos textos, observa-se que",
+      "opcoes": [
+        "o texto I apresenta um alerta a respeito do efeito da reciclagem de materiais plásticos; o texto II justifica o uso desse material reciclado.",
+        "o texto I tem como objetivo precípuo apresentar a versatilidade e as vantagens do uso do plástico na contemporaneidade; o texto II objetiva alertar os consumidores sobre os problemas ambientais decorrentes de embalagens plásticas não recicladas.",
+        "o texto I expõe vantagens, sem qualquer ressalva, do uso do plástico; o texto II busca convencer o leitor a evitar o uso de embalagens plásticas.",
+        "o texto I ilustra o posicionamento de fabricantes de embalagens plásticas, mostrando por que elas devem ser usadas; o texto II ilustra o posicionamento de consumidores comuns, que buscam praticidade e conforto.",
+        "o texto I apresenta um alerta a respeito da possibilidade de contaminação de produtos orgânicos e industrializados decorrente do uso de plástico em suas embalagens; o texto II apresenta vantagens do consumo de sacolas plásticas: leves, descartáveis e gratuitas."
+      ],
+      "correta": "B",
+      "ano": 2009
+    },
+    {
+      "id": 2009117,
+      "pergunta": "Canção do vento e da minha vida O vento varria as folhas, O vento varria os frutos, O vento varria as flores... E a minha vida ficava Cada vez mais cheia De frutos, de flores, de folhas. [...] O vento varria os sonhos E varria as amizades... O vento varria as mulheres... O vento varria os meses E varria os teus sorrisos... O vento varria tudo! E a minha vida ficava Cada vez mais cheia De tudo. E a minha vida ficava Cada vez mais cheia De afetos e de mulheres. BANDEIRA, M. Poesia completa e prosa. Rio de Janeiro: José Aguilar, 1967.\nNa estruturação do texto, destaca-se",
+      "opcoes": [
+        "a construção de oposições semânticas.",
+        "a apresentação de ideias de forma objetiva.",
+        "o emprego recorrente de figuras de linguagem, como o eufemismo.",
+        "a repetição de sons e de construções sintáticas semelhantes.",
+        "a inversão da ordem sintática das palavras."
+      ],
+      "correta": "D",
+      "ano": 2009
+    },
+    {
+      "id": 2009133,
+      "pergunta": "Texto I [...] já foi o tempo em que via a convivência como viável, só exigindo deste bem comum, piedosamente, o meu quinhão, já foi o tempo em que consentia num contrato, deixando muitas coisas de fora sem ceder contudo no que me era vital, já foi o tempo em que reconhecia a existência escandalosa de imaginados valores, coluna vertebral de toda ‘ordem’; mas não tive sequer o sopro necessário, e, negado o respiro, me foi imposto o sufoco; é esta consciência que me libera, é ela hoje que me empurra, são outras agora minhas preocupações, é hoje outro o meu universo de problemas; num mundo estapafúrdio — definitivamente fora de foco — cedo ou tarde tudo acaba se reduzindo a um ponto de vista, e você que vive paparicando as ciências humanas, nem suspeita que paparica uma piada: impossível ordenar o mundo dos valores, ninguém arruma a casa do capeta; me recuso pois a pensar naquilo em que não mais acredito, seja o amor, a amizade, a família, a igreja, a humanidade; me lixo com tudo isso! me apavora ainda a existência, mas não tenho medo de ficar sozinho, foi conscientemente que escolhi o exílio, me bastando hoje o cinismo dos grandes indiferentes [...]. NASSAR, R. Um copo de cólera. São Paulo: Companhia das Letras, 1992. Texto II Raduan Nassar lançou a novela Um Copo de Cólera em 1978, fervilhante narrativa de um confronto verbal entre amantes, em que a fúria das palavras cortantes se estilhaçava no ar. O embate conjugal ecoava o autoritário discurso do poder e da submissão de um Brasil que vivia sob o jugo da ditadura militar. COMODO, R. Um silêncio inquietante. IstoÉ. Disponível em: http://www.terra.com.br. Acesso em: 15 jul. 2009.\nConsiderando-se os textos apresentados e o contexto político e social no qual foi produzida a obra Um Copo de Cólera, verifica-se que o narrador, ao dirigir-se à sua parceira, nessa novela, tece um discurso",
+      "opcoes": [
+        "conformista, que procura defender as instituições nas quais repousava a autoridade do regime militar no Brasil, a saber: a Igreja, a família e o Estado.",
+        "pacifista, que procura defender os ideais libertários representativos da intelectualidade brasileira opositora à ditadura militar na década de 70 do século passado.",
+        "desmistificador, escrito em um discurso ágil e contundente, que critica os grandes princípios humanitários supostamente defendidos por sua interlocutora.",
+        "politizado, pois apela para o engajamento nas causas sociais e para a defesa dos direitos humanos como uma única forma de salvamento para a humanidade.",
+        "contraditório, ao acusar a sua interlocutora de compactuar com o regime repressor da ditadura militar, por meio da defesa de instituições como a família e a Igreja."
+      ],
+      "correta": "C",
+      "ano": 2009
+    },
+    {
+      "id": 2010100,
+      "pergunta": "MOSTRE QUE SUA MEMÓRIA É MELHOR DO QUE A DE COMPUTADOR E GUARDE ESTA CONDIÇÃO: 12X SEM JUROS. Campanha publicitária da loja de eletroeletrônicos. Revista Época. Nº 424, 03 jul. 2006.\nAo circularem socialmente, os textos realizam-se como práticas de linguagem, assumindo configurações específicas, formais e de conteúdo. Considerando o contexto em que circula o texto publicitário, seu objetivo básico é",
+      "opcoes": [
+        "influenciar o comportamento do leitor, por meio de apelos que visam à adesão ao consumo.",
+        "definir regras de comportamento social pautadas no combate ao consumismo exagerado.",
+        "defender a importância do conhecimento de informática pela população de baixo poder aquisitivo.",
+        "facilitar o uso de equipamentos de informática pelas classes sociais economicamente desfavorecidas.",
+        "questionar o fato de o homem ser mais inteligente que a máquina, mesmo a mais moderna."
+      ],
+      "correta": "A",
+      "ano": 2010
+    },
+    {
+      "id": 2010116,
+      "pergunta": "Machado de Assis Joaquim Maria Machado de Assis, cronista, contista, dramaturgo, jornalista, poeta, novelista, romancista, crítico e ensaísta, nasceu na cidade do Rio de Janeiro em 21 de junho de 1839. Filho de um operário mestiço de negro e português, Francisco José de Assis, e de D. Maria Leopoldina Machado de Assis, aquele que viria a tornar-se o maior escritor do país e um mestre da língua, perde a mãe muito cedo e é criado pela madrasta, Maria Inês, também mulata, que se dedica ao menino e o matricula na escola pública, única que frequentou o autodidata Machado de Assis. Disponível em: http://www.passeiweb.com. Acesso em: 1 maio 2009.\nConsiderando os seus conhecimentos sobre os gêneros textuais, o texto citado constitui-se de",
+      "opcoes": [
+        "fatos ficcionais, relacionados a outros de caráter realista, relativos à vida de um renomado escritor.",
+        "representações generalizadas acerca da vida de membros da sociedade por seus trabalhos e vida cotidiana.",
+        "explicações da vida de um renomado escritor, com estrutura argumentativa, destacando como tema seus principais feitos.",
+        "questões controversas e fatos diversos da vida de personalidade histórica, ressaltando sua intimidade familiar em detrimento de seus feitos públicos.",
+        "apresentação da vida de uma personalidade, organizada sobretudo pela ordem tipológica da narração, com um estilo marcado por linguagem objetiva."
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2010126,
+      "pergunta": "Estudo feito por pesquisadores da Fundação Oswaldo Cruz sobre adolescentes recrutados pelo tráfico de drogas nas favelas cariocas expõe as bases sociais dessas quadrilhas, contribuindo para explicar as dificuldades que o Estado enfrenta no combate ao crime organizado. O tráfico oferece aos jovens de escolaridade precária (nenhum dos entrevistados havia completado o ensino fundamental) um plano de carreira bem estruturado, com salários que variam de R$ 400,00 a R$ 12.000 mensais. Para uma base de comparação, convém notar que, segundo dados do IBGE de 2001, 59% da população brasileira com mais de dez anos que declara ter uma atividade remunerada ganha no máximo o ‘piso salarial’ oferecido pelo crime. Dos traficantes ouvidos pela pesquisa, 25% recebiam mais de R$ 2.000 mensais; já na população brasileira essa taxa não ultrapassa 6%. Tais rendimentos mostram que as políticas sociais compensatórias, como o Bolsa-Escola (que paga R$ 15 mensais por aluno matriculado), são por si só incapazes de impedir que o narcotráfico continue aliciando crianças provenientes de estratos de baixa renda: tais políticas aliviam um pouco o orçamento familiar e incentivam os pais a manterem os filhos estudando, o que de modo algum impossibilita a opção pela deliquência. No mesmo sentido, os programas voltados aos jovens vulneráveis ao crime organizado (circo-escolas, oficinas de cultura, escolinhas de futebol) são importantes, mas não resolvem o problema. A única maneira de reduzir a atração exercida pelo tráfico é a repressão, que aumenta os riscos para os que escolhem esse caminho. Os rendimentos pagos aos adolescentes provam isso: eles são elevados precisamente porque a possibilidade de ser preso não é desprezível. É preciso que o Executivo federal e os estaduais desmontem as organizações paralelas erguidas pelas quadrilhas, para que a certeza de punição elimine o fascínio dos salários do crime. Editorial. Folha de São Paulo. 15 jan. 2003.\nNo Editorial, o autor defende a tese de que \"as políticas sociais que procuram evitar a entrada dos jovens no tráfico não terão chance de sucesso enquanto a remuneração oferecida pelos traficantes for tão mais compensatória que aquela oferecida pelos programas do governo”. Para comprovar sua tese, o autor apresenta",
+      "opcoes": [
+        "instituições que divulgam o crescimento de jovens no crime organizado.",
+        "sugestões que ajudam a reduzir a atração exercida pelo crime organizado.",
+        "políticas sociais que impedem o aliciamento de crianças no crime organizado.",
+        "pesquisadores que se preocupam com os jovens envolvidos no crime organizado.",
+        "números que comparam os valores pagos entre os programas de governo e o crime organizado."
+      ],
+      "correta": "E",
+      "ano": 2010
+    },
+    {
+      "id": 2011127,
+      "pergunta": "SE NO INVERNO É DIFÍCIL ACORDAR, IMAGINE DORMIR. Com a chegada do inverno, muitas pessoas perdem o sono. São milhões de necessitados que lutam contra a fome e o frio. Para vencer esta batalha, eles precisam de você. Deposite qualquer quantia. Você ajuda milhares de pessoas a terem uma boa noite e dorme com a consciência tranquila. Veja. 05 set. 1999 (adaptado)\nO produtor de anúncios publicitários utiliza-se de estratégias persuasivas para influenciar o comportamento de seu leitor. Entre os recursos argumentativos mobilizados pelo autor para obter a adesão do público à campanha, destaca-se nesse texto",
+      "opcoes": [
+        "a oposição entre individual e coletivo, trazendo um ideário populista para o anúncio.",
+        "a utilização de tratamento informal com o leitor, o que suaviza a seriedade do problema.",
+        "o emprego de linguagem figurada, o que desvia a atenção da população do apelo financeiro.",
+        "o uso dos numerais “milhares” e “milhões”, responsável pela supervalorização das condições dos necessitados.",
+        "o jogo de palavras entre “acordar” e “dormir”, o que relativiza o problema do leitor em relação ao dos necessitados."
+      ],
+      "correta": "E",
+      "ano": 2011
+    },
+    {
+      "id": 2015096,
+      "pergunta": "Um relacionamento de grupo saudável exige um número de indivíduos trabalhando interdependentemente para completar um projeto, com total participação individual e contribuição pessoal. Se uma pessoa domina, os outros membros têm pouco crescimento ou prazer na atividade, não existe um verdadeiro relacionamento no grupo. O teatro é uma atividade artística que exige o talento e a energia de muitas pessoas — desde a primeira ideia de uma peça ou cena até o último eco de aplauso. Sem esta interação não há lugar para o ator individualmente, pois sem o funcionamento do grupo, para quem iria ele representar, que materiais usaria e que efeitos poderia produzir? O aluno-ator deve aprender que “como atuar”, assim como no jogo, está intrinsecamente ligado a todas as outras pessoas na complexidade da forma da arte. O teatro improvisacional requer relacionamento de grupo muito intenso, pois é a partir do acordo e da atuação em grupo que emerge o material para as cenas e peças. SPOLIN, V. Improvisação para o teatro. São Paulo: Perspectiva, 2008.\nCom base no texto, as diferenças e similaridades dos atores são aceitas no teatro de improvisação quando",
+      "opcoes": [
+        "todos experimentam o teatro juntos e sem julgamentos.",
+        "uma parte do grupo comanda a outra, exercendo o poder.",
+        "a opinião de alguns tem valor e demonstra a sua capacidade individual.",
+        "a individualidade se destaca e traz à tona o talento daquele que é o melhor.",
+        "uma pessoa precisa dominar, comandando as ações do grupo, sem acordos."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015097,
+      "pergunta": "A dança moderna propõe em primeiro lugar o conhecimento de si e o autodomínio. Minha proposta é esta: através do conhecimento e do autodomínio chego à forma, à minha forma — e não o contrário. É uma inversão que muda toda a estética, toda a razão do movimento. A técnica na dança tem apenas uma finalidade: preparar o corpo para responder à exigência do espírito artístico. VIANNA, K.; CARVALHO, M. A. A dança. São Paulo: Siciliano, 1990.\nNa abordagem dos autores, a técnica, o autodomínio e o conhecimento do bailarino estão a serviço da",
+      "opcoes": [
+        "padronização do movimento da dança.",
+        "subordinação do corpo a um padrão.",
+        "concretização da criação pessoal.",
+        "ideia preconcebida de forma.",
+        "busca pela igualdade entre os bailarinos."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015099,
+      "pergunta": "Manter as contas sob controle e as finanças saudáveis parece um objetivo inatingível para você? Tenha certeza de que você não está sozinho. A bagunça na vida financeira compromete os sonhos de muita gente no Brasil. É por isso que nós lançamos, pelo terceiro ano consecutivo, este especial com informações que ajudam a encarar a situação de forma prática. Sem malabarismos — mas com boa dose de disciplina! — é possível quitar as dívidas, organizar os gastos, fazer planos de consumo que caibam em seus rendimentos mensais e estruturar os investimentos para fazer o dinheiro que sobra render mais. Ter dinheiro para viver melhor está diretamente relacionado a sua capacidade de se organizar e de eleger prioridades na hora de gastar. Aceite o desafio e boa leitura! Você S/A, n. 16, 2011 (adaptado).\nNo trecho apresentado, são utilizados vários argumentos que demonstram que o objetivo principal do produtor do texto, em relação ao público-alvo da revista, é",
+      "opcoes": [
+        "conscientizar o leitor de que ele é capaz de economizar.",
+        "levar o leitor a envolver-se com questões de ordem econômica.",
+        "ajudar o leitor a quitar suas dívidas e organizar sua vida financeira.",
+        "persuadir o leitor de que ele não é o único com problemas financeiros.",
+        "convencer o leitor da importância de ler essa edição especial da revista."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015101,
+      "pergunta": "O primeiro contato dos suruís com o homem branco foi em 1969. A população indígena foi dizimada por doenças e matanças, mas, recentemente, voltou a crescer. Soa contraditório, mas a mesma modernidade que quase dizimou os suruís nos tempos do primeiro contato promete salvar a cultura e preservar o território desse povo. Em 2007, o líder Almir Suruí, de 37 anos, fechou uma parceria inédita e levou a tecnologia às tribos. Os índios passaram a valorizar a história dos anciãos. E a resguardar, em vídeos e fotos on-line, as tradições da aldeia. Ainda se valeram de smartphones e GPS para delimitar suas terras e identificar os desmatamentos ilegais. RIBEIRO, A. Não temos o direito de ficar isolados. Época, n. 718, 20 fev. 2012 (adaptado).\nConsiderando-se as características históricas da relação entre índios e não índios, a suposta contradição observada na relação entre suruís e recursos da modernidade justifica-se porque os índios",
+      "opcoes": [
+        "aderiram à tecnologia atual como forma de assimilar a cultura do homem branco.",
+        "fizeram uso do GPS para identificar áreas propícias a novas plantações.",
+        "usaram recursos tecnológicos para registrar a cultura do seu povo.",
+        "fecharam parceria para denunciar as vidas perdidas por doenças e matanças.",
+        "resguardaram as tradições da aldeia à custa do isolamento provocado pela tecnologia moderna."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015104,
+      "pergunta": "Síntese entre erudito e popular Na região mineira, a separação entre cultura popular (as artes mecânicas) e erudita (as artes liberais) é marcada pela elite colonial, que tem como exemplo os valores europeus, e o grupo popular, formado pela fusão de várias culturas: portugueses aventureiros ou degredados, negros e índios. Aleijadinho, unindo as sofisticações da arte erudita ao entendimento do artífice popular, consegue fazer essa síntese característica deste momento único na história da arte brasileira: o barroco colonial. MAJORA, C. BrHistória, n. 3, mar. 2007 (adaptado).\nNo século XVIII, a arte brasileira, mais especificamente a de Minas Gerais, apresentava a valorização da técnica e um estilo próprio, incluindo a escolha dos materiais. Artistas como Aleijadinho e Mestre Ataíde têm suas obras caracterizadas por peculiaridades que são identificadas por meio",
+      "opcoes": [
+        "do emprego de materiais oriundos da Europa e da interpretação realista dos objetos representados.",
+        "do uso de recursos materiais disponíveis no local e da interpretação formal com características próprias.",
+        "da utilização de recursos materiais vindos da Europa e da homogeneização e linearidade representacional.",
+        "da observação e da cópia detalhada do objeto representado e do emprego de materiais disponíveis na região.",
+        "da utilização de materiais disponíveis no Brasil e da interpretação idealizada e linear dos objetos representados."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015106,
+      "pergunta": "Telecommuting redefine o tradicional entendimento sobre o espaço de trabalho. Atualmente, as organizações estão se focando em novos valores, tais como, inovações, satisfação, responsabilidades, resultados e ambiente de trabalho familiar. A alternativa do telecommuting complementa esses princípios e oferece flexibilidade aos patrões e empregados. É um conceito novo que, a cada dia, ganha mais força ao redor do mundo. Grandes empresas escolheram o trabalho de telecommuting pelas facilidades que ele gera para o empregador. A implantação do telecommuting determina regras para se trabalhar em casa em dias específicos da semana e, nos demais dias, trabalhar no escritório. O local de trabalho pode ser a casa ou, temporariamente, por motivo de viagem, outros escritórios. FERREIRA JR., J.C. Disponível em: www.ccuec.unicamp.br. Acesso em: 1 ago. 2012 (adaptado).\nCom o advento das novas tecnologias, a sociedade tem vivenciado mudanças de paradigmas em vários setores. Nesse sentido, o telecommuting traz novidades para o mundo do trabalho porque proporciona prioritariamente o(a)",
+      "opcoes": [
+        "aumento da produtividade do empregado.",
+        "equilíbrio entre vida pessoal e profissional do trabalhador.",
+        "fortalecimento da relação entre empregador e empregado.",
+        "participação do profissional nas decisões da organização.",
+        "maleabilidade dos locais de atuação do profissional da empresa."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015107,
+      "pergunta": "Perder a tramontana A expressão ideal para falar de desorientados e outras palavras de perder a cabeça É perder o norte, desorientar-se. Ao pé da letra, “perder a tramontana” significa deixar de ver a estrela polar, em italiano stella tramontana, situada do outro lado dos montes, que guiava os marinheiros antigos em suas viagens desbravadoras. Deixar de ver a tramontana era sinônimo de desorientação. Sim, porque, para eles, valia mais o céu estrelado que a terra. O Sul era região desconhecida, imprevista; já o Norte tinha como referência no firmamento um ponto luminoso conhecido como a estrela Polar, uma espécie de farol para os navegantes do Mediterrâneo, sobretudo os genoveses e os venezianos. Na linguagem deles, ela ficava transmontes, para além dos montes, os Alpes. Perdê-la de vista era perder a tramontana, perder o Norte. No mundo de hoje, sujeito a tantas pressões, muita gente não resiste a elas e entra em parafuso. Além de perder as estribeiras, perde a tramontana... COTRIM, M. Língua Portuguesa, n. 15, jan. 2007.\nNesse texto, o autor remonta às origens da expressão “perder a tramontana”. Ao tratar do significado dessa expressão, utilizando a função referencial da linguagem, o autor busca",
+      "opcoes": [
+        "apresentar seus indícios subjetivos.",
+        "convencer o leitor a utilizá-la.",
+        "expor dados reais de seu emprego.",
+        "explorar sua dimensão estética.",
+        "criticar sua origem conceitual."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015108,
+      "pergunta": "Conecte-se Estabeleça relações com as pessoas a sua volta. Os relacionamentos são a base da vida diária e investir tempo neles enriquecerá seu dia e garantirá apoio quando precisar. As pesquisas mostram que quem tem menos de três pessoas em sua rede de contatos próxima — entre família e amigos — tem mais chance de desenvolver uma doença mental. Seja ativo Caminhe ou corra, ande de bicicleta, pratique um esporte, dance. Os exercícios fazem as pessoas se sentirem bem — o importante é cada pessoa achar a atividade que lhe dá prazer e que é adequada a seus limites. Estudos de longo prazo sugerem que a prática de uma atividade física previne o declínio das capacidades mentais e protege contra a ansiedade e a depressão. Preste atenção Seja curioso, saboreie os momentos da vida e tome consciência de como se sente. Refletir sobre suas experiências ajuda a descobrir o que realmente importa e garantir que você viva o presente. Uma pesquisa mostrou que pessoas treinadas a prestar atenção em seus sentimentos durante oito a 12 semanas apresentaram melhora no bem-estar por anos. Continue aprendendo Tente algo novo, matricule-se em um curso, faça uma nova tarefa no trabalho. Tente consertar algo em casa. Aprenda a tocar um instrumento ou a cozinhar. Escolha um desafio que você vai gostar de perseguir. Os estudos sugerem que o bem-estar está ligado a ter metas — desde que elas sejam estabelecidas pelos próprios indivíduos e tenham a ver com seus valores pessoais. Doe-se Agradeça a alguém, ajude um amigo ou um estranho. Sorria, faça trabalho voluntário, junte-se à associação do bairro. Olhe para fora, além de olhar para dentro de si. Fazer parte de uma comunidade traz benefícios — entre eles relações sociais mais significativas. As pesquisas mostram que as pessoas que têm um interesse maior pelo outro tendem a se considerar mais felizes. Disponível em: www.revistaepoca.globo.com. Acesso em: 27 fev. 2012.\nAo interagirmos socialmente, é comum deixarmos claro nosso posicionamento a respeito do assunto discutido. Para isso, muitas vezes, recorremos a determinadas estratégias argumentativas, dentre as quais se encontra o argumento de autoridade. Considerando o texto em suas cinco partes, constata-se que há o emprego de argumento de autoridade no trecho:",
+      "opcoes": [
+        "“Seja curioso, saboreie os momentos da vida e tome consciência de como se sente. Refletir sobre suas experiências ajuda a descobrir o que realmente importa”.",
+        "“As pesquisas mostram que quem tem menos de três pessoas em sua rede de contatos próxima [...] tem mais chances de desenvolver uma doença mental.”",
+        "“Caminhe ou corra, ande de bicicleta, pratique um esporte, dance. Os exercícios fazem as pessoas se sentirem bem”.",
+        "“Tente algo novo, matricule-se em um curso [...] Escolha um desafio que você vai gostar de perseguir.”",
+        "“Fazer parte de uma comunidade traz benefícios — entre eles relações sociais mais significativas.”"
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015109,
+      "pergunta": "Não adianta isolar o fumante Se quiser mesmo combater o fumo, o governo precisa ir além das restrições. É preciso apoiar quem quer largar o cigarro. Ao apoiar uma medida provisória para combater o fumo em locais públicos nos 27 estados brasileiros, o Senado reafirmou um valor fundamental: a defesa da saúde e da vida. Em pelo menos um aspecto a MP 540/2011 é ainda mais rigorosa que as medidas em vigor em São Paulo, no Rio de Janeiro e no Paraná, estados que até agora adotaram as legislações mais duras contra o tabagismo. Ela proíbe os fumódromos em 100% dos locais fechados, incluindo até tabacarias, onde o fumo era autorizado sob determinadas condições. Uma das principais medidas atinge o fumante no bolso. O governo fica autorizado a fixar um novo preço para o maço de cigarros. O Imposto sobre Produtos Industrializados (IPI) será elevado em 300%. Somando uma coisa e outra, o sabor de fumar se tornará muito mais ácido. Deverá subir 20% em 2012 e 55% em 2013. A visão fundamental da MP está correta. Sabe-se, há muito, que o tabaco faz mal à saúde. É razoável, portanto, que o Estado aja em nome da saúde pública. Época, 28 nov. 2011 (adaptado).\nO autor do texto analisa a aprovação da MP 540/2011 pelo Senado, deixando clara a sua opinião sobre o tema. O trecho que apresenta uma avaliação pessoal do autor como uma estratégia de persuasão do leitor é:",
+      "opcoes": [
+        "“Ela proíbe os fumódromos em 100% dos locais fechados”.",
+        "“O governo fica autorizado a fixar um novo preço para o maço de cigarros.’’",
+        "“O Imposto sobre Produtos Industrializados (IPI) será elevado em 300%.”",
+        "“Somando uma coisa e outra, o sabor de fumar se tornará muito mais ácido.”",
+        "“Deverá subir 20% em 2012 e 55% em 2013.”"
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015114,
+      "pergunta": "Como estamos na “Era Digital”, foi necessário rever os velhos ditados existentes e adaptá-los à nova realidade. Veja abaixo... 1. A pressa é inimiga da conexão. 2. Amigos, amigos, senhas à parte. 3. Para bom provedor uma senha basta. 4. Não adianta chorar sobre arquivo deletado. 5. Mais vale um arquivo no HD do que dois baixando. 6. Quem clica seus males multiplica. 7. Quem semeia e-mails, colhe spams. 8. Os fins justificam os e-mails. Disponível em: www.abusar.org.br. Acesso em: 20 maio 2015 (adaptado).\nNo texto, há uma reinterpretação de ditados populares com o uso de termos da informática. Essa reinterpretação",
+      "opcoes": [
+        "torna o texto apropriado para profissionais da informática.",
+        "atribui ao texto um caráter humorístico.",
+        "restringe o acesso ao texto por público não especializado.",
+        "deixa a terminologia original mais acessível ao público em geral.",
+        "dificulta a compreensão do texto por quem não domina a língua inglesa."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015116,
+      "pergunta": "O rap constitui-se em uma expressão artística por meio da qual os MCs relatam poeticamente a condição social em que vivem e retratam suas experiências cotidianas. SOUZA, J.; FIALHO, V. M.; ARALDI, J. Hip hop: da rua para a escola. Porto Alegre: Sulina, 2008.\nO “relato poético” é uma característica fundamental desse gênero musical, em que o",
+      "opcoes": [
+        "MC canta de forma melodiosa as letras, que retratam a complexa realidade em que se encontra.",
+        "rap se limita a usar sons eletrônicos nas músicas, que seriam responsáveis por retratar a realidade da periferia.",
+        "rap se caracteriza pela proximidade das notas na melodia, em que a letra é mais recitada do que cantada, como em uma poesia.",
+        "MC canta enquanto outros músicos o acompanham com instrumentos, tais como o contrabaixo elétrico e o teclado.",
+        "MC canta poemas amplamente conhecidos, fundamentando sua atuação na memorização de suas letras."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015117,
+      "pergunta": "Vei, a Sol Ora o pássaro careceu de fazer necessidade, fez e o herói ficou escorrendo sujeira de urubu. Já era de madrugadinha e o tempo estava inteiramente frio. Macunaíma acordou tremendo, todo lambuzado. Assim mesmo examinou bem a pedra mirim da ilhota para vê si não havia alguma cova com dinheiro enterrado. Não havia não. Nem a correntinha encantada de prata que indica pro escolhido, tesouro de holandês. Havia só as formigas jaquitaguas ruivinhas. Então passou Caiuanogue, a estrela da manhã. Macunaíma já meio enjoado de tanto viver pediu pra ela que o carregasse pro céu. Caiuanogue foi se chegando porém o herói fedia muito. — Vá tomar banho! — ela fez. E foi-se embora. Assim nasceu a expressão “Vá tomar banho” que os brasileiros empregam se referindo a certos imigrantes europeus. ANDRADE, M. Macunaíma: o herói sem nenhum caráter. Rio de Janeiro: Agir, 2008.\nO fragmento de texto faz parte do capítulo VII, intitulado “Vei, a Sol”, do livro Macunaíma, de Mário de Andrade, pertencente à primeira fase do Modernismo brasileiro. Considerando a linguagem empregada pelo narrador, é possível identificar",
+      "opcoes": [
+        "resquícios do discurso naturalista usado pelos escritores do século XIX.",
+        "ausência de linearidade no tratamento do tempo, recurso comum ao texto narrativo da primeira fase modernista.",
+        "referência à fauna como meio de denunciar o primitivismo e o atraso de algumas regiões do país.",
+        "descrição preconceituosa dos tipos populares brasileiros, representados por Macunaíma e Caiuanogue.",
+        "uso da linguagem coloquial e de temáticas do lendário brasileiro como meio de valorização da cultura popular nacional."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015118,
+      "pergunta": "Anfíbio com formato de cobra é descoberto no Rio Madeira (RO) Animal raro foi encontrado por biólogos em canteiro de obras de usina. Exemplares estão no Museu Emilio Goeldi, no Pará O trabalho de um grupo de biólogos no canteiro de obras da Usina Hidrelétrica Santo Antônio, no Rio Madeira, em Porto Velho, resultou na descoberta de um anfíbio de formato parecido com uma cobra. Atretochoana eiselti é o nome científico do animal raro descoberto em Rondônia. Até então, só havia registro do anfíbio no Museu de História Natural de Viena e na Universidade de Brasília. Nenhum deles tem a descrição exata de localidade, apenas “América do Sul”. A descoberta ocorreu em dezembro do ano passado, mas apenas agora foi divulgada. XIMENES, M. Disponível em: http://g1.globo.com. Acesso em: 1 ago. 2012.\nA notícia é um gênero textual em que predomina a função referencial da linguagem. No texto, essa predominância evidencia-se pelo(a)",
+      "opcoes": [
+        "recorrência de verbos no presente para convencer o leitor.",
+        "uso da impessoalidade para assegurar a objetividade da informação.",
+        "questionamento do código linguístico na construção da notícia.",
+        "utilização de expressões úteis que mantêm aberto o canal de comunicação com o leitor.",
+        "emprego dos sinais de pontuação para expressar as emoções do autor."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015119,
+      "pergunta": "Minha mãe achava estudo a coisa mais fina do mundo. Não é. A coisa mais fina do mundo é o sentimento. Aquele dia de noite, o pai fazendo serão, ela falou comigo: “Coitado, até essa hora no serviço pesado”. Arrumou pão e café, deixou tacho no fogo com água quente. Não me falou em amor. Essa palavra de luxo. PRADO, A. Poesia reunida. São Paulo: Siciliano, 1991.\nUm dos procedimentos consagrados pelo Modernismo foi a percepção de um lirismo presente nas cenas e fatos do cotidiano. No poema de Adélia Prado, o eu lírico resgata a poesia desses elementos a partir do(a)",
+      "opcoes": [
+        "reflexão irônica sobre a importância atribuída aos estudos por sua mãe.",
+        "sentimentalismo, oposto à visão pragmática que reconhecia na mãe.",
+        "olhar comovido sobre seu pai, submetido ao trabalho pesado.",
+        "reconhecimento do amor num gesto de aparente banalidade.",
+        "enfoque nas relações afetivas abafadas pela vida conjugal."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015120,
+      "pergunta": "Organizados pelo Comitê Intertribal Indígena, com apoio do Ministério dos Esportes, os Jogos dos Povos Indígenas têm o seguinte mote: “O importante não é competir, e sim, celebrar”. A proposta é recente, já que a primeira edição dos jogos ocorreu em 1996, e tem como objetivo a integração das diferentes tribos, assim como o resgate e a celebração dessas culturas tradicionais. A edição dos jogos de 2003, por exemplo, teve a participação de sessenta etnias, dentre elas os kaiowá, guarani, bororo, pataxó e yanomami. A última edição ocorreu em 2009, e foi a décima vez que o torneio foi realizado. A periodicidade dos jogos é anual, com exceção do intervalo ocorrido em 1997, 1998, 2006 e 2008, quando não houve edições. RONDINELLI, P. Disponível em: www.brasilescola.com. Acesso em: 15 ago. 2013.\nConsiderando o texto, os Jogos dos Povos Indígenas assemelham-se aos Jogos Olímpicos em relação à",
+      "opcoes": [
+        "quantificação de medalhas e vitórias.",
+        "melhora de resultados e performance.",
+        "realização anual dos eventos e festejos.",
+        "renovação de técnicas e táticas esportivas.",
+        "aproximação de diferentes sujeitos e culturas."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015121,
+      "pergunta": "Famigerado Com arranco, [o sertanejo] calou-se. Como arrependido de ter começado assim, de evidente. Contra que aí estava com o fígado em más margens; pensava, pensava. Cabismeditado. Do que, se resolveu. Levantou as feições. Se é que se riu: aquela crueldade de dentes. Encarar, não me encarava, só se fito à meia esguelha. Latejava-lhe um orgulho indeciso. Redigiu seu monologar. O que frouxo falava: de outras, diversas pessoas e coisas, da Serra, do São Ão, travados assuntos, insequentes, como dificultação. A conversa era para teias de aranha. Eu tinha de entender-lhe as mínimas entonações, seguir seus propósitos e silêncios. Assim no fechar-se com o jogo, sonso, no me iludir, ele enigmava. E, pá: — Vosmecê agora me faça a boa obra de querer me ensinar o que é mesmo que é: fasmisgerado... faz-me-gerado... falmisgeraldo... familhas-gerado...? ROSA, J. G. Primeiras estórias. Rio de Janeiro: Nova Fronteira, 1988.\nA linguagem peculiar é um dos aspectos que conferem a Guimarães Rosa um lugar de destaque na literatura brasileira. No fragmento lido, a tensão entre a personagem e o narrador se estabelece porque",
+      "opcoes": [
+        "o narrador se cala, pensa e monologa, tentando assim evitar a perigosa pergunta de seu interlocutor.",
+        "o sertanejo emprega um discurso cifrado, com enigmas, como se vê em “a conversa era para teias de aranha”.",
+        "entre os dois homens cria-se uma comunicação impossível, decorrente de suas diferenças socioculturais.",
+        "a fala do sertanejo é interrompida pelo gesto de impaciência do narrador, decidido a mudar o assunto da conversa.",
+        "a palavra desconhecida adquire o poder de gerar conflito e separar as personagens em planos incomunicáveis."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015122,
+      "pergunta": "Em primeiro lugar gostaria de manifestar os meus agradecimentos pela honra de vir outra vez à Galiza e conversar não só com os antigos colegas, alguns dos quais fazem parte da mesa, mas também com novos colegas, que pertencem à nova geração, em cujas mãos, com toda certeza, está também o destino do Galego na Galiza, e principalmente o destino do Galego incorporado à grande família lusófona. E, portanto, é com muito prazer que teço algumas considerações sobre o tema apresentado. Escolhi como tema como os fundadores da Academia Brasileira de Letras viam a língua portuguesa no seu tempo. Como sabem, a nossa Academia, fundada em 1897, está agora completando 110 anos, foi organizada por uma reunião de jornalistas, literatos, poetas que se reuniam na secretaria da Revista Brasileira, dirigida por um crítico literário e por um literato chamado José Veríssimo, natural do Pará, e desse entusiasmo saiu a ideia de se criar a Academia Brasileira, depois anexada ao seu título: Academia Brasileira de Letras. Nesse sentido, Machado de Assis, que foi o primeiro presidente desde a sua inauguração até a data de sua morte, em 1908, imaginava que a nossa Academia deveria ser uma academia de Letras, portanto, de literatos. BECHARA, E. Disponível em: www.academiagalega.org. Acesso em: 31 jul. 2012.\nNo trecho da palestra proferida por Evanildo Bechara, na Academia Galega da Língua Portuguesa, verifica-se o uso de estruturas gramaticais típicas da norma padrão da língua. Esse uso",
+      "opcoes": [
+        "torna a fala inacessível aos não especialistas no assunto abordado.",
+        "contribui para a clareza e a organização da fala no nível de formalidade esperado para a situação.",
+        "atribui à palestra características linguísticas restritas à modalidade escrita da língua portuguesa.",
+        "dificulta a compreensão do auditório para preservar o caráter rebuscado da fala.",
+        "evidencia distanciamento entre o palestrante e o auditório para atender os objetivos do gênero palestra."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015125,
+      "pergunta": "Ai se sêsse Se um dia nois se gostasse Se um dia nois se queresse Se nois dois se empareasse Se juntim nois dois vivesse Se juntim nois dois morasse Se juntim nois dois drumisse Se juntim nois dois morresse Se pro céu nois assubisse Mas porém se acontecesse De São Pedro não abrisse A porta do céu e fosse Te dizer qualquer tulice E se eu me arriminasse E tu cum eu insistisse Pra que eu me arresolvesse E a minha faca puxasse E o bucho do céu furasse Tarvês que nois dois ficasse Tarvês que nois dois caísse E o céu furado arriasse E as virgi toda fugisse ZÉ DA LUZ. Cordel do Fogo Encantado. Recife: Álbum de estúdio, 2001.\nO poema foi construído com formas do português não padrão, tais como “juntim”, “nois”, “tarvês”. Essas formas legitimam-se na construção do texto, pois",
+      "opcoes": [
+        "revelam o bom humor do eu lírico do poema.",
+        "estão presentes na língua e na identidade popular.",
+        "revelam as escolhas de um poeta não escolarizado.",
+        "tornam a leitura fácil de entender para a maioria dos brasileiros.",
+        "compõem um conjunto de estruturas linguísticas inovadoras."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015127,
+      "pergunta": "Além da Revolução da Informação O impacto da Revolução da Informação está apenas começando. Mas a força motriz desse impacto não é a informática, a inteligência artificial, o efeito dos computadores sobre a tomada de decisões ou a elaboração de políticas ou de estratégias. É algo que praticamente ninguém previu, nem mesmo se falava há 10 ou 15 anos: o comércio eletrônico — o aparecimento explosivo da internet como um canal importante, talvez principal, de distribuição mundial de produtos, serviços e, surpreendentemente, de empregos de nível gerencial. Essa nova realidade está modificando profundamente economias, mercados e estruturas setoriais, os produtos e serviços e seu fluxo, a segmentação, os valores e o comportamento dos consumidores, o mercado de trabalho. O impacto, porém, pode ser ainda maior nas sociedades e nas políticas empresariais e, acima de tudo, na maneira como encaramos o mundo e nós mesmos dentro dele. O impacto psicológico da Revolução da Informação, como o da Revolução Industrial, foi enorme. Talvez tenha sido mais forte na maneira como as crianças aprendem. Já aos 4 anos (e às vezes até antes), as crianças desenvolvem habilidades de computação, logo ultrapassando seus pais. Os computadores são seus brinquedos e suas ferramentas de aprendizado. Daqui a 50 anos, talvez concluamos que não houve nenhuma crise educacional no mundo — apenas ocorreu uma incongruência crescente entre a maneira como as escolas do século XX ensinavam e a maneira como as crianças do fim do século XX aprendiam. DRUCKER, P. O melhor de Peter Drucker: obra completa. São Paulo: Nobel, 2002.\nO artigo apresenta uma reflexão sobre a Revolução da Informação, que, assim como a Revolução Industrial, provocou impactos significativos nas sociedades contemporâneas. Ao tratar da Revolução da Informação, o autor enfatiza que",
+      "opcoes": [
+        "o comércio eletrônico é um dos canais mais importantes dessa revolução.",
+        "o computador desenvolve na criança uma inteligência maior que a dos pais.",
+        "o aumento no número de empregos via internet é uma realidade atualmente.",
+        "o colapso educacional é fruto de uma incongruência no ensino do século XX.",
+        "o advento da Revolução da Informação causará impactos nos próximos 50 anos."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015131,
+      "pergunta": "Quem não se recorda de Aurélia Camargo, que atravessou o firmamento da corte como brilhante meteoro, e apagou-se de repente no meio do deslumbramento que produzira seu fulgor? Tinha ela dezoito anos quando apareceu a primeira vez na sociedade. Não a conheciam; e logo buscaram todos com avidez informações acerca da grande novidade do dia. Dizia-se muita coisa que não repetirei agora, pois a seu tempo saberemos a verdade, sem os comentos malévolos de que usam vesti-la os noveleiros. Aurélia era órfã; tinha em sua companhia uma velha parenta, viúva, D. Firmina Mascarenhas, que sempre a acompanhava na sociedade. Mas essa parenta não passava de mãe de encomenda, para condescender com os escrúpulos da sociedade brasileira, que naquele tempo não tinha admitido ainda certa emancipação feminina. Guardando com a viúva as deferências devidas à idade, a moça não declinava um instante do firme propósito de governar sua casa e dirigir suas ações como entendesse. Constava também que Aurélia tinha um tutor; mas essa entidade era desconhecida, a julgar pelo caráter da pupila, não devia exercer maior influência em sua vontade, do que a velha parenta. ALENCAR, J. Senhora. São Paulo: Ática, 2006.\nO romance Senhora, de José de Alencar, foi publicado em 1875. No fragmento transcrito, a presença de D. Firmina Mascarenhas como “parenta” de Aurélia Camargo assimila práticas e convenções sociais inseridas no contexto do Romantismo, pois",
+      "opcoes": [
+        "o trabalho ficcional do narrador desvaloriza a mulher ao retratar a condição feminina na sociedade brasileira da época.",
+        "o trabalho ficcional do narrador mascara os hábitos sociais no enredo de seu romance.",
+        "as características da sociedade em que Aurélia vivia são remodeladas na imaginação do narrador romântico.",
+        "o narrador evidencia o cerceamento sexista à autoridade da mulher, financeiramente independente.",
+        "o narrador incorporou em sua ficção hábitos muito avançados para a sociedade daquele período histórico."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015132,
+      "pergunta": "O peru de Natal O nosso primeiro Natal de família, depois da morte de meu pai acontecida cinco meses antes, foi de consequências decisivas para a felicidade familiar. Nós sempre fôramos familiarmente felizes, nesse sentido muito abstrato da felicidade: gente honesta, sem crimes, lar sem brigas internas nem graves dificuldades econômicas. Mas, devido principalmente à natureza cinzenta de meu pai, ser desprovido de qualquer lirismo, duma exemplaridade incapaz, acolchoado no medíocre, sempre nos faltara aquele aproveitamento da vida, aquele gosto pelas felicidades materiais, um vinho bom, uma estação de águas, aquisição de geladeira, coisas assim. Meu pai fora de um bom errado, quase dramático, o puro-sangue dos desmancha-prazeres. ANDRADE, M. In: MORICONI, I. Os cem melhores contos brasileiros do século. São Paulo: Objetiva, 2000 (fragmento).\nNo fragmento do conto de Mário de Andrade, o tom confessional do narrador em primeira pessoa revela uma concepção das relações humanas marcada por",
+      "opcoes": [
+        "distanciamento de estados de espírito acentuado pelo papel das gerações.",
+        "relevância dos festejos religiosos em família na sociedade moderna.",
+        "preocupação econômica em uma sociedade urbana em crise.",
+        "consumo de bens materiais por parte de jovens, adultos e idosos.",
+        "pesar e reação de luto diante da morte de um familiar querido."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015133,
+      "pergunta": "— Não, mãe. Perde a graça. Este ano, a senhora vai ver. Compro um barato. — Barato? Admito que você compre uma lembrancinha barata, mas não diga isso a sua mãe. É fazer pouco-caso de mim. — Ih, mãe, a senhora está por fora mil anos. Não sabe que barato é o melhor que tem, é um barato! — Deixe eu escolher, deixe... — Mãe é ruim de escolha. Olha aquele blazer furado que a senhora me deu no Natal! — Seu porcaria, tem coragem de dizer que sua mãe lhe deu um blazer furado? — Viu? Não sabe nem o que é furado? Aquela cor já era, mãe, já era! ANDRADE, C. D. Poesia e prosa. Rio de Janeiro: Nova Aguilar, 1998.\nO modo como o filho qualifica os presentes é incompreendido pela mãe, e essas escolhas lexicais revelam diferenças entre os interlocutores, que estão relacionadas",
+      "opcoes": [
+        "à linguagem infantilizada.",
+        "ao grau de escolaridade.",
+        "à dicotomia de gêneros.",
+        "às especificidades de cada faixa etária.",
+        "à quebra de regras da hierarquia familiar."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015134,
+      "pergunta": "TEXTO I Versos de amor A um poeta erótico Oposto ideal ao meu ideal conservas. Diverso é, pois, o ponto outro de vista Consoante o qual, observo o amor, do egoísta Modo de ver, consoante o qual, o observas. Porque o amor, tal como eu o estou amando, É Espírito, é éter, é substância fluida, É assim como o ar que a gente pega e cuida, Cuida, entretanto, não o estar pegando! É a transubstanciação de instintos rudes, Imponderabilíssima, e impalpável, Que anda acima da carne miserável Como anda a garça acima dos açudes! ANJOS, A. Obra completa. Rio de Janeiro: Nova Aguilar, 1996 (fragmento). TEXTO II Arte de amar Se queres sentir a felicidade de amar, esquece a tua alma. A alma é que estraga o amor. Só em Deus ela pode encontrar satisfação. Não noutra alma. Só em Deus — ou fora do mundo. As almas são incomunicáveis. Deixa o teu corpo entender-se com outro corpo. Porque os corpos se entendem, mas as almas não. BANDEIRA, M. Estrela da vida inteira. Rio de Janeiro: Nova Fronteira, 1993.\nOs Textos I e II apresentam diferentes pontos de vista sobre o tema amor. Apesar disso, ambos definem esse sentimento a partir da oposição entre",
+      "opcoes": [
+        "satisfação e insatisfação.",
+        "egoísmo e generosidade.",
+        "felicidade e sofrimento.",
+        "corpo e espírito.",
+        "ideal e real."
+      ],
+      "correta": "D",
+      "ano": 2015
+    },
+    {
+      "id": 2015135,
+      "pergunta": "O mundo das grandes inovações tecnológicas, dos avanços das pesquisas médicas e que já presenciou o envio de homens ao espaço é o mesmo lugar onde 1 bilhão de pessoas dormem e acordam com fome. A desnutrição ocupa o primeiro lugar no ranking dos 10 maiores riscos à saúde e mata mais do que a aids, a malária e a tuberculose combinadas. O equivalente às populações da Europa e da América do Norte, juntas, está de barriga vazia. E um futuro famélico aguarda a raça humana. Em 2050, apenas por razões ligadas às mudanças climáticas, o número de pessoas sem comida no prato vai aumentar em até 20%. Disponível em: www.correiobraziliense.com.br. Acesso em: 22 jan. 2012.\nConsiderando a natureza do tema, a forma como está apresentado e o meio pelo qual é veiculado o texto, percebe-se que seu principal objetivo é",
+      "opcoes": [
+        "divulgar dados estatísticos recentes sobre a fome no mundo e sobre as inovações tecnológicas.",
+        "esclarecer questões científicas acerca dos danos causados pela fome e pela aids nos indivíduos.",
+        "demonstrar que a fome, juntamente com as doenças endêmicas, também é um problema de saúde pública.",
+        "convidar o leitor a engajar-se em alguma ação positiva contra a fome, a partir da divulgação de dados alarmantes.",
+        "alertar sobre o problema da fome, apresentando-o como um contraste no mundo de tantos recursos tecnológicos."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015136,
+      "pergunta": "TEXTO I Voluntário Rosa tecia redes, e os produtos de sua pequena indústria gozavam de boa fama nos arredores. A reputação da tapuia crescera com a feitura de uma maqueira de tucum ornamentada com a coroa brasileira, obra de ingênuo gosto, que lhe valera a admiração de toda a comarca e provocara a inveja da célebre Ana Raimunda, de Óbidos, a qual chegara a formar uma fortunazinha com aquela especialidade, quando a indústria norte-americana reduzira à inatividade os teares rotineiros do Amazonas. SOUSA, I. Contos amazônicos. São Paulo: Martins Fontes, 2004. TEXTO II Relato de um certo oriente Emilie, ao contrário de meu pai, de Dorner e dos nossos vizinhos, não tinha vivido no interior do Amazonas. Ela, como eu, jamais atravessara o rio. Manaus era o seu mundo visível. O outro latejava na sua memória. Imantada por uma voz melodiosa, quase encantada, Emilie maravilha-se com a descrição da trepadeira que espanta a inveja, das folhas malhadas de um tajá que reproduz a fortuna de um homem, das receitas de curandeiros que veem em certas ervas da floresta o enigma das doenças mais temíveis, com as infusões de coloração sanguínea aconselhadas para aliviar trinta e seis dores do corpo humano. “E existem ervas que não curam nada”, revelava a lavadeira, “mas assanham a mente da gente. Basta tomar um gole do líquido fervendo para que o cristão sonhe uma única noite muitas vidas diferentes”. Esse relato poderia ser de duvidosa veracidade para outras pessoas, mas não para Emilie. HATOUM, M. São Paulo: Cia. das Letras, 2008.\nAs representações da Amazônia na literatura brasileira mantêm relação com o papel atribuído à região na construção do imaginário nacional. Pertencentes a contextos históricos distintos, os fragmentos diferenciam-se ao propor uma representação da realidade amazônica em que se evidenciam",
+      "opcoes": [
+        "aspectos da produção econômica e da cura na tradição popular.",
+        "manifestações culturais autênticas e da resignação familiar.",
+        "valores sociais autóctones e influência dos estrangeiros.",
+        "formas de resistência locais e do cultivo das superstições.",
+        "costumes domésticos e levantamento das tradições indígenas."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015137,
+      "pergunta": "Da timidez Ser um tímido notório é uma contradição. O tímido tem horror a ser notado, quanto mais a ser notório. Se ficou notório por ser tímido, então tem que se explicar. Afinal, que retumbante timidez é essa, que atrai tanta atenção? Se ficou notório apesar de ser tímido, talvez estivesse se enganando junto com os outros e sua timidez seja apenas um estratagema para ser notado. Tão secreto que nem ele sabe. É como no paradoxo psicanalítico, só alguém que se acha muito superior procura o analista para tratar um complexo de inferioridade, porque só ele acha que se sentir inferior é doença. [...] O tímido tenta se convencer de que só tem problemas com multidões, mas isto não é vantagem. Para o tímido, duas pessoas são uma multidão. Quando não consegue escapar e se vê diante de uma plateia, o tímido não pensa nos membros da plateia como indivíduos. Multiplica-os por quatro, pois cada indivíduo tem dois olhos e dois ouvidos. Quatro vias, portanto, para receber suas gafes. Não adianta pedir para a plateia fechar os olhos, ou tapar um olho e um ouvido para cortar o desconforto do tímido pela metade. Nada adianta. O tímido, em suma, é uma pessoa convencida de que é o centro do Universo, e que seu vexame ainda será lembrado quando as estrelas virarem pó. VERISSIMO, L. F. Comédias para se ler na escola. Rio de Janeiro: Objetiva, 2001.\nEntre as estratégias de progressão textual presentes nesse trecho, identifica-se o emprego de elementos conectores. Os elementos que evidenciam noções semelhantes estão destacados em:",
+      "opcoes": [
+        "“SE ficou notório por ser tímido” e “[...] então tem que SE explicar”.",
+        "“[...] ENTÃO tem que se explicar” e “[...] QUANDO as estrelas virarem pó”.",
+        "“[...] ficou notório APESAR DE ser tímido [...]” e “[...] MAS isto não é vantagem [...]”.",
+        "“[...] um estratagema PARA ser notado [...]” e “Tão secreto QUE nem ele sabe”.",
+        "“[...] COMO no paradoxo psicanalítico [...]” e “[...] PORQUE só ele acha [...]”."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015138,
+      "pergunta": "E: Diva ... tem algumas ... alguma experiência pessoal que você passou e que você poderia me contar ... alguma coisa que marcou você? Uma experiência ... você poderia contar agora ... I: É ... tem uma que eu vivi quando eu estudava o terceiro ano científico lá no Atheneu ... né ... é:: eu gostava muito do laboratório de química ... eu ... eu ia ajudar os professores a limpar aquele material todo ... aqueles vidros ... eu achava aquilo fantástico ... aquele monte de coisa ... né ... então ... todos os dias eu ia ... quando terminavam as aulas eu ajudava o professor a limpar o laboratório ... nesse dia não houve aula e o professor me chamou pra fazer uma limpeza geral no laboratório ... chegando lá ... ele me fez uma experiência ... ele me mostrou uma coisa bem interessante que ... pegou um béquer com meio d’água e colocou um pouquinho de cloreto de sódio pastoso ... então foi aquele fogaréu desfilando ... aquele fogaréu ... quando o professor saiu ... eu chamei umas duas colegas minhas pra mostrar a experiência que eu tinha achado fantástico ... só que ... eu achei o seguinte ... se o professor colocou um pouquinho ... foi aquele desfile ... imagine se eu colocasse mais ... peguei o mesmo béquer ... coloquei uma colher ... uma colher de cloreto de sódio ... foi um fogaréu tão grande ... foi uma explosão ... quebrou todo o material que estava exposto em cima da mesa ... eu branca ... eu fiquei ... olha ... eu pensei que eu fosse morrer sabe ... quando ... o colégio inteiro correu pro laboratório pra ver o que tinha sido ... CUNHA, M. A. F. (Org.) . Corpus discurso & gramática: a língua falada e escrita na cidade de Natal. Natal: EdUFRN, 1998.\nNa transcrição de fala, especialmente, no trecho “eu branca ... eu fiquei ... olha ... eu pensei que eu fosse morrer sabe...”, há uma estrutura sintática fragmentada, embora facilmente interpretável. Sua presença na fala revela",
+      "opcoes": [
+        "distração e poucos anos de escolaridade.",
+        "falta de coesão e coerência na apresentação das ideias.",
+        "afeto e amizade entre os participantes da conversação.",
+        "desconhecimento das regras de sintaxe da norma padrão.",
+        "característica do planejamento e execução simultânea desse discurso."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2016133,
+      "pergunta": "O nome do inseto pirilampo (vaga-lume) tem uma interessante certidão de nascimento. De repente, no fim do século XVII, os poetas de Lisboa repararam que não podiam cantar o inseto luminoso, apesar de ele ser um manancial de metáforas, pois possuía um nome “indecoroso” que não podia ser “usado em papéis sérios”: caga-lume. Foi então que o dicionarista Raphael Bluteau inventou a nova palavra, pirilampo, a partir do grego pyr, significando 'fogo', e lampas, 'candeia'. FERREIRA, M. B. Caminhos do português: exposição comemorativa do Ano Europeu das Línguas. Portugal: Biblioteca Nacional, 2001 (adaptado).\nO texto descreve a mudança ocorrida na nomeação do inseto, por questões de tabu linguístico. Esse tabu diz respeito à",
+      "opcoes": [
+        "recuperação histórica do significado.",
+        "ampliação do sentido de uma palavra.",
+        "produção imprópria de poetas portugueses.",
+        "denominação científica com base em termos gregos.",
+        "restrição ao uso de um vocábulo pouco aceito socialmente."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016596,
+      "pergunta": "Da corrida de submarino à festa de aniversário no trem Leitores fazem sugestões para o Museu das Invenções Cariocas “Falar ‘caraca!’ a cada surpresa ou acontecimento que vemos, bons ou ruins, é invenção do carioca, como também o ‘vacilão’.” “Cariocas inventam um vocabulário próprio”. “Dizer ‘merrmão’ e ‘é merrmo’ para um amigo pode até doer um pouco no ouvido, mas é tipicamente carioca.” “Pedir um ‘choro’ ao garçom é invenção carioca.” “Chamar um quase desconhecido de ‘querido’ é um carinho inventado pelo carioca para tratar bem quem ainda não se conhece direito.” “O ‘ele é um querido’ é uma forma mais feminina de elogiar quem já é conhecido.” SANTOS, J. F. Disponível em: www.oglobo.globo.com. Acesso em: 6 mar. 2013 (adaptado).\nEntre as sugestões apresentadas para o Museu das Invenções Cariocas, destaca-se o variado repertório linguístico empregado pelos falantes cariocas nas diferentes situações específicas de uso social. A respeito desse repertório, atesta-se o(a)",
+      "opcoes": [
+        "desobediência à norma-padrão, requerida em ambientes urbanos.",
+        "inadequação linguística das expressões cariocas às situações sociais apresentadas.",
+        "reconhecimento da variação linguística, segundo o grau de escolaridade dos falantes.",
+        "identificação de usos linguísticos próprios da tradição cultural carioca.",
+        "variabilidade no linguajar carioca em razão da faixa etária dos falantes."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016597,
+      "pergunta": "As plataformas digitais têm ganhado mais espaço entre os internautas como ferramenta para exercer a cidadania. Através delas, é possível mapear problemas da cidade e propor soluções, utilizando-se das redes sociais para aproximar os moradores e articular projetos. O espaço colaborativo PortoAlegre.cc, um dos mais ativos no país, tem 150 participantes e ajudou a estudante de jornalismo Renata Gomes, 25, a chamar 80 pessoas para retirar 1 tonelada de lixo da orla do rio Guaíba. “Foi a partir da sugestão de um integrante da plataforma que criei a causa. Foi fundamental porque sempre senti vontade de fazer algo pela cidade, mas não sabia como”, diz Renata. O projeto colaborativo baseia-se no conceito de wikicidade (inspirado na enciclopédia virtual Wikipédia), em que um território real recebe anotações virtuais das pessoas por meio de wikispots, que se referem a uma praça, uma rua ou um bairro. “A ideia de wikicidade é fomentar a cocriação, elaboração e experimentação de sugestões que possam ser aplicadas em uma cidade”, explica Daniel Bittencourt, um dos desenvolvedores do projeto PortoAlegre.cc. DIDONÊ, D. Cidadania 2.0. Vida Simples, n. 119, jun. 2012.\nO texto, ao falar da utilização das redes sociais e informar sobre a quantidade de projetos colaborativos espalhados pelo país, expõe a importância das plataformas digitais no exercício da cidadania. O espaço colaborativo PortoAlegre.cc tem como principal objetivo",
+      "opcoes": [
+        "contratar pessoas para realizarem a limpeza de ruas e de margens dos rios.",
+        "sugerir a criação de grupos virtuais de apoio à cidade e sua divulgação na Wikipédia.",
+        "reunir pessoas dispostas a utilizar sugestões virtuais para a manutenção e a preservação da cidade.",
+        "divulgar as redes sociais para que mais pessoas possam interagir e resolver os problemas da cidade.",
+        "aproximar as pessoas de cidades distantes para mapear problemas e criar projetos em comum."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016600,
+      "pergunta": "Salvador, 10 de maio de 2012. Consultoria PC Speed Sr. Pedro Alberto Assunto: Consultoria Prezado Senhor, Manifestamos nossa apreciação pelo excelente trabalho executado pela equipe de consultores desta empresa na revisão de todos os controles internos relativos às áreas administrativas. As contribuições feitas pelos membros da equipe serão de grande valia para o aperfeiçoamento dos processos de trabalho que estão sendo utilizados. Queira, por gentileza, nossos cumprimentos. transmitir-lhes Atenciosamente, Rivaldo Oliveira Andrade Diretor Administrativo e Financeiro Disponível em: www.pcspeed.com.br. Acesso em: 1 maio 2012 (adaptado).\nA carta manifesta reconhecimento de uma empresa pelos serviços prestados pelos consultores da PC Speed. Nesse contexto, o uso da norma-padrão",
+      "opcoes": [
+        "constitui uma exigência restrita ao universo financeiro e é substituível por linguagem informal.",
+        "revela um exagero por parte do remetente e torna o texto rebuscado linguisticamente.",
+        "expressa o formalismo próprio do gênero e atribui profissionalismo à relação comunicativa.",
+        "torna o texto de difícil leitura e atrapalha a compreensão das intenções do remetente.",
+        "sugere elevado nível de escolaridade do diretor e realça seus atributos intelectuais."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016601,
+      "pergunta": "Descubra e aproveite um momento todo seu. Quando você quebra o delicado chocolate, o irresistível recheio cremoso começa a derreter na sua boca, acariciando todos os seus sentidos. Criado por nossa empresa. Paixão e amor por chocolate desde 1845. Veja, n. 2 320, 8 maio 2013 (adaptado).\nO texto publicitário tem a intenção de persuadir o público-alvo a consumir determinado produto ou serviço. No anúncio, essa intenção assume a forma de um convite, estratégia argumentativa linguisticamente marcada pelo uso de",
+      "opcoes": [
+        "conjunção (quando).",
+        "adjetivo (irresistível).",
+        "verbo no imperativo (descubra).",
+        "palavra do campo afetivo (paixão).",
+        "expressão sensorial (acariciando)."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016605,
+      "pergunta": "Como escrever na internet Regra 1 – Fale, não GRITE! Combine letras maiúsculas e minúsculas, da mesma forma que na escrita comum. Cartas em papel não são escritas somente com letras maiúsculas; na internet, escrever em maiúsculas é o mesmo que gritar! Para enfatizar frases e palavras, use os recursos de _sublinhar_ (colocando palavras ou frases entre sublinhados) e *grifar* (palavras ou frases entre asteriscos). Frases em maiúsculas são aceitáveis em títulos e ênfases ou avisos urgentes. Regra 2 – Sorria :-) pisque ;-) chore &-( ... Os emoticons (ou smileys) são ícones formados por parênteses, pontos, vírgulas e outros símbolos do teclado. Eles representam carinhas desenhadas na horizontal e denotam emoções. É difícil descobrir quando uma pessoa está falando alguma coisa em tom de brincadeira, se está realmente brava ou feliz, ou se está sendo irônica, em um ambiente no qual só há texto; por isso, entram em cena os smileys. Comece a usá-los aos poucos e, com o passar do tempo, estarão integrados naturalmente às suas conversas on-line. Disponível em: www.icmc.usp.br. Acesso em: 29 jul. 2013.\nO texto traz exemplos de regras que podem evitar mal-entendidos em comunicações eletrônicas, especialmente em e-mails e chats. Essas regras",
+      "opcoes": [
+        "revelam códigos internacionalmente aceitos que devem ser seguidos pelos usuários da internet.",
+        "constituem um conjunto de normas ortográficas inclusas na escrita padrão da língua portuguesa.",
+        "representam uma forma complexa de comunicação, pois os caracteres são de difícil compreensão.",
+        "foram desenvolvidas para que usuários de países de línguas diferentes possam se comunicar na web.",
+        "refletem recomendações gerais sobre o uso dos recursos de comunicação facilitadores da convivência na internet."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016607,
+      "pergunta": "Certa vez, eu jogava uma partida de sinuca, e só havia a bola sete na mesa. De modo que a mastiguei lentamente saboreando-lhe os bocados com prazer. Refiro-me à refeição que havia pedido ao garçom. Dei-lhe duas tacadas na cara. Estou me referindo à bola. Em seguida, saí montando nela e a égua, de que estou falando agora, chegou calmamente à fazenda de minha mãe. Fui encontrá-la morta na mesa, meu irmão comia-lhe uma perna com prazer e ofereceu-me um pedaço: “Obrigado”, disse eu, “já comi galinha no almoço”. Logo em seguida, chegou minha mulher e deu-me na cara. Um beijo, digo. Dei-lhe um abraço. Fazia calor. Daí a pouco minha camisa estava inteiramente molhada. Refiro-me a que estava na corda secando, quando começou a chover. Minha sogra apareceu para apanhar a camisa. Não tive remédio senão esmagá-la com o pé. Estou falando da barata que ia trepando na cadeira. Malaquias, meu primo, vivia com uma velha de oitenta anos. A velha era sua avó, esclareço. Malaquias tinha dezoito filhos, mas nunca se casou. Isto é, nunca se casou com uma mulher que durasse mais de um ano. Agora, sentado à nossa frente, Malaquias fura o coração com uma faca. Depois corta as pernas e o sangue do porco enche a bacia. Nos bons tempos passeávamos juntos. Eu tinha um carro. Malaquias tinha uma namorada. Um dia rolou a ribanceira. Me refiro a Malaquias. Entrou pela pretoria adentro arrebentando porta e parou resfolegante junto do juiz pálido de susto. Me refiro ao carro. E a Malaquias. FERNANDES, M. Trinta anos de mim mesmo. São Paulo: Abril Cultural, 1973.\nNesse texto, o autor reorienta o leitor no processo de leitura, usando como recurso expressões como “refiro-me/me refiro”, “estou me referindo”, “de que estou falando agora”, “digo”, “estou falando da”, “esclareço”, “isto é”. Todas elas são expressões linguísticas introdutoras de paráfrases, que servem para",
+      "opcoes": [
+        "confirmar.",
+        "contradizer.",
+        "destacar.",
+        "retificar.",
+        "sintetizar."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016608,
+      "pergunta": "Noites do Bogart O Xavier chegou com a namorada mas, prudentemente, não a levou para a mesa com o grupo. Abanou de longe. Na mesa, as opiniões se dividiam. — Pouca vergonha. — Deixa o Xavier. — Podia ser a filha dele. — Aliás, é colega da filha dele. Na sua mesa, o Xavier pegara na mão da moça. — Está gostando? — Pô. Só. — Chocante, né? — disse o Xavier. E depois ficou na dúvida. Ainda se dizia “chocante”? Beberam em silêncio. E ele disse: — Quer dançar? E ela disse, sem pensar: — Depois, tio. E ficaram em silêncio. Ela pensando “será que ele ouviu?”. E ele pensando “faço algum comentário a respeito, ou deixo passar?”. Decidiu deixar passar. Mas, pelo resto da noite aquele “tio” ficou em cima da mesa, entre os dois, latejando como um sapo. Ele a levou em casa. Depois voltou. Sentou com os amigos. — Aí, Xavier. E a namorada? Ele não respondeu. VERISSIMO, L. F. O melhor das comédias da vida privada. Rio de Janeiro: Objetiva, 2004.\nO efeito de humor no texto é produzido com o auxílio da quebra de convenções sociais de uso da língua. Na interação entre o casal de namorados, isso é decorrente",
+      "opcoes": [
+        "do registro inadequado para a interlocução em contexto romântico.",
+        "da iniciativa em discutir formalmente a relação amorosa.",
+        "das avaliações lexicais pelas escolhas dos frequentadores do bar.",
+        "das gírias distorcidas intencionalmente na fala do namorado.",
+        "do uso de expressões populares nas investidas amorosas do homem."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016609,
+      "pergunta": "Grupo transforma pele humana em neurônios Um grupo de pesquisadores dos EUA conseguiu alterar células extraídas da pele de uma mulher de 82 anos sofrendo de uma doença nervosa degenerativa e conseguiu transformá-las em células capazes de se transformarem virtualmente em qualquer tipo de órgão do corpo. Em outras palavras, ganharam os poderes das células-tronco pluripotentes, normalmente obtidas a partir da destruição de embriões. O método usado na pesquisa, descrita hoje na revista Science, existe desde o ano passado, quando um grupo liderado pelo japonês Shinya Yamanaka criou as chamadas iPS (células-tronco de pluripotência induzida). O novo estudo, porém, mostra pela primeira vez que é possível aplicá-lo a células de pessoas doentes, portadoras de esclerose lateral amiotrófica (ELA), mal que destrói o sistema nervoso progressivamente. “Pela primeira vez, seremos capazes de observar células com ELA ao microscópio e ver como elas morrem”, disse Valerie Estess, diretora do Projeto ALS (ELA, em inglês), que financiou parte da pesquisa. Observar em detalhes a degeneração pode sugerir novos métodos para tratar a ELA. KOLNERKEVIC, I. Folha de S. Paulo. 1 ago. 2008 (adaptado).\nA análise dos elementos constitutivos do texto e a identificação de seu gênero permitem ao leitor inferir que o objetivo do autor é",
+      "opcoes": [
+        "apresentar a opinião da diretora do Projeto ALS.",
+        "expor a sua opinião como um especialista no tema.",
+        "descrever os procedimentos de uma experiência científica.",
+        "defender a pesquisa e a opinião dos pesquisadores dos EUA.",
+        "informar os resultados de uma nova pesquisa feita nos EUA."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016611,
+      "pergunta": "Apesar de Não lembro quem disse que a gente gosta de uma pessoa não por causa de, mas apesar de. Gostar daquilo que é gostável é fácil: gentileza, bom humor, inteligência, simpatia, tudo isso a gente tem em estoque na hora em que conhece uma pessoa e resolve conquistá-la. Os defeitos ficam guardadinhos nos primeiros dias e só então, com a convivência, vão saindo do esconderijo e revelando-se no dia a dia. Você então descobre que ele não é apenas gentil e doce, mas também um tremendo casca-grossa quando trata os próprios funcionários. E ela não é apenas segura e determinada, mas uma chorona que passa 20 dias por mês com TPM. E que ele ronca, e que ela diz palavrão demais, e que ele é supersticioso por bobagens, e que ela enjoa na estrada, e que ele não gosta de criança, e que ela não gosta de cachorro, e agora? Agora, convoquem o amor para resolver essa encrenca. MEDEIROS, M. Revista O Globo, n. 790, 12 jun. 2011 (adaptado).\nHá elementos de coesão textual que retomam informações no texto e outros que as antecipam. Nos trechos, o elemento de coesão sublinhado que antecipa uma informação do texto é",
+      "opcoes": [
+        "“Gostar daquilo que é gostável é fácil [...]”.",
+        "“[...] tudo isso a gente tem em estoque [...]”.",
+        "“[...] na hora em que conhece uma pessoa [...]”.",
+        "“[...] resolve conquistá-la.”",
+        "“[...] para resolver essa encrenca.”"
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016613,
+      "pergunta": "O bonde abre a viagem, No banco ninguém, Estou só, stou sem. Depois sobe um homem, No banco sentou, Companheiro vou. O bonde está cheio, De novo porém Não sou mais ninguém. ANDRADE, M. Poesias completas. Belo Horizonte: Vila Rica, 1993.\nO desenvolvimento das grandes cidades e a consequente concentração populacional nos centros urbanos geraram mudanças importantes no comportamento dos indivíduos em sociedade. No poema de Mário de Andrade, publicado na década de 1940, a vida na metrópole aparece representada pela contraposição entre",
+      "opcoes": [
+        "a solidão e a multidão.",
+        "a carência e a satisfação.",
+        "a mobilidade e a lentidão.",
+        "a amizade e a indiferença.",
+        "a mudança e a estagnação."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016614,
+      "pergunta": "O hip hop tem sua filosofia própria, com valores construídos pela condição das experiências vividas nas periferias de muitas cidades. Colocando-se como um contraponto à miséria, às drogas, ao crime e à violência, o hip hop busca interpretar a realidade social. Seu objetivo é justamente encontrar saídas e fornecer uma alternativa à população excluída. SOUZA, J.; FIALHO, V. M.; ARALDI, J. Hip hop: da rua para a escola. Porto Alegre: Sulina, 2008.\nAs autoras abordam no texto um movimento cultural que também tem características reconhecidas",
+      "opcoes": [
+        "nos traços e formas que representam personagens de olhos desproporcionalmente maiores e expressivos, conhecidos como mangá.",
+        "nas formas de se vestir e de cortar os cabelos com objetivos contestadores à ordem social, próprios do movimento punk.",
+        "nas frases e dizeres de qualquer espécie, rabiscados sobre fachadas de edifícios, que marcam a pichação.",
+        "nos movimentos leves e sincronizados com os pés que deslocam o dançarino, denominado moonwalk.",
+        "nas declamações rápidas e ritmadas de um texto, com alturas aproximadas, características do rap."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016615,
+      "pergunta": "O que é Web Semântica? Web Semântica é um projeto para aplicar conceitos inteligentes na internet atual. Nela, cada informação vem com um significado bem definido e não se encontra mais solta no mar de conteúdo, permitindo uma melhor interação com o usuário. Novos motores de busca, interfaces inovadoras, criação de dicionários de sinônimos e a organização inteligente de conteúdos são alguns exemplos de aprimoramento. Dessa forma, você não vai mais precisar minerar a internet em busca daquilo que você procura, ela vai passar a se comportar como um todo, e não mais como um monte de informação empilhada. A implementação deste paradigma começou recentemente, e ainda vai levar mais alguns anos até que entre completamente em vigor e dê um jeito em toda a enorme bagunça que a internet se tornou. Disponível em: www.tecmundo.com.br. Acesso em: 6 ago. 2013 (adaptado).\nAo analisar o texto sobre a Web Semântica, deduz-se que esse novo paradigma auxiliará os usuários a",
+      "opcoes": [
+        "armazenar grandes volumes de dados de modo mais disperso.",
+        "localizar informações na internet com mais precisão.",
+        "captar os dados na internet com mais velocidade.",
+        "publicar dados com significados não definidos.",
+        "navegar apenas sobre dados já organizados."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016617,
+      "pergunta": "Receitas de vida por um mundo mais doce Pé de moleque Ingredientes 2 filhos que não param quietos 3 sobrinhos da mesma espécie 1 cachorro que adora uma farra 1 fim de semana ao ar livre Preparo Junte tudo com os ingredientes do Açúcar Naturale, mexa bem e deixe descansar. Não as crianças, que não vai adiantar. Sirva imediatamente, porque pé de moleque não para. Quer essa e outras receitas completas? Entre no site cianaturale.com.br. Onde tem doce, tem Naturale. Revista Saúde, n. 351, jun. 2012 (adaptado).\nO texto é resultante do hibridismo de dois gêneros textuais. A respeito desse hibridismo, observa-se que a",
+      "opcoes": [
+        "receita mistura-se ao gênero propaganda com a finalidade de instruir o leitor.",
+        "receita é utilizada no gênero propaganda a fim de divulgar exemplos de vida.",
+        "propaganda assume a forma do gênero receita para divulgar um produto alimentício.",
+        "propaganda perde poder de persuasão ao assumir a forma do gênero receita.",
+        "receita está a serviço do gênero propaganda ao solicitar que o leitor faça o doce."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016618,
+      "pergunta": "Poema tirado de uma notícia de jornal João Gostoso era carregador de feira livre e morava no morro da Babilônia num barracão sem número. Uma noite ele chegou no bar Vinte de Novembro Bebeu Cantou Dançou Depois se atirou na lagoa Rodrigo de Freitas e morreu afogado. BANDEIRA, M. Estrela da vida inteira: poesias reunidas. Rio de Janeiro: José Olympio, 1980.\nNo poema de Manuel Bandeira, há uma ressignificação de elementos da função referencial da linguagem pela",
+      "opcoes": [
+        "atribuição de título ao texto com base em uma notícia veiculada em jornal.",
+        "utilização de frases curtas, características de textos do gênero jornalístico.",
+        "indicação de nomes de lugares como garantia da veracidade da cena narrada.",
+        "enumeração de ações, com foco nos eventos acontecidos à personagem do texto.",
+        "apresentação de elementos próprios da notícia, tais como quem, onde, quando e o quê."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016619,
+      "pergunta": "Brinquedos cantados Os brinquedos cantados são atividades diretamente relacionadas com o ato de cantar e ao conjunto dessas canções, a que chamamos de cancioneiro folclórico infantil. É difícil determinar sua origem. Parece que essas canções sempre existiram, sempre encantaram o povo e embalaram as criancinhas. A maioria parece ter chegado com os colonizadores portugueses, sofrendo influência ameríndia e africana, devido à colonização e posteriormente ao tráfico de escravos para o Brasil. Analisando as letras de alguns brinquedos cantados, podemos observar que elas desenvolvem várias habilidades motoras, como: motricidade ampla, ritmo, equilíbrio, direcionalidade, lateralidade, percepção espaço-temporal, tônus muscular, entre outras. E no cognitivo, as letras e coreografias ajudam a criança a desenvolver a atenção, a imaginação e a criatividade. ZOBOLI, F.; FURTUOSO, M. S.; TELLES, C. O brinquedo cantado na escola: uma ferramenta no processo de aprendizagem. Disponível em: www.efdeportes.com. Acesso em: 14 dez. 2012 (adaptado).\nO brinquedo cantado é um importante componente da cultura corporal brasileira, sendo vivenciado com frequência por muitas crianças. Identifica-se o seu valor para a tradição cultural no(a)",
+      "opcoes": [
+        "ampliação dada à força motora das crianças devido ao uso da música e das danças.",
+        "condição educativa fundamentada no uso de jogos sem regras previamente estabelecidas.",
+        "histórico indeterminado dessa forma de brincadeira representativa do cancioneiro folclórico.",
+        "uso de técnicas, facilmente adotadas por qualquer criança, que intensificam a motricidade esportiva.",
+        "possibilidade de contribuição para o desenvolvimento integral do indivíduo."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016620,
+      "pergunta": "eu acho um fato interessante... né... foi como meu pai e minha mãe vieram se conhecer... né... que... minha mãe morava no Piauí com toda família... né... meu... meu avô... materno no caso... era maquinista... ele sofreu um acidente... infelizmente morreu... minha mãe tinha cinco anos... né... e o irmão mais velho dela... meu padrinho... tinha dezessete e ele foi obrigado a trabalhar... foi trabalhar no banco... e... ele foi... o banco... no caso... estava... com um número de funcionários cheio e ele teve que ir para outro local e pediu transferência prum local mais perto de Parnaíba que era a cidade onde eles moravam e por engano o... o... escrivão entendeu Paraíba... né... e meu... e minha família veio parar em Mossoró que era exatamente o local mais perto onde tinha vaga pra funcionário do Banco do Brasil e:: ela foi parar na rua do meu pai... né... e começaram a se conhecer... namoraram onze anos... né... pararam algum tempo... brigaram... é lógico... porque todo relacionamento tem uma briga... né... e eu achei esse fato muito interessante porque foi uma coincidência incrível... né... como vieram a se conhecer... namoraram e hoje... e até hoje estão juntos... dezessete anos de casados… CUNHA, M. A. F. (Org.). Corpus, discurso & gramática: a língua falada e escrita na cidade de Natal. Natal: EdUFRN, 1998.\nNa produção dos textos, orais ou escritos, articulamos as informações por meio de relações de sentido. No trecho de fala, a passagem “brigaram... é lógico... porque todo relacionamento tem uma briga”, enuncia uma justificativa em que \"brigaram\" e \"todo relacionamento tem uma briga\" são, respectivamente,",
+      "opcoes": [
+        "causa e consequência.",
+        "premissa e conclusão.",
+        "meio e finalidade.",
+        "exceção e regra.",
+        "fato e generalização."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016621,
+      "pergunta": "Do amor à pátria São doces os caminhos que levam de volta à pátria. Não à pátria amada de verdes mares bravios, a mirar em berço esplêndido o esplendor do Cruzeiro do Sul; mas a uma outra mais íntima, pacífica e habitual — uma cuja terra se comeu em criança, uma onde se foi menino ansioso por crescer, uma onde se cresceu em sofrimentos e esperanças plantando canções, amores e filhos ao sabor das estações. MORAES, V. Poesia completa e prosa. Rio de Janeiro: Nova Aguilar, 1987.\nO nacionalismo constitui tema recorrente na literatura romântica e na modernista. No trecho, a representação da pátria ganha contornos peculiares porque",
+      "opcoes": [
+        "o amor àquilo que a pátria oferece é grandioso e eloquente.",
+        "os elementos valorizados são intimistas e de dimensão subjetiva.",
+        "o olhar sobre a pátria é ingênuo e comprometido pela inércia.",
+        "o patriotismo literário tradicional é subvertido e motivo de ironia.",
+        "a natureza é determinante na percepção do valor da pátria."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016623,
+      "pergunta": "A educação física ensinada a jovens do ensino médio deve garantir o acúmulo cultural no que tange à oportunização de vivência das práticas corporais; a compreensão do papel do corpo no mundo da produção, no que tange ao controle sobre o próprio esforço, e do direito ao repouso e ao lazer; a iniciativa pessoal nas articulações coletivas relativas às práticas corporais comunitárias; a iniciativa pessoal para criar, planejar ou buscar orientação para suas próprias práticas corporais; a intervenção política sobre as iniciativas públicas de esporte e de lazer. Disponível em: www.portal.mec.gov.br. Acesso em: 19 ago. 2012.\nSegundo o texto, a educação física visa propiciar ao indivíduo oportunidades de aprender a conhecer e a perceber, de forma permanente e contínua, o seu próprio corpo, concebendo as práticas corporais como meios para",
+      "opcoes": [
+        "ampliar a interação social.",
+        "atingir padrões de beleza.",
+        "obter resultados de alta performance.",
+        "reproduzir movimentos predeterminados.",
+        "alcançar maior produtividade no trabalho."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016624,
+      "pergunta": "TEXTO I Mama África Mama África (a minha mãe) é mãe solteira e tem que fazer mamadeira todo dia além de trabalhar como empacotadeira nas Casas Bahia Mama África tem tanto o que fazer além de cuidar neném além de fazer denguim filhinho tem que entender Mama África vai e vem mas não se afasta de você quando Mama sai de casa seus filhos se olodunzam rola o maior jazz Mama tem calos nos pés Mama precisa de paz Mama não quer brincar mais filhinho dá um tempo é tanto contratempo no ritmo de vida de Mama CHICO CÉSAR. Mama África. São Paulo: MZA Music, 1995. TEXTO II FAMÍLIAS 54,9% das famílias no Brasil são formadas por casais com filhos. Em 16,3% desses grupos, os filhos são só de um dos parceiros ou de ambos, de relacionamentos anteriores, um indicativo de aumento das uniões reconstituídas. Mulheres são responsáveis por 37,3% das famílias, mas em 62,7% dos lares o rendimento delas ajuda no sustento da casa. Elas têm cada vez menos filhos 1,9 por mulher. E engravidam mais tarde: aos 26,8 anos de idade. Fonte: IBGE A nova família brasileira. Disponível em: http://veja.abril.com.br. Acesso em: 17 dez. 2012 (adaptado).\nA pesquisa, realizada pelo IBGE, evidencia características das famílias brasileiras, também tematizadas pela canção Mama África. Ambos os textos destacam o(a)",
+      "opcoes": [
+        "preocupação das mulheres com o mercado de trabalho.",
+        "responsabilidade das mulheres no sustento das famílias.",
+        "comprometimento das mulheres na reconstituição do casamento.",
+        "dedicação das mulheres no cuidado com os filhos.",
+        "importância das mulheres nas tarefas diárias."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016626,
+      "pergunta": "Anoitecer A Dolores É a hora em que o sino toca, mas aqui não há sinos; há somente buzinas, sirenes roucas, apitos aflitos, pungentes, trágicos, uivando escuro segredo; desta hora tenho medo. [...] É a hora do descanso, mas o descanso vem tarde, o corpo não pede sono, depois de tanto rodar; pede paz — morte — mergulho no poço mais ermo e quedo; desta hora tenho medo. Hora de delicadeza, agasalho, sombra, silêncio. Haverá disso no mundo? É antes a hora dos corvos, bicando em mim, meu passado, meu futuro, meu degredo; desta hora, sim, tenho medo. ANDRADE, C. D. A rosa do povo. Rio de Janeiro: Record, 2005 (fragmento).\nCom base no contexto da Segunda Guerra Mundial, o livro A rosa do povo revela desdobramentos da visão poética. No fragmento, a expressividade lírica demonstra um(a)",
+      "opcoes": [
+        "defesa da esperança como forma de superação das atrocidades da guerra.",
+        "desejo de resistência às formas de opressão e medo produzidas pela guerra.",
+        "olhar pessimista das instituições humanas e sociais submetidas ao conflito armado.",
+        "exortação à solidariedade para a reconstrução dos espaços urbanos bombardeados.",
+        "espírito de contestação capaz de subverter a condição de vítima dos povos afetados."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016627,
+      "pergunta": "“Ela é muito diva!”, gritou a moça aos amigos, com uma câmera na mão. Era a quinta edição da Campus Party, a feira de internet que acontece anualmente em São Paulo, na última terça-feira, 7. A diva em questão era a cantora de tecnobrega Gaby Amarantos, a “Beyoncé do Pará”. Simpática, Gaby sorriu e posou pacientemente para todos os cliques. Pouco depois, o rapper Emicida, palestrante ao lado da paraense e do também rapper MV Bill, viveria a mesma tietagem. Se cenas como essa hoje em dia fazem parte do cotidiano de Gaby e Emicida, ambos garantem que isso se deve à dimensão que suas carreiras tomaram através da internet — o sucesso na rede era justamente o assunto da palestra. Ambos vieram da periferia e são marcados pela disponibilização gratuita ou a preços muito baixos de seus discos, fenômeno que ampliou a audiência para além dos subúrbios paraenses e paulistanos. A dupla até já realizou uma apresentação em conjunto, no Beco 203, casa de shows localizada no Baixo Augusta, em São Paulo, frequentada por um público de classe média alta. Disponível em: www.cartacapital.com.br. Acesso em: 28 fev. 2012 (adaptado).\nAs ideias apresentadas no texto estruturam-se em torno de elementos que promovem o encadeamento das ideias e a progressão do tema abordado. A esse respeito, identifica-se no texto em questão que",
+      "opcoes": [
+        "a expressão “pouco depois”, em “Pouco depois, o rapper Emicida”, indica permanência de estado de coisas no mundo.",
+        "o vocábulo “também”, em “e também rapper MV Bill”, retoma coesivamente a expressão “o rapper Emicida”.",
+        "o conectivo “se”, em “Se cenas como essa”, orienta o leitor para conclusões contrárias a uma ideia anteriormente apresentada.",
+        "o pronome indefinido “isso”, em “isso se deve”, marca uma remissão a ideias do texto.",
+        "as expressões “a cantora de tecnobrega Gaby Amarantos, a ‘Beyoncé do Pará'\", “ambos” e “a dupla” formam uma cadeia coesiva por retomarem as mesmas personalidades."
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016628,
+      "pergunta": "O acervo do Museu da Língua Portuguesa é o nosso idioma, um “patrimônio imaterial” que não pode ser, por isso, guardado e exposto em uma redoma de vidro. Assim, o museu, dedicado à valorização e difusão da língua portuguesa, reconhecidamente importante para a preservação de nossa identidade cultural, apresenta uma forma expositiva diferenciada das demais instituições museológicas do país e do mundo, usando tecnologia de ponta e recursos interativos para a apresentação de seus conteúdos. Disponível em: www.museulinguaportuguesa.org.br. Acesso em: 16 ago. 2012 (adaptado).\nDe acordo com o texto, embora a língua portuguesa seja um “patrimônio imaterial”, pode ser exposta em um museu. A relevância desse tipo de iniciativa está pautada no pressuposto de que",
+      "opcoes": [
+        "a língua é um importante instrumento de constituição social de seus usuários.",
+        "o modo de falar o português padrão deve ser divulgado ao grande público.",
+        "a escola precisa de parceiros na tarefa de valorização da língua portuguesa.",
+        "o contato do público com a norma-padrão solicita o uso de tecnologia de última geração.",
+        "as atividades lúdicas dos falantes com sua própria língua melhoram com o uso de recursos tecnológicos."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016629,
+      "pergunta": "Descobrimento Abancado à escrivaninha em São Paulo Na minha casa da rua Lopes Chaves De sopetão senti um friúme por dentro. Fiquei trêmulo, muito comovido Com o livro palerma olhando pra mim. Não vê que me lembrei que lá no norte, meu Deus! Muito longe de mim, Na escuridão ativa da noite que caiu, Um homem pálido, magro de cabelos escorrendo nos olhos Depois de fazer uma pele com a borracha do dia, Faz pouco se deitou, está dormindo. Esse homem é brasileiro que nem eu... ANDRADE, M. Poesias completas. São Paulo: Edusp, 1987.\nO poema Descobrimento, de Mário de Andrade, marca a postura nacionalista manifestada pelos escritores modernistas. Recuperando o fato histórico do “descobrimento”, a construção poética problematiza a representação nacional a fim de",
+      "opcoes": [
+        "resgatar o passado indígena brasileiro.",
+        "criticar a colonização portuguesa no Brasil.",
+        "defender a diversidade social e cultural brasileira.",
+        "promover a integração das diferentes regiões do país.",
+        "valorizar a Região Norte, pouco conhecida pelos brasileiros."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016631,
+      "pergunta": "O último longa de Carlão acompanha a operária Silmara, que vive com o pai, um ex-presidiário, numa casa da periferia paulistana. Ciente de sua beleza, o que lhe dá certa soberba, a jovem acredita que terá um destino diferente do de suas colegas. Cruza o caminho de dois cantores por quem é apaixonada. E constata, na prática, que o romantismo dos contos de fada tem perna curta. VOMERO, M. F. Romantismo de araque. Vida Simples, n. 121, ago. 2012.\nReconhece-se, nesse trecho, uma posição crítica aos ideais de amor e felicidade encontrados nos contos de fada. Essa crítica é traduzida",
+      "opcoes": [
+        "pela descrição da dura realidade da vida das operárias.",
+        "pelas decepções semelhantes às encontradas nos contos de fada.",
+        "pela ilusão de que a beleza garantiria melhor sorte na vida e no amor.",
+        "pelas fantasias existentes apenas na imaginação de pessoas apaixonadas.",
+        "pelos sentimentos intensos dos apaixonados enquanto vivem o romantismo."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016632,
+      "pergunta": "Esaú e Jacó Ora, aí está justamente a epígrafe do livro, se eu lhe quisesse pôr alguma, e não me ocorresse outra. Não é somente um meio de completar as pessoas da narração com as ideias que deixarem, mas ainda um par de lunetas para que o leitor do livro penetre o que for menos claro ou totalmente escuro. Por outro lado, há proveito em irem as pessoas da minha história colaborando nela, ajudando o autor, por uma lei de solidariedade, espécie de troca de serviços, entre o enxadrista e os seus trebelhos. Se aceitas a comparação, distinguirás o rei e a dama, o bispo e o cavalo, sem que o cavalo possa fazer de torre, nem a torre de peão. Há ainda a diferença da cor, branca e preta, mas esta não tira o poder da marcha de cada peça, e afinal umas e outras podem ganhar a partida, e assim vai o mundo. ASSIS, M. Obra completa. Rio de Janeiro: Nova Aguilar, 1964 (fragmento).\nO fragmento do romance Esaú e Jacó mostra como o narrador concebe a leitura de um texto literário. Com base nesse trecho, tal leitura deve levar em conta",
+      "opcoes": [
+        "o leitor como peça fundamental na construção dos sentidos.",
+        "a luneta como objeto que permite ler melhor.",
+        "o autor como único criador de significados.",
+        "o caráter de entretenimento da literatura.",
+        "a solidariedade de outros autores."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016634,
+      "pergunta": "Adoçante Quatro gotas do produto contêm 0,04 kcal e equivalem ao poder adoçante de 1 colher (de chá) de açúcar. Ingredientes — água, sorbitol, edulcorantes (sucralose e acesulfame de potássio); conservadores: benzoato de sódio e ácido benzoico, acidulante ácido cítrico e regulador de acidez citrato de sódio. Não contém glúten. Informação nutricional — porção de 0,12 mL (4 gotas). Não contém quantidade significativa de carboidratos, proteínas, gorduras totais, gorduras trans, fibra alimentar e sódio. Consumir preferencialmente sob orientação de nutricionista ou médico. Cosmed Indústria de Cosméticos e Medicamentos S/A. Barueri, SP.\nEsse texto, rótulo de um adoçante, tem como objetivo transmitir ao leitor informações sobre a",
+      "opcoes": [
+        "composição nutricional do produto.",
+        "necessidade de consultar um especialista antes do uso.",
+        "medida exata de cada ingrediente que compõe a fórmula.",
+        "quantidade do produto que deve ser consumida diariamente.",
+        "correspondência calórica existente entre o adoçante e o açúcar."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016635,
+      "pergunta": "Casamento Há mulheres que dizem: Meu marido, se quiser pescar, pesque, mas que limpe os peixes. Eu não. A qualquer hora da noite me levanto, ajudo a escamar, abrir, retalhar e salgar. É tão bom, só a gente sozinhos na cozinha, de vez em quando os cotovelos se esbarram, ele fala coisas como “este foi difícil” “prateou no ar dando rabanadas” e faz o gesto com a mão. O silêncio de quando nos vimos a primeira vez atravessa a cozinha como um rio profundo. Por fim, os peixes na travessa, vamos dormir. Coisas prateadas espocam: somos noivo e noiva. PRADO, A. Poesia reunida. São Paulo: Siciliano, 1991.\nO poema de Adélia Prado, que segue a proposta moderna de tematização de fatos cotidianos, apresenta a prosaica ação de limpar peixes na qual a voz lírica reconhece uma",
+      "opcoes": [
+        "expectativa do marido em relação à esposa.",
+        "imposição dos afazeres conjugais.",
+        "disposição para realizar tarefas masculinas.",
+        "dissonância entre as vozes masculina e feminina.",
+        "forma de consagração da cumplicidade no casamento."
+      ],
+      "correta": "E",
+      "ano": 2016
     }
   ]
 };

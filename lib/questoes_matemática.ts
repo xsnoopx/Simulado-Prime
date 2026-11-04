@@ -4575,6 +4575,396 @@ export const questoes = {
       ],
       "correta": "D",
       "ano": 2025
+    },
+    {
+      "id": 2011142,
+      "pergunta": "Em 2010, um caos aéreo afetou o continente europeu, devido à quantidade de fumaça expelida por um vulcão na Islândia, o que levou ao cancelamento de inúmeros voos. Cinco dias após o início desse caos, todo o espaço aéreo europeu acima de 6000 metros estava liberado, com exceção do espaço aéreo da Finlândia. Lá, apenas voos internacionais acima de 31 mil pés estavam liberados. Disponível em: http://www1.folha.uol.com.br. Acesso em: 21 abr. 2010 (adaptado). Considere que 1 metro equivale a aproximadamente 3,3 pés.\nQual a diferença, em pés, entre as altitudes liberadas na Finlândia e no restante do continente europeu cinco dias após o início do caos?",
+      "opcoes": [
+        "3390 pés.",
+        "9390 pés.",
+        "11200 pés.",
+        "19800 pés.",
+        "50800 pés."
+      ],
+      "correta": "C",
+      "ano": 2011
+    },
+    {
+      "id": 2011143,
+      "pergunta": "Em uma certa cidade, os moradores de um bairro carente de espaços de lazer reivindicam à prefeitura municipal a construção de uma praça. A prefeitura concorda com a solicitação e afirma que irá construí-la em formato retangular devido às características técnicas do terreno. Restrições de natureza orçamentária impõem que sejam gastos, no máximo, 180 m de tela para cercar a praça. A prefeitura apresenta aos moradores desse bairro as medidas dos terrenos disponíveis para a construção da praça: Terreno 1: 55 m por 45 m Terreno 2: 55 m por 55 m Terreno 3: 60 m por 30 m Terreno 4: 70 m por 20 m Terreno 5: 95 m por 85 m\nPara optar pelo terreno de maior área, que atenda às restrições impostas pela prefeitura, os moradores deverão escolher o terreno",
+      "opcoes": [
+        "1.",
+        "2.",
+        "3.",
+        "4.",
+        "5."
+      ],
+      "correta": "C",
+      "ano": 2011
+    },
+    {
+      "id": 2011163,
+      "pergunta": "Muitas medidas podem ser tomadas em nossas casas visando à utilização racional de energia elétrica. Isso deve ser uma atitude diária de cidadania. Uma delas pode ser a redução do tempo no banho. Um chuveiro com potência de 4800 W consome 4,8 kW por hora.\nUma pessoa que toma dois banhos diariamente, de 10 minutos cada, consumirá, em sete dias, quantos kW ?",
+      "opcoes": [
+        "0,8",
+        "1,6",
+        "5,6",
+        "11,2",
+        "33,6"
+      ],
+      "correta": "D",
+      "ano": 2011
+    },
+    {
+      "id": 2011174,
+      "pergunta": "O setor de recursos humanos de uma empresa vai realizar uma entrevista com 120 candidatos a uma vaga de contador. Por sorteio, eles pretendem atribuir a cada candidato um número, colocar a lista de números em ordem numérica crescente e usá-la para convocar os interessados. Acontece que, por um defeito do computador, foram gerados números com 5 algarismos distintos e, em nenhum deles, apareceram dígitos pares.\nEm razão disso, a ordem de chamada do candidato que tiver recebido o número 75913 é",
+      "opcoes": [
+        "24.",
+        "31.",
+        "32.",
+        "88.",
+        "89."
+      ],
+      "correta": "E",
+      "ano": 2011
+    },
+    {
+      "id": 2014146,
+      "pergunta": "Os vidros para veículos produzidos por certo fabricante têm transparências entre 70% e 90%, dependendo do lote fabricado. Isso significa que, quando um feixe luminoso incide no vidro, uma parte entre 70% e 90% da luz consegue atravessá-lo. Os veículos equipados com vidros desse fabricante terão instaladas, nos vidros das portas, películas protetoras cuja transparência, dependendo do lote fabricado, estará entre 50% e 70%. Considere que uma porcentagem P da intensidade da luz, proveniente de uma fonte externa, atravessa o vidro e a película.\nDe acordo com as informações, o intervalo das porcentagens que representam a variação total possível de P é",
+      "opcoes": [
+        "[35 ; 63].",
+        "[40 ; 63].",
+        "[50 ; 70].",
+        "[50 ; 90].",
+        "[70 ; 90]."
+      ],
+      "correta": "A",
+      "ano": 2014
+    },
+    {
+      "id": 2014156,
+      "pergunta": "Uma organização não governamental divulgou um levantamento de dados realizado em algumas cidades brasileiras sobre saneamento básico. Os resultados indicam que somente 36% do esgoto gerado nessas cidades é tratado, o que mostra que 8 bilhões de litros de esgoto sem nenhum tratamento são lançados todos os dias nas águas.\nUma campanha para melhorar o saneamento básico nessas cidades tem como meta a redução da quantidade de esgoto lançado nas águas diariamente, sem tratamento, para 4 bilhões de litros nos próximos meses. Se o volume de esgoto gerado permanecer o mesmo e a meta dessa campanha se concretizar, o percentual de esgoto tratado passará a ser",
+      "opcoes": [
+        "72%",
+        "68%",
+        "64%",
+        "54%",
+        "18%"
+      ],
+      "correta": "B",
+      "ano": 2014
+    },
+    {
+      "id": 2014167,
+      "pergunta": "O psicólogo de uma empresa aplica um teste para analisar a aptidão de um candidato a determinado cargo. O teste consiste em uma série de perguntas cujas respostas devem ser verdadeiro ou falso e termina quando o psicólogo fizer a décima pergunta ou quando o candidato der a segunda resposta errada. Com base em testes anteriores, o psicólogo sabe que a probabilidade de o candidato errar uma resposta é 0,20.\nA probabilidade de o teste terminar na quinta pergunta é",
+      "opcoes": [
+        "0,02048.",
+        "0,08192.",
+        "0,24000.",
+        "0,40960.",
+        "0,49152."
+      ],
+      "correta": "B",
+      "ano": 2014
+    },
+    {
+      "id": 2014175,
+      "pergunta": "Diariamente, uma residência consome 20 160 Wh. Essa residência possui 100 células solares retangulares (dispositivos capazes de converter a luz solar em energia elétrica) de dimensões 6 cm x 8 cm. Cada uma das tais células produz, ao longo do dia, 24 Wh por centímetro de diagonal. O proprietário dessa residência quer produzir, por dia, exatamente a mesma quantidade de energia que sua casa consome.\nQual deve ser a ação desse proprietário para que ele atinja o seu objetivo?",
+      "opcoes": [
+        "Retirar 16 células.",
+        "Retirar 40 células.",
+        "Acrescentar 5 células.",
+        "Acrescentar 20 células.",
+        "Acrescentar 40 células."
+      ],
+      "correta": "A",
+      "ano": 2014
+    },
+    {
+      "id": 2015139,
+      "pergunta": "Um fornecedor vendia caixas de leite a um supermercado por R$ 1,50 a unidade. O supermercado costumava comprar 3 000 caixas de leite por mês desse fornecedor. Uma forte seca, ocorrida na região onde o leite é produzido, forçou o fornecedor a encarecer o preço de venda em 40%. O supermercado decidiu então cortar em 20% a compra mensal dessas caixas de leite. Após essas mudanças, o fornecedor verificou que sua receita nas vendas ao supermercado tinha aumentado.\nO aumento da receita nas vendas do fornecedor, em reais, foi de",
+      "opcoes": [
+        "540.",
+        "600.",
+        "900.",
+        "1 260.",
+        "1 500."
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015140,
+      "pergunta": "Um paciente precisa ser submetido a um tratamento, sob orientação médica, com determinado medicamento. Há cinco possibilidades de medicação, variando a dosagem e o intervalo de ingestão do medicamento. As opções apresentadas são: A: um comprimido de 400 mg, de 3 em 3 horas, durante 1 semana; B: um comprimido de 400 mg, de 4 em 4 horas, durante 10 dias; C: um comprimido de 400 mg, de 6 em 6 horas, durante 2 semanas; D: um comprimido de 500 mg, de 8 em 8 horas, durante 10 dias; E: um comprimido de 500 mg, de 12 em 12 horas, durante 2 semanas.\nPara evitar efeitos colaterais e intoxicação, a recomendação é que a quantidade total de massa da medicação ingerida, em miligramas, seja a menor possível. Seguindo a recomendação, deve ser escolhida a opção",
+      "opcoes": [
+        "A.",
+        "B.",
+        "C.",
+        "D.",
+        "E."
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015145,
+      "pergunta": "O fisiologista francês Jean Poiseuille estabeleceu, na primeira metade do século XIX, que o fluxo de sangue por meio de um vaso sanguíneo em uma pessoa é diretamente proporcional à quarta potência da medida do raio desse vaso. Suponha que um médico, efetuando uma angioplastia, aumentou em 10% o raio de um vaso sanguíneo de seu paciente.\nO aumento percentual esperado do fluxo por esse vaso está entre",
+      "opcoes": [
+        "7% e 8%",
+        "9% e 11%",
+        "20% e 22%",
+        "39% e 41%",
+        "46% e 47%"
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015147,
+      "pergunta": "Na construção de um conjunto habitacional de casas populares, todas serão feitas num mesmo modelo, ocupando, cada uma delas, terrenos cujas dimensões são iguais a 20 m de comprimento por 8 m de largura. Visando a comercialização dessas casas, antes do início das obras, a empresa resolveu apresentá-las por meio de maquetes construídas numa escala de 1 : 200.\nAs medidas do comprimento e da largura dos terrenos, respectivamente, em centímetros, na maquete construída, foram de",
+      "opcoes": [
+        "4 e 10.",
+        "5 e 2.",
+        "10 e 4.",
+        "20 e 8.",
+        "50 e 20."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015151,
+      "pergunta": "Uma barraca de tiro ao alvo de um parque de diversões dará um prêmio de R$ 20,00 ao participante, cada vez que ele acertar o alvo. Por outro lado, cada vez que ele errar o alvo, deverá pagar R$ 10,00. Não há cobrança inicial para participar do jogo. Um participante deu 80 tiros e, ao final, recebeu R$ 100,00.\nQual foi o número de vezes que esse participante acertou o alvo?",
+      "opcoes": [
+        "30",
+        "36",
+        "50",
+        "60",
+        "64"
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015152,
+      "pergunta": "No próximo final de semana, um grupo de alunos participará de uma aula de campo. Em dias chuvosos, aulas de campo não podem ser realizadas. A ideia é que essa aula seja no sábado, mas, se estiver chovendo no sábado, a aula será adiada para o domingo. Segundo a meteorologia, a probabilidade de chover no sábado é de 30% e a de chover no domingo é de 25%.\nA probabilidade de que a aula de campo ocorra no domingo é de",
+      "opcoes": [
+        "5,0%",
+        "7,5%",
+        "22,5%",
+        "30,0%",
+        "75,0%"
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015153,
+      "pergunta": "Sabe-se que o valor cobrado na conta de energia elétrica correspondente ao uso de cada eletrodoméstico é diretamente proporcional à potência utilizada pelo aparelho, medida em watts (W), e também ao tempo que esse aparelho permanece ligado durante o mês. Certo consumidor possui um chuveiro elétrico com potência máxima de 3 600 W e um televisor com potência máxima de 100 W. Em certo mês, a família do consumidor utilizou esse chuveiro elétrico durante um tempo total de 5 horas e esse televisor durante um tempo total de 60 horas, ambos em suas potências máximas.\nQual a razão entre o valor cobrado pelo uso do chuveiro e o valor cobrado pelo uso do televisor?",
+      "opcoes": [
+        "1 : 1 200",
+        "1 : 12",
+        "3 : 1",
+        "36 : 1",
+        "432 : 1"
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2015167,
+      "pergunta": "Ao se perfurar um poço no chão, na forma de um cilindro circular reto, toda a terra retirada é amontoada na forma de um cone circular reto, cujo raio da base é o triplo do raio do poço e a altura é 2,4 metros. Sabe-se que o volume desse cone de terra é 20% maior do que o volume do poço cilíndrico, pois a terra fica mais fofa após ser escavada.\nQual é a profundidade, em metros, desse poço?",
+      "opcoes": [
+        "1,44",
+        "6,00",
+        "7,20",
+        "8,64",
+        "36,00"
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015169,
+      "pergunta": "Uma fábrica que trabalha com matéria-prima de fibra de vidro possui diversos modelos e tamanhos de caixa-d’água. Um desses modelos é um prisma reto com base quadrada. Com o objetivo de modificar a capacidade de armazenamento de água, está sendo construído um novo modelo, com as medidas das arestas da base duplicadas, sem a alteração da altura, mantendo a mesma forma.\nEm relação ao antigo modelo, o volume do novo modelo é",
+      "opcoes": [
+        "oito vezes maior.",
+        "quatro vezes maior.",
+        "duas vezes maior.",
+        "a metade.",
+        "a quarta parte."
+      ],
+      "correta": "B",
+      "ano": 2015
+    },
+    {
+      "id": 2015170,
+      "pergunta": "Uma fábrica vende pizzas congeladas de tamanhos médio e grande, cujos diâmetros são respectivamente 30 cm e 40 cm. Fabricam-se apenas pizzas de sabor muçarela. Sabe-se que o custo com os ingredientes para a preparação é diretamente proporcional ao quadrado do diâmetro da pizza, e que na de tamanho médio esse custo é R$ 1,80. Além disso, todas possuem um custo fixo de R$ 3,00, referente às demais despesas da fábrica. Sabe-se ainda que a fábrica deseja lucrar R$ 2,50 em cada pizza grande.\nQual é o preço que a fábrica deve cobrar pela pizza grande, a fim de obter o lucro desejado?",
+      "opcoes": [
+        "R$ 5,70",
+        "R$ 6,20",
+        "R$ 7,30",
+        "R$ 7,90",
+        "R$ 8,70"
+      ],
+      "correta": "E",
+      "ano": 2015
+    },
+    {
+      "id": 2015175,
+      "pergunta": "Uma pesquisa recente aponta que 8 em cada 10 homens brasileiros dizem cuidar de sua beleza, não apenas de sua higiene pessoal. CAETANO, M.; SOEIRO, R.; DAVINO, R. Cosméticos. Superinteressante, n. 304, maio 2012 (adaptado).\nOutra maneira de representar esse resultado é exibindo o valor percentual dos homens brasileiros que dizem cuidar de sua beleza. Qual é o valor percentual que faz essa representação?",
+      "opcoes": [
+        "80%",
+        "8%",
+        "0,8%",
+        "0,08%",
+        "0,008%"
+      ],
+      "correta": "A",
+      "ano": 2015
+    },
+    {
+      "id": 2015179,
+      "pergunta": "Um granjeiro detectou uma infecção bacteriológica em sua criação de 100 coelhos. A massa de cada coelho era de, aproximadamente, 4 kg. Um veterinário prescreveu a aplicação de um antibiótico, vendido em frascos contendo 16 mL, 25 mL, 100 mL, 400 mL ou 1 600 mL. A bula do antibiótico recomenda que, em aves e coelhos, seja administrada uma dose única de 0,25 mL para cada quilograma de massa do animal.\nPara que todos os coelhos recebessem a dosagem do antibiótico recomendada pela bula, de tal maneira que não sobrasse produto na embalagem, o criador deveria comprar um único frasco com a quantidade, em mililitros, igual a",
+      "opcoes": [
+        "16.",
+        "25.",
+        "100.",
+        "400.",
+        "1 600."
+      ],
+      "correta": "C",
+      "ano": 2015
+    },
+    {
+      "id": 2016170,
+      "pergunta": "Sob a orientação de um mestre de obras, João e Pedro trabalharam na reforma de um edifício. João efetuou reparos na parte hidráulica nos andares 1, 3, 5, 7, e assim sucessivamente, de dois em dois andares. Pedro trabalhou na parte elétrica nos andares 1, 4, 7, 10, e assim sucessivamente, de três em três andares. Coincidentemente, terminaram seus trabalhos no último andar. Na conclusão da reforma, o mestre de obras informou, em seu relatório, o número de andares do edifício. Sabe-se que, ao longo da execução da obra, em exatamente 20 andares, foram realizados reparos nas partes hidráulica e elétrica por João e Pedro.\nQual é o número de andares desse edifício?",
+      "opcoes": [
+        "40",
+        "60",
+        "100",
+        "115",
+        "120"
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016173,
+      "pergunta": "Diante da hipótese do comprometimento da qualidade da água retirada do volume morto de alguns sistemas hídricos, os técnicos de um laboratório decidiram testar cinco tipos de filtros de água. Dentre esses, os quatro com melhor desempenho serão escolhidos para futura comercialização. Nos testes, foram medidas as massas de agentes contaminantes, em miligrama, que não são capturados por cada filtro em diferentes períodos, em dia, como segue: • Filtro 1 (F1): 18 mg em 6 dias; • Filtro 2 (F2): 15 mg em 3 dias; • Filtro 3 (F3): 18 mg em 4 dias; • Filtro 4 (F4): 6 mg em 3 dias; • Filtro 5 (F5): 3 mg em 2 dias. Ao final, descarta-se o filtro com a maior razão entre a medida da massa de contaminantes não capturados e o número de dias, o que corresponde ao de pior desempenho. Disponível em: www.redebrasilatual.com.br. Acesso em: 12 jul. 2015 (adaptado).\nO filtro descartado é o",
+      "opcoes": [
+        "F1.",
+        "F2.",
+        "F3.",
+        "F4.",
+        "F5."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016639,
+      "pergunta": "Um clube tem um campo de futebol com área total de 8 000 m², correspondente ao gramado. Usualmente, a poda da grama desse campo é feita por duas máquinas do clube próprias para o serviço. Trabalhando no mesmo ritmo, as duas máquinas podam juntas 200 m² por hora. Por motivo de urgência na realização de uma partida de futebol, o administrador do campo precisará solicitar ao clube vizinho máquinas iguais às suas para fazer o serviço de poda em um tempo máximo de 5 h. Utilizando as duas máquinas que o clube já possui, qual o número mínimo de máquinas que o administrador do campo deverá solicitar ao clube vizinho?",
+      "opcoes": [
+        "4",
+        "6",
+        "8",
+        "14",
+        "16"
+      ],
+      "correta": "D",
+      "ano": 2016
+    },
+    {
+      "id": 2016642,
+      "pergunta": "Um vendedor de assinaturas de TV a cabo teve, nos 7 primeiros meses do ano, uma média mensal de 84 assinaturas vendidas. Devido a uma reestruturação da empresa, foi exigido que todos os vendedores tivessem, ao final do ano, uma média mensal de 99 assinaturas vendidas. Diante disso, o vendedor se viu forçado a aumentar sua média mensal de vendas nos 5 meses restantes do ano.\nQual deverá ser a média mensal de vendas do vendedor, nos próximos 5 meses, para que ele possa cumprir a exigência da sua empresa?",
+      "opcoes": [
+        "91",
+        "105",
+        "114",
+        "118",
+        "120"
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016644,
+      "pergunta": "Um banco de sangue recebe 450 mL de sangue de cada doador. Após separar o plasma sanguíneo das hemácias, o primeiro é armazenado em bolsas de 250 mL de capacidade. O banco de sangue aluga refrigeradores de uma empresa para estocagem das bolsas de plasma, segundo a sua necessidade. Cada refrigerador tem uma capacidade de estocagem de 50 bolsas. Ao longo de uma semana, 100 pessoas doaram sangue àquele banco. Admita que, de cada 60 mL de sangue, extraem-se 40 mL de plasma.\nO número mínimo de congeladores que o banco precisou alugar, para estocar todas as bolsas de plasma dessa semana, foi",
+      "opcoes": [
+        "2.",
+        "3.",
+        "4.",
+        "6.",
+        "8."
+      ],
+      "correta": "B",
+      "ano": 2016
+    },
+    {
+      "id": 2016654,
+      "pergunta": "O veículo terrestre mais veloz já fabricado até hoje é o Sonic Wind LSRV, que está sendo preparado para atingir a velocidade de 3000 km/h. Ele é mais veloz do que o Concorde, um dos aviões de passageiros mais rápidos já feitos, que alcança 2330 km/h. Para uma distância fixa, a velocidade e o tempo são inversamente proporcionais. BASILIO, A. Galileu, mar. 2012 (adaptado).\nPara percorrer uma distância de 1000 km, o valor mais próximo da diferença, em minuto, entre os tempos gastos pelo Sonic Wind LSRV e pelo Concorde, em suas velocidades máximas, é",
+      "opcoes": [
+        "0,1.",
+        "0,7.",
+        "6,0.",
+        "11,2.",
+        "40,2."
+      ],
+      "correta": "C",
+      "ano": 2016
+    },
+    {
+      "id": 2016658,
+      "pergunta": "Uma caixa-d’água em forma de um paralelepípedo retângulo reto, com 4 m de comprimento, 3 m de largura e 2 m de altura, necessita de higienização. Nessa operação, a caixa precisará ser esvaziada em 20 min, no máximo. A retirada da água será feita com o auxílio de uma bomba de vazão constante, em que vazão é o volume do líquido que passa pela bomba por unidade de tempo.\nA vazão mínima, em litro por segundo, que essa bomba deverá ter para que a caixa seja esvaziada no tempo estipulado é",
+      "opcoes": [
+        "2.",
+        "3.",
+        "5.",
+        "12.",
+        "20."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016661,
+      "pergunta": "O recinto das provas de natação olímpica utiliza a mais avançada tecnologia para proporcionar aos nadadores condições ideais. Isso passa por reduzir o impacto da ondulação e das correntes provocadas pelos nadadores no seu deslocamento. Para conseguir isso, a piscina de competição tem uma profundidade uniforme de 3 m, que ajuda a diminuir a “reflexão” da água (o movimento contra uma superfície e o regresso no sentido contrário, atingindo os nadadores), além dos já tradicionais 50 m de comprimento e 25 m de largura. Um clube deseja reformar sua piscina de 50 m de comprimento, 20 m de largura e 2 m de profundidade de forma que passe a ter as mesmas dimensões das piscinas olímpicas. Disponível em: http://desporto.publico.pt. Acesso em: 6 ago. 2012.\nApós a reforma, a capacidade dessa piscina superará a capacidade da piscina original em um valor mais próximo de",
+      "opcoes": [
+        "20%.",
+        "25%.",
+        "47%.",
+        "50%.",
+        "88%."
+      ],
+      "correta": "E",
+      "ano": 2016
+    },
+    {
+      "id": 2016665,
+      "pergunta": "O gerente de um estacionamento, próximo a um grande aeroporto, sabe que um passageiro que utiliza seu carro nos traslados casa-aeroporto-casa gasta cerca de R$ 10,00 em combustível nesse trajeto. Ele sabe, também, que um passageiro que não utiliza seu carro nos traslados casa-aeroporto-casa gasta cerca de R$ 80,00 com transporte. Suponha que os passageiros que utilizam seus próprios veículos deixem seus carros nesse estacionamento por um período de dois dias.\nPara tornar atrativo a esses passageiros o uso do estacionamento, o valor, em real, cobrado por dia de estacionamento deve ser, no máximo, de",
+      "opcoes": [
+        "35,00.",
+        "40,00.",
+        "45,00.",
+        "70,00.",
+        "90,00."
+      ],
+      "correta": "A",
+      "ano": 2016
+    },
+    {
+      "id": 2016676,
+      "pergunta": "Um casal, ambos com 30 anos de idade, pretende fazer um plano de previdência privada. A seguradora pesquisada, para definir o valor do recolhimento mensal, estima a probabilidade de que pelo menos um deles esteja vivo daqui a 50 anos, tomando por base dados da população, que indicam que 20% dos homens e 30% das mulheres de hoje alcançarão a idade de 80 anos.\nQual é essa probabilidade?",
+      "opcoes": [
+        "50%",
+        "44%",
+        "38%",
+        "25%",
+        "6%"
+      ],
+      "correta": "B",
+      "ano": 2016
     }
   ]
 };
