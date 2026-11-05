@@ -652,20 +652,20 @@ export default function AppPage() {
                   icon={Ghost}
                   bg="bg-error/10"
                   color="text-error"
-                  description="Desafie seu raciocínio lógico com enigmas de mistério. Resolva os clássicos sem internet ou encare novos mistérios da IA."
+                  description="420 enigmas em 8 categorias: lógica, matemática, palavras, mistério, ciência e muito mais. Jogue offline ou gere novos casos com a IA."
                   isPremium={isPremium}
                   onPremiumClick={() => setShowPremiumUpgrade(true)}
                   options={[
                     { 
-                      name: "Enigmas Off-line", 
+                      name: "Acervo de Enigmas", 
                       icon: Ghost, 
                       color: "text-on-surface-variant/60",
                       subOptions: [
-                        { name: "Enigmas SIMPLES", href: "/enigmas-offline?difficulty=simples", icon: Ghost, color: "text-primary" },
-                        { name: "Enigmas COMPLEXOS", href: "/enigmas-offline?difficulty=complexos", icon: Ghost, color: "text-error" },
+                        { name: "Todos os enigmas", href: "/enigmas-offline", icon: Ghost, color: "text-error", subtitle: "420 desafios em 8 categorias" },
+                        { name: "Enigma do dia", href: "/enigmas-offline?dia=1", icon: Sparkles, color: "text-primary", subtitle: "Um novo mistério a cada dia" },
                       ]
                     },
-                    { name: "Enigmas Online (IA)", href: "/enigmas", icon: Wifi, isOnline: true, isPremium: true, color: "text-error" }
+                    { name: "Enigmas Online (IA)", href: "/enigmas?modo=ia", icon: Wifi, isOnline: true, isPremium: true, color: "text-error" }
                   ]}
                 />
               </section>
