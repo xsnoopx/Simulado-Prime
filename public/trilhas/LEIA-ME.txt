@@ -1,0 +1,16 @@
+Trilhas de fundo do Simulado Prime
+==================================
+
+As faixas desta pasta foram compostas e sintetizadas originalmente para o
+aplicativo, sem samples ou gravações de terceiros. São instrumentais calmas de
+tema espacial, pensadas para estudo e leitura em celulares.
+
+- nebulosa-serena.mp3   (2:48)
+- orbita-tranquila.mp3  (3:00)
+- chuva-de-estrelas.mp3 (2:36)
+- jardim-lunar.mp3      (2:54)
+
+Formato: MP3 estéreo, 128 kbps, 44,1 kHz. Volume médio alinhado às faixas
+background8.mp3 e background9.mp3 para evitar saltos ao trocar de música.
+
+Uso livre dentro do projeto Simulado Prime.

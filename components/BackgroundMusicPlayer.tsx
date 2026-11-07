@@ -6,12 +6,18 @@ import { Volume2, VolumeX } from 'lucide-react';
 import { syncAllDataToSupabase } from '@/lib/supabaseSync';
 
 // Só entram na lista as faixas que realmente existem em public/.
-// Os arquivos background.mp3 até background7.mp3 estavam com 0 byte: cada
-// tentativa de tocar devolvia 416 (Range Not Satisfiable), o player pulava para
-// outra faixa vazia e ficava em laço, gastando rede e CPU sem tocar nada.
-const LOCAL_TRACKS = ['/background8.mp3', '/background9.mp3'];
+// background8/9 são as originais; as trilhas em /trilhas foram criadas para o
+// app com pads, sinos e texturas espaciais, em volume uniforme.
+const LOCAL_TRACKS = [
+  '/background8.mp3',
+  '/background9.mp3',
+  '/trilhas/nebulosa-serena.mp3',
+  '/trilhas/orbita-tranquila.mp3',
+  '/trilhas/chuva-de-estrelas.mp3',
+  '/trilhas/jardim-lunar.mp3',
+];
 
-const FALLBACK_ONLINE_TRACKS = ['/background8.mp3', '/background9.mp3'];
+const FALLBACK_ONLINE_TRACKS = LOCAL_TRACKS;
 
 // Depois de algumas falhas seguidas o player para de tentar em vez de entrar
 // em loop de requisições.
