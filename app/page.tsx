@@ -15,6 +15,7 @@ import {
   MessageCircleQuestion,
   Ghost,
   Laugh,
+  Library,
   Calculator,
   Languages,
   Globe2,
@@ -638,12 +639,21 @@ export default function AppPage() {
                   icon={MessageCircleQuestion}
                   bg="bg-secondary/10"
                   color="text-secondary"
-                  description="Divirta-se com charadas clássicas disponíveis offline ou peça para nossa IA criar novas piadas e trocadilhos exclusivos para você."
+                  description="525 charadas em 9 categorias, com busca, dicas e progresso local. Jogue offline ou gere trocadilhos inéditos com a IA."
                   isPremium={isPremium}
                   onPremiumClick={() => setShowPremiumUpgrade(true)}
                   options={[
-                    { name: "Charadas Off-line", href: "/charadas-offline", icon: Laugh, isOnline: false, color: "text-on-surface-variant/60" },
-                    { name: "Charadas Online (IA)", href: "/charadas", icon: Wifi, isOnline: true, isPremium: true, color: "text-secondary" }
+                    { 
+                      name: "Acervo de Charadas", 
+                      icon: Laugh, 
+                      color: "text-on-surface-variant/60",
+                      subOptions: [
+                        { name: "Hub de charadas", href: "/charadas", icon: Library, color: "text-secondary", subtitle: "Acervo local + gerador com IA" },
+                        { name: "Todas as charadas", href: "/charadas-offline", icon: Laugh, color: "text-secondary", subtitle: "525 charadas em 9 categorias" },
+                        { name: "Charada do dia", href: "/charadas-offline?dia=1", icon: Sparkles, color: "text-primary", subtitle: "Uma nova piada a cada dia" },
+                      ]
+                    },
+                    { name: "Charadas Online (IA)", href: "/charadas?modo=ia", icon: Wifi, isOnline: true, isPremium: true, color: "text-secondary" }
                   ]}
                 />
 
