@@ -6,8 +6,8 @@ import { Volume2, VolumeX } from 'lucide-react';
 import { syncAllDataToSupabase } from '@/lib/supabaseSync';
 
 // Só entram na lista as faixas que realmente existem em public/.
-// background8/9 são as originais; as trilhas em /trilhas foram criadas para o
-// app com pads, sinos e texturas espaciais, em volume uniforme.
+// background8/9 são as originais; as trilhas em /trilhas são ambientais,
+// com pads, drones, reverb longo e texturas espaciais em volume uniforme.
 const LOCAL_TRACKS = [
   '/background8.mp3',
   '/background9.mp3',
