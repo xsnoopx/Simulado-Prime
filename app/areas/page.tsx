@@ -214,7 +214,7 @@ export default function AreasPage() {
                 {
                   id: 'challenge',
                   name: 'Desafio',
-                  desc: '30s por questão. Raciocínio rápido!',
+                  desc: '30s por questão. Sem dicas e sem voltar.',
                   color: 'text-amber-400 bg-amber-500/10 border-amber-500/30',
                   activeColor: 'border-amber-500/50 bg-amber-500/10 text-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.15)]',
                   icon: Zap,
@@ -231,7 +231,7 @@ export default function AreasPage() {
                 {
                   id: 'survival',
                   name: 'Sobrevivência',
-                  desc: 'Morte súbita: Errou = Fim do jogo!',
+                  desc: 'Morte súbita: errou = fim. Sem dicas e sem voltar.',
                   color: 'text-red-400 bg-red-500/10 border-red-500/30',
                   activeColor: 'border-red-500/50 bg-red-500/10 text-red-300 shadow-[0_0_15px_rgba(239,68,68,0.15)]',
                   icon: Flame,

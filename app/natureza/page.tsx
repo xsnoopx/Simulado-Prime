@@ -502,7 +502,7 @@ export default function NaturezaPage() {
                         {!showResult && (
                           <div className="flex gap-3 justify-between items-center transition-all">
                             {/* Voltar Button */}
-                            {currentIndex > 0 && specialMode !== 'hardcore' && (
+                            {currentIndex > 0 && specialMode === 'regular' && (
                               <button
                                 type="button"
                                 onClick={() => {
@@ -519,7 +519,7 @@ export default function NaturezaPage() {
                             )}
 
                             {/* Dica Button */}
-                            {specialMode !== 'hardcore' && (
+                            {specialMode === 'regular' && (
                               <button
                                 type="button"
                                 onClick={() => setHintRevealed(true)}
@@ -532,7 +532,7 @@ export default function NaturezaPage() {
                         )}
 
                         {/* Hint Display Card */}
-                        {hintRevealed && !showResult && (
+                        {specialMode === 'regular' && hintRevealed && !showResult && (
                           <motion.div
                             initial={{ opacity: 0, y: 5 }}
                             animate={{ opacity: 1, y: 0 }}
