@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { AnimatePresence, motion } from 'motion/react';
@@ -26,8 +26,6 @@ import { PremiumGateway } from '@/components/PremiumGateway';
 import {
   CATEGORIAS_ENIGMAS,
   STATIC_ENIGMAS,
-  TOTAL_ENIGMAS,
-  contarPorCategoria,
   enigmaDoDia,
   lerProgresso,
   registrarResposta,
@@ -165,7 +163,6 @@ function EnigmasConteudo() {
   const [mostrarRespostaIa, setMostrarRespostaIa] = useState(false);
   const [categoriaIa, setCategoriaIa] = useState('logica');
   const jaGerou = useRef(false);
-  const contagem = useMemo(() => contarPorCategoria(), []);
 
   useEffect(() => {
     setMontado(true);
@@ -347,33 +344,12 @@ function EnigmasConteudo() {
                     Biblioteca offline
                   </p>
                   <h2 className="text-2xl sm:text-3xl font-display font-bold mt-1.5 leading-tight">
-                    {TOTAL_ENIGMAS} enigmas para quebrar a cabeça
+                    Enigmas para quebrar a cabeça
                   </h2>
                   <p className="text-sm text-on-surface-variant mt-2 leading-relaxed">
-                    Oito categorias, três níveis de dificuldade, dicas e explicações.
+                    Categorias variadas, níveis de dificuldade, dicas e explicações.
                     Tudo funciona sem internet, direto no seu aparelho.
                   </p>
-
-                  <div className="grid grid-cols-3 gap-2 mt-5">
-                    <div className="rounded-2xl bg-white/5 border border-white/5 p-3 text-center">
-                      <p className="text-lg font-display font-black text-error">{TOTAL_ENIGMAS}</p>
-                      <p className="text-[0.5rem] uppercase tracking-wider text-on-surface-variant/60">
-                        enigmas
-                      </p>
-                    </div>
-                    <div className="rounded-2xl bg-white/5 border border-white/5 p-3 text-center">
-                      <p className="text-lg font-display font-black text-error">8</p>
-                      <p className="text-[0.5rem] uppercase tracking-wider text-on-surface-variant/60">
-                        categorias
-                      </p>
-                    </div>
-                    <div className="rounded-2xl bg-white/5 border border-white/5 p-3 text-center">
-                      <p className="text-lg font-display font-black text-error">3</p>
-                      <p className="text-[0.5rem] uppercase tracking-wider text-on-surface-variant/60">
-                        níveis
-                      </p>
-                    </div>
-                  </div>
 
                   <div className="flex flex-col sm:flex-row gap-2 mt-5">
                     <Link
@@ -419,9 +395,6 @@ function EnigmasConteudo() {
                         <div className="flex items-start justify-between gap-2">
                           <span className="text-2xl" aria-hidden="true">
                             {categoria.emoji}
-                          </span>
-                          <span className="text-[0.5625rem] font-bold text-on-surface-variant/40">
-                            {contagem[categoria.id]}
                           </span>
                         </div>
                         <p className="font-display font-bold text-sm mt-2 leading-snug">

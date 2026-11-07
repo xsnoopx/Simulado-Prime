@@ -21,9 +21,7 @@ import {
   CATEGORIAS_CHARADAS,
   DIFICULDADES,
   STATIC_CHARADAS,
-  TOTAL_CHARADAS,
   charadaDoDia,
-  contarPorCategoria,
   estatisticasProgresso,
   filtrarCharadas,
   lerProgresso,
@@ -96,18 +94,6 @@ function CharadasContent() {
     [busca, categoria, dificuldade, somenteNaoVistas, progresso]
   );
 
-  const baseContagem = useMemo(
-    () =>
-      filtrarCharadas(STATIC_CHARADAS, {
-        busca,
-        dificuldade,
-        somenteNaoVistas,
-        progresso,
-      }),
-    [busca, dificuldade, somenteNaoVistas, progresso]
-  );
-
-  const contagem = useMemo(() => contarPorCategoria(baseContagem), [baseContagem]);
   const dia = useMemo(() => charadaDoDia(), []);
   const stats = useMemo(() => estatisticasProgresso(progresso), [progresso]);
 
@@ -173,7 +159,7 @@ function CharadasContent() {
             ACERVO DE CHARADAS
           </h1>
           <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-[0.28em] mt-1">
-            {TOTAL_CHARADAS} charadas · 9 categorias
+            Busca, dicas e progresso local
           </p>
         </div>
         <div className="w-9" />
@@ -186,7 +172,7 @@ function CharadasContent() {
               Seu progresso
             </p>
             <p className="text-sm font-bold text-on-surface">
-              {stats.resolvidos} de {stats.total} charadas sabidas
+              {stats.resolvidos} charadas sabidas
             </p>
           </div>
           <span className="text-lg font-display font-black text-secondary">
@@ -250,7 +236,7 @@ function CharadasContent() {
               : 'bg-white/5 border-white/5 text-on-surface-variant hover:bg-white/10'
           )}
         >
-          Todas · {TOTAL_CHARADAS}
+          Todas
         </button>
 
         {CATEGORIAS_CHARADAS.map((item) => (
@@ -270,7 +256,6 @@ function CharadasContent() {
           >
             <span aria-hidden="true">{item.emoji}</span>
             {item.label}
-            <span className="text-[0.5625rem] opacity-60">{contagem[item.id] ?? 0}</span>
           </button>
         ))}
       </div>
@@ -368,7 +353,7 @@ function CharadasContent() {
                 ? 'Todos os temas'
                 : CATEGORIAS_CHARADAS.find((item) => item.id === categoria)?.label}
               {' · '}
-              {indiceSeguro + 1} de {lista.length}
+              Charada {indiceSeguro + 1}
             </p>
             <button
               type="button"

@@ -639,7 +639,7 @@ export default function AppPage() {
                   icon={MessageCircleQuestion}
                   bg="bg-secondary/10"
                   color="text-secondary"
-                  description="525 charadas em 9 categorias, com busca, dicas e progresso local. Jogue offline ou gere trocadilhos inéditos com a IA."
+                  description="Charadas com busca, dicas e progresso local. Jogue offline ou gere trocadilhos inéditos com a IA."
                   isPremium={isPremium}
                   onPremiumClick={() => setShowPremiumUpgrade(true)}
                   options={[
@@ -649,7 +649,7 @@ export default function AppPage() {
                       color: "text-on-surface-variant/60",
                       subOptions: [
                         { name: "Hub de charadas", href: "/charadas", icon: Library, color: "text-secondary", subtitle: "Acervo local + gerador com IA" },
-                        { name: "Todas as charadas", href: "/charadas-offline", icon: Laugh, color: "text-secondary", subtitle: "525 charadas em 9 categorias" },
+                        { name: "Todas as charadas", href: "/charadas-offline", icon: Laugh, color: "text-secondary", subtitle: "Busca, dicas e progresso local" },
                         { name: "Charada do dia", href: "/charadas-offline?dia=1", icon: Sparkles, color: "text-primary", subtitle: "Uma nova piada a cada dia" },
                       ]
                     },
@@ -662,7 +662,7 @@ export default function AppPage() {
                   icon={Ghost}
                   bg="bg-error/10"
                   color="text-error"
-                  description="420 enigmas em 8 categorias: lógica, matemática, palavras, mistério, ciência e muito mais. Jogue offline ou gere novos casos com a IA."
+                  description="Enigmas de lógica, matemática, palavras, mistério, ciência e muito mais. Jogue offline ou gere novos casos com a IA."
                   isPremium={isPremium}
                   onPremiumClick={() => setShowPremiumUpgrade(true)}
                   options={[
@@ -671,7 +671,7 @@ export default function AppPage() {
                       icon: Ghost, 
                       color: "text-on-surface-variant/60",
                       subOptions: [
-                        { name: "Todos os enigmas", href: "/enigmas-offline", icon: Ghost, color: "text-error", subtitle: "420 desafios em 8 categorias" },
+                        { name: "Todos os enigmas", href: "/enigmas-offline", icon: Ghost, color: "text-error", subtitle: "Busca, dicas e progresso local" },
                         { name: "Enigma do dia", href: "/enigmas-offline?dia=1", icon: Sparkles, color: "text-primary", subtitle: "Um novo mistério a cada dia" },
                       ]
                     },

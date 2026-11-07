@@ -19,9 +19,7 @@ import {
   CATEGORIAS_CHARADAS,
   DIFICULDADES,
   STATIC_CHARADAS,
-  TOTAL_CHARADAS,
   charadaDoDia,
-  contarPorCategoria,
   estatisticasProgresso,
   lerProgresso,
   registrarResposta,
@@ -43,7 +41,6 @@ export function CharadasHub() {
   }, []);
 
   const atual = STATIC_CHARADAS[indice] ?? dia;
-  const contagem = useMemo(() => contarPorCategoria(), []);
   const stats = useMemo(() => estatisticasProgresso(progresso), [progresso]);
 
   const sortear = () => {
@@ -116,7 +113,7 @@ export function CharadasHub() {
                   Seu progresso
                 </p>
                 <p className="text-sm font-bold text-on-surface">
-                  {stats.resolvidos} de {stats.total} charadas sabidas
+                  {stats.resolvidos} charadas sabidas
                 </p>
               </div>
             </div>
@@ -175,9 +172,6 @@ export function CharadasHub() {
             <p className="text-[0.625rem] font-black uppercase tracking-[0.2em] text-on-surface-variant/60">
               Navegue por categoria
             </p>
-            <span className="text-[0.5625rem] uppercase tracking-wider text-on-surface-variant/40">
-              {TOTAL_CHARADAS} no total
-            </span>
           </div>
 
           <div className="grid grid-cols-2 gap-2">
@@ -190,9 +184,6 @@ export function CharadasHub() {
                 <div className="flex items-start justify-between gap-2">
                   <span className="text-xl" aria-hidden="true">
                     {categoria.emoji}
-                  </span>
-                  <span className="text-[0.5625rem] font-bold text-on-surface-variant/50">
-                    {contagem[categoria.id]}
                   </span>
                 </div>
                 <p className="text-sm font-bold text-on-surface mt-2 group-hover:text-secondary transition-colors">
@@ -236,7 +227,7 @@ export function CharadasHub() {
             <p className="text-xs font-bold">Funciona sem internet</p>
           </div>
           <p className="text-[0.6875rem] text-on-surface-variant leading-relaxed">
-            As {TOTAL_CHARADAS} charadas do acervo ficam no aparelho. O gerador de charadas
+            Todas as charadas do acervo ficam no aparelho. O gerador de charadas
             inéditas com IA é um recurso separado do COSMOS PRIME.
           </p>
         </section>

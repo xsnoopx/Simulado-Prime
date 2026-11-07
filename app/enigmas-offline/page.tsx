@@ -21,8 +21,6 @@ import {
   CATEGORIAS_ENIGMAS,
   DIFICULDADES,
   STATIC_ENIGMAS,
-  TOTAL_ENIGMAS,
-  contarPorCategoria,
   enigmaDoDia,
   estatisticasProgresso,
   filtrarEnigmas,
@@ -99,18 +97,6 @@ function EnigmasContent() {
     [busca, categoria, dificuldade, somenteNaoResolvidos, progresso]
   );
 
-  const baseContagem = useMemo(
-    () =>
-      filtrarEnigmas(STATIC_ENIGMAS, {
-        busca,
-        dificuldade,
-        somenteNaoResolvidos,
-        progresso,
-      }),
-    [busca, dificuldade, somenteNaoResolvidos, progresso]
-  );
-
-  const contagem = useMemo(() => contarPorCategoria(baseContagem), [baseContagem]);
   const dia = useMemo(() => enigmaDoDia(), []);
   const stats = useMemo(() => estatisticasProgresso(progresso), [progresso]);
 
@@ -176,7 +162,7 @@ function EnigmasContent() {
             ACERVO DE ENIGMAS
           </h1>
           <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-[0.28em] mt-1">
-            {TOTAL_ENIGMAS} desafios · 8 categorias
+            Busca, dicas e progresso local
           </p>
         </div>
         <div className="w-9" />
@@ -189,7 +175,7 @@ function EnigmasContent() {
               Seu progresso
             </p>
             <p className="text-sm font-bold text-on-surface">
-              {stats.resolvidos} de {stats.total} resolvidos
+              {stats.resolvidos} resolvidos
             </p>
           </div>
           <span className="text-lg font-display font-black text-error">
@@ -253,7 +239,7 @@ function EnigmasContent() {
               : 'bg-white/5 border-white/5 text-on-surface-variant hover:bg-white/10'
           )}
         >
-          Todas · {TOTAL_ENIGMAS}
+          Todas
         </button>
 
         {CATEGORIAS_ENIGMAS.map((item) => (
@@ -273,7 +259,6 @@ function EnigmasContent() {
           >
             <span aria-hidden="true">{item.emoji}</span>
             {item.label}
-            <span className="text-[0.5625rem] opacity-60">{contagem[item.id] ?? 0}</span>
           </button>
         ))}
       </div>
@@ -371,7 +356,7 @@ function EnigmasContent() {
                 ? 'Todos os temas'
                 : CATEGORIAS_ENIGMAS.find((item) => item.id === categoria)?.label}
               {' · '}
-              {indiceSeguro + 1} de {lista.length}
+              Enigma {indiceSeguro + 1}
             </p>
             <button
               type="button"
