@@ -216,10 +216,12 @@ function playBell(
   quando: number,
   duracao: number,
   volume: number,
-  pan = 0
+  pan = 0,
+  destino: any = null
 ) {
   const saida = ctx.createStereoPanner ? ctx.createStereoPanner() : null;
   if (saida) saida.pan.value = pan;
+  const alvo = destino || bus.master;
 
   const portadora = ctx.createOscillator();
   const moduladora = ctx.createOscillator();
@@ -231,24 +233,24 @@ function playBell(
 
   moduladora.type = 'sine';
   moduladora.frequency.setValueAtTime(freq * 2.01, quando); // 2:1 levemente desafinado
-  indiceMod.gain.setValueAtTime(freq * 1.6, quando);
+  indiceMod.gain.setValueAtTime(freq * 1.25, quando);
   indiceMod.gain.exponentialRampToValueAtTime(Math.max(1, freq * 0.05), quando + duracao * 0.55);
 
   moduladora.connect(indiceMod);
   indiceMod.connect(portadora.frequency);
 
   envelope.gain.setValueAtTime(0.0001, quando);
-  envelope.gain.linearRampToValueAtTime(volume, quando + 0.012);
+  envelope.gain.linearRampToValueAtTime(volume, quando + 0.02);
   envelope.gain.exponentialRampToValueAtTime(0.0001, quando + duracao);
 
   portadora.connect(envelope);
   if (saida) {
     envelope.connect(saida);
-    saida.connect(bus.master);
-    saida.connect(bus.reverbSend);
+    saida.connect(alvo);
+    if (!destino) saida.connect(bus.reverbSend);
   } else {
-    envelope.connect(bus.master);
-    envelope.connect(bus.reverbSend);
+    envelope.connect(alvo);
+    if (!destino) envelope.connect(bus.reverbSend);
   }
 
   const fim = quando + duracao + 0.06;
@@ -267,57 +269,44 @@ export function playCorrectSound() {
     const bus = getSfxBus(ctx);
     const agora = ctx.currentTime + 0.01;
 
-    // 1. Corpo grave e quente: dá peso de conquista ao acerto.
+    // Nível próprio do acerto: discreto, para não competir com a música nem
+    // soar como alarme. O erro continua com o volume cheio do barramento.
+    const nivel = ctx.createGain();
+    nivel.gain.value = 0.7;
+    nivel.connect(bus.master);
+    nivel.connect(bus.reverbSend);
+
+    // 1. Corpo grave bem discreto, só para aquecer o timbre.
     const corpo = ctx.createOscillator();
     const corpoGain = ctx.createGain();
     corpo.type = 'sine';
     corpo.frequency.setValueAtTime(130.81, agora); // C3
-    corpo.frequency.exponentialRampToValueAtTime(196, agora + 0.18); // G3
+    corpo.frequency.exponentialRampToValueAtTime(174.61, agora + 0.25); // F3
     corpoGain.gain.setValueAtTime(0.0001, agora);
-    corpoGain.gain.linearRampToValueAtTime(0.22, agora + 0.02);
-    corpoGain.gain.exponentialRampToValueAtTime(0.0001, agora + 0.45);
+    corpoGain.gain.linearRampToValueAtTime(0.14, agora + 0.04);
+    corpoGain.gain.exponentialRampToValueAtTime(0.0001, agora + 0.6);
     corpo.connect(corpoGain);
-    corpoGain.connect(bus.master);
+    corpoGain.connect(nivel);
     corpo.start(agora);
-    corpo.stop(agora + 0.5);
+    corpo.stop(agora + 0.65);
 
-    // 2. Arpejo ascendente em Dó maior com nona: C5 E5 G5 C6 E6 G6.
-    const arpejo = [523.25, 659.25, 783.99, 1046.5, 1318.51, 1567.98];
+    // 2. Arpejo curto e suave em Dó maior: C5 E5 G5 C6.
+    const arpejo = [523.25, 659.25, 783.99, 1046.5];
     arpejo.forEach((freq, i) => {
       playBell(
         ctx,
         bus,
         freq,
-        agora + i * 0.055,
-        1.1 - i * 0.08,
-        0.2 - i * 0.015,
-        i % 2 === 0 ? -0.25 : 0.25
+        agora + i * 0.08,
+        1.0,
+        0.16 - i * 0.015,
+        i % 2 === 0 ? -0.18 : 0.18,
+        nivel
       );
     });
 
-    // 3. Faíscas agudas: brilho curto no topo do espectro.
-    [2093, 2637, 3136].forEach((freq, i) => {
-      playBell(ctx, bus, freq, agora + 0.12 + i * 0.05, 0.4, 0.05, (i - 1) * 0.35);
-    });
-
-    // 4. Varredura de ar: ruído filtrado subindo, como um whoosh de luz.
-    const ruido = ctx.createBufferSource();
-    ruido.buffer = getNoiseBuffer(ctx);
-    const filtroAr = ctx.createBiquadFilter();
-    filtroAr.type = 'bandpass';
-    filtroAr.Q.value = 1.2;
-    filtroAr.frequency.setValueAtTime(900, agora);
-    filtroAr.frequency.exponentialRampToValueAtTime(6500, agora + 0.35);
-    const arGain = ctx.createGain();
-    arGain.gain.setValueAtTime(0.0001, agora);
-    arGain.gain.linearRampToValueAtTime(0.09, agora + 0.05);
-    arGain.gain.exponentialRampToValueAtTime(0.0001, agora + 0.4);
-    ruido.connect(filtroAr);
-    filtroAr.connect(arGain);
-    arGain.connect(bus.master);
-    arGain.connect(bus.reverbSend);
-    ruido.start(agora);
-    ruido.stop(agora + 0.45);
+    // 3. Um único brilho distante, quase imperceptível, para fechar a frase.
+    playBell(ctx, bus, 1567.98, agora + 0.34, 0.6, 0.045, 0, nivel);
   });
 }
 
