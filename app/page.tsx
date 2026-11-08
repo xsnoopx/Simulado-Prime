@@ -928,7 +928,7 @@ export default function AppPage() {
                       <div className="space-y-2">
                         <p>Ao responder simulados, você acumula pontos de experiência (XP) cósmicos de maneira contínua:</p>
                         <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
-                          <li><strong>Ganho de XP:</strong> Você ganha 15 XP por cada resposta correta e 5 XP por tentativas incorretas nos simulados.</li>
+                          <li><strong>Ganho de XP:</strong> o valor varia conforme o modo de treino. No Regular, você ganha 5 XP por acerto (erros não rendem XP). No Hardcore, 15 XP por acerto e 5 por erro; no Desafio, 25 e 10; na Sobrevivência, 30 e 15.</li>
                           <li><strong>Níveis cósmicos:</strong> Cada nível exige precisamente 150 XP. Por exemplo, alcançar o Nível 5 exige 600 XP e o Nível 10 exige 1350 XP.</li>
                           <li><strong>Títulos Evolutivos:</strong> Seu título no Perfil evolui dinamicamente conforme seu nível: <strong>Recruta do Cosmos</strong> (Nível 1-2), <strong>Explorador de Nebulosas</strong> (Nível 3-5), <strong>Viajante Sideral</strong> (Nível 6-9), <strong>Explorador de Galáxias</strong> (Nível 10-14) e finalizando como <strong>Sábio do Universo</strong> (Nível 15+).</li>
                         </ul>

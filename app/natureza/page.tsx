@@ -90,7 +90,7 @@ export default function NaturezaPage() {
       setIncorrectCount(prev => prev + 1);
       setMissedQuestions(prev => [...prev, currentQuestao]);
       playIncorrectSound();
-      recordAnswer('natureza', false);
+      recordAnswer('natureza', false, 'challenge');
       return;
     }
 
@@ -209,7 +209,7 @@ export default function NaturezaPage() {
         setIsFinished(true);
       }
     }
-    recordAnswer('natureza', isCorrect);
+    recordAnswer('natureza', isCorrect, specialMode);
   };
 
   const handleNextQuestion = () => {

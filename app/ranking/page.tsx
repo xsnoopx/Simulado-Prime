@@ -1449,11 +1449,13 @@ export default function RankingPage() {
             Como subir de posição?
           </p>
           <p className="text-[0.6563rem] text-on-surface-variant leading-relaxed">
-            Cada resposta{" "}
-            <span className="text-emerald-400 font-bold">correta</span> rende{" "}
-            <span className="text-white font-bold">15 XP</span>. Cada resposta
-            errada em seus simulados de estudos acumula{" "}
-            <span className="text-white font-bold">5 XP</span> por esforço!
+            O XP varia conforme o modo de treino. No{" "}
+            <span className="text-white font-bold">Regular</span>, são{" "}
+            <span className="text-emerald-400 font-bold">5 XP</span> por acerto.
+            No <span className="text-white font-bold">Hardcore</span>, 15 por
+            acerto e 5 por erro; no{" "}
+            <span className="text-white font-bold">Desafio</span>, 25 e 10; na{" "}
+            <span className="text-white font-bold">Sobrevivência</span>, 30 e 15.
           </p>
         </section>
       </main>

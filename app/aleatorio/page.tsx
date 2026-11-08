@@ -111,7 +111,7 @@ export default function AleatorioPage() {
       setShowResult(true);
       setIncorrectCount(prev => prev + 1);
       playIncorrectSound();
-      recordAnswer('aleatorio', false);
+      recordAnswer(currentQuestao.category || 'linguagens', false, 'challenge');
       return;
     }
 
@@ -240,7 +240,7 @@ export default function AleatorioPage() {
         setIsFinished(true);
       }
     }
-    recordAnswer(currentQuestao.category || 'linguagens', isCorrect);
+    recordAnswer(currentQuestao.category || 'linguagens', isCorrect, specialMode);
   };
 
   const handleNextQuestion = () => {

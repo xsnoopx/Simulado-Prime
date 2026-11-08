@@ -199,6 +199,7 @@ export default function AreasPage() {
 
             <p className="text-[0.625rem] text-white/50 leading-relaxed text-left">
               Selecione o modo que afetará o comportamento de todos os simulados e as perguntas do app:
+              quanto mais desafiador o modo, mais XP por resposta.
             </p>
 
             <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,9.5rem),1fr))] gap-3">

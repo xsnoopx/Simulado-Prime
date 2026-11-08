@@ -89,7 +89,7 @@ export default function LinguagensPage() {
       setIncorrectCount(prev => prev + 1);
       setMissedQuestions(prev => [...prev, currentQuestao]);
       playIncorrectSound();
-      recordAnswer('linguagens', false);
+      recordAnswer('linguagens', false, 'challenge');
       return;
     }
 
@@ -208,7 +208,7 @@ export default function LinguagensPage() {
         setIsFinished(true);
       }
     }
-    recordAnswer('linguagens', isCorrect);
+    recordAnswer('linguagens', isCorrect, specialMode);
   };
 
   const handleNextQuestion = () => {

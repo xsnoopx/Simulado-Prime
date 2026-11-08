@@ -1,4 +1,4 @@
-import { SimuladoStats } from './stats';
+import { SimuladoStats, xpDaCategoria } from './stats';
 import { getSupabase } from './supabase';
 
 export interface Achievement {
@@ -45,10 +45,13 @@ export function getExperienceDetails(stats: SimuladoStats | null, xpDoAdmin: num
                         (stats?.humanas?.answered || 0) +
                         (stats?.natureza?.answered || 0);
 
-  const totalIncorrect = Math.max(0, totalAnswered - totalCorrect);
-
-  // Calculate dynamic XP: 15 XP per correct, 5 XP per incorrect answer attempts
-  const xpCalculado = (totalCorrect * 15) + (totalIncorrect * 5);
+  // O XP agora é acumulado por categoria, conforme o modo de treino usado em
+  // cada resposta (Regular, Hardcore, Desafio ou Sobrevivência).
+  const xpCalculado =
+    xpDaCategoria(stats?.linguagens) +
+    xpDaCategoria(stats?.matematica) +
+    xpDaCategoria(stats?.humanas) +
+    xpDaCategoria(stats?.natureza);
   const xpManual = typeof xpDoAdmin === 'number' && Number.isFinite(xpDoAdmin) && xpDoAdmin > 0
     ? xpDoAdmin
     : 0;

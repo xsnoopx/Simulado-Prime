@@ -38,7 +38,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
-import { getStats, resetStats, SimuladoStats } from "@/lib/stats";
+import { getStats, resetStats, SimuladoStats, xpDaCategoria } from "@/lib/stats";
 import {
   getAchievements,
   getExperienceDetails,
@@ -642,10 +642,10 @@ export default function ProfilePage() {
       const promises = filtered.map(p => {
         const statsObj = p.stats || {};
         let totalXp = 0;
-        // recalculate based on correct/incorrect
+        // Recalcula usando o XP já acumulado por categoria (compatível com
+        // estatísticas antigas, que são convertidas pela regra legada).
         Object.keys(statsObj).forEach(key => {
-          const area = statsObj[key] || {};
-          totalXp += (area.correct || 0) * 15 + (area.incorrect || 0) * 5;
+          totalXp += xpDaCategoria(statsObj[key]);
         });
         if (totalXp === 0 && p.xp > 0) {
           totalXp = p.xp; // retain if there are no stats details

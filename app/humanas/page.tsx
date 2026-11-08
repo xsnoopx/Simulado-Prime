@@ -90,7 +90,7 @@ export default function HumanasPage() {
       setIncorrectCount(prev => prev + 1);
       setMissedQuestions(prev => [...prev, currentQuestao]);
       playIncorrectSound();
-      recordAnswer('humanas', false);
+      recordAnswer('humanas', false, 'challenge');
       return;
     }
 
@@ -209,7 +209,7 @@ export default function HumanasPage() {
         setIsFinished(true);
       }
     }
-    recordAnswer('humanas', isCorrect);
+    recordAnswer('humanas', isCorrect, specialMode);
   };
 
   const handleNextQuestion = () => {

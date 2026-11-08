@@ -89,7 +89,7 @@ export default function MatematicaPage() {
       setIncorrectCount(prev => prev + 1);
       setMissedQuestions(prev => [...prev, currentQuestao]);
       playIncorrectSound();
-      recordAnswer('matematica', false);
+      recordAnswer('matematica', false, 'challenge');
       return;
     }
 
@@ -210,7 +210,7 @@ export default function MatematicaPage() {
         setIsFinished(true);
       }
     }
-    recordAnswer('matematica', isCorrect);
+    recordAnswer('matematica', isCorrect, specialMode);
   };
 
   const handleNextQuestion = () => {
