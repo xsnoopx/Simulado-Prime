@@ -899,128 +899,115 @@ export default function AppPage() {
                 {[
                   {
                     question: "🚀 O que é o Simulado Prime?",
-                    answer: "O Simulado Prime é uma plataforma de estudos inovadora desenvolvida para simular provas oficiais da forma mais imersiva e prazerosa possível, combinando simulados offline tradicionais por áreas do conhecimento, desafios dinâmicos gerados com Inteligência Artificial, e jogos de raciocínio como Enigmas e Charadas para potencializar sua preparação."
+                    answer: "É uma plataforma de estudos para o Ensino Médio e vestibulares. Reúne simulados por área, questões geradas por IA, enigmas e charadas, com XP, níveis, conquistas e ranking. O conteúdo tradicional fica no próprio app; os recursos de IA e o ranking usam a internet."
                   },
                   {
-                    question: "🧠 Como funcionam os Simulados com IA?",
-                    answer: "Além da nossa base de estudos tradicionais offline, você conta com um gerador online de simulados alimentado pelo modelo de Inteligência Artificial Gemini de última geração. Clicando em 'Simulado Online', a IA formula na hora questões inéditas com gabaritos comentados baseados na área escolhida."
-                  },
-                  {
-                    question: "📡 É possível praticar sem conexão de rede (Offline)?",
-                    answer: "Sim! O Simulado Prime foi projetado para alta acessibilidade. Os simulados por área, as charadas e dezenas de enigmas (tanto os simples quanto os complexos) rodam de forma 100% offline sem consumir seus dados móveis ou internet."
-                  },
-                  {
-                    question: "⚡ Como funciona a assinatura Cosmos Prime?",
+                    question: "📚 Quais áreas posso treinar?",
                     answer: (
                       <div className="space-y-2">
-                        <p>O <strong>Cosmos Prime</strong> é um passe vitalício de R$ 14,90 pago uma única vez (sem assinaturas recorrentes ou mensalidades). Ele concede acesso instantâneo aos seguintes benefícios exclusivos:</p>
+                        <p>Cada simulado por área traz 10 questões com alternativas de A a E. As áreas são:</p>
                         <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
-                          <li><strong>Charadas Online por IA:</strong> Geração instantânea e ilimitada de novas piadas e trocadilhos por Inteligência Artificial.</li>
-                          <li><strong>Enigmas Online por IA:</strong> Desafios de raciocínio lógico-dedutivo e mistérios de última geração gerados e avaliados por algoritmos de Machine Learning.</li>
-                          <li><strong>Galeria desbloqueada:</strong> Mais de 50 novas molduras premium exclusivas e 50 avatares espaciais de alto nível para sua identidade cósmica.</li>
+                          <li><strong>Matemática:</strong> Álgebra, Geometria, Estatística e Raciocínio Lógico.</li>
+                          <li><strong>Linguagens:</strong> Interpretação de Texto, Literatura, Artes e Língua Estrangeira.</li>
+                          <li><strong>Ciências da Natureza:</strong> Biologia, Física e Química.</li>
+                          <li><strong>Ciências Humanas:</strong> História, Geografia, Filosofia e Sociologia.</li>
+                          <li><strong>Matérias Aleatórias:</strong> um mix das quatro áreas em um só simulado.</li>
                         </ul>
                       </div>
                     )
                   },
                   {
-                    question: "🔮 Como funciona o sistema de XP, Nível e Títulos?",
+                    question: "🎮 Quais são os modos de treino?",
                     answer: (
                       <div className="space-y-2">
-                        <p>Ao responder simulados, você acumula pontos de experiência (XP) cósmicos de maneira contínua:</p>
+                        <p>O modo escolhido vale para todos os simulados por área:</p>
                         <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
-                          <li><strong>Ganho de XP:</strong> o valor varia conforme o modo de treino. No Regular, você ganha 5 XP por acerto (erros não rendem XP). No Hardcore, 15 XP por acerto e 5 por erro; no Desafio, 25 e 10; na Sobrevivência, 30 e 15.</li>
-                          <li><strong>Níveis cósmicos:</strong> Cada nível exige precisamente 150 XP. Por exemplo, alcançar o Nível 5 exige 600 XP e o Nível 10 exige 1350 XP.</li>
-                          <li><strong>Títulos Evolutivos:</strong> Seu título no Perfil evolui dinamicamente conforme seu nível: <strong>Recruta do Cosmos</strong> (Nível 1-2), <strong>Explorador de Nebulosas</strong> (Nível 3-5), <strong>Viajante Sideral</strong> (Nível 6-9), <strong>Explorador de Galáxias</strong> (Nível 10-14) e finalizando como <strong>Sábio do Universo</strong> (Nível 15+).</li>
+                          <li><strong>Regular:</strong> permite usar dicas e voltar a questões anteriores.</li>
+                          <li><strong>Hardcore:</strong> sem dicas e sem voltar. Disponível para todos.</li>
+                          <li><strong>Desafio:</strong> 30 segundos por questão, sem dicas e sem voltar. Requer PRIME.</li>
+                          <li><strong>Sobrevivência:</strong> um erro encerra o simulado, sem dicas e sem voltar. Requer PRIME.</li>
+                        </ul>
+                        <p>Desafio e Sobrevivência dependem do PRIME, que ainda não está com pagamento liberado.</p>
+                      </div>
+                    )
+                  },
+                  {
+                    question: "💡 Como funcionam as dicas?",
+                    answer: "As dicas aparecem apenas no modo Regular. Elas são montadas a partir do enunciado e, quando necessário, do texto-base: identificam o tema (porcentagem, filosofia, genética, figuras de linguagem etc.) e o comando da questão (causa, consequência, objetivo, inferência...). A dica orienta o raciocínio e não entrega a alternativa correta. Nos modos Desafio, Hardcore e Sobrevivência não há dicas."
+                  },
+                  {
+                    question: "⚡ Como funcionam o XP, os níveis e os títulos?",
+                    answer: (
+                      <div className="space-y-2">
+                        <p>O XP é acumulado por resposta, conforme o modo de treino:</p>
+                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
+                          <li><strong>Regular:</strong> 5 XP por acerto; erro não rende XP.</li>
+                          <li><strong>Hardcore:</strong> 15 XP por acerto e 5 XP por erro.</li>
+                          <li><strong>Desafio:</strong> 25 XP por acerto e 10 XP por erro.</li>
+                          <li><strong>Sobrevivência:</strong> 30 XP por acerto e 15 XP por erro.</li>
+                        </ul>
+                        <p>Cada nível exige 150 XP. O título evolui com o nível:</p>
+                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
+                          <li><strong>Cadete do Cosmos:</strong> níveis 1 e 2.</li>
+                          <li><strong>Explorador de Nebulosas:</strong> níveis 3 a 5.</li>
+                          <li><strong>Viajante Sideral:</strong> níveis 6 a 9.</li>
+                          <li><strong>Explorador de Galáxias:</strong> níveis 10 a 14.</li>
+                          <li><strong>Sábio do Universo:</strong> nível 15 em diante.</li>
                         </ul>
                       </div>
                     )
                   },
                   {
-                    question: "🏆 Como funcionam as Medalhas e Conquistas?",
-                    answer: "O Cosmos analisa continuamente suas sessões finalizadas para coroar você com insígnias e troféus em tempo real! Conquistas como 'Mestre de Newton' (Matemática), 'Darwin Sideral' (Natureza) e 'Aristóteles Galáctico' (Humanas) podem ser desbloqueadas. Você pode visualizar e ostentar suas medalhas na galeria de conquistas do seu perfil."
+                    question: "🏆 Como funciona o ranking?",
+                    answer: "O Ranking Estelar compara o XP dos exploradores. Para participar e aparecer no quadro, é preciso ter uma conta ativa no Perfil. Com conexão, a lista é atualizada em tempo real; sem conta, a página mostra o aviso de acesso restrito. O ranking é apenas de classificação: não altera seu XP nem suas estatísticas."
                   },
                   {
-                    question: "🖼️ O que são as Molduras de Prestígio e como equipá-las?",
+                    question: "🥇 Como funcionam as conquistas?",
+                    answer: "O app reúne dezenas de conquistas ligadas a acertos, questões respondidas, XP, níveis e uso das áreas. Elas são calculadas a partir do seu progresso e aparecem na seção Conquistas do Perfil. Com conta, também são sincronizadas na nuvem."
+                  },
+                  {
+                    question: "🖼️ Como funcionam avatares e molduras?",
                     answer: (
                       <div className="space-y-2">
-                        <p>As molduras envolvem e destacam o seu avatar no Dashboard e no Ranking Geral. Estão divididas em séries temáticas e podem ser ativadas na página de Edição de Perfil:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
-                          <li><strong>Série Cyberpunk:</strong> Molduras futuristas e dinâmicas com temática cibernética (IDs 11 a 20).</li>
-                          <li><strong>Série Místico:</strong> Molduras arcanas e mágicas com gradientes brilhantes (IDs 21 a 30).</li>
-                          <li><strong>Série Imperial:</strong> Molduras nobres com detalhes metálicos dourados e prateados de soberano (IDs 31 a 40).</li>
-                        </ul>
+                        <p>Há uma galeria com mais de 100 avatares e 50 molduras liberados por XP. Você escolhe os itens no Perfil, nas seções Avatares e Molduras Interativas.</p>
+                        <p>Também existem avatares e molduras premium. Eles só serão liberados com o PRIME ativo — e o pagamento do PRIME ainda não está disponível. O avatar e a moldura escolhidos aparecem no Perfil e no Ranking.</p>
                       </div>
                     )
                   },
                   {
-                    question: "🎵 Como funciona o controle de música de fundo e som ambiente?",
-                    answer: "Projetamos uma trilha sonora relaxante com 9 faixas espaciais sob medida para incentivar seu estado de hiperfoco. Você pode controlar a música no pequeno painel fixado no topo esquerdo da tela: ligue/desligue tocando no ícone do alto-falante ou passe o mouse por cima do controle para abrir o slider de ajuste fino de volume."
+                    question: "📡 O app funciona sem internet?",
+                    answer: "Os simulados por área, o acervo de charadas e o acervo de enigmas usam dados que ficam no próprio app e não dependem de IA nem de consulta a banco de dados online. Já os simulados com IA, as charadas e enigmas online, o ranking e a sincronização da conta precisam de conexão. Para usar os recursos online, é necessário estar logado."
                   },
                   {
-                    question: "🕵️ Quais tipos de Enigmas posso desvendar?",
-                    answer: "Você pode exercitar seu cérebro de duas maneiras: a seção Offline oferece enigmas clássicos subdivididos entre 'Simples' e 'Complexos' de mistério. A seção Online (Exclusivo Prime) gera misteriosos cenários interativos usando IA, nos quais você digita sua teoria e a IA julga o quão perto você está de solucionar o crime cósmico."
+                    question: "🧠 Como funcionam os simulados com IA?",
+                    answer: "Em Simulado Online (IA), a IA gera uma questão por vez. A cada nova questão, o app sorteia área, tema e dificuldade e monta um enunciado inédito com texto-base, cinco alternativas, gabarito e explicação. O recurso exige conta e conexão, mas não exige PRIME."
                   },
                   {
-                    question: "☁️ Como funciona a sincronização e o salvamento em nuvem?",
-                    answer: "Através da aba 'Perfil', você pode se cadastrar ou fazer login gratuitamente. Suas estatísticas de acertos, tempo médio de resolução, preferências de temporizador e todas as conquistas desbloqueadas são automaticamente sincronizadas e protegidas na nuvem via Supabase."
-                  },
-                  {
-                    question: "🧮 Quais tópicos inovadores são abordados em Matemática?",
+                    question: "🕵️ O que são Charadas e Enigmas?",
                     answer: (
                       <div className="space-y-2">
-                        <p>As novas questões cobram rigorosamente tópicos recorrentes nos principais exames e vestibulares com roupagem altamente inovadora e tecnológica:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
-                          <li><strong>Otimização de Custos e Aprendizado:</strong> Cálculo de taxas de aprendizado de redes neurais com funções quadráticas para minimizar perdas em satélites em órbita de mineração cósmica.</li>
-                          <li><strong>Crescimento Exponencial Estável:</strong> Cálculo de tempos de reação e eficiência em reatores de fusão nuclear estável (Tokamaks).</li>
-                          <li><strong>Análise Combinatória Avançada:</strong> Arranjos geométricos de criptografia pós-quântica compostos por fótons emaranhados e spins quânticos binários.</li>
-                          <li><strong>Sistemas Lineares e Matrizes:</strong> Gestão compartilhada de dados diários de sondas meteorológicas monitorando mudanças climáticas severas.</li>
-                          <li><strong>Progressão Geométrica Cumulativa:</strong> Planejamento progressivo de plantio de árvores clonadas para neutralização urbana de emissões.</li>
-                        </ul>
+                        <p><strong>Charadas:</strong> acervo local com busca, filtros, dicas e progresso. Há também a Charada do dia.</p>
+                        <p><strong>Enigmas:</strong> acervo local com busca, filtros, dicas e progresso. Há também o Enigma do dia.</p>
+                        <p>As versões online com IA são exclusivas do PRIME. Como o pagamento ainda não está liberado, elas permanecem bloqueadas.</p>
                       </div>
                     )
                   },
                   {
-                    question: "🔬 Quais temas de vanguarda são cobrados em Ciências da Natureza?",
+                    question: "☁️ Preciso criar conta? O que muda?",
                     answer: (
                       <div className="space-y-2">
-                        <p>As novas questões de Ciências da Natureza cobrem temas inovadores e interdisciplinares:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
-                          <li><strong>Biotecnologia CRISPR:</strong> Pareamento de pontes de hidrogênio e nucleotídeos em fitas moldes de DNA promovido por Cas14-Max para tratamento oncológico celular.</li>
-                          <li><strong>Física Quântica de Supercondutores:</strong> Efeito Meissner, condutividade e formação de pares de Cooper em hidretos dopados sob regime de baixas resistências.</li>
-                          <li><strong>Química Verde:</strong> Reações de clivagem de ésteres por hidrólise enzimática para recuperação e biorremediação de microplásticos degradados.</li>
-                          <li><strong>Fisiologia de Nanomedicina:</strong> Imunologia oncológica, atração de células dendríticas e ação citotóxica direcionada de linfócitos T.</li>
-                          <li><strong>Ecologia Climática:</strong> Captura acelerada de carbono atmosférico através de folhas artificiais e algas com ciclos enzimáticos de RuBisCO.</li>
-                        </ul>
+                        <p>Você pode treinar como convidado: os simulados e o progresso local funcionam, e o XP fica salvo no navegador.</p>
+                        <p>A conta gratuita libera o Ranking Estelar, o cronômetro personalizado, a sincronização na nuvem e os recursos de IA.</p>
+                        <p>O PRIME é separado: só será liberado após a confirmação de um pagamento real, e o checkout ainda não está disponível.</p>
                       </div>
                     )
                   },
                   {
-                    question: "🗺️ Como as Ciências Humanas abordam o impacto das inovações?",
+                    question: "💎 Como funciona o PRIME?",
                     answer: (
                       <div className="space-y-2">
-                        <p>As questões de Ciências Humanas analisam de forma crítica as profundas transformações contemporâneas:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
-                          <li><strong>Geopolítica e Direitos Humanos:</strong> Cidadania climática em nuvem e soberania virtual para refugiados de nações insulares ameaçadas por elevações do nível dos oceanos.</li>
-                          <li><strong>Sociologia do Trabalho:</strong> Análise do fenômeno da "Plataformização Mutualista" através de cooperativas de entregadores auto-reguladas por blockchain.</li>
-                          <li><strong>Ética e Filosofia Algorítmica:</strong> Análise do imperativo moral da justificação diante do erro da opacidade de algoritmos "Caixa-Preta" em seleções de emprego e triagens judiciais.</li>
-                          <li><strong>Geo-Governança de Mobilidade:</strong> Sustentabilidade socioambiental, micro-mobilidade ativa conectada e direito das populações ciclistas ao ordenamento territorial.</li>
-                          <li><strong>Antropologia Digital:</strong> Análise da criação identitária no Metaverso com avatares e superação de vieses coloniais clássicos de raça e gênero.</li>
-                        </ul>
-                      </div>
-                    )
-                  },
-                  {
-                    question: "✍️ Como Linguagens e Códigos explora os novos discursos?",
-                    answer: (
-                      <div className="space-y-2">
-                        <p>As novas questões de Linguagens e Códigos abordam a evolução das mídias, semiótica e comunicação digital:</p>
-                        <ul className="list-disc pl-4 space-y-1 text-[0.6563rem]">
-                          <li><strong>Letramento Midiático Crítico:</strong> Habilidades de checagem contra a desconstrução da evidência factual direta provocada por sínteses de vídeos e fotos através de Deepfakes.</li>
-                          <li><strong>Poéticas Imersivas e Digitais:</strong> Integração entre literatura de hipertexto e feedback corporal fisiológico (sensores cardíacos de leitores coautores).</li>
-                          <li><strong>Pragmática de Redes de Computadores:</strong> Semiótica e expressividade humana através das variações e cores dos chamados "Neo-Emojis Neurais".</li>
-                          <li><strong>Variação Linguística e Neologismo:</strong> Dicionarização e produtividade lexical urbana por gírias e expressões do campo do software (ex: "alopar a IA", "dar um prompt-falso").</li>
-                          <li><strong>Semiótica e Curadoria Artística:</strong> Desafios estéticos, jurídicos e conceituais do gênio criador único em obras de arte geradas em coautoria com algoritmos de IA.</li>
-                        </ul>
+                        <p>O PRIME (Cosmos Prime) é o plano de recursos especiais. Ele inclui os modos <strong>Desafio</strong> e <strong>Sobrevivência</strong>, as <strong>charadas e enigmas online por IA</strong> e os <strong>avatares e molduras premium</strong>.</p>
+                        <p>O pagamento ainda não está habilitado: o botão mostra “Assinatura em breve” e nenhuma ativação de demonstração é liberada. O acesso só será concedido após a confirmação de um pagamento real.</p>
                       </div>
                     )
                   }
