@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { cn, playTickSound, playCorrectSound, playIncorrectSound } from '@/lib/utils';
+import { gerarDica } from '@/lib/dicas';
 import { CIENCIAS_HUMANAS_E_SUAS_TECNOLOGIAS_DATA as HUMANAS_DATA } from '@/lib/questoes_ciencias_humanas_e_suas_tecnologias';
 import { BottomNav } from '@/components/BottomNav';
 import { useQuestions, Questao } from '@/hooks/useQuestions';
@@ -38,26 +39,10 @@ export default function HumanasPage() {
   const activeQuestions = questions ? questions.slice(0, 10) : [];
   const currentQuestao = activeQuestions[currentIndex];
 
-  const randomizedHintWords = useMemo(() => {
-    if (!currentQuestao) return '';
-    const answerText = currentQuestao.alternativas[currentQuestao.gabarito as keyof typeof currentQuestao.alternativas] || '';
-    const words = answerText
-      .split(/\s+/)
-      .map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"']/g, "").trim())
-      .filter(w => w.length > 0);
-    
-    if (words.length <= 3) {
-      return words.join(', ');
-    }
-    
-    const chosenIndices = new Set<number>();
-    while (chosenIndices.size < 3 && chosenIndices.size < words.length) {
-      const randIndex = Math.floor(Math.random() * words.length);
-      chosenIndices.add(randIndex);
-    }
-    
-    return Array.from(chosenIndices).map(idx => words[idx]).join(', ');
-  }, [currentQuestao]);
+  const dica = useMemo(
+    () => gerarDica('humanas', currentQuestao),
+    [currentQuestao]
+  );
 
   // Special Training Modes States
   const [specialMode, setSpecialMode] = useState<'regular' | 'challenge' | 'hardcore' | 'survival'>('regular');
@@ -540,7 +525,7 @@ export default function HumanasPage() {
                           >
                             <span className="text-[0.5625rem] font-black uppercase text-amber-400 tracking-wider block mb-1">Dica de Estudo</span>
                             <p className="text-xs text-white/80 leading-relaxed font-sans">
-                              Três palavras aleatórias presentes na resposta correta são: <span className="text-amber-300 font-medium italic">"{randomizedHintWords}"</span>
+                              {dica}
                             </p>
                           </motion.div>
                         )}
