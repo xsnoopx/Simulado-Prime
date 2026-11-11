@@ -20,10 +20,14 @@ import {
   ArrowLeft,
   Lock,
   Crown,
+  X,
+  Target,
+  CheckCircle2,
+  XCircle,
 } from "lucide-react";
 import Link from "next/link";
 import { getStats, SimuladoStats } from "@/lib/stats";
-import { getExperienceDetails } from "@/lib/achievements";
+import { getExperienceDetails, getLevelFromXp } from "@/lib/achievements";
 import { cn } from "@/lib/utils";
 import { AvatarFrame } from "@/components/AvatarFrame";
 import { getSupabase } from "@/lib/supabase";
@@ -40,6 +44,7 @@ const RIVAL_PLAYERS_DATA = [
     emoji: "🌟",
     bg: "bg-emerald-500/20 text-emerald-300",
     avatarFrameId: "frame_03",
+    isPremium: true,
   },
   {
     id: "rival_2",
@@ -90,6 +95,7 @@ const RIVAL_PLAYERS_DATA = [
     emoji: "🧠",
     bg: "bg-purple-500/20 text-purple-300",
     avatarFrameId: "frame_11",
+    isPremium: true,
   },
   {
     id: "rival_7",
@@ -401,6 +407,74 @@ const getAvatarUrl = (idOrUrl: string) => {
   return `https://images.unsplash.com/${idOrUrl}?auto=format&fit=crop&w=150&h=150&q=80`;
 };
 
+// Áreas usadas no resumo público do jogador (as mesmas do ranking).
+const AREAS_RESUMO = [
+  { chave: "linguagens", nome: "Linguagens", Icone: BookOpen },
+  { chave: "matematica", nome: "Matemática", Icone: Calculator },
+  { chave: "humanas", nome: "Humanas", Icone: Globe },
+  { chave: "natureza", nome: "Natureza", Icone: FlaskConical },
+] as const;
+
+type AreaResumo = {
+  chave: (typeof AREAS_RESUMO)[number]["chave"];
+  nome: string;
+  Icone: (typeof AREAS_RESUMO)[number]["Icone"];
+  correct: number;
+  incorrect: number;
+  answered: number;
+};
+
+/**
+ * Monta o resumo exibido ao clicar na foto do jogador.
+ *
+ * Os números vêm da coluna `stats` da tabela `ranking`, que só é preenchida
+ * pelo painel administrativo. O status PRIME vem de `is_premium`. Quando o
+ * jogador ainda não tem números públicos, `temDados` fica falso e a interface
+ * mostra um aviso em vez de zeros enganosos.
+ */
+function montarResumo(stats: any) {
+  const areas: AreaResumo[] = AREAS_RESUMO.map(({ chave, nome, Icone }) => {
+    const item = stats?.[chave] || {};
+    const correct = Math.max(0, Number(item.correct) || 0);
+    const answeredInformado = Number(item.answered);
+    const incorrectInformado = Number(item.incorrect);
+
+    // Registros antigos do admin gravam apenas "correct" e "answered".
+    const answered =
+      Number.isFinite(answeredInformado) && answeredInformado > 0
+        ? Math.max(correct, answeredInformado)
+        : correct +
+          (Number.isFinite(incorrectInformado)
+            ? Math.max(0, incorrectInformado)
+            : 0);
+
+    const incorrect = Number.isFinite(incorrectInformado)
+      ? Math.max(0, incorrectInformado)
+      : Math.max(0, answered - correct);
+
+    return { chave, nome, Icone, correct, incorrect, answered };
+  });
+
+  const answered = areas.reduce((soma, area) => soma + area.answered, 0);
+  const correct = areas.reduce((soma, area) => soma + area.correct, 0);
+  const incorrect = areas.reduce((soma, area) => soma + area.incorrect, 0);
+  const accuracy = answered > 0 ? Math.round((correct / answered) * 100) : 0;
+  const areasComDados = [...areas]
+    .filter((area) => area.answered > 0)
+    .sort((a, b) => b.answered - a.answered);
+
+  return {
+    areas,
+    areasComDados,
+    answered,
+    correct,
+    incorrect,
+    accuracy,
+    favorita: areasComDados[0] || null,
+    temDados: answered > 0,
+  };
+}
+
 export default function RankingPage() {
   const [stats, setStats] = useState<SimuladoStats | null>(null);
   const [activeTab, setActiveTab] = useState<
@@ -416,6 +490,9 @@ export default function RankingPage() {
     avatarFrameId?: string;
   } | null>(null);
   const [loading, setLoading] = useState(true);
+
+  // Jogador aberto no balão de resumo (clique na foto do ranking).
+  const [jogadorResumo, setJogadorResumo] = useState<any | null>(null);
 
   // XP definido manualmente pelo painel administrativo.
   const [xpDoAdmin, setXpDoAdmin] = useState<number | null>(null);
@@ -433,6 +510,16 @@ export default function RankingPage() {
       window.removeEventListener("storage", lerXpDoAdmin);
     };
   }, []);
+
+  // Fecha o balão de resumo com Esc.
+  useEffect(() => {
+    if (!jogadorResumo) return;
+    const fecharComEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setJogadorResumo(null);
+    };
+    window.addEventListener("keydown", fecharComEsc);
+    return () => window.removeEventListener("keydown", fecharComEsc);
+  }, [jogadorResumo]);
 
   // Supabase Global Real-time Ranking State variables
   const [globalPlayers, setGlobalPlayers] = useState<any[]>([]);
@@ -591,6 +678,11 @@ export default function RankingPage() {
   }, [currentUser?.id]);
 
   const xpInfo = getExperienceDetails(stats, xpDoAdmin);
+  const resumoAberto = jogadorResumo ? montarResumo(jogadorResumo.stats) : null;
+  const resumoNivelJogador = jogadorResumo
+    ? getLevelFromXp(Number(jogadorResumo.xp) || 0)
+    : null;
+  const IconeAreaFavorita = resumoAberto?.favorita?.Icone || null;
 
   const getAreaScore = (playerStats: any, area: string) => {
     if (!playerStats) return 0;
@@ -670,6 +762,7 @@ export default function RankingPage() {
       bg: userBg,
       avatarUnsplashId: userImgSrc,
       avatarFrameId: currentUser?.avatarFrameId || "frame_01",
+      isPremium: Boolean((currentUser as any)?.isPremium),
     };
 
     // 2. Generate stats for rivals in subcategories based on their baseXp
@@ -715,6 +808,7 @@ export default function RankingPage() {
         bg: rival.bg,
         avatarUnsplashId: rival.avatarUnsplashId,
         avatarFrameId: rival.avatarFrameId,
+        isPremium: Boolean((rival as any).isPremium),
       };
     });
 
@@ -776,24 +870,29 @@ export default function RankingPage() {
         playerBg = dbEntry.bg;
       }
 
-      const playerXpInfo = getExperienceDetails(player.stats || {});
+      // O placar público pode não ter as estatísticas do próprio jogador:
+      // só o admin preenche a coluna `stats`. Para a própria conta usamos os
+      // números locais, os mesmos que alimentam o perfil e as conquistas.
+      const playerStats = isUser && stats ? stats : player.stats || {};
+      const playerXpInfo = getExperienceDetails(playerStats);
+      const playerXp = isUser ? Math.max(Number(player.xp) || 0, xpInfo.xp) : player.xp;
 
       return {
         id: player.id,
         isCurrentUser: isUser,
         name: playerName,
         title: playerXpInfo.baseTitle,
-        xp: player.xp,
-        stats: player.stats || {
-          linguagens: { correct: 0, incorrect: 0, answered: 0 },
-          matematica: { correct: 0, incorrect: 0, answered: 0 },
-          humanas: { correct: 0, incorrect: 0, answered: 0 },
-          natureza: { correct: 0, incorrect: 0, answered: 0 },
-        },
+        xp: playerXp,
+        stats: playerStats,
         emoji: playerEmoji,
         bg: playerBg,
         avatarUnsplashId: playerImgSrc,
         avatarFrameId: avatarFrameId || "frame_01",
+        isPremium: Boolean(
+          (isUser ? (currentUser as any)?.isPremium : false) ||
+            player.is_premium ||
+            player.isPremium,
+        ),
       };
     });
 
@@ -1174,21 +1273,29 @@ export default function RankingPage() {
                     {/* Ring glow */}
                     <div className="absolute -inset-1 rounded-full bg-slate-400/20 blur-md" />
                     {/* Circle image container */}
-                    <AvatarFrame
-                      size="custom"
-                      frameId={podium[1].avatarFrameId}
-                      isHoverable={false}
-                      className="w-14 h-14 p-[2px]"
+                    <button
+                      type="button"
+                      onClick={() => setJogadorResumo(podium[1])}
+                      aria-label={`Ver resumo de ${podium[1].name}`}
+                      title="Ver resumo do jogador"
+                      className="relative block rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-light transition-transform hover:scale-105"
                     >
-                      <div className="relative w-full h-full rounded-full overflow-hidden">
-                        <img
-                          src={getAvatarUrl(podium[1].avatarUnsplashId)}
-                          alt={podium[1].name}
-                          className="w-full h-full object-cover"
-                          referrerPolicy="no-referrer"
-                        />
-                      </div>
-                    </AvatarFrame>
+                      <AvatarFrame
+                        size="custom"
+                        frameId={podium[1].avatarFrameId}
+                        isHoverable={false}
+                        className="w-14 h-14 p-[2px]"
+                      >
+                        <div className="relative w-full h-full rounded-full overflow-hidden">
+                          <img
+                            src={getAvatarUrl(podium[1].avatarUnsplashId)}
+                            alt={podium[1].name}
+                            className="w-full h-full object-cover"
+                            referrerPolicy="no-referrer"
+                          />
+                        </div>
+                      </AvatarFrame>
+                    </button>
                     {/* Position badge */}
                     <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-slate-400 text-slate-950 font-black text-[0.5625rem] flex items-center justify-center border-2 border-[#0d0c18] shadow">
                       2
@@ -1222,21 +1329,29 @@ export default function RankingPage() {
                     {/* Golden glow */}
                     <div className="absolute -inset-1.5 rounded-full bg-yellow-400/30 blur-lg" />
                     {/* Circle image container */}
-                    <AvatarFrame
-                      size="custom"
-                      frameId={podium[0].avatarFrameId}
-                      isHoverable={false}
-                      className="w-18 h-18 p-[3px]"
+                    <button
+                      type="button"
+                      onClick={() => setJogadorResumo(podium[0])}
+                      aria-label={`Ver resumo de ${podium[0].name}`}
+                      title="Ver resumo do jogador"
+                      className="relative block rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-light transition-transform hover:scale-105"
                     >
-                      <div className="relative w-full h-full rounded-full overflow-hidden">
-                        <img
-                          src={getAvatarUrl(podium[0].avatarUnsplashId)}
-                          alt={podium[0].name}
-                          className="w-full h-full object-cover"
-                          referrerPolicy="no-referrer"
-                        />
-                      </div>
-                    </AvatarFrame>
+                      <AvatarFrame
+                        size="custom"
+                        frameId={podium[0].avatarFrameId}
+                        isHoverable={false}
+                        className="w-18 h-18 p-[3px]"
+                      >
+                        <div className="relative w-full h-full rounded-full overflow-hidden">
+                          <img
+                            src={getAvatarUrl(podium[0].avatarUnsplashId)}
+                            alt={podium[0].name}
+                            className="w-full h-full object-cover"
+                            referrerPolicy="no-referrer"
+                          />
+                        </div>
+                      </AvatarFrame>
+                    </button>
                     {/* Position badge */}
                     <div className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-yellow-950 font-black text-[0.625rem] flex items-center justify-center border-2 border-[#0d0c18] shadow-lg">
                       1
@@ -1268,21 +1383,29 @@ export default function RankingPage() {
                     {/* Ring glow */}
                     <div className="absolute -inset-1 rounded-full bg-amber-600/15 blur-md" />
                     {/* Circle image container */}
-                    <AvatarFrame
-                      size="custom"
-                      frameId={podium[2].avatarFrameId}
-                      isHoverable={false}
-                      className="w-14 h-14 p-[2px]"
+                    <button
+                      type="button"
+                      onClick={() => setJogadorResumo(podium[2])}
+                      aria-label={`Ver resumo de ${podium[2].name}`}
+                      title="Ver resumo do jogador"
+                      className="relative block rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-light transition-transform hover:scale-105"
                     >
-                      <div className="relative w-full h-full rounded-full overflow-hidden">
-                        <img
-                          src={getAvatarUrl(podium[2].avatarUnsplashId)}
-                          alt={podium[2].name}
-                          className="w-full h-full object-cover"
-                          referrerPolicy="no-referrer"
-                        />
-                      </div>
-                    </AvatarFrame>
+                      <AvatarFrame
+                        size="custom"
+                        frameId={podium[2].avatarFrameId}
+                        isHoverable={false}
+                        className="w-14 h-14 p-[2px]"
+                      >
+                        <div className="relative w-full h-full rounded-full overflow-hidden">
+                          <img
+                            src={getAvatarUrl(podium[2].avatarUnsplashId)}
+                            alt={podium[2].name}
+                            className="w-full h-full object-cover"
+                            referrerPolicy="no-referrer"
+                          />
+                        </div>
+                      </AvatarFrame>
+                    </button>
                     {/* Position badge */}
                     <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-amber-600 text-amber-50 font-black text-[0.5625rem] flex items-center justify-center border-2 border-[#0d0c18] shadow">
                       3
@@ -1353,34 +1476,42 @@ export default function RankingPage() {
 
                     {/* Avatar circle with Interactive Avatar Frame */}
                     <div className="relative mt-1 mb-1 shrink-0">
-                      <AvatarFrame
-                        size="sm"
-                        frameId={player.avatarFrameId}
-                        isHoverable={false}
+                      <button
+                        type="button"
+                        onClick={() => setJogadorResumo(player)}
+                        aria-label={`Ver resumo de ${player.name}`}
+                        title="Ver resumo do jogador"
+                        className="block rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-light transition-transform hover:scale-105"
                       >
-                        {player.avatarUnsplashId.startsWith("http://") ||
-                        player.avatarUnsplashId.startsWith("https://") ||
-                        player.avatarUnsplashId.startsWith("data:image") ||
-                        player.avatarUnsplashId.startsWith("/") ? (
-                          <div className="relative w-full h-full rounded-full overflow-hidden">
-                            <img
-                              src={player.avatarUnsplashId}
-                              alt={player.name}
-                              className="w-full h-full object-cover"
-                              referrerPolicy="no-referrer"
-                            />
-                          </div>
-                        ) : (
-                          <div className="relative w-full h-full rounded-full overflow-hidden bg-surface-container-high">
-                            <img
-                              src={getAvatarUrl(player.avatarUnsplashId)}
-                              alt={player.name}
-                              className="w-full h-full object-cover"
-                              referrerPolicy="no-referrer"
-                            />
-                          </div>
-                        )}
-                      </AvatarFrame>
+                        <AvatarFrame
+                          size="sm"
+                          frameId={player.avatarFrameId}
+                          isHoverable={false}
+                        >
+                          {player.avatarUnsplashId.startsWith("http://") ||
+                          player.avatarUnsplashId.startsWith("https://") ||
+                          player.avatarUnsplashId.startsWith("data:image") ||
+                          player.avatarUnsplashId.startsWith("/") ? (
+                            <div className="relative w-full h-full rounded-full overflow-hidden">
+                              <img
+                                src={player.avatarUnsplashId}
+                                alt={player.name}
+                                className="w-full h-full object-cover"
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                          ) : (
+                            <div className="relative w-full h-full rounded-full overflow-hidden bg-surface-container-high">
+                              <img
+                                src={getAvatarUrl(player.avatarUnsplashId)}
+                                alt={player.name}
+                                className="w-full h-full object-cover"
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                          )}
+                        </AvatarFrame>
+                      </button>
                       {/* Emoji element */}
                       <span className="absolute -bottom-0.5 -right-0.5 text-[0.5625rem] bg-[#0d0c18] border border-white/10 w-4 h-4 rounded-full flex items-center justify-center select-none z-10">
                         {player.emoji}
@@ -1459,6 +1590,302 @@ export default function RankingPage() {
           </p>
         </section>
       </main>
+
+      {/* Balão de resumo do jogador — abre ao clicar na foto */}
+      <AnimatePresence>
+        {jogadorResumo && resumoAberto && (
+          <motion.div
+            key="resumo-jogador"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6"
+          >
+            <div
+              onClick={() => setJogadorResumo(null)}
+              className="absolute inset-0 bg-[#04030a]/85 backdrop-blur-md"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, y: 24 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 16 }}
+              transition={{ type: "spring", damping: 26, stiffness: 320 }}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="resumo-jogador-titulo"
+              className="relative z-10 w-full max-w-[360px] max-h-[88dvh] overflow-y-auto rounded-[28px] border border-white/10 bg-gradient-to-b from-[#111324] to-[#0a0b14] shadow-[0_24px_60px_rgba(0,0,0,0.6),0_0_40px_rgba(99,102,241,0.08)]"
+            >
+              <div className="h-1 w-full bg-gradient-to-r from-[#3e63dd] via-primary to-secondary" />
+
+              <div className="p-5">
+                <div className="flex items-start gap-3">
+                  <AvatarFrame
+                    size="custom"
+                    frameId={jogadorResumo.avatarFrameId}
+                    isHoverable={false}
+                    className="w-14 h-14 p-[2px]"
+                  >
+                    <div className="relative w-full h-full rounded-full overflow-hidden">
+                      <img
+                        src={getAvatarUrl(
+                          jogadorResumo.avatarUnsplashId ||
+                            "photo-1614728423169-3f65fd722b7e",
+                        )}
+                        alt={jogadorResumo.name}
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  </AvatarFrame>
+
+                  <div className="min-w-0 flex-1">
+                    <h2
+                      id="resumo-jogador-titulo"
+                      className="flex flex-wrap items-center gap-1.5 text-[0.9375rem] font-black leading-tight text-white"
+                    >
+                      <span className="max-w-full truncate">
+                        {jogadorResumo.name}
+                      </span>
+                      {jogadorResumo.isPremium && (
+                        <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-amber-400/45 bg-amber-500/15 px-2 py-0.5 text-[0.5rem] font-black uppercase tracking-widest text-amber-300 shadow-[0_0_12px_rgba(245,158,11,0.18)]">
+                          <Crown className="h-2.5 w-2.5 fill-amber-300" />
+                          PRIME
+                        </span>
+                      )}
+                    </h2>
+                    <p className="mt-1 truncate text-[0.625rem] text-on-surface-variant">
+                      {resumoNivelJogador?.baseTitle} · Nível{" "}
+                      {resumoNivelJogador?.level}
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => setJogadorResumo(null)}
+                    aria-label="Fechar resumo do jogador"
+                    className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/5 text-white/50 transition-colors hover:bg-white/10 hover:text-white cursor-pointer"
+                  >
+                    <X className="h-3.5 w-3.5" />
+                  </button>
+                </div>
+
+                <div className="my-4 h-px bg-white/10" />
+
+                {resumoAberto.temDados ? (
+                  <>
+                    <div className="flex items-center gap-3.5">
+                      <div className="relative h-[92px] w-[92px] shrink-0">
+                        <svg
+                          className="h-full w-full -rotate-90"
+                          viewBox="0 0 92 92"
+                          aria-hidden="true"
+                        >
+                          <circle
+                            cx="46"
+                            cy="46"
+                            r="39"
+                            className="fill-none stroke-white/[0.08]"
+                            strokeWidth="7"
+                          />
+                          <motion.circle
+                            cx="46"
+                            cy="46"
+                            r="39"
+                            className="fill-none"
+                            stroke="url(#resumoJogadorGradiente)"
+                            strokeWidth="7"
+                            strokeLinecap="round"
+                            strokeDasharray={245}
+                            initial={{ strokeDashoffset: 245 }}
+                            animate={{
+                              strokeDashoffset:
+                                245 - (245 * resumoAberto.accuracy) / 100,
+                            }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                          />
+                          <defs>
+                            <linearGradient
+                              id="resumoJogadorGradiente"
+                              x1="0"
+                              y1="0"
+                              x2="1"
+                              y2="1"
+                            >
+                              <stop offset="0%" stopColor="#3e63dd" />
+                              <stop offset="100%" stopColor="#dfb7ff" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                        <div className="absolute inset-0 flex flex-col items-center justify-center">
+                          <span className="font-display text-[1.375rem] font-black leading-none text-white">
+                            {resumoAberto.accuracy}%
+                          </span>
+                          <span className="mt-1 whitespace-nowrap text-[0.375rem] font-black uppercase leading-tight tracking-tight text-on-surface-variant">
+                            Aproveitamento
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="min-w-0">
+                        <p className="font-display text-sm font-black text-white">
+                          {resumoAberto.accuracy >= 80
+                            ? "Desempenho Estelar!"
+                            : resumoAberto.accuracy >= 60
+                              ? "No Caminho Certo!"
+                              : "Continue Praticando!"}
+                        </p>
+                        <p className="mt-1 text-[0.6875rem] leading-relaxed text-on-surface-variant">
+                          Resolveu{" "}
+                          <span className="font-bold text-white">
+                            {resumoAberto.answered}
+                          </span>{" "}
+                          questões, com{" "}
+                          <span className="font-bold text-emerald-400">
+                            {resumoAberto.correct}
+                          </span>{" "}
+                          acertos e{" "}
+                          <span className="font-bold text-red-400">
+                            {resumoAberto.incorrect}
+                          </span>{" "}
+                          erros.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 grid grid-cols-3 gap-2 text-center">
+                      <div className="rounded-xl border border-white/[0.06] bg-white/[0.035] px-2 py-2.5">
+                        <span className="flex items-center justify-center gap-1 text-[0.4375rem] font-black uppercase tracking-widest text-on-surface-variant">
+                          <Target className="h-2.5 w-2.5 text-primary-light" />
+                          Respondidas
+                        </span>
+                        <p className="mt-1 font-display text-base font-black text-white">
+                          {resumoAberto.answered}
+                        </p>
+                      </div>
+                      <div className="rounded-xl border border-white/[0.06] bg-white/[0.035] px-2 py-2.5">
+                        <span className="flex items-center justify-center gap-1 text-[0.4375rem] font-black uppercase tracking-widest text-on-surface-variant">
+                          <CheckCircle2 className="h-2.5 w-2.5 text-emerald-400" />
+                          Acertos
+                        </span>
+                        <p className="mt-1 font-display text-base font-black text-emerald-400">
+                          {resumoAberto.correct}
+                        </p>
+                      </div>
+                      <div className="rounded-xl border border-white/[0.06] bg-white/[0.035] px-2 py-2.5">
+                        <span className="flex items-center justify-center gap-1 text-[0.4375rem] font-black uppercase tracking-widest text-on-surface-variant">
+                          <XCircle className="h-2.5 w-2.5 text-red-400" />
+                          Erros
+                        </span>
+                        <p className="mt-1 font-display text-base font-black text-red-400">
+                          {resumoAberto.incorrect}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 space-y-3">
+                      <p className="text-[0.5rem] font-black uppercase tracking-widest text-on-surface-variant">
+                        Desempenho por área
+                      </p>
+                      {resumoAberto.areasComDados.map((area) => {
+                        const IconeArea = area.Icone;
+                        const proporcao =
+                          (area.answered /
+                            (resumoAberto.favorita?.answered || 1)) *
+                          100;
+                        const ehFavorita =
+                          resumoAberto.favorita?.chave === area.chave;
+
+                        return (
+                          <div key={area.chave} className="space-y-1">
+                            <div className="flex items-center justify-between gap-2">
+                              <span
+                                className={cn(
+                                  "flex items-center gap-1 text-[0.5625rem] font-black uppercase tracking-wider",
+                                  ehFavorita
+                                    ? "text-primary-light"
+                                    : "text-on-surface-variant",
+                                )}
+                              >
+                                <IconeArea className="h-3 w-3" />
+                                {area.nome}
+                              </span>
+                              <span className="text-[0.5625rem] font-bold text-white/50">
+                                {area.answered} questões
+                              </span>
+                            </div>
+                            <div className="h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
+                              <motion.div
+                                initial={{ width: 0 }}
+                                animate={{
+                                  width: `${Math.max(4, proporcao)}%`,
+                                }}
+                                transition={{
+                                  duration: 0.8,
+                                  ease: "easeOut",
+                                  delay: 0.15,
+                                }}
+                                className={cn(
+                                  "h-full rounded-full",
+                                  ehFavorita
+                                    ? "bg-gradient-to-r from-emerald-400 to-teal-300"
+                                    : "bg-gradient-to-r from-[#3e63dd] to-secondary",
+                                )}
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {resumoAberto.favorita && (
+                      <div className="mt-4 flex items-center gap-2.5 rounded-2xl border border-indigo-400/20 bg-gradient-to-r from-indigo-500/15 to-purple-500/[0.08] p-3">
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-400/15 text-primary-light">
+                          {IconeAreaFavorita && (
+                            <IconeAreaFavorita className="h-4 w-4" />
+                          )}
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-[0.5rem] font-black uppercase tracking-widest text-on-surface-variant">
+                            Simulador que mais participou
+                          </p>
+                          <p className="mt-0.5 truncate text-xs font-black text-white">
+                            Simulado de {resumoAberto.favorita.nome}
+                          </p>
+                        </div>
+                        <span className="ml-auto shrink-0 text-[0.5625rem] font-black text-primary-light">
+                          {resumoAberto.favorita.answered} questões
+                        </span>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <div className="rounded-2xl border border-dashed border-white/10 bg-white/[0.02] p-4 text-center">
+                    <p className="text-xs font-black text-white/85">
+                      Resumo ainda não disponível
+                    </p>
+                    <p className="mt-1 text-[0.6875rem] leading-relaxed text-on-surface-variant">
+                      Este explorador ainda não tem acertos e erros públicos no
+                      ranking.
+                    </p>
+                    <p className="mt-2 text-[0.625rem] font-bold text-primary-light">
+                      {jogadorResumo.xp} XP acumulados
+                    </p>
+                  </div>
+                )}
+
+                <button
+                  type="button"
+                  onClick={() => setJogadorResumo(null)}
+                  className="mt-5 w-full rounded-xl bg-gradient-to-r from-primary to-secondary py-3 font-display text-[0.6875rem] font-black uppercase tracking-widest text-[#0b0b14] transition-all hover:brightness-105 active:scale-[0.99] cursor-pointer"
+                >
+                  Fechar
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <BottomNav />
     </div>
