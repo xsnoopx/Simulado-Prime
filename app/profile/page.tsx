@@ -53,6 +53,10 @@ import {
 import rocketLogo from "@/src/assets/images/regenerated_image_1778473861554.png";
 import { AvatarFrame } from "@/components/AvatarFrame";
 import { AVATAR_FRAMES } from "@/lib/frames";
+import {
+  avatarPersonalizadoLiberado,
+  XP_AVATAR_PERSONALIZADO,
+} from "@/lib/avatarAccess";
 import { PremiumGateway } from "@/components/PremiumGateway";
 import {
   useFontSize,
@@ -935,6 +939,18 @@ export default function ProfilePage() {
   // Compute stats-based dynamic XP, level, total correct etc.
   // O XP do admin entra como piso, junto do XP conquistado nas estatísticas.
   const xpInfo = getExperienceDetails(stats, xpDoAdmin);
+  // Avatar Personalizado: liberado a partir de 200 XP ou para jogadores PRIME.
+  const isPremiumUser =
+    !!profile.isPremium || !!(user as { isPremium?: boolean } | null)?.isPremium;
+  const avatarPersonalizadoDesbloqueado = avatarPersonalizadoLiberado(
+    xpInfo.xp,
+    isPremiumUser,
+  );
+  // Quem já usava uma foto antes desta regra mantém a escolha atual.
+  const avatarPersonalizadoEmUso =
+    profile.avatarId === "custom" && !!profile.customAvatarUrl;
+  const podeUsarAvatarPersonalizado =
+    avatarPersonalizadoDesbloqueado || avatarPersonalizadoEmUso;
   const avataresLiberados = AVATARS.filter(
     (av) => xpInfo.xp >= (av.requiredXp || 0) || profile.avatarId === av.id
   ).length;
@@ -943,10 +959,16 @@ export default function ProfilePage() {
 
   // Actions
   const handleSaveProfile = async () => {
+    // Defesa extra: nunca salva o avatar personalizado sem a liberação.
+    const avatarIdParaSalvar =
+      editAvatarId === "custom" && !podeUsarAvatarPersonalizado
+        ? "default"
+        : editAvatarId;
+
     const updated = {
       name: editName.trim() || "João Silva",
       email: editEmail.trim() || "joao.silva@cosmos.edu",
-      avatarId: editAvatarId,
+      avatarId: avatarIdParaSalvar,
       customAvatarUrl: editCustomAvatarUrl,
       avatarFrameId: editAvatarFrameId,
     };
@@ -1007,6 +1029,7 @@ export default function ProfilePage() {
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setIsDragging(false);
+    if (!podeUsarAvatarPersonalizado) return;
     const files = e.dataTransfer.files;
     if (files && files[0]) {
       processFile(files[0]);
@@ -1014,6 +1037,7 @@ export default function ProfilePage() {
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!podeUsarAvatarPersonalizado) return;
     const files = e.target.files;
     if (files && files[0]) {
       processFile(files[0]);
@@ -1021,10 +1045,12 @@ export default function ProfilePage() {
   };
 
   const triggerFileInput = () => {
+    if (!podeUsarAvatarPersonalizado) return;
     fileInputRef.current?.click();
   };
 
   const processFile = (file: File) => {
+    if (!podeUsarAvatarPersonalizado) return;
     if (!file.type.startsWith("image/")) return;
     resizeAndSaveImage(file, (base64) => {
       setEditCustomAvatarUrl(base64);
@@ -2284,93 +2310,143 @@ export default function ProfilePage() {
 
                       {/* Custom Avatar Upload Zone */}
                       <div className="space-y-3 text-left">
-                        <label className="text-[0.625rem] font-black uppercase tracking-widest text-[#a5b4fc]">
-                          Avatar Personalizado (Sua Imagem)
-                        </label>
-                        <div
-                          onDragOver={handleDragOver}
-                          onDragLeave={handleDragLeave}
-                          onDrop={handleDrop}
-                          onClick={triggerFileInput}
-                          className={`relative py-4 px-4 border-2 border-dashed rounded-2xl transition-all cursor-pointer flex flex-col items-center justify-center gap-2 ${
-                            isDragging
-                              ? "border-[#a5b4fc] bg-[#a5b4fc]/10"
-                              : editAvatarId === "custom" && editCustomAvatarUrl
-                                ? "border-primary bg-primary/10"
-                                : "border-white/10 bg-white/5 hover:bg-white/10"
-                          }`}
-                        >
-                          <input
-                            type="file"
-                            ref={fileInputRef}
-                            onChange={handleFileChange}
-                            accept="image/*"
-                            className="hidden"
-                          />
+                        <div className="flex items-center justify-between gap-2">
+                          <label className="text-[0.625rem] font-black uppercase tracking-widest text-[#a5b4fc]">
+                            Avatar Personalizado (Sua Imagem)
+                          </label>
+                          {avatarPersonalizadoDesbloqueado ? (
+                            <span className="text-[0.5rem] font-black uppercase tracking-wider text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
+                              Liberado
+                            </span>
+                          ) : (
+                            <span className="text-[0.5rem] font-black uppercase tracking-wider text-amber-300 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
+                              <Lock className="w-2.5 h-2.5" /> Bloqueado
+                            </span>
+                          )}
+                        </div>
 
-                          {editCustomAvatarUrl ? (
-                            <div className="flex items-center gap-4 w-full">
-                              <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20 shrink-0 bg-white/5">
-                                <img
-                                  src={editCustomAvatarUrl}
-                                  alt="Preview"
-                                  className="w-full h-full object-cover rounded-full"
-                                />
-                              </div>
-                              <div className="flex-1 text-left">
-                                <p className="text-xs font-bold text-white">
-                                  Sua foto carregada
-                                </p>
-                                <p className="text-[0.625rem] text-white/50">
-                                  Clique ou arraste para trocar
-                                </p>
-                              </div>
-                              <div className="flex items-center gap-1">
-                                {editAvatarId !== "custom" && (
+                        {podeUsarAvatarPersonalizado ? (
+                          <div
+                            onDragOver={handleDragOver}
+                            onDragLeave={handleDragLeave}
+                            onDrop={handleDrop}
+                            onClick={triggerFileInput}
+                            className={`relative py-4 px-4 border-2 border-dashed rounded-2xl transition-all cursor-pointer flex flex-col items-center justify-center gap-2 ${
+                              isDragging
+                                ? "border-[#a5b4fc] bg-[#a5b4fc]/10"
+                                : editAvatarId === "custom" && editCustomAvatarUrl
+                                  ? "border-primary bg-primary/10"
+                                  : "border-white/10 bg-white/5 hover:bg-white/10"
+                            }`}
+                          >
+                            <input
+                              type="file"
+                              ref={fileInputRef}
+                              onChange={handleFileChange}
+                              accept="image/*"
+                              className="hidden"
+                            />
+
+                            {editCustomAvatarUrl ? (
+                              <div className="flex items-center gap-4 w-full">
+                                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20 shrink-0 bg-white/5">
+                                  <img
+                                    src={editCustomAvatarUrl}
+                                    alt="Preview"
+                                    className="w-full h-full object-cover rounded-full"
+                                  />
+                                </div>
+                                <div className="flex-1 text-left">
+                                  <p className="text-xs font-bold text-white">
+                                    Sua foto carregada
+                                  </p>
+                                  <p className="text-[0.625rem] text-white/50">
+                                    Clique ou arraste para trocar
+                                  </p>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                  {editAvatarId !== "custom" && (
+                                    <button
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setEditAvatarId("custom");
+                                      }}
+                                      className="p-1 px-2.5 rounded-lg bg-[#a5b4fc]/10 hover:bg-[#a5b4fc]/20 text-[0.625rem] font-bold text-[#a5b4fc] uppercase tracking-wider"
+                                    >
+                                      Usar
+                                    </button>
+                                  )}
                                   <button
                                     type="button"
                                     onClick={(e) => {
                                       e.stopPropagation();
-                                      setEditAvatarId("custom");
+                                      setEditCustomAvatarUrl(undefined);
+                                      if (editAvatarId === "custom") {
+                                        setEditAvatarId("default");
+                                      }
                                     }}
-                                    className="p-1 px-2.5 rounded-lg bg-[#a5b4fc]/10 hover:bg-[#a5b4fc]/20 text-[0.625rem] font-bold text-[#a5b4fc] uppercase tracking-wider"
+                                    className="p-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400"
                                   >
-                                    Usar
+                                    <X className="w-3.5 h-3.5" />
                                   </button>
-                                )}
-                                <button
-                                  type="button"
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    setEditCustomAvatarUrl(undefined);
-                                    if (editAvatarId === "custom") {
-                                      setEditAvatarId("default");
-                                    }
-                                  }}
-                                  className="p-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400"
-                                >
-                                  <X className="w-3.5 h-3.5" />
-                                </button>
+                                </div>
+                              </div>
+                            ) : (
+                              <div className="text-center space-y-1 py-1">
+                                <p className="text-xs font-bold text-white/80">
+                                  Arraste sua imagem aqui ou clique para enviar
+                                </p>
+                                <p className="text-[0.5625rem] text-white/45 uppercase tracking-widest">
+                                  Suporta JPG, PNG, WEBP (será ajustada para
+                                  150x150)
+                                </p>
+                              </div>
+                            )}
+
+                            {editAvatarId === "custom" && editCustomAvatarUrl && (
+                              <div className="absolute top-2 right-2 p-1 bg-primary rounded-full">
+                                <Check className="w-3 h-3 text-white" />
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          <div className="rounded-2xl border-2 border-dashed border-white/10 bg-white/[0.03] p-4 space-y-3">
+                            <div className="flex items-start gap-3">
+                              <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-300 shrink-0">
+                                <Lock className="w-4 h-4" />
+                              </div>
+                              <div className="space-y-1">
+                                <p className="text-xs font-bold text-white/85">
+                                  Alcance 200 XP para liberar
+                                </p>
+                                <p className="text-[0.6875rem] leading-relaxed text-white/50">
+                                  Envie sua própria foto ao atingir{" "}
+                                  {XP_AVATAR_PERSONALIZADO} XP. Jogadores PRIME
+                                  também têm acesso imediato.
+                                </p>
                               </div>
                             </div>
-                          ) : (
-                            <div className="text-center space-y-1 py-1">
-                              <p className="text-xs font-bold text-white/80">
-                                Arraste sua imagem aqui ou clique para enviar
-                              </p>
-                              <p className="text-[0.5625rem] text-white/45 uppercase tracking-widest">
-                                Suporta JPG, PNG, WEBP (será ajustada para
-                                150x150)
-                              </p>
-                            </div>
-                          )}
 
-                          {editAvatarId === "custom" && editCustomAvatarUrl && (
-                            <div className="absolute top-2 right-2 p-1 bg-primary rounded-full">
-                              <Check className="w-3 h-3 text-white" />
+                            <div className="space-y-1">
+                              <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden border border-white/10">
+                                <div
+                                  className="h-full rounded-full bg-gradient-to-r from-sky-400 to-violet-500 transition-all"
+                                  style={{
+                                    width: `${Math.min(
+                                      100,
+                                      (xpInfo.xp / XP_AVATAR_PERSONALIZADO) * 100,
+                                    )}%`,
+                                  }}
+                                />
+                              </div>
+                              <p className="text-[0.5625rem] text-white/40 uppercase tracking-widest text-right">
+                                {Math.min(xpInfo.xp, XP_AVATAR_PERSONALIZADO)} /{" "}
+                                {XP_AVATAR_PERSONALIZADO} XP
+                              </p>
                             </div>
-                          )}
-                        </div>
+                          </div>
+                        )}
                       </div>
 
                       <div className="space-y-4">

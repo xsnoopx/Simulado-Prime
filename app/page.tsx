@@ -970,6 +970,7 @@ export default function AppPage() {
                     answer: (
                       <div className="space-y-2">
                         <p>Há uma galeria com mais de 100 avatares e 50 molduras liberados por XP. Você escolhe os itens no Perfil, nas seções Avatares e Molduras Interativas.</p>
+                        <p>O Avatar Personalizado, com envio da sua própria foto, é liberado ao atingir 200 XP ou para jogadores PRIME.</p>
                         <p>Também existem avatares e molduras premium. Eles só serão liberados com o PRIME ativo — e o pagamento do PRIME ainda não está disponível. O avatar e a moldura escolhidos aparecem no Perfil e no Ranking.</p>
                       </div>
                     )
@@ -1006,7 +1007,7 @@ export default function AppPage() {
                     question: "💎 Como funciona o PRIME?",
                     answer: (
                       <div className="space-y-2">
-                        <p>O PRIME (Cosmos Prime) é o plano de recursos especiais. Ele inclui os modos <strong>Desafio</strong> e <strong>Sobrevivência</strong>, as <strong>charadas e enigmas online por IA</strong> e os <strong>avatares e molduras premium</strong>.</p>
+                        <p>O PRIME (Cosmos Prime) é o plano de recursos especiais. Ele inclui os modos <strong>Desafio</strong> e <strong>Sobrevivência</strong>, as <strong>charadas e enigmas online por IA</strong>, o <strong>Avatar Personalizado</strong> e os <strong>avatares e molduras premium</strong>.</p>
                         <p>O pagamento ainda não está habilitado: o botão mostra “Assinatura em breve” e nenhuma ativação de demonstração é liberada. O acesso só será concedido após a confirmação de um pagamento real.</p>
                       </div>
                     )

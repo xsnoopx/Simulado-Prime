@@ -1,5 +1,6 @@
 import { SimuladoStats, xpDaCategoria } from './stats';
 import { getSupabase } from './supabase';
+import { lerXpDoAdmin, XP_AVATAR_PERSONALIZADO } from './avatarAccess';
 
 export interface Achievement {
   id: string;
@@ -63,7 +64,9 @@ export function getExperienceDetails(stats: SimuladoStats | null, xpDoAdmin: num
 }
 
 export function getAchievements(stats: SimuladoStats | null): Achievement[] {
-  const xpInfo = getExperienceDetails(stats);
+  // Inclui o XP definido pelo painel administrativo, o mesmo valor que o
+  // perfil exibe. Assim liberações e conquistas nunca ficam divergentes.
+  const xpInfo = getExperienceDetails(stats, lerXpDoAdmin());
 
   // Carregar conquistas desbloqueadas salvas anteriormente do localStorage
   let savedUnlocked: string[] = [];
@@ -128,6 +131,13 @@ export function getAchievements(stats: SimuladoStats | null): Achievement[] {
       desc: 'Alcançou o Nível 5 de estudo no Cosmos.',
       unlocked: xpInfo.level >= 5,
       color: 'from-yellow-400 to-amber-500'
+    },
+    {
+      id: 'avatar_personalizado',
+      title: 'Identidade Cósmica 🖼️',
+      desc: `Você alcançou ${XP_AVATAR_PERSONALIZADO} XP e liberou o Avatar Personalizado.`,
+      unlocked: xpInfo.xp >= XP_AVATAR_PERSONALIZADO,
+      color: 'from-sky-400 via-violet-500 to-fuchsia-600'
     },
     {
       id: 'xp_500',
@@ -620,6 +630,7 @@ export function getAchievementIdByTitle(title: string): string {
   if (t.includes("AVE DO ORIENTE")) return "early_bird";
   if (t.includes("ASTRO PERSISTENTE")) return "perseverante";
   if (t.includes("GLORIA MAXIMA") || t.includes("GLÓRIA MÁXIMA")) return "gloria_maxima";
+  if (t.includes("IDENTIDADE COSMICA") || t.includes("IDENTIDADE CÓSMICA")) return "avatar_personalizado";
   if (t.includes("COMANDANTE ORADOR")) return "simulado_linguagens_mestre";
   if (t.includes("COMANDANTE LOGICO") || t.includes("COMANDANTE LÓGICO")) return "simulado_matematica_mestre";
   if (t.includes("COMANDANTE FILOSOFO") || t.includes("COMANDANTE FILÓSOFO")) return "simulado_humanas_mestre";

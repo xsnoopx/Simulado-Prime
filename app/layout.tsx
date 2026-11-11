@@ -4,6 +4,7 @@ import './globals.css';
 import { AchievementProvider } from '@/components/AchievementProvider';
 import { BackgroundMusicPlayer } from '@/components/BackgroundMusicPlayer';
 import { FontSizeProvider } from '@/components/FontSizeProvider';
+import { PrimeWelcome } from '@/components/PrimeWelcome';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -39,6 +40,7 @@ export default function RootLayout({
         <FontSizeProvider>
           <AchievementProvider>
             {children}
+            <PrimeWelcome />
             <BackgroundMusicPlayer />
           </AchievementProvider>
         </FontSizeProvider>

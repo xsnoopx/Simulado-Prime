@@ -169,10 +169,26 @@ export const AchievementProvider: React.FC<{ children: React.ReactNode }> = ({ c
       const initialAchievements = getAchievements(initialStats);
       initialAchievements.forEach(a => {
         if (a.unlocked) {
-          knownUnlockedRef.current.add(a.id);
           const normTitle = normalizeId(a.title);
+          const jaVista = seenSet.has(a.id) || seenSet.has(normTitle);
+
+          knownUnlockedRef.current.add(a.id);
           knownUnlockedRef.current.add(normTitle);
-          
+
+          // A conquista do Avatar Personalizado é nova: quem já tinha passado
+          // dos 200 XP recebe o aviso uma única vez ao abrir o aplicativo.
+          if (!jaVista && a.id === 'avatar_personalizado') {
+            setQueue(prev => [
+              ...prev,
+              {
+                id: a.id,
+                title: a.title,
+                desc: a.desc,
+                color: a.color || 'from-sky-400 via-violet-500 to-fuchsia-600',
+              },
+            ]);
+          }
+
           if (!seenSet.has(a.id)) {
             saveSeenAchievement(a.id);
             seenSet.add(a.id);
@@ -392,7 +408,7 @@ export const AchievementProvider: React.FC<{ children: React.ReactNode }> = ({ c
               {/* Epic games / Space visual tag pill accent */}
               <div className="hidden sm:flex flex-shrink-0 h-6 px-2.5 items-center justify-center rounded-full bg-amber-500/10 border border-amber-500/20">
                 <span className="text-[0.5313rem] font-black uppercase tracking-widest text-amber-300">
-                  +50 XP
+                  CONQUISTA
                 </span>
               </div>
             </motion.div>

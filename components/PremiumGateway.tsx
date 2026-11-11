@@ -9,7 +9,10 @@ import {
   X, 
   Flame, 
   Smile,
-  Lock
+  Lock,
+  Timer,
+  Shield,
+  Camera
 } from 'lucide-react';
 
 // Core subscription keys for robust syncing
@@ -70,6 +73,13 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
   };
 
   const finishAndReload = () => {
+    // Avisa o aplicativo que o PRIME acabou de ser confirmado. O aviso global
+    // (PrimeWelcome) mostra o que foi liberado; se a página recarregar, ele
+    // aparece de qualquer forma ao encontrar o premium no armazenamento local.
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('prime-activated'));
+    }
+
     if (onSuccess) {
       onSuccess();
     } else {
@@ -147,6 +157,34 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
                     </h4>
                     <p className="text-[0.8125rem] text-white/80 font-medium leading-relaxed">
                       Gerador contínuo de mistérios quânticos, lógica dedutiva e cenários complexos com respostas inteligentes validadas pela IA.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 p-4 bg-white/[0.04] border border-white/10 rounded-2xl hover:border-amber-500/30 transition-colors">
+                  <div className="p-3 h-fit rounded-xl bg-amber-500/15 text-amber-400 mt-0.5">
+                    <Timer className="w-6 h-6 animate-pulse" />
+                  </div>
+                  <div className="space-y-1 select-none">
+                    <h4 className="font-display font-black text-sm tracking-wide uppercase text-amber-100">
+                      Modos Desafio e Sobrevivência
+                    </h4>
+                    <p className="text-[0.8125rem] text-white/80 font-medium leading-relaxed">
+                      Enfrente questões com tempo limite ou com vidas limitadas nas áreas de simulado.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 p-4 bg-white/[0.04] border border-white/10 rounded-2xl hover:border-teal-500/30 transition-colors">
+                  <div className="p-3 h-fit rounded-xl bg-teal-500/15 text-teal-400 mt-0.5">
+                    <Camera className="w-6 h-6 animate-pulse" />
+                  </div>
+                  <div className="space-y-1 select-none">
+                    <h4 className="font-display font-black text-sm tracking-wide uppercase text-teal-200">
+                      Avatar Personalizado
+                    </h4>
+                    <p className="text-[0.8125rem] text-white/80 font-medium leading-relaxed">
+                      Envie sua própria foto e use no perfil sem precisar esperar os 200 XP.
                     </p>
                   </div>
                 </div>
@@ -313,11 +351,19 @@ export function PremiumGateway({ onSuccess, title = "COSMOS PRIME", onClose }: P
               <div className="bg-white/[0.03] border border-white/10 p-6 rounded-2xl max-w-sm mx-auto space-y-4 text-left shadow-inner">
                 <div className="flex items-center gap-3">
                   <Check className="w-5 h-5 text-emerald-400 shrink-0 stroke-[3]" />
+                  <span className="text-sm text-white font-black">Modos Desafio e Sobrevivência liberados</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-emerald-400 shrink-0 stroke-[3]" />
                   <span className="text-sm text-white font-black">Acesso ilimitado às Charadas Online (IA)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Check className="w-5 h-5 text-emerald-400 shrink-0 stroke-[3]" />
                   <span className="text-sm text-white font-black">Acesso ilimitado aos Enigmas Online (IA)</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-emerald-400 shrink-0 stroke-[3]" />
+                  <span className="text-sm text-white font-black">Avatar Personalizado liberado</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Check className="w-5 h-5 text-emerald-400 shrink-0 stroke-[3]" />
