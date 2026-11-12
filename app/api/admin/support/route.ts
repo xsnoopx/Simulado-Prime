@@ -28,7 +28,13 @@ async function totalNaoLidoAdmin(admin: any): Promise<number> {
 
 export async function POST(req: NextRequest) {
   try {
-    const corpo = await req.json();
+    let corpo: any;
+    try {
+      corpo = await req.json();
+    } catch {
+      return erro("Não foi possível ler a solicitação.", 400);
+    }
+
     const action = String(corpo?.action || "");
     const token = String(corpo?.token || "");
 
@@ -267,9 +273,6 @@ export async function POST(req: NextRequest) {
     return erro("Ação inválida para a IMBOX.", 400);
   } catch (erroGeral: any) {
     console.warn("[Suporte ADM] Erro inesperado:", erroGeral);
-    return erro(
-      erroGeral?.message || "Não foi possível concluir a operação.",
-      500,
-    );
+    return erro("Não foi possível concluir a operação.", 500);
   }
 }
