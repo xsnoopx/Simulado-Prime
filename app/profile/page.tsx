@@ -35,6 +35,8 @@ import {
   Activity,
   Zap,
   Type,
+  LifeBuoy,
+  Bell,
 } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
@@ -58,6 +60,8 @@ import {
   XP_AVATAR_PERSONALIZADO,
 } from "@/lib/avatarAccess";
 import { PremiumGateway } from "@/components/PremiumGateway";
+import { SupportChat } from "@/components/SupportChat";
+import { AdminSupportInbox } from "@/components/AdminSupportInbox";
 import {
   useFontSize,
   PRESETS_FONTE,
@@ -327,11 +331,14 @@ export default function ProfilePage() {
     | "frames"
     | "premium"
     | "admin"
+    | "support"
     | null
   >(null);
 
   // Admin Panel states
-  const [adminTab, setAdminTab] = useState<"stats" | "ranking" | "users" | "system">("stats");
+  const [adminTab, setAdminTab] = useState<
+    "stats" | "ranking" | "users" | "support" | "system"
+  >("stats");
   const [adminSearchQuery, setAdminSearchQuery] = useState("");
   const [adminPlayers, setAdminPlayers] = useState<any[]>([]);
   const [adminLoading, setAdminLoading] = useState(false);
@@ -343,6 +350,13 @@ export default function ProfilePage() {
   const [hoverRating, setHoverRating] = useState<number>(0);
   const [feedbackText, setFeedbackText] = useState<string>("");
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false);
+
+  // Suporte Cósmico: contadores de mensagens não lidas.
+  const [supportUnread, setSupportUnread] = useState(0);
+  const [supportAdminUnread, setSupportAdminUnread] = useState(0);
+  const [supportAlerta, setSupportAlerta] = useState<string | null>(null);
+  const supportAdminUnreadAnterior = useRef(0);
+  const supportAdminPrimeiraLeitura = useRef(true);
 
   // Form states for profile edit
   const [editName, setEditName] = useState("");
@@ -447,6 +461,83 @@ export default function ProfilePage() {
       loadAdminData();
     }
   }, [activeModal]);
+
+  // Contadores do Suporte Cósmico: alimentam o selo no menu e a notificação
+  // do IMBOX enquanto o perfil está aberto. As rotas são as mesmas usadas
+  // pelos chats, então nada é lido direto do banco no cliente.
+  useEffect(() => {
+    if (!user?.email) {
+      setSupportUnread(0);
+      setSupportAdminUnread(0);
+      return;
+    }
+
+    let ativo = true;
+
+    const atualizarContadores = async () => {
+      try {
+        const client = await getSupabase();
+        const token = await getAdminToken(client);
+        if (!token) return;
+
+        const respostaUsuario = await fetch("/api/support", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "count", token }),
+        }).catch(() => null);
+
+        if (respostaUsuario?.ok) {
+          const dados = await respostaUsuario.json();
+          if (ativo) setSupportUnread(Number(dados?.unread) || 0);
+        }
+
+        if (!hasAdminPrivilege) return;
+
+        const respostaAdmin = await fetch("/api/admin/support", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "count", token }),
+        }).catch(() => null);
+
+        if (respostaAdmin?.ok) {
+          const dados = await respostaAdmin.json();
+          const total = Number(dados?.unread) || 0;
+          if (!ativo) return;
+
+          setSupportAdminUnread(total);
+
+          // A primeira leitura só sincroniza o selo: notificar aqui faria o
+          // aviso reaparecer a cada visita ao Perfil sem mensagem nova.
+          if (supportAdminPrimeiraLeitura.current) {
+            supportAdminPrimeiraLeitura.current = false;
+          } else if (total > supportAdminUnreadAnterior.current && total > 0) {
+            setSupportAlerta(
+              total === 1
+                ? "Você recebeu uma nova mensagem no IMBOX."
+                : `Você recebeu ${total} novas mensagens no IMBOX.`,
+            );
+          }
+          supportAdminUnreadAnterior.current = total;
+        }
+      } catch {
+        // Sem rede ou sem sessão: tenta de novo no próximo ciclo.
+      }
+    };
+
+    atualizarContadores();
+    const intervalo = setInterval(atualizarContadores, 25000);
+
+    return () => {
+      ativo = false;
+      clearInterval(intervalo);
+    };
+  }, [user?.email, hasAdminPrivilege]);
+
+  useEffect(() => {
+    if (!supportAlerta) return;
+    const tempo = setTimeout(() => setSupportAlerta(null), 7000);
+    return () => clearTimeout(tempo);
+  }, [supportAlerta]);
 
   const handleSaveRankingUser = async (userId: string, updatedFields: any) => {
     if (!hasAdminPrivilege) {
@@ -2048,6 +2139,9 @@ export default function ProfilePage() {
                   subtitle: string;
                   badge: string | null;
                   color?: string;
+                  iconColor?: string;
+                  textoClasse?: string;
+                  badgeClass?: string;
                   onClick: () => void;
                 }> = [
                   {
@@ -2090,7 +2184,10 @@ export default function ProfilePage() {
                         {
                           icon: ShieldAlert,
                           label: "🛡️ Painel Administrativo",
-                          subtitle: "Gerenciar ranking, usuários e sistema",
+                          subtitle:
+                            supportAdminUnread > 0
+                              ? `Gerenciar ranking, usuários e sistema · ${supportAdminUnread} no IMBOX`
+                              : "Gerenciar ranking, usuários e sistema",
                           badge: "ADM",
                           color: "text-[#f59e0b]",
                           onClick: () => {
@@ -2102,6 +2199,20 @@ export default function ProfilePage() {
                         },
                       ]
                     : []),
+                  {
+                    icon: LifeBuoy,
+                    label: "Suporte Cósmico",
+                    subtitle: "Fale com a equipe, envie prints e acompanhe respostas",
+                    badge:
+                      supportUnread > 0
+                        ? `${supportUnread} nova${supportUnread > 1 ? "s" : ""}`
+                        : null,
+                    iconColor: "text-sky-300",
+                    textoClasse: "text-white",
+                    badgeClass:
+                      "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
+                    onClick: () => setActiveModal("support"),
+                  },
                   {
                     icon: Star,
                     label: "Avaliar na Play Store",
@@ -2131,13 +2242,13 @@ export default function ProfilePage() {
                   >
                     <div className="flex items-center gap-4">
                       <div
-                        className={`p-3 rounded-xl bg-white/5 ${item.color || "text-[#3b82f6]"}`}
+                        className={`p-3 rounded-xl bg-white/5 ${item.iconColor || item.color || "text-[#3b82f6]"}`}
                       >
                         <item.icon className="w-5 h-5" />
                       </div>
                       <div>
                         <span
-                          className={`text-sm font-bold tracking-wide ${item.color ? "text-red-400 font-extrabold" : "text-white"}`}
+                          className={`text-sm font-bold tracking-wide ${item.textoClasse || (item.color ? "text-red-400 font-extrabold" : "text-white")}`}
                         >
                           {item.label}
                         </span>
@@ -2150,7 +2261,7 @@ export default function ProfilePage() {
                     <div className="flex items-center gap-2">
                       {item.badge && (
                         <span
-                          className={`text-[0.5rem] font-black uppercase tracking-widest ${item.color ? "bg-red-500/10 text-red-400 border-red-500/25" : "bg-primary/20 text-[#60a5fa] border-primary/20"} px-2.5 py-1 rounded-full border`}
+                          className={`text-[0.5rem] font-black uppercase tracking-widest ${item.badgeClass || (item.color ? "bg-red-500/10 text-red-400 border-red-500/25" : "bg-primary/20 text-[#60a5fa] border-primary/20")} px-2.5 py-1 rounded-full border`}
                         >
                           {item.badge}
                         </span>
@@ -2181,7 +2292,7 @@ export default function ProfilePage() {
 
       {/* ALL OVERLAY INTERACTIVE MODALS */}
       <AnimatePresence>
-        {activeModal && (
+        {activeModal && activeModal !== "support" && (
           <div className="fixed inset-0 flex items-center justify-center p-6 z-50">
             {/* Ambient Glass Backdrop */}
             <motion.div
@@ -3595,7 +3706,7 @@ export default function ProfilePage() {
                     <div className="space-y-4">
                       {/* Tabs Selector */}
                       <div className="flex bg-white/5 p-1 rounded-2xl border border-white/5 shrink-0">
-                        {(["stats", "ranking", "users", "system"] as const).map(tab => (
+                        {(["stats", "ranking", "users", "support", "system"] as const).map(tab => (
                           <button
                             key={tab}
                             type="button"
@@ -3604,12 +3715,18 @@ export default function ProfilePage() {
                               setAdminSelectedPlayer(null);
                               setAdminEditForm(null);
                             }}
-                            className={`flex-1 py-1.5 rounded-xl text-[0.625rem] font-bold uppercase tracking-wider transition-all cursor-pointer ${adminTab === tab ? "bg-amber-500 text-black shadow-lg shadow-amber-500/10 font-black" : "text-white/40 hover:text-white"}`}
+                            className={`relative flex-1 py-1.5 rounded-xl text-[0.625rem] font-bold uppercase tracking-wider transition-all cursor-pointer ${adminTab === tab ? "bg-amber-500 text-black shadow-lg shadow-amber-500/10 font-black" : "text-white/40 hover:text-white"}`}
                           >
                             {tab === "stats" && "📊 Est"}
                             {tab === "ranking" && "🏆 Rank"}
                             {tab === "users" && "👥 User"}
+                            {tab === "support" && "📨 IMBOX"}
                             {tab === "system" && "⚙️ Sist"}
+                            {tab === "support" && supportAdminUnread > 0 && (
+                              <span className="absolute -right-0.5 -top-0.5 flex h-3.5 min-w-3.5 items-center justify-center rounded-full bg-rose-400 px-1 text-[0.4375rem] font-black text-[#2b0710]">
+                                {supportAdminUnread > 99 ? "99+" : supportAdminUnread}
+                              </span>
+                            )}
                           </button>
                         ))}
                       </div>
@@ -3886,6 +4003,17 @@ export default function ProfilePage() {
                               </div>
                             )}
 
+                            {/* IMBOX do Suporte Cósmico */}
+                            {adminTab === "support" && (
+                              <AdminSupportInbox
+                                getToken={async () => {
+                                  const client = await getSupabase();
+                                  return getAdminToken(client);
+                                }}
+                                onUnreadChange={setSupportAdminUnread}
+                              />
+                            )}
+
                             {/* System tab configurations */}
                             {adminTab === "system" && (
                               <div className="space-y-3 pt-1 text-left">
@@ -3967,6 +4095,46 @@ export default function ProfilePage() {
               </motion.div>
             )}
           </div>
+        )}
+      </AnimatePresence>
+
+      {/* Suporte Cósmico: chat do jogador (overlay próprio, z-[80]) */}
+      {activeModal === "support" && (
+        <SupportChat
+          onClose={() => setActiveModal(null)}
+          onUnreadChange={setSupportUnread}
+        />
+      )}
+
+      {/* Notificação do IMBOX administrativo */}
+      <AnimatePresence>
+        {supportAlerta && (
+          <motion.button
+            type="button"
+            initial={{ opacity: 0, y: -18, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -12, scale: 0.97 }}
+            transition={{ type: "spring", damping: 24, stiffness: 320 }}
+            onClick={() => {
+              setAdminTab("support");
+              setActiveModal("admin");
+              setSupportAlerta(null);
+            }}
+            className="fixed left-1/2 top-4 z-[85] flex w-[calc(100%-2rem)] max-w-sm -translate-x-1/2 cursor-pointer items-center gap-2.5 rounded-2xl border border-amber-400/25 bg-[#12101c]/95 px-3.5 py-2.5 text-left shadow-[0_16px_40px_rgba(0,0,0,0.6)] backdrop-blur-xl"
+          >
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-amber-400/30 bg-amber-500/15 text-amber-300">
+              <Bell className="h-4 w-4" />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-[0.625rem] font-black uppercase tracking-wider text-amber-300">
+                IMBOX · novo chamado
+              </span>
+              <span className="block truncate text-[0.6875rem] font-semibold text-white/85">
+                {supportAlerta}
+              </span>
+            </span>
+            <ChevronRight className="h-3.5 w-3.5 shrink-0 text-white/40" />
+          </motion.button>
         )}
       </AnimatePresence>
     </div>
