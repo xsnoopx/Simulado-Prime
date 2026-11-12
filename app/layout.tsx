@@ -5,6 +5,7 @@ import { AchievementProvider } from '@/components/AchievementProvider';
 import { BackgroundMusicPlayer } from '@/components/BackgroundMusicPlayer';
 import { FontSizeProvider } from '@/components/FontSizeProvider';
 import { PrimeWelcome } from '@/components/PrimeWelcome';
+import { AppNotice } from '@/components/AppNotice';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -40,6 +41,7 @@ export default function RootLayout({
         <FontSizeProvider>
           <AchievementProvider>
             {children}
+            <AppNotice />
             <PrimeWelcome />
             <BackgroundMusicPlayer />
           </AchievementProvider>

@@ -62,6 +62,7 @@ import {
 import { PremiumGateway } from "@/components/PremiumGateway";
 import { SupportChat } from "@/components/SupportChat";
 import { AdminSupportInbox } from "@/components/AdminSupportInbox";
+import { AdminBroadcastPanel } from "@/components/AdminBroadcastPanel";
 import {
   useFontSize,
   PRESETS_FONTE,
@@ -337,7 +338,7 @@ export default function ProfilePage() {
 
   // Admin Panel states
   const [adminTab, setAdminTab] = useState<
-    "stats" | "ranking" | "users" | "support" | "system"
+    "stats" | "players" | "support" | "avisos" | "system"
   >("stats");
   const [adminSearchQuery, setAdminSearchQuery] = useState("");
   const [adminPlayers, setAdminPlayers] = useState<any[]>([]);
@@ -3706,7 +3707,7 @@ export default function ProfilePage() {
                     <div className="space-y-4">
                       {/* Tabs Selector */}
                       <div className="flex bg-white/5 p-1 rounded-2xl border border-white/5 shrink-0">
-                        {(["stats", "ranking", "users", "support", "system"] as const).map(tab => (
+                        {(["stats", "players", "support", "avisos", "system"] as const).map(tab => (
                           <button
                             key={tab}
                             type="button"
@@ -3718,9 +3719,9 @@ export default function ProfilePage() {
                             className={`relative flex-1 py-1.5 rounded-xl text-[0.625rem] font-bold uppercase tracking-wider transition-all cursor-pointer ${adminTab === tab ? "bg-amber-500 text-black shadow-lg shadow-amber-500/10 font-black" : "text-white/40 hover:text-white"}`}
                           >
                             {tab === "stats" && "📊 Est"}
-                            {tab === "ranking" && "🏆 Rank"}
-                            {tab === "users" && "👥 User"}
+                            {tab === "players" && "👥 Jog"}
                             {tab === "support" && "📨 IMBOX"}
+                            {tab === "avisos" && "📢 Avisos"}
                             {tab === "system" && "⚙️ Sist"}
                             {tab === "support" && supportAdminUnread > 0 && (
                               <span className="absolute -right-0.5 -top-0.5 flex h-3.5 min-w-3.5 items-center justify-center rounded-full bg-rose-400 px-1 text-[0.4375rem] font-black text-[#2b0710]">
@@ -3798,8 +3799,8 @@ export default function ProfilePage() {
                               );
                             })()}
 
-                            {/* Ranking & Users selection views */}
-                            {(adminTab === "ranking" || adminTab === "users") && (
+                            {/* Jogadores: ranking + gestão de usuários no mesmo painel */}
+                            {adminTab === "players" && (
                               <div className="space-y-4">
                                 {adminSelectedPlayer && adminEditForm ? (
                                   <div className="glass-panel p-4 rounded-3xl border border-white/10 space-y-4 text-left">
@@ -4001,6 +4002,16 @@ export default function ProfilePage() {
                                   </div>
                                 )}
                               </div>
+                            )}
+
+                            {/* Avisos do aplicativo */}
+                            {adminTab === "avisos" && (
+                              <AdminBroadcastPanel
+                                getToken={async () => {
+                                  const client = await getSupabase();
+                                  return getAdminToken(client);
+                                }}
+                              />
                             )}
 
                             {/* IMBOX do Suporte Cósmico */}
