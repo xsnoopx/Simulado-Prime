@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { AnimatePresence, motion } from 'motion/react';
 import {
   ArrowRight,
+  CheckCircle2,
   ChevronLeft,
   Crown,
   Eye,
@@ -17,6 +18,7 @@ import {
   RefreshCcw,
   Sparkles,
   Wand2,
+  XCircle,
 } from 'lucide-react';
 import { requestAi } from '@/lib/aiClient';
 import { cn, playCategorySound, playSubcategorySound } from '@/lib/utils';
@@ -161,6 +163,7 @@ function EnigmasConteudo() {
   const [loading, setLoading] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
   const [mostrarRespostaIa, setMostrarRespostaIa] = useState(false);
+  const [avaliacaoIa, setAvaliacaoIa] = useState<StatusEnigma | null>(null);
   const [categoriaIa, setCategoriaIa] = useState('logica');
   const jaGerou = useRef(false);
 
@@ -188,6 +191,7 @@ function EnigmasConteudo() {
     setLoading(true);
     setErro(null);
     setMostrarRespostaIa(false);
+    setAvaliacaoIa(null);
 
     try {
       const resposta = await requestAi(gerarPrompt(categoria), {
@@ -626,6 +630,65 @@ function EnigmasConteudo() {
                                   {enigmaIa.resposta}
                                 </p>
                               </motion.div>
+                            )}
+
+                            {mostrarRespostaIa && (
+                              <div className="space-y-2">
+                                <p className="text-[0.5625rem] font-black uppercase tracking-[0.2em] text-on-surface-variant/50">
+                                  Como foi?
+                                </p>
+
+                                <div className="grid grid-cols-2 gap-2">
+                                  <button
+                                    type="button"
+                                    onClick={() => setAvaliacaoIa('acertei')}
+                                    aria-pressed={avaliacaoIa === 'acertei'}
+                                    className={cn(
+                                      'py-3 rounded-2xl border text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer',
+                                      avaliacaoIa === 'acertei'
+                                        ? 'bg-emerald-500 border-emerald-300 text-[#04231a] shadow-lg shadow-emerald-500/25 scale-[1.02]'
+                                        : 'bg-emerald-500/15 border-emerald-500/25 text-emerald-300 hover:bg-emerald-500/25'
+                                    )}
+                                  >
+                                    <CheckCircle2 className="w-4 h-4" />
+                                    {avaliacaoIa === 'acertei' ? 'Eu sabia ✓' : 'Eu sabia'}
+                                  </button>
+                                  <button
+                                    type="button"
+                                    onClick={() => setAvaliacaoIa('errei')}
+                                    aria-pressed={avaliacaoIa === 'errei'}
+                                    className={cn(
+                                      'py-3 rounded-2xl border text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer',
+                                      avaliacaoIa === 'errei'
+                                        ? 'bg-rose-500 border-rose-300 text-[#2b0710] shadow-lg shadow-rose-500/25 scale-[1.02]'
+                                        : 'bg-rose-500/10 border-rose-500/20 text-rose-300 hover:bg-rose-500/20'
+                                    )}
+                                  >
+                                    <XCircle className="w-4 h-4" />
+                                    {avaliacaoIa === 'errei' ? 'Não sabia ✓' : 'Não sabia'}
+                                  </button>
+                                </div>
+
+                                <AnimatePresence initial={false}>
+                                  {avaliacaoIa && (
+                                    <motion.p
+                                      key="avaliacao-ia"
+                                      initial={{ opacity: 0, y: -4 }}
+                                      animate={{ opacity: 1, y: 0 }}
+                                      exit={{ opacity: 0, y: -4 }}
+                                      className={cn(
+                                        'flex items-center justify-center gap-1.5 text-[0.625rem] font-semibold',
+                                        avaliacaoIa === 'acertei' ? 'text-emerald-300' : 'text-rose-300'
+                                      )}
+                                    >
+                                      <CheckCircle2 className="w-3.5 h-3.5" />
+                                      {avaliacaoIa === 'acertei'
+                                        ? 'Você marcou: eu sabia deste enigma.'
+                                        : 'Você marcou: não sabia deste enigma.'}
+                                    </motion.p>
+                                  )}
+                                </AnimatePresence>
+                              </div>
                             )}
 
                             <button
