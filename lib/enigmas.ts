@@ -178,10 +178,28 @@ export function limparProgresso(): ProgressoEnigmas {
   return {};
 }
 
+/**
+ * Mesma regra do acervo de charadas: percentual com uma casa decimal quando
+ * ainda é pequeno, para o primeiro acerto não desaparecer como "<1%".
+ */
+export function formatarPercentual(valor: number): string {
+  if (!Number.isFinite(valor) || valor <= 0) return '0';
+  const arredondado = valor < 10 ? Math.round(valor * 10) / 10 : Math.round(valor);
+  const seguro = arredondado === 0 ? 0.1 : arredondado;
+  return String(seguro).replace('.', ',');
+}
+
 export function estatisticasProgresso(
   progresso: ProgressoEnigmas,
   itens: Enigma[] = STATIC_ENIGMAS
-): { resolvidos: number; tentados: number; total: number; percentual: number } {
+): {
+  resolvidos: number;
+  tentados: number;
+  total: number;
+  percentual: number;
+  percentualExato: number;
+  percentualFormatado: string;
+} {
   const ids = new Set(itens.map((item) => item.id));
   let resolvidos = 0;
   let tentados = 0;
@@ -192,10 +210,14 @@ export function estatisticasProgresso(
     if (registro.status === 'acertei') resolvidos += 1;
   }
 
+  const percentualExato = itens.length > 0 ? (resolvidos / itens.length) * 100 : 0;
+
   return {
     resolvidos,
     tentados,
     total: itens.length,
-    percentual: itens.length > 0 ? Math.round((resolvidos / itens.length) * 100) : 0,
+    percentual: Math.round(percentualExato),
+    percentualExato,
+    percentualFormatado: formatarPercentual(percentualExato),
   };
 }

@@ -113,23 +113,27 @@ export function CharadasHub() {
                   Seu progresso
                 </p>
                 <p className="text-sm font-bold text-on-surface">
-                  {stats.resolvidos} charadas sabidas
+                  {stats.resolvidos === 1
+                    ? '1 charada sabida'
+                    : `${stats.resolvidos} charadas sabidas`}
                 </p>
               </div>
             </div>
             <span className="text-lg font-display font-black text-secondary">
-              {stats.percentual === 0 && stats.resolvidos > 0 ? '<1' : stats.percentual}%
+              {stats.percentualFormatado}%
             </span>
           </div>
           <div className="h-2 rounded-full bg-white/5 overflow-hidden">
             <div
               className="h-full rounded-full bg-gradient-to-r from-secondary/60 via-secondary to-secondary transition-all duration-500"
-              style={{ width: `${stats.percentual}%` }}
+              style={{ width: `${Math.max(stats.percentualExato, stats.resolvidos > 0 ? 1.5 : 0)}%` }}
             />
           </div>
           <p className="text-[0.625rem] text-on-surface-variant/50 mt-2">
             {stats.tentados > 0
-              ? `${stats.tentados} ${stats.tentados === 1 ? 'charada vista' : 'charadas vistas'} neste dispositivo.`
+              ? `${stats.resolvidos} de ${stats.total} charadas sabidas · ${stats.tentados} ${
+                  stats.tentados === 1 ? 'vista' : 'vistas'
+                } neste dispositivo.`
               : 'O progresso fica salvo apenas no seu aparelho.'}
           </p>
         </section>

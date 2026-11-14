@@ -175,24 +175,26 @@ function EnigmasContent() {
               Seu progresso
             </p>
             <p className="text-sm font-bold text-on-surface">
-              {stats.resolvidos} resolvidos
+              {stats.resolvidos === 1
+                ? '1 enigma resolvido'
+                : `${stats.resolvidos} enigmas resolvidos`}
             </p>
           </div>
           <span className="text-lg font-display font-black text-error">
-            {stats.percentual === 0 && stats.resolvidos > 0 ? '<1' : stats.percentual}%
+            {stats.percentualFormatado}%
           </span>
         </div>
         <div className="h-2 rounded-full bg-white/5 overflow-hidden">
           <div
             className="h-full rounded-full bg-gradient-to-r from-error/60 via-error to-error transition-all duration-500"
-            style={{ width: `${stats.percentual}%` }}
+            style={{ width: `${Math.max(stats.percentualExato, stats.resolvidos > 0 ? 1.5 : 0)}%` }}
           />
         </div>
         <p className="text-[0.625rem] text-on-surface-variant/50 mt-2">
           {stats.tentados > 0
-            ? stats.tentados === 1
-              ? '1 enigma já tentado neste dispositivo.'
-              : `${stats.tentados} enigmas já tentados neste dispositivo.`
+            ? `${stats.resolvidos} de ${stats.total} resolvidos · ${stats.tentados} ${
+                stats.tentados === 1 ? 'tentado' : 'tentados'
+              } neste dispositivo.`
             : 'Marque “Eu acertei” ou “Não sabia” para acompanhar seu desempenho.'}
         </p>
       </section>
