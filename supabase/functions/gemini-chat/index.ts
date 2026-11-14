@@ -7,7 +7,11 @@ const ORIGENS_PERMITIDAS = new Set([
   "http://localhost:3000",
 ]);
 
-const MODELO = "gemini-2.5-flash";
+// O plano gratuito do gemini-2.5-flash permite apenas ~20 requisicoes por dia
+// no projeto inteiro, o que derruba o app depois de poucas geracoes. O padrao
+// passa a ser o flash-lite, com cota gratuita bem maior. Para trocar sem
+// mexer no codigo, defina o secret GEMINI_MODELO no Supabase.
+const MODELO = Deno.env.get("GEMINI_MODELO")?.trim() || "gemini-3.5-flash-lite";
 
 function respostaJson(corpo: unknown, status: number, origem: string) {
   return new Response(JSON.stringify(corpo), {
@@ -121,10 +125,24 @@ serve(async (req) => {
         resposta.status,
         detalhe.slice(0, 300)
       );
-      return respostaJson(
-        { error: "Falha ao gerar conteúdo." },
-        resposta.status,
-        origem
+
+      // Diagnóstico: o servidor do app lê estes cabeçalhos para registrar o
+      // motivo real da recusa (cota por minuto, por dia, modelo sobrecarregado).
+      // O navegador nunca vê o detalhe; a rota devolve mensagem amigável.
+      const motivo = detalhe.replace(/[\r\n]+/g, " ").slice(0, 400);
+
+      return new Response(
+        JSON.stringify({ error: "Falha ao gerar conteúdo." }),
+        {
+          status: resposta.status,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": origem,
+            Vary: "Origin",
+            "x-gemini-status": String(resposta.status),
+            "x-gemini-erro": motivo,
+          },
+        }
       );
     }
 
