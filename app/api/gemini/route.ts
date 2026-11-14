@@ -2,6 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { resolveSupabaseConfig } from "@/lib/supabaseConfig";
 
+// A geração pode demorar: a fila global pode segurar o pedido por alguns
+// segundos e o Gemini às vezes leva outros tantos para responder. Sem isso, a
+// Vercel cortaria a função no meio e o usuário veria erro sem motivo.
+export const maxDuration = 60;
+
 // Requests above this size are rejected before reaching the AI provider.
 const MAX_PROMPT_LENGTH = 20000;
 
@@ -27,7 +32,7 @@ interface SlotGlobal {
  * impede um abusador, mas não impede muita gente gerando ao mesmo tempo.
  *
  * Estes três números formam a fila global. O padrão de 8 por minuto deixa
- * folga sob o limite gratuito do gemini-2.5-flash (~10 req/min). Com
+ * folga sob o limite gratuito do modelo atual (~10 req/min). Com
  * faturamento ativo no Google, dá para subir pelo painel da Vercel.
  */
 function lerNumero(valor: string | undefined, padrao: number, minimo: number) {
@@ -321,12 +326,14 @@ export async function POST(req: NextRequest) {
 
     // A Edge Function pode ficar alguns segundos indisponível durante um
     // redeploy ou um restart do runtime, e nesse intervalo o gateway do
-    // Supabase devolve 400/5xx com HTML. Uma segunda tentativa resolve isso
-    // sem cobrar outra geração do usuário.
+    // Supabase devolve 400/5xx com HTML. Novas tentativas resolvem isso sem
+    // cobrar outra geração do usuário.
+    const ESPERAS_EDGE = [700, 2500];
+
     const tentarEdge = async (): Promise<Response> => {
       let ultimaFalha: unknown = null;
 
-      for (let tentativa = 1; tentativa <= 2; tentativa++) {
+      for (let tentativa = 0; tentativa <= ESPERAS_EDGE.length; tentativa++) {
         try {
           const resposta = await fetch(edgeUrl, {
             method: "POST",
@@ -350,8 +357,9 @@ export async function POST(req: NextRequest) {
           ultimaFalha = erro;
         }
 
-        if (tentativa === 1) {
-          await new Promise((resolver) => setTimeout(resolver, 800));
+        const espera = ESPERAS_EDGE[tentativa];
+        if (espera) {
+          await new Promise((resolver) => setTimeout(resolver, espera));
         }
       }
 
@@ -404,8 +412,9 @@ export async function POST(req: NextRequest) {
       const upstream = edgeResponse.headers.get("x-gemini-erro") || "";
       await registrarErroIa(status, "edge", upstream || errText);
 
-      // Nada de conteúdo chegou ao usuário: a geração do dia volta para ele.
-      // Só a do minuto permanece gasta (proteção contra martelar a função).
+      // Nada de conteúdo chegou ao usuário: a geração do dia e a do minuto
+      // voltam para ele. O risco de abuso fica contido pelo limitador global
+      // (8 por minuto no projeto inteiro).
 
       // Cota do Google estourada (429/RESOURCE_EXHAUSTED) ou limite do minuto.
       if (
