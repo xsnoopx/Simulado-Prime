@@ -14,7 +14,10 @@ import {
 import { cn } from '@/lib/utils';
 import {
   CATEGORIA_POR_ID,
+  lerProgresso,
   obterDica,
+  registrarResposta,
+  salvarProgresso,
   type CategoriaEnigmaId,
   type Enigma,
   type ProgressoEnigma,
@@ -86,14 +89,30 @@ export function EnigmaCard({
 }: EnigmaCardProps) {
   const [mostrarDica, setMostrarDica] = useState(false);
   const [revelado, setRevelado] = useState(false);
+  const [respostaLocal, setRespostaLocal] = useState<StatusEnigma | null>(null);
 
   useEffect(() => {
     setMostrarDica(false);
     setRevelado(false);
+    setRespostaLocal(null);
   }, [enigma.id]);
 
   const categoria = CATEGORIA_POR_ID[enigma.categoria];
   const estilo = ESTILO_CATEGORIA[enigma.categoria];
+
+  // Mantém o botão marcado imediatamente após o clique, sem depender do pai.
+  const statusExibido: StatusEnigma | null = respostaLocal ?? progresso?.status ?? null;
+
+  function responder(status: StatusEnigma) {
+    setRespostaLocal(status);
+
+    if (onResponder) {
+      onResponder(status);
+      return;
+    }
+
+    salvarProgresso(registrarResposta(lerProgresso(), enigma.id, status));
+  }
 
   return (
     <motion.article
@@ -121,16 +140,16 @@ export function EnigmaCard({
           </span>
 
           <div className="flex items-center gap-1.5">
-            {progresso && (
+            {statusExibido && (
               <span
                 className={cn(
                   'px-2 py-1 rounded-full border text-[0.5625rem] font-bold uppercase tracking-wider',
-                  progresso.status === 'acertei'
+                  statusExibido === 'acertei'
                     ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20'
-                    : 'bg-white/5 text-white/50 border-white/10'
+                    : 'bg-rose-500/10 text-rose-300 border-rose-500/20'
                 )}
               >
-                {progresso.status === 'acertei' ? 'Resolvido' : 'Tentou'}
+                {statusExibido === 'acertei' ? 'Resolvido' : 'Não sabia'}
               </span>
             )}
             <span
@@ -260,24 +279,62 @@ export function EnigmaCard({
           )}
         </AnimatePresence>
 
-        {revelado && onResponder && (
-          <div className="grid grid-cols-2 gap-2">
-            <button
-              type="button"
-              onClick={() => onResponder('acertei')}
-              className="py-3 rounded-2xl bg-emerald-500/15 border border-emerald-500/25 text-emerald-300 text-xs font-bold flex items-center justify-center gap-2 hover:bg-emerald-500/25 transition-colors cursor-pointer"
-            >
-              <CheckCircle2 className="w-4 h-4" />
-              Eu acertei
-            </button>
-            <button
-              type="button"
-              onClick={() => onResponder('errei')}
-              className="py-3 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-300 text-xs font-bold flex items-center justify-center gap-2 hover:bg-rose-500/20 transition-colors cursor-pointer"
-            >
-              <XCircle className="w-4 h-4" />
-              Não sabia
-            </button>
+        {revelado && (
+          <div className="space-y-2">
+            <p className="text-[0.5625rem] font-black uppercase tracking-[0.2em] text-on-surface-variant/50">
+              Como foi?
+            </p>
+
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                type="button"
+                onClick={() => responder('acertei')}
+                aria-pressed={statusExibido === 'acertei'}
+                className={cn(
+                  'py-3 rounded-2xl border text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer',
+                  statusExibido === 'acertei'
+                    ? 'bg-emerald-500 border-emerald-300 text-[#04231a] shadow-lg shadow-emerald-500/25 scale-[1.02]'
+                    : 'bg-emerald-500/15 border-emerald-500/25 text-emerald-300 hover:bg-emerald-500/25'
+                )}
+              >
+                <CheckCircle2 className="w-4 h-4" />
+                {statusExibido === 'acertei' ? 'Eu acertei ✓' : 'Eu acertei'}
+              </button>
+              <button
+                type="button"
+                onClick={() => responder('errei')}
+                aria-pressed={statusExibido === 'errei'}
+                className={cn(
+                  'py-3 rounded-2xl border text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer',
+                  statusExibido === 'errei'
+                    ? 'bg-rose-500 border-rose-300 text-[#2b0710] shadow-lg shadow-rose-500/25 scale-[1.02]'
+                    : 'bg-rose-500/10 border-rose-500/20 text-rose-300 hover:bg-rose-500/20'
+                )}
+              >
+                <XCircle className="w-4 h-4" />
+                {statusExibido === 'errei' ? 'Não sabia ✓' : 'Não sabia'}
+              </button>
+            </div>
+
+            <AnimatePresence initial={false}>
+              {statusExibido && (
+                <motion.p
+                  key="confirmacao"
+                  initial={{ opacity: 0, y: -4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -4 }}
+                  className={cn(
+                    'flex items-center justify-center gap-1.5 text-[0.625rem] font-semibold',
+                    statusExibido === 'acertei' ? 'text-emerald-300' : 'text-rose-300'
+                  )}
+                >
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  {statusExibido === 'acertei'
+                    ? 'Registrado: você resolveu este enigma.'
+                    : 'Registrado: enigma marcado para revisar.'}
+                </motion.p>
+              )}
+            </AnimatePresence>
           </div>
         )}
 
