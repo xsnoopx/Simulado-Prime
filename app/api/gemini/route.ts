@@ -182,6 +182,33 @@ export async function POST(req: NextRequest) {
     };
 
     /**
+     * Guarda o motivo real da falha para diagnóstico. A API de logs do
+     * Supabase não está disponível no plano atual, então a tabela `ai_erros`
+     * é a forma de saber, depois, o que o Gemini respondeu.
+     */
+    const registrarErroIa = async (
+      status: number,
+      motivo: string,
+      detalhe: string
+    ) => {
+      if (!admin) return;
+
+      const { error } = await admin.from("ai_erros").insert({
+        user_id: user.id,
+        status,
+        motivo,
+        detalhe: detalhe.slice(0, 500),
+      });
+
+      if (error) {
+        console.warn(
+          "[AI Proxy] Não foi possível registrar o erro:",
+          error.message
+        );
+      }
+    };
+
+    /**
      * Reserva uma vaga na fila global. Se a fila estiver cheia, espera alguns
      * segundos antes de desistir: em pico curto isso evita devolver erro para
      * quem só chegou na hora errada.
@@ -304,6 +331,7 @@ export async function POST(req: NextRequest) {
       });
     } catch (erroRede) {
       console.error("[AI Proxy] Falha de rede ao chamar a Edge Function:", erroRede);
+      await registrarErroIa(0, "rede", String(erroRede).slice(0, 300));
       await devolverUso("rede");
       return NextResponse.json(
         {
@@ -324,6 +352,10 @@ export async function POST(req: NextRequest) {
       );
 
       const detalhe = errText.toLowerCase();
+
+      // Detalhe real vindo do Gemini (cabeçalho preenchido pela Edge Function).
+      const upstream = edgeResponse.headers.get("x-gemini-erro") || "";
+      await registrarErroIa(status, "edge", upstream || errText);
 
       // Nada de conteúdo chegou ao usuário: a geração do dia volta para ele.
       // Só a do minuto permanece gasta (proteção contra martelar a função).
@@ -407,6 +439,7 @@ export async function POST(req: NextRequest) {
     const finalResponseText = parsedObj ? JSON.stringify(parsedObj) : rawText;
 
     if (!finalResponseText || !finalResponseText.trim()) {
+      await registrarErroIa(200, "resposta-vazia", rawText.slice(0, 300));
       await devolverUso("resposta-vazia");
       return NextResponse.json(
         { error: "A IA não retornou conteúdo. Tente novamente." },
