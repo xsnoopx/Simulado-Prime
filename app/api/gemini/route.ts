@@ -16,6 +16,30 @@ interface UsoIa {
   limite_minuto: number;
 }
 
+interface SlotGlobal {
+  permitido: boolean;
+  espera_segundos: number;
+  na_janela: number;
+}
+
+/**
+ * A cota do Gemini é do projeto inteiro, não de cada conta. O limite por conta
+ * impede um abusador, mas não impede muita gente gerando ao mesmo tempo.
+ *
+ * Estes três números formam a fila global. O padrão de 8 por minuto deixa
+ * folga sob o limite gratuito do gemini-2.5-flash (~10 req/min). Com
+ * faturamento ativo no Google, dá para subir pelo painel da Vercel.
+ */
+function lerNumero(valor: string | undefined, padrao: number, minimo: number) {
+  const numero = Number(valor);
+  if (!Number.isFinite(numero)) return padrao;
+  return Math.max(Math.trunc(numero), minimo);
+}
+
+const LIMITE_GLOBAL = lerNumero(process.env.AI_GLOBAL_LIMITE, 8, 1);
+const JANELA_GLOBAL = lerNumero(process.env.AI_GLOBAL_JANELA_SEGUNDOS, 60, 1);
+const ESPERA_GLOBAL = lerNumero(process.env.AI_GLOBAL_ESPERA_SEGUNDOS, 5, 0);
+
 function cleanAndParseJSON(text: string) {
   if (!text) return null;
   text = text.trim();
@@ -157,6 +181,55 @@ export async function POST(req: NextRequest) {
       console.log("[AI Proxy] Geração devolvida", { userId: user.id, motivo });
     };
 
+    /**
+     * Reserva uma vaga na fila global. Se a fila estiver cheia, espera alguns
+     * segundos antes de desistir: em pico curto isso evita devolver erro para
+     * quem só chegou na hora errada.
+     *
+     * Sem a migração aplicada, o RPC falha e a fila fica desligada (fail-open).
+     */
+    const reservarSlotGlobal = async (): Promise<{
+      permitido: boolean;
+      espera: number;
+    }> => {
+      if (!admin) return { permitido: true, espera: 0 };
+
+      const inicio = Date.now();
+
+      for (;;) {
+        const { data, error } = await admin.rpc("reservar_slot_ia", {
+          p_limite: LIMITE_GLOBAL,
+          p_janela_segundos: JANELA_GLOBAL,
+        });
+
+        if (error) {
+          console.warn(
+            "[AI Proxy] Limitador global indisponível:",
+            error.message
+          );
+          return { permitido: true, espera: 0 };
+        }
+
+        const slot = (Array.isArray(data) ? data[0] : data) as SlotGlobal | null;
+        if (!slot || slot.permitido) {
+          return { permitido: true, espera: 0 };
+        }
+
+        const esperaAteLiberar = Math.max(slot.espera_segundos ?? 1, 1);
+        const decorrido = (Date.now() - inicio) / 1000;
+        const restante = ESPERA_GLOBAL - decorrido;
+
+        if (restante <= 0) {
+          return { permitido: false, espera: esperaAteLiberar };
+        }
+
+        // Espera em passos de no máximo 1s para não segurar a função à toa.
+        await new Promise((resolver) =>
+          setTimeout(resolver, Math.min(restante, esperaAteLiberar, 1) * 1000)
+        );
+      }
+    };
+
     if (admin) {
       const { data, error: usageError } = await admin.rpc("consumir_ai_usage", {
         p_user_id: user.id,
@@ -181,11 +254,30 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Daqui para frente a geração já foi contada: qualquer exceção precisa devolver.
+    devolverGeracao = () => devolverUso("excecao");
+
+    const slotGlobal = await reservarSlotGlobal();
+    if (!slotGlobal.permitido) {
+      // A vaga não saiu: devolve a geração do dia, senão o usuário paga por
+      // uma tentativa que nunca chegou ao Gemini.
+      await devolverUso("fila-global");
+      console.log("[AI Proxy] Fila global cheia", {
+        userId: user.id,
+        espera: slotGlobal.espera,
+      });
+      return NextResponse.json(
+        {
+          error: `Muita gente gerando agora. Tente de novo em ${slotGlobal.espera} segundo${
+            slotGlobal.espera === 1 ? "" : "s"
+          }.`,
+        },
+        { status: 429, headers: { "Retry-After": String(slotGlobal.espera) } }
+      );
+    }
+
     const edgeUrl = `${supabaseUrl.replace(/\/+$/, "")}/functions/v1/gemini-chat`;
     console.log("[AI Proxy] Chamando gemini-chat para o usuário", user.id);
-
-    // A partir daqui a geração já foi contada: qualquer exceção precisa devolver.
-    devolverGeracao = () => devolverUso("excecao");
 
     // A função também exige o segredo do proxy; sem ele, ninguém chama a IA
     // direto do navegador, nem mesmo com um token de usuário válido.
