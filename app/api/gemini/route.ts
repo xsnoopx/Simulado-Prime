@@ -319,20 +319,67 @@ export async function POST(req: NextRequest) {
       edgeHeaders["x-ai-proxy-secret"] = proxySecret;
     }
 
+    // A Edge Function pode ficar alguns segundos indisponível durante um
+    // redeploy ou um restart do runtime, e nesse intervalo o gateway do
+    // Supabase devolve 400/5xx com HTML. Uma segunda tentativa resolve isso
+    // sem cobrar outra geração do usuário.
+    const tentarEdge = async (): Promise<Response> => {
+      let ultimaFalha: unknown = null;
+
+      for (let tentativa = 1; tentativa <= 2; tentativa++) {
+        try {
+          const resposta = await fetch(edgeUrl, {
+            method: "POST",
+            headers: edgeHeaders,
+            body: JSON.stringify({
+              prompt: prompt,
+              responseSchema: responseSchema,
+            }),
+          });
+
+          const htmlDeGateway =
+            resposta.status === 400 &&
+            (resposta.headers.get("content-type") || "").includes("text/html");
+
+          if (!htmlDeGateway && resposta.status < 500) {
+            return resposta;
+          }
+
+          ultimaFalha = new Error(`Edge Function respondeu ${resposta.status}`);
+        } catch (erro) {
+          ultimaFalha = erro;
+        }
+
+        if (tentativa === 1) {
+          await new Promise((resolver) => setTimeout(resolver, 800));
+        }
+      }
+
+      throw ultimaFalha ?? new Error("Edge Function indisponível");
+    };
+
     let edgeResponse: Response;
     try {
-      edgeResponse = await fetch(edgeUrl, {
-        method: "POST",
-        headers: edgeHeaders,
-        body: JSON.stringify({
-          prompt: prompt,
-          responseSchema: responseSchema,
-        }),
-      });
+      edgeResponse = await tentarEdge();
     } catch (erroRede) {
-      console.error("[AI Proxy] Falha de rede ao chamar a Edge Function:", erroRede);
-      await registrarErroIa(0, "rede", String(erroRede).slice(0, 300));
-      await devolverUso("rede");
+      const mensagemErro = String(erroRede);
+      const respostaDoGateway = /Edge Function respondeu (\d+)/.exec(mensagemErro);
+      const statusGateway = respostaDoGateway ? Number(respostaDoGateway[1]) : 0;
+
+      console.error("[AI Proxy] Edge Function indisponível:", erroRede);
+      await registrarErroIa(statusGateway, "gateway", mensagemErro.slice(0, 300));
+      await devolverUso("gateway");
+
+      if (statusGateway) {
+        return NextResponse.json(
+          {
+            error:
+              "O serviço de IA está instável no momento. Tente novamente em instantes.",
+          },
+          { status: 503 }
+        );
+      }
+
       return NextResponse.json(
         {
           error:
