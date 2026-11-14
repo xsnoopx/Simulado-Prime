@@ -14,3 +14,6 @@ coverage/
 
 # Avatares gerados pelo prebuild (copiados de avatar_*.png na raiz)
 public/avatars/
+
+# Metadados locais do Supabase CLI (não são código do app)
+supabase/.temp/
