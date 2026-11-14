@@ -45,6 +45,23 @@ const LIMITE_GLOBAL = lerNumero(process.env.AI_GLOBAL_LIMITE, 8, 1);
 const JANELA_GLOBAL = lerNumero(process.env.AI_GLOBAL_JANELA_SEGUNDOS, 60, 1);
 const ESPERA_GLOBAL = lerNumero(process.env.AI_GLOBAL_ESPERA_SEGUNDOS, 5, 0);
 
+/**
+ * Caminho principal da IA: chamada direta ao Gemini feita pelo servidor Next.
+ *
+ * Antes, toda geração passava pela Edge Function do Supabase. O gateway dela
+ * devolveu "400 Bad Request" em HTML em janelas de instabilidade (redeploy e
+ * retomada após ociosidade), e o usuário ficava sem conteúdo. Falar direto com
+ * o Google tira esse salto do caminho. A chave continua só no servidor.
+ *
+ * A Edge Function permanece como reserva: se a chave não estiver configurada
+ * (ou vier com formato inválido), a rota usa o caminho antigo.
+ */
+const MODELO_IA = process.env.GEMINI_MODELO?.trim() || "gemini-3.5-flash-lite";
+const CHAVE_GEMINI = process.env.GEMINI_API_KEY?.trim() || "";
+const USAR_GEMINI_DIRETO = /^AIza[\w-]{30,}$/.test(CHAVE_GEMINI);
+
+const INSTRUCAO_SISTEMA = "Você é um assistente útil focado em simulados.";
+
 function cleanAndParseJSON(text: string) {
   if (!text) return null;
   text = text.trim();
@@ -309,9 +326,14 @@ export async function POST(req: NextRequest) {
     }
 
     const edgeUrl = `${supabaseUrl.replace(/\/+$/, "")}/functions/v1/gemini-chat`;
-    console.log("[AI Proxy] Chamando gemini-chat para o usuário", user.id);
+    console.log(
+      USAR_GEMINI_DIRETO
+        ? "[AI Proxy] Chamando o Gemini direto para o usuário"
+        : "[AI Proxy] Chamando gemini-chat para o usuário",
+      user.id
+    );
 
-    // A função também exige o segredo do proxy; sem ele, ninguém chama a IA
+    // Reserva: a função exige o segredo do proxy, então ninguém chama a IA
     // direto do navegador, nem mesmo com um token de usuário válido.
     const edgeHeaders: Record<string, string> = {
       "Content-Type": "application/json",
@@ -324,26 +346,82 @@ export async function POST(req: NextRequest) {
       edgeHeaders["x-ai-proxy-secret"] = proxySecret;
     }
 
-    // A Edge Function pode ficar alguns segundos indisponível durante um
-    // redeploy ou um restart do runtime, e nesse intervalo o gateway do
-    // Supabase devolve 400/5xx com HTML. Novas tentativas resolvem isso sem
-    // cobrar outra geração do usuário.
-    const ESPERAS_EDGE = [700, 2500];
+    // Uma falha de rede ou do próprio provedor pode ser passageira. As
+    // tentativas extras acontecem antes de o usuário ver erro e não cobram
+    // outra geração dele.
+    const ESPERAS_IA = [700, 2000, 4000];
 
-    const tentarEdge = async (): Promise<Response> => {
+    const chamarGeminiDireto = async (): Promise<Response> => {
+      const resposta = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${MODELO_IA}:generateContent?key=${CHAVE_GEMINI}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }],
+            systemInstruction: { parts: [{ text: INSTRUCAO_SISTEMA }] },
+          }),
+        }
+      );
+
+      if (!resposta.ok) {
+        // Mesmos cabeçalhos de diagnóstico da Edge Function, para o registro
+        // em `ai_erros` continuar mostrando o motivo real da recusa.
+        const detalhe = (await resposta.text()).replace(/[\r\n]+/g, " ").slice(0, 400);
+
+        return new Response(
+          JSON.stringify({ error: "Falha ao gerar conteúdo." }),
+          {
+            status: resposta.status,
+            headers: {
+              "Content-Type": "application/json",
+              "x-gemini-status": String(resposta.status),
+              "x-gemini-erro": detalhe,
+            },
+          }
+        );
+      }
+
+      const dados = await resposta.json();
+      const texto = dados?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+      if (typeof texto !== "string" || !texto.trim()) {
+        return new Response(
+          JSON.stringify({ error: "A IA não retornou conteúdo." }),
+          { status: 502, headers: { "Content-Type": "application/json" } }
+        );
+      }
+
+      return new Response(JSON.stringify({ resposta: texto }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      });
+    };
+
+    const chamarProvedor = async (): Promise<Response> => {
+      if (USAR_GEMINI_DIRETO) {
+        return chamarGeminiDireto();
+      }
+
+      return fetch(edgeUrl, {
+        method: "POST",
+        headers: edgeHeaders,
+        body: JSON.stringify({
+          prompt: prompt,
+          responseSchema: responseSchema,
+        }),
+      });
+    };
+
+    const tentarIa = async (): Promise<Response> => {
       let ultimaFalha: unknown = null;
 
-      for (let tentativa = 0; tentativa <= ESPERAS_EDGE.length; tentativa++) {
+      for (let tentativa = 0; tentativa <= ESPERAS_IA.length; tentativa++) {
         try {
-          const resposta = await fetch(edgeUrl, {
-            method: "POST",
-            headers: edgeHeaders,
-            body: JSON.stringify({
-              prompt: prompt,
-              responseSchema: responseSchema,
-            }),
-          });
+          const resposta = await chamarProvedor();
 
+          // O gateway do Supabase responde 400 com HTML quando a função está
+          // reiniciando; isso é falha de transporte, não do modelo.
           const htmlDeGateway =
             resposta.status === 400 &&
             (resposta.headers.get("content-type") || "").includes("text/html");
@@ -352,26 +430,26 @@ export async function POST(req: NextRequest) {
             return resposta;
           }
 
-          ultimaFalha = new Error(`Edge Function respondeu ${resposta.status}`);
+          ultimaFalha = new Error(`Serviço de IA respondeu ${resposta.status}`);
         } catch (erro) {
           ultimaFalha = erro;
         }
 
-        const espera = ESPERAS_EDGE[tentativa];
+        const espera = ESPERAS_IA[tentativa];
         if (espera) {
           await new Promise((resolver) => setTimeout(resolver, espera));
         }
       }
 
-      throw ultimaFalha ?? new Error("Edge Function indisponível");
+      throw ultimaFalha ?? new Error("Serviço de IA indisponível");
     };
 
-    let edgeResponse: Response;
+    let respostaIa: Response;
     try {
-      edgeResponse = await tentarEdge();
+      respostaIa = await tentarIa();
     } catch (erroRede) {
       const mensagemErro = String(erroRede);
-      const respostaDoGateway = /Edge Function respondeu (\d+)/.exec(mensagemErro);
+      const respostaDoGateway = /respondeu (\d+)/.exec(mensagemErro);
       const statusGateway = respostaDoGateway ? Number(respostaDoGateway[1]) : 0;
 
       console.error("[AI Proxy] Edge Function indisponível:", erroRede);
@@ -397,9 +475,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (!edgeResponse.ok) {
-      const status = edgeResponse.status;
-      const errText = await edgeResponse.text();
+    if (!respostaIa.ok) {
+      const status = respostaIa.status;
+      const errText = await respostaIa.text();
       console.error(
         "[AI Proxy] Edge Function respondeu",
         status,
@@ -409,7 +487,7 @@ export async function POST(req: NextRequest) {
       const detalhe = errText.toLowerCase();
 
       // Detalhe real vindo do Gemini (cabeçalho preenchido pela Edge Function).
-      const upstream = edgeResponse.headers.get("x-gemini-erro") || "";
+      const upstream = respostaIa.headers.get("x-gemini-erro") || "";
       await registrarErroIa(status, "edge", upstream || errText);
 
       // Nada de conteúdo chegou ao usuário: a geração do dia e a do minuto
@@ -467,7 +545,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const resJson = await edgeResponse.json();
+    const resJson = await respostaIa.json();
     // Never log the generated content: prompts may contain user-provided text.
     console.log("[AI Proxy] Resposta recebida da Edge Function");
 
