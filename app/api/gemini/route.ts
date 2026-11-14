@@ -71,6 +71,10 @@ function respostaDeLimite(uso: UsoIa) {
 }
 
 export async function POST(req: NextRequest) {
+  // Preenchido depois que a geração é contada. Se algo estourar no meio do
+  // caminho, o catch devolve a geração em vez de deixar o usuário no prejuízo.
+  let devolverGeracao: (() => Promise<void>) | null = null;
+
   try {
     const body = await req.json().catch(() => null);
     const prompt = body?.prompt;
@@ -123,11 +127,37 @@ export async function POST(req: NextRequest) {
     const serviceKey =
       process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY || "";
 
-    if (serviceKey) {
-      const admin = createClient(supabaseUrl, serviceKey, {
-        auth: { persistSession: false },
+    const admin = serviceKey
+      ? createClient(supabaseUrl, serviceKey, { auth: { persistSession: false } })
+      : null;
+
+    /**
+     * Devolve a geração do dia quando a IA falha depois de já ter contado.
+     * Sem isso, uma instabilidade do Gemini custa crédito do usuário sem que
+     * ele receba conteúdo nenhum.
+     *
+     * O contador do minuto continua consumido de propósito: assim ninguém
+     * martela a função tentando gastar a cota do projeto.
+     */
+    const devolverUso = async (motivo: string) => {
+      if (!admin) return;
+
+      const { error } = await admin.rpc("devolver_ai_usage", {
+        p_user_id: user.id,
       });
 
+      if (error) {
+        console.warn(
+          "[AI Proxy] Não foi possível devolver a geração:",
+          error.message
+        );
+        return;
+      }
+
+      console.log("[AI Proxy] Geração devolvida", { userId: user.id, motivo });
+    };
+
+    if (admin) {
       const { data, error: usageError } = await admin.rpc("consumir_ai_usage", {
         p_user_id: user.id,
       });
@@ -154,6 +184,9 @@ export async function POST(req: NextRequest) {
     const edgeUrl = `${supabaseUrl.replace(/\/+$/, "")}/functions/v1/gemini-chat`;
     console.log("[AI Proxy] Chamando gemini-chat para o usuário", user.id);
 
+    // A partir daqui a geração já foi contada: qualquer exceção precisa devolver.
+    devolverGeracao = () => devolverUso("excecao");
+
     // A função também exige o segredo do proxy; sem ele, ninguém chama a IA
     // direto do navegador, nem mesmo com um token de usuário válido.
     const edgeHeaders: Record<string, string> = {
@@ -167,14 +200,27 @@ export async function POST(req: NextRequest) {
       edgeHeaders["x-ai-proxy-secret"] = proxySecret;
     }
 
-    const edgeResponse = await fetch(edgeUrl, {
-      method: "POST",
-      headers: edgeHeaders,
-      body: JSON.stringify({
-        prompt: prompt,
-        responseSchema: responseSchema,
-      }),
-    });
+    let edgeResponse: Response;
+    try {
+      edgeResponse = await fetch(edgeUrl, {
+        method: "POST",
+        headers: edgeHeaders,
+        body: JSON.stringify({
+          prompt: prompt,
+          responseSchema: responseSchema,
+        }),
+      });
+    } catch (erroRede) {
+      console.error("[AI Proxy] Falha de rede ao chamar a Edge Function:", erroRede);
+      await devolverUso("rede");
+      return NextResponse.json(
+        {
+          error:
+            "Erro de conexão com o serviço de IA. Verifique sua internet e tente novamente.",
+        },
+        { status: 503 }
+      );
+    }
 
     if (!edgeResponse.ok) {
       const status = edgeResponse.status;
@@ -187,6 +233,9 @@ export async function POST(req: NextRequest) {
 
       const detalhe = errText.toLowerCase();
 
+      // Nada de conteúdo chegou ao usuário: a geração do dia volta para ele.
+      // Só a do minuto permanece gasta (proteção contra martelar a função).
+
       // Cota do Google estourada (429/RESOURCE_EXHAUSTED) ou limite do minuto.
       if (
         status === 429 ||
@@ -194,6 +243,7 @@ export async function POST(req: NextRequest) {
         detalhe.includes("quota") ||
         detalhe.includes("rate limit")
       ) {
+        await devolverUso("alta-demanda");
         return NextResponse.json(
           {
             error:
@@ -204,6 +254,7 @@ export async function POST(req: NextRequest) {
       }
 
       if (status === 401 || status === 403) {
+        await devolverUso("sessao-recusada");
         return NextResponse.json(
           { error: "Sessão inválida ou expirada. Entre novamente para continuar." },
           { status: 401 }
@@ -211,6 +262,7 @@ export async function POST(req: NextRequest) {
       }
 
       if (status === 413) {
+        await devolverUso("pedido-grande");
         return NextResponse.json(
           { error: "O pedido é grande demais para a IA. Tente um texto menor." },
           { status: 413 }
@@ -218,6 +270,7 @@ export async function POST(req: NextRequest) {
       }
 
       if (status >= 500) {
+        await devolverUso("instabilidade");
         return NextResponse.json(
           {
             error:
@@ -227,6 +280,7 @@ export async function POST(req: NextRequest) {
         );
       }
 
+      await devolverUso("resposta-inesperada");
       return NextResponse.json(
         { error: "Não foi possível gerar o conteúdo agora. Tente novamente." },
         { status: 502 }
@@ -260,9 +314,21 @@ export async function POST(req: NextRequest) {
     const parsedObj = responseSchema ? cleanAndParseJSON(rawText) : null;
     const finalResponseText = parsedObj ? JSON.stringify(parsedObj) : rawText;
 
+    if (!finalResponseText || !finalResponseText.trim()) {
+      await devolverUso("resposta-vazia");
+      return NextResponse.json(
+        { error: "A IA não retornou conteúdo. Tente novamente." },
+        { status: 502 }
+      );
+    }
+
     return NextResponse.json({ text: finalResponseText });
   } catch (err: unknown) {
     console.error("Erro ao gerar conteúdo via Supabase Edge Function:", err);
+
+    if (devolverGeracao) {
+      await devolverGeracao();
+    }
 
     const mensagem = err instanceof Error ? err.message : String(err);
 
