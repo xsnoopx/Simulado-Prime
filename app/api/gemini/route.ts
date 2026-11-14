@@ -581,7 +581,12 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    return NextResponse.json({ text: finalResponseText });
+    // Cabeçalho de diagnóstico: mostra qual caminho atendeu o pedido, sem
+    // expor chave nem prompt. Ajuda a confirmar a troca para o Gemini direto.
+    return NextResponse.json(
+      { text: finalResponseText },
+      { headers: { "x-ai-provedor": USAR_GEMINI_DIRETO ? "gemini" : "edge" } }
+    );
   } catch (err: unknown) {
     console.error("Erro ao gerar conteúdo via Supabase Edge Function:", err);
 
