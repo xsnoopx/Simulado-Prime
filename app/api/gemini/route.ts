@@ -438,6 +438,9 @@ export async function POST(req: NextRequest) {
           "[AI Proxy] Gemini direto recusado; usando a Edge Function como reserva",
           resposta.status
         );
+        // Guarda o motivo real para diagnóstico: sem isso não dá para saber se
+        // a chave é inválida, se o modelo não existe ou se há restrição de uso.
+        await registrarErroIa(resposta.status, "gemini-direto", detalheErro);
         provedorUsado = "edge-reserva";
         return chamarEdge();
       }
