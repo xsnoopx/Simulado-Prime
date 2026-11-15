@@ -166,34 +166,15 @@ function CharadasContent() {
       </header>
 
       <section className="glass-panel rounded-2xl p-4 mb-5 border border-white/5">
-        <div className="flex items-center justify-between gap-3 mb-2">
-          <div>
-            <p className="text-[0.5625rem] font-black uppercase tracking-[0.2em] text-on-surface-variant/60">
-              Seu progresso
-            </p>
-            <p className="text-sm font-bold text-on-surface">
-              {stats.resolvidos === 1
-                ? '1 charada sabida'
-                : `${stats.resolvidos} charadas sabidas`}
-            </p>
-          </div>
-          <span className="text-lg font-display font-black text-secondary">
-            {stats.percentualFormatado}%
-          </span>
-        </div>
+        <p className="text-[0.5625rem] font-black uppercase tracking-[0.2em] text-on-surface-variant/60 mb-2.5">
+          Seu progresso
+        </p>
         <div className="h-2 rounded-full bg-white/5 overflow-hidden">
           <div
             className="h-full rounded-full bg-gradient-to-r from-secondary/60 via-secondary to-secondary transition-all duration-500"
             style={{ width: `${Math.max(stats.percentualExato, stats.resolvidos > 0 ? 1.5 : 0)}%` }}
           />
         </div>
-        <p className="text-[0.625rem] text-on-surface-variant/50 mt-2">
-          {stats.tentados > 0
-            ? `${stats.resolvidos} de ${stats.total} charadas sabidas · ${stats.tentados} ${
-                stats.tentados === 1 ? 'vista' : 'vistas'
-              } neste dispositivo.`
-            : 'Marque “Eu sabia” ou “Não sabia” para acompanhar seu desempenho.'}
-        </p>
       </section>
 
       <div className="relative mb-4">

@@ -21,20 +21,10 @@ import {
   XCircle,
 } from 'lucide-react';
 import { requestAi } from '@/lib/aiClient';
-import { cn, playCategorySound, playSubcategorySound } from '@/lib/utils';
+import { cn, playSubcategorySound } from '@/lib/utils';
 import { BottomNav } from '@/components/BottomNav';
-import { EnigmaCard } from '@/components/EnigmaCard';
 import { PremiumGateway } from '@/components/PremiumGateway';
-import {
-  CATEGORIAS_ENIGMAS,
-  STATIC_ENIGMAS,
-  enigmaDoDia,
-  lerProgresso,
-  registrarResposta,
-  salvarProgresso,
-  type ProgressoEnigmas,
-  type StatusEnigma,
-} from '@/lib/enigmas';
+import type { StatusEnigma } from '@/lib/enigmas';
 
 const TEMAS_IA = [
   { id: 'logica', label: 'Lógica 🧠', query: 'raciocínio lógico e charadas de esperteza', especial: false },
@@ -155,9 +145,6 @@ function EnigmasConteudo() {
   const [isPremium, setIsPremium] = useState(false);
   const [montado, setMontado] = useState(false);
   const [mostrarPrime, setMostrarPrime] = useState(false);
-  const [progresso, setProgresso] = useState<ProgressoEnigmas>({});
-
-  const [enigmaDestaque, setEnigmaDestaque] = useState(STATIC_ENIGMAS[0]);
 
   const [enigmaIa, setEnigmaIa] = useState<EnigmaIa | null>(null);
   const [loading, setLoading] = useState(false);
@@ -170,8 +157,6 @@ function EnigmasConteudo() {
   useEffect(() => {
     setMontado(true);
     setIsPremium(lerPremium());
-    setProgresso(lerProgresso());
-    setEnigmaDestaque(enigmaDoDia());
 
     if (searchParams.get('modo') === 'ia') setModo('ia');
 
@@ -236,7 +221,7 @@ function EnigmasConteudo() {
     if (!montado || modo !== 'ia' || !isPremium || jaGerou.current) return;
     jaGerou.current = true;
     void gerarEnigma(categoriaIa);
-    // A geração inicial acontece apenas na primeira entrada na aba de IA.
+    // A geração inicial acontece apenas na primeira entrada no modo online.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [montado, modo, isPremium]);
 
@@ -244,19 +229,6 @@ function EnigmasConteudo() {
     playSubcategorySound();
     setCategoriaIa(temaId);
     void gerarEnigma(temaId);
-  };
-
-  const responderDestaque = (status: StatusEnigma) => {
-    setProgresso((anterior) => {
-      const novo = registrarResposta(anterior, enigmaDestaque.id, status);
-      salvarProgresso(novo);
-      return novo;
-    });
-  };
-
-  const proximoDestaque = () => {
-    const candidatos = STATIC_ENIGMAS.filter((item) => item.id !== enigmaDestaque.id);
-    setEnigmaDestaque(candidatos[Math.floor(Math.random() * candidatos.length)]);
   };
 
   if (!montado) {
@@ -281,162 +253,95 @@ function EnigmasConteudo() {
       >
         <div className="w-full max-w-xl mx-auto pt-10 px-5 sm:px-6">
           <header className="mb-6 flex items-center justify-between">
-            <Link href="/" aria-label="Voltar para o início">
-              <span className="p-2 glass-panel rounded-full text-on-surface-variant inline-flex hover:text-on-surface transition-colors">
+            {modo === 'ia' ? (
+              <button
+                type="button"
+                onClick={() => setModo('acervo')}
+                aria-label="Voltar para as opções de enigmas"
+                className="p-2 glass-panel rounded-full text-on-surface-variant inline-flex hover:text-on-surface transition-colors cursor-pointer"
+              >
                 <ChevronLeft className="w-5 h-5" />
-              </span>
-            </Link>
+              </button>
+            ) : (
+              <Link href="/" aria-label="Voltar para o início">
+                <span className="p-2 glass-panel rounded-full text-on-surface-variant inline-flex hover:text-on-surface transition-colors">
+                  <ChevronLeft className="w-5 h-5" />
+                </span>
+              </Link>
+            )}
             <div className="text-center flex-1 px-2">
-              <h1 className="text-[clamp(1.25rem,5.5vw,1.5rem)] font-display font-bold uppercase tracking-[0.18em] text-error">
-                Enigmas
+              <h1 className="text-[clamp(1rem,4.6vw,1.4rem)] font-display font-bold uppercase tracking-[0.14em] text-error">
+                {modo === 'ia' ? 'Enigmas Online' : 'Enigmas'}
               </h1>
-              <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-[0.3em] mt-1">
-                O mistério te espera
+              <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-[0.28em] mt-1">
+                {modo === 'ia' ? 'Casos criados pela IA' : 'Escolha como quer jogar'}
               </p>
             </div>
             <div className="w-9" />
           </header>
 
-          <div className="glass-panel p-1.5 rounded-2xl border border-white/5 grid grid-cols-2 gap-1.5 mb-6">
-            <button
-              type="button"
-              onClick={() => {
-                playSubcategorySound();
-                setModo('acervo');
-              }}
-              className={cn(
-                'py-3 rounded-xl text-xs font-display font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer',
-                modo === 'acervo'
-                  ? 'bg-error text-white shadow-lg shadow-error/20'
-                  : 'text-on-surface-variant hover:bg-white/5'
-              )}
-            >
-              <Library className="w-4 h-4" />
-              Acervo local
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                playSubcategorySound();
-                setModo('ia');
-              }}
-              className={cn(
-                'py-3 rounded-xl text-xs font-display font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer',
-                modo === 'ia'
-                  ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20'
-                  : 'text-on-surface-variant hover:bg-white/5'
-              )}
-            >
-              <Wand2 className="w-4 h-4" />
-              Gerar com IA
-              {!isPremium && <Lock className="w-3 h-3" />}
-            </button>
-          </div>
-
           <AnimatePresence mode="wait">
             {modo === 'acervo' ? (
               <motion.section
-                key="acervo"
+                key="opcoes"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="space-y-5"
+                className="space-y-3"
               >
-                <div className="glass-panel rounded-3xl p-6 border border-error/20 relative overflow-hidden">
-                  <div className="absolute -top-16 -right-10 w-44 h-44 bg-error/10 blur-3xl rounded-full" />
-                  <p className="text-[0.5625rem] font-black uppercase tracking-[0.25em] text-error">
-                    Biblioteca offline
-                  </p>
-                  <h2 className="text-2xl sm:text-3xl font-display font-bold mt-1.5 leading-tight">
-                    Enigmas para quebrar a cabeça
-                  </h2>
-                  <p className="text-sm text-on-surface-variant mt-2 leading-relaxed">
-                    Categorias variadas, níveis de dificuldade, dicas e explicações.
-                    Tudo funciona sem internet, direto no seu aparelho.
-                  </p>
-
-                  <div className="flex flex-col sm:flex-row gap-2 mt-5">
-                    <Link
-                      href="/enigmas-offline"
-                      onClick={() => playCategorySound()}
-                      className="flex-1 py-3.5 rounded-2xl bg-error text-white font-display font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-error/90 transition-colors"
-                    >
-                      Explorar acervo
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                    <Link
-                      href="/enigmas-offline?dia=1"
-                      onClick={() => playCategorySound()}
-                      className="flex-1 py-3.5 rounded-2xl bg-white/5 border border-white/10 text-on-surface font-display font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
-                    >
-                      <Sparkles className="w-4 h-4 text-error" />
-                      Enigma do dia
-                    </Link>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex items-center justify-between mb-2.5 px-1">
-                    <h3 className="text-[0.625rem] font-black uppercase tracking-[0.2em] text-on-surface-variant/60">
-                      Navegue por categoria
-                    </h3>
-                    <Link
-                      href="/enigmas-offline"
-                      className="text-[0.5625rem] font-bold uppercase tracking-wider text-error"
-                    >
-                      Ver todos
-                    </Link>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-2.5">
-                    {CATEGORIAS_ENIGMAS.map((categoria) => (
-                      <Link
-                        key={categoria.id}
-                        href={`/enigmas-offline?categoria=${categoria.id}`}
-                        onClick={() => playSubcategorySound()}
-                        className="glass-panel rounded-2xl p-4 border border-white/5 hover:bg-white/5 hover:border-white/10 transition-all group"
-                      >
-                        <div className="flex items-start justify-between gap-2">
-                          <span className="text-2xl" aria-hidden="true">
-                            {categoria.emoji}
-                          </span>
-                        </div>
-                        <p className="font-display font-bold text-sm mt-2 leading-snug">
-                          {categoria.label}
-                        </p>
-                        <p className="text-[0.625rem] text-on-surface-variant/60 mt-1 leading-relaxed line-clamp-2">
-                          {categoria.descricao}
-                        </p>
-                        <span className="inline-flex items-center gap-1 text-[0.5625rem] font-bold uppercase tracking-wider text-error mt-2.5">
-                          Abrir
-                          <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="pt-1">
-                  <div className="flex items-center justify-between mb-2.5 px-1">
-                    <h3 className="text-[0.625rem] font-black uppercase tracking-[0.2em] text-on-surface-variant/60">
-                      Destaque de hoje
-                    </h3>
-                    <span className="text-[0.5625rem] font-bold uppercase tracking-wider text-error">
-                      Grátis
+                <Link
+                  href="/enigmas-offline"
+                  className="glass-panel rounded-3xl p-5 border border-white/5 hover:bg-white/5 hover:border-error/30 transition-all group block"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="p-3 rounded-2xl bg-error/10 text-error shrink-0">
+                      <Library className="w-6 h-6" />
                     </span>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[0.5625rem] font-black uppercase tracking-[0.2em] text-error">
+                        Offline
+                      </p>
+                      <h2 className="text-base font-display font-bold text-on-surface mt-0.5">
+                        Enigmas Offline
+                      </h2>
+                      <p className="text-[0.6875rem] text-on-surface-variant/60 leading-snug mt-1">
+                        Acervo completo com dicas e explicações. Funciona sem internet.
+                      </p>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-on-surface-variant/50 group-hover:text-error group-hover:translate-x-0.5 transition-all shrink-0" />
                   </div>
-                  <EnigmaCard
-                    enigma={enigmaDestaque}
-                    destaque
-                    rotuloDestaque="Enigma do dia"
-                    progresso={progresso[enigmaDestaque.id]}
-                    onResponder={responderDestaque}
-                    onProximo={proximoDestaque}
-                  />
-                </div>
+                </Link>
 
-                <p className="text-center text-[0.625rem] text-on-surface-variant/40 px-4">
-                  O acervo é gratuito e funciona offline. O progresso fica salvo neste dispositivo.
+                <button
+                  type="button"
+                  onClick={() => {
+                    playSubcategorySound();
+                    setModo('ia');
+                  }}
+                  className="w-full text-left glass-panel rounded-3xl p-5 border border-white/5 hover:bg-white/5 hover:border-amber-500/30 transition-all group block cursor-pointer"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="p-3 rounded-2xl bg-amber-500/10 text-amber-400 shrink-0">
+                      <Wand2 className="w-6 h-6" />
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[0.5625rem] font-black uppercase tracking-[0.2em] text-amber-400 flex items-center gap-1.5">
+                        Online · IA
+                        {!isPremium && <Lock className="w-3 h-3" />}
+                      </p>
+                      <h2 className="text-base font-display font-bold text-on-surface mt-0.5">
+                        Enigmas Online
+                      </h2>
+                      <p className="text-[0.6875rem] text-on-surface-variant/60 leading-snug mt-1">
+                        Casos inéditos criados pela inteligência artificial.
+                      </p>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-on-surface-variant/50 group-hover:text-amber-400 group-hover:translate-x-0.5 transition-all shrink-0" />
+                  </div>
+                </button>
+
+                <p className="text-center text-[0.625rem] text-on-surface-variant/40 px-4 pt-1">
+                  O acervo offline é gratuito. A geração com IA faz parte do COSMOS PRIME.
                 </p>
               </motion.section>
             ) : (
@@ -472,13 +377,14 @@ function EnigmasConteudo() {
                         <Crown className="w-4 h-4" />
                         Conhecer o PRIME
                       </button>
-                      <Link
-                        href="/enigmas-offline"
-                        className="w-full py-3.5 rounded-2xl bg-white/5 border border-white/10 text-on-surface font-display font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
+                      <button
+                        type="button"
+                        onClick={() => setModo('acervo')}
+                        className="w-full py-3.5 rounded-2xl bg-white/5 border border-white/10 text-on-surface font-display font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-white/10 transition-colors cursor-pointer"
                       >
                         <Library className="w-4 h-4" />
-                        Continuar no acervo grátis
-                      </Link>
+                        Voltar para as opções
+                      </button>
                     </div>
                   </div>
                 ) : (
