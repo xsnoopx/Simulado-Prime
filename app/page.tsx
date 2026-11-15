@@ -15,7 +15,6 @@ import {
   MessageCircleQuestion,
   Ghost,
   Laugh,
-  Library,
   Calculator,
   Languages,
   Globe2,
@@ -214,7 +213,7 @@ const DashboardGroup = ({
           <div className="flex-1 min-w-0">
             <h3 className="font-display font-bold text-[clamp(0.95rem,4.2vw,1.125rem)] uppercase tracking-wide leading-snug">{name}</h3>
             <p className="text-[0.625rem] text-on-surface-variant uppercase tracking-wider font-bold leading-snug">
-              {isOpen ? 'Clique para fechar' : 'Clique para ver subcategorias'}
+              {isOpen ? 'Clique para fechar' : 'Clique para ver as opções'}
             </p>
           </div>
           <div className="w-6 sm:w-8 shrink-0" />
@@ -643,16 +642,7 @@ export default function AppPage() {
                   isPremium={isPremium}
                   onPremiumClick={() => setShowPremiumUpgrade(true)}
                   options={[
-                    { 
-                      name: "Acervo de Charadas", 
-                      icon: Laugh, 
-                      color: "text-on-surface-variant/60",
-                      subOptions: [
-                        { name: "Hub de charadas", href: "/charadas", icon: Library, color: "text-secondary", subtitle: "Acervo local + gerador com IA" },
-                        { name: "Todas as charadas", href: "/charadas-offline", icon: Laugh, color: "text-secondary", subtitle: "Busca, dicas e progresso local" },
-                        { name: "Charada do dia", href: "/charadas-offline?dia=1", icon: Sparkles, color: "text-primary", subtitle: "Uma nova piada a cada dia" },
-                      ]
-                    },
+                    { name: "Charadas Offline", href: "/charadas-offline", icon: Laugh, color: "text-secondary", subtitle: "Acervo completo no aparelho" },
                     { name: "Charadas Online (IA)", href: "/charadas?modo=ia", icon: Wifi, isOnline: true, isPremium: true, color: "text-secondary" }
                   ]}
                 />
@@ -666,15 +656,7 @@ export default function AppPage() {
                   isPremium={isPremium}
                   onPremiumClick={() => setShowPremiumUpgrade(true)}
                   options={[
-                    { 
-                      name: "Acervo de Enigmas", 
-                      icon: Ghost, 
-                      color: "text-on-surface-variant/60",
-                      subOptions: [
-                        { name: "Todos os enigmas", href: "/enigmas-offline", icon: Ghost, color: "text-error", subtitle: "Busca, dicas e progresso local" },
-                        { name: "Enigma do dia", href: "/enigmas-offline?dia=1", icon: Sparkles, color: "text-primary", subtitle: "Um novo mistério a cada dia" },
-                      ]
-                    },
+                    { name: "Enigmas Offline", href: "/enigmas-offline", icon: Ghost, color: "text-error", subtitle: "Acervo completo no aparelho" },
                     { name: "Enigmas Online (IA)", href: "/enigmas?modo=ia", icon: Wifi, isOnline: true, isPremium: true, color: "text-error" }
                   ]}
                 />
