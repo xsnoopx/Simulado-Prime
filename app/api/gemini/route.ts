@@ -58,7 +58,11 @@ const ESPERA_GLOBAL = lerNumero(process.env.AI_GLOBAL_ESPERA_SEGUNDOS, 5, 0);
  */
 const MODELO_IA = process.env.GEMINI_MODELO?.trim() || "gemini-3.5-flash-lite";
 const CHAVE_GEMINI = process.env.GEMINI_API_KEY?.trim() || "";
-const USAR_GEMINI_DIRETO = /^AIza[\w-]{30,}$/.test(CHAVE_GEMINI);
+
+// Não validamos o formato da chave: o Google já mudou o padrão mais de uma vez.
+// O que importa é que exista. Se o Google recusar, a rota volta sozinha para a
+// Edge Function em vez de derrubar o usuário.
+const USAR_GEMINI_DIRETO = CHAVE_GEMINI.length >= 20;
 
 const INSTRUCAO_SISTEMA = "Você é um assistente útil focado em simulados.";
 
@@ -398,12 +402,10 @@ export async function POST(req: NextRequest) {
       });
     };
 
-    const chamarProvedor = async (): Promise<Response> => {
-      if (USAR_GEMINI_DIRETO) {
-        return chamarGeminiDireto();
-      }
+    let provedorUsado = USAR_GEMINI_DIRETO ? "gemini" : "edge";
 
-      return fetch(edgeUrl, {
+    const chamarEdge = () =>
+      fetch(edgeUrl, {
         method: "POST",
         headers: edgeHeaders,
         body: JSON.stringify({
@@ -411,6 +413,36 @@ export async function POST(req: NextRequest) {
           responseSchema: responseSchema,
         }),
       });
+
+    const chamarProvedor = async (): Promise<Response> => {
+      if (!USAR_GEMINI_DIRETO) {
+        return chamarEdge();
+      }
+
+      const resposta = await chamarGeminiDireto();
+
+      // Chave recusada, modelo inexistente ou permissão negada: em vez de
+      // derrubar o usuário, usa a Edge Function como reserva. Cota esgotada
+      // (429) não entra aqui, porque a reserva também falharia.
+      const detalheErro = resposta.headers.get("x-gemini-erro") || "";
+      const problemaDeAcesso =
+        resposta.status >= 400 &&
+        resposta.status < 500 &&
+        resposta.status !== 429 &&
+        /api[ _-]?key|permission|not found|not supported|invalid|denied/i.test(
+          detalheErro
+        );
+
+      if (problemaDeAcesso) {
+        console.warn(
+          "[AI Proxy] Gemini direto recusado; usando a Edge Function como reserva",
+          resposta.status
+        );
+        provedorUsado = "edge-reserva";
+        return chamarEdge();
+      }
+
+      return resposta;
     };
 
     const tentarIa = async (): Promise<Response> => {
@@ -582,10 +614,10 @@ export async function POST(req: NextRequest) {
     }
 
     // Cabeçalho de diagnóstico: mostra qual caminho atendeu o pedido, sem
-    // expor chave nem prompt. Ajuda a confirmar a troca para o Gemini direto.
+    // expor chave nem prompt.
     return NextResponse.json(
       { text: finalResponseText },
-      { headers: { "x-ai-provedor": USAR_GEMINI_DIRETO ? "gemini" : "edge" } }
+      { headers: { "x-ai-provedor": provedorUsado } }
     );
   } catch (err: unknown) {
     console.error("Erro ao gerar conteúdo via Supabase Edge Function:", err);
