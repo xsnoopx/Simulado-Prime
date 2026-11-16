@@ -40,6 +40,11 @@ export const metadata: Metadata = {
     email: false,
     address: false,
   },
+  // O Next emite só "mobile-web-app-capable"; o Safari antigo ainda lê a
+  // variante com prefixo apple para abrir em tela cheia.
+  other: {
+    'apple-mobile-web-app-capable': 'yes',
+  },
 };
 
 export const viewport: Viewport = {
