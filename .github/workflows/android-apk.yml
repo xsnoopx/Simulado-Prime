@@ -94,7 +94,7 @@ jobs:
         env:
           APP_URL: ${{ inputs.app_url }}
         run: |
-          url="${APP_URL:-https://ais-pre-6qlnh5xu3uw7anuvtfvyaf-457178958823.us-east1.run.app}"
+          url="${APP_URL:-https://simulado-prime-ashen.vercel.app}"
           code=$(curl -s -o /dev/null -w '%{http_code}' -L --max-time 30 "$url" || echo 000)
           echo "URL: $url"
           echo "HTTP: $code"

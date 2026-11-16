@@ -1,0 +1,114 @@
+name: iOS IPA
+
+# Gera um IPA do app para instalar no iPhone (sideload).
+#
+# O IPA é uma casca Capacitor: ele abre a URL do app Next.js dentro de um
+# WKWebView. Ou seja, o iPhone precisa de internet e o servidor precisa estar
+# no ar — não existe versão offline, porque as rotas /api/* rodam no servidor.
+#
+# O IPA sai SEM assinatura. Para instalar no iPhone, use Sideloadly ou AltStore
+# com um Apple ID gratuito (o app expira em 7 dias) ou com uma conta Apple
+# Developer paga. TestFlight/App Store exigem conta Apple Developer paga.
+#
+# Como usar:
+#   Actions > iOS IPA > Run workflow
+#   app_url: (opcional) URL https do app. Vazio = usa a de mobile/capacitor.config.ts
+#
+# O IPA sai em Artifacts, no fim da execução.
+
+on:
+  workflow_dispatch:
+    inputs:
+      app_url:
+        description: "URL https do app (vazio = padrão de mobile/capacitor.config.ts)"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-ipa
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Compilar IPA
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+
+      - name: Conferir Xcode e CocoaPods
+        run: |
+          xcodebuild -version
+          pod --version
+
+      - name: Instalar dependências
+        working-directory: mobile
+        run: npm ci
+
+      - name: Gerar ícone e splash do iOS
+        working-directory: mobile
+        run: npm run assets:ios
+
+      - name: Sincronizar projeto iOS
+        working-directory: mobile
+        env:
+          APP_URL: ${{ inputs.app_url }}
+        run: npx cap sync ios
+
+      - name: Conferir se a URL do app responde
+        working-directory: mobile
+        env:
+          APP_URL: ${{ inputs.app_url }}
+        run: |
+          url="${APP_URL:-https://simulado-prime-ashen.vercel.app}"
+          code=$(curl -s -o /dev/null -w '%{http_code}' -L --max-time 30 "$url" || echo 000)
+          echo "URL: $url"
+          echo "HTTP: $code"
+          if [ "$code" != "200" ]; then
+            echo "::warning::A URL respondeu HTTP $code. O IPA compila, mas vai abrir mostrando erro de conexão."
+          fi
+
+      - name: Compilar app (sem assinatura)
+        working-directory: mobile/ios/App
+        run: |
+          xcodebuild \
+            -workspace App.xcworkspace \
+            -scheme App \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_ENTITLEMENTS="" \
+            build
+
+      - name: Empacotar IPA
+        working-directory: mobile/ios/App
+        run: |
+          APP_PATH="build/Build/Products/Release-iphoneos/App.app"
+          test -d "$APP_PATH" || { echo "App.app não encontrado"; exit 1; }
+          rm -rf Payload SimuladoPrime.ipa
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/App.app
+          zip -qry SimuladoPrime.ipa Payload
+          ls -lh SimuladoPrime.ipa
+          echo "IPA: $(pwd)/SimuladoPrime.ipa"
+
+      - name: Publicar IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: simulado-prime-ipa
+          path: mobile/ios/App/SimuladoPrime.ipa
+          if-no-files-found: error
+          retention-days: 30

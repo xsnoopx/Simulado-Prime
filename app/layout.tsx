@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { AchievementProvider } from '@/components/AchievementProvider';
@@ -20,6 +20,34 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: 'Simulado Prime',
   description: 'Estude e pratique com a melhor plataforma de simulação do cosmos educacional.',
+  applicationName: 'Simulado Prime',
+  manifest: '/manifest.webmanifest',
+  // iOS: abre em tela cheia ao instalar pela tela de início do Safari.
+  appleWebApp: {
+    capable: true,
+    title: 'Simulado Prime',
+    statusBarStyle: 'black',
+  },
+  icons: {
+    icon: [
+      { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [{ url: '/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#11131a',
+  colorScheme: 'dark',
 };
 
 // Aplica o tamanho de fonte salvo antes do primeiro paint, evitando que a

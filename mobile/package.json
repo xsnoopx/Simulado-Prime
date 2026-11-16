@@ -2,16 +2,22 @@
   "name": "simulado-prime-mobile",
   "version": "1.0.0",
   "private": true,
-  "description": "Casca Android (Capacitor) do Simulado Prime",
+  "description": "Casca Android/iOS (Capacitor) do Simulado Prime",
   "scripts": {
     "assets": "node scripts/prepare-assets.mjs && capacitor-assets generate --android --iconBackgroundColor \"#27282d\" --splashBackgroundColor \"#27282d\" && node scripts/optimize-splash.mjs",
-    "sync": "cap sync android",
+    "assets:ios": "node scripts/prepare-assets.mjs && capacitor-assets generate --ios --iconBackgroundColor \"#27282d\" --splashBackgroundColor \"#27282d\"",
+    "sync": "cap sync",
+    "sync:android": "cap sync android",
+    "sync:ios": "cap sync ios",
     "open": "cap open android",
+    "open:android": "cap open android",
+    "open:ios": "cap open ios",
     "build:debug": "cd android && ./gradlew assembleDebug"
   },
   "dependencies": {
     "@capacitor/android": "^7.0.0",
-    "@capacitor/core": "^7.0.0"
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/ios": "^7.6.10"
   },
   "devDependencies": {
     "@capacitor/assets": "^3.0.5",
